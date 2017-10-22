@@ -1,0 +1,65 @@
+# e_korea
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_jinhan
+}
+1.1.1={
+	holder=2900 #Hyeokgeose
+}
+35.1.1={
+	holder=2902 #Namhae
+}
+50.1.1={
+	holder=2904 #Yuri
+}
+57.1.1={
+	holder=2906 #Talhae
+}
+80.1.1={
+	holder=2908 #Pasa
+}
+112.1.1={
+	holder=2910 #Jima
+}
+134.1.1={
+	holder=2912 #Ilseong
+}
+154.1.1={
+	holder=2914 #Adalla
+}
+184.1.1={
+	holder=2918 #Beolhyu
+}
+196.1.1={
+	holder=2922 #Naehae
+}
+230.1.1={
+	holder=2924 #Jobun
+}
+247.1.1={
+	holder=2926 #Cheomhae
+}
+262.1.1={
+	holder=2928 #Michu
+}
+284.1.1={
+	holder=2932 #Yurye
+}
+298.1.1={
+	holder=2934 #Girim
+}
+310.1.1={
+	holder=2936 #Heulhae
+}
+356.1.1={
+	holder=2938 #Naemul
+}
+402.1.1={
+	holder=2940 #Silseong
+}
+417.1.1={
+	holder=2942 #Nulji
+}

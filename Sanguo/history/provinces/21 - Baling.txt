@@ -1,0 +1,22 @@
+# c_baling
+
+# County Title
+title = c_baling
+
+# Settlements
+max_settlements = 5
+
+b_zidaoting = castle
+b_baling = temple
+#b_suizhou = city
+#b_zengdu = castle
+#b_zangcheng = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History
+210.1.1={
+	b_suizhou = city
+}

@@ -1,0 +1,23 @@
+# c_jiexu
+
+# County Title
+title = c_jiexu
+
+# Settlements
+max_settlements = 6
+
+b_jiexu = castle
+b_mianshangju = city
+b_daling = city
+#b_yingze = castle
+#b_xiaodian = city
+#b_bingjie = temple
+
+# Misc
+culture = han
+religion = confucian
+
+#History
+194.1.1={
+	b_yingze = castle
+}

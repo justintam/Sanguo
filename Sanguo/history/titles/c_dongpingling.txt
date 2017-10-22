@@ -1,0 +1,17 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_jinan
+}
+145.1.1={
+	holder=1302 #Tan Jingquan
+}
+170.1.1={
+	holder=1300 #Tan Zhenzhong
+}
+184.1.1={
+	holder=1313 #Tan Zhihan
+}

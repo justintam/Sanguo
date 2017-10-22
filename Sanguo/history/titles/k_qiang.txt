@@ -1,0 +1,4 @@
+# k_qiang
+1.1.1={
+	historical_nomad = yes
+}

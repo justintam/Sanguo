@@ -1,0 +1,48 @@
+1.1.1={
+	active=no
+	effect = {
+		set_title_flag = warlord_flag
+	}
+}
+184.1.1={
+	active=yes
+	liege=k_ji
+	holder=600 #Liu Bei
+}
+185.6.1={
+	liege=0 #Independent
+}
+191.1.1={
+	liege=k_ji
+}
+191.7.1={
+	liege=e_gongsun
+}
+192.5.1={
+	holder=0
+	active=no
+}
+197.3.1={
+	active=yes
+	liege=e_china
+	holder=600
+}
+198.2.1={
+	holder=0
+	active=no
+}
+200.3.1={
+	active=yes
+	liege=e_yuan
+	holder=600 #Liu Bei
+}
+201.8.1={
+	liege=k_jing
+}
+208.8.1={
+	liege=0 #Independent
+}
+209.3.1={
+	holder=0
+	active=no
+}

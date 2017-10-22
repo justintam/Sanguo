@@ -1,0 +1,17 @@
+# c_sanggan
+
+# County Title
+title = c_sanggan
+
+# Settlements
+max_settlements = 3
+
+b_sanggan = tribal
+#b_sangfu = city
+#b_zaolin = temple
+
+# Misc
+culture = wuhuan
+religion = tengri_pagan
+
+#History

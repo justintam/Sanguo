@@ -1,0 +1,23 @@
+# c_xuchang
+
+# County Title
+title = c_xuchang
+
+# Settlements
+max_settlements = 6
+
+b_xuchang = castle
+b_xutian = temple
+b_shichexiang = city
+b_yangyinli = city
+#b_weidu = city
+#b_yanliyang = temple
+
+# Misc
+culture = han
+religion = confucian
+
+#History
+196.1.1={
+	b_weidu = city
+}

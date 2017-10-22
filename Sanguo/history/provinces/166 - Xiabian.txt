@@ -1,0 +1,18 @@
+# c_xiabian
+
+# County Title
+title = c_xiabian
+
+# Settlements
+max_settlements = 4
+
+b_xiabian = tribal
+b_yinpingxia = city
+#b_bangke = temple
+#b_cangke = castle
+
+# Misc
+culture = bandunman
+religion = tianshi
+
+#History

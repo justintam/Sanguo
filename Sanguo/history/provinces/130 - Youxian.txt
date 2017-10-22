@@ -1,0 +1,18 @@
+# c_youxian
+
+# County Title
+title = c_youxian
+
+# Settlements
+max_settlements = 4
+
+b_youxian = castle
+#b_bohu = city
+#b_langlizhen = castle
+#b_liuyang = city
+
+# Misc
+culture = shanyue
+religion = animist
+
+#History

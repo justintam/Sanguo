@@ -1,0 +1,18 @@
+# c_jiaxing
+
+# County Title
+title = c_jiaxing
+
+# Settlements
+max_settlements = 4
+
+b_jiaxing = castle
+b_mianshi = city
+#b_dayun = temple
+#b_wuzhen = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

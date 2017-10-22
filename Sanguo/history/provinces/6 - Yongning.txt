@@ -1,0 +1,19 @@
+# c_yongning
+
+# County Title
+title = c_yongning
+
+# Settlements
+max_settlements = 5
+
+b_yongning = castle
+b_yiyangning = city
+#b_jinfeng = city
+#b_lingwu = city
+#b_yanwu = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

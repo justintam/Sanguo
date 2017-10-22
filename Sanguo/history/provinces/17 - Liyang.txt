@@ -1,0 +1,25 @@
+# c_liyang
+
+# County Title
+title = c_liyang
+
+# Settlements
+max_settlements = 5
+
+b_liyang = castle
+#b_changzhou = city
+#b_lijang = city
+#b_pizhou = city
+#b_menxiang = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History
+194.1.1={
+	b_changzhou = city
+}
+208.1.1={
+	b_lijang = city
+}

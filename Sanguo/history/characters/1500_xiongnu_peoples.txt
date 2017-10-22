@@ -1,0 +1,332 @@
+# Xiongnu Clan
+1500 = {
+	name="Qiangqui"
+	dynasty=511
+	religion="tengri_pagan"
+	culture="xiongnu"
+	father=1502
+    trait="duel_poor_warrior"
+	130.1.1={
+		birth=yes
+	}
+	188.1.1={
+		death=yes
+	}
+}
+1501 = {
+	name="Yufuluo"
+	dynasty=511
+	religion="tengri_pagan"
+	culture="xiongnu"
+	father=1500
+    trait="duel_poor_warrior"
+	150.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=1500
+	}
+	196.1.1={
+		death=yes
+	}
+}
+1502 = {
+	name="Huching"
+	dynasty=511
+	religion="tengri_pagan"
+	culture="xiongnu"
+	110.1.1={
+		birth=yes
+	}
+	179.1.1={
+		death=yes
+	}
+}
+1503 = {
+	name="Yilo"
+	dynasty=503
+	religion="tengri_pagan"
+	culture="xiongnu"
+    trait="duel_poor_warrior"
+	150.1.1={
+		birth=yes
+	}
+	210.1.1={
+		death=yes
+	}
+}
+1504 = {
+	name="Gudu"
+	dynasty=512
+	religion="tengri_pagan"
+	culture="xiongnu"
+    trait="duel_poor_warrior"
+	160.1.1={
+		birth=yes
+	}
+	230.1.1={
+		death=yes
+	}
+}
+1505 = {
+	name="Huchuquan"
+	dynasty=511
+	religion="tengri_pagan"
+	culture="xiongnu"
+	father=1500
+    trait="duel_poor_warrior"
+	156.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=1500
+	}
+	230.1.1={
+		death=yes
+	}
+}
+1506 = {
+	name="Qubi"
+	dynasty=516
+	religion="tengri_pagan"
+	culture="xiongnu"
+    trait="duel_trained_warrior"
+    trait="brave"
+	160.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1507 = {
+	name="Meng"
+	dynasty=517
+	religion="tengri_pagan"
+	culture="xiongnu"
+    trait="duel_trained_warrior"
+    trait="content"
+    trait="temperate"
+	160.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1508 = {
+	name="Uchjulu"
+	dynasty=518
+	religion="tengri_pagan"
+	culture="xiongnu"
+    trait="duel_trained_warrior"
+    trait="content"
+    trait="temperate"
+	160.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1509 = {
+	name="Tai"
+	dynasty=519
+	religion="tengri_pagan"
+	culture="xiongnu"
+    trait="duel_trained_warrior"
+    trait="diligent"
+    trait="brave"
+	160.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1510 = {
+	name="Fenghou"
+	dynasty=521
+	religion="tengri_pagan"
+	culture="xiongnu"
+    trait="duel_trained_warrior"
+    trait="diligent"
+    trait="brave"
+	160.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1511 = {
+	name="Fuquan"
+	dynasty=522
+	religion="tengri_pagan"
+	culture="xiongnu"
+    trait="duel_trained_warrior"
+    trait="ambitious"
+    trait="brave"
+	160.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1512 = {
+	name="Kuchi"
+	dynasty=523
+	religion="tengri_pagan"
+	culture="xiongnu"
+    trait="duel_trained_warrior"
+    trait="ambitious"
+    trait="brave"
+	160.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1513 = {
+	name="Wuhe"
+	dynasty=500
+	religion="tengri_pagan"
+	culture="xiongnu"
+    trait="duel_trained_warrior"
+    trait="ambitious"
+    trait="brave"
+	160.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1514 = {
+	name="Dinghe"
+	dynasty=502
+	religion="tengri_pagan"
+	culture="xiongnu"
+    trait="duel_trained_warrior"
+    trait="ambitious"
+    trait="brave"
+	160.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+
+### RANDOM ###
+
+1515 = {
+	name="Dyaotao"
+	dynasty=504
+	religion="tengri_pagan"
+	culture="xiongnu"
+	160.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1516 = {
+	name="Hyuilui"
+	dynasty=505
+	religion="tengri_pagan"
+	culture="xiongnu"
+	160.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1517 = {
+	name="Erzhu"
+	dynasty=506
+	religion="tengri_pagan"
+	culture="xiongnu"
+	160.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1518 = {
+	name="Fujulei"
+	dynasty=507
+	religion="tengri_pagan"
+	culture="xiongnu"
+	160.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1519 = {
+	name="Qilindi"
+	dynasty=508
+	religion="tengri_pagan"
+	culture="xiongnu"
+	165.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=1518
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1520 = {
+	name="Hutuwusi"
+	dynasty=513
+	religion="tengri_pagan"
+	culture="xiongnu"
+	180.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=1518
+	}
+	250.1.1={
+		death=yes
+	}
+}
+1521 = {
+	name="Duyui"
+	dynasty=514
+	religion="tengri_pagan"
+	culture="xiongnu"
+	180.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=1518
+	}
+	250.1.1={
+		death=yes
+	}
+}
+1522 = {
+	name="Xiuli"
+	dynasty=524
+	religion="tengri_pagan"
+	culture="xiongnu"
+	180.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=1518
+	}
+	250.1.1={
+		death=yes
+	}
+}

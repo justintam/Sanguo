@@ -1,0 +1,18 @@
+# c_guangwu
+
+# County Title
+title = c_guangwu
+
+# Settlements
+max_settlements = 4
+
+b_guangwu = castle
+#b_xinwei = city
+#b_duangzu = temple
+#b_xiaowen = castle
+
+# Misc
+culture = xiongnu
+religion = confucian
+
+#History

@@ -1,0 +1,19 @@
+# c_hefei
+
+# County Title
+title = c_hefei
+
+# Settlements
+max_settlements = 5
+
+b_hefei = castle
+b_liuan = city
+b_boan = city
+#b_xinkai = castle
+#b_zhiming = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

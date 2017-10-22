@@ -1,0 +1,18 @@
+# c_dacheng
+
+# County Title
+title = c_dacheng
+
+# Settlements
+max_settlements = 4
+
+b_dacheng = tribal
+#b_langfang = city
+#b_dating = temple
+#b_jiangcheng = castle
+
+# Misc
+culture = xiongnu
+religion = tengri_pagan
+
+#History

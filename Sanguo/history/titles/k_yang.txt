@@ -1,0 +1,53 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=e_china
+	vice_royalty = yes
+}
+180.1.1={
+	holder=138 #Ba Zhi
+}
+184.1.1={
+	holder=1276 #Jing Shao
+}
+188.1.1={
+	holder=3752 #Zhou Gan
+}
+190.1.1={
+	liege=e_xu
+	holder=3399 #Chen Wen
+}
+193.1.1={
+	liege=0
+	vice_royalty = no
+	holder=58 #Liu Yao
+}
+#Claim 193 Chen Yu - YS
+#Claim 194 Hui Yan - YS
+#Claim Hei Qu
+195.6.1={
+	holder=705 #Yuan Shu
+}
+197.1.1={
+	liege=e_zhong
+}
+199.6.1={
+	liege=e_china
+	holder=20461 #Yan Xiang
+}
+200.1.1={
+	holder=20462 #Liu Fu
+}
+208.5.1={
+	holder=20425 #Zhang Liao
+}
+211.1.1={
+	holder=20453 #Wen Hui
+}
+220.12.10={
+	liege=e_wei
+}
+#Yue Lin, son of Yue Jin

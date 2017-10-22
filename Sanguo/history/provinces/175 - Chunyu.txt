@@ -1,0 +1,18 @@
+# c_chunyu
+
+# County Title
+title = c_chunyu
+
+# Settlements
+max_settlements = 4
+
+b_chunyu = castle
+b_sangdu = city
+#b_pingchiu = temple
+#b_bangji = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

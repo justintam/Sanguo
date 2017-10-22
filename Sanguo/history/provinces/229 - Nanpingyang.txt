@@ -1,0 +1,18 @@
+# c_nanpingyang
+
+# County Title
+title = c_nanpingyang
+
+# Settlements
+max_settlements = 4
+
+b_nanpingyang = castle
+b_luqiuting = temple
+#b_linmo = temple
+#b_minluo = castle
+
+# Misc
+culture = han
+religion = taiping
+
+#History

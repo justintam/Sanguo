@@ -1,0 +1,18 @@
+# c_luguo
+
+# County Title
+title = c_luguo
+
+# Settlements
+max_settlements = 4
+
+b_luguo = castle
+#b_lucheng = city
+#b_duji = temple
+#b_jiangkou = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

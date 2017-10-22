@@ -1,0 +1,17 @@
+# c_dongwuyang
+
+# County Title
+title = c_dongwuyang
+
+# Settlements
+max_settlements = 3
+
+b_dongwuyang = castle
+b_guandu = castle
+#b_jindu = temple
+
+# Misc
+culture = han
+religion = confucian
+
+#History

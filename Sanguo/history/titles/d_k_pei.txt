@@ -1,0 +1,39 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_primogeniture
+	effect = {
+		set_title_flag = noble_king
+	}
+}
+1.1.1={
+	liege=k_yu
+}
+44.1.1={
+	holder=3335 #Liu Fu died 84
+}
+85.1.1={
+	holder=3336 #Liu Ding
+}
+95.1.1={
+	holder=3337 #Liu Gai
+}
+109.1.1={
+	holder=3338 #Liu Guang
+}
+144.1.1={
+	holder=3339 #Liu Rong
+}
+164.1.1={
+	holder=3340 #Liu Zong
+}
+174.1.1={
+	holder=3341 #Liu Yao
+}
+190.1.1={
+	holder=3342 #Liu Qi
+}
+220.12.10={
+	holder=0 #None
+	active = no
+}

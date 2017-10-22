@@ -1,0 +1,33 @@
+1.1.1={
+	active=no
+	effect = {
+		set_title_flag = warlord_flag
+	}
+}
+192.7.1={
+	active=yes
+	liege=k_yuan
+	holder=309 #Lv Bu
+}
+192.8.1={
+	liege=d_henei
+}
+193.1.1={
+	liege=e_yuan
+}
+193.8.1={
+	liege=d_henei
+}
+194.1.1={
+	holder=0
+	active=no
+}
+196.1.1={
+	active=yes
+	liege=k_xu
+	holder=309 #Lv Bu
+}
+196.4.1={
+	holder=0
+	active=no
+}

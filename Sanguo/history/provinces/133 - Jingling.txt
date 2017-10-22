@@ -1,0 +1,23 @@
+# c_jingling
+
+# County Title
+title = c_jingling
+
+# Settlements
+max_settlements = 6
+
+b_jingling = castle
+b_neifang = city
+b_yunxiang = city
+#b_kanzhou = castle
+#b_huming = city
+#b_piening = temple
+
+# Misc
+culture = han
+religion = confucian
+
+#History
+214.1.1={
+	b_kanzhou = castle
+}

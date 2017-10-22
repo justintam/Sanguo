@@ -1,0 +1,41 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_taiyuan
+}
+26.1.1={
+	holder=3329 #Liu Zhang
+}
+35.1.1={
+	holder=0 #Transferred
+}
+150.1.1={
+	holder=20441 #Pei Ye
+}
+166.1.1={
+	holder=173 #Zhao Qi
+}
+169.1.1={
+	holder=0 #Proscriptions
+}
+184.1.1={
+	holder=115 #Ding Yuan
+}
+189.10.1={
+	holder=300 #Dong Zhuo
+}
+192.5.22={
+	holder=725 #Gao Gan
+}
+206.6.1={
+	holder=20450 #Liang Xi
+}
+207.2.1={
+	holder=20466 #Zhang Zhi
+}
+213.6.1={
+	holder=20450 #Liang Xi
+}

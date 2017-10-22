@@ -1,0 +1,4327 @@
+namespace = duel
+
+#####################
+# Duel Engine Mk II #
+#####################
+# Galle (Gregory Hayes)
+# May 28 2012
+#####################
+# MAIN LOOP
+# duel.1	Round Start # Was 5555000
+# duel.2	Duelist One Round
+# duel.3	Duelist Two Round
+# duel.4	Round Resolution
+# duel.5	Winner Exploits Hole in Defense
+# duel.6	Loser Is Hit
+# duel.7	Determine Outcome
+######################
+# WOUND OUTCOMES (NYI)
+######################
+# duel.101	Opponent Wounded!
+# duel.102	Wounded!
+######################
+# YIELD OUTCOMES (NYI)
+######################
+# duel.105	Opponent At Your Mercy!
+# duel.106	Subdued! Yield Y/N?
+# duel.107	Opponent Yields! Accept Y/N?
+# duel.108	Opponent Accepts Your Yield!
+# duel.109	Opponent Refuses Your Yield!
+# duel.110	You Roll Aside, But Are Wounded!
+# duel.111	Your Opponent Rolls Aside, But Is Wounded!
+######################
+# DEATH OUTCOMES
+######################
+# duel.201	The final blow!
+# duel.202	Slain!
+# duel.203	Opponent Slain!
+######################
+# SPECIAL FLAVOR - TOURNEY	###REMOVED###
+######################
+# duel.301	Duelist One Round - Tourney
+# duel.302	Duelist Two Round - Tourney
+# duel.303	Winner Exploits Hole in Defense - Tourney
+# duel.304	Loser Is Hit - Tourney
+# duel.305	Opponent Wounded - Tourney
+# duel.306	Wounded - Tourney
+# duel.309	Opponent Unhorsed - Tourney
+# duel.310	Unhorsed - Tourney
+# duel.311	The final blow! - Tourney
+# duel.312	Slain - Tourney
+######################
+# How to include a duel in an event chain:
+# 1. Call an event for the first duelist, that gives them
+#    a unique flag for the context of your duel.
+# 2. From the first event, call an event for the second duelist,
+#    giving THEM a unique flag for the context of your duel.
+# 3. Put the following in the second event:
+#    e_rebels = { holder_scope = { character_event = { id = duel.1 } } }
+# 4. In option A of event duel_output.1, in duel_engine_output_events.txt,
+#    and a new if statement checking ROOT for either of your context flags.
+#	 Remove all context flags from both ROOT and FROM and call the next
+#	 event of your chain. For the next event, FROM will be the winner, and
+#	 FROMFROM will be the loser.
+#########################
+# SPECIAL CONTEXT FLAGS
+# Put these on a characters before the duel begins in order to
+# alter the duel in specific ways.
+# They do not need to be removed in your output block.
+#########################
+# flag_duel_friendly		This character is not trying to kill their opponent.
+# flag_duel_to_the_death	This character intends to fight to their death. Overriden by flag_duel_friendly
+# ###REMOVED### flag_duel_tourney			This duel is a joust in a tourney. Should be used with flag_duel_friendly or bizarre behavior will ensue.
+#########################
+
+
+# ROUND START
+# This event starts a new round of combat after resolving the previous one
+character_event = {
+	id = duel.1
+	
+	is_triggered_only = yes
+	
+	# Nobody but the actual referee should ever get this
+	trigger = {
+		has_landed_title = e_rebels 
+		FROMFROM = { is_alive = yes }
+		FROM = { is_alive = yes }
+	}
+	
+	option = {
+		name = "BEGIN!"
+		FROMFROM = { character_event = { id = duel.2 } }
+	}
+}
+
+# MAIN LOOP
+# In future versions this may allow different tactical options
+character_event = {
+	id = duel.2
+	picture = GFX_evt_duel
+	border = "GFX_event_normal_frame_war"
+	
+	is_triggered_only = yes
+	show_from_from = yes
+	
+	desc = { #default
+		text = EVTDESCDUEL2
+		trigger = {
+		}
+	}
+	
+	#Contexts
+	desc = {
+		text = EVTDESCDUEL2BATTLE
+		trigger = { 
+			has_character_flag = flag_battlefield_duel
+		}
+	}
+	
+	#My Traits
+	desc = {
+		text = EVTDESCDUEL2WOUNDED
+		trigger = { trait = wounded }
+	}
+	desc = {
+		text = EVTDESCDUEL2MAIMED
+		trigger = { trait = maimed }
+	}
+	desc = {
+		text = EVTDESCDUEL2ILL
+		trigger = {
+			OR = {
+				is_ill = yes
+				has_epidemic = yes
+			}
+		}
+	}
+	desc = {
+		text = EVTDESCDUEL2YOUNG
+		trigger = { 
+			NOT = { age = 15 }
+			NOT = { trait = tall }
+			NOT = { trait = strong }
+		}
+	}
+	
+	#Opponent Traits
+	desc = {
+		text = EVTDESCDUEL2WOUNDEDOPP
+		trigger = { FROMFROM = { trait = wounded } }
+	}
+	desc = {
+		text = EVTDESCDUEL2MAIMEDOPP
+		trigger = { FROMFROM = { trait = maimed } }
+	}
+	desc = {
+		text = EVTDESCDUEL2ILLOPP
+		trigger = {
+			FROMFROM = {
+				OR = {
+					is_ill = yes
+					has_epidemic = yes
+				}
+			}
+		}
+	}
+	desc = {
+		text = EVTDESCDUEL2YOUNGOPP
+		trigger = {
+			FROMFROM = {
+				NOT = { age = 15 }
+				NOT = { trait = tall }
+				NOT = { trait = strong }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTEDUELA"
+		
+		trigger = {
+			trait = fate_duel
+			trait = strong
+		}
+		
+		set_character_flag = duel_attack_e
+		
+		custom_tooltip = { text = EVTTOOLTIPDUEL2AE }
+		hidden_tooltip = { FROMFROM = { character_event = { id = duel.3 } } }
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+	
+	option = {
+		name = "EVTOPTEDUELD"
+		
+		trigger = {
+			trait = fate_duel
+			trait = genius
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+		set_character_flag = duel_defend_e
+		
+		custom_tooltip = { text = EVTTOOLTIPDUEL2DE }
+		hidden_tooltip = { FROMFROM = { character_event = { id = duel.3 } } }
+	}
+	
+	option = {
+		name = "EVTOPTADUELA"
+		
+		trigger = {
+			NAND = {
+				trait = fate_duel
+				trait = strong
+			}
+		}
+		
+		set_character_flag = duel_attack_a
+		
+		custom_tooltip = { text = EVTTOOLTIPDUEL2AA }
+		hidden_tooltip = { FROMFROM = { character_event = { id = duel.3 } } }
+		
+		ai_chance = {
+			factor = 10
+		}
+	}
+	
+	option = {
+		name = "EVTOPTADUELD"
+		
+		trigger = {
+			NAND = {
+				trait = fate_duel
+				trait = genius
+			}
+		}
+		
+		ai_chance = {
+			factor = 10
+		}
+		
+		set_character_flag = duel_defend_a
+		
+		custom_tooltip = { text = EVTTOOLTIPDUEL2DA }
+		hidden_tooltip = { FROMFROM = { character_event = { id = duel.3 } } }
+	}
+	
+	option = {
+		name = "EVTOPTBDUELA"
+		
+		trigger = {
+			trait = wroth
+			NOT = { trait = dishonorable }
+		}
+		
+		set_character_flag = duel_attack_b
+		
+		custom_tooltip = { text = EVTTOOLTIPDUEL2AB }
+		hidden_tooltip = { FROMFROM = { character_event = { id = duel.3 } } }
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	
+	option = {
+		name = "EVTOPTBDUELD"
+		
+		trigger = {
+			trait = patient
+			NOT = { trait = dishonorable }
+		}
+		
+		ai_chance = {
+			factor = 25
+		}
+		
+		set_character_flag = duel_defend_b
+		
+		custom_tooltip = { text = EVTTOOLTIPDUEL2DB }
+		hidden_tooltip = { FROMFROM = { character_event = { id = duel.3 } } }
+	}
+	
+	option = {
+		name = "EVTOPTCDUELA"
+		
+		trigger = {
+			combat_rating = 10
+			OR = {
+				trait = calligraphist
+				trait = duelist
+				trait = impaler
+			}
+		}
+		
+		set_character_flag = duel_attack_c
+		
+		custom_tooltip = { text = EVTTOOLTIPDUEL2AC }
+		hidden_tooltip = { FROMFROM = { character_event = { id = duel.3 } } }
+		
+		ai_chance = {
+			factor = 50
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCDUELD"
+		
+		trigger = {
+			combat_rating = 10
+			OR = {
+				trait = martial_artist
+				trait = gardener
+				trait = scholar
+			}
+		}
+		
+		ai_chance = {
+			factor = 50
+		}
+		
+		set_character_flag = duel_defend_c
+		
+		custom_tooltip = { text = EVTTOOLTIPDUEL2DC }
+		hidden_tooltip = { FROMFROM = { character_event = { id = duel.3 } } }
+	}
+	
+	option = {
+		name = "EVTOPTDDUELA"
+		
+		trigger = {
+			combat_rating = 10
+			OR = {
+				trait = tea_master
+				trait = strategist
+				trait = hunter
+			}
+		}
+		
+		set_character_flag = duel_attack_d
+		
+		custom_tooltip = { text = EVTTOOLTIPDUEL2AD }
+		hidden_tooltip = { FROMFROM = { character_event = { id = duel.3 } } }
+		
+		ai_chance = {
+			factor = 50
+		}
+	}
+	
+	option = {
+		name = "EVTOPTDDUELD"
+		
+		trigger = {
+			combat_rating = 10
+			OR = {
+				trait = go_player
+				trait = schemer
+				trait = gamer
+			}
+		}
+		
+		ai_chance = {
+			factor = 50
+		}
+		
+		set_character_flag = duel_defend_d
+		
+		custom_tooltip = { text = EVTTOOLTIPDUEL2DD }
+		hidden_tooltip = { FROMFROM = { character_event = { id = duel.3 } } }
+	}
+	
+	option = {
+		name = "EVTOPTFDUELA"
+		
+		trigger = {
+			combat_rating = 10
+		}
+		
+		set_character_flag = duel_attack_f
+		
+		custom_tooltip = { text = EVTTOOLTIPDUEL2AF }
+		hidden_tooltip = { FROMFROM = { character_event = { id = duel.3 } } }
+		
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0.5
+				has_character_flag = flag_duel_friendly
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTGDUELA"
+		
+		trigger = {
+			trait = dishonorable
+		}
+		
+		prestige = -50
+		piety = -25
+		
+		set_character_flag = duel_attack_g
+		
+		custom_tooltip = { text = EVTTOOLTIPDUEL2AG }
+		hidden_tooltip = { FROMFROM = { character_event = { id = duel.3 } } }
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+}
+
+character_event = {
+	id = duel.3
+	picture = GFX_evt_duel
+	border = "GFX_event_normal_frame_war"
+	
+	is_triggered_only = yes
+	
+	desc = { #default
+		text = EVTDESCDUEL3
+		trigger = {
+		}
+	}
+	
+	#Contexts
+	desc = {
+		text = EVTDESCDUEL3BATTLE
+		trigger = { 
+			has_character_flag = flag_battlefield_duel
+		}
+	}
+	
+	#My Traits
+	desc = {
+		text = EVTDESCDUEL3WOUNDED
+		trigger = { trait = wounded }
+	}
+	desc = {
+		text = EVTDESCDUEL3MAIMED
+		trigger = { trait = maimed }
+	}
+	desc = {
+		text = EVTDESCDUEL3ILL
+		trigger = {
+			OR = {
+				is_ill = yes
+				has_epidemic = yes
+			}
+		}
+	}
+	desc = {
+		text = EVTDESCDUEL3YOUNG
+		trigger = { 
+			NOT = { age = 15 }
+			NOT = { trait = tall }
+			NOT = { trait = strong }
+		}
+	}
+	
+	#Opponent Traits
+	desc = {
+		text = EVTDESCDUEL3WOUNDEDOPP
+		trigger = { FROM = { trait = wounded } }
+	}
+	desc = {
+		text = EVTDESCDUEL3MAIMEDOPP
+		trigger = { FROM = { trait = maimed } }
+	}
+	desc = {
+		text = EVTDESCDUEL3ILLOPP
+		trigger = {
+			FROM = {
+				OR = {
+					is_ill = yes
+					has_epidemic = yes
+				}
+			}
+		}
+	}
+	desc = {
+		text = EVTDESCDUEL3YOUNGOPP
+		trigger = { 
+			FROM = {
+				NOT = { age = 15 }
+				NOT = { trait = tall }
+				NOT = { trait = strong }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTEDUELA"
+		
+		trigger = {
+			trait = fate_duel
+			trait = strong
+		}
+		
+		set_character_flag = duel_attack_e
+		
+		custom_tooltip = { text = EVTTOOLTIPDUEL3AE }
+		hidden_tooltip = { e_rebels = { holder_scope = { character_event = { id = duel.4 } } } }
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+	
+	option = {
+		name = "EVTOPTEDUELD"
+		
+		trigger = {
+			trait = fate_duel
+			trait = genius
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+		set_character_flag = duel_defend_e
+		
+		custom_tooltip = { text = EVTTOOLTIPDUEL3DE }
+		hidden_tooltip = { e_rebels = { holder_scope = { character_event = { id = duel.4 } } } }
+	}
+	
+	option = {
+		name = "EVTOPTADUELA"
+		
+		trigger = {
+			NAND = {
+				trait = fate_duel
+				trait = strong
+			}
+		}
+		
+		set_character_flag = duel_attack_a
+		
+		custom_tooltip = { text = EVTTOOLTIPDUEL3AA }
+		hidden_tooltip = { e_rebels = { holder_scope = { character_event = { id = duel.4 } } } }
+		
+		ai_chance = {
+			factor = 10
+		}
+	}
+	
+	option = {
+		name = "EVTOPTADUELD"
+		
+		trigger = {
+			NAND = {
+				trait = fate_duel
+				trait = genius
+			}
+		}
+		
+		ai_chance = {
+			factor = 10
+		}
+		
+		set_character_flag = duel_defend_a
+		
+		custom_tooltip = { text = EVTTOOLTIPDUEL3DA }
+		hidden_tooltip = { e_rebels = { holder_scope = { character_event = { id = duel.4 } } } }
+	}
+	
+	option = {
+		name = "EVTOPTBDUELA"
+		
+		trigger = {
+			trait = wroth
+			NOT = { trait = dishonorable }
+		}
+		
+		set_character_flag = duel_attack_b
+		
+		custom_tooltip = { text = EVTTOOLTIPDUEL3AB }
+		hidden_tooltip = { e_rebels = { holder_scope = { character_event = { id = duel.4 } } } }
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+	
+	option = {
+		name = "EVTOPTBDUELD"
+		
+		trigger = {
+			trait = patient
+			NOT = { trait = dishonorable }
+		}
+		
+		ai_chance = {
+			factor = 25
+		}
+		
+		set_character_flag = duel_defend_b
+		
+		custom_tooltip = { text = EVTTOOLTIPDUEL3DB }
+		hidden_tooltip = { e_rebels = { holder_scope = { character_event = { id = duel.4 } } } }
+	}
+	
+	option = {
+		name = "EVTOPTCDUELA"
+		
+		trigger = {
+			combat_rating = 10
+			OR = {
+				trait = calligraphist
+				trait = duelist
+				trait = impaler
+			}
+		}
+		
+		set_character_flag = duel_attack_c
+		
+		custom_tooltip = { text = EVTTOOLTIPDUEL3AC }
+		hidden_tooltip = { e_rebels = { holder_scope = { character_event = { id = duel.4 } } } }
+		
+		ai_chance = {
+			factor = 50
+		}
+	}
+	
+	option = {
+		name = "EVTOPTCDUELD"
+		
+		trigger = {
+			combat_rating = 10
+			OR = {
+				trait = martial_artist
+				trait = gardener
+				trait = scholar
+			}
+		}
+		
+		ai_chance = {
+			factor = 50
+		}
+		
+		set_character_flag = duel_defend_c
+		
+		custom_tooltip = { text = EVTTOOLTIPDUEL3DC }
+		hidden_tooltip = { e_rebels = { holder_scope = { character_event = { id = duel.4 } } } }
+	}
+	
+	option = {
+		name = "EVTOPTDDUELA"
+		
+		trigger = {
+			combat_rating = 10
+			OR = {
+				trait = tea_master
+				trait = strategist
+				trait = hunter
+			}
+		}
+		
+		set_character_flag = duel_attack_d
+		
+		custom_tooltip = { text = EVTTOOLTIPDUEL3AD }
+		hidden_tooltip = { e_rebels = { holder_scope = { character_event = { id = duel.4 } } } }
+		
+		ai_chance = {
+			factor = 50
+		}
+	}
+	
+	option = {
+		name = "EVTOPTDDUELD"
+		
+		trigger = {
+			combat_rating = 10
+			OR = {
+				trait = go_player
+				trait = schemer
+				trait = gamer
+			}
+		}
+		
+		ai_chance = {
+			factor = 50
+		}
+		
+		set_character_flag = duel_defend_d
+		
+		custom_tooltip = { text = EVTTOOLTIPDUEL3DD }
+		hidden_tooltip = { e_rebels = { holder_scope = { character_event = { id = duel.4 } } } }
+	}
+	
+	option = {
+		name = "EVTOPTFDUELA"
+		
+		trigger = { NOT = { combat_rating = 10 } }
+		
+		set_character_flag = duel_attack_f
+		
+		custom_tooltip = { text = EVTTOOLTIPDUEL3AF }
+		hidden_tooltip = { e_rebels = { holder_scope = { character_event = { id = duel.4 } } } }
+		
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0.5
+				has_character_flag = flag_duel_friendly
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTGDUELA"
+		
+		trigger = {
+			trait = dishonorable
+		}
+		
+		piety = -25
+		
+		set_character_flag = duel_attack_g
+		
+		custom_tooltip = { text = EVTTOOLTIPDUEL3AG }
+		hidden_tooltip = { e_rebels = { holder_scope = { character_event = { id = duel.4 } } } }
+		
+		ai_chance = {
+			factor = 25
+		}
+	}
+}
+
+# RESOLVE ROUND - WINNER
+# Determine who "won" the round by weighting stats
+character_event = {
+	id = duel.4
+	is_triggered_only = yes
+	
+	# Nobody but the actual referee should ever get this
+	trigger = { has_landed_title = e_rebels }
+	
+	# FROMFROM wins the round
+	option = {
+		name = FROMFROM
+		ai_chance = {
+			factor = 100
+
+			# Attack Option
+			modifier = {
+				factor = 1.5
+				FROMFROM = {
+					OR = {
+						has_character_flag = duel_attack_b
+						has_character_flag = duel_defend_b
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				FROMFROM = {
+					OR = {
+						has_character_flag = duel_attack_c
+						has_character_flag = duel_defend_c
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				FROMFROM = {
+					OR = {
+						has_character_flag = duel_attack_d
+						has_character_flag = duel_defend_d
+					}
+				}
+			}
+			modifier = {
+				factor = 8
+				FROMFROM = {
+					OR = {
+						has_character_flag = duel_attack_e
+						has_character_flag = duel_defend_e
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROMFROM = {
+					has_character_flag = duel_attack_f
+				}
+			}
+			modifier = {
+				factor = 4
+				FROMFROM = {
+					has_character_flag = duel_attack_g
+				}
+				FROM = {
+					NOT = { has_character_flag = duel_defend_e }
+				}
+			}
+			modifier = {
+				factor = 4
+				FROMFROM = {
+					has_character_flag = duel_attack_b
+				}
+				FROM = {
+					has_character_flag = duel_defend_b
+				}
+			}
+			modifier = {
+				factor = 4
+				FROMFROM = {
+					has_character_flag = duel_attack_c
+				}
+				FROM = {
+					has_character_flag = duel_defend_c
+				}
+			}
+			modifier = {
+				factor = 2
+				FROMFROM = {
+					has_character_flag = duel_attack_d
+				}
+				FROM = {
+					OR = {
+						has_character_flag = duel_defend_a
+						has_character_flag = duel_defend_c
+					}
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROMFROM = {
+					has_character_flag = duel_defend_a
+				}
+				FROM = {
+					has_character_flag = duel_attack_a
+				}
+			}
+			modifier = {
+				factor = 4
+				FROMFROM = {
+					has_character_flag = duel_defend_b
+				}
+				FROM = {
+					has_character_flag = duel_attack_c
+				}
+			}
+			modifier = {
+				factor = 4
+				FROMFROM = {
+					has_character_flag = duel_defend_c
+				}
+				FROM = {
+					has_character_flag = duel_attack_b
+				}
+			}
+			modifier = {
+				factor = 2
+				FROMFROM = {
+					has_character_flag = duel_defend_d
+				}
+				FROM = {
+					OR = {
+						has_character_flag = duel_attack_a
+						has_character_flag = duel_attack_b
+					}
+				}
+			}
+			
+			# Fate Effects
+			modifier = {
+				factor = 4
+				FROMFROM = { trait = destined }
+			}
+			
+			# Skill-at-Arms Effects
+			modifier = {
+				factor = 1.5
+				FROMFROM = { trait = duel_poor_warrior }
+			}
+			modifier = {
+				factor = 3
+				FROMFROM = { trait = duel_trained_warrior }
+			}
+			modifier = {
+				factor = 6
+				FROMFROM = { trait = duel_skilled_warrior }
+			}
+			modifier = {
+				factor = 9
+				FROMFROM = { trait = duel_master_warrior }
+			}
+			
+			# Weapon Effects
+			modifier = {
+				factor = 1.5
+				FROMFROM = {
+					has_artifact = weapon_ancestralsword
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROMFROM = {
+					has_artifact = weapon_flail
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROMFROM = {
+					has_artifact = weapon_flyingsword
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROMFROM = {
+					has_artifact = weapon_greataxe
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROMFROM = {
+					has_artifact = weapon_greendragon
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROMFROM = {
+					has_artifact = weapon_handspear
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROMFROM = {
+					has_artifact = weapon_scimitarsword
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROMFROM = {
+					has_artifact = weapon_serpentspear
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROMFROM = {
+					has_artifact = weapon_serpentspear2
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROMFROM = {
+					has_artifact = weapon_sevenstar
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROMFROM = {
+					has_artifact = weapon_shootingstar
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROMFROM = {
+					has_artifact = weapon_skypiercer
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROMFROM = {
+					has_artifact = weapon_swordfate
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROMFROM = {
+					has_artifact = weapon_swordheaven
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROMFROM = {
+					has_artifact = weapon_swordlight
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROMFROM = {
+					has_artifact = weapon_thornmace
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROMFROM = {
+					has_artifact = weapon_trident
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROMFROM = {
+					has_artifact = weapon_twincrescent
+				}
+			}
+			
+			# Horse Effects
+			modifier = {
+				factor = 2
+				FROMFROM = {
+					has_artifact = horse_firestar
+				}
+			}
+			modifier = {
+				factor = 2
+				FROMFROM = {
+					has_artifact = horse_greylightning
+				}
+			}
+			modifier = {
+				factor = 2
+				FROMFROM = {
+					has_artifact = horse_hexmark
+				}
+			}
+			modifier = {
+				factor = 4
+				FROMFROM = {
+					has_artifact = horse_redhare
+				}
+			}
+			
+			# Pet Effects
+			modifier = {
+				factor = 1.25
+				FROMFROM = {
+					trait = pet_dog
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROMFROM = {
+					trait = pet_boar
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROMFROM = {
+					trait = pet_wolf
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROMFROM = {
+					trait = pet_eagle
+				}
+			}
+			modifier = {
+				factor = 3
+				FROMFROM = {
+					trait = pet_tiger
+				}
+			}
+			modifier = {
+				factor = 3
+				FROMFROM = {
+					trait = pet_elephant
+				}
+			}
+			
+			# Physical Strength Effects
+			modifier = {
+				factor = 2
+				FROMFROM = { trait = strong }
+			}
+			modifier = {
+				factor = 2
+				FROM = { trait = weak }
+			}
+			
+			# Cunning/Intelligence Effects
+			modifier = {
+				factor = 2
+				FROMFROM = { trait = genius }
+			}
+			modifier = {
+				factor = 1.5
+				FROMFROM = { trait = quick }
+			}
+			modifier = {
+				factor = 2
+				FROM = { trait = imbecile }
+			}
+			modifier = {
+				factor = 1.5
+				FROM = { trait = slow }
+			}
+			
+			# Personality Effects
+			modifier = {
+				factor = 2
+				FROMFROM = { trait = brave }
+			}
+			modifier = {
+				factor = 2
+				FROMFROM = { trait = wroth }
+				FROM = { NOT = { trait = patient } }
+			}
+			modifier = {
+				factor = 0.5
+				FROMFROM = { trait = wroth }
+				FROM = { trait = patient }
+			}
+			modifier = {
+				factor = 2
+				FROM = { trait = craven }
+			}
+			modifier = {
+				factor = 1.5
+				FROMFROM = { trait = deceitful }
+			}
+			modifier = {
+				factor = 1.5
+				FROM = { trait = honest }
+			}
+			modifier = {
+				factor = 2
+				FROMFROM = { trait = ruthless }
+			}
+			
+			# Wound Effects
+			modifier = {
+				factor = 2
+				FROM = { trait = wounded }
+			}
+			modifier = {
+				factor = 4
+				FROM = { trait = maimed }
+			}
+			modifier = {
+				factor = 100
+				FROM = { 
+					OR = {
+						trait = incapable 
+						trait = crippled		
+					}
+				}
+			}
+			
+			# Health Effects
+			modifier = {
+				factor = 2
+				FROM = { is_ill = yes }
+			}
+			modifier = {
+				factor = 4
+				FROM = { trait = infirm }
+			}
+			modifier = {
+				factor = 6
+				FROM = { has_epidemic = yes }
+			}
+			modifier = {
+				factor = 30
+				FROM = {
+					OR = {
+						trait = blinded
+						trait = blinded_age
+					}
+				}
+			}
+			
+			# Body Shape Effects
+			modifier = {
+				factor = 4
+				FROMFROM = { trait = tall }
+			}
+			modifier = {
+				factor = 4
+				FROM = { trait = hunchback }
+			}
+			modifier = {
+				factor = 4
+				FROM = { trait = dwarf }
+			}
+			modifier = {
+				factor = 4
+				FROM = { trait = clubfooted }
+			}
+			
+			# Age Effects
+			modifier = {
+				factor = 2
+				NOT = { FROM = { age = 16 } }
+			}
+			modifier = {
+				factor = 2
+				NOT = { FROM = { age = 12 } }
+			}
+			modifier = {
+				factor = 2
+				NOT = { FROM = { age = 8 } }
+			}
+			modifier = {
+				factor = 2
+				NOT = { FROM = { age = 4 } }
+			}
+			
+			# Way of Life war focus effects
+			modifier = {
+				factor = 1.5
+				FROMFROM = { has_character_modifier = wol_duel_training }
+			}
+			modifier = {
+				factor = 1.5
+				FROMFROM = { has_character_modifier = wol_war_fit }
+			}
+		}
+		FROMFROM = { character_event = { id = duel.5 } }
+	}
+	
+	# FROM wins the round
+	option = {
+		name = FROM
+		ai_chance = {
+			factor = 100
+
+			# Attack Option
+			modifier = {
+				factor = 1.5
+				FROM = {
+					OR = {
+						has_character_flag = duel_attack_b
+						has_character_flag = duel_defend_b
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				FROM = {
+					OR = {
+						has_character_flag = duel_attack_c
+						has_character_flag = duel_defend_c
+					}
+				}
+			}
+			modifier = {
+				factor = 2
+				FROM = {
+					OR = {
+						has_character_flag = duel_attack_d
+						has_character_flag = duel_defend_d
+					}
+				}
+			}
+			modifier = {
+				factor = 8
+				FROM = {
+					OR = {
+						has_character_flag = duel_attack_e
+						has_character_flag = duel_defend_e
+					}
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROM = {
+					has_character_flag = duel_attack_f
+				}
+			}
+			modifier = {
+				factor = 4
+				FROM = {
+					has_character_flag = duel_attack_g
+				}
+				FROMFROM = {
+					NOT = { has_character_flag = duel_defend_e }
+				}
+			}
+			modifier = {
+				factor = 4
+				FROM = {
+					has_character_flag = duel_attack_b
+				}
+				FROMFROM = {
+					has_character_flag = duel_defend_b
+				}
+			}
+			modifier = {
+				factor = 4
+				FROM = {
+					has_character_flag = duel_attack_c
+				}
+				FROMFROM = {
+					has_character_flag = duel_defend_c
+				}
+			}
+			modifier = {
+				factor = 2
+				FROM = {
+					has_character_flag = duel_attack_d
+				}
+				FROMFROM = {
+					OR = {
+						has_character_flag = duel_defend_a
+						has_character_flag = duel_defend_c
+					}
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROM = {
+					has_character_flag = duel_defend_a
+				}
+				FROMFROM = {
+					has_character_flag = duel_attack_a
+				}
+			}
+			modifier = {
+				factor = 4
+				FROM = {
+					has_character_flag = duel_defend_b
+				}
+				FROMFROM = {
+					has_character_flag = duel_attack_c
+				}
+			}
+			modifier = {
+				factor = 4
+				FROM = {
+					has_character_flag = duel_defend_c
+				}
+				FROMFROM = {
+					has_character_flag = duel_attack_b
+				}
+			}
+			modifier = {
+				factor = 2
+				FROM = {
+					has_character_flag = duel_defend_d
+				}
+				FROMFROM = {
+					OR = {
+						has_character_flag = duel_attack_a
+						has_character_flag = duel_attack_b
+					}
+				}
+			}
+			
+			# Fate Effects
+			modifier = {
+				factor = 4
+				FROM = { trait = destined }
+			}
+			
+			# Skill-at-Arms Effects
+			modifier = {
+				factor = 1.5
+				FROM = { trait = duel_poor_warrior }
+			}
+			modifier = {
+				factor = 3
+				FROM = { trait = duel_trained_warrior }
+			}
+			modifier = {
+				factor = 6
+				FROM = { trait = duel_skilled_warrior }
+			}
+			modifier = {
+				factor = 9
+				FROM = { trait = duel_master_warrior }
+			}
+			
+			# Weapon Effects
+			modifier = {
+				factor = 1.5
+				FROM = {
+					has_artifact = weapon_ancestralsword
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROM = {
+					has_artifact = weapon_flail
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROM = {
+					has_artifact = weapon_flyingsword
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROM = {
+					has_artifact = weapon_greataxe
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROM = {
+					has_artifact = weapon_greendragon
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROM = {
+					has_artifact = weapon_handspear
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROM = {
+					has_artifact = weapon_scimitarsword
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROM = {
+					has_artifact = weapon_serpentspear
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROM = {
+					has_artifact = weapon_serpentspear2
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROM = {
+					has_artifact = weapon_sevenstar
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROM = {
+					has_artifact = weapon_shootingstar
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROM = {
+					has_artifact = weapon_skypiercer
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROM = {
+					has_artifact = weapon_swordfate
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROM = {
+					has_artifact = weapon_swordheaven
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROM = {
+					has_artifact = weapon_swordlight
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROM = {
+					has_artifact = weapon_thornmace
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROM = {
+					has_artifact = weapon_trident
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROM = {
+					has_artifact = weapon_twincrescent
+				}
+			}
+			
+			# Horse Effects
+			modifier = {
+				factor = 2
+				FROM = {
+					has_artifact = horse_firestar
+				}
+			}
+			modifier = {
+				factor = 2
+				FROM = {
+					has_artifact = horse_greylightning
+				}
+			}
+			modifier = {
+				factor = 2
+				FROM = {
+					has_artifact = horse_hexmark
+				}
+			}
+			modifier = {
+				factor = 4
+				FROM = {
+					has_artifact = horse_redhare
+				}
+			}
+			
+			# Pet Effects
+			modifier = {
+				factor = 1.25
+				FROM = {
+					trait = pet_dog
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROM = {
+					trait = pet_eagle
+				}
+			}
+			modifier = {
+				factor = 3
+				FROM = {
+					trait = pet_tiger
+				}
+			}
+			modifier = {
+				factor = 3
+				FROM = {
+					trait = pet_elephant
+				}
+			}
+			
+			# Physical Strength Effects
+			modifier = {
+				factor = 2
+				FROM = { trait = strong }
+			}
+			modifier = {
+				factor = 2
+				FROMFROM = { trait = weak }
+			}
+			
+			# Cunning/Intelligence Effects
+			modifier = {
+				factor = 2
+				FROM = { trait = genius }
+			}
+			modifier = {
+				factor = 1.5
+				FROM = { trait = quick }
+			}
+			modifier = {
+				factor = 2
+				FROMFROM = { trait = imbecile }
+			}
+			modifier = {
+				factor = 1.5
+				FROMFROM = { trait = slow }
+			}
+			
+			# Personality Effects
+			modifier = {
+				factor = 2
+				FROM = { trait = brave }
+			}
+			modifier = {
+				factor = 2
+				FROM = { trait = wroth }
+				FROMFROM = { NOT = { trait = patient } }
+			}
+			modifier = {
+				factor = 0.5
+				FROM = { trait = wroth }
+				FROMFROM = { trait = patient }
+			}
+			modifier = {
+				factor = 2
+				FROMFROM = { trait = craven }
+			}
+			modifier = {
+				factor = 1.5
+				FROM = { trait = deceitful }
+			}
+			modifier = {
+				factor = 1.5
+				FROMFROM = { trait = honest }
+			}
+			modifier = {
+				factor = 2
+				FROM = { trait = ruthless }
+			}
+			
+			# Wound Effects
+			modifier = {
+				factor = 2
+				FROMFROM = { trait = wounded }
+			}
+			modifier = {
+				factor = 4
+				FROMFROM = { trait = maimed }
+			}
+			modifier = {
+				factor = 100
+				FROMFROM = {
+					OR = {
+						trait = incapable 
+						trait = crippled		
+					}
+				}
+			}
+			
+			# Health Effects
+			modifier = {
+				factor = 2
+				FROMFROM = { is_ill = yes }
+			}
+			modifier = {
+				factor = 4
+				FROMFROM = { trait = infirm }
+			}
+			modifier = {
+				factor = 6
+				FROMFROM = { has_epidemic = yes }
+			}
+			modifier = {
+				factor = 30
+				FROMFROM = { 
+					OR = {
+						trait = blinded
+						trait = blinded_age
+					}
+				}
+			}
+			
+			# Body Shape Effects
+			modifier = {
+				factor = 4
+				FROM = { trait = tall }
+			}
+			modifier = {
+				factor = 4
+				FROMFROM = { trait = hunchback }
+			}
+			modifier = {
+				factor = 4
+				FROMFROM = { trait = dwarf }
+			}
+			modifier = {
+				factor = 4
+				FROMFROM = { trait = clubfooted }
+			}
+			
+			# Age Effects
+			modifier = {
+				factor = 2
+				NOT = { FROMFROM = { age = 16 } }
+			}
+			modifier = {
+				factor = 2
+				NOT = { FROMFROM = { age = 12 } }
+			}
+			modifier = {
+				factor = 2
+				NOT = { FROMFROM = { age = 8 } }
+			}
+			modifier = {
+				factor = 2
+				NOT = { FROMFROM = { age = 4 } }
+			}
+			
+			# Way of Life war focus effects
+			modifier = {
+				factor = 1.5
+				FROM = { has_character_modifier = wol_duel_training }
+			}
+			modifier = {
+				factor = 1.5
+				FROM = { has_character_modifier = wol_war_fit }
+			}
+		}
+		FROM = { character_event = { id = duel.5 } }
+	}
+}
+
+# Winner attacks!
+character_event = {
+	id = duel.5
+	picture = GFX_evt_duel
+	border = "GFX_event_normal_frame_war"
+	
+	is_triggered_only = yes
+	show_from_from = yes
+	
+	#Default
+	desc = {
+		text = EVTDESCDUEL5.1
+		trigger = {
+			FROMFROM = { NOT = { character = ROOT } }
+		}
+	}
+	desc = {
+		text = EVTDESCDUEL5.2
+		trigger = {
+			FROMFROMFROM = { NOT = { character = ROOT } }
+		}
+	}
+	
+	#Strike vs Defend
+	desc = {
+		text = EVTDESCDUEL5A.1
+		trigger = {
+			FROMFROM = { NOT = { character = ROOT } }
+			has_character_flag = duel_attack_a
+			FROMFROM = { has_character_flag = duel_defend_a }
+		}
+	}
+	desc = {
+		text = EVTDESCDUEL5A.2
+		trigger = {
+			FROMFROMFROM = { NOT = { character = ROOT } }
+			has_character_flag = duel_attack_a
+			FROMFROMFROM = { has_character_flag = duel_defend_a }
+		}
+	}
+	
+	#Strike vs Parry
+	desc = {
+		text = EVTDESCDUEL5B.1
+		trigger = {
+			FROMFROM = { NOT = { character = ROOT } }
+			has_character_flag = duel_attack_a
+			FROMFROM = { has_character_flag = duel_defend_b }
+		}
+	}
+	desc = {
+		text = EVTDESCDUEL5B.2
+		trigger = {
+			FROMFROMFROM = { NOT = { character = ROOT } }
+			has_character_flag = duel_attack_a
+			FROMFROMFROM = { has_character_flag = duel_defend_b }
+		}
+	}
+	
+	#Strike vs Counter
+	desc = {
+		text = EVTDESCDUEL5C.1
+		trigger = {
+			FROMFROM = { NOT = { character = ROOT } }
+			has_character_flag = duel_attack_a
+			FROMFROM = { has_character_flag = duel_defend_c }
+		}
+	}
+	desc = {
+		text = EVTDESCDUEL5C.2
+		trigger = {
+			FROMFROMFROM = { NOT = { character = ROOT } }
+			has_character_flag = duel_attack_a
+			FROMFROMFROM = { has_character_flag = duel_defend_c }
+		}
+	}
+	
+	#Strike vs Feint
+	desc = {
+		text = EVTDESCDUEL5D.1
+		trigger = {
+			FROMFROM = { NOT = { character = ROOT } }
+			NOR = {
+				has_character_flag = duel_attack_d
+				has_character_flag = duel_attack_e
+				has_character_flag = duel_attack_g
+			}
+			FROMFROM = { has_character_flag = duel_defend_d }
+		}
+	}
+	desc = {
+		text = EVTDESCDUEL5D.2
+		trigger = {
+			FROMFROMFROM = { NOT = { character = ROOT } }
+			NOR = {
+				has_character_flag = duel_attack_d
+				has_character_flag = duel_attack_e
+				has_character_flag = duel_attack_g
+			}
+			FROMFROMFROM = { has_character_flag = duel_defend_d }
+		}
+	}
+	
+	#Strike vs God
+	desc = {
+		text = EVTDESCDUEL5E.1
+		trigger = {
+			FROMFROM = { NOT = { character = ROOT } }
+			NOT = { has_character_flag = duel_attack_e }
+			FROMFROM = { has_character_flag = duel_defend_e }
+		}
+	}
+	desc = {
+		text = EVTDESCDUEL5E.2
+		trigger = {
+			FROMFROMFROM = { NOT = { character = ROOT } }
+			NOT = { has_character_flag = duel_attack_e }
+			FROMFROMFROM = { has_character_flag = duel_defend_e }
+		}
+	}
+	
+	#Strike vs Gamble
+	desc = {
+		text = EVTDESCDUEL5F.1
+		trigger = {
+			FROMFROM = { NOT = { character = ROOT } }
+			OR = {
+				has_character_flag = duel_attack_a
+				has_character_flag = duel_defend_a
+			}
+			FROMFROM = { has_character_flag = duel_attack_f }
+		}
+	}
+	desc = {
+		text = EVTDESCDUEL5F.2
+		trigger = {
+			FROMFROMFROM = { NOT = { character = ROOT } }
+			OR = {
+				has_character_flag = duel_attack_a
+				has_character_flag = duel_defend_a
+			}
+			FROMFROMFROM = { has_character_flag = duel_attack_f }
+		}
+	}
+	
+	#Strike vs Cheat
+	desc = {
+		text = EVTDESCDUEL5G.1
+		trigger = {
+			FROMFROM = { NOT = { character = ROOT } }
+			NOR = {
+				has_character_flag = duel_attack_g
+				has_character_flag = duel_defend_e
+			}
+			FROMFROM = { has_character_flag = duel_attack_g }
+		}
+	}
+	desc = {
+		text = EVTDESCDUEL5G.2
+		trigger = {
+			FROMFROMFROM = { NOT = { character = ROOT } }
+			NOR = {
+				has_character_flag = duel_attack_g
+				has_character_flag = duel_defend_e
+			}
+			FROMFROMFROM = { has_character_flag = duel_attack_g }
+		}
+	}
+	
+	#Charge
+	desc = {
+		text = EVTDESCDUEL5H.1
+		trigger = {
+			FROMFROM = { NOT = { character = ROOT } }
+			has_character_flag = duel_attack_b
+			FROMFROM = {
+				NOR = {
+					has_character_flag = duel_attack_e
+					has_character_flag = duel_attack_g
+					has_character_flag = duel_defend_c
+					has_character_flag = duel_defend_d
+					has_character_flag = duel_defend_e
+				}
+			}
+		}
+	}
+	desc = {
+		text = EVTDESCDUEL5H.2
+		trigger = {
+			FROMFROMFROM = { NOT = { character = ROOT } }
+			has_character_flag = duel_attack_b
+			FROMFROMFROM = {
+				NOR = {
+					has_character_flag = duel_attack_e
+					has_character_flag = duel_attack_g
+					has_character_flag = duel_defend_c
+					has_character_flag = duel_defend_d
+					has_character_flag = duel_defend_e
+				}
+			}
+		}
+	}
+	
+	#Charge Countered
+	desc = {
+		text = EVTDESCDUEL5I.1
+		trigger = {
+			FROMFROM = { NOT = { character = ROOT } }
+			has_character_flag = duel_attack_b
+			FROMFROM = {
+				has_character_flag = duel_defend_c
+			}
+		}
+	}
+	desc = {
+		text = EVTDESCDUEL5I.2
+		trigger = {
+			FROMFROMFROM = { NOT = { character = ROOT } }
+			has_character_flag = duel_attack_b
+			FROMFROMFROM = {
+				has_character_flag = duel_defend_c
+			}
+		}
+	}
+	
+	#Blitz
+	desc = {
+		text = EVTDESCDUEL5J.1
+		trigger = {
+			FROMFROM = { NOT = { character = ROOT } }
+			has_character_flag = duel_attack_c
+			FROMFROM = {
+				NOR = {
+					has_character_flag = duel_attack_e
+					has_character_flag = duel_attack_g
+					has_character_flag = duel_defend_b
+					has_character_flag = duel_defend_d
+					has_character_flag = duel_defend_e
+				}
+			}
+		}
+	}
+	desc = {
+		text = EVTDESCDUEL5J.2
+		trigger = {
+			FROMFROMFROM = { NOT = { character = ROOT } }
+			has_character_flag = duel_attack_c
+			FROMFROMFROM = {
+				NOR = {
+					has_character_flag = duel_attack_e
+					has_character_flag = duel_attack_g
+					has_character_flag = duel_defend_b
+					has_character_flag = duel_defend_d
+					has_character_flag = duel_defend_e
+				}
+			}
+		}
+	}
+	
+	#Blitz Parried
+	desc = {
+		text = EVTDESCDUEL5K.1
+		trigger = {
+			FROMFROM = { NOT = { character = ROOT } }
+			has_character_flag = duel_attack_c
+			FROMFROM = {
+				has_character_flag = duel_defend_b
+			}
+		}
+	}
+	desc = {
+		text = EVTDESCDUEL5K.2
+		trigger = {
+			FROMFROMFROM = { NOT = { character = ROOT } }
+			has_character_flag = duel_attack_c
+			FROMFROMFROM = {
+				has_character_flag = duel_defend_b
+			}
+		}
+	}
+	
+	#Feint
+	desc = {
+		text = EVTDESCDUEL5L.1
+		trigger = {
+			FROMFROM = { NOT = { character = ROOT } }
+			has_character_flag = duel_attack_d
+			FROMFROM = {
+				NOR = {
+					has_character_flag = duel_attack_d
+					has_character_flag = duel_attack_e
+					has_character_flag = duel_attack_g
+					has_character_flag = duel_defend_d
+					has_character_flag = duel_defend_e
+				}
+			}
+		}
+	}
+	desc = {
+		text = EVTDESCDUEL5L.2
+		trigger = {
+			FROMFROMFROM = { NOT = { character = ROOT } }
+			has_character_flag = duel_attack_d
+			FROMFROMFROM = {
+				NOR = {
+					has_character_flag = duel_attack_d
+					has_character_flag = duel_attack_e
+					has_character_flag = duel_attack_g
+					has_character_flag = duel_defend_d
+					has_character_flag = duel_defend_e
+				}
+			}
+		}
+	}
+	
+	#Feint Feinted
+	desc = {
+		text = EVTDESCDUEL5M.1
+		trigger = {
+			FROMFROM = { NOT = { character = ROOT } }
+			OR = {
+				has_character_flag = duel_attack_d
+				has_character_flag = duel_defend_d
+			}
+			FROMFROM = {
+				OR = {
+					has_character_flag = duel_attack_d
+					has_character_flag = duel_defend_d
+				}
+			}
+		}
+	}
+	desc = {
+		text = EVTDESCDUEL5M.2
+		trigger = {
+			FROMFROMFROM = { NOT = { character = ROOT } }
+			OR = {
+				has_character_flag = duel_attack_d
+				has_character_flag = duel_defend_d
+			}
+			FROMFROMFROM = {
+				OR = {
+					has_character_flag = duel_attack_d
+					has_character_flag = duel_defend_d
+				}
+			}
+		}
+	}
+	
+	#God
+	desc = {
+		text = EVTDESCDUEL5N.1
+		trigger = {
+			FROMFROM = { NOT = { character = ROOT } }
+			has_character_flag = duel_attack_e
+			FROMFROM = {
+				NOT = { has_character_flag = duel_defend_e }
+			}
+		}
+	}
+	desc = {
+		text = EVTDESCDUEL5N.2
+		trigger = {
+			FROMFROMFROM = { NOT = { character = ROOT } }
+			has_character_flag = duel_attack_e
+			FROMFROMFROM = {
+				NOT = { has_character_flag = duel_defend_e }
+			}
+		}
+	}
+	
+	#Gamble
+	desc = {
+		text = EVTDESCDUEL5O.1
+		trigger = {
+			FROMFROM = { NOT = { character = ROOT } }
+			has_character_flag = duel_attack_f
+			FROMFROM = {
+				NOR = {
+					has_character_flag = duel_attack_e
+					has_character_flag = duel_attack_g
+					has_character_flag = duel_defend_d
+					has_character_flag = duel_defend_e
+				}
+			}
+		}
+	}
+	desc = {
+		text = EVTDESCDUEL5O.2
+		trigger = {
+			FROMFROMFROM = { NOT = { character = ROOT } }
+			has_character_flag = duel_attack_f
+			FROMFROMFROM = {
+				NOR = {
+					has_character_flag = duel_attack_e
+					has_character_flag = duel_attack_g
+					has_character_flag = duel_defend_d
+					has_character_flag = duel_defend_e
+				}
+			}
+		}
+	}
+	
+	#Cheat
+	desc = {
+		text = EVTDESCDUEL5P.1
+		trigger = {
+			FROMFROM = { NOT = { character = ROOT } }
+			has_character_flag = duel_attack_g
+			FROMFROM = {
+				NOR = {
+					has_character_flag = duel_defend_d
+					has_character_flag = duel_defend_e
+				}
+			}
+		}
+	}
+	desc = {
+		text = EVTDESCDUEL5P.2
+		trigger = {
+			FROMFROMFROM = { NOT = { character = ROOT } }
+			has_character_flag = duel_attack_g
+			FROMFROMFROM = {
+				NOR = {
+					has_character_flag = duel_defend_d
+					has_character_flag = duel_defend_e
+				}
+			}
+		}
+	}
+
+	#Defend vs Strike
+	desc = {
+		text = EVTDESCDUEL5Q.1
+		trigger = {
+			FROMFROM = { NOT = { character = ROOT } }
+			has_character_flag = duel_defend_a
+			FROMFROM = { has_character_flag = duel_attack_a }
+		}
+	}
+	desc = {
+		text = EVTDESCDUEL5Q.2
+		trigger = {
+			FROMFROMFROM = { NOT = { character = ROOT } }
+			has_character_flag = duel_defend_a
+			FROMFROMFROM = { has_character_flag = duel_attack_a }
+		}
+	}
+	
+	#Defend vs Charge
+	desc = {
+		text = EVTDESCDUEL5R.1
+		trigger = {
+			FROMFROM = { NOT = { character = ROOT } }
+			has_character_flag = duel_defend_a
+			FROMFROM = { has_character_flag = duel_attack_b }
+		}
+	}
+	desc = {
+		text = EVTDESCDUEL5R.2
+		trigger = {
+			FROMFROMFROM = { NOT = { character = ROOT } }
+			has_character_flag = duel_defend_a
+			FROMFROMFROM = { has_character_flag = duel_attack_b }
+		}
+	}
+	
+	#Defend vs Blitz
+	desc = {
+		text = EVTDESCDUEL5S.1
+		trigger = {
+			FROMFROM = { NOT = { character = ROOT } }
+			has_character_flag = duel_defend_a
+			FROMFROM = { has_character_flag = duel_attack_c }
+		}
+	}
+	desc = {
+		text = EVTDESCDUEL5S.2
+		trigger = {
+			FROMFROMFROM = { NOT = { character = ROOT } }
+			has_character_flag = duel_defend_a
+			FROMFROMFROM = { has_character_flag = duel_attack_c }
+		}
+	}
+	
+	#Defend vs Feint
+	desc = {
+		text = EVTDESCDUEL5T.1
+		trigger = {
+			FROMFROM = { NOT = { character = ROOT } }
+			NOR = {
+				has_character_flag = duel_attack_d
+				has_character_flag = duel_attack_e
+				has_character_flag = duel_attack_g
+				has_character_flag = duel_defend_d
+				has_character_flag = duel_defend_e
+			}
+			FROMFROM = { has_character_flag = duel_attack_d }
+		}
+	}
+	desc = {
+		text = EVTDESCDUEL5T.2
+		trigger = {
+			FROMFROMFROM = { NOT = { character = ROOT } }
+			NOR = {
+				has_character_flag = duel_attack_d
+				has_character_flag = duel_attack_e
+				has_character_flag = duel_attack_g
+				has_character_flag = duel_defend_d
+				has_character_flag = duel_defend_e
+			}
+			FROMFROMFROM = { has_character_flag = duel_attack_d }
+		}
+	}
+	
+	#Defend vs God
+	desc = {
+		text = EVTDESCDUEL5U.1
+		trigger = {
+			FROMFROM = { NOT = { character = ROOT } }
+			NOT = { has_character_flag = duel_defend_e }
+			FROMFROM = { has_character_flag = duel_attack_e }
+		}
+	}
+	desc = {
+		text = EVTDESCDUEL5U.2
+		trigger = {
+			FROMFROMFROM = { NOT = { character = ROOT } }
+			NOT = { has_character_flag = duel_defend_e }
+			FROMFROMFROM = { has_character_flag = duel_attack_e }
+		}
+	}
+	
+	#Defend vs Gamble
+	desc = {
+		text = EVTDESCDUEL5V.1
+		trigger = {
+			FROMFROM = { NOT = { character = ROOT } }
+			has_character_flag = duel_defend_a
+			FROMFROM = { has_character_flag = duel_attack_f }
+		}
+	}
+	desc = {
+		text = EVTDESCDUEL5V.2
+		trigger = {
+			FROMFROMFROM = { NOT = { character = ROOT } }
+			has_character_flag = duel_defend_a
+			FROMFROMFROM = { has_character_flag = duel_attack_f }
+		}
+	}
+	
+	#Defend vs Cheat
+	desc = {
+		text = EVTDESCDUEL5W.1
+		trigger = {
+			FROMFROM = { NOT = { character = ROOT } }
+			NOR = {
+				has_character_flag = duel_attack_g
+				has_character_flag = duel_defend_e
+			}
+			FROMFROM = { has_character_flag = duel_attack_g }
+		}
+	}
+	desc = {
+		text = EVTDESCDUEL5W.2
+		trigger = {
+			FROMFROMFROM = { NOT = { character = ROOT } }
+			NOR = {
+				has_character_flag = duel_attack_g
+				has_character_flag = duel_defend_e
+			}
+			FROMFROMFROM = { has_character_flag = duel_attack_g }
+		}
+	}
+	
+	#Parry
+	desc = {
+		text = EVTDESCDUEL5X.1
+		trigger = {
+			FROMFROM = { NOT = { character = ROOT } }
+			has_character_flag = duel_defend_b
+			FROMFROM = {
+				NOR = {
+					has_character_flag = duel_attack_b
+					has_character_flag = duel_attack_d
+					has_character_flag = duel_attack_e
+					has_character_flag = duel_attack_g
+				}
+			}
+		}
+	}
+	desc = {
+		text = EVTDESCDUEL5X.2
+		trigger = {
+			FROMFROMFROM = { NOT = { character = ROOT } }
+			has_character_flag = duel_defend_b
+			FROMFROMFROM = {
+				NOR = {
+					has_character_flag = duel_attack_b
+					has_character_flag = duel_attack_d
+					has_character_flag = duel_attack_e
+					has_character_flag = duel_attack_g
+				}
+			}
+		}
+	}
+	
+	#Parry vs Charge
+	desc = {
+		text = EVTDESCDUEL5Y.1
+		trigger = {
+			FROMFROM = { NOT = { character = ROOT } }
+			has_character_flag = duel_defend_b
+			FROMFROM = {
+				has_character_flag = duel_attack_b
+			}
+		}
+	}
+	desc = {
+		text = EVTDESCDUEL5Y.2
+		trigger = {
+			FROMFROMFROM = { NOT = { character = ROOT } }
+			has_character_flag = duel_defend_b
+			FROMFROMFROM = {
+				has_character_flag = duel_attack_b
+			}
+		}
+	}
+	
+	#Counter
+	desc = {
+		text = EVTDESCDUEL5Z.1
+		trigger = {
+			FROMFROM = { NOT = { character = ROOT } }
+			has_character_flag = duel_defend_c
+			FROMFROM = {
+				NOR = {
+					has_character_flag = duel_attack_c
+					has_character_flag = duel_attack_d
+					has_character_flag = duel_attack_e
+					has_character_flag = duel_attack_g
+				}
+			}
+		}
+	}
+	desc = {
+		text = EVTDESCDUEL5Z.2
+		trigger = {
+			FROMFROMFROM = { NOT = { character = ROOT } }
+			has_character_flag = duel_defend_c
+			FROMFROMFROM = {
+				NOR = {
+					has_character_flag = duel_attack_c
+					has_character_flag = duel_attack_d
+					has_character_flag = duel_attack_e
+					has_character_flag = duel_attack_g
+				}
+			}
+		}
+	}
+	
+	#Counter vs Blitz
+	desc = {
+		text = EVTDESCDUEL5AA.1
+		trigger = {
+			FROMFROM = { NOT = { character = ROOT } }
+			has_character_flag = duel_defend_c
+			FROMFROM = {
+				has_character_flag = duel_attack_c
+			}
+		}
+	}
+	desc = {
+		text = EVTDESCDUEL5AA.2
+		trigger = {
+			FROMFROMFROM = { NOT = { character = ROOT } }
+			has_character_flag = duel_defend_c
+			FROMFROMFROM = {
+				has_character_flag = duel_attack_c
+			}
+		}
+	}
+	
+	#Feint
+	desc = {
+		text = EVTDESCDUEL5AB.1
+		trigger = {
+			FROMFROM = { NOT = { character = ROOT } }
+			has_character_flag = duel_defend_d
+			FROMFROM = {
+				NOR = {
+					has_character_flag = duel_attack_d
+					has_character_flag = duel_attack_e
+					has_character_flag = duel_attack_g
+					has_character_flag = duel_defend_d
+					has_character_flag = duel_defend_e
+				}
+			}
+		}
+	}
+	desc = {
+		text = EVTDESCDUEL5AB.2
+		trigger = {
+			FROMFROMFROM = { NOT = { character = ROOT } }
+			has_character_flag = duel_defend_d
+			FROMFROMFROM = {
+				NOR = {
+					has_character_flag = duel_attack_d
+					has_character_flag = duel_attack_e
+					has_character_flag = duel_attack_g
+					has_character_flag = duel_defend_d
+					has_character_flag = duel_defend_e
+				}
+			}
+		}
+	}
+	
+	#God
+	desc = {
+		text = EVTDESCDUEL5AC.1
+		trigger = {
+			FROMFROM = { NOT = { character = ROOT } }
+			has_character_flag = duel_defend_e
+			FROMFROM = {
+				NOT = { has_character_flag = duel_attack_e }
+			}
+		}
+	}
+	desc = {
+		text = EVTDESCDUEL5AC.2
+		trigger = {
+			FROMFROMFROM = { NOT = { character = ROOT } }
+			has_character_flag = duel_defend_e
+			FROMFROMFROM = {
+				NOT = { has_character_flag = duel_attack_e }
+			}
+		}
+	}
+	
+	#####
+	
+	option = {
+		name = "EVTOPTADUEL5"
+		#Opponent is either FROMFROM or FROMFROMFROM
+		FROMFROM = {
+			if = {
+				limit = { NOT = { character = ROOT } }
+				character_event = { id = duel.6 tooltip = "EVTTOOLTIPDUEL6" }
+			}	
+		}
+		FROMFROMFROM = {
+			if = {
+				limit = { NOT = { character = ROOT } }
+				character_event = { id = duel.6 tooltip = "EVTTOOLTIPDUEL6" }
+			}	
+		}
+	}
+}
+
+# Loser is attacked!
+character_event = {
+	id = duel.6
+	picture = GFX_evt_duel
+	border = "GFX_event_normal_frame_war"	
+	
+	is_triggered_only = yes
+	
+	#Default
+	desc = {
+		text = EVTDESCDUEL6
+		trigger = {  }
+	}
+	
+	#Strike vs Defend
+	desc = {
+		text = EVTDESCDUEL6A
+		trigger = {
+			has_character_flag = duel_attack_a
+			FROM = { has_character_flag = duel_defend_a }
+		}
+	}
+	
+	#Strike vs Parry
+	desc = {
+		text = EVTDESCDUEL6B
+		trigger = {
+			has_character_flag = duel_attack_a
+			FROM = { has_character_flag = duel_defend_b }
+		}
+	}
+	
+	#Strike vs Counter
+	desc = {
+		text = EVTDESCDUEL6C
+		trigger = {
+			has_character_flag = duel_attack_a
+			FROM = { has_character_flag = duel_defend_c }
+		}
+	}
+	
+	#Strike vs Feint
+	desc = {
+		text = EVTDESCDUEL6D
+		trigger = {
+			NOR = {
+				has_character_flag = duel_attack_d
+				has_character_flag = duel_attack_e
+				has_character_flag = duel_attack_g
+			}
+			FROM = { has_character_flag = duel_defend_d }
+		}
+	}
+	
+	#Strike vs God
+	desc = {
+		text = EVTDESCDUEL6E
+		trigger = {
+			NOT = { has_character_flag = duel_attack_e }
+			FROM = { has_character_flag = duel_defend_e }
+		}
+	}
+	
+	#Strike vs Gamble
+	desc = {
+		text = EVTDESCDUEL6F
+		trigger = {
+			OR = {
+				has_character_flag = duel_attack_a
+				has_character_flag = duel_defend_a
+			}
+			FROM = { has_character_flag = duel_attack_f }
+		}
+	}
+	
+	#Strike vs Cheat
+	desc = {
+		text = EVTDESCDUEL6G
+		trigger = {
+			NOR = {
+				has_character_flag = duel_attack_g
+				has_character_flag = duel_defend_e
+			}
+			FROM = { has_character_flag = duel_attack_g }
+		}
+	}
+	
+	#Charge
+	desc = {
+		text = EVTDESCDUEL6H
+		trigger = {
+			has_character_flag = duel_attack_b
+			FROM = {
+				NOR = {
+					has_character_flag = duel_attack_e
+					has_character_flag = duel_attack_g
+					has_character_flag = duel_defend_c
+					has_character_flag = duel_defend_d
+					has_character_flag = duel_defend_e
+				}
+			}
+		}
+	}
+	
+	#Charge Countered
+	desc = {
+		text = EVTDESCDUEL6I
+		trigger = {
+			has_character_flag = duel_attack_b
+			FROM = {
+				has_character_flag = duel_defend_c
+			}
+		}
+	}
+	
+	#Blitz
+	desc = {
+		text = EVTDESCDUEL6J
+		trigger = {
+			has_character_flag = duel_attack_c
+			FROM = {
+				NOR = {
+					has_character_flag = duel_attack_e
+					has_character_flag = duel_attack_g
+					has_character_flag = duel_defend_b
+					has_character_flag = duel_defend_d
+					has_character_flag = duel_defend_e
+				}
+			}
+		}
+	}
+	
+	#Blitz Parried
+	desc = {
+		text = EVTDESCDUEL6K
+		trigger = {
+			has_character_flag = duel_attack_c
+			FROM = {
+				has_character_flag = duel_defend_b
+			}
+		}
+	}
+	
+	#Feint
+	desc = {
+		text = EVTDESCDUEL6L
+		trigger = {
+			has_character_flag = duel_attack_d
+			FROM = {
+				NOR = {
+					has_character_flag = duel_attack_d
+					has_character_flag = duel_attack_e
+					has_character_flag = duel_attack_g
+					has_character_flag = duel_defend_d
+					has_character_flag = duel_defend_e
+				}
+			}
+		}
+	}
+	
+	#Feint Feinted
+	desc = {
+		text = EVTDESCDUEL6M
+		trigger = {
+			OR = {
+				has_character_flag = duel_attack_d
+				has_character_flag = duel_defend_d
+			}
+			FROM = {
+				OR = {
+					has_character_flag = duel_attack_d
+					has_character_flag = duel_defend_d
+				}
+			}
+		}
+	}
+	
+	#God
+	desc = {
+		text = EVTDESCDUEL6N
+		trigger = {
+			has_character_flag = duel_attack_e
+			FROM = {
+				NOT = { has_character_flag = duel_defend_e }
+			}
+		}
+	}
+	
+	#Gamble
+	desc = {
+		text = EVTDESCDUEL6O
+		trigger = {
+			has_character_flag = duel_attack_f
+			FROM = {
+				NOR = {
+					has_character_flag = duel_attack_e
+					has_character_flag = duel_attack_g
+					has_character_flag = duel_defend_d
+					has_character_flag = duel_defend_e
+				}
+			}
+		}
+	}
+	
+	#Cheat
+	desc = {
+		text = EVTDESCDUEL6P
+		trigger = {
+			has_character_flag = duel_attack_g
+			FROM = {
+				NOR = {
+					has_character_flag = duel_defend_d
+					has_character_flag = duel_defend_e
+				}
+			}
+		}
+	}
+
+	#Defend vs Strike
+	desc = {
+		text = EVTDESCDUEL6Q
+		trigger = {
+			has_character_flag = duel_defend_a
+			FROM = { has_character_flag = duel_attack_a }
+		}
+	}
+	
+	#Defend vs Charge
+	desc = {
+		text = EVTDESCDUEL6R
+		trigger = {
+			has_character_flag = duel_defend_a
+			FROM = { has_character_flag = duel_attack_b }
+		}
+	}
+	
+	#Defend vs Blitz
+	desc = {
+		text = EVTDESCDUEL6S
+		trigger = {
+			has_character_flag = duel_defend_a
+			FROM = { has_character_flag = duel_attack_c }
+		}
+	}
+	
+	#Defend vs Feint
+	desc = {
+		text = EVTDESCDUEL6T
+		trigger = {
+			NOR = {
+				has_character_flag = duel_attack_d
+				has_character_flag = duel_attack_e
+				has_character_flag = duel_attack_g
+				has_character_flag = duel_defend_d
+				has_character_flag = duel_defend_e
+			}
+			FROM = { has_character_flag = duel_attack_d }
+		}
+	}
+	
+	#Defend vs God
+	desc = {
+		text = EVTDESCDUEL6U
+		trigger = {
+			NOT = { has_character_flag = duel_defend_e }
+			FROM = { has_character_flag = duel_attack_e }
+		}
+	}
+	
+	#Defend vs Gamble
+	desc = {
+		text = EVTDESCDUEL6V
+		trigger = {
+			has_character_flag = duel_defend_a
+			FROM = { has_character_flag = duel_attack_f }
+		}
+	}
+	
+	#Defend vs Cheat
+	desc = {
+		text = EVTDESCDUEL6W
+		trigger = {
+			NOR = {
+				has_character_flag = duel_attack_g
+				has_character_flag = duel_defend_e
+			}
+			FROM = { has_character_flag = duel_attack_g }
+		}
+	}
+	
+	#Parry
+	desc = {
+		text = EVTDESCDUEL6X
+		trigger = {
+			has_character_flag = duel_defend_b
+			FROM = {
+				NOR = {
+					has_character_flag = duel_attack_b
+					has_character_flag = duel_attack_d
+					has_character_flag = duel_attack_e
+					has_character_flag = duel_attack_g
+				}
+			}
+		}
+	}
+	
+	#Parry vs Charge
+	desc = {
+		text = EVTDESCDUEL6Y
+		trigger = {
+			has_character_flag = duel_defend_b
+			FROM = {
+				has_character_flag = duel_attack_b
+			}
+		}
+	}
+	
+	#Counter
+	desc = {
+		text = EVTDESCDUEL6Z
+		trigger = {
+			has_character_flag = duel_defend_c
+			FROM = {
+				NOR = {
+					has_character_flag = duel_attack_c
+					has_character_flag = duel_attack_d
+					has_character_flag = duel_attack_e
+					has_character_flag = duel_attack_g
+				}
+			}
+		}
+	}
+	
+	#Counter vs Blitz
+	desc = {
+		text = EVTDESCDUEL6AA
+		trigger = {
+			has_character_flag = duel_defend_c
+			FROM = {
+				has_character_flag = duel_attack_c
+			}
+		}
+	}
+	
+	#Feint
+	desc = {
+		text = EVTDESCDUEL6AB
+		trigger = {
+			has_character_flag = duel_defend_d
+			FROM = {
+				NOR = {
+					has_character_flag = duel_attack_d
+					has_character_flag = duel_attack_e
+					has_character_flag = duel_attack_g
+					has_character_flag = duel_defend_d
+					has_character_flag = duel_defend_e
+				}
+			}
+		}
+	}
+	
+	#God
+	desc = {
+		text = EVTDESCDUEL6AC
+		trigger = {
+			has_character_flag = duel_defend_e
+			FROM = {
+				NOT = { has_character_flag = duel_attack_e }
+			}
+		}
+	}
+	
+	option = {
+		name = "EVTOPTADUEL6"
+		hidden_tooltip = { e_rebels = { holder_scope = { character_event = { id = duel.7 } } } }
+	}
+}
+
+# Determine attack outcome
+character_event = {
+	id = duel.7
+	is_triggered_only = yes
+	
+	# Nobody but the actual referee should ever get this
+	trigger = { has_landed_title = e_rebels }
+	
+	immediate = {
+		FROMFROM = { #Winner
+			if = {
+				limit = {
+					has_character_flag = duel_attack_f
+					trait = wounded
+				}
+				random = {
+					chance = 50
+					remove_trait = wounded
+					add_trait = maimed
+				}
+			}
+			if = {
+				limit = {
+					has_character_flag = duel_attack_f
+					NOR = {
+						trait = wounded
+						trait = maimed
+					}
+				}
+				random = {
+					chance = 50
+					add_trait = wounded
+				}
+			}
+			clr_character_flag = duel_attack_a
+			clr_character_flag = duel_attack_b
+			clr_character_flag = duel_attack_c
+			clr_character_flag = duel_attack_d
+			clr_character_flag = duel_attack_e
+			clr_character_flag = duel_attack_f
+			clr_character_flag = duel_attack_g
+			
+			if = {	limit = { has_character_flag = flag_battlefield_duel }
+				if = {
+					limit = {
+						in_command = yes
+					}
+					if = {
+						limit = {
+							in_battle = yes
+						}
+						hidden_tooltip = { character_event = { id = MAN.7 } }
+					}
+					if = {
+						limit = {
+							NOT = { in_battle = yes }
+							in_siege = yes
+						}
+						hidden_tooltip = { character_event = { id = MAN.8 } }
+						break = yes
+					}
+				}
+				if = {
+					limit = {
+						in_command = no
+					}
+					liege = {
+						if = {
+							limit = {
+								in_battle = yes
+							}
+							hidden_tooltip = { character_event = { id = MAN.7 } }
+						}
+						if = {
+							limit = {
+								NOT = { in_battle = yes }
+								in_siege = yes
+							}
+							hidden_tooltip = { character_event = { id = MAN.8 } }
+							break = yes
+						}
+					}
+				}
+			}
+		}
+		
+		FROM  = { #Loser
+			if = {
+				limit = {
+					has_character_flag = duel_attack_f
+					trait = wounded
+				}
+				random = {
+					chance = 50
+					remove_trait = wounded
+					add_trait = maimed
+				}
+			}
+			if = {
+				limit = {
+					has_character_flag = duel_attack_f
+					NOR = {
+						trait = wounded
+						trait = maimed
+					}
+				}
+				random = {
+					chance = 50
+					add_trait = wounded
+				}
+			}
+			clr_character_flag = duel_attack_a
+			clr_character_flag = duel_attack_b
+			clr_character_flag = duel_attack_c
+			clr_character_flag = duel_attack_d
+			clr_character_flag = duel_attack_e
+			clr_character_flag = duel_attack_f
+			clr_character_flag = duel_attack_g
+			
+			if = {	limit = { has_character_flag = flag_battlefield_duel }
+				if = {
+					limit = {
+						in_command = yes
+					}
+					if = {
+						limit = {
+							in_battle = yes
+						}
+						hidden_tooltip = { character_event = { id = MAN.9 } }
+					}
+					if = {
+						limit = {
+							NOT = { in_battle = yes }
+							in_siege = yes
+						}
+						hidden_tooltip = { character_event = { id = MAN.10 } }
+						break = yes
+					}
+				}
+				if = {
+					limit = {
+						in_command = no
+					}
+					liege = {
+						if = {
+							limit = {
+								in_battle = yes
+							}
+							hidden_tooltip = { character_event = { id = MAN.9 } }
+						}
+						if = {
+							limit = {
+								NOT = { in_battle = yes }
+								in_siege = yes
+							}
+							hidden_tooltip = { character_event = { id = MAN.10 } }
+							break = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	option = { # Killing Blow
+		name = OK
+		FROMFROM = { character_event = { id = duel.201 } }
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 0.01
+				FROMFROM = { has_character_flag = flag_duel_friendly }
+			}
+			modifier = {
+				factor = 1.5
+				FROMFROM = { trait = cruel }
+			}
+			modifier = {
+				factor = 1.25
+				FROMFROM = { trait = wroth }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { trait = brave }
+			}
+			modifier = {
+				factor = 1.25
+				FROM = { trait = stubborn }
+			}
+			modifier = {
+				factor = 0.8
+				FROMFROM = { trait = patient }
+			}
+			modifier = {
+				factor = 0.5
+				FROMFROM = { trait = kind }
+			}
+			###
+			modifier = {
+				factor = 0.5
+				FROM = {
+					is_female = yes
+				}
+			}
+			modifier = {
+				factor = 0.5
+				FROMFROM = {
+					is_close_relative = FROM
+				}
+			}
+			modifier = {
+				factor = 0.5
+				FROMFROM = {
+					is_child_of = FROM
+				}
+			}
+			modifier = {
+				factor = 0.5
+				FROMFROM = {
+					is_father = FROM
+				}
+			}
+			modifier = {
+				factor = 0.5
+				FROMFROM = {
+					is_friend = FROM
+				}
+			}
+			modifier = {
+				factor = 0.5
+				FROMFROM = {
+					is_lover = FROM
+				}
+			}
+			modifier = {
+				factor = 0.75
+				FROMFROM = {
+					dynasty = FROM
+				}
+			}
+			modifier = {
+				factor = 2
+				FROMFROM = {
+					is_foe = FROM
+				}
+			}
+		}
+	}
+	
+	option = { # Subdued Opponent
+		name = OK
+		FROMFROM = { character_event = { id = duel.105 } }
+		ai_chance = {
+			factor = 100
+			# Needs Opponent Taken Alive
+			modifier = {
+				factor = 10
+				any_current_enemy = { character = FROM }
+				NOT = {
+					OR = {
+						trait = lunatic
+						trait = possessed
+					}
+				}
+				NOT = {
+					OR = {
+						trait = wroth
+						trait = cruel
+						trait = paranoid
+					}
+				}
+			}		
+			
+			# Personal Opinion Modifiers
+			modifier = {
+				factor = 1.25
+				FROMFROM = { opinion = { who = FROM value = 20 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROMFROM = { opinion = { who = FROM value = 40 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROMFROM = { opinion = { who = FROM value = 60 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROMFROM = { opinion = { who = FROM value = 80 } }
+			}
+			modifier = {
+				factor = 1.25
+				FROMFROM = { opinion = { who = FROM value = 100 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { FROMFROM = { opinion = { who = FROM value = -19 } } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { FROMFROM = { opinion = { who = FROM value = -39 } } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { FROMFROM = { opinion = { who = FROM value = -59 } } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { FROMFROM = { opinion = { who = FROM value = -79 } } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { FROMFROM = { opinion = { who = FROM value = -99 } } }
+			}
+			
+			modifier = {
+				factor = 2
+				FROM = {
+					is_female = yes
+				}
+			}
+			modifier = {
+				factor = 2
+				FROMFROM = {
+					is_close_relative = FROM
+				}
+			}
+			modifier = {
+				factor = 2
+				FROMFROM = {
+					is_child_of = FROM
+				}
+			}
+			modifier = {
+				factor = 2
+				FROMFROM = {
+					is_father = FROM
+				}
+			}
+			modifier = {
+				factor = 2
+				FROMFROM = {
+					is_friend = FROM
+				}
+			}
+			modifier = {
+				factor = 2
+				FROMFROM = {
+					is_lover = FROM
+				}
+			}
+			modifier = {
+				factor = 1.25
+				FROMFROM = {
+					dynasty = FROM
+				}
+			}
+			modifier = {
+				factor = 0
+				FROMFROM = {
+					is_foe = FROM
+				}
+			}
+			
+			modifier = {
+				factor = 3
+				FROMFROM = { trait = honorable }
+			}
+		}
+	}
+}
+
+### YIELD OUTCOMES
+character_event = {
+	id = duel.105
+	desc = "EVTDESCDUEL105"
+	picture = GFX_evt_duel
+	border = "GFX_event_normal_frame_war"
+	
+	is_triggered_only = yes
+	show_from_from = yes
+	
+	option = {
+		name = "EVTOPTADUEL105"
+		FROMFROM = { character_event = { id = duel.106 tooltip = "EVTTOOLTIPDUEL106" } }
+	}
+}
+
+character_event = {
+	id = duel.106
+	desc = "EVTDESCDUEL106"
+	picture = GFX_evt_duel
+	border = "GFX_event_normal_frame_war"
+	is_triggered_only = yes
+	
+	option = {
+		trigger = {
+			NOT = { has_character_flag = flag_duel_to_the_death }
+		}
+		name = "EVTOPTADUEL106"
+		FROM = { character_event = { id = duel.107 tooltip = "EVTTOOLTIPDUEL107" } }
+		ai_chance = {
+			factor = 100
+			modifier = {
+				factor = 5
+				has_character_flag = flag_duel_friendly
+			}
+			# Nearly Beaten!
+			modifier = {
+				factor = 4
+				trait = maimed
+				NOT = { trait = lunatic }
+			}
+			modifier = {
+				factor = 2
+				trait = wounded
+				NOT = { trait = lunatic }
+			}
+			# Opponent Nearly Beaten!
+			modifier = {
+				factor = 0.25
+				FROM = { trait = maimed }
+				NOT = { trait = lunatic }
+			}
+			modifier = {
+				factor = 0.5
+				FROM = { trait = wounded }
+				NOT = { trait = lunatic }
+			}
+			# Personality Effects
+			modifier = {
+				factor = 5
+				trait = craven
+			}
+			modifier = {
+				factor = 2
+				trait = kind
+			}
+			modifier = {
+				factor = 1.25
+				trait = humble
+			}
+			modifier = {
+				factor = 0.5
+				trait = brave
+			}
+			modifier = {
+				factor = 0.8
+				trait = stubborn
+			}
+			modifier = {
+				factor = 0.8
+				trait = proud
+			}
+			modifier = {
+				factor = 0.2
+				trait = wroth
+			}
+			modifier = {
+				factor = 5
+				FROM = { trait = destined }
+			}
+			modifier = {
+				factor = 2
+				FROM = {
+					OR = {
+						trait = fate_admin
+						trait = fate_duel
+						trait = fate_lead
+						trait = fate_loved
+						trait = fate_plot
+						trait = fate_strat
+						trait = fate_teach
+						trait = fate_war
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = {
+			text = "EVTOPTBDUEL106"
+			trigger = {
+				has_character_flag = flag_duel_to_the_death
+			}
+		}
+		character_event = { id = duel.110 tooltip = "EVTTOOLTIPDUEL110" }
+		ai_chance = { factor = 100 }
+	}
+}
+
+character_event = {
+	id = duel.107
+	desc = "EVTDESCDUEL107"
+	picture = GFX_evt_duel
+	border = "GFX_event_normal_frame_war"
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTADUEL107"
+		set_character_flag = flag_spared_opponent
+		FROM = { character_event = { id = duel.108 tooltip = "EVTTOOLTIPDUEL108" } }
+		ai_chance = {
+			factor = 100
+			# Need Opponent Taken Alive
+			modifier = {
+				factor = 10
+				any_current_enemy = { character = FROM }
+				NOT = {
+					OR = {
+						trait = lunatic
+						trait = possessed
+					}
+				}
+				NOT = {
+					OR = {
+						trait = wroth
+						trait = cruel
+						trait = paranoid
+					}
+				}
+			}
+			# Nearly Beaten!
+			modifier = {
+				factor = 4
+				trait = maimed
+				NOT = { trait = lunatic }
+			}
+			modifier = {
+				factor = 2
+				trait = wounded
+				NOT = { trait = lunatic }
+			}
+			# Opponent Nearly Beaten!
+			modifier = {
+				factor = 0.25
+				FROM = { trait = maimed }
+				NOT = { trait = lunatic }
+				NOT = { has_character_flag = flag_duel_friendly }
+			}
+			modifier = {
+				factor = 0.5
+				FROM = { trait = wounded }
+				NOT = { trait = lunatic }
+				NOT = { has_character_flag = flag_duel_friendly }
+			}
+			# Personal Opinion Modifiers
+			modifier = {
+				factor = 1.25
+				opinion = { who = FROM value = 20 }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -19 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -39 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -59 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -79 } }
+			}
+			modifier = {
+				factor = 0.8
+				NOT = { opinion = { who = FROM value = -99 } }
+			}
+			
+			# Would Be Kinslaying
+			modifier = {
+				factor = 10
+				OR = {
+					dynasty = FROM
+					is_close_relative = FROM
+				}
+				NOT = { trait = arbitrary }
+			}
+			modifier = {
+				factor = 20
+				OR = {
+					dynasty = FROM
+					is_close_relative = FROM
+				}
+				trait = just
+			}
+			
+			# Personality Modifiers
+			modifier = {
+				factor = 10
+				trait = honorable
+			}
+			modifier = {
+				factor = 10
+				trait = honest
+			}
+			modifier = {
+				factor = 5
+				trait = kind
+			}
+			modifier = {
+				factor = 3
+				trait = just
+			}
+			modifier = {
+				factor = 2
+				trait = gregarious
+			}
+			modifier = {
+				factor = 1.25
+				trait = humble
+			}
+			modifier = {
+				factor = 1.25
+				trait = trusting
+			}
+			modifier = {
+				factor = 0.8
+				trait = paranoid
+			}
+			modifier = {
+				factor = 0.8
+				trait = proud
+			}
+			modifier = {
+				factor = 0.5
+				trait = wroth
+			}
+			modifier = {
+				factor = 0.5
+				trait = ruthless
+			}
+			modifier = {
+				factor = 0.5
+				trait = deceitful
+			}
+			modifier = {
+				factor = 0.5
+				trait = cruel
+			}
+			modifier = {
+				factor = 0.5
+				trait = arbitrary
+			}
+			modifier = {
+				factor = 10
+				has_character_flag = flag_duel_friendly
+				NOT = {
+					OR = {
+						trait = lunatic
+						trait = possessed
+						trait = cruel
+						trait = wroth
+					}
+				}
+			}
+			modifier = {
+				factor = 5
+				has_character_flag = flag_duel_friendly
+			}
+			modifier = {
+				factor = 5
+				FROM = { trait = destined }
+			}
+			modifier = {
+				factor = 2
+				FROM = {
+					OR = {
+						trait = fate_admin
+						trait = fate_duel
+						trait = fate_lead
+						trait = fate_loved
+						trait = fate_plot
+						trait = fate_strat
+						trait = fate_teach
+						trait = fate_war
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = {
+			text = "EVTOPTBDUEL107B"
+			trigger = {
+				NOT = { opinion = { who = FROM value = -33 } }
+			}
+		}
+		ai_chance = {
+			factor = 100 
+			modifier = {
+				factor = 0
+				opinion = { who = FROM value = 40 }
+				NOT = { trait = lunatic }
+			}
+			# Friendly Duels, must have motive to be dishonorable
+			modifier = {
+				factor = 0
+				has_character_flag = flag_duel_friendly
+				NOT = {
+					OR = {
+						#has ongoing murder plot
+						AND = {
+							OR = {
+								has_plot = plot_kill_character
+								has_plot = plot_kill_spouse
+							}
+							plot_target_char = { character = FROM }
+						}
+						any_backed_character = {
+							OR = {
+								has_plot = plot_kill_character
+								has_plot = plot_kill_spouse
+							}
+							plot_target_char = { character = FROM }
+						}
+						# Titles
+						OR = {
+							any_pretender_title = { # Get rid of the current ruler or heir if I'm a pretender
+								OR = {
+									current_heir = { character = FROM }
+									holder_scope = { character = FROM }
+								}
+							}
+							any_heir_title = { # Kill a ruler if I'm the heir
+								holder_scope = { character = FROM }
+								NOT = { has_law = succ_appointment }
+							}
+						}
+
+						# Family concerns
+						any_child = { # Gets rid of obstacles in the way of a child's succession
+							OR = {
+								any_pretender_title = {
+									current_heir = { character = FROM }
+								}
+								any_heir_title = {
+									holder_scope = { character = FROM }
+								}
+							}
+						}
+						any_spouse = {	# Get rid of the current heir to a title the character's spouse is a pretender to
+							any_pretender_title = {
+								current_heir = { character = FROM }
+							}
+						}
+						any_spouse = { # Get rid of a ruler the spouse is heir to
+							any_heir_title = {
+								holder_scope = { character = FROM }
+							}
+						}
+						
+						# A lover of spouse...
+						any_spouse = { is_lover = FROM }
+						
+						# Rivals/enemies
+						is_foe = FROM
+						FROM = { has_opinion_modifier = { who = ROOT modifier = opinion_claimant_adventure_target } }
+						
+						# Go nuts...
+						trait = lunatic
+						trait = possessed					
+					}
+				}
+			}
+		}	
+		set_character_flag = flag_killed_opponent
+		custom_tooltip = { text = EVTTOOLTIPDUEL109 }
+		
+		if = {
+			limit = { has_character_flag = flag_duel_friendly }
+			if = {
+				limit = { NOT = { trait = dishonorable } }
+				add_trait = dishonorable
+			}
+		}
+			
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						NOT = { dynasty = 0 }
+						dynasty = FROM
+					}
+					is_close_relative = FROM
+				}
+			}
+			add_trait = kinslayer
+		}
+		FROM = {
+			father = {
+				if = {
+					limit = {
+						is_alive = yes			
+					}
+					opinion = {
+						who = ROOT
+						modifier = opinion_slayed_kinsman
+					}
+				}
+			}
+			mother = {
+				if = {
+					limit = {
+						is_alive = yes			
+					}
+					opinion = {
+						who = ROOT
+						modifier = opinion_slayed_kinsman
+					}
+				}
+			}
+			any_child = {
+				limit = {
+					is_alive = yes
+					OR = {
+						NOT = { is_close_relative = ROOT }
+						opinion = { who = PREV value = 50 }
+					}		
+				}
+				opinion = {
+					who = ROOT
+					modifier = opinion_slayed_kinsman
+				}
+			}
+			any_spouse = {
+				limit = { 
+					opinion = { who = PREV value = -25 } 
+					OR = {
+						NOT = { is_close_relative = ROOT }
+						opinion = { who = PREV value = 50 }
+					}
+					NOT = { is_child_of = PREV }
+					NOT = { any_child = { character = PREVPREV } }
+				}
+				opinion = {
+					who = ROOT
+					modifier = opinion_slayed_kinsman
+				}
+			}
+			any_dynasty_member = {
+				limit = {
+					is_alive = yes
+					is_close_relative = PREV
+					OR = {
+						NOT = { is_close_relative = ROOT }
+						opinion = { who = PREV value = 50 }
+					}
+					NOT = { is_child_of = PREV }
+					NOT = { any_child = { character = PREVPREV } }
+					NOT = { is_married = PREV }			
+				}
+				opinion = {
+					who = ROOT
+					modifier = opinion_slayed_kinsman
+				}
+			}
+			
+			any_friend = {
+				limit = { 
+					NOT = { is_married = PREV }
+					OR = {
+						NOT = { dynasty = PREV }
+						NOT = { is_close_relative = PREV }
+					}
+					NOT = { is_child_of = PREV }
+					NOT = { any_child = { character = PREVPREV } }
+					NOT = { is_married = PREV }
+				}
+				opinion = {
+					who = ROOT
+					modifier = opinion_slayed_kinsman
+				}
+			}
+			hidden_tooltip = { character_event = { id = duel.109 tooltip = "EVTTOOLTIPDUEL109" } }
+		}
+	}
+}
+
+character_event = {
+	id = duel.108
+	desc = "EVTDESCDUEL108"
+	picture = GFX_evt_civil_war
+	border = "GFX_event_normal_frame_war"
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					tier = EMPEROR
+					AND = {
+						trait = duel_master_warrior
+						FROM = {
+							NOT = { trait = duel_master_warrior }
+							NOT = { trait = duel_skilled_warrior }
+							NOT = { trait = duel_trained_warrior }
+							NOT = { trait = duel_poor_warrior }
+						}
+					}
+				}
+			}
+			set_character_flag = prestige_200
+			break = yes
+		}
+		if = {
+			limit = {
+				OR = {
+					tier = KING
+					AND = {
+						trait = duel_master_warrior
+						FROM = { trait = duel_poor_warrior }
+					}
+					AND = {
+						trait = duel_skilled_warrior
+						FROM = { 
+							NOT = { trait = duel_master_warrior }
+							NOT = { trait = duel_skilled_warrior }
+							NOT = { trait = duel_trained_warrior }
+							NOT = { trait = duel_poor_warrior }
+						}
+					}
+				}
+			}
+			set_character_flag = prestige_100
+			break = yes
+		}
+		if = {
+			limit = {
+				OR = {
+					tier = DUKE
+					AND = {
+						trait = duel_master_warrior
+						FROM = { trait = duel_trained_warrior }
+					}
+					AND = {
+						trait = duel_skilled_warrior
+						FROM = { trait = duel_poor_warrior }
+					}
+					AND = {
+						trait = duel_trained_warrior
+						FROM = { 
+							NOT = { trait = duel_master_warrior }
+							NOT = { trait = duel_skilled_warrior }
+							NOT = { trait = duel_trained_warrior }
+							NOT = { trait = duel_poor_warrior }
+						}
+					}				
+				}
+			}
+			set_character_flag = prestige_50
+			break = yes
+		}
+		if = {
+			limit = {
+				OR = {
+					tier = COUNT
+					AND = {
+						trait = duel_master_warrior
+						FROM = { trait = duel_skilled_warrior }
+					}
+					AND = {
+						trait = duel_skilled_warrior
+						FROM = { trait = duel_trained_warrior }
+					}
+					AND = {
+						trait = duel_trained_warrior
+						FROM = { trait = duel_poor_warrior }
+					}
+					AND = {
+						trait = duel_poor_warrior
+						FROM = { 
+							NOT = { trait = duel_master_warrior }
+							NOT = { trait = duel_skilled_warrior }
+							NOT = { trait = duel_trained_warrior }
+							NOT = { trait = duel_poor_warrior }
+						}
+					}				
+				}
+			}
+			set_character_flag = prestige_25
+			break = yes
+		}
+		set_character_flag = prestige_10
+	}
+	
+	option = {
+		name = "EVTOPTADUEL108"
+		if = {
+			limit = {
+				has_character_flag = prestige_200
+			}
+			prestige = -200
+			clr_character_flag = prestige_200
+		}
+		if = {
+			limit = {
+				has_character_flag = prestige_100
+			}
+			prestige = -100
+			clr_character_flag = prestige_100
+		}
+		if = {
+			limit = {
+				has_character_flag = prestige_50
+			}
+			prestige = -50
+			clr_character_flag = prestige_50
+		}
+		if = {
+			limit = {
+				has_character_flag = prestige_25
+			}
+			prestige = -25
+			clr_character_flag = prestige_25
+		}
+		if = {
+			limit = {
+				has_character_flag = prestige_10
+			}
+			prestige = -10
+			clr_character_flag = prestige_10
+		}
+		FROM = { character_event = { id = duel_output.1 tooltip = "EVTTOOLTIPDUELOUTPUT1" } }
+		hidden_tooltip = {
+			random_list = {
+				97 = { }
+				1 = {
+					character_event = { id = combat_trait.8 }
+					FROM = { character_event = { id = combat_trait.8 } }
+				}
+				1 = { character_event = { id = combat_trait.8 } }
+				1 = { FROM = { character_event = { id = combat_trait.8 } } }
+			}
+		}
+	}
+}
+
+#Inform liege enemy captured after duel
+character_event = {
+	id = duel.10700
+	desc = "EVTDESCDUEL10700"
+	picture = GFX_evt_duelcivil_war
+	border = "GFX_event_normal_frame_war"
+	is_triggered_only = yes
+	
+	option = {
+		name = OK
+		tooltip = { FROMFROM = { imprison = ROOT } }
+	}
+}
+
+character_event = {
+	id = duel.109
+	desc = "EVTDESCDUEL109"
+	picture = GFX_evt_death
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTADUEL109"
+		
+		if = {
+			limit = {
+				ai = yes
+				liege = {
+					ai = no
+				}
+			}
+			liege = {
+				character_event = { id = challenge.7 }
+			}
+		}
+		
+		hidden_tooltip = { character_event = { id = artifact.1 } }
+		
+		death = {
+			death_reason = death_duel
+			killer = FROM
+		}
+		
+		FROM = { character_event = { id = duel_output.1 tooltip = "EVTTOOLTIPDUELOUTPUT1" } }
+		hidden_tooltip = { FROM = { character_event = { id = duel.203 } } }
+	}
+}
+
+character_event = {
+	id = duel.110
+	desc = "EVTDESCDUEL110"
+	picture = GFX_evt_duel
+	border = "GFX_event_normal_frame_war"
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTADUEL110"
+		if = {
+			limit = { trait = wounded }
+			random = {
+				chance = 50
+				modifier = {
+					factor = 0.2
+					has_character_flag = flag_duel_friendly
+				}
+				hidden_tooltip = { remove_trait = wounded }
+				add_trait = maimed
+			}
+		}
+		if = {
+			limit = { 
+				NOR = {
+					trait = wounded
+					trait = maimed
+				}
+			}
+			random = {
+				chance = 50
+				modifier = {
+					factor = 0.5
+					has_character_flag = flag_duel_friendly
+				}
+				add_trait = wounded
+			}
+		}
+		#All wounds/maims could be eyeloss
+		if = {
+			limit = { 
+				NOT = { has_character_flag = eye_injury  } 
+			}
+			random = {
+				chance = 1
+				modifier = {
+					factor = 0.5
+					has_character_flag = flag_duel_friendly
+				}
+				custom_tooltip = {
+					text = TOOLTIPLOSEEYE
+					hidden_tooltip = { set_character_flag = eye_injury }
+				}
+			}
+		}
+		FROMFROM = { character_event = { id = duel.111 tooltip = "EVTTOOLTIPDUEL111" } }
+	}
+}
+
+character_event = {
+	id = duel.111
+	desc = "EVTDESCDUEL111"
+	picture = GFX_evt_duel
+	border = "GFX_event_normal_frame_war"
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		ROOT = { #Loser Alive
+			if = {	limit = { has_character_flag = flag_battlefield_duel }
+				if = {
+					limit = {
+						in_command = yes
+					}
+					if = {
+						limit = {
+							NOT = { in_battle = yes }
+							in_siege = yes
+						}
+						hidden_tooltip = { character_event = { id = MAN.11 } }
+						break = yes
+					}
+				}
+				if = {
+					limit = {
+						in_command = no
+					}
+					liege = {
+						if = {
+							limit = {
+								NOT = { in_battle = yes }
+								in_siege = yes
+							}
+							hidden_tooltip = { character_event = { id = MAN.11 } }
+							break = yes
+						}
+					}
+				}
+			}
+		}
+	
+	#
+	
+		FROM  = { #Loser alive!
+			if = {	limit = { has_character_flag = flag_battlefield_duel }
+				if = {
+					limit = {
+						in_command = yes
+					}
+					hidden_tooltip = { character_event = { id = MAN.12 } }
+				}
+				if = {
+					limit = {
+						in_command = no
+					}
+					liege = {
+						hidden_tooltip = { character_event = { id = MAN.12 } }
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = {
+			text = "EVTOPTADUEL111"
+			trigger = { NOT = { has_character_flag = flag_duel_friendly } }
+		}
+		name = {
+			text = "EVTOPTADUEL111B"
+			trigger = { has_character_flag = flag_duel_friendly }
+		}
+		hidden_tooltip = { e_rebels = { holder_scope = { character_event = { id = duel.1 } } } }
+	}
+}
+
+### DEATH OUTCOMES
+character_event = {
+	id = duel.201
+	picture = GFX_evt_civil_war
+	border = "GFX_event_normal_frame_war"
+	
+	is_triggered_only = yes
+	show_from_from = yes
+	
+	desc = {
+		text = EVTDESCDUEL201
+		trigger = { NOT = { has_character_flag = flag_duel_friendly } }
+	}
+	
+	desc = {
+		text = EVTDESCDUEL201B
+		trigger = { has_character_flag = flag_duel_friendly }
+	}
+	
+	option = {
+		name = {
+			text = "EVTOPTADUEL201"
+			trigger = {
+				NOT = { has_character_flag = flag_duel_friendly }
+			}
+		}
+		name = {
+			text = "EVTOPTADUEL201B"
+			trigger = {
+				has_character_flag = flag_duel_friendly
+			}
+		}
+		FROMFROM = { 
+			custom_tooltip = { text = EVTTOOLTIPDUEL202 }
+			#Wolfgang Pauli's vengeance CB modifiers knuckey: changed to something less drastic
+			if = {
+				limit = {
+					OR = {
+						AND = {
+							NOT = { dynasty = 0 }
+							dynasty = ROOT
+						}
+						is_close_relative = ROOT
+					}
+				}
+				ROOT = { 
+					add_trait = kinslayer
+				}
+			}
+			father = {
+				if = {
+					limit = {
+						is_alive = yes			
+					}
+					opinion = {
+						who = ROOT
+						modifier = opinion_slayed_kinsman
+					}
+				}
+			}
+			mother = {
+				if = {
+					limit = {
+						is_alive = yes			
+					}
+					opinion = {
+						who = ROOT
+						modifier = opinion_slayed_kinsman
+					}
+				}
+			}
+			any_child = {
+				limit = {
+					is_alive = yes
+					OR = {
+						NOT = { is_close_relative = ROOT }
+						opinion = { who = PREV value = 50 }
+					}		
+				}
+				opinion = {
+					who = ROOT
+					modifier = opinion_slayed_kinsman
+				}
+			}
+			any_spouse = {
+				limit = { 
+					opinion = { who = PREV value = -25 } 
+					OR = {
+						NOT = { is_close_relative = ROOT }
+						opinion = { who = PREV value = 50 }
+					}
+					NOT = { is_child_of = PREV }
+					NOT = { any_child = { character = PREVPREV } }
+				}
+				opinion = {
+					who = ROOT
+					modifier = opinion_slayed_kinsman
+				}
+			}
+			any_dynasty_member = {
+				limit = {
+					is_alive = yes
+					is_close_relative = PREV
+					OR = {
+						NOT = { is_close_relative = ROOT }
+						opinion = { who = PREV value = 50 }
+					}
+					NOT = { is_child_of = PREV }
+					NOT = { any_child = { character = PREVPREV } }
+					NOT = { is_married = PREV }			
+				}
+				opinion = {
+					who = ROOT
+					modifier = opinion_slayed_kinsman
+				}
+			}
+			
+			any_friend = {
+				limit = { 
+					NOT = { is_married = PREV }
+					OR = {
+						NOT = { dynasty = PREV }
+						NOT = { is_close_relative = PREV }
+					}
+					NOT = { is_child_of = PREV }
+					NOT = { any_child = { character = PREVPREV } }
+					NOT = { is_married = PREV }
+				}
+				opinion = {
+					who = ROOT
+					modifier = opinion_slayed_kinsman
+				}
+			}
+			hidden_tooltip = { character_event = { id = duel.202 tooltip = "EVTTOOLTIPDUEL202" } } 
+		}
+	}
+}
+
+character_event = {
+	id = duel.202
+	picture = GFX_evt_death
+	
+	is_triggered_only = yes
+	
+	desc = {
+		text = EVTDESCDUEL202
+		trigger = { 
+			NOT = { has_character_flag = flag_duel_friendly } 
+		}
+	}
+	desc = {
+		text = EVTDESCDUEL202B
+		trigger = { 
+			has_character_flag = flag_duel_friendly 
+		}
+	}
+	
+	option = {
+		name = {
+			text = "EVTOPTADUEL202"
+			trigger = {
+				NOT = { has_character_flag = flag_duel_friendly }
+			}
+		}
+		name = {
+			text = "EVTOPTADUEL202B"
+			trigger = {
+				has_character_flag = flag_duel_friendly
+			}
+		}
+		
+		if = {
+			limit = {
+				ai = yes
+				liege = {
+					ai = no
+				}
+			}
+			liege = {
+				character_event = { id = challenge.7 }
+			}
+		}
+		
+		hidden_tooltip = { character_event = { id = artifact.1 } }
+		
+		death = {
+			death_reason = death_duel
+			killer = FROM
+		}
+		FROM = { character_event = { id = duel_output.1 tooltip = "EVTTOOLTIPDUELOUTPUT1" } }
+		hidden_tooltip = { FROM = { character_event = { id = duel.203 } } }
+	}
+}
+
+character_event = {
+	id = duel.203
+	desc = "EVTDESCDUEL203"
+	picture = GFX_evt_kingslayer
+	border = "GFX_event_normal_frame_war"
+	is_triggered_only = yes
+	
+	immediate = {
+		character_event = { id = FAT.11 }
+	}
+	
+	option = {
+		name = "EVTOPTADUEL203"
+		if = {
+			limit = {
+				FROM = {
+					OR = {
+						tier = EMPEROR
+						trait = duel_master_warrior				
+					}
+				}
+			}
+			prestige = 200
+		}
+		if = {
+			limit = {
+				FROM = {
+					NOT = { tier = EMPEROR }
+					NOT = { trait = duel_master_warrior }
+					OR = {
+						tier = KING
+						trait = duel_skilled_warrior
+					}
+				}
+			}
+			prestige = 100
+		}
+		if = {
+			limit = {
+				FROM = {
+					NOT = { higher_tier_than = DUKE }
+					NOT = { trait = duel_master_warrior }
+					NOT = { trait = duel_skilled_warrior }
+					OR = {
+						tier = DUKE
+						trait = duel_trained_warrior
+					}
+				}
+			}
+			prestige = 50
+		}
+		if = {
+			limit = {
+				FROM = {
+					NOT = { higher_tier_than = COUNT }
+					NOT = { trait = duel_master_warrior }
+					NOT = { trait = duel_skilled_warrior }
+					NOT = { trait = duel_trained_warrior }
+					OR = {
+						tier = COUNT
+						trait = duel_poor_warrior
+					}
+				}
+			}
+			prestige = 25
+		}
+		if = {
+			limit = {
+				FROM = {
+					NOT = { higher_tier_than = BARON }
+					NOT = { trait = duel_master_warrior }
+					NOT = { trait = duel_skilled_warrior }
+					NOT = { trait = duel_trained_warrior }
+					NOT = { trait = duel_poor_warrior }
+				}
+			}
+			prestige = 10
+		}
+	}
+}

@@ -1,0 +1,17 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_guanghanyong
+}
+184.1.1={
+	holder=1010 #Zhang Xiu
+}
+188.1.1={
+	holder=1009 #Zhang Lu
+}
+190.1.1={
+	holder=3587 #Random
+}

@@ -1,0 +1,17 @@
+# c_queji
+
+# County Title
+title = c_queji
+
+# Settlements
+max_settlements = 3
+
+b_queji = tribal
+#b_quedi = city
+#b_yiuji = temple
+
+# Misc
+culture = xianbei
+religion = tengri_pagan
+
+#History

@@ -1,0 +1,19 @@
+# c_jiumen
+
+# County Title
+title = c_jiumen
+
+# Settlements
+max_settlements = 5
+
+b_jiumen = castle
+b_gengxiangji = city
+#b_jiujing = temple
+#b_bojingzhi = castle
+#b_shangai = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

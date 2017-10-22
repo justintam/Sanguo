@@ -1,0 +1,20 @@
+# c_jinyang
+
+# County Title
+title = c_jinyang
+
+# Settlements
+max_settlements = 6
+
+b_jinyang = castle
+b_yangqu = city
+b_fenyang = city
+b_genyang = city
+b_jingjin = city
+#b_jiancao = temple
+
+# Misc
+culture = han
+religion = confucian
+
+#History

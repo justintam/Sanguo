@@ -1,0 +1,21 @@
+# c_ye
+
+# County Title
+title = c_ye
+
+# Settlements
+max_settlements = 7
+
+b_ye = castle
+b_jiuhou = city
+b_pingyang = city
+b_wuchengye = city
+b_weijun = castle
+b_lizhang = temple
+#b_yinan = castle
+
+# Misc
+culture = han
+religion = taiping
+
+#History

@@ -1,0 +1,20 @@
+# c_yan
+
+# County Title
+title = c_yan
+
+# Settlements
+max_settlements = 6
+
+b_yan = castle
+b_pingyuanting = city
+b_taocheng = city
+b_wating = city
+b_zuocheng = city
+#b_nanting = temple
+
+# Misc
+culture = han
+religion = confucian
+
+#History

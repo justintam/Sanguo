@@ -1,0 +1,16 @@
+1.1.1={
+	law = agnatic_succession
+	law = succ_primogeniture
+}
+60.1.1={
+	holder=1007 #Zhang Daoling
+}
+156.1.1={
+	holder=1008 #Zhang Heng
+}
+186.1.1={
+	holder=1009 #Zhang Lu
+}
+216.1.1={
+	holder=0 #None
+}

@@ -1,0 +1,18 @@
+# c_shangquyang
+
+# County Title
+title = c_shangquyang
+
+# Settlements
+max_settlements = 4
+
+b_shangquyang = castle
+b_xiyangting = city
+#b_manyi = temple
+#b_danyi = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

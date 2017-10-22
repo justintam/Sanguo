@@ -1,0 +1,407 @@
+100 = {
+	name="Cuan" #Cuan Xi
+	culture = han
+}
+101 = {
+	name="Cui" #Cui Jun
+	culture = han
+}
+102 = {
+	name="Dai"
+	culture = han
+}
+103 = {
+	name="Dang"
+	culture = han
+}
+104 = {
+	name="Fa"
+	culture = han
+}
+105 = {
+	name="Fang"
+	culture = han
+}
+106 = {
+	name="Gan"
+	culture = han
+}
+107 = {
+	name="Geng" #Geng Lin
+	culture = han
+}
+108 = {
+	name="Huangfu"
+	culture = han
+}
+109 = {
+	name="Ji"
+	culture = han
+}
+110 = {
+	name="Jiang"
+	culture = han
+}
+111 = {
+	name="Jiao"
+	culture = han
+}
+112 = {
+	name="Kan"
+	culture = han
+}
+113 = {
+	name="Leng"
+	culture = han
+}
+114 = {
+	name="Lun"
+	culture = han
+}
+115 = {
+	name="Man"
+	culture = han
+}
+116 = {
+	name="Mao"
+	culture = han
+}
+117 = {
+	name="Mu"
+	culture = han
+}
+118 = {
+	name="Ning"
+	culture = han
+}
+119 = {
+	name="Ou" #Ou Xing
+	culture = han
+}
+120 = {
+	name="Peng" #Peng Tuo
+	culture = han
+}
+121 = {
+	name="Puyang"
+	culture = han
+}
+122 = {
+	name="Qian"
+	culture = han
+}
+123 = {
+	name="Qu" #Qu Gong
+	culture = han
+}
+124 = {
+	name="Shan"
+	culture = han
+}
+125 = {
+	name="Shao"
+	culture = han
+}
+126 = {
+	name="Sheng"
+	culture = han
+}
+127 = {
+	name="Duan"
+	culture = han
+}
+128 = {
+	name="Ni"
+	culture = han
+}
+129 = {
+	name="Wan"
+	culture = han
+}
+130 = {
+	name="Tan" #Special
+	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 3 0 119 0 0 0 			}
+		religion="confucian"
+	}
+}
+131 = {
+	name="Xie"
+	culture = han
+}
+132 = {
+	name="Xing" #Unused
+	culture = han
+}
+133 = {
+	name="Yi"
+	culture = han
+}
+134 = {
+	name="Yong"
+	culture = han
+}
+135 = {
+	name="Zang" #Zang Jie, Ba
+	culture = han
+}
+136 = {
+	name="Ze"
+	culture = han
+}
+137 = {
+	name="Zhongli"
+	culture = han
+}
+138 = {
+	name="Zu"
+	culture = han
+}
+139 = {
+	name="Zuo" #Zuo Chang
+	culture = han
+}
+140 = {
+	name="Dou" #Dou Lang
+	culture = han
+}
+141 = {
+	name="Zhen"
+	culture = han
+}
+142 = {
+	name="Zheng"
+	culture = han
+}
+143 = {
+	name="Chu" #Chu Gong
+	culture = han
+}
+144 = {
+	name="Liu" #Non-Imperial Liu
+	culture = han
+}
+145 = {
+	name="Shih"
+	culture = han
+}
+146 = {
+	name="Xia"
+	culture = han
+}
+147 = {
+	name="Beigong"
+	culture = han
+}
+148 = {
+	name="Zhang" #Zhang Clan - YT
+	culture = han
+}
+149 = {
+	name="Zhang" #Western Zhang
+	culture = han
+}
+150 = {
+	name="Ba"
+	culture = han
+}
+151 = {
+	name="Bing"
+	culture = han
+}
+152 = {
+	name="Ren"
+	culture = han
+}
+153 = {
+	name="Cao" #Non-Wei
+	culture = han
+}
+154 = {
+	name="Min"
+	culture = han
+}
+155 = {
+	name="Dong" #Dong Zhuo
+	culture = han
+}
+156 = {
+	name="Zhang" #Zhang Miao, Zhang Chao
+	culture = han
+}
+157 = {
+	name="Zhang" #Zhang Niujiao, Zhang Yan
+	culture = han
+}
+158 = {
+	name="He" #He Huan
+	culture = han
+}
+159 = {
+	name="Chen" #Chen Yi
+	culture = han
+}
+160 = {
+	name="He" #Special
+	culture = han
+}
+161 = {
+	name="Shih" #Special
+	culture = han
+}
+162 = {
+	name="Wang" #Special
+	culture = han
+}
+163 = {
+	name="Ding" #Special
+	culture = han
+}
+164 = {
+	name="Li" #Special
+	culture = han
+}
+165 = {
+	name="Liu" #Special
+	culture = han
+}
+166 = {
+	name="Guo" #Special
+	culture = han
+}
+167 = {
+	name="Cao" #Common
+	culture = han
+}
+168 = {
+	name="Wang" #Wang Kang
+	culture = han
+}
+169 = {
+	name="Dong" #Dong Fu
+	culture = han
+}
+170 = {
+	name="Dong" #Dong He
+	culture = han
+}
+171 = {
+	name="Zhu" #West
+	culture = han
+}
+172 = {
+	name="Jiao" #Common
+	culture = han
+}
+173 = {
+	name="Jin" #Jin Shang
+	culture = han
+}
+174 = {
+	name="Jia" #Jia Peng - ROTK
+	culture = han
+}
+175 = {
+	name="Zhao" #Zhao Xuan, Yan, Yao
+	culture = han
+}
+176 = {
+	name="Huang" #Huang Jun
+	culture = han
+}
+177 = {
+	name="Han" #Common
+	culture = han
+}
+178 = {
+	name="Han" #Common2
+	culture = han
+}
+179 = {
+	name="Han" #Common3
+	culture = han
+}
+180 = {
+	name="Lu" #Lu Su
+	culture = han
+}
+181 = {
+	name="Li" #Li Sheng
+	culture = han
+}
+182 = {
+	name="Liu" #Common
+	culture = han
+}
+183 = {
+	name="Guo" #Guo Dian
+	culture = han
+}
+184 = {
+	name="Zhao" #Zhao Qian
+	culture = han
+}
+185 = {
+	name="Zhao" #Zhao Qi
+	culture = han
+}
+186 = {
+	name="Zhao" #Zhao Wei
+	culture = han
+}
+187 = {
+	name="Zhao" #Zhao Bu
+	culture = han
+}
+188 = {
+	name="Zhao" #Zhao Zi
+	culture = han
+}
+189 = {
+	name="Ma" #Ma Xiang - YT
+	culture = han
+}
+190 = {
+	name="Guan" #Guan Hai - YT
+	culture = han
+}
+191 = {
+	name="Xu" #Xu He - YT
+	culture = han
+}
+192 = {
+	name="Sima" #Sima Juhe - YT
+	culture = han
+}
+193 = {
+	name="Gong" #Gong Du - YT
+	culture = han
+}
+194 = {
+	name="Han" #Han Zhong - YT
+	culture = han
+}
+195 = {
+	name="Liu" #Liu Pi - YT
+	culture = han
+}
+196 = {
+	name="Qin" #Qin Man - YT
+	culture = han
+}
+197 = {
+	name="Gao" #Common
+	culture = han
+}
+198 = {
+	name="Deng" #Deng Meng - YT
+	culture = han
+}
+199 = {
+	name="Cheng" #Cheng Yuanzhi - YT
+	culture = han
+}

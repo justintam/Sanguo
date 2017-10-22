@@ -1,0 +1,19 @@
+# c_fucheng
+
+# County Title
+title = c_fucheng
+
+# Settlements
+max_settlements = 5
+
+b_fucheng = castle
+b_jing = city
+#b_bayin = temple
+#b_qitou = castle
+#b_xintou = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

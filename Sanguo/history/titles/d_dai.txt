@@ -1,0 +1,15 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=k_you
+	vice_royalty = yes
+}
+184.1.1={
+	holder=2705 #KaiserBeer
+}
+213.6.1={
+	liege=k_ji
+}

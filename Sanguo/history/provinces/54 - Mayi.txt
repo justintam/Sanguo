@@ -1,0 +1,18 @@
+# c_mayi
+
+# County Title
+title = c_mayi
+
+# Settlements
+max_settlements = 4
+
+b_mayi = tribal
+#b_huangcun = city
+#b_wenzi = temple
+#b_xiaocong = castle
+
+# Misc
+culture = xiongnu
+religion = tengri_pagan
+
+#History

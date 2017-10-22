@@ -1,0 +1,17 @@
+# c_jundu
+
+# County Title
+title = c_jundu
+
+# Settlements
+max_settlements = 3
+
+b_jundu = castle
+#b_jundukai = city
+#b_qiubei = temple
+
+# Misc
+culture = han
+religion = confucian
+
+#History

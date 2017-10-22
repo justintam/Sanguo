@@ -1,0 +1,1006 @@
+#Dynasties for Randomly Generated Characters
+
+1100 = {
+	name="Zhang"
+	culture = han
+}
+1101 = {
+	name="Zhang"
+	culture = han
+}
+1102 = {
+	name="Liu"
+	culture = han
+}
+1103 = {
+	name="Wang"
+	culture = han
+}
+1104 = {
+	name="Sun"
+	culture = han
+}
+1105 = {
+	name="Cao"
+	culture = han
+}
+1106 = {
+	name="Chen"
+	culture = han
+}
+1107 = {
+	name="Yang"
+	culture = han
+}
+1108 = {
+	name="Li"
+	culture = han
+}
+1109 = {
+	name="Lü"
+	culture = han
+}
+1110 = {
+	name="Ma"
+	culture = han
+}
+1111 = {
+	name="Wu"
+	culture = han
+}
+1112 = {
+	name="Xu"
+	culture = han
+}
+1113 = {
+	name="Lu"
+	culture = han
+}
+1114 = {
+	name="Guan"
+	culture = han
+}
+1115 = {
+	name="Xiahou"
+	culture = han
+}
+1116 = {
+	name="Yan"
+	culture = han
+}
+1117 = {
+	name="Dong"
+	culture = han
+}
+1118 = {
+	name="Han"
+	culture = han
+}
+1119 = {
+	name="Guo"
+	culture = han
+}
+1120 = {
+	name="Huang"
+	culture = han
+}
+1121 = {
+	name="Jiang"
+	culture = han
+}
+1122 = {
+	name="Sima"
+	culture = han
+}
+1123 = {
+	name="Zhu"
+	culture = han
+}
+1124 = {
+	name="Zhuge"
+	culture = han
+}
+1125 = {
+	name="Cheng"
+	culture = han
+}
+1126 = {
+	name="Gongsun"
+	culture = han
+}
+1127 = {
+	name="Hu"
+	culture = han
+}
+1128 = {
+	name="Shi"
+	culture = han
+}
+1129 = {
+	name="Yuan"
+	culture = han
+}
+1130 = {
+	name="Zhou"
+	culture = han
+}
+1131 = {
+	name="Gao"
+	culture = han
+}
+1132 = {
+	name="Zhao"
+	culture = han
+}
+1133 = {
+	name="He"
+	culture = han
+}
+1134 = {
+	name="Liang"
+	culture = han
+}
+1135 = {
+	name="Quan"
+	culture = han
+}
+1136 = {
+	name="Wei"
+	culture = han
+}
+1137 = {
+	name="Wen"
+	culture = han
+}
+1138 = {
+	name="Deng"
+	culture = han
+}
+1139 = {
+	name="Fu"
+	culture = han
+}
+1140 = {
+	name="Jia"
+	culture = han
+}
+1141 = {
+	name="Tian"
+	culture = han
+}
+1142 = {
+	name="Yu"
+	culture = han
+}
+1143 = {
+	name="Cai"
+	culture = han
+}
+1144 = {
+	name="Bu"
+	culture = han
+}
+1145 = {
+	name="Ding"
+	culture = han
+}
+1146 = {
+	name="Du"
+	culture = han
+}
+1147 = {
+	name="Fan"
+	culture = han
+}
+1148 = {
+	name="Meng"
+	culture = han
+}
+1149 = {
+	name="Pan"
+	culture = han
+}
+1150 = {
+	name="Pang"
+	culture = han
+}
+1151 = {
+	name="Shen"
+	culture = han
+}
+1152 = {
+	name="Fei"
+	culture = han
+}
+1153 = {
+	name="Feng"
+	culture = han
+}
+1154 = {
+	name="Hua"
+	culture = han
+}
+1155 = {
+	name="Qiao"
+	culture = han
+}
+1156 = {
+	name="Song"
+	culture = han
+}
+1157 = {
+	name="Tang"
+	culture = han
+}
+1158 = {
+	name="Xin"
+	culture = han
+}
+1159 = {
+	name="Xun"
+	culture = han
+}
+1160 = {
+	name="Yin"
+	culture = han
+}
+1161 = {
+	name="Yue"
+	culture = han
+}
+1162 = {
+	name="Zhong"
+	culture = han
+}
+1163 = {
+	name="Luo"
+	culture = han
+}
+1164 = {
+	name="Bao"
+	culture = han
+}
+1165 = {
+	name="Bian"
+	culture = han
+}
+1166 = {
+	name="Dian"
+	culture = han
+}
+1167 = {
+	name="Kong"
+	culture = han
+}
+1168 = {
+	name="Gu"
+	culture = han
+}
+1169 = {
+	name="Hao"
+	culture = han
+}
+1170 = {
+	name="Hou"
+	culture = han
+}
+1171 = {
+	name="Huan"
+	culture = han
+}
+1172 = {
+	name="Huo"
+	culture = han
+}
+1173 = {
+	name="Jin"
+	culture = han
+}
+1174 = {
+	name="Ju"
+	culture = han
+}
+1175 = {
+	name="Kong"
+	culture = han
+}
+1176 = {
+	name="Kuai"
+	culture = han
+}
+1177 = {
+	name="Lei"
+	culture = han
+}
+1178 = {
+	name="Liao"
+	culture = han
+}
+1179 = {
+	name="Ling"
+	culture = han
+}
+1180 = {
+	name="Lou"
+	culture = han
+}
+1181 = {
+	name="Mi"
+	culture = han
+}
+1182 = {
+	name="Niu"
+	culture = han
+}
+1183 = {
+	name="Pei"
+	culture = han
+}
+1184 = {
+	name="Qin"
+	culture = han
+}
+1185 = {
+	name="Qiu"
+	culture = han
+}
+1186 = {
+	name="Su"
+	culture = han
+}
+1187 = {
+	name="Sui"
+	culture = han
+}
+1188 = {
+	name="Taishi"
+	culture = han
+}
+1189 = {
+	name="Tao"
+	culture = han
+}
+1190 = {
+	name="Teng"
+	culture = han
+}
+1191 = {
+	name="Xi"
+	culture = han
+}
+1192 = {
+	name="Xiang"
+	culture = han
+}
+1193 = {
+	name="Xue"
+	culture = han
+}
+1194 = {
+	name="Zou"
+	culture = han
+}
+1195 = {
+	name="Bei"
+	culture = han
+}
+1196 = {
+	name="Bo"
+	culture = han
+}
+1197 = {
+	name="Cen"
+	culture = han
+}
+1198 = {
+	name="Che"
+	culture = han
+}
+1199 = {
+	name="Chunyu"
+	culture = han
+}
+1200 = {
+	name="Cuan"
+	culture = han
+}
+1201 = {
+	name="Cui"
+	culture = han
+}
+102 = {
+	name="Dai"
+	culture = han
+}
+1203 = {
+	name="Dang"
+	culture = han
+}
+1204 = {
+	name="Fa"
+	culture = han
+}
+1205 = {
+	name="Fang"
+	culture = han
+}
+1206 = {
+	name="Gan"
+	culture = han
+}
+1207 = {
+	name="Geng"
+	culture = han
+}
+1208 = {
+	name="Huangfu"
+	culture = han
+}
+1209 = {
+	name="Ji"
+	culture = han
+}
+1210 = {
+	name="Jian"
+	culture = han
+}
+1211 = {
+	name="Jiao"
+	culture = han
+}
+1212 = {
+	name="Kan"
+	culture = han
+}
+1213 = {
+	name="Leng"
+	culture = han
+}
+1214 = {
+	name="Lun"
+	culture = han
+}
+1215 = {
+	name="Man"
+	culture = han
+}
+1216 = {
+	name="Mao"
+	culture = han
+}
+1217 = {
+	name="Mu"
+	culture = han
+}
+1218 = {
+	name="Ning"
+	culture = han
+}
+1219 = {
+	name="Ou"
+	culture = han
+}
+1220 = {
+	name="Peng"
+	culture = han
+}
+1221 = {
+	name="Puyang"
+	culture = han
+}
+1222 = {
+	name="Qian"
+	culture = han
+}
+1223 = {
+	name="Qu"
+	culture = han
+}
+1224 = {
+	name="Shan"
+	culture = han
+}
+1225 = {
+	name="Shao"
+	culture = han
+}
+1226 = {
+	name="Sheng"
+	culture = han
+}
+1227 = {
+	name="Duan"
+	culture = han
+}
+1228 = {
+	name="Ni"
+	culture = han
+}
+1229 = {
+	name="Wan"
+	culture = han
+}
+1230 = {
+	name="Tan"
+	culture = han
+}
+1231 = {
+	name="Xie"
+	culture = han
+}
+1232 = {
+	name="Xing"
+	culture = han
+}
+1233 = {
+	name="Yi"
+	culture = han
+}
+1234 = {
+	name="Yong"
+	culture = han
+}
+1235 = {
+	name="Zang"
+	culture = han
+}
+1236 = {
+	name="Ze"
+	culture = han
+}
+1237 = {
+	name="Zhongli"
+	culture = han
+}
+1238 = {
+	name="Zu"
+	culture = han
+}
+1239 = {
+	name="Zuo"
+	culture = han
+}
+1240 = {
+	name="Dou"
+	culture = han
+}
+1241 = {
+	name="Zhen"
+	culture = han
+}
+1242 = {
+	name="Zheng"
+	culture = han
+}
+1243 = {
+	name="Chu"
+	culture = han
+}
+1244 = {
+	name="Liu"
+	culture = han
+}
+1245 = {
+	name="Shih"
+	culture = han
+}
+1246 = {
+	name="Chen"
+	culture = han
+}
+1247 = {
+	name="Bu"
+	culture = han
+}
+1248 = {
+	name="Bian"
+	culture = han
+}
+1249 = {
+	name="Bian"
+	culture = han
+}
+1250 = {
+	name="He"
+	culture = han
+}
+1251 = {
+	name="Guo"
+	culture = han
+}
+1252 = {
+	name="Li"
+	culture = han
+}
+1253 = {
+	name="Han"
+	culture = han
+}
+1254 = {
+	name="Huan"
+	culture = han
+}
+1255 = {
+	name="Huang"
+	culture = han
+}
+1256 = {
+	name="Li"
+	culture = han
+}
+1257 = {
+	name="Wang"
+	culture = han
+}
+1258 = {
+	name="Zhu"
+	culture = han
+}
+1259 = {
+	name="Yan"
+	culture = han
+}
+1260 = {
+	name="Han"
+	culture = han
+}
+1261 = {
+	name="Zhang"
+	culture = han
+}
+1262 = {
+	name="Wang"
+	culture = han
+}
+1263 = {
+	name="Wang"
+	culture = han
+}
+1264 = {
+	name="Guo"
+	culture = han
+}
+1265 = {
+	name="Zhang"
+	culture = han
+}
+1266 = {
+	name="Kong"
+	culture = han
+}
+1267 = {
+	name="Wang"
+	culture = han
+}
+1268 = {
+	name="Yan"
+	culture = han
+}
+1269 = {
+	name="Zhao"
+	culture = han
+}
+1270 = {
+	name="Sun"
+	culture = han
+}
+1271 = {
+	name="Wang"
+	culture = han
+}
+1272 = {
+	name="Chen"
+	culture = han
+}
+1273 = {
+	name="Qu"
+	culture = han
+}
+1274 = {
+	name="Zhang"
+	culture = han
+}
+1275 = {
+	name="Sun"
+	culture = han
+}
+1276 = {
+	name="Zhang"
+	culture = han
+}
+1277 = {
+	name="Yang"
+	culture = han
+}
+1278 = {
+	name="Zhang"
+	culture = han
+}
+1279 = {
+	name="Zhang"
+	culture = han
+}
+1280 = {
+	name="Huang"
+	culture = han
+}
+1281 = {
+	name="Zhou"
+	culture = han
+}
+1282 = {
+	name="Hu"
+	culture = han
+}
+1283 = {
+	name="Chong"
+	culture = han
+}
+1284 = {
+	name="Bao"
+	culture = han
+}
+1285 = {
+	name="Huang"
+	culture = han
+}
+1286 = {
+	name="Chu"
+	culture = han
+}
+1287 = {
+	name="Liu"
+	culture = han
+}
+1288 = {
+	name="Li"
+	culture = han
+}
+1289 = {
+	name="He"
+	culture = han
+}
+1290 = {
+	name="Li"
+	culture = han
+}
+1291 = {
+	name="Han"
+	culture = han
+}
+1292 = {
+	name="Yang"
+	culture = han
+}
+1293 = {
+	name="Zhu"
+	culture = han
+}
+1294 = {
+	name="Xu"
+	culture = han
+}
+1295 = {
+	name="Gongsun"
+	culture = han
+}
+1296 = {
+	name="Zhang"
+	culture = han
+}
+1297 = {
+	name="Ying"
+	culture = han
+}
+1298 = {
+	name="Zhang"
+	culture = han
+}
+1299 = {
+	name="Yang"
+	culture = han
+}
+1300 = {
+	name="Di"
+	culture = han
+}
+1301 = {
+	name="Guo"
+	culture = han
+}
+1302 = {
+	name="Song"
+	culture = han
+}
+1303 = {
+	name="Du"
+	culture = han
+}
+1304 = {
+	name="Zhang"
+	culture = han
+}
+1305 = {
+	name="Xing"
+	culture = han
+}
+1306 = {
+	name="Luan"
+	culture = han
+}
+1307 = {
+	name="Guo"
+	culture = han
+}
+1308 = {
+	name="Qu"
+	culture = han
+}
+1309 = {
+	name="Jiang"
+	culture = han
+}
+1310 = {
+	name="Zhao"
+	culture = han
+}
+1311 = {
+	name="Chen"
+	culture = han
+}
+1312 = {
+	name="Zou"
+	culture = han
+}
+1313 = {
+	name="Rui"
+	culture = han
+}
+1314 = {
+	name="Ting"
+	culture = han
+}
+1315 = {
+	name="Jing"
+	culture = han
+}
+1316 = {
+	name="Yang"
+	culture = han
+}
+1317 = {
+	name="Yang"
+	culture = han
+}
+1318 = {
+	name="Lu"
+	culture = han
+}
+1319 = {
+	name="Wu"
+	culture = han
+}
+1320 = {
+	name="Li"
+	culture = han
+}
+1321 = {
+	name="Zhang"
+	culture = han
+}
+1322 = {
+	name="Xu"
+	culture = han
+}
+1323 = {
+	name="Wang"
+	culture = han
+}
+1324 = {
+	name="Cheng"
+	culture = han
+}
+1325 = {
+	name="Wang"
+	culture = han
+}
+1326 = {
+	name="Wang"
+	culture = han
+}
+1327 = {
+	name="Chang"
+	culture = han
+}
+1328 = {
+	name="Sun"
+	culture = han
+}
+1329 = {
+	name="Wu"
+	culture = han
+}
+1330 = {
+	name="Yin"
+	culture = han
+}
+1331 = {
+	name="Zhang"
+	culture = han
+}
+1332 = {
+	name="Zhao"
+	culture = han
+}
+1333 = {
+	name="Fan"
+	culture = han
+}
+1334 = {
+	name="Huang"
+	culture = han
+}
+1335 = {
+	name="Zhang"
+	culture = han
+}
+1336 = {
+	name="Dong"
+	culture = han
+}
+1337 = {
+	name="Xiong" 
+	culture = han
+}
+1338 = {
+	name="Sun" 
+	culture = han
+}
+1339 = {
+	name="Zhen" 
+	culture = han
+}
+1340 = {
+	name="Tan" 
+	culture = han
+}
+1341 = {
+	name="Gong" 
+	culture = han
+}
+1342 = {
+	name="Ban" 
+	culture = han
+}
+1343 = {
+	name="Feng" 
+	culture = han
+}
+1344 = {
+	name="Jiang" 
+	culture = han
+}
+1345 = {
+	name="Fu" 
+	culture = han
+}
+1346 = {
+	name="Han" 
+	culture = han
+}
+1347 = {
+	name="Zhong" 
+	culture = han
+}
+1348 = {
+	name="Ding" 
+	culture = han
+}
+1349 = {
+	name="Bing" 
+	culture = han
+}
+1350 = {
+	name="Jin" 
+	culture = han
+}

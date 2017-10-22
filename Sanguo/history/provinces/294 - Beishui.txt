@@ -1,0 +1,17 @@
+# c_beishui
+
+# County Title
+title = c_beishui
+
+# Settlements
+max_settlements = 3
+
+b_beishui = tribal
+#b_beishuifu = city
+#b_longling = temple
+
+# Misc
+culture = bandunman
+religion = baihu
+
+#History

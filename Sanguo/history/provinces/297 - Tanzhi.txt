@@ -1,0 +1,17 @@
+# c_tanzhi
+
+# County Title
+title = c_tanzhi
+
+# Settlements
+max_settlements = 3
+
+b_tanzhi = castle
+#b_tanzhifu = city
+#b_yongde = temple
+
+# Misc
+culture = nanman
+religion = huojiao
+
+#History

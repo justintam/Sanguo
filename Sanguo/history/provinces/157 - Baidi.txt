@@ -1,0 +1,18 @@
+# c_baidi
+
+# County Title
+title = c_baidi
+
+# Settlements
+max_settlements = 4
+
+b_baidi = castle
+b_fangpo = tribal
+#b_gaofeng = temple
+#b_neiguan = castle
+
+# Misc
+culture = di
+religion = baima
+
+#History

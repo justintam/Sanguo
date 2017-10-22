@@ -1,0 +1,21 @@
+# c_pingyu
+
+# County Title
+title = c_pingyu
+
+# Settlements
+max_settlements = 7
+
+b_runan = castle
+b_shenting = city
+b_gucheng = city
+b_xiangcheng = city
+b_gepo = city
+#b_dingcheng = temple
+#b_qiutou = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

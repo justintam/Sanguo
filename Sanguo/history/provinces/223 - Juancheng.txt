@@ -1,0 +1,18 @@
+# c_juancheng
+
+# County Title
+title = c_juancheng
+
+# Settlements
+max_settlements = 4
+
+b_juancheng = castle
+b_chuiting = city
+#b_jintang = temple
+#b_bingji = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

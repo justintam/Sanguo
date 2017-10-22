@@ -1,0 +1,26 @@
+#KOREA
+technology = {
+	titles = {
+		d_goguryeo
+		d_dongye
+		d_baekje
+		d_mahan
+		d_buyeo
+		d_dongbuyeo
+		d_byeonhan
+		d_okjeo
+		d_bukokjeo
+		d_jinhan
+		d_namye
+	}
+	184 = {
+		military = 2.0
+		economy = 1.5
+		culture = 1.5
+	}
+	300 = {
+		military = 3.0
+		economy = 3.0
+		culture = 3.0
+	}
+}

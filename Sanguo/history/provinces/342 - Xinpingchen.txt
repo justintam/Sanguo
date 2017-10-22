@@ -1,0 +1,18 @@
+# c_xinpingchen
+
+# County Title
+title = c_xinpingchen
+
+# Settlements
+max_settlements = 4
+
+b_xinpingchen = castle
+b_gulingju = city
+#b_xinpingfu = temple
+#b_xinpingcheng = castle
+
+# Misc
+culture = han
+religion = taiping
+
+#History

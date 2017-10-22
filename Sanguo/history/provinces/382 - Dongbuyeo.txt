@@ -1,0 +1,17 @@
+# c_dongbuyeo
+
+# County Title
+title = c_dongbuyeo
+
+# Settlements
+max_settlements = 3
+
+b_dongbuyeo = tribal
+#b_malgal = city
+#b_tanchon = temple
+
+# Misc
+culture = joseon
+religion = shamanist
+
+#History

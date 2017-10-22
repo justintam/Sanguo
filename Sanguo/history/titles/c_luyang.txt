@@ -1,0 +1,43 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_nanyang
+}
+35.1.1={
+	holder=4270 #Cen Zun
+}
+80.1.1={
+	holder=4272 #Cen Kang
+}
+92.1.1={
+	holder=0 #None
+}
+184.1.1={
+	holder=3565 #Random
+}
+190.1.1={
+	liege=d_sun
+	holder=500 #Sun Jian
+}
+190.8.1={
+	liege=d_nanyang
+	holder=3810 #Deng Ji
+}
+197.4.1={
+	liege=d_yingchuan
+	holder=3565 #Random
+}
+208.9.1={
+	liege=d_nanyang
+}
+
+#196.4.1={
+#	holder=0 #Du Xi, grandson of Du Gen
+#}
+
+
+
+#Incomplete

@@ -1,0 +1,18 @@
+# c_yangdu
+
+# County Title
+title = c_yangdu
+
+# Settlements
+max_settlements = 4
+
+b_yangdu = castle
+b_moutai = city
+#b_taixiong = temple
+#b_goupuo = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

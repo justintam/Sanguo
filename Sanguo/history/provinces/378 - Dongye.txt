@@ -1,0 +1,17 @@
+# c_dongye
+
+# County Title
+title = c_dongye
+
+# Settlements
+max_settlements = 3
+
+b_dongye = tribal
+#b_giyaju = city
+#b_gangneung = temple
+
+# Misc
+culture = joseon
+religion = shamanist
+
+#History

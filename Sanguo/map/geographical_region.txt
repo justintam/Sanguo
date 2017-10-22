@@ -1,0 +1,126 @@
+# Geographical regions
+# Regions can be declared with one or more of the following fields:
+#	duchies = { }, takes duchy title names declared in landed_titles.txt
+#	counties = { }, takes county title names declared in landed_titles.txt
+#	provinces = { }, takes province id numbers declared in /history/provinces
+#	regions = { }, a region can also include other regions, however the subregions needs to be declared before the parent region. 
+#		E.g. If the region world_europe contains the region world_europe_west then world_europe_west needs to be declared as a region before (i.e. higher up in this file) world_europe.
+
+###########################################################################
+# World Regions
+#	These groups are mutually exclusive on the same tier
+###########################################################################
+
+world_central_asia = {
+	duchies = {
+		d_turpan
+	}
+}
+
+world_china_bing = {
+	duchies = {
+		d_dingxiang d_shang d_shangdang d_shuofang d_taiyuan d_wuyuan d_xihe d_yanmen d_yunzhong
+	}
+}
+
+world_china_ji = {
+	duchies = {
+		d_anping d_bohai d_changshan d_hejian d_julu d_qinghe d_wei d_zhao d_zhongshan
+	}
+}
+
+world_china_jiaozhi = {
+	duchies = {
+		d_cangwu d_hepu d_jiaozhi d_jiuzhen d_nanhai d_rinan d_yulin 
+	}
+}
+
+world_china_jing = {
+	duchies = {
+		d_changsha d_guiyang d_jiangxia d_lingling d_nan d_nanyang d_wuling
+	}
+}
+
+world_china_liang = {
+	duchies = {
+		d_anding d_beidi d_dunhuang d_hanyang d_jincheng d_jiuquan d_longxi d_wudu d_wuwei d_juyan d_xihai d_zhangye
+	}
+}
+
+world_china_qing = {
+	duchies = {
+		d_beihai d_donglai d_jinan d_lean d_pingyuan d_qi
+	}
+}
+
+world_china_sili = {
+	duchies = {
+		d_hedong d_henan d_henei d_hongnong d_jingzhao d_youfufeng d_zuopingyi
+	}
+}
+
+world_china_xu = {
+	duchies = {
+		d_donghai d_guangling d_langye d_pengcheng d_xiapi
+	}
+}
+
+world_china_yan = {
+	duchies = {
+		d_chenliu d_dong d_dongping d_jibei d_jiyin d_rencheng d_shanyang d_taishan
+	}
+}
+
+world_china_yang = {
+	duchies = {
+		d_danyang d_jiujiang d_kuaiji d_lujiang d_wu d_yuzhang
+	}
+}
+
+world_china_yi = {
+	duchies = {
+		d_ba d_guanghan d_guanghanyong d_hanzhong d_jianwei d_shu d_shuyong d_yizhou d_yongchang d_yuexi d_zangke d_zhuti
+	}
+}
+
+world_china_you = {
+	duchies = {
+		d_dai d_daifang d_guangyang d_lelang d_liaodong d_liaoxi d_shanggu d_xuantu d_youbeiping d_yuyang d_zhuo
+	}
+}
+
+world_china_yu = {
+	duchies = {
+		d_chen d_liang d_lu d_pei d_runan d_yingchuan
+	}
+}
+
+world_korea = {
+	duchies = {
+		d_baekje d_byeonhan d_dongye d_jinhan d_mahan d_namye d_okjeo
+	}
+}
+
+world_manchu = {
+	duchies = {
+		d_bukokjeo d_buyeo d_dongbuyeo d_goguryeo
+	}
+}
+
+world_mongol = {
+	duchies = {
+		d_dongbei d_nanbei d_xibei d_xiongnunan d_zhongbei
+	}
+}
+
+world_tibet = {
+	duchies = {
+		d_qinghai
+	}
+}
+
+world_china = {
+	regions = {
+		world_china_bing world_china_ji world_china_jiaozhi world_china_jing world_china_liang world_china_qing world_china_sili world_china_xu world_china_yan world_china_yang world_china_yi world_china_you world_china_yu
+	}
+}

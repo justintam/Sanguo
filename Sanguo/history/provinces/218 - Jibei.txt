@@ -1,0 +1,29 @@
+# c_jibei
+
+# County Title
+title = c_jibei
+
+# Settlements
+max_settlements = 6
+
+b_jibei = castle
+#b_wujing = city
+#b_jiyang = city
+#b_huhezhen = castle
+#b_cuoxuan = city
+#b_fanwu = temple
+
+# Misc
+culture = han
+religion = confucian
+
+#History
+208.1.1={
+	b_wujing = city
+}
+214.1.1={
+	b_jiyang = city
+}
+220.1.1={
+	b_huhezhen = castle
+}

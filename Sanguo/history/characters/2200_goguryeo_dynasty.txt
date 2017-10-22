@@ -1,0 +1,451 @@
+#######Goguryeo Dynasty range: 2200 - 2299######
+
+##################################
+######## Goguryeo Dynasty ########
+##################################
+
+#2200-2215
+
+2200 = { #King
+	name="Chumo"
+	dynasty=2201
+	religion="shamanist"
+	culture="joseon"
+	father=2514
+	mother=2307
+	1.1.4={
+		birth=yes
+	}
+	1.1.5={
+		add_spouse=2310
+		dynasty=2200
+	}
+	1.1.9={
+		add_spouse=2536
+	}
+	20.1.1={
+		death=yes
+	}
+}
+2201 = { #King
+	name="Yuri"
+	dynasty=2201
+	religion="shamanist"
+	culture="joseon"
+	father=2200
+	mother=2310
+	1.1.5={
+		birth=yes
+	}
+	1.1.7={
+		add_spouse=2312
+	}
+	18.1.1={
+		death=yes
+	}
+}
+2202 = {
+	name="Dojeol"
+	dynasty=2201
+	religion="shamanist"
+	culture="joseon"
+	father=2201
+	mother=2312
+	1.1.7={
+		birth=yes
+	}
+	1.1.10={
+		death=yes
+	}
+}
+2203 = {
+	name="Haemyeong"
+	dynasty=2201
+	religion="shamanist"
+	culture="joseon"
+	father=2201
+	mother=2312
+	2.1.1={
+		birth=yes
+	}
+	40.1.1={
+		death=yes
+	}
+}
+2204 = { #King
+	name="Muhyul"
+	dynasty=2201
+	religion="shamanist"
+	culture="joseon"
+	father=2201
+	mother=2312
+	4.1.1={
+		birth=yes
+	}
+	18.1.1={
+		name="Daemusin"
+	}
+	44.1.1={
+		death=yes
+	}
+}
+2205 = {
+	name="Yeojin"
+	dynasty=2201
+	religion="shamanist"
+	culture="joseon"
+	father=2201
+	mother=2312
+	5.1.1={
+		birth=yes
+	}
+	18.1.1={
+		death=yes
+	}
+}
+2206 = {
+	name="Seryu"
+	female=yes
+	dynasty=2201
+	religion="shamanist"
+	culture="joseon"
+	father=2201
+	mother=2312
+	6.1.1={
+		birth=yes
+	}
+	30.1.1={
+		death=yes
+	}
+}
+2207 = { #King
+	name="Saekju"
+	dynasty=2201
+	religion="shamanist"
+	culture="joseon"
+	father=2201
+	mother=2312
+	7.1.1={
+		birth=yes
+	}
+	44.1.1={
+		name="Minjung"
+	}
+	48.1.1={
+		death=yes
+	}
+}
+2208 = {
+	name="Jaesa"
+	dynasty=2200
+	religion="shamanist"
+	culture="joseon"
+	father=2201
+	mother=2312
+	8.1.1={
+		birth=yes
+	}
+	90.1.1={
+		death=yes
+	}
+}
+2209 = {
+	name="Hodong"
+	dynasty=2201
+	religion="shamanist"
+	culture="joseon"
+	father=2204
+	12.1.1={
+		birth=yes
+	}
+	32.1.1={
+		death=yes
+	}
+}
+2210 = { #King
+	name="Mobon"
+	dynasty=2201
+	religion="shamanist"
+	culture="joseon"
+	father=2204
+	30.1.1={
+		birth=yes
+	}
+	53.1.1={
+		death={
+			death_reason=death_murder
+			killer=2301
+		}
+	}
+}
+2211 = { #King
+	name="Gung"
+	dynasty=2200
+	religion="shamanist"
+	culture="joseon"
+	father=2208
+	47.1.1={
+		birth=yes
+	}
+	53.1.1={
+		name="Taejo"
+	}
+	165.1.1={
+		death=yes
+	}
+}
+2212 = { #King
+	name="Suseong"
+	dynasty=2200
+	religion="shamanist"
+	culture="joseon"
+	father=2208
+	trait="ambitious"
+	trait="brave"
+	trait="cruel"
+	trait="wroth"
+	trait="greedy"
+	trait="paranoid"
+	71.1.1={
+		birth=yes
+	}
+	146.1.1={
+		name="Chadae"
+	}
+	165.1.1={
+		death={
+			death_reason=death_murder
+			killer=2302
+		}
+	}
+}
+2213 = { #King
+	name="Baekgo"
+	dynasty=2200
+	religion="shamanist"
+	culture="joseon"
+	father=2208
+	trait="shy"
+	trait="ambitious"
+	trait="deceitful"
+	trait="brave"
+	trait="cruel"
+	trait="zealous"
+	89.1.1={
+		birth=yes
+	}
+	165.1.1={
+		name="Sindae"
+	}
+	179.12.1={
+		death=yes
+	}
+}
+2214 = {
+	name="Balgi"
+	dynasty=2200
+	religion="shamanist"
+	culture="joseon"
+	father=2213
+	trait="ambitious"
+	trait="envious"
+	trait="proud"
+	115.1.1={
+		birth=yes
+	}
+	179.1.1={
+		add_claim = k_goguryeo
+	}
+	198.1.1={
+		death={death_reason=death_suicide}
+	}
+}
+2215 = { #King
+	name="Nammu"
+	dynasty=2200
+	religion="shamanist"
+	culture="joseon"
+	father=2213
+	trait="ambitious"
+	trait="brave"
+	trait="charitable"
+	trait="honest"
+	trait="just"
+	trait="kind"
+	trait="patient"
+	trait="zealous"
+	120.1.1={
+		birth=yes
+	}
+	179.1.1={
+		name="Gogukcheon"
+	}
+	180.1.1={
+		add_spouse=2305
+	}
+	197.1.1={
+		death=yes
+	}
+}
+2216 = { #King
+	name="Yonu"
+	dynasty=2200
+	religion="shamanist"
+	culture="joseon"
+	father=2213
+	125.1.1={
+		birth=yes
+	}
+	179.1.1={
+		employer=2215
+	}
+	197.1.1={
+		name="Sansang"
+	}
+	203.1.1={
+		add_spouse=2305
+	}
+	227.1.1={
+		death=yes
+	}
+}
+2217 = {
+	name="Gyesu"
+	dynasty=2200
+	religion="shamanist"
+	culture="joseon"
+	father=2213
+	trait="skilled_tactician"
+	trait="duel_skilled_warrior"
+	trait="brave"
+	trait="temperate"
+	trait="zealous"
+	140.1.1={
+		birth=yes
+	}
+	179.1.1={
+		employer=2215
+	}
+	197.1.1={
+		employer=2216
+	}
+	225.1.1={
+		death=yes
+	}
+}
+2218 = {
+	name="Ik"
+	dynasty=2201
+	religion="shamanist"
+	culture="joseon"
+	father=2210
+	45.1.1={
+		birth=yes
+	}
+	53.1.1={
+		death={
+			death_reason=death_murder
+			killer=2301
+		}
+	}
+}
+2219 = {
+	name="Makgeon"
+	dynasty=2200
+	religion="shamanist"
+	culture="joseon"
+	father=2211
+	70.1.1={
+		birth=yes
+	}
+	150.1.1={
+		death={
+			death_reason=death_murder
+			killer=2212
+		}
+	}
+}
+2220 = {
+	name="Makdeok"
+	dynasty=2200
+	religion="shamanist"
+	culture="joseon"
+	father=2211
+	75.1.1={
+		birth=yes
+	}
+	150.1.1={
+		death={
+			death_reason=death_murder
+			killer=2212
+		}
+	}
+}
+2221 = {
+	name="Ingo"
+	dynasty=2200
+	religion="shamanist"
+	culture="joseon"
+	father=2208
+	90.1.1={
+		birth=yes
+	}
+	153.1.1={
+		death=yes
+	}
+}
+2222 = {
+	name="Chuan"
+	dynasty=2200
+	religion="shamanist"
+	culture="joseon"
+	father=2212
+	120.1.1={
+		birth=yes
+	}
+	192.1.1={
+		death=yes
+	}
+}
+2223 = {
+	name="Wigeo"
+	dynasty=2210
+	religion="shamanist"
+	culture="joseon"
+	father=2214
+	140.1.1={
+		birth=yes
+	}
+	208.1.1={
+		death=yes
+	}
+}
+2224 = {
+	name="Uwigeo"
+	dynasty=2200
+	religion="shamanist"
+	culture="joseon"
+	father=2216
+	209.1.1={
+		birth=yes
+	}
+	227.1.1={
+		name="Dongcheon"
+	}
+	248.1.1={
+		death=yes
+	}
+}
+2225 = {
+	name="Uru"
+	dynasty=2200
+	religion="shamanist"
+	culture="joseon"
+	father=2222
+	162.1.1={
+		birth=yes
+	}
+	230.1.1={
+		death=yes
+	}
+}

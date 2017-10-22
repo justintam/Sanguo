@@ -1,0 +1,28 @@
+name = "Lu Bu Rebellion"
+
+casus_belli={
+	actor=400
+	recipient=309
+	casus_belli=claim_all
+	date=194.4.1
+}
+
+194.4.1 = {
+	add_defender = 309 #Lv Bu
+	add_attacker = 400 #Cao Cao
+#	add_attacker = 10489 #Xun Yu
+#	add_attacker = 10488 #Cheng Yu
+#	add_attacker = 154 #Jin Yun
+#	add_attacker = 20456 #Zao Zhi
+}
+
+196.1.1={
+	rem_defender = 309 #Lv Bu
+#	rem_attacker = 20456 #Zao Zhi
+#	rem_attacker = 154 #Jin Yun
+#	rem_attacker = 10488 #Cheng Yu
+#	rem_attacker = 10489 #Xun Yu
+	rem_attacker = 400 #Cao Cao
+}
+
+   

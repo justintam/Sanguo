@@ -1,0 +1,17 @@
+# c_quyang
+
+# County Title
+title = c_quyang
+
+# Settlements
+max_settlements = 3
+
+b_quyang = tribal
+#b_wiyan = city
+#b_bacgiang = temple
+
+# Misc
+culture = nanyue
+religion = animist
+
+#History

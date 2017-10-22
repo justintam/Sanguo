@@ -1,0 +1,14 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_henan
+}
+184.1.1={
+	holder=311 #Hu Zhen
+}
+189.8.22={
+	holder=3564 #Random
+}

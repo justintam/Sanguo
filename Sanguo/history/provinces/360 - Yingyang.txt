@@ -1,0 +1,19 @@
+# c_yingyang
+
+# County Title
+title = c_yingyang
+
+# Settlements
+max_settlements = 5
+
+b_yingyang = castle
+b_fenqiu = city
+b_zhongmou = city
+#b_yingyangdi = castle
+#b_hangqing = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

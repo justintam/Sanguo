@@ -1,0 +1,17 @@
+# c_tuyin
+
+# County Title
+title = c_tuyin
+
+# Settlements
+max_settlements = 3
+
+b_tuyin = tribal
+#b_jiuwei = city
+#b_linglong = temple
+
+# Misc
+culture = wuhuan
+religion = tengri_pagan
+
+#History

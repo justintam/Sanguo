@@ -1,0 +1,25 @@
+#name = "Battle of White Wolf Mountain"
+
+#casus_belli={
+#	actor=400
+#	recipient=1605
+#	casus_belli=claim_all
+#	landed_title=e_yuan
+#	date=207.9.20
+#}
+
+#207.9.20={
+#	add_defender = 1605 #Louban
+#	add_defender = 1604 #Tadun
+#	add_defender = 1606 #Wuyan
+#	add_defender = 1611 #Supuyan
+#	add_attacker = 400 #Cao Cao
+#}
+
+#207.10.10={
+#	add_defender = 1611 #Supuyan
+#	add_defender = 1606 #Wuyan
+#	add_defender = 1604 #Tadun
+#	add_defender = 1605 #Louban
+#	rem_attacker = 400 #Cao Cao
+#}

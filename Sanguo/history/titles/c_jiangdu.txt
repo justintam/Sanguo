@@ -1,0 +1,50 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_guangling
+}
+80.1.1={
+	holder=4294 #Qiao Ji
+}
+107.1.1={
+	holder=0 #None
+}
+140.1.1={
+	holder=3310 #Lu Chou
+}
+170.1.1={
+	holder=3374 #Zhao Bao
+}
+175.1.1={
+	holder=0 #None
+}
+184.1.1={
+	holder=500 #Sun Jian
+}
+186.1.1={
+	holder=3510 #Random
+}
+190.1.1={
+	holder=140 #Zhang Chao
+}
+192.1.1={
+	holder=3417 #Zhao Yu
+}
+194.1.1={
+	holder=1214 #Chen Deng
+}
+196.1.1={
+	holder=517 #Wu Jing
+}
+197.1.1={
+	holder=1214 #Chen Deng
+}
+205.1.1={
+	holder=20465 #Hao Zhou
+}
+207.1.1={
+	holder=4110 #Random
+}

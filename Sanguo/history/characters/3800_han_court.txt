@@ -1,0 +1,1835 @@
+3800 = {
+	name="Chu"
+	dynasty=1640 #You
+	religion="confucian"
+	culture="han"
+	father=3799
+	trait="charismatic_negotiator"
+	trait="gregarious"
+	trait="charitable"
+	trait="kind"
+	trait="quick"
+	trait="zealous"
+	180.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=3471
+	}
+	189.9.1={
+		employer=300
+	}
+	192.5.22={
+		employer=120
+	}
+	192.7.1={
+		employer=308
+	}
+	196.1.1={
+		employer=20418
+	}
+	253.1.1={
+		death=yes
+	}
+}
+3801 = {
+	name="Xia"
+	dynasty=1641 #Chang
+	religion="confucian"
+	culture="han"
+	trait="tough_soldier"
+	trait="duel_trained_warrior"
+	trait="brave"
+	trait="zealous"
+	180.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=3471
+	}
+	189.9.1={
+		employer=300
+	}
+	192.5.22={
+		employer=120
+	}
+	192.7.1={
+		employer=308
+	}
+	196.1.1={
+		employer=20418
+	}
+	253.1.1={
+		death=yes
+	}
+}
+3802 = {
+	name="Qiao"
+	dynasty=970
+	religion="confucian"
+	culture="han"
+	father=1281
+	trait="mastermind_theologian"
+	trait="administrator"
+	trait="fair"
+	trait="genius"
+	trait="chaste"
+	trait="diligent"
+	trait="temperate"
+	trait="humble"
+	trait="zealous"
+	100.1.1={
+		birth=yes
+	}
+	165.1.1={
+		death={death_reason=death_suicide}
+	}
+}
+3803 = {
+	name="Dan"
+	dynasty=1643
+	religion="confucian"
+	culture="han"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=3803
+	}
+	208.1.1={
+		employer=509
+	}
+	240.1.1={
+		death=yes
+	}
+}
+3804 = {
+	name="Jian"
+	dynasty=1644
+	religion="confucian"
+	culture="han"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=300
+	}
+	188.1.1={
+		employer=188
+	}
+	192.5.22={
+		employer=725
+	}
+	240.1.1={
+		death=yes
+	}
+}
+3805 = {
+	name="Ying"
+	dynasty=1647 #Xu
+	religion="confucian"
+	culture="han"
+	trait="martial_cleric"
+	trait="temperate"
+	trait="proud"
+	trait="just"
+	trait="honest"
+	trait="zealous"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=4000
+		add_trait = "refuge"
+		effect = {
+			set_character_flag = refuge_bing
+		}
+	}
+	190.1.1={
+		employer=300
+		remove_trait = "refuge"
+		effect = {
+			clr_character_flag = refuge_bing
+		}
+	}
+	240.1.1={
+		death=yes
+	}
+}
+3806 = {
+	name="Shu"
+	dynasty=1650 #Han
+	religion="confucian"
+	culture="han"
+	80.1.1={
+		birth=yes
+	}
+	150.1.1={
+		death=yes
+	}
+}
+3807 = {
+	name="Chun"
+	dynasty=1650 #Han
+	religion="confucian"
+	culture="han"
+	father=3806
+	110.1.1={
+		birth=yes
+	}
+	180.1.1={
+		death=yes
+	}
+}
+3808 = {
+	name="Ding"
+	dynasty=1650 #Han
+	religion="confucian"
+	culture="han"
+	father=3807
+	140.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=4000
+		add_trait = "refuge"
+		effect = {
+			set_character_flag = refuge_jing
+		}
+	}
+	230.1.1={
+		death=yes
+		remove_trait = "refuge"
+		effect = {
+			clr_character_flag = refuge_jing
+		}
+	}
+}
+3809 = {
+	name="Ji"
+	dynasty=1650 #Han
+	religion="confucian"
+	culture="han"
+	father=3807
+	trait="fortune_builder"
+	trait="administrator"
+	trait="patient"
+	trait="deceitful"
+	trait="temperate"
+	trait="humble"
+	trait="just"
+	trait="zealous"
+	150.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=4000
+		add_trait = "refuge"
+		effect = {
+			set_character_flag = refuge_yang
+		}
+	}
+	197.1.1={
+		effect = {
+			clr_character_flag = refuge_yang
+			set_character_flag = refuge_jing
+		}
+	}
+	198.1.1={
+		employer=48
+		remove_trait = "refuge"
+		effect = {
+			clr_character_flag = refuge_jing
+		}
+	}
+	208.9.1={
+		employer=400
+	}
+	238.1.1={
+		death=yes
+	}
+}
+3810 = {
+	name="Ji"
+	dynasty=1654 #Deng Ji
+	religion="confucian"
+	culture="han"
+	160.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+### Royal Liu Family
+3811 = {
+	name="Fang"
+	dynasty=1655
+	religion="confucian"
+	culture="han"
+	40.1.1={
+		birth=yes
+	}
+	100.1.1={
+		death=yes
+	}
+}
+3812 = {
+	name="Fu"
+	dynasty=1655
+	religion="confucian"
+	culture="han"
+	father=3811
+	58.1.1={
+		birth=yes
+	}
+	92.1.1={
+		death=yes
+	}
+}
+3813 = {
+	name="Ping"
+	female=yes
+	dynasty=1655
+	religion="confucian"
+	culture="han"
+	father=3811
+	60.1.1={
+		birth=yes
+	}
+	74.1.1={
+		add_spouse=6
+	}
+	90.1.1={
+		death=yes
+	}
+}
+3814 = {
+	name="Zhuan"
+	dynasty=1655
+	religion="confucian"
+	culture="han"
+	father=3811
+	trait="twin"
+	62.1.1={
+		birth=yes
+	}
+	96.1.1={
+		death=yes
+	}
+}
+3815 = {
+	name="Jin"
+	female=yes
+	dynasty=1655
+	religion="confucian"
+	culture="han"
+	father=3811
+	trait="twin"
+	62.1.1={
+		birth=yes
+	}
+	110.1.1={
+		death=yes
+	}
+}
+3816 = {
+	name="Quan"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=6
+	trait="born_in_the_purple"
+	74.1.1={
+		birth=yes
+	}
+	79.1.1={
+		death=yes
+	}
+}
+3817 = {
+	name="Shou"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=6
+	mother=3813
+	trait="born_in_the_purple"
+	79.1.1={
+		birth=yes
+	}
+	120.1.1={
+		death=yes
+	}
+}
+3818 = {
+	name="Shu"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=6
+	trait="born_in_the_purple"
+	82.1.1={
+		birth=yes
+	}
+	94.1.1={
+		death=yes
+	}
+}
+3819 = {
+	name="Wansui"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=6
+	trait="born_in_the_purple"
+	83.1.1={
+		birth=yes
+	}
+	93.10.1={
+		death=yes
+	}
+}
+3820 = {
+	name="Chong"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=19
+	90.1.1={
+		birth=yes
+	}
+	121.1.1={
+		death=yes
+	}
+}
+3821 = {
+	name="De"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=3820
+	108.1.1={
+		birth=yes
+	}
+	119.1.1={
+		death=yes
+	}
+}
+3822 = {
+	name="Deng"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=3817
+	100.1.1={
+		birth=yes
+	}
+	135.1.1={
+		death=yes
+	}
+}
+3823 = {
+	name="Chang"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=3817
+	trait="lustful"
+	trait="arbitrary"
+	104.1.1={
+		birth=yes
+	}
+	120.5.1={
+		death=yes
+	}
+}
+3824 = {
+	name="An"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=3817
+	113.1.1={
+		birth=yes
+	}
+	145.1.1={
+		death=yes
+	}
+}
+3825 = { #Emperor
+	name="Yi"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=3817
+	119.1.1={
+		birth=yes
+	}
+	125.12.10={
+		death=yes
+	}
+}
+3826 = {
+	name="Duo"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=3822
+	118.1.1={
+		birth=yes
+	}
+	138.12.1={
+		death=yes
+	}
+}
+3827 = {
+	name="Zi"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=3824
+	137.1.1={
+		birth=yes
+	}
+	162.1.1={
+		death=yes
+	}
+}
+3828 = {
+	name="Meng"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=3824
+	140.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=3829
+	}
+	200.1.1={
+		death=yes
+	}
+}
+3829 = {
+	name="Luan"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=3827
+	155.1.1={
+		birth=yes
+	}
+	198.1.1={
+		death=yes
+	}
+}
+3830 = {
+	name="Zheng"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=3829
+	180.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=3829
+	}
+	206.1.1={
+		death=yes
+	}
+}
+3831 = {
+	name="Mao"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=34
+	trait="born_in_the_purple"
+	197.1.1={
+		birth=yes
+	}
+	197.1.1={
+		employer=34
+	}
+	220.12.10={
+		employer=10400
+	}
+	260.1.1={
+		death=yes
+	}
+}
+3832 = {
+	name="Kang"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=2
+	mother=35
+	trait="born_in_the_purple"
+	28.1.1={
+		birth=yes
+	}
+	97.1.1={
+		death=yes
+	}
+}
+3833 = {
+	name="Cuo"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=3832
+	45.1.1={
+		birth=yes
+	}
+	103.1.1={
+		death=yes
+	}
+}
+3834 = {
+	name="De"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=3832
+	47.1.1={
+		birth=yes
+	}
+	110.1.1={
+		death=yes
+	}
+}
+3835 = {
+	name="Du"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=3832
+	50.1.1={
+		birth=yes
+	}
+	120.1.1={
+		death=yes
+	}
+}
+3836 = {
+	name="Yu"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=3832
+	51.1.1={
+		birth=yes
+	}
+	120.1.1={
+		death=yes
+	}
+}
+3837 = {
+	name="Xiang"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=3833
+	65.1.1={
+		birth=yes
+	}
+	125.12.1={
+		death=yes
+	}
+}
+3838 = {
+	name="Xian"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=3833
+	70.1.1={
+		birth=yes
+	}
+	128.1.1={
+		death=yes
+	}
+}
+3839 = {
+	name="Wan"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=3835
+	70.1.1={
+		birth=yes
+	}
+	140.1.1={
+		death=yes
+	}
+}
+3840 = {
+	name="Song"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=3836
+	75.1.1={
+		birth=yes
+	}
+	150.1.1={
+		death=yes
+	}
+}
+3841 = {
+	name="Guang"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=3838
+	95.1.1={
+		birth=yes
+	}
+	153.1.1={
+		death=yes
+	}
+}
+3842 = {
+	name="Wen"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=3838
+	100.1.1={
+		birth=yes
+	}
+	151.1.1={
+		death=yes
+	}
+}
+3843 = {
+	name="Heng"
+	dynasty=1663
+	religion="confucian"
+	culture="han"
+	135.1.1={
+		birth=yes
+	}
+	187.1.1={
+		death=yes
+	}
+}
+3844 = {
+	name="Jun"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=66
+	78.1.1={
+		birth=yes
+	}
+	117.1.1={
+		death=yes
+	}
+}
+3845 = {
+	name="Song"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=3844
+	99.1.1={
+		birth=yes
+	}
+	119.1.1={
+		death=yes
+	}
+}
+3846 = {
+	name="Qianqiu"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=66
+	79.1.1={
+		birth=yes
+	}
+	120.1.1={
+		death=yes
+	}
+}
+3847 = {
+	name="Anguo"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=3846
+	100.1.1={
+		birth=yes
+	}
+	150.1.1={
+		death=yes
+	}
+}
+3848 = {
+	name="Bao"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=66
+	80.1.1={
+		birth=yes
+	}
+	124.1.1={
+		death=yes
+	}
+}
+3849 = {
+	name="Shou"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=66
+	81.1.1={
+		birth=yes
+	}
+	125.1.1={
+		death=yes
+	}
+}
+3850 = {
+	name="Can"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=66
+	83.1.1={
+		birth=yes
+	}
+	128.1.1={
+		death=yes
+	}
+}
+3851 = {
+	name="Dan"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=66
+	84.1.1={
+		birth=yes
+	}
+	129.1.1={
+		death=yes
+	}
+}
+3852 = {
+	name="Fan"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=66
+	85.1.1={
+		birth=yes
+	}
+	130.1.1={
+		death=yes
+	}
+}
+3853 = {
+	name="Jun"
+	dynasty=1670
+	religion="confucian"
+	culture="han"
+	150.1.1={
+		birth=yes
+	}
+	197.1.1={
+		death=yes
+	}
+}
+3854 = {
+	name="Fa"
+	dynasty=1894 #Lou
+	religion="confucian"
+	culture="han"
+	trait="ambitious"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=4000
+		add_trait = "refuge"
+		effect = {
+			set_character_flag = refuge_yi
+		}
+	}
+	188.8.1={
+		employer=50 #Liu Yan
+		remove_trait = "refuge"
+		effect = {
+			clr_character_flag = refuge_yi
+		}
+	}
+	194.4.1={
+		employer=48 #Liu Biao
+	}
+	195.1.1={
+		employer=4000
+		add_trait = "refuge"
+		effect = {
+			set_character_flag = refuge_jing
+		}
+	}
+	240.1.1={
+		remove_trait = "refuge"
+		effect = {
+			clr_character_flag = refuge_jing
+		}
+		death=yes
+	}
+}
+3855 = {
+	name="Yi"
+	dynasty=1810
+	religion="confucian"
+	culture="han"
+	trait="ambitious"
+	trait="paranoid"
+	trait="brave"
+	trait="proud"
+	trait="honorable"
+	trait="zealous"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=100
+	}
+	196.1.1={
+		employer=400
+	}
+	240.1.1={
+		death=yes
+	}
+}
+3856 = {
+	name="Chengyan"
+	dynasty=1813
+	religion="confucian"
+	culture="han"
+	trait="ambitious"
+	trait="patient"
+	trait="rude"
+	trait="proud"
+	trait="genius"
+	trait="honorable"
+	trait="zealous"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=4000
+		add_trait = "refuge"
+		effect = {
+			set_character_flag = refuge_jing
+		}
+	}
+	240.1.1={
+		death=yes
+		remove_trait = "refuge"
+		effect = {
+			clr_character_flag = refuge_jing
+		}
+	}
+}
+3857 = {
+	name="Peng"
+	dynasty=43
+	religion="confucian"
+	culture="han"
+	100.1.1={
+		birth=yes
+	}
+	160.1.1={
+		death=yes
+	}
+}
+3858 = {
+	name="Feng"
+	dynasty=43
+	religion="confucian"
+	culture="han"
+	father=3857
+	trait="content"
+	trait="patient"
+	trait="humble"
+	trait="temperate"
+	trait="diligent"
+	trait="zealous"
+	130.1.1={
+		birth=yes
+	}
+	183.1.1={
+		death=yes
+	}
+}
+3859 = {
+	name="Jing"
+	dynasty=43
+	religion="confucian"
+	culture="han"
+	father=3857
+	133.1.1={
+		birth=yes
+	}
+	184.1.1={
+		death=yes
+	}
+}
+3860 = {
+	name="Mao"
+	dynasty=43
+	religion="confucian"
+	culture="han"
+	father=3858
+	trait="ambitious"
+	trait="patient"
+	trait="humble"
+	trait="temperate"
+	trait="diligent"
+	trait="zealous"
+	150.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=117 #Xu Qiu 
+	}
+	186.1.1={
+		employer=3345 #Wang Min
+	}
+	187.1.1={
+		employer=122 #Wang Rui
+	}
+	189.9.1={
+		employer=48 #Liu Biao
+	}
+	208.8.1={
+		employer=53 #Liu Cong
+	}
+	208.9.1={
+		employer=400
+	}
+	208.10.1={
+		death={death_reason=death_execution killer=400}
+	}
+}
+3861 = {
+	name="He"
+	dynasty=43
+	religion="confucian"
+	culture="han"
+	father=3858
+	trait="wroth"
+	trait="proud"
+	trait="temperate"
+	trait="diligent"
+	trait="zealous"
+	155.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=117 #Xu Qiu 
+	}
+	186.1.1={
+		employer=3345 #Wang Min
+	}
+	187.1.1={
+		employer=122 #Wang Rui
+	}
+	189.9.1={
+		employer=48 #Liu Biao
+	}
+	208.8.1={
+		employer=53 #Liu Cong
+	}
+	208.9.1={
+		employer=400
+	}
+	208.10.1={
+		death={death_reason=death_execution killer=400}
+	}
+}
+3862 = {
+	name="Zhong"
+	dynasty=43
+	religion="confucian"
+	culture="han"
+	father=3859
+	trait="brave"
+	trait="ambitious"
+	trait="temperate"
+	trait="diligent"
+	trait="zealous"
+	155.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=117 #Xu Qiu
+	}
+	186.1.1={
+		employer=3345 #Wang Min
+	}
+	187.1.1={
+		employer=122 #Wang Rui
+	}
+	189.9.1={
+		employer=48 #Liu Biao
+	}
+	208.8.1={
+		employer=53 #Liu Cong
+	}
+	208.9.1={
+		employer=400
+	}
+	208.10.1={
+		death={death_reason=death_execution killer=400}
+	}
+}
+3863 = {
+	name="Xiu"
+	dynasty=1814 #Wang Xiu
+	religion="confucian"
+	culture="han"
+	trait="brave"
+	trait="ambitious"
+	trait="chivalrous"
+	trait="temperate"
+	trait="diligent"
+	trait="zealous"
+	168.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=4000
+		add_trait = "refuge"
+		effect = {
+			set_character_flag = refuge_qing
+		}
+	}
+	190.1.1={
+		employer=121 #Kong Rong
+		remove_trait = "refuge"
+		effect = {
+			clr_character_flag = refuge_qing
+		}
+	}
+	196.1.1={
+		employer=700 #Yuan Shao
+	}
+	202.6.28={
+		employer=709 #Yuan Tan
+	}
+	216.6.1={
+		add_trait = "ill"
+	}
+	216.8.1={
+		death={death_reason=death_trait}
+	}
+}
+3864 = {
+	name="Chang"
+	dynasty=1815 #Zhao
+	religion="confucian"
+	culture="han"
+	trait="master_theologian"
+	trait="scholar"
+	120.1.1={
+		birth=yes
+	}
+	156.1.1={
+		death=yes
+	}
+}
+3865 = {
+	name="Zi"
+	dynasty=1815 #Zhao
+	religion="confucian"
+	culture="han"
+	father=3864
+	trait="skilled_theologian"
+	trait="scholar"
+	trait="brave"
+	trait="humble"
+	trait="chivalrous"
+	trait="temperate"
+	trait="diligent"
+	trait="zealous"
+	148.1.1={
+		birth=yes
+	}
+	191.1.1={
+		add_trait = ill
+		employer=4000
+		add_trait = "refuge"
+		effect = {
+			set_character_flag = refuge_yan
+		}
+	}
+	192.1.1={
+		remove_trait = "refuge"
+		effect = {
+			clr_character_flag = refuge_yan
+		}
+		death={death_reason=death_trait}
+	}
+}
+3866 = {
+	name="Yin"
+	dynasty=1815 #Zhao
+	religion="confucian"
+	culture="han"
+	father=3865
+	trait="martial_cleric"
+	trait="brave"
+	trait="proud"
+	trait="envious"
+	trait="zealous"
+	168.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=3865
+	}
+	191.1.1={
+		employer=4000
+		add_trait = "refuge"
+		effect = {
+			clr_character_flag = refuge_yan
+		}
+	}
+	240.1.1={
+		remove_trait = "refuge"
+		effect = {
+			clr_character_flag = refuge_yan
+		}
+		death=yes
+	}
+}
+3867 = {
+	name="Jian"
+	dynasty=1816 #Xiao
+	religion="confucian"
+	culture="han"
+	trait="duel_trained_warrior"
+	trait="fortune_builder"
+	trait="brave"
+	trait="chivalrous"
+	trait="temperate"
+	trait="diligent"
+	trait="zealous"
+	168.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=3865 #Zhao Zi
+	}
+	184.4.1={
+		employer=138 #Ba Zhi
+	}
+	186.1.1={
+		employer=119 # Tao Qian
+	}
+	197.2.1={
+		death={death_reason=death_battle killer=2638}
+	}
+}
+3868 = {
+	name="Jun"
+	dynasty=1817 #Yan
+	religion="confucian"
+	culture="han"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=808 #Han Sui
+		effect = {
+			add_friend = 3869
+		}
+	}
+	219.8.1={
+		death=yes
+	}
+}
+3869 = {
+	name="Bi"
+	dynasty=1818 #Wang
+	religion="confucian"
+	culture="han"
+	168.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=808 #Han Sui
+		effect = {
+			add_friend = 3868
+		}
+	}
+	240.1.1={
+		death=yes
+	}
+}
+3870 = {
+	name="Xing"
+	dynasty=1820 #Guanqiu
+	religion="confucian"
+	culture="han"
+	trait="duel_trained_warrior"
+	trait="martial_cleric"
+	trait="brave"
+	trait="chivalrous"
+	trait="temperate"
+	trait="diligent"
+	trait="zealous"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=300 #Dong Zhuo
+	}
+	189.8.22={
+		employer=3488 #Wang Hong
+	}
+	192.7.1={
+		employer=3855 #Wang Yi
+	}
+	205.1.1={
+		employer=10486 #Du Ji
+	}
+	240.1.1={
+		death=yes
+	}
+}
+3871 = {
+	name="Jian"
+	dynasty=1820 #Guanqiu
+	religion="confucian"
+	culture="han"
+	father=3870
+	184.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=300 #Dong Zhuo
+	}
+	189.8.22={
+		employer=3488 #Wang Hong
+	}
+	192.7.1={
+		employer=3855 #Wang Yi
+	}
+	205.1.1={
+		employer=10486 #Du Ji
+	}
+	215.1.1={
+		employer=3871 #Guangqiu Xing
+	}
+	260.1.1={
+		death=yes
+	}
+}
+3872 = {
+	name="Ze"
+	dynasty=1819 #Su
+	religion="confucian"
+	culture="han"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=4000
+		add_trait = "refuge"
+		effect = {
+			set_character_flag = refuge_liang
+		}
+	}
+	210.1.1={
+		employer=400 #Cao Cao
+		remove_trait = "refuge"
+		effect = {
+			clr_character_flag = refuge_liang
+		}
+	}
+	223.1.1={
+		death=yes
+	}
+}
+3873 = {
+	name="Ai"
+	dynasty=1821 #Ma
+	religion="confucian"
+	culture="han"
+	168.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=808 #Han Sui
+	}
+	220.6.1={
+		death=yes
+	}
+}
+3874 = {
+	name="Feng"
+	dynasty=1822 #Yin
+	religion="confucian"
+	culture="han"
+	168.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=808 #Han Sui
+	}
+	240.5.1={
+		death=yes
+	}
+}
+3875 = {
+	name="Tong"
+	dynasty=1823 #Du
+	religion="confucian"
+	culture="han"
+	168.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=808 #Han Sui
+	}
+	219.9.1={
+		#Imprisoned by 3876
+	}
+	220.8.1={
+		#Released
+	}
+	240.1.1={
+		death=yes
+	}
+}
+3876 = {
+	name="Jin"
+	dynasty=1824 #Zhang
+	religion="confucian"
+	culture="han"
+	168.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=808 #Han Sui
+	}
+	215.1.1={
+		employer=3727 #He Luan
+	}
+	219.8.1={
+		employer=3875 #Du Tong
+	}
+	220.8.1={
+		death={death_reason=death_battle killer=3872}
+	}
+}
+3877 = {
+	name="Jin"
+	dynasty=909 #Huang
+	religion="confucian"
+	culture="han"
+	120.1.1={
+		birth=yes
+	}
+	180.1.1={
+		death=yes
+	}
+}
+3878 = {
+	name="Ai"
+	dynasty=909 #Huang
+	religion="confucian"
+	culture="han"
+	father=3877
+	145.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=802 #Huang Yan
+	}
+	189.1.1={
+		employer=3343 #Xu Yi
+	}
+	210.1.1={
+		death={death_reason=death_murder killer=3343}
+	}
+}
+3879 = {
+	name="Jian"
+	dynasty=909 #Huang
+	religion="confucian"
+	culture="han"
+	father=3877
+	149.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=802 #Huang Yan
+	}
+	189.1.1={
+		employer=3343 #Xu Yi
+	}
+	210.1.1={
+		death={death_reason=death_murder killer=3343}
+	}
+}
+3880 = {
+	name="Ang"
+	dynasty=909 #Huang
+	religion="confucian"
+	culture="han"
+	father=3878
+	170.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=802 #Huang Yan
+	}
+	189.1.1={
+		employer=3343 #Xu Yi
+	}
+	210.8.1={
+		death={death_reason=death_battle killer=3874}
+	}
+}
+3881 = {
+	name="Xiu"
+	dynasty=909 #Huang
+	religion="confucian"
+	culture="han"
+	father=3878
+	172.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=802 #Huang Yan
+	}
+	189.1.1={
+		employer=3343 #Xu Yi
+	}
+	210.1.1={
+		death={death_reason=death_murder killer=3343}
+	}
+}
+3882 = {
+	name="Hua"
+	dynasty=909 #Huang
+	religion="confucian"
+	culture="han"
+	father=3879
+	174.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=802 #Huang Yan
+	}
+	189.1.1={
+		employer=3343 #Xu Yi
+	}
+	220.8.1={
+		employer=10400 #Cao Pi
+	}
+	258.1.1={
+		death=yes
+	}
+}
+3883 = {
+	name="Ji"
+	dynasty=1825 #Xin
+	religion="confucian"
+	culture="han"
+	180.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=4000
+		add_trait = "refuge"
+		effect = {
+			set_character_flag = refuge_liang
+		}
+	}
+	210.1.1={
+		employer=400 #Cao Cao
+		remove_trait = "refuge"
+		effect = {
+			clr_character_flag = refuge_liang
+		}
+	}
+	220.3.15={
+		employer=10400 #Cao Pi
+		add_claim=d_jiuquan
+	}
+	260.1.1={
+		death=yes
+	}
+}
+3884 = {
+	name="Han"
+	dynasty=1830 #Xue
+	religion="confucian"
+	culture="han"
+	1.1.1={
+		birth=yes
+	}
+	75.1.1={
+		death=yes
+	}
+}
+3885 = {
+	name="Biao"
+	dynasty=1830 #Xue
+	religion="confucian"
+	culture="han"
+	father=3884
+	15.1.1={
+		birth=yes
+	}
+	90.1.1={
+		death=yes
+	}
+}
+3886 = {
+	name="Anqi"
+	dynasty=1830 #Xue
+	religion="confucian"
+	culture="han"
+	father=3885
+	29.1.1={
+		birth=yes
+	}
+	100.1.1={
+		death=yes
+	}
+}
+3887 = {
+	name="Xiu"
+	dynasty=1830 #Xue
+	religion="confucian"
+	culture="han"
+	father=3886
+	43.1.1={
+		birth=yes
+	}
+	115.1.1={
+		death=yes
+	}
+}
+3888 = {
+	name="Shantu"
+	dynasty=1830 #Xue
+	religion="confucian"
+	culture="han"
+	father=3887
+	60.1.1={
+		birth=yes
+	}
+	120.1.1={
+		death=yes
+	}
+}
+3889 = {
+	name="Gu"
+	dynasty=1830 #Xue
+	religion="confucian"
+	culture="han"
+	father=3888
+	80.1.1={
+		birth=yes
+	}
+	140.1.1={
+		death=yes
+	}
+}
+3890 = {
+	name="Wenbo"
+	dynasty=1830 #Xue
+	religion="confucian"
+	culture="han"
+	father=3889
+	100.1.1={
+		birth=yes
+	}
+	160.1.1={
+		death=yes
+	}
+}
+3891 = {
+	name="Fan"
+	dynasty=1830 #Xue
+	religion="confucian"
+	culture="han"
+	father=3889
+	105.1.1={
+		birth=yes
+	}
+	160.1.1={
+		death=yes
+	}
+}
+3892 = {
+	name="Ziwei"
+	dynasty=1830 #Xue
+	religion="confucian"
+	culture="han"
+	father=3889
+	110.1.1={
+		birth=yes
+	}
+	170.1.1={
+		death=yes
+	}
+}
+3893 = {
+	name="Yan"
+	dynasty=1830 #Xue
+	religion="confucian"
+	culture="han"
+	father=3890
+	120.1.1={
+		birth=yes
+	}
+	180.1.1={
+		death=yes
+	}
+}
+3894 = {
+	name="Jin"
+	dynasty=1830 #Xue
+	religion="confucian"
+	culture="han"
+	father=3891
+	130.1.1={
+		birth=yes
+	}
+	184.1.1={
+		death=yes
+	}
+}
+3895 = {
+	name="Lan"
+	dynasty=1830 #Xue
+	religion="confucian"
+	culture="han"
+	father=3893
+	145.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=4000
+		add_trait = "refuge"
+		effect = {
+			set_character_flag = refuge_yan
+		}
+	}
+	194.1.1={
+		employer=309
+		remove_trait = "refuge"
+		effect = {
+			clr_character_flag = refuge_yan
+		}
+	}
+	195.1.1={
+		death={death_reason=death_battle killer=400}
+	}
+}
+3896 = {
+	name="Yong"
+	dynasty=1830 #Xue
+	religion="confucian"
+	culture="han"
+	father=3895
+	170.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=4000
+		add_trait = "refuge"
+		effect = {
+			set_character_flag = refuge_yan
+		}
+	}
+	194.1.1={
+		employer=600
+		remove_trait = "refuge"
+		effect = {
+			clr_character_flag = refuge_yan
+		}
+	}
+	250.1.1={
+		death=yes
+	}
+}
+3897 = {
+	name="Heng"
+	dynasty=1830 #Xue
+	religion="confucian"
+	culture="han"
+	father=3892
+	130.1.1={
+		birth=yes
+	}
+	184.1.1={
+		death=yes
+	}
+}
+3898 = {
+	name="Dun"
+	dynasty=1830 #Xue
+	religion="confucian"
+	culture="han"
+	father=3897
+	150.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=4000
+		add_trait = "refuge"
+		effect = {
+			set_character_flag = refuge_yan
+		}
+	}
+	230.1.1={
+		remove_trait = "refuge"
+		effect = {
+			clr_character_flag = refuge_yan
+		}
+		death=yes
+	}
+}
+3899 = {
+	name="Yu"
+	dynasty=1830 #Xue
+	religion="confucian"
+	culture="han"
+	father=3894
+	150.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=4000
+		add_trait = "refuge"
+		effect = {
+			set_character_flag = refuge_yan
+		}
+	}
+	230.1.1={
+		remove_trait = "refuge"
+		effect = {
+			clr_character_flag = refuge_yan
+		}
+		death=yes
+	}
+}

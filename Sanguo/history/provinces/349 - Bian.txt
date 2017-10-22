@@ -1,0 +1,18 @@
+# c_bian
+
+# County Title
+title = c_bian
+
+# Settlements
+max_settlements = 4
+
+b_bian = castle
+b_wuxiangcheng = city
+#b_biancheng = temple
+#b_jingxiami = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

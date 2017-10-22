@@ -1,0 +1,19 @@
+# c_yangxin
+
+# County Title
+title = c_yangxin
+
+# Settlements
+max_settlements = 5
+
+b_yangxin = castle
+#b_tuxian = city
+#b_buxian = temple
+#b_luqiao = castle
+#b_jinniu = city
+
+# Misc
+culture = han
+religion = taiping
+
+#History

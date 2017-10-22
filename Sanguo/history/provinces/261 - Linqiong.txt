@@ -1,0 +1,19 @@
+# c_linqiong
+
+# County Title
+title = c_linqiong
+
+# Settlements
+max_settlements = 5
+
+b_linqiong = castle
+#b_fanchi = city
+#b_xinxing = temple
+#b_baihe = castle
+#b_xinglong = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

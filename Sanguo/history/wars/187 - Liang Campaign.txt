@@ -1,0 +1,29 @@
+name = "Liang Imperial Campaign"
+
+casus_belli={
+	actor=100
+	recipient=805
+	casus_belli=invasion
+	landed_title=k_liangzei
+	date=187.1.1
+}
+
+187.1.1={
+	add_defender = 805 #Wang Guo
+	add_defender = 2420 #Shaka
+	add_defender = 804 #Dianyu
+	add_attacker = 175 #Zhang Wen
+	add_attacker = 30 #Emperor Ling
+	add_attacker = 1229 #Geng Bi
+	add_attacker = 100 #He Jin
+}
+
+187.4.1={
+	rem_defender = 2420 #Shaka
+	rem_defender = 804 #Dianyu
+	rem_defender = 805 #Wang Guo
+	rem_attacker = 175 #Zhang Wen
+	rem_attacker = 30 #Emperor Ling
+	rem_attacker = 1229 #Geng Bi
+	rem_attacker = 100 #He Jin
+}

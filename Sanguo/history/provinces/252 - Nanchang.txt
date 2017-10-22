@@ -1,0 +1,20 @@
+# c_nanchang
+
+# County Title
+title = c_nanchang
+
+# Settlements
+max_settlements = 6
+
+b_nanchang = castle
+b_chaisang = castle
+b_bufu = tribal
+b_kangqiao = city
+#b_dingqiao = city
+#b_yingtan = city
+
+# Misc
+culture = minyue
+religion = animist
+
+#History

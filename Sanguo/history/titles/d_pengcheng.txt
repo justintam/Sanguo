@@ -1,0 +1,33 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=k_xu
+}
+88.1.1={
+	holder=3707 #Liu Gong
+}
+117.1.1={
+	holder=3708 #Liu Dao
+}
+145.1.1={
+	holder=3709 #Liu Ding
+}
+149.1.1={
+	holder=3710 #Liu He
+}
+213.1.1={
+	holder=3712 #Liu Zhi
+}
+220.12.10={
+	vice_royalty=yes
+	holder=2638 #Zang Ba
+}
+225.1.1={
+	holder=3793 #Lu Qian
+}
+230.1.1={
+	holder=20417 #Zou Qi
+}

@@ -1,0 +1,56 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_beihai
+}
+52.1.1={
+	holder=4244 #Liu Xing
+}
+64.1.1={
+	holder=4245 #Liu Mu
+}
+74.1.1={
+	holder=4247 #Liu Ji
+}
+87.1.1={
+	holder=0 #None
+}
+90.1.1={
+	holder=4248 #Liu Wei
+}
+96.1.1={
+	holder=4251 #Liu Pu
+}
+120.1.1={
+	holder=1365 #Tan Yisun
+}
+123.1.1={
+	holder=4252 #Liu Yi
+}
+135.1.1={
+	holder=1287 #Yang Bing
+}
+140.1.1={
+	holder=4253 #Liu Fan
+}
+180.1.1={
+	holder=1278 #Zhao Yan
+}
+187.1.1={
+	holder=153 #Jiao He
+}
+189.9.1={
+	holder=121 #Kong Rong
+}
+196.1.1={
+	holder=709 #Yuan Tan
+}
+205.2.1={
+	holder=2640 #Sun Guan
+}
+217.3.1={
+	holder=2683 #Sun Yu
+}

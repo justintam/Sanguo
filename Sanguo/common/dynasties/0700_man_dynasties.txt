@@ -1,0 +1,203 @@
+700 = {
+	name="Meng"
+	culture = nanman
+}
+701 = {
+	name="Cuan"
+	culture = nanman
+}
+702 = {
+	name="Xi"
+	culture = nanman
+}
+703 = {
+	name="Tu"
+	culture = nanman
+}
+704 = {
+	name="Yang"
+	culture = nanman
+}
+705 = {
+	name="Di"
+	culture = nanman
+}
+706 = {
+	name="Man"
+	culture = nanman
+}
+707 = {
+	name="Rong"
+	culture = nanman
+}
+708 = {
+	name="Yi"
+	culture = nanman
+}
+709 = {
+	name="Ailao"
+	culture = nanman
+}
+710 = {
+	name="Dian"
+	culture = nanman
+}
+711 = {
+	name="Luduo"
+	culture = nanman
+}
+712 = {
+	name="Qielan"
+	culture = nanman
+}
+713 = {
+	name="Tulong"
+	culture = nanman
+}
+714 = {
+	name="Bana"
+	culture = nanman
+}
+715 = {
+	name="Yinye"
+	culture = nanman
+}
+716 = {
+	name="Ren"
+	culture = nanman
+}
+
+##### Bandunman #####
+
+750 = {
+	name="He"
+	culture = bandunman
+}
+751 = {
+	name="Liao"
+	culture = bandunman
+}
+752 = {
+	name="Qin"
+	culture = bandunman
+}
+753 = {
+	name="Hao"
+	culture = bandunman
+}
+754 = {
+	name="Pu"
+	culture = bandunman
+}
+755 = {
+	name="Cong"
+	culture = bandunman
+}
+756 = {
+	name="Di"
+	culture = bandunman
+}
+757 = {
+	name="Yi"
+	culture = bandunman
+}
+758 = {
+	name="Li"
+	culture = bandunman
+}
+759 = {
+	name="Changsha"
+	culture = bandunman
+}
+760 = {
+	name="Lingling"
+	culture = bandunman
+}
+761 = {
+	name="Lizhou"
+	culture = bandunman
+}
+762 = {
+	name="Wuling"
+	culture = bandunman
+}
+763 = {
+	name="Sou"
+	culture = bandunman
+}
+764 = {
+	name="Wuge"
+	culture = bandunman
+}
+765 = {
+	name="Du"
+	culture = bandunman
+}
+766 = {
+	name="Gou"
+	culture = bandunman
+}
+767 = {
+	name="Yan"
+	culture = bandunman
+}
+768 = {
+	name="Yang"
+	culture = bandunman
+}
+769 = {
+	name="Yuan"
+	culture = bandunman
+}
+770 = {
+	name="Fan"
+	culture = bandunman
+}
+771 = {
+	name="Xiang"
+	culture = bandunman
+}
+772 = {
+	name="Zheng"
+	culture = bandunman
+}
+773 = {
+	name="Jingyong"
+	culture = bandunman
+}
+774 = {
+	name="Wuxi"
+	culture = bandunman
+}
+775 = {
+	name="Dangyang"
+	culture = bandunman
+}
+776 = {
+	name="Mianzhong"
+	culture = bandunman
+}
+777 = {
+	name="Jiangxia"
+	culture = bandunman
+}
+778 = {
+	name="Bajun"
+	culture = bandunman
+}
+779 = {
+	name="Nanjun"
+	culture = bandunman
+}
+780 = {
+	name="Qianzhong"
+	culture = bandunman
+}
+781 = {
+	name="Ba"
+	culture = bandunman
+}
+782 = {
+	name="Zhao"
+	culture = bandunman
+}

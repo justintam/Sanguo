@@ -1,0 +1,29 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_hejian
+}
+90.1.1={
+	holder=23 #Liu Kai
+}
+131.1.1={
+	holder=82 #Liu Zheng
+}
+141.1.1={
+	holder=83 #Liu Jian
+}
+151.1.1={
+	holder=84 #Liu Li
+}
+160.1.1={
+	holder=1293 #Yang Zhu
+}
+179.1.1={
+	holder=85 #Liu Gai
+}
+220.12.10={
+	holder=4180 #Random
+}

@@ -1,0 +1,22 @@
+# c_nankang
+
+# County Title
+title = c_nankang
+
+# Settlements
+max_settlements = 5
+
+b_nankang = castle
+b_dangtai = tribal
+#b_xubu = city
+#b_xuoli = city
+#b_ganzhou = city
+
+# Misc
+culture = shanyue
+religion = animist
+
+#History
+204.1.1={
+	b_xubu = city
+}

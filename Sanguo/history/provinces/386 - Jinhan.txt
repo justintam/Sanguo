@@ -1,0 +1,20 @@
+# c_jinhan
+
+# County Title
+title = c_jinhan
+
+# Settlements
+max_settlements = 6
+
+b_silla = tribal
+b_mirimidong = tribal
+b_gijeo = tribal
+b_yeomhae = temple
+#b_geumseung = city
+#b_haiyinseung = temple
+
+# Misc
+culture = samhan
+religion = shamanist
+
+#History

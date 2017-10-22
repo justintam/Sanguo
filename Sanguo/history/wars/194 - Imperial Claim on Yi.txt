@@ -1,0 +1,22 @@
+name = "Imperial Claim on Yi"
+
+casus_belli={
+	actor=4447
+	recipient=80
+	thirdparty=48
+	casus_belli=other_claim
+	landed_title=k_yi
+	date=194.4.1
+}
+
+194.4.1 = {
+	add_defender = 80 #Liu Zhang
+	add_attacker = 48 #Liu Biao
+}
+
+195.1.1={
+	rem_defender = 80 #Liu Zhang
+	rem_attacker = 48 #Liu Biao
+}
+
+   

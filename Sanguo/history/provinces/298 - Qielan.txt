@@ -1,0 +1,17 @@
+# c_qielan
+
+# County Title
+title = c_qielan
+
+# Settlements
+max_settlements = 3
+
+b_qielan = tribal
+#b_qielanfu = city
+#b_weishan = temple
+
+# Misc
+culture = nanman
+religion = huojiao
+
+#History

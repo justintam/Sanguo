@@ -1,0 +1,23 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_beidi
+}
+170.1.1={
+	holder=3355 #Fan Jin
+}
+184.1.1={
+	holder=800 #Beigong Boyu
+}
+184.10.1={
+	liege=k_liangzei #Liang Rebellion
+}
+186.1.1={
+	holder=4136 #Random
+}
+189.9.1={
+	liege=d_beidi
+}

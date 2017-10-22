@@ -1,0 +1,28 @@
+600 = {
+	name="Wuhuan"
+	culture = wuhuan
+}
+601 = {
+	name="Dai"
+	culture = wuhuan
+}
+602 = {
+	name="Nan"
+	culture = wuhuan
+}
+603 = {
+	name="Supu"
+	culture = wuhuan
+}
+604 = {
+	name="Wu"
+	culture = wuhuan
+}
+605 = {
+	name="Tatabi"
+	culture = wuhuan
+}
+606 = {
+	name="Zhang"
+	culture = wuhuan
+}

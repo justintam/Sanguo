@@ -1,0 +1,18 @@
+# c_zhuwu
+
+# County Title
+title = c_zhuwu
+
+# Settlements
+max_settlements = 4
+
+b_zhuwu = tribal
+#b_zhumu = city
+#b_donghua = temple
+#b_donghui = castle
+
+# Misc
+culture = nanyue
+religion = animist
+
+#History

@@ -1,0 +1,276 @@
+#######Kushan Dynasty range: 2400 - 2499######
+
+##################################
+########### IMPERIAL #############
+##################################
+
+2400 = {   ### Chief of the Kushan
+	name="Heraios"
+	dynasty=1000
+	religion="buddhist"
+	culture="yuezhi"
+	1.1.1={
+		birth=yes
+	}
+	30.1.1={
+		death=yes
+	}
+}
+2401 = {   ### 1nd Emperor
+	name="Kujula Kadphises"
+	dynasty=1000
+	religion="buddhist"
+	culture="yuezhi"
+	father=2400
+	15.1.1={
+		birth=yes
+	}
+	80.1.1={
+		death=yes
+	}
+}
+2402 = {   ### 3rd Emperor
+	name="Vima Taktu"
+	dynasty=1000
+	religion="buddhist"
+	culture="yuezhi"
+	father=2401
+	50.1.1={
+		birth=yes
+	}
+	95.1.1={
+		death=yes
+	}
+}
+2403 = {   ### 4th Emperor
+	name="Vima Kadphises"
+	dynasty=1000
+	religion="buddhist"
+	culture="yuezhi"
+	father=2402
+	70.1.1={
+		birth=yes
+	}
+	127.1.1={
+		death=yes
+	}
+}
+2404 = {   ### 5th Emperor
+	name="Kanishka I"
+	dynasty=1000
+	religion="buddhist"
+	culture="yuezhi"
+	father=2403
+	90.1.1={
+		birth=yes
+	}
+	151.1.1={
+		death=yes
+	}
+}
+2405 = {   ### 6th Emperor
+	name="Vasishka"
+	dynasty=1000
+	religion="buddhist"
+	culture="yuezhi"
+	father=2404
+	115.1.1={
+		birth=yes
+	}
+	160.1.1={
+		death=yes
+	}
+}
+2406 = {   ### 7th Emperor
+	name="Huvishka"
+	dynasty=1000
+	religion="buddhist"
+	culture="yuezhi"
+	father=2405
+	140.1.1={
+		birth=yes
+	}
+	190.1.1={
+		death=yes
+	}
+}
+2407 = {   ### 8th Emperor
+	name="Vasudeva I"
+	dynasty=1000
+	religion="buddhist"
+	culture="yuezhi"
+	father=2406
+	165.1.1={
+		birth=yes
+	}
+	230.1.1={
+		death=yes
+	}
+}
+2408 = {   ### 9th Emperor
+	name="Kanishka II"
+	dynasty=1000
+	religion="buddhist"
+	culture="yuezhi"
+	father=2407
+	189.9.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+2409 = {   ### 10th Emperor
+	name="Vashishka"
+	dynasty=1000
+	religion="buddhist"
+	culture="yuezhi"
+	father=2408
+	210.1.1={
+		birth=yes
+	}
+	250.1.1={
+		death=yes
+	}
+}
+2410 = {   ### 11th Emperor
+	name="Kanishka III"
+	dynasty=1000
+	religion="buddhist"
+	culture="yuezhi"
+	father=2409
+	230.1.1={
+		birth=yes
+	}
+	275.1.1={
+		death=yes
+	}
+}
+2411 = {   ### 12th Emperor
+	name="Vasudeva II"
+	dynasty=1000
+	religion="buddhist"
+	culture="yuezhi"
+	father=2410
+	250.1.1={
+		birth=yes
+	}
+	310.1.1={
+		death=yes
+	}
+}
+2412 = {
+	name="Vasudeva III"
+	dynasty=1000
+	religion="buddhist"
+	culture="yuezhi"
+	father=2411
+	270.1.1={
+		birth=yes
+	}
+	330.1.1={
+		death=yes
+	}
+}
+2413 = {
+	name="Vasudeva IV"
+	dynasty=1000
+	religion="buddhist"
+	culture="yuezhi"
+	father=2411
+	275.1.1={
+		birth=yes
+	}
+	335.1.1={
+		death=yes
+	}
+}
+2414 = {
+	name="Vasudeva of Kabul"
+	dynasty=1000
+	religion="buddhist"
+	culture="yuezhi"
+	father=2411
+	275.1.1={
+		birth=yes
+	}
+	335.1.1={
+		death=yes
+	}
+}
+2415 = {   ### 13th Emperor
+	name="Chhu"
+	dynasty=1000
+	religion="buddhist"
+	culture="yuezhi"
+	father=2411
+	280.1.1={
+		birth=yes
+	}
+	325.1.1={
+		death=yes
+	}
+}
+2416 = {   ### 14th Emperor
+	name="Shaka I"
+	dynasty=1000
+	religion="buddhist"
+	culture="yuezhi"
+	father=2415
+	300.1.1={
+		birth=yes
+	}
+	345.1.1={
+		death=yes
+	}
+}
+2417 = {   ### 15th Emperor
+	name="Kipunada"
+	dynasty=1000
+	religion="buddhist"
+	culture="yuezhi"
+	father=2416
+	325.1.1={
+		birth=yes
+	}
+	375.1.1={
+		death=yes
+	}
+}
+#2418 Monk
+#2419 Monk
+2420 = {
+	name="Shaka"
+	dynasty=1004
+	religion="buddhist"
+	culture="yuezhi"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=2406
+	}
+	190.1.1={
+		employer=2407
+	}
+	230.1.1={
+		employer=2408
+	}
+	240.1.1={
+		employer=2409
+	}
+	245.1.1={
+		death=yes
+	}
+}
+2421 = {
+	name="Deva"
+	religion="tengri_pagan"
+	culture="yuezhi"
+	160.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}

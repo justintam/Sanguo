@@ -1,0 +1,44 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=k_yi
+	vice_royalty = yes
+}
+160.1.1={
+	holder=4407 #Zhao Wen
+}
+170.1.1={
+	holder=4411 #Wang Mou
+}
+184.1.1={
+	holder=130 #Zhao Bu
+}
+188.10.1={
+	holder=3622 #Wang Xian
+}
+190.1.1={
+	holder=163 #Fan Min
+}
+#Zhang Na
+198.1.1={
+	holder=161 #Pang Xi
+}
+208.1.1={
+	holder=3615 #Xu Jing
+}
+210.1.1={
+	holder=3609 #Gong Yang
+}
+214.1.1={
+	holder=3608 #Fei Guan
+}
+#Zhang Yi
+#Liao Li
+#220 Wang Peng
+#Yang Yong
+
+
+#Zhao Min? -Baxi, Badong, Ba

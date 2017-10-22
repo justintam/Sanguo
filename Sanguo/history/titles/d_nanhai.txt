@@ -1,0 +1,23 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=k_jiaozhi
+	vice_royalty=yes
+}
+184.1.1={
+	holder=3526 #Random
+}
+193.1.1={
+	liege=k_shi
+	holder=1003 #Shi Wu
+}
+200.1.1={
+	liege=e_china
+	holder=3405 #Ni Xiaode - Supported Cao and received Xu Jing
+}
+211.1.1={
+	liege=k_jiaozhi
+}

@@ -1,0 +1,17 @@
+# c_wuhuandong
+
+# County Title
+title = c_wuhuandong
+
+# Settlements
+max_settlements = 3
+
+b_wuhuandong = tribal
+#b_wuhuanwei = city
+#b_baisanzi = temple
+
+# Misc
+culture = wuhuan
+religion = tengri_pagan
+
+#History

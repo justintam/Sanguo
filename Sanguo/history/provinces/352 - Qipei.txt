@@ -1,0 +1,18 @@
+# c_qipei
+
+# County Title
+title = c_qipei
+
+# Settlements
+max_settlements = 4
+
+b_qipei = castle
+b_dazexiang = city
+#b_qipeicheng = city
+#b_qipeifu = temple
+
+# Misc
+culture = han
+religion = confucian
+
+#History

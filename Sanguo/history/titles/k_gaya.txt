@@ -1,0 +1,29 @@
+# e_korea
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=e_korea
+}
+30.1.1={
+	holder=2520
+}
+199.1.1={
+	holder=2522
+}
+259.1.1={
+	holder=2524
+}
+291.1.1={
+	holder=2526
+}
+346.1.1={
+	holder=2528
+}
+407.1.1={
+	holder=2530
+}
+421.1.1={
+	holder=2532
+}

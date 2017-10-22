@@ -1,0 +1,26 @@
+# e_korea
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_baekje
+}
+50.1.1={
+	holder=2800 #Onjo
+}
+68.1.1={
+	holder=2802 #Daru
+}
+97.1.1={
+	holder=2804 #Giru
+}
+138.1.1={
+	holder=2805 #Gaeru
+}
+166.1.1={
+	holder=2807 #Chogo
+}
+214.1.1={
+	holder=2810 #Gusu
+}

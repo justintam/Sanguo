@@ -1,0 +1,13 @@
+1.1.1={
+	law = agnatic_succession
+	law = succ_open_elective
+}
+184.1.1={
+	holder=2600 #Guo Da
+}
+189.1.1={
+	holder=2601 #Han Xian
+}
+197.1.1={
+	active = no
+}

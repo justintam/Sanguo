@@ -1,0 +1,40 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_jiujiang
+}
+90.1.1={
+	holder=3748 #Gao Chang
+}
+175.1.1={
+	holder=107 #Lu Zhi
+}
+184.1.1={
+	holder=1274 #Rui Zhi
+}
+186.1.1={
+	holder=516 #Bing Zhi
+}
+189.1.1={
+	holder=3380 #Fu Qian
+}
+190.1.1={
+	holder=3466 #Bian Rang
+}
+191.1.1={
+	holder=3378 #Zhou Ang
+}
+192.6.1={
+	holder=705 # Yuan Shu
+}
+199.6.1={
+	holder=20454 #Yang Pei
+}
+202.1.1={
+	holder=4106 #Random
+}
+#Shi Miao 209 # Recalled in 213 and died in 240s 
+#225 Quan Zong

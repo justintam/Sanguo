@@ -1,0 +1,30 @@
+# c_jianye
+
+# County Title
+title = c_jianye
+
+# Settlements
+max_settlements = 7
+
+b_jianye = castle
+b_jianmen = city
+b_xianhe = city
+#b_jianwu = castle
+#b_jiancheng = city
+#b_jianhai = temple
+#b_wujianqu = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History
+200.1.1={
+	b_jianwu = castle
+}
+209.1.1={
+	b_jiancheng = city
+}
+214.1.1={
+	b_jianhai = temple
+}

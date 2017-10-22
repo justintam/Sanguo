@@ -1,0 +1,25 @@
+name = "Five Pecks Rebellion"
+
+casus_belli={
+	actor=1009
+	recipient=100
+	casus_belli=invasion
+	landed_title=d_hanzhong
+	date=188.1.1
+}
+
+188.1.1 = {
+	add_defender = 100 #He Jin
+	add_defender = 125 #Su Gu
+	add_attacker = 1010 #Zhang Xiu
+	add_attacker = 1009 #Zhang Lu
+}
+
+189.1.1={
+	rem_defender = 125 #Su Gu
+	rem_defender = 100 #He Jin
+	rem_attacker = 1010 #Zhang Xiu
+	rem_attacker = 1009 #Zhang Lu
+}
+
+   

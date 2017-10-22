@@ -1,0 +1,19 @@
+# c_fanshu
+
+# County Title
+title = c_fanshu
+
+# Settlements
+max_settlements = 5
+
+b_fan = castle
+#b_lenmifu = city
+#b_xinfan = temple
+#b_sandao = castle
+#b_deyuan = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

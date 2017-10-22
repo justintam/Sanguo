@@ -1,0 +1,18 @@
+# c_peiguo
+
+# County Title
+title = c_peiguo
+
+# Settlements
+max_settlements = 4
+
+b_peiguo = castle
+#b_peifu = city
+#b_mamu = temple
+#b_shibali = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

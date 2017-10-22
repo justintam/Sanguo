@@ -1,0 +1,18 @@
+# c_wanchengzhuo
+
+# County Title
+title = c_wanchengzhuo
+
+# Settlements
+max_settlements = 4
+
+b_wanchengzhuo = castle
+b_linxiangwan = city
+b_wuruanguan = castle
+#b_bierugen = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

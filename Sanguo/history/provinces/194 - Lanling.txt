@@ -1,0 +1,18 @@
+# c_lanling
+
+# County Title
+title = c_lanling
+
+# Settlements
+max_settlements = 4
+
+b_lanling = castle
+b_cishiting = city
+#b_huotian = temple
+#b_shuijiao = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

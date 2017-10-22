@@ -1,0 +1,285 @@
+# Baekje
+
+2800 = {
+	name="Onjo"
+	dynasty=2201
+	religion="shamanist"
+	culture="joseon"
+	father=2313
+	mother=2536 #Soseono
+	1.1.8={
+		birth=yes
+	}
+	1.1.9={
+		dynasty=2200
+		add_trait = adopted
+		father=2200
+	}
+	1.1.10={
+		dynasty=2205
+	}
+	28.1.1={
+		death=yes
+	}
+}
+2801 = {
+	name="Biryu"
+	dynasty=2201
+	religion="shamanist"
+	culture="joseon"
+	father=2313
+	mother=2536 #Soseono
+	1.1.7={
+		birth=yes
+	}
+	1.1.9={
+		dynasty=2200
+		add_trait = adopted
+		father=2200
+	}
+	1.1.10={
+		dynasty=2204
+	}
+	20.1.1={
+		death={
+			death_reason=death_suicide
+		}
+	}
+}
+2802 = {
+	name="Daru"
+	dynasty=2205
+	religion="shamanist"
+	culture="joseon"
+	father=2800
+	1.1.10={
+		birth=yes
+	}
+	77.1.1={
+		death=yes
+	}
+}
+2803 = {
+	name="Deokjwa"
+	dynasty=2205
+	religion="shamanist"
+	culture="joseon"
+	father=2800
+	2.1.1={
+		birth=yes
+	}
+	80.1.1={
+		death=yes
+	}
+}
+2804 = {
+	name="Giru"
+	dynasty=2205
+	religion="shamanist"
+	culture="joseon"
+	father=2802
+	33.1.1={
+		birth=yes
+	}
+	128.1.1={
+		death=yes
+	}
+}
+2805 = {
+	name="Gaeru"
+	dynasty=2205
+	religion="shamanist"
+	culture="joseon"
+	father=2804
+	81.1.1={
+		birth=yes
+	}
+	166.1.1={
+		death=yes
+	}
+}
+2806 = {
+	name="Jil"
+	dynasty=2205
+	religion="shamanist"
+	culture="joseon"
+	father=2804
+	107.1.1={
+		birth=yes
+	}
+	190.1.1={
+		death=yes
+	}
+}
+2807 = {
+	name="Chogo"
+	dynasty=2205
+	religion="shamanist"
+	culture="joseon"
+	father=2805
+	trait=brave
+	140.1.1={
+		birth=yes
+	}
+	214.1.1={
+		death=yes
+	}
+}
+2808 = {
+	name="Goi"
+	dynasty=2205
+	religion="shamanist"
+	culture="joseon"
+	father=2805
+	trait="ambitious"
+	164.1.1={
+		birth=yes
+	}
+	286.1.1={
+		death=yes
+	}
+}
+2809 = {
+	name="Usu"
+	dynasty=2205
+	religion="shamanist"
+	culture="joseon"
+	father=2805
+	165.1.1={
+		birth=yes
+	}
+	270.1.1={
+		death=yes
+	}
+}
+2810 = {
+	name="Gusu"
+	dynasty=2205
+	religion="shamanist"
+	culture="joseon"
+	father=2807
+	trait=brave
+	170.1.1={
+		birth=yes
+	}
+	234.1.1={
+		death=yes
+	}
+}
+2811 = {
+	name="Saban"
+	dynasty=2205
+	religion="shamanist"
+	culture="joseon"
+	father=2810
+	220.1.1={
+		birth=yes
+	}
+	234.1.1={
+		death={death_reason=death_murder killer=2808}
+	}
+}
+2812 = {
+	name="Wubok"
+	dynasty=2205
+	religion="shamanist"
+	culture="joseon"
+	father=2810
+	230.1.1={
+		birth=yes
+	}
+	327.1.1={
+		death=yes
+	}
+}
+2813 = {
+	name="Biryu"
+	dynasty=2205
+	religion="shamanist"
+	culture="joseon"
+	father=2812
+	260.1.1={
+		birth=yes
+	}
+	344.1.1={
+		death=yes
+	}
+}
+
+
+###
+
+###
+# Biryu Clan
+###
+2890 = {
+	name="Sangga"
+	dynasty=2204
+	religion="shamanist"
+	culture="joseon"
+	father=2807
+	1.1.10={
+		birth=yes
+	}
+	90.1.1={
+		death=yes
+	}
+}
+2891 = {
+	name="Soe"
+	dynasty=2204
+	religion="shamanist"
+	culture="joseon"
+	father=2890
+	50.1.1={
+		birth=yes
+	}
+	120.1.1={
+		death=yes
+	}
+}
+2892 = {
+	name="Ijin"
+	dynasty=2204
+	religion="shamanist"
+	culture="joseon"
+	father=2891
+	90.1.1={
+		birth=yes
+	}
+	160.1.1={
+		death=yes
+	}
+}
+2893 = {
+	name="Maereuk"
+	dynasty=2204
+	religion="shamanist"
+	culture="joseon"
+	father=2892
+	120.1.1={
+		birth=yes
+	}
+	180.1.1={
+		death=yes
+	}
+}
+2894 = {
+	name="Gumul"
+	dynasty=2204
+	religion="shamanist"
+	culture="joseon"
+	father=2893
+	150.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=2807 #Chogo
+	}
+	214.1.1={
+		employer=2810 #Gusu
+	}
+	230.1.1={
+		death=yes
+	}
+}

@@ -1,0 +1,27 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=k_liang
+	vice_royalty = yes
+}
+60.1.1={
+	holder=3753 #Cao Min
+}
+184.1.1={
+	holder=4174 # Random
+}
+194.1.1={
+	liege=k_yong
+}
+210.6.1={
+	liege=k_xiliang
+}
+215.1.1={
+	liege=k_yong
+}
+220.8.1={
+	liege=k_liang
+}

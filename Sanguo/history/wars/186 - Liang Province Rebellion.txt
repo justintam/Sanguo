@@ -1,0 +1,31 @@
+name = "3rd Liang Province Rebellion"
+
+casus_belli={
+	actor=800
+	recipient=100
+	casus_belli=invasion
+	landed_title=k_liang
+	date=186.1.1
+}
+
+186.1.1 = {
+	add_defender = 100 #He Jin
+	add_defender = 175 #Zhang Wen
+	add_defender = 30 #Emperor Ling
+	add_defender = 1229 #Geng Bi
+	add_attacker = 2420 #Shaka
+	add_attacker = 805 #Wang Guo
+	add_attacker = 803 #Bian Zhang
+	add_attacker = 804 #Dianyu
+	add_attacker = 800 #Beigong Boyu
+}
+186.8.1={
+	rem_defender = 175 #Zhang Wen
+	rem_defender = 30 #Emperor Ling
+	rem_defender = 1229 #Geng Bi
+	rem_defender = 100 #He Jin
+	rem_attacker = 2420 #Shaka
+	rem_attacker = 805 #Wang Guo
+	rem_attacker = 804 #Dianyu
+	rem_attacker = 800 #Beigong Boyu
+}

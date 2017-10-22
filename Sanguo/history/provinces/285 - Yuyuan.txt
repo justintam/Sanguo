@@ -1,0 +1,17 @@
+# c_yuyuan
+
+# County Title
+title = c_yuyuan
+
+# Settlements
+max_settlements = 3
+
+b_yuyuan = tribal
+#b_yuling = city
+#b_chuxiong = temple
+
+# Misc
+culture = nanman
+religion = huojiao
+
+#History

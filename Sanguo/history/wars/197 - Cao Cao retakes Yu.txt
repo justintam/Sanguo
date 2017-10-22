@@ -1,0 +1,20 @@
+name = "Cao Cao retakes Yu"
+
+casus_belli={
+	actor=400
+	recipient=309
+	casus_belli=other_claim
+	landed_title=k_yu
+	date=197.3.1
+}
+
+197.3.1 = {
+	add_defender = 309 #Lu Bu
+	add_attacker = 400 #Cao Cao
+	add_attacker = 600 #Liu Bei
+}
+198.2.1={
+	rem_defender = 309 #Lu Bu
+	rem_attacker = 600 #Liu Bei
+	rem_attacker = 400 #Cao Cao
+}

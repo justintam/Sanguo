@@ -1,0 +1,324 @@
+buddhist_religion = {
+	has_coa_on_barony_only = yes
+	graphical_culture = indiangfx
+	playable = yes
+	ai_peaceful = yes # Will make Hordes lose their super aggressiveness
+
+	ai_convert_same_group = 2 # always try to convert
+	ai_convert_other_group = 2 # always try to convert
+
+	buddhist = {
+		graphical_culture = buddhistgfx
+
+		icon = 40
+		heresy_icon = 41
+		
+		color = { 0.8 0.4 0.0 }
+		
+		character_modifier = {
+			learning = 5
+		}
+		
+		has_heir_designation = yes
+		can_grant_divorce = yes
+		priests_can_inherit = no
+		feminist = yes # Nullifies the negative opinion modifier that vassals normally get if ruler is female or has female heir
+		peace_piety_gain = 1.0 # Gains 1 piety each month while at peace
+		female_temple_holders = yes
+		max_consorts = 3
+
+		short_reign_opinion_year_mult = 0 # No short reign penalty
+		
+		aggression = -3.0 # AI aggression factor
+		
+		religious_clothing_head = 10
+		religious_clothing_priest = 10
+		
+		hard_to_convert = yes
+
+		scripture_name = THE_BUDDHACAVANA
+		priest_title = LAMA
+		piety_name = KARMA
+	}
+}
+
+pagan_group = {
+	has_coa_on_barony_only = yes
+	graphical_culture = westerngfx
+	playable = yes
+	hostile_within_group = yes
+	
+	ai_convert_same_group = 2 # always try to convert
+	ai_convert_other_group = 1 # try to convert if ai_zeal is high
+
+	animist = {
+		graphical_culture = westerngfx
+
+		icon = 5
+		
+		color = { 0.8 0.1 0.3 }
+		
+		high_god_name = GOD_THE_CREATOR
+		
+		god_names = {
+			GOD_THE_SPIRITS GOD_THE_ANCESTORS
+		}
+		evil_god_names = {
+			THE_DARK_SPIRITS
+		}
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_LEGENDS
+		priest_title = PRIEST
+		priests_can_marry = yes
+		female_temple_holders = yes
+		max_consorts = 3
+		allow_looting = yes
+		can_grant_invasion_cb = invasion
+		feminist = yes
+		
+		defensive_attrition = yes
+		
+		aggression = 3.0 # AI aggression factor
+		
+		religious_clothing_head = 3
+		religious_clothing_priest = 3
+		
+		hard_to_convert = yes
+		
+		dislike_tribal_organization = yes
+	}
+	
+	baihu = {
+		graphical_culture = westerngfx
+
+		icon = 5
+		
+		color = { 0.5 0.8 0.5 }
+		
+		high_god_name = GOD_THE_CREATOR
+		
+		god_names = {
+			GOD_THE_SPIRITS GOD_THE_ANCESTORS
+		}
+		evil_god_names = {
+			THE_DARK_SPIRITS
+		}
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_LEGENDS
+		priest_title = PRIEST
+		priests_can_marry = yes
+		female_temple_holders = yes
+		max_consorts = 3
+		allow_looting = yes
+		can_grant_invasion_cb = invasion
+		feminist = yes
+		
+		defensive_attrition = yes
+		
+		aggression = 3.0 # AI aggression factor
+		
+		religious_clothing_head = 1
+		religious_clothing_priest = 5
+		
+		hard_to_convert = yes
+		
+		dislike_tribal_organization = yes
+	}
+	
+	baima = {
+		graphical_culture = westerngfx
+
+		icon = 5
+		
+		color = { 0.8 0.5 0.9 }
+		
+		high_god_name = GOD_THE_CREATOR
+		
+		god_names = {
+			GOD_THE_SPIRITS GOD_THE_ANCESTORS
+		}
+		evil_god_names = {
+			THE_DARK_SPIRITS
+		}
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_LEGENDS
+		priest_title = SHAMAN
+		priests_can_marry = yes
+		female_temple_holders = yes
+		max_consorts = 3
+		allow_looting = yes
+		can_grant_invasion_cb = invasion
+		feminist = yes
+		
+		defensive_attrition = yes
+		
+		aggression = 3.0 # AI aggression factor
+		
+		religious_clothing_head = 1
+		religious_clothing_priest = 5
+		
+		hard_to_convert = yes
+		
+		dislike_tribal_organization = yes
+	}
+	
+	baishi = {
+		graphical_culture = westerngfx
+
+		icon = 5
+		
+		color = { 1.0 1.0 1.0 }
+		
+		high_god_name = GOD_THE_CREATOR
+		
+		god_names = {
+			GOD_THE_SPIRITS GOD_THE_ANCESTORS
+		}
+		evil_god_names = {
+			THE_DARK_SPIRITS
+		}
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_LEGENDS
+		priest_title = SHAMAN
+		priests_can_marry = yes
+		female_temple_holders = yes
+		max_consorts = 3
+		allow_looting = yes
+		can_grant_invasion_cb = invasion
+		feminist = yes
+		
+		defensive_attrition = yes
+		
+		aggression = 3.0 # AI aggression factor
+		
+		religious_clothing_head = 1
+		religious_clothing_priest = 3
+		
+		hard_to_convert = yes
+		
+		dislike_tribal_organization = yes
+	}
+	
+	huojiao = {
+		graphical_culture = westerngfx
+
+		icon = 5
+		
+		color = { 0.9 0.2 0.0 }
+		
+		high_god_name = GOD_THE_CREATOR
+		
+		god_names = {
+			GOD_THE_SPIRITS GOD_THE_ANCESTORS
+		}
+		evil_god_names = {
+			THE_DARK_SPIRITS
+		}
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_LEGENDS
+		priest_title = SHAMAN
+		priests_can_marry = yes
+		female_temple_holders = yes
+		max_consorts = 3
+		allow_looting = yes
+		can_grant_invasion_cb = invasion
+		feminist = yes
+		
+		defensive_attrition = yes
+		
+		aggression = 3.0 # AI aggression factor
+		
+		religious_clothing_head = 8
+		religious_clothing_priest = 10
+		
+		hard_to_convert = yes
+		
+		dislike_tribal_organization = yes
+	}
+	
+	shamanist = {
+		graphical_culture = westerngfx
+
+		icon = 5
+		
+		color = { 0.3 0.8 0.3 }
+		
+		high_god_name = HANEULLIM
+		
+		god_names = {
+			GOD_THE_SPIRITS GOD_THE_ANCESTORS
+		}
+		evil_god_names = {
+			THE_DARK_SPIRITS
+		}
+		
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_LEGENDS
+		priest_title = MU
+		priests_can_marry = yes
+		female_temple_holders = yes
+		max_consorts = 3
+		allow_looting = yes
+		landed_kin_prestige_bonus = yes
+		can_grant_invasion_cb = invasion
+		feminist = yes
+		
+		defensive_attrition = yes
+		
+		aggression = 3.0 # AI aggression factor
+		
+		religious_clothing_head = 8
+		religious_clothing_priest = 10
+		
+		hard_to_convert = yes
+		
+		dislike_tribal_organization = yes
+	}
+	
+	tengri_pagan = { #Mongols
+		graphical_culture = mongolgfx
+
+		icon = 28
+		heresy_icon = 30
+		
+		color = { 0.0 0.2 0.8 }
+		
+		high_god_name = GOD_TENGRI
+		
+		god_names = {
+			GOD_TENGRI GOD_ERLIK_KHAN GOD_TUNG-AK
+		}
+		evil_god_names = {
+			ERLIK KOMUR_HAN
+		}
+	
+		crusade_name = GREAT_HOLY_WAR
+		scripture_name = THE_LEGENDS
+		priest_title = SHAMAN
+		
+		priests_can_marry = yes
+		peace_prestige_loss = yes # Lose Prestige while at peace
+		raised_vassal_opinion_loss = no
+		max_consorts = 3
+		independence_war_score_bonus = 30 # Overrides define CONTESTED_TITLE_OCCUPIED_WARSCORE_BONUS_INDEP
+		ignores_defensive_attrition = yes
+		allow_looting = yes
+		can_grant_invasion_cb = invasion
+		
+		short_reign_opinion_year_mult = 3 # The default is 2
+		
+		aggression = 10.0 # AI aggression factor
+		
+		religious_clothing_head = 6
+		religious_clothing_priest = 4
+		
+		hard_to_convert = yes
+		
+		dislike_tribal_organization = yes
+	}
+}

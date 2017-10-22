@@ -1,0 +1,21 @@
+# c_wan
+
+# County Title
+title = c_wan
+
+# Settlements
+max_settlements = 7
+
+b_wancheng = castle
+b_nanjiuju = city
+b_xiyangju = city
+b_pangju = city
+b_penjing = city
+#b_hanling = temple
+#b_yingxo = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

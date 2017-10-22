@@ -1,0 +1,18 @@
+# c_xiaqiu
+
+# County Title
+title = c_xiaqiu
+
+# Settlements
+max_settlements = 4
+
+b_xiaqiu = castle
+b_louting = city
+#b_mangjiu = temple
+#b_bianha = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

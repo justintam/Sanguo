@@ -1,0 +1,18 @@
+# c_yimu
+
+# County Title
+title = c_yimu
+
+# Settlements
+max_settlements = 4
+
+b_yimu = castle
+b_hua = city
+#b_yiwa = temple
+#b_hualong = castle
+
+# Misc
+culture = han
+religion = taiping
+
+#History

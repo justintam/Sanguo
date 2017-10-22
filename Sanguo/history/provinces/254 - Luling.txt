@@ -1,0 +1,22 @@
+# c_luling
+
+# County Title
+title = c_luling
+
+# Settlements
+max_settlements = 5
+
+b_luling = castle
+b_mingchu = tribal
+#b_shangcheng = city
+#b_binjiang = castle
+#b_yichun = city
+
+# Misc
+culture = shanyue
+religion = animist
+
+#History
+214.1.1={
+	b_shangcheng = city
+}

@@ -1,0 +1,28 @@
+CB_NAME_RELIGIOUS;Heaven's Mandate for [Title.GetBaseName];;;;;;;;;;;;;x
+WAR_NAME_RELIGIOUS;$ORDER$$FIRST_ADJ$ Heaven's Mandate for $OTHER_TITLE$;;;;;;;;;;;;;x
+CB_NAME_CRUSADE;$HOLY_WAR$ for [Title.GetBaseName];$HOLY_WAR$ pour [Title.GetName];$HOLY_WAR$ um [Title.GetBaseName];;$HOLY_WAR$ por [Title.GetBaseName];;;;;;;;;x
+WAR_NAME_CRUSADE;$ORDER$$RELIGION$ $HOLY_WAR$ for $OTHER_TITLE$;$ORDER$$RELIGION$ $HOLY_WAR$ pour $OTHER_TITLE$;$ORDER$$RELIGION$ $HOLY_WAR$ für $OTHER_TITLE$;;$ORDER$$RELIGION$ $HOLY_WAR$ por $OTHER_TITLE$;;;;;;;;;x
+CB_NAME_SEIZE;Seize [Title.GetBaseName];;;;;;;;;;;;;x
+WAR_NAME_SEIZE;$ORDER$$FIRST_ADJ$ Seizure of $OTHER_TITLE$;;;;;;;;;;;;;x
+seize;Seize;;;;;;;;;;;;;x
+seize_desc;This Casus Belli can be used for an unsanctioned seizure of §Y$TITLE$§! by §Y$CLAIMANT$§!. Doing so may earn the ire of the empire.;;;;;;;;;;;;;x
+seize_big;Seize;;;;;;;;;;;;;x
+seize_big_desc;This Casus Belli can be used to seize §Y$TITLE$§! by force. This action is a grand endeavor and can only be taken once in a long while.;;;;;;;;;;;;;x
+IMPERIAL_DECREE;Imperial Decree;;;;;;;;;;;;;x
+WAY_OF_PEACE;Way of Peace;;;;;;;;;;;;;x
+imperial_reconquest_desc;The lost territory of the Empire must be reclaimed! §Y$CLAIMANT$§! can use this Casus Belli to seize all titles held by §Y$TARGET$§! within the de jure §Y$TITLE$§!.;;;;;;;;;;;;;x
+CB_NAME_COALITION;Coalition against [Title.GetBaseName];;;;;;;;;;;;;x
+WAR_NAME_COALITION;$ORDER$$FIRST_ADJ$ Coalition against $OTHER_TITLE$;;;;;;;;;;;;;x
+coalition;Coalition;;;;;;;;;;;;;x
+coalition_desc;This Casus Belli is only used against dangerous tyrants and villains.;;;;;;;;;;;;;x
+CB_NAME_RESTORATION;Restoration War against [Title.GetBaseName];;;;;;;;;;;;;x
+WAR_NAME_RESTORATION;$ORDER$$FIRST_ADJ$ Restoration War against $OTHER_TITLE$;;;;;;;;;;;;;x
+restoration;Imperial Restoration;;;;;;;;;;;;;x
+restoration_desc;This Casus Belli can be used to restore §Y$CLAIMANT$§! to the head of the §Y$TITLE$§!.;;;;;;;;;;;;;x
+YELLOW_REVOLT;[Root.County.GetAdjective] Yellow Turban Revolt;;;;;;;;;;;;;x
+yellow_revolt_desc;A group of peasants have banded together under the Yellow Turban name and rebelled against the empire.;;;;;;;;;;;;;x
+LIANG_REVOLT;[Root.County.GetAdjective] Liangzei Revolt;;;;;;;;;;;;;x
+liang_revolt_desc;The Qiang and Di tribes have joined together with several treacherous Liang officials to rebel against the empire.;;;;;;;;;;;;;x
+NATIVE_REVOLT;[Root.County.GetAdjective] Barbarian Revolt;;;;;;;;;;;;;x
+native_revolt_desc;Barbarians along the frontier are constantly raiding and threatening the borders of the empire.;;;;;;;;;;;;;x
+muslim_county_conquest_desc;Yellow Turbans can conquer single border counties without specific reasons at the cost of §Y50§! Piety.;;;;;;;;;;;;;x

@@ -1,0 +1,17 @@
+# c_huiwu
+
+# County Title
+title = c_huiwu
+
+# Settlements
+max_settlements = 3
+
+b_huiwu = tribal
+#b_huiwufu = city
+#b_lianghe = temple
+
+# Misc
+culture = nanman
+religion = huojiao
+
+#History

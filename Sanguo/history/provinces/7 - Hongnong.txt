@@ -1,0 +1,25 @@
+# c_hongnong
+
+# County Title
+title = c_hongnong
+
+# Settlements
+max_settlements = 5
+
+b_hongnong = castle
+b_xia = city
+#b_lingbao = temple
+#b_mianchi = castle
+#b_hongding = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History
+189.9.1={
+	b_lingbao = temple
+}
+190.1.1={
+	b_mianchi = castle
+}

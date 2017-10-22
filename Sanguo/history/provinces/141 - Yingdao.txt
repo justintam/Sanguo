@@ -1,0 +1,25 @@
+# c_yingdao
+
+# County Title
+title = c_yingdao
+
+# Settlements
+max_settlements = 5
+
+b_yingdao = castle
+#b_qinmeiki = city
+#b_jiefang = temple
+#b_shuangpai = castle
+#b_youting = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History
+214.1.1={
+	b_qinmeiki = city
+}
+220.1.1={
+	b_jiefang = temple
+}

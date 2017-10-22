@@ -1,0 +1,289 @@
+#######Eunuchs range: 1100 - 1199######
+
+##################################
+########### IMPERIAL #############
+##################################
+
+1100 = {
+	name="Shuo"
+    dynasty=1536
+	diplomacy=8
+    martial=4
+    stewardship=8
+    intrigue=9
+	learning=7
+	religion="confucian"
+	culture="han"
+    trait="elusive_shadow"
+    trait="schemer"
+    trait="cruel"
+    trait="greedy"
+    trait="deceitful"
+    trait="diligent"
+    trait="craven"
+    trait="ambitious"
+    trait="eunuch"
+	160.1.1={
+		birth=yes
+	}
+	189.1.1={
+		death = {
+		   death_reason = death_murder
+		   killer = 100
+		}
+	}
+}
+1101 = {
+	name="Rang"
+    dynasty=1537
+    diplomacy=10
+    martial=6
+    stewardship=8
+    intrigue=10
+	learning=9
+	religion="confucian"
+	culture="han"
+    trait="elusive_shadow"
+    trait="schemer"
+    trait="cruel"
+    trait="greedy"
+    trait="deceitful"
+    trait="diligent"
+    trait="craven"
+    trait="ambitious"
+    trait="eunuch"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=1100
+	}
+	189.9.1={
+		death = {
+		   death_reason = death_murder
+		   killer = 300
+		}
+	}
+}
+1102 = {
+	name="Zhong"
+	dynasty=908
+    diplomacy=6
+    martial=2
+    stewardship=8
+    intrigue=7
+	learning=7
+	religion="confucian"
+	culture="han"
+	father=3373
+    trait="flamboyant_schemer"
+    trait="schemer"
+    trait="greedy"
+    trait="deceitful"
+    trait="ambitious"
+    trait="eunuch"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=1100
+	}
+	189.9.1={
+		death = {
+		   death_reason = death_murder
+		   killer = 300
+		}
+	}
+}
+1103 = {
+	name="Song"
+    dynasty=1538
+    diplomacy=5
+    martial=2
+    stewardship=4
+    intrigue=7
+	learning=7
+	religion="confucian"
+	culture="han"
+    trait="flamboyant_schemer"
+    trait="schemer"
+    trait="greedy"
+    trait="deceitful"
+    trait="ambitious"
+    trait="eunuch"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=1100
+	}
+	189.9.1={
+		death = {
+		   death_reason = death_murder
+		   killer = 300
+		}
+	}
+}
+1104 = {
+	name="Gui"
+    dynasty=1539
+    diplomacy=5
+    martial=7
+    stewardship=2
+    intrigue=5
+	learning=7
+	religion="confucian"
+	culture="han"
+    trait="flamboyant_schemer"
+    trait="schemer"
+    trait="greedy"
+    trait="deceitful"
+    trait="ambitious"
+    trait="eunuch"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=1100
+	}
+	189.9.1={
+		death = {
+		   death_reason = death_murder
+		   killer = 300
+		}
+	}
+}
+1105 = {
+	name="Wang"
+	dynasty=1540
+	religion="confucian"
+	culture="han"
+    trait="eunuch"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=1100
+	}
+	189.9.1={
+		death = {
+		   death_reason = death_murder
+		   killer = 300
+		}
+	}
+}
+1106 = {
+	name="Sheng"
+	dynasty=1541
+	religion="confucian"
+	culture="han"
+    trait="eunuch"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=1100
+	}
+	189.9.1={
+		death=yes
+	}
+}
+1107 = {
+	name="Gong"
+	dynasty=1542
+	religion="confucian"
+	culture="han"
+    trait="eunuch"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=1100
+	}
+	189.9.1={
+		death=yes
+	}
+}
+1108 = {
+	name="Li"
+	dynasty=1543
+	religion="confucian"
+	culture="han"
+    trait="eunuch"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=1100
+	}
+	189.9.1={
+		death=yes
+	}
+}
+1109 = {
+	name="Dian"
+	dynasty=1544
+	religion="confucian"
+	culture="han"
+    trait="eunuch"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=1100
+	}
+	189.9.1={
+		death=yes
+	}
+}
+1110 = {
+	name="Yun"
+	dynasty=1545
+	religion="confucian"
+	culture="han"
+    trait="eunuch"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=1100
+	}
+	189.9.1={
+		death=yes
+	}
+}
+1111 = {
+	name="Zhang"
+	dynasty=1546
+	religion="confucian"
+	culture="han"
+    trait="eunuch"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=1100
+	}
+	189.9.1={
+		death=yes
+	}
+}
+1112 = {
+	name="Lan"
+	dynasty=1547
+	religion="confucian"
+	culture="han"
+    trait="fortune_builder"
+    trait="eunuch"
+	trait="architect"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=1100
+	}
+	189.9.1={
+		death=yes
+	}
+}
+

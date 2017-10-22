@@ -1,0 +1,28 @@
+1.1.1={
+	active=no
+	effect = {
+		set_title_flag = warlord_flag
+	}
+}
+184.1.1={
+	active=yes
+	liege=k_yan
+	holder=400 #Cao Cao
+}
+185.1.1={
+	liege=k_qing
+}
+187.1.1={
+	liege=k_yan
+	holder=400 #Cao Cao
+}
+189.9.1={
+	liege=0
+}
+191.1.1={
+	liege=k_ji
+}
+191.4.1={
+	holder=0 #None
+	active=no
+}

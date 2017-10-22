@@ -1,0 +1,18 @@
+# c_leilou
+
+# County Title
+title = c_leilou
+
+# Settlements
+max_settlements = 4
+
+b_leilou = tribal
+#b_takin = city
+#b_tuson = temple
+#b_chilin = castle
+
+# Misc
+culture = nanyue
+religion = animist
+
+#History

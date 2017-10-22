@@ -1,0 +1,18 @@
+# c_gaoping
+
+# County Title
+title = c_gaoping
+
+# Settlements
+max_settlements = 4
+
+b_gaoping = castle
+b_maoxiang = temple
+#b_haixing = temple
+#b_pangcheng = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

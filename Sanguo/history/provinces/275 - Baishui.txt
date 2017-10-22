@@ -1,0 +1,17 @@
+# c_baishui
+
+# County Title
+title = c_baishui
+
+# Settlements
+max_settlements = 3
+
+b_baishuiguan = castle
+b_yangpingguan = castle
+#b_dinghan = temple
+
+# Misc
+culture = bandunman
+religion = baihu
+
+#History

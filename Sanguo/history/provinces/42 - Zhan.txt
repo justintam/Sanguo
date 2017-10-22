@@ -1,0 +1,22 @@
+# c_zhan
+
+# County Title
+title = c_zhan
+
+# Settlements
+max_settlements = 5
+
+b_zhan = castle
+b_eyuju = city
+#b_kelan = city
+#b_xinbao = castle
+#b_zhancheng = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History
+210.1.1={
+	b_kelan = city
+}

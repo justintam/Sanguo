@@ -1,0 +1,18 @@
+# c_byeonhan
+
+# County Title
+title = c_byeonhan
+
+# Settlements
+max_settlements = 4
+
+b_gaya = tribal
+b_gojamidong = tribal
+b_anya = temple
+#b_yukgaja = castle
+
+# Misc
+culture = samhan
+religion = shamanist
+
+#History

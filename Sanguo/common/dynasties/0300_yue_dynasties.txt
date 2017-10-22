@@ -1,0 +1,278 @@
+300 = {
+	name="Trieu"
+	culture = nanyue
+}
+301 = {
+	name="At"
+	culture = nanyue
+}
+302 = {
+	name="Binh"
+	culture = nanyue
+}
+303 = {
+	name="Can"
+	culture = nanyue
+}
+304 = {
+	name="Canh"
+	culture = nanyue
+}
+305 = {
+	name="Chan"
+	culture = nanyue
+}
+306 = {
+	name="Dinh"
+	culture = nanyue
+}
+307 = {
+	name="Doai"
+	culture = nanyue
+}
+308 = {
+	name="Duong"
+	culture = nanyue
+}
+309 = {
+	name="Giap"
+	culture = nanyue
+}
+310 = {
+	name="Ho"
+	culture = nanyue
+}
+311 = {
+	name="Kham"
+	culture = nanyue
+}
+312 = {
+	name="Khon"
+	culture = nanyue
+}
+313 = {
+	name="Ky"
+	culture = nanyue
+}
+314 = {
+	name="Lac"
+	culture = nanyue
+}
+315 = {
+	name="Le"
+	culture = nanyue
+}
+316 = {
+	name="Ly"
+	culture = nanyue
+}
+317 = {
+	name="Mau"
+	culture = nanyue
+}
+318 = {
+	name="Ngo"
+	culture = nanyue
+}
+319 = {
+	name="Nguyen"
+	culture = nanyue
+}
+320 = {
+	name="Nham"
+	culture = nanyue
+}
+321 = {
+	name="Phuc"
+	culture = nanyue
+}
+322 = {
+	name="Phung"
+	culture = nanyue
+}
+323 = {
+	name="Quy"
+	culture = nanyue
+}
+324 = {
+	name="Tan"
+	culture = nanyue
+}
+325 = {
+	name="Than"
+	culture = nanyue
+}
+326 = {
+	name="Thi"
+	culture = nanyue
+}
+327 = {
+	name="Thuc"
+	culture = nanyue
+}
+328 = {
+	name="Ton"
+	culture = nanyue
+}
+329 = {
+	name="Tran"
+	culture = nanyue
+}
+330 = {
+	name="Trinh"
+	culture = nanyue
+}
+331 = {
+	name="Trung"
+	culture = nanyue
+}
+332 = {
+	name="Chu"
+	culture = nanyue
+}
+333 = {
+	name="Luong"
+	culture = nanyue
+}
+334 = {
+	name="Khu"
+	culture = nanyue
+}
+335 = {
+	name="Truong"
+	culture = nanyue
+}
+336 = {
+	name="Pham"
+	culture = nanyue
+}
+337 = {
+	name="Tinh"
+	culture = nanyue
+}
+338 = {
+	name="Khuc"
+	culture = nanyue
+}
+339 = {
+	name="Mai"
+	culture = nanyue
+}
+340 = {
+	name="My"
+	culture = nanyue
+}
+341 = {
+	name="Bo"
+	culture = nanyue
+}
+342 = {
+	name="Ou"
+	culture = nanyue
+}
+343 = {
+	name="Vuong"
+	culture = nanyue
+}
+344 = {
+	name="Vu"
+	culture = nanyue
+}
+345 = {
+	name="Bui"
+	culture = nanyue
+}
+346 = {
+	name="Huynh"
+	culture = nanyue
+}
+347 = {
+	name="Phan"
+	culture = nanyue
+}
+348 = {
+	name="Dang"
+	culture = nanyue
+}
+349 = {
+	name="Do"
+	culture = nanyue
+}
+
+##### Shanyue #####
+
+350 = {
+	name="Fei"
+	culture = shanyue
+}
+351 = {
+	name="Huang"
+	culture = shanyue
+}
+352 = {
+	name="Pan"
+	culture = shanyue
+}
+353 = {
+	name="Shang"
+	culture = shanyue
+}
+354 = {
+	name="Yan"
+	culture = shanyue
+}
+355 = {
+	name="Zhou"
+	culture = shanyue
+}
+356 = {
+	name="Zu"
+	culture = shanyue
+}
+357 = {
+	name="Chen"
+	culture = shanyue
+}
+358 = {
+	name="Fei"
+	culture = shanyue
+}
+359 = {
+	name="Chen"
+	culture = shanyue
+}
+360 = {
+	name="Yang"
+	culture = shanyue
+}
+
+##### Minyue #####
+
+380 = {
+	name="Zou"
+	culture = minyue
+}
+381 = {
+	name="Fan"
+	culture = minyue
+}
+382 = {
+	name="Ou"
+	culture = minyue
+}
+383 = {
+	name="Ouyang"
+	culture = minyue
+}
+384 = {
+	name="Wen"
+	culture = minyue
+}
+385 = {
+	name="Xi"
+	culture = minyue
+}
+386 = {
+	name="Yang"
+	culture = minyue
+}

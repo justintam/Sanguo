@@ -1,0 +1,20 @@
+# c_lelang
+
+# County Title
+title = c_lelang
+
+# Settlements
+max_settlements = 6
+
+b_pyongyang = castle
+#b_gangdong = city
+#b_taedong = temple
+#b_chungsan = castle
+#b_kangso = city
+#b_nampo = temple
+
+# Misc
+culture = han
+religion = confucian
+
+#History

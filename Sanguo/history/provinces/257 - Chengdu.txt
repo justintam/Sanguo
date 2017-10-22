@@ -1,0 +1,24 @@
+# c_chengdu
+
+# County Title
+title = c_chengdu
+
+# Settlements
+max_settlements = 7
+
+b_chengdu = castle
+b_baidicheng = temple
+b_yongangong = temple
+b_chengding = city
+b_youming = city
+#b_yihuai = temple
+#b_nantong = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History
+214.1.1={
+	remove_settlement = b_youming
+}

@@ -1,0 +1,48 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=k_xu
+}
+41.1.1={
+	holder=3385 #Liu Jing
+}
+81.1.1={
+	holder=3386 #Liu Yu
+}
+103.1.1={
+	holder=3387 #Liu Shou
+}
+120.1.1={
+	holder=3388 #Liu Zun
+}
+138.1.1={
+	holder=3389 #Liu Ju
+}
+185.1.1={
+	holder=3390 #Liu Rong
+}
+193.1.1={
+	vice_royalty=yes
+	holder=3867 #Xiao Jian
+}
+197.2.1={
+	holder=4161 #Random
+}
+199.2.7={
+	holder=2638 #Zang Ba
+}
+206.1.1={
+	vice_royalty=no
+	holder=3392 #Liu Xi
+}
+216.6.1={
+	vice_royalty=yes
+	holder=4161 #Random
+}
+
+
+
+#Incomplete

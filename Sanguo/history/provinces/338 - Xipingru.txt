@@ -1,0 +1,19 @@
+# c_xipingru
+
+# County Title
+title = c_xipingru
+
+# Settlements
+max_settlements = 5
+
+b_xipingru = castle
+b_baiting = city
+b_tangxiting = city
+#b_zhigui = castle
+#b_jucheng = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

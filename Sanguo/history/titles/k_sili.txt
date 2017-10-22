@@ -1,0 +1,35 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_primogeniture
+}
+1.1.1={
+	liege=e_china
+	vice_royalty = yes
+}
+184.1.1={
+	holder=100 #He Jin
+}
+189.8.22={
+	holder=300 #Dong Zhuo
+}
+192.5.22={
+	holder=309 #Lv Bu
+}
+192.7.1={
+	holder=308 #Guo Si
+}
+195.4.1={
+	liege=0
+}
+196.1.1={
+	holder=307 #Li Jue
+}
+198.6.1={
+	liege=e_china
+	holder=10496 #Zhong Yao
+}
+213.6.1={
+	active=no
+	holder=0 #None
+}

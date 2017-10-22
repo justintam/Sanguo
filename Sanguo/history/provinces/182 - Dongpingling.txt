@@ -1,0 +1,19 @@
+# c_dongpingling
+
+# County Title
+title = c_dongpingling
+
+# Settlements
+max_settlements = 5
+
+b_dongpingling = castle
+b_julicheng = city
+b_tancheng = city
+#b_tanji = castle
+#b_tanzhou = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

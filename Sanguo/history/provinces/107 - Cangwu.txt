@@ -1,0 +1,30 @@
+# c_cangwu
+
+# County Title
+title = c_cangwu
+
+# Settlements
+max_settlements = 7
+
+b_guangxin = castle
+b_muandu = city
+#b_jingnan = city
+#b_liubao = castle
+#b_lianjiang = city
+#b_foshan = temple
+#b_zhaoqing = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History
+194.1.1={
+	b_jingnan = city
+}
+200.1.1={
+	b_liubao = castle
+}
+208.1.1={
+	b_lianjiang = city
+}

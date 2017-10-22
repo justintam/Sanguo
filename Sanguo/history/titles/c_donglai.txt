@@ -1,0 +1,41 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_donglai
+}
+45.1.1={
+	holder=3744 #Gao Shen
+}
+100.1.1={
+	holder=1283 #Yang Zhen
+}
+110.1.1={
+	holder=4295 #Qiao Su
+}
+150.1.1={
+	holder=0 #None
+}
+184.1.1={
+	holder=153 #Jiao He
+}
+187.1.1={
+	holder=117 #Xu Qiu 
+}
+196.1.1={
+	holder=754 #Guan Tong
+}
+203.1.1={
+	holder=2658 #Li Tiao
+}
+206.2.1={
+	holder=1295 #Yang Zhong
+}
+210.1.1={
+	holder=2640 #Sun Guan
+}
+217.3.1={
+	holder=2683 #Sun Yu
+}

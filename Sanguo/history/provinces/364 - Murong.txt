@@ -1,0 +1,18 @@
+# c_murong
+
+# County Title
+title = c_murong
+
+# Settlements
+max_settlements = 4
+
+b_murong = tribal
+b_xianbeijiao = temple
+#b_injia = temple
+#b_youyi = castle
+
+# Misc
+culture = xianbei
+religion = tengri_pagan
+
+#History

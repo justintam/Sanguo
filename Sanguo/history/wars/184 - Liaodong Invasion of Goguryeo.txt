@@ -1,0 +1,21 @@
+name = "Liaodong Invasion of Goguryeo"
+
+casus_belli={
+	actor=176
+	recipient=2215
+	casus_belli=tributary_cb
+	date=184.2.1
+}
+
+184.2.1 = {
+	add_defender = 2215 #Gogukcheon
+	add_attacker = 176 #Yang Zhong
+	add_attacker = 184 #Zhang Qi
+	add_attacker = 185 #Geng Lin
+}
+184.6.1={
+	rem_defender = 2215 #Gogukcheon
+	rem_attacker = 185 #Geng Lin
+	rem_attacker = 184 #Zhang Qi
+	rem_attacker = 176 #Yang Zhong
+}

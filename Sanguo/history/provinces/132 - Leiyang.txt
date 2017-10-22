@@ -1,0 +1,21 @@
+# c_leiyang
+
+# County Title
+title = c_leiyang
+
+# Settlements
+max_settlements = 4
+
+b_leiyang = castle
+#b_fumenchi = city
+#b_biyanzi = city
+#b_yunyan = castle
+
+# Misc
+culture = minyue
+religion = animist
+
+#History
+200.1.1={
+	b_fumenchi = city
+}

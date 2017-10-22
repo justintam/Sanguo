@@ -1,0 +1,19 @@
+# c_changsha
+
+# County Title
+title = c_changsha
+
+# Settlements
+max_settlements = 5
+
+b_linxiang = castle
+b_ancheng = city
+b_buchang = city
+#b_funou = castle
+#b_ansha = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

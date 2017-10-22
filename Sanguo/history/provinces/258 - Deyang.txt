@@ -1,0 +1,19 @@
+# c_deyang
+
+# County Title
+title = c_deyang
+
+# Settlements
+max_settlements = 5
+
+b_deyang = castle
+b_recheng = city
+#b_mulan = temple
+#b_tianhui = castle
+#b_majia = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

@@ -1,0 +1,11 @@
+# k_man
+1.1.1={
+	active = no
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+222.1.1={
+	active=yes
+	liege=0 #Independent
+	holder=1801 #Meng Huo
+}

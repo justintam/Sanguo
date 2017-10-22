@@ -1,0 +1,18 @@
+# c_sanfeng
+
+# County Title
+title = c_sanfeng
+
+# Settlements
+max_settlements = 4
+
+b_sanfeng = tribal
+#b_litan = city
+#b_lanfeng = temple
+#b_dingfeng = castle
+
+# Misc
+culture = xiongnu
+religion = tengri_pagan
+
+#History

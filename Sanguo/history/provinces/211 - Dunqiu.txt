@@ -1,0 +1,19 @@
+# c_dunqiu
+
+# County Title
+title = c_dunqiu
+
+# Settlements
+max_settlements = 5
+
+b_dunqiu = castle
+b_gancheng = city
+#b_zhanmei = temple
+#b_yianhuo = castle
+#b_jingqiu = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

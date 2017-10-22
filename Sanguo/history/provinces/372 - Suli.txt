@@ -1,0 +1,17 @@
+# c_suli
+
+# County Title
+title = c_suli
+
+# Settlements
+max_settlements = 3
+
+b_suli = tribal
+#b_sulan = city
+#b_wudi = temple
+
+# Misc
+culture = xianbei
+religion = tengri_pagan
+
+#History

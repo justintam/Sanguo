@@ -1,0 +1,18 @@
+# c_xiami
+
+# County Title
+title = c_xiami
+
+# Settlements
+max_settlements = 4
+
+b_xiami = castle
+b_mixiang = city
+#b_wenqi = temple
+#b_ahqing = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

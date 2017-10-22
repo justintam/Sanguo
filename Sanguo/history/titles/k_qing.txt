@@ -1,0 +1,62 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=e_china
+	vice_royalty = yes
+}
+120.1.1={
+	holder=1365 #Tan Yisun
+}
+135.1.1={
+	holder=1287 #Yang Bing
+}
+140.1.1={
+	holder=0 #None
+}
+180.1.1={
+	holder=1278 #Zhao Yan
+}
+187.1.1={
+	holder=153 #Jiao He
+}
+190.1.1={
+	liege=0
+	holder=3742 #Zang Hong
+}
+#Tian Kai, Yuan Tan, Kong Rong, Sun Song
+192.1.1={
+	liege=e_gongsun
+	holder=910 #Tian Kai
+}
+192.5.1={
+	liege=e_yuan
+	holder=709 #Yuan Tan
+}
+#Li Zheng - Claim
+195.1.1={
+	liege=0 #Independent
+	holder=121 #Kong Rong
+}
+196.1.1={
+	liege=e_yuan
+	holder=709 #Yuan Tan
+}
+205.2.1={
+	liege=e_china
+	holder=2640 #Sun Guan
+}
+#208 - Liu Zong
+217.3.1={
+	holder=2683 #Sun Yu
+}
+220.12.10={
+	liege=e_wei
+}
+#Chen Zhong
+
+
+
+#Incomplete

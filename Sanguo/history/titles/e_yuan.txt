@@ -1,0 +1,20 @@
+1.1.1={
+	active=no
+	effect = {
+		set_title_flag = warlord_flag
+	}
+}
+191.1.1={
+	active=yes
+	holder=705 #Yuan Shu
+}
+192.5.1={
+	holder=700 #Yuan Shao
+}
+202.6.28={
+	holder=707 #Yuan Shang
+}
+204.9.13={
+	holder=0
+	active=no
+}

@@ -1,0 +1,20 @@
+# c_yangyi
+
+# County Title
+title = c_yangyi
+
+# Settlements
+max_settlements = 6
+
+b_yangyi = castle
+b_jichengtai = city
+b_yuyi = city
+#b_loufan = castle
+#b_qingxu = city
+#b_miantai = temple
+
+# Misc
+culture = han
+religion = confucian
+
+#History

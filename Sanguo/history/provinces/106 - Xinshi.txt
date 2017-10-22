@@ -1,0 +1,18 @@
+# c_xinshi
+
+# County Title
+title = c_xinshi
+
+# Settlements
+max_settlements = 4
+
+b_xinshi = castle
+b_xianyuting = city
+#b_pindo = temple
+#b_huling = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

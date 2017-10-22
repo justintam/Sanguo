@@ -1,0 +1,79 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=k_sili
+	vice_royalty = yes
+}
+140.1.1={
+	holder=4404 #Zhao Jie
+}
+149.1.1={
+	holder=0 #None
+}
+160.1.1={
+	holder=1287 #Yang Bing
+}
+168.1.1={
+	holder=4297 #Qiao Xuan
+}
+169.1.1={
+	holder=0 #None
+}
+178.1.1={
+	holder=4297 #Qiao Xuan
+}
+179.1.1={
+	holder=0 #None
+}
+182.1.1={
+	holder=1297 #Yang Ci
+}
+184.1.1={
+	holder=100 #He Jin
+}
+185.1.1={
+	holder=4440 #Li Xie
+}
+187.1.1={
+	holder=1200 #He Miao
+}
+188.1.1={
+	holder=106 #Zhu Jun
+}
+#Wu Fu
+#Wang Yun when Ling died
+#190 - yang yuan - Claim
+#191 - Yang Yi - Claim
+192.5.22={
+	liege=0
+	holder=20455 #Luo Ye
+}
+193.1.1={
+	liege=k_yan
+}
+194.1.1={
+	liege=k_cao #Lost Yan
+}
+196.1.1={
+	liege=k_yan
+	holder=10491 #Dong Zhao
+}
+199.1.1={
+	liege=k_sili
+}
+200.3.1={
+	holder=4187 #Random
+}
+204.9.13={
+	holder=405 #Xiahou Dun
+}
+#207 Sun Li - Rongyang
+213.6.1={
+	liege=k_yu
+}
+220.3.15={
+	holder=5017 #Sima Zhi
+}

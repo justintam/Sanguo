@@ -1,0 +1,32 @@
+#############################################
+# CHARACTER NICKNAMES
+# Independent dukes, kings and emperors only
+#
+# 'factor' is the percentage per year of 
+# gaining the nickname
+#
+#############################################
+
+# TRIGGERED ONLY
+################
+
+# nick_dyn = {}
+
+# GIVEN BY TRAITS
+#################
+
+nick_dyn = {
+	allow = {
+		is_ruler = yes
+		NOT = { dynasty = none }
+		OR = {
+			culture_group = chinese
+			culture_group = korean
+			culture_group = man
+			culture_group = yue
+		}
+	}
+	chance = {
+		factor = 100
+	}
+}

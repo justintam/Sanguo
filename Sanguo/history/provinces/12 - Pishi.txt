@@ -1,0 +1,19 @@
+# c_pishi
+
+# County Title
+title = c_pishi
+
+# Settlements
+max_settlements = 5
+
+b_pishi = castle
+b_gengxiang = city
+#b_qingjian = city
+#b_chengqu = city
+#b_pishiti = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

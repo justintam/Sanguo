@@ -1,0 +1,18 @@
+# c_jinan
+
+# County Title
+title = c_jinan
+
+# Settlements
+max_settlements = 4
+
+b_jinan = castle
+b_tudou = city
+#b_biaowu = temple
+#b_xingbu = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

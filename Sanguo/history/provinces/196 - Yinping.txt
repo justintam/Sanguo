@@ -1,0 +1,18 @@
+# c_yinping
+
+# County Title
+title = c_yinping
+
+# Settlements
+max_settlements = 4
+
+b_yinping = castle
+b_jianyang = city
+#b_danzhi = temple
+#b_youli = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

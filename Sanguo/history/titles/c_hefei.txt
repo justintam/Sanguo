@@ -1,0 +1,33 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_lujiang
+}
+184.1.1={
+	holder=3752 #Zhou Gan
+}
+190.1.1={
+	holder=3399 #Chen Wen
+}
+193.1.1={
+	holder=167 #Chen Yu
+}
+196.1.1={
+	holder=705 # Yuan Shu
+}
+199.6.1={
+	liege=k_yang
+	holder=20461 #Yan Xiang
+}
+200.1.1={
+	holder=20462 #Liu Fu
+}
+208.5.1={ #Zhang Liao, Yue Jin, Li Dian
+	holder=20425 #Zhang Liao
+}
+211.1.1={
+	holder=20453 #Wen Hui
+}

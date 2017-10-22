@@ -1,0 +1,22 @@
+# c_jiyu
+
+# County Title
+title = c_jiyu
+
+# Settlements
+max_settlements = 5
+
+b_jiyu = castle
+b_dajixiang = city
+#b_fuyu = city
+#b_mianpo = castle
+#b_ouwang = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History
+204.1.1={
+	b_fuyu = city
+}

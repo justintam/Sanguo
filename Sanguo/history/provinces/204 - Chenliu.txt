@@ -1,0 +1,20 @@
+# c_chenliu
+
+# County Title
+title = c_chenliu
+
+# Settlements
+max_settlements = 6
+
+b_chenliu = castle
+b_fengqiu = city
+b_huangchiting = city
+b_cangting = city
+b_xiancheng = city
+#b_liaowu = temple
+
+# Misc
+culture = han
+religion = confucian
+
+#History

@@ -1,0 +1,21 @@
+name = "1st Northern Unification"
+
+casus_belli={
+	actor=900
+	recipient=700
+	casus_belli=seize_big
+	landed_title=k_ji
+	date=191.7.1
+}
+
+191.7.1={
+	add_defender = 700 #Yuan Shao
+	add_attacker = 900 #Gongsun Zan
+	add_attacker = 902 #Gongsun Fan
+}
+
+192.1.1={
+	rem_defender = 700 #Yuan Shao
+	rem_attacker = 902 #Gongsun Fan
+	rem_attacker = 900 #Gongsun Zan
+}

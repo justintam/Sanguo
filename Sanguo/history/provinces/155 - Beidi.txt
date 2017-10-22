@@ -1,0 +1,18 @@
+# c_beidi
+
+# County Title
+title = c_beidi
+
+# Settlements
+max_settlements = 4
+
+b_beidi = castle
+b_xiheng = tribal
+#b_xinjixiang = temple
+#b_gejiacha = castle
+
+# Misc
+culture = di
+religion = baima
+
+#History

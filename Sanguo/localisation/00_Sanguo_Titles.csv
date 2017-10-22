@@ -1,0 +1,578 @@
+#Empire
+e_china;Han Dynasty;;;;;;;;;;;;;x
+e_china_adj;Han Imperial;;;;;;;;;;;;;x
+e_korea;Korean Dynasty;Korea;Korea;;Korea;;;;;;;;;x
+e_korea_adj;Korean Imperial;;;;;;;;;;;;;x
+e_northern;Northern Empire;Northern;Northern;;Northern;;;;;;;;;x
+e_northern_adj;Northern Imperial;;;;;;;;;;;;;x
+#
+#
+e_chu;Chu Dynasty;;;;;;;;;;;;;x
+e_chu_adj;Chu Imperial;;;;;;;;;;;;;x
+e_chen;Chen Dynasty;;;;;;;;;;;;;x
+e_chen_adj;Chen Imperial;;;;;;;;;;;;;x
+e_dai;Dai Dynasty;;;;;;;;;;;;;x
+e_dai_adj;Dai Imperial;;;;;;;;;;;;;x
+e_han;Han Dynasty;;;;;;;;;;;;;x
+e_han_adj;Han Imperial;;;;;;;;;;;;;x
+e_jin;Jin Dynasty;;;;;;;;;;;;;x
+e_jin_adj;Jin Imperial;;;;;;;;;;;;;x
+e_liang;Liang Dynasty;;;;;;;;;;;;;x
+e_liang_adj;Liang Imperial;;;;;;;;;;;;;x
+e_liao;Liao Dynasty;;;;;;;;;;;;;x
+e_liao_adj;Liao Imperial;;;;;;;;;;;;;x
+e_min;Min Dynasty;;;;;;;;;;;;;x
+e_min_adj;Min Imperial;;;;;;;;;;;;;x
+e_qi;Qi Dynasty;;;;;;;;;;;;;x
+e_qi_adj;Qi Imperial;;;;;;;;;;;;;x
+e_qin;Qin Dynasty;;;;;;;;;;;;;x
+e_qin_adj;Qin Imperial;;;;;;;;;;;;;x
+e_qing;Qing Dynasty;;;;;;;;;;;;;x
+e_qing_adj;Qing Imperial;;;;;;;;;;;;;x
+e_shu;Shu Dynasty;;;;;;;;;;;;;x
+e_shu_adj;Shu Imperial;;;;;;;;;;;;;x
+e_song;Song Dynasty;;;;;;;;;;;;;x
+e_song_adj;Song Imperial;;;;;;;;;;;;;x
+e_sui;Sui Dynasty;;;;;;;;;;;;;x
+e_sui_adj;Sui Imperial;;;;;;;;;;;;;x
+e_tan;Tan Dynasty;;;;;;;;;;;;;x
+e_tan_adj;Tan Imperial;;;;;;;;;;;;;x
+e_tang;Tang Dynasty;;;;;;;;;;;;;x
+e_tang_adj;Tang Imperial;;;;;;;;;;;;;x
+e_wei;Wei Dynasty;;;;;;;;;;;;;x
+e_wei_adj;Wei Imperial;;;;;;;;;;;;;x
+e_wu;Wu Dynasty;;;;;;;;;;;;;x
+e_wu_adj;Wu Imperial;;;;;;;;;;;;;x
+e_wuyue;Wuyue Dynasty;;;;;;;;;;;;;x
+e_wuyue_adj;Wuyue Imperial;;;;;;;;;;;;;x
+e_xia;Xia Dynasty;;;;;;;;;;;;;x
+e_xia_adj;Xia Imperial;;;;;;;;;;;;;x
+e_yan;Yan Dynasty;;;;;;;;;;;;;x
+e_yan_adj;Yan Imperial;;;;;;;;;;;;;x
+e_zhao;Zhao Dynasty;;;;;;;;;;;;;x
+e_zhao_adj;Zhao Imperial;;;;;;;;;;;;;x
+e_zhong;Zhong Dynasty;;;;;;;;;;;;;x
+e_zhong_adj;Zhong Imperial;;;;;;;;;;;;;x
+e_zhou;Zhou Dynasty;;;;;;;;;;;;;x
+e_zhou_adj;Zhou Imperial;;;;;;;;;;;;;x
+#
+#
+#King
+k_confucian;Heaven's Mandate;;;;;;;;;;;;;x
+k_confucian_adj;Chinese Imperial;;;;;;;;;;;;;x
+k_five;Way of the Five Pecks of Rice;;;;;;;;;;;;;x
+k_five_adj;Way of the Five Pecks of Rice Followers;;;;;;;;;;;;;x
+k_hanzhong;Hanzhong;;;;;;;;;;;;;x
+k_hanzhong_adj;Hanzhong Kingdom;;;;;;;;;;;;;x
+k_liangzei;Liang Rebellion;;;;;;;;;;;;;x
+k_liangzei_adj;Liang Provincial Rebels;;;;;;;;;;;;;x
+k_man;Nanman;;;;;;;;;;;;;x
+k_man_adj;Nanman Confederacy;;;;;;;;;;;;;x
+k_northern;Northern Steppes;Northern;Northern;;Northern;;;;;;;;;x
+k_northern_adj;Northern Confederacy;;;;;;;;;;;;;x
+k_wu;Wu;;;;;;;;;;;;;x
+k_wu_adj;Wu Kingdom;;;;;;;;;;;;;x
+k_xiliang;Xiliang;;;;;;;;;;;;;x
+k_xiliang_adj;Xiliang Regional;;;;;;;;;;;;;x
+k_yellow;Way of Peace;;;;;;;;;;;;;x
+k_yellow_adj;Yellow Turban Rebels;;;;;;;;;;;;;x
+k_yong;Yong;;;;;;;;;;;;;x
+k_yong_adj;Yong Provincial;;;;;;;;;;;;;x
+k_yue;Yue;;;;;;;;;;;;;x
+k_yue_adj;Yue Rebels;;;;;;;;;;;;;x
+#
+#
+k_baekje;Baekje;Baekje;Baekje;;Baekje;;;;;;;;;x
+k_baekje_adj;Baekje Kingdom;;;;;;;;;;;;;x
+k_bing;Bing;Bing;Bing;;Bing;;;;;;;;;x
+k_bing_adj;Bing Provincial;;;;;;;;;;;;;x
+k_buyeo;Buyeo;Buyeo;Buyeo;;Buyeo;;;;;;;;;x
+k_buyeo_adj;Buyeo Kingdom;;;;;;;;;;;;;x
+k_gaya;Gaya;Gaya;Gaya;;Gaya;;;;;;;;;x
+k_gaya_adj;Gaya Kingdom;;;;;;;;;;;;;x
+k_goguryeo;Goguryeo;Goguryeo;Goguryeo;;Goguryeo;;;;;;;;;x
+k_goguryeo_adj;Goguryeo Kingdom;;;;;;;;;;;;;x
+k_ji;Ji;Ji;Ji;;Ji;;;;;;;;;x
+k_ji_adj;Ji Provincial;;;;;;;;;;;;;x
+k_jiaozhi;Jiaozhi;Jiaozhi;Jiaozhi;;Jiaozhi;;;;;;;;;x
+k_jiaozhi_adj;Jiaozhi Provincial;;;;;;;;;;;;;x
+k_jing;Jing;Jing;Jing;;Jing;;;;;;;;;x
+k_jing_adj;Jing Provincial;;;;;;;;;;;;;x
+k_kushan;Kushan Empire;;;;;;;;;;;;;x
+k_kushan_adj;Kushan Imperial;;;;;;;;;;;;;x
+k_liang;Liang;Liang;Liang;;Liang;;;;;;;;;x
+k_liang_adj;Liang Provincial;;;;;;;;;;;;;x
+k_okjeo;Okjeo;Okjeo;Okjeo;;Okjeo;;;;;;;;;x
+k_okjeo_adj;Okjeo Kingdom;;;;;;;;;;;;;x
+k_qiang;Qiang;Qiang;Qiang;;Qiang;;;;;;;;;x
+k_qiang_adj;Qiang Confederacy;;;;;;;;;;;;;x
+k_qing;Qing;Qing;Qing;;Qing;;;;;;;;;x
+k_qing_adj;Qing Provincial;;;;;;;;;;;;;x
+k_sili;Sili;Sili;Sili;;Sili;;;;;;;;;x
+k_sili_adj;Sili Provincial;;;;;;;;;;;;;x
+k_silla;Silla;Silla;Silla;;Silla;;;;;;;;;x
+k_silla_adj;Silla Kingdom;;;;;;;;;;;;;x
+k_wuhuan;Wuhuan;;;;;;;;;;;;;x
+k_wuhuan_adj;Wuhuan Confederacy;;;;;;;;;;;;;x
+k_xianbei;Xianbei;Xianbei;Xianbei;;Xianbei;;;;;;;;;x
+k_xianbei_adj;Xianbei Nomadic;;;;;;;;;;;;;x
+k_xiongnu;Xiongnu;;;;;;;;;;;;;x
+k_xiongnu_adj;Xiongnu Confederacy;;;;;;;;;;;;;x
+k_xu;Xu;Xu;Xu;;Xu;;;;;;;;;x
+k_xu_adj;Xu Provincial;;;;;;;;;;;;;x
+k_yan;Yan;Yan;Yan;;Yan;;;;;;;;;x
+k_yan_adj;Yan Provincial;;;;;;;;;;;;;x
+k_yang;Yang;Yang;Yang;;Yang;;;;;;;;;x
+k_yang_adj;Yang Provincial;;;;;;;;;;;;;x
+k_yi;Yi;Yi;Yi;;Yi;;;;;;;;;x
+k_yi_adj;Yi Provincial;;;;;;;;;;;;;x
+k_you;You;You;You;;You;;;;;;;;;x
+k_you_adj;You Provincial;;;;;;;;;;;;;x
+k_yu;Yu;Yu;Yu;;Yu;;;;;;;;;x
+k_yu_adj;Yu Provincial;;;;;;;;;;;;;x
+#
+#
+#Duchy
+d_dongan;Dongan;;;;;;;;;;;;;x
+d_dongan_adj;Dongan Commandery;;;;;;;;;;;;;x
+d_hanchang;Hanchang;;;;;;;;;;;;;x
+d_hanchang_adj;Hanchang Commandery;;;;;;;;;;;;;x
+d_hanxing;Hanxing;;;;;;;;;;;;;x
+d_hanxing_adj;Hanxing Commandery;;;;;;;;;;;;;x
+d_luling;Luling;;;;;;;;;;;;;x
+d_luling_adj;Luling Commandery;;;;;;;;;;;;;x
+d_poyang;Poyang;;;;;;;;;;;;;x
+d_poyang_adj;Poyang Commandery;;;;;;;;;;;;;x
+d_xiling;Xiling;;;;;;;;;;;;;x
+d_xiling_adj;Xiling Commandery;;;;;;;;;;;;;x
+d_xinxing;Xinxing;;;;;;;;;;;;;x
+d_xinxing_adj;Xinxing Commandery;;;;;;;;;;;;;x
+d_xiping;Xiping;;;;;;;;;;;;;x
+d_xiping_adj;Xiping Commandery;;;;;;;;;;;;;x
+d_zhangling;Zhangling;;;;;;;;;;;;;x
+d_zhangling_adj;Zhangling Commandery;;;;;;;;;;;;;x
+d_zuoneishi;Zuoneishi;;;;;;;;;;;;;x
+d_zuoneishi_adj;Zuoneishi Commandery;;;;;;;;;;;;;x
+d_black;Black Mountain Bandits;;;;;;;;;;;;;x
+d_black_adj;Black Mountain Bandits;;;;;;;;;;;;;x
+d_nanman;Nanman Tribe;;;;;;;;;;;;;x
+d_nanman_adj;Nanman Tribal;;;;;;;;;;;;;x
+d_white;White Wave Bandits;;;;;;;;;;;;;x
+d_white_adj;White Wave Bandits;;;;;;;;;;;;;x
+d_tai;Taishan Bandits;;;;;;;;;;;;;x
+d_tai_adj;Taishan Bandits;;;;;;;;;;;;;x
+d_wuhuan;Wuhuan Confederacy;Wuhuan;Wuhuan;;Wuhuan;;;;;;;;;x
+d_wuhuan_adj;Wuhuan Tribal;;;;;;;;;;;;;x
+d_xianbei;Xianbei Confederacy;Xianbei;Xianbei;;Xianbei;;;;;;;;;x
+d_xianbei_adj;Xianbei Tribal;;;;;;;;;;;;;x
+d_xiongnu;Xiongnu Confederacy;Xiongnu;Xiongnu;;Xiongnu;;;;;;;;;x
+d_xiongnu_adj;Xiongnu Tribal;;;;;;;;;;;;;x
+d_nanyue;Nanyue Tribe;;;;;;;;;;;;;x
+d_nanyue_adj;Nanyue Tribal;;;;;;;;;;;;;x
+d_nanhuang;Southern Yellow Turbans;;;;;;;;;;;;;x
+d_nanhuang_adj;Southern Yellow Turbans;;;;;;;;;;;;;x
+d_zhonghuang;Central Yellow Turbans;;;;;;;;;;;;;x
+d_zhonghuang_adj;Central Yellow Turbans;;;;;;;;;;;;;x
+d_beihuang;Northern Yellow Turbans;;;;;;;;;;;;;x
+d_beihuang_adj;Northern Yellow Turbans;;;;;;;;;;;;;x
+d_donghuang;Eastern Yellow Turbans;;;;;;;;;;;;;x
+d_donghuang_adj;Eastern Yellow Turbans;;;;;;;;;;;;;x
+d_xihuang;Western Yellow Turbans;;;;;;;;;;;;;x
+d_xihuang_adj;Western Yellow Turbans;;;;;;;;;;;;;x
+#
+#
+d_anding;Anding;Anding;Anding;;Anding;;;;;;;;;x
+d_anding_adj;Andingian;;andinger;;;;;;;;;;;x
+d_anping;Anping;Anping;Anping;;Anping;;;;;;;;;x
+d_anping_adj;Anpingian;;anpinger;;;;;;;;;;;x
+d_ba;Ba;Ba;Ba;;Ba;;;;;;;;;x
+d_ba_adj;Ban;;ber;;;;;;;;;;;x
+d_baekje;Baekje;Baekje;Baekje;;Baekje;;;;;;;;;x
+d_baekje_adj;Baekjean;;baekjer;;;;;;;;;;;x
+d_beidi;Beidi;Beidi;Beidi;;Beidi;;;;;;;;;x
+d_beidi_adj;Beidian;;beider;;;;;;;;;;;x
+d_beihai;Beihai;Beihai;Beihai;;Beihai;;;;;;;;;x
+d_beihai_adj;Beihian;;beiher;;;;;;;;;;;x
+d_bohai;Bohai;Bohai;Bohai;;Bohai;;;;;;;;;x
+d_bohai_adj;Bohian;;boher;;;;;;;;;;;x
+d_bukokjeo;Bukokjeo;Bukokjeo;Bukokjeo;;Bukokjeo;;;;;;;;;x
+d_bukokjeo_adj;Bukokjian;;bukokjer;;;;;;;;;;;x
+d_buyeo;Buyeo;Buyeo;Buyeo;;Buyeo;;;;;;;;;x
+d_buyeo_adj;Buian;;buer;;;;;;;;;;;x
+d_byeonhan;Byeonhan;Byeonhan;Byeonhan;;Byeonhan;;;;;;;;;x
+d_byeonhan_adj;Byeonhanian;;byeonhaner;;;;;;;;;;;x
+d_cangwu;Cangwu;Cangwu;Cangwu;;Cangwu;;;;;;;;;x
+d_cangwu_adj;Cangwian;;cangwer;;;;;;;;;;;x
+d_changsha;Changsha;Changsha;Changsha;;Changsha;;;;;;;;;x
+d_changsha_adj;Changshan;;changsher;;;;;;;;;;;x
+d_changshan;Changshan;Changshan;Changshan;;Changshan;;;;;;;;;x
+d_changshan_adj;Changshanian;;changshaner;;;;;;;;;;;x
+d_chen;Chen;Chen;Chen;;Chen;;;;;;;;;x
+d_chen_adj;Chenian;;chener;;;;;;;;;;;x
+d_chenliu;Chenliu;Chenliu;Chenliu;;Chenliu;;;;;;;;;x
+d_chenliu_adj;Chenlian;;chenler;;;;;;;;;;;x
+d_dai;Dai;Dai;Dai;;Dai;;;;;;;;;x
+d_dai_adj;Dian;;der;;;;;;;;;;;x
+d_daifang;Daifang;Daifang;Daifang;;Daifang;;;;;;;;;x
+d_daifang_adj;Daifangian;;daifanger;;;;;;;;;;;x
+d_danyang;Danyang;Danyang;Danyang;;Danyang;;;;;;;;;x
+d_danyang_adj;Danyangian;;danyanger;;;;;;;;;;;x
+d_dingxiang;Dingxiang;Dingxiang;Dingxiang;;Dingxiang;;;;;;;;;x
+d_dingxiang_adj;Dingxiangian;;dingxianger;;;;;;;;;;;x
+d_dong;Dong;Dong;Dong;;Dong;;;;;;;;;x
+d_dong_adj;Dongian;;donger;;;;;;;;;;;x
+d_dongbei;Dongbei;Dongbei;Dongbei;;Dongbei;;;;;;;;;x
+d_dongbei_adj;Dongbian;;dongber;;;;;;;;;;;x
+d_dongbuyeo;Dongbuyeo;Dongbuyeo;Dongbuyeo;;Dongbuyeo;;;;;;;;;x
+d_dongbuyeo_adj;Dongbuian;;dongbuer;;;;;;;;;;;x
+d_donghai;Donghai;Donghai;Donghai;;Donghai;;;;;;;;;x
+d_donghai_adj;Donghian;;dongher;;;;;;;;;;;x
+d_donglai;Donglai;Donglai;Donglai;;Donglai;;;;;;;;;x
+d_donglai_adj;Donglian;;dongler;;;;;;;;;;;x
+d_dongping;Dongping;Dongping;Dongping;;Dongping;;;;;;;;;x
+d_dongping_adj;Dongpingian;;dongpinger;;;;;;;;;;;x
+d_dongye;Dongye;Dongye;Dongye;;Dongye;;;;;;;;;x
+d_dongye_adj;Dongyean;;donger;;;;;;;;;;;x
+d_dunhuang;Dunhuang;Dunhuang;Dunhuang;;Dunhuang;;;;;;;;;x
+d_dunhuang_adj;Dunhuangian;;dunhuanger;;;;;;;;;;;x
+d_goguryeo;Goguryeo;Goguryeo;Goguryeo;;Goguryeo;;;;;;;;;x
+d_goguryeo_adj;Gogurian;;gogurer;;;;;;;;;;;x
+d_guanghan;Guanghan;Guanghan;Guanghan;;Guanghan;;;;;;;;;x
+d_guanghan_adj;Guanghanian;;guanghaner;;;;;;;;;;;x
+d_guanghanyong;Guanghanyong;Guanghanyong;Guanghanyong;;Guanghanyong;;;;;;;;;x
+d_guanghanyong_adj;Guanghanyongian;;guanghanyonger;;;;;;;;;;;x
+d_guangling;Guangling;Guangling;Guangling;;Guangling;;;;;;;;;x
+d_guangling_adj;Guanglingian;;guanglinger;;;;;;;;;;;x
+d_guangyang;Guangyang;Guangyang;Guangyang;;Guangyang;;;;;;;;;x
+d_guangyang_adj;Guangyangian;;guangyanger;;;;;;;;;;;x
+d_guiyang;Guiyang;Guiyang;Guiyang;;Guiyang;;;;;;;;;x
+d_guiyang_adj;Guiyangian;;guiyanger;;;;;;;;;;;x
+d_hanyang;Hanyang;Hanyang;Hanyang;;Hanyang;;;;;;;;;x
+d_hanyang_adj;Hanyangian;;hanyanger;;;;;;;;;;;x
+d_hanzhong;Hanzhong;Hanzhong;Hanzhong;;Hanzhong;;;;;;;;;x
+d_hanzhong_adj;Hanzhongian;;hanzhonger;;;;;;;;;;;x
+d_hedong;Hedong;Hedong;Hedong;;Hedong;;;;;;;;;x
+d_hedong_adj;Hedongian;;hedonger;;;;;;;;;;;x
+d_hejian;Hejian;Hejian;Hejian;;Hejian;;;;;;;;;x
+d_hejian_adj;Hejianian;;hejianer;;;;;;;;;;;x
+d_henan;Henan;Henan;Henan;;Henan;;;;;;;;;x
+d_henan_adj;Henanian;;henaner;;;;;;;;;;;x
+d_henei;Henei;Henei;Henei;;Henei;;;;;;;;;x
+d_henei_adj;Henian;;hener;;;;;;;;;;;x
+d_hepu;Hepu;Hepu;Hepu;;Hepu;;;;;;;;;x
+d_hepu_adj;Hepian;;heper;;;;;;;;;;;x
+d_hongnong;Hongnong;Hongnong;Hongnong;;Hongnong;;;;;;;;;x
+d_hongnong_adj;Hongnongian;;hongnonger;;;;;;;;;;;x
+d_jiangxia;Jiangxia;Jiangxia;Jiangxia;;Jiangxia;;;;;;;;;x
+d_jiangxia_adj;Jiangxian;;jiangxer;;;;;;;;;;;x
+d_jianwei;Jianwei;Jianwei;Jianwei;;Jianwei;;;;;;;;;x
+d_jianwei_adj;Jianwian;;jianwer;;;;;;;;;;;x
+d_jiaozhi;Jiaozhi;Jiaozhi;Jiaozhi;;Jiaozhi;;;;;;;;;x
+d_jiaozhi_adj;Jiaozhian;;jiaozher;;;;;;;;;;;x
+d_jibei;Jibei;Jibei;Jibei;;Jibei;;;;;;;;;x
+d_jibei_adj;Jibian;;jiber;;;;;;;;;;;x
+d_jinan;Jinan;Jinan;Jinan;;Jinan;;;;;;;;;x
+d_jinan_adj;Jinanian;;jinaner;;;;;;;;;;;x
+d_jincheng;Jincheng;Jincheng;Jincheng;;Jincheng;;;;;;;;;x
+d_jincheng_adj;Jinchengian;;jinchenger;;;;;;;;;;;x
+d_jingzhao;Jingzhao;Jingzhao;Jingzhao;;Jingzhao;;;;;;;;;x
+d_jingzhao_adj;Jingzhian;;jingzher;;;;;;;;;;;x
+d_jinhan;Jinhan;Jinhan;Jinhan;;Jinhan;;;;;;;;;x
+d_jinhan_adj;Jinhanian;;jinhaner;;;;;;;;;;;x
+d_jiujiang;Jiujiang;Jiujiang;Jiujiang;;Jiujiang;;;;;;;;;x
+d_jiujiang_adj;Jiujiangian;;jiujianger;;;;;;;;;;;x
+d_jiuquan;Jiuquan;Jiuquan;Jiuquan;;Jiuquan;;;;;;;;;x
+d_jiuquan_adj;Jiuquanian;;jiuquaner;;;;;;;;;;;x
+d_jiuzhen;Jiuzhen;Jiuzhen;Jiuzhen;;Jiuzhen;;;;;;;;;x
+d_jiuzhen_adj;Jiuzhenian;;jiuzhener;;;;;;;;;;;x
+d_jiyin;Jiyin;Jiyin;Jiyin;;Jiyin;;;;;;;;;x
+d_jiyin_adj;Jiyinian;;jiyiner;;;;;;;;;;;x
+d_julu;Julu;Julu;Julu;;Julu;;;;;;;;;x
+d_julu_adj;Julian;;juler;;;;;;;;;;;x
+d_juyan;Juyan;Juyan;Juyan;;Juyan;;;;;;;;;x
+d_juyan_adj;Juyanian;;Juyaner;;;;;;;;;;;x
+d_kuaiji;Kuaiji;Kuaiji;Kuaiji;;Kuaiji;;;;;;;;;x
+d_kuaiji_adj;Kuaijian;;kuaijer;;;;;;;;;;;x
+d_langye;Langye;Langye;Langye;;Langye;;;;;;;;;x
+d_langye_adj;Langyean;;langer;;;;;;;;;;;x
+d_lean;Lean;Lean;Lean;;Lean;;;;;;;;;x
+d_lean_adj;Leanian;;leaner;;;;;;;;;;;x
+d_lelang;Lelang;Lelang;Lelang;;Lelang;;;;;;;;;x
+d_lelang_adj;Lelangian;;lelanger;;;;;;;;;;;x
+d_liang;Liang;Liang;Liang;;Liang;;;;;;;;;x
+d_liang_adj;Liangian;;lianger;;;;;;;;;;;x
+d_liaodong;Liaodong;Liaodong;Liaodong;;Liaodong;;;;;;;;;x
+d_liaodong_adj;Liaodongian;;liaodonger;;;;;;;;;;;x
+d_liaoxi;Liaoxi;Liaoxi;Liaoxi;;Liaoxi;;;;;;;;;x
+d_liaoxi_adj;Liaoxian;;liaoxer;;;;;;;;;;;x
+d_lingling;Lingling;Lingling;Lingling;;Lingling;;;;;;;;;x
+d_lingling_adj;Linglingian;;linglinger;;;;;;;;;;;x
+d_longxi;Longxi;Longxi;Longxi;;Longxi;;;;;;;;;x
+d_longxi_adj;Longxian;;longxer;;;;;;;;;;;x
+d_lu;Lu;Lu;Lu;;Lu;;;;;;;;;x
+d_lu_adj;Lian;;ler;;;;;;;;;;;x
+d_lujiang;Lujiang;Lujiang;Lujiang;;Lujiang;;;;;;;;;x
+d_lujiang_adj;Lujiangian;;lujianger;;;;;;;;;;;x
+d_mahan;Mahan;Mahan;Mahan;;Mahan;;;;;;;;;x
+d_mahan_adj;Mahanian;;mahaner;;;;;;;;;;;x
+d_namye;Namye;Namye;Namye;;Namye;;;;;;;;;x
+d_namye_adj;Namyean;;namer;;;;;;;;;;;x
+d_nan;Nan;Nan;Nan;;Nan;;;;;;;;;x
+d_nan_adj;Nanian;;naner;;;;;;;;;;;x
+d_nanbei;Nanbei;Nanbei;Nanbei;;Nanbei;;;;;;;;;x
+d_nanbei_adj;Nanbian;;nanber;;;;;;;;;;;x
+d_nanhai;Nanhai;Nanhai;Nanhai;;Nanhai;;;;;;;;;x
+d_nanhai_adj;Nanhian;;nanher;;;;;;;;;;;x
+d_nanyang;Nanyang;Nanyang;Nanyang;;Nanyang;;;;;;;;;x
+d_nanyang_adj;Nanyangian;;nanyanger;;;;;;;;;;;x
+d_okjeo;Okjeo;Okjeo;Okjeo;;Okjeo;;;;;;;;;x
+d_okjeo_adj;Okjian;;okjer;;;;;;;;;;;x
+d_pei;Pei;Pei;Pei;;Pei;;;;;;;;;x
+d_pei_adj;Pian;;per;;;;;;;;;;;x
+d_pengcheng;Pengcheng;Pengcheng;Pengcheng;;Pengcheng;;;;;;;;;x
+d_pengcheng_adj;Pengchengian;;pengchenger;;;;;;;;;;;x
+d_pingyuan;Pingyuan;Pingyuan;Pingyuan;;Pingyuan;;;;;;;;;x
+d_pingyuan_adj;Pingyuanian;;pingyuaner;;;;;;;;;;;x
+d_qi;Qi;Qi;Qi;;Qi;;;;;;;;;x
+d_qi_adj;Qian;;qer;;;;;;;;;;;x
+d_qinghai;Qinghai;Qinghai;Qinghai;;Qinghai;;;;;;;;;x
+d_qinghai_adj;Qinghian;;qingher;;;;;;;;;;;x
+d_qinghe;Qinghe;Qinghe;Qinghe;;Qinghe;;;;;;;;;x
+d_qinghe_adj;Qinghean;;qingher;;;;;;;;;;;x
+d_rencheng;Rencheng;Rencheng;Rencheng;;Rencheng;;;;;;;;;x
+d_rencheng_adj;Renchengian;;renchenger;;;;;;;;;;;x
+d_rinan;Rinan;Rinan;Rinan;;Rinan;;;;;;;;;x
+d_rinan_adj;Rinanian;;rinaner;;;;;;;;;;;x
+d_runan;Runan;Runan;Runan;;Runan;;;;;;;;;x
+d_runan_adj;Runanian;;runaner;;;;;;;;;;;x
+d_shang;Shang;Shang;Shang;;Shang;;;;;;;;;x
+d_shang_adj;Shangian;;shanger;;;;;;;;;;;x
+d_shangdang;Shangdang;Shangdang;Shangdang;;Shangdang;;;;;;;;;x
+d_shangdang_adj;Shangdangian;;shangdanger;;;;;;;;;;;x
+d_shanggu;Shanggu;Shanggu;Shanggu;;Shanggu;;;;;;;;;x
+d_shanggu_adj;Shanggian;;shangger;;;;;;;;;;;x
+d_shanyang;Shanyang;Shanyang;Shanyang;;Shanyang;;;;;;;;;x
+d_shanyang_adj;Shanyangian;;shanyanger;;;;;;;;;;;x
+d_shu;Shu;Shu;Shu;;Shu;;;;;;;;;x
+d_shu_adj;Shian;;sher;;;;;;;;;;;x
+d_shuofang;Shuofang;Shuofang;Shuofang;;Shuofang;;;;;;;;;x
+d_shuofang_adj;Shuofangian;;shuofanger;;;;;;;;;;;x
+d_shuyong;Shuyong;Shuyong;Shuyong;;Shuyong;;;;;;;;;x
+d_shuyong_adj;Shuyongian;;shuyonger;;;;;;;;;;;x
+d_taishan;Taishan;Taishan;Taishan;;Taishan;;;;;;;;;x
+d_taishan_adj;Taishanian;;taishaner;;;;;;;;;;;x
+d_taiyuan;Taiyuan;Taiyuan;Taiyuan;;Taiyuan;;;;;;;;;x
+d_taiyuan_adj;Taiyuanian;;taiyuaner;;;;;;;;;;;x
+d_turpan;Turpan;Turpan;Turpan;;Turpan;;;;;;;;;x
+d_turpan_adj;Turpanian;;turpaner;;;;;;;;;;;x
+d_wei;Wei;Wei;Wei;;Wei;;;;;;;;;x
+d_wei_adj;Wian;;wer;;;;;;;;;;;x
+d_wu;Wu;Wu;Wu;;Wu;;;;;;;;;x
+d_wu_adj;Wian;;wer;;;;;;;;;;;x
+d_wudu;Wudu;Wudu;Wudu;;Wudu;;;;;;;;;x
+d_wudu_adj;Wudian;;wuder;;;;;;;;;;;x
+d_wuling;Wuling;Wuling;Wuling;;Wuling;;;;;;;;;x
+d_wuling_adj;Wulingian;;wulinger;;;;;;;;;;;x
+d_wuwei;Wuwei;Wuwei;Wuwei;;Wuwei;;;;;;;;;x
+d_wuwei_adj;Wuwian;;wuwer;;;;;;;;;;;x
+d_wuyuan;Wuyuan;Wuyuan;Wuyuan;;Wuyuan;;;;;;;;;x
+d_wuyuan_adj;Wuyuanian;;wuyuaner;;;;;;;;;;;x
+d_xiapi;Xiapi;Xiapi;Xiapi;;Xiapi;;;;;;;;;x
+d_xiapi_adj;Xiapian;;xiaper;;;;;;;;;;;x
+d_xibei;Xibei;Xibei;Xibei;;Xibei;;;;;;;;;x
+d_xibei_adj;Xibian;;xiber;;;;;;;;;;;x
+d_xihai;Xihai;Xihai;Xihai;;Xihai;;;;;;;;;x
+d_xihai_adj;Xihian;;xiher;;;;;;;;;;;x
+d_xihe;Xihe;Xihe;Xihe;;Xihe;;;;;;;;;x
+d_xihe_adj;Xihean;;xiher;;;;;;;;;;;x
+d_xiongnunan;Xiongnunan;Xiongnunan;Xiongnunan;;Xiongnunan;;;;;;;;;x
+d_xiongnunan_adj;Xiongnunanian;;xiongnunaner;;;;;;;;;;;x
+d_xuantu;Xuantu;Xuantu;Xuantu;;Xuantu;;;;;;;;;x
+d_xuantu_adj;Xuantian;;xuanter;;;;;;;;;;;x
+d_yanmen;Yanmen;Yanmen;Yanmen;;Yanmen;;;;;;;;;x
+d_yanmen_adj;Yanmenian;;yanmener;;;;;;;;;;;x
+d_yingchuan;Yingchuan;Yingchuan;Yingchuan;;Yingchuan;;;;;;;;;x
+d_yingchuan_adj;Yingchuanian;;yingchuaner;;;;;;;;;;;x
+d_yizhou;Yizhou;Yizhou;Yizhou;;Yizhou;;;;;;;;;x
+d_yizhou_adj;Yizhian;;yizher;;;;;;;;;;;x
+d_yongchang;Yongchang;Yongchang;Yongchang;;Yongchang;;;;;;;;;x
+d_yongchang_adj;Yongchangian;;yongchanger;;;;;;;;;;;x
+d_youbeiping;Youbeiping;Youbeiping;Youbeiping;;Youbeiping;;;;;;;;;x
+d_youbeiping_adj;Youbeipingian;;youbeipinger;;;;;;;;;;;x
+d_youfufeng;Youfufeng;Youfufeng;Youfufeng;;Youfufeng;;;;;;;;;x
+d_youfufeng_adj;Youfufengian;;youfufenger;;;;;;;;;;;x
+d_yuexi;Yuexi;Yuexi;Yuexi;;Yuexi;;;;;;;;;x
+d_yuexi_adj;Yuexian;;yuexer;;;;;;;;;;;x
+d_yulin;Yulin;Yulin;Yulin;;Yulin;;;;;;;;;x
+d_yulin_adj;Yulinian;;yuliner;;;;;;;;;;;x
+d_yunzhong;Yunzhong;Yunzhong;Yunzhong;;Yunzhong;;;;;;;;;x
+d_yunzhong_adj;Yunzhongian;;yunzhonger;;;;;;;;;;;x
+d_yuyang;Yuyang;Yuyang;Yuyang;;Yuyang;;;;;;;;;x
+d_yuyang_adj;Yuyangian;;yuyanger;;;;;;;;;;;x
+d_yuzhang;Yuzhang;Yuzhang;Yuzhang;;Yuzhang;;;;;;;;;x
+d_yuzhang_adj;Yuzhangian;;yuzhanger;;;;;;;;;;;x
+d_zangke;Zangke;Zangke;Zangke;;Zangke;;;;;;;;;x
+d_zangke_adj;Zangkean;;zangker;;;;;;;;;;;x
+d_zhangye;Zhangye;Zhangye;Zhangye;;Zhangye;;;;;;;;;x
+d_zhangye_adj;Zhangyean;;zhanger;;;;;;;;;;;x
+d_zhao;Zhao;Zhao;Zhao;;Zhao;;;;;;;;;x
+d_zhao_adj;Zhian;;zher;;;;;;;;;;;x
+d_zhongbei;Zhongbei;Zhongbei;Zhongbei;;Zhongbei;;;;;;;;;x
+d_zhongbei_adj;Zhongbian;;zhongber;;;;;;;;;;;x
+d_zhongshan;Zhongshan;Zhongshan;Zhongshan;;Zhongshan;;;;;;;;;x
+d_zhongshan_adj;Zhongshanian;;zhongshaner;;;;;;;;;;;x
+d_zhuo;Zhuo;Zhuo;Zhuo;;Zhuo;;;;;;;;;x
+d_zhuo_adj;Zhian;;zher;;;;;;;;;;;x
+d_zhuti;Zhuti;Zhuti;Zhuti;;Zhuti;;;;;;;;;x
+d_zhuti_adj;Zhutian;;zhuter;;;;;;;;;;;x
+d_zuopingyi;Zuopingyi;Zuopingyi;Zuopingyi;;Zuopingyi;;;;;;;;;x
+d_zuopingyi_adj;Zuopingian;;zuopinger;;;;;;;;;;;x
+###
+#County
+c_guard;Yellow Guard;Yellow Guard;Yellow Guard;;Yellow Guard;;;;;;;;;x
+c_guard_adj;Imperial Bodyguard;;;;;;;;;;;;;x
+c_empress;Inner Court;Inner Court;Inner Court;;Inner Court;;;;;;;;;x
+c_empress_adj;The Inner Court;;;;;;;;;;;;;x
+c_eunuch;Eunuch Faction;Eunuch Faction;Eunuch Faction;;Eunuch Faction;;;;;;;;;x
+c_eunuch_adj;Eunuch Faction;;;;;;;;;;;;;x
+c_penglai;Mount Penglai;;;;;;;;;;;;;x
+c_penglai_adj;Mount Penglai;;;;;;;;;;;;;x
+c_baima;Baima Cavalry;;;;;;;;;;;;;x
+c_baima_adj;Baima Cavalry;;;;;;;;;;;;;x
+c_bashu;Bashu Infantry;;;;;;;;;;;;;x
+c_bashu_adj;Bashu Infantry;;;;;;;;;;;;;x
+c_feather;Feather Bandits;;;;;;;;;;;;;x
+c_feather_adj;Feather Bandits;;;;;;;;;;;;;x
+c_lubu;Phoenix Army;;;;;;;;;;;;;x
+c_lubu_adj;Phoenix Army;;;;;;;;;;;;;x
+c_qingzhou;Qingzhou Infantry;;;;;;;;;;;;;x
+c_qingzhou_adj;Qingzhou Infantry;;;;;;;;;;;;;x
+c_qiang;Qiang Tribe;;;;;;;;;;;;;x
+c_qiang_adj;Qiang Tribe;;;;;;;;;;;;;x
+c_wuxia;Wu Pirates;;;;;;;;;;;;;x
+c_wu_adj;Wu Pirates;;;;;;;;;;;;;x
+#Solo
+d_cao;Cao Army;;;;;;;;;;;;;x
+d_cao_adj;Cao;;;;;;;;;;;;;x
+d_gongsun;Gongsun Army;;;;;;;;;;;;;x
+d_gongsun_adj;Gongsun;;;;;;;;;;;;;x
+d_liu;Liu Army;;;;;;;;;;;;;x
+d_liu_adj;Liu;;;;;;;;;;;;;x
+d_sun;Sun Army;;;;;;;;;;;;;x
+d_sun_adj;Sun;;;;;;;;;;;;;x
+k_cao;Cao Clan;;;;;;;;;;;;;x
+k_cao_adj;Cao;;;;;;;;;;;;;x
+k_liu;Liu Clan;;;;;;;;;;;;;x
+k_liu_adj;Liu;;;;;;;;;;;;;x
+k_shi;Shi Clan;;;;;;;;;;;;;x
+k_shi_adj;Shi;;;;;;;;;;;;;x
+k_sun;Sun Clan;;;;;;;;;;;;;x
+k_sun_adj;Sun;;;;;;;;;;;;;x
+k_yuan;Yuan Clan;;;;;;;;;;;;;x
+k_yuan_adj;Yuan;;;;;;;;;;;;;x
+e_gongsun;Gongsun Clan;;;;;;;;;;;;;x
+e_gongsun_adj;Gongsun;;;;;;;;;;;;;x
+e_liu;Liu Clan;;;;;;;;;;;;;x
+e_liu_adj;Liu;;;;;;;;;;;;;x
+e_sun;Sun Clan;;;;;;;;;;;;;x
+e_sun_adj;Sun;;;;;;;;;;;;;x
+e_xu;Xu;;;;;;;;;;;;;x
+e_xu_adj;Xu Provincial;;;;;;;;;;;;;x
+e_yuan;Yuan Clan;;;;;;;;;;;;;x
+e_yuan_adj;Yuan;;;;;;;;;;;;;x
+#Nobility
+d_k_anping;Anping;;;;;;;;;;;;;x
+d_k_anping_adj;Anping Kingdom;;;;;;;;;;;;;x
+d_k_beihai;Beihai;;;;;;;;;;;;;x
+d_k_beihai_adj;Beihai Kingdom;;;;;;;;;;;;;x
+d_k_changshan;Changshan;;;;;;;;;;;;;x
+d_k_changshan_adj;Changshan Kingdom;;;;;;;;;;;;;x
+d_k_chen;Chen;;;;;;;;;;;;;x
+d_k_chen_adj;Chen Kingdom;;;;;;;;;;;;;x
+d_k_donghai;Donghai;;;;;;;;;;;;;x
+d_k_donghai_adj;Donghai Kingdom;;;;;;;;;;;;;x
+d_k_dongping;Dongping;;;;;;;;;;;;;x
+d_k_dongping_adj;Dongping Kingdom;;;;;;;;;;;;;x
+d_k_hejian;Hejian;;;;;;;;;;;;;x
+d_k_hejian_adj;Hejian Kingdom;;;;;;;;;;;;;x
+d_k_jibei;Jibei;;;;;;;;;;;;;x
+d_k_jibei_adj;Jibei Kingdom;;;;;;;;;;;;;x
+d_k_jinan;Jinan;;;;;;;;;;;;;x
+d_k_jinan_adj;Jinan Kingdom;;;;;;;;;;;;;x
+d_k_langye;Langye;;;;;;;;;;;;;x
+d_k_langye_adj;Langye Kingdom;;;;;;;;;;;;;x
+d_k_liang;Liang;;;;;;;;;;;;;x
+d_k_liang_adj;Liang Kingdom;;;;;;;;;;;;;x
+d_k_lu;Lu;;;;;;;;;;;;;x
+d_k_lu_adj;Lu Kingdom;;;;;;;;;;;;;x
+d_k_pei;Pei;;;;;;;;;;;;;x
+d_k_pei_adj;Pei Kingdom;;;;;;;;;;;;;x
+d_k_pengcheng;Pengcheng;;;;;;;;;;;;;x
+d_k_pengcheng_adj;Pengcheng Kingdom;;;;;;;;;;;;;x
+d_k_pingyuan;Pingyuan;;;;;;;;;;;;;x
+d_k_pingyuan_adj;Pingyuan Kingdom;;;;;;;;;;;;;x
+d_k_qi;Qi;;;;;;;;;;;;;x
+d_k_qi_adj;Qi Kingdom;;;;;;;;;;;;;x
+d_k_qinghe;Qinghe;;;;;;;;;;;;;x
+d_k_qinghe_adj;Qinghe Kingdom;;;;;;;;;;;;;x
+d_k_rencheng;Rencheng;;;;;;;;;;;;;x
+d_k_rencheng_adj;Rencheng Kingdom;;;;;;;;;;;;;x
+d_k_shanyang;Shanyang;;;;;;;;;;;;;x
+d_k_shanyang_adj;Shanyang Kingdom;;;;;;;;;;;;;x
+d_k_taiyuan;Taiyuan;;;;;;;;;;;;;x
+d_k_taiyuan_adj;Taiyuan Kingdom;;;;;;;;;;;;;x
+d_k_xiapi;Xiapi;;;;;;;;;;;;;x
+d_k_xiapi_adj;Xiapi Kingdom;;;;;;;;;;;;;x
+d_k_zhao;Zhao;;;;;;;;;;;;;x
+d_k_zhao_adj;Zhao Kingdom;;;;;;;;;;;;;x
+d_k_zhongshan;Zhongshan;;;;;;;;;;;;;x
+d_k_zhongshan_adj;Zhongshan Kingdom;;;;;;;;;;;;;x
+#Chancellor
+e_k_chu;Chu Dynasty;;;;;;;;;;;;;x
+e_k_chu_adj;Chu Imperial;;;;;;;;;;;;;x
+e_k_chen;Chen Dynasty;;;;;;;;;;;;;x
+e_k_chen_adj;Chen Imperial;;;;;;;;;;;;;x
+e_k_dai;Dai Dynasty;;;;;;;;;;;;;x
+e_k_dai_adj;Dai Imperial;;;;;;;;;;;;;x
+e_k_han;Han Dynasty;;;;;;;;;;;;;x
+e_k_han_adj;Han Imperial;;;;;;;;;;;;;x
+e_k_jin;Jin Dynasty;;;;;;;;;;;;;x
+e_k_jin_adj;Jin Imperial;;;;;;;;;;;;;x
+e_k_liang;Liang Dynasty;;;;;;;;;;;;;x
+e_k_liang_adj;Liang Imperial;;;;;;;;;;;;;x
+e_k_liao;Liao Dynasty;;;;;;;;;;;;;x
+e_k_liao_adj;Liao Imperial;;;;;;;;;;;;;x
+e_k_min;Min Dynasty;;;;;;;;;;;;;x
+e_k_min_adj;Min Imperial;;;;;;;;;;;;;x
+e_k_qi;Qi Dynasty;;;;;;;;;;;;;x
+e_k_qi_adj;Qi Imperial;;;;;;;;;;;;;x
+e_k_qin;Qin Dynasty;;;;;;;;;;;;;x
+e_k_qin_adj;Qin Imperial;;;;;;;;;;;;;x
+e_k_qing;Qing Dynasty;;;;;;;;;;;;;x
+e_k_qing_adj;Qing Imperial;;;;;;;;;;;;;x
+e_k_shu;Shu Dynasty;;;;;;;;;;;;;x
+e_k_shu_adj;Shu Imperial;;;;;;;;;;;;;x
+e_k_song;Song Dynasty;;;;;;;;;;;;;x
+e_k_song_adj;Song Imperial;;;;;;;;;;;;;x
+e_k_sui;Sui Dynasty;;;;;;;;;;;;;x
+e_k_sui_adj;Sui Imperial;;;;;;;;;;;;;x
+e_k_tan;Tan Dynasty;;;;;;;;;;;;;x
+e_k_tan_adj;Tan Imperial;;;;;;;;;;;;;x
+e_k_tang;Tang Dynasty;;;;;;;;;;;;;x
+e_k_tang_adj;Tang Imperial;;;;;;;;;;;;;x
+e_k_wei;Wei Dynasty;;;;;;;;;;;;;x
+e_k_wei_adj;Wei Imperial;;;;;;;;;;;;;x
+e_k_wu;Wu Dynasty;;;;;;;;;;;;;x
+e_k_wu_adj;Wu Imperial;;;;;;;;;;;;;x
+e_k_wuyue;Wuyue Dynasty;;;;;;;;;;;;;x
+e_k_wuyue_adj;Wuyue Imperial;;;;;;;;;;;;;x
+e_k_xia;Xia Dynasty;;;;;;;;;;;;;x
+e_k_xia_adj;Xia Imperial;;;;;;;;;;;;;x
+e_k_yan;Yan Dynasty;;;;;;;;;;;;;x
+e_k_yan_adj;Yan Imperial;;;;;;;;;;;;;x
+e_k_zhao;Zhao Dynasty;;;;;;;;;;;;;x
+e_k_zhao_adj;Zhao Imperial;;;;;;;;;;;;;x
+e_k_zhong;Zhong Dynasty;;;;;;;;;;;;;x
+e_k_zhong_adj;Zhong Imperial;;;;;;;;;;;;;x
+e_k_zhou;Zhou Dynasty;;;;;;;;;;;;;x
+e_k_zhou_adj;Zhou Imperial;;;;;;;;;;;;;x

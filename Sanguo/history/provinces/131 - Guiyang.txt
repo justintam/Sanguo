@@ -1,0 +1,25 @@
+# c_guiyang
+
+# County Title
+title = c_guiyang
+
+# Settlements
+max_settlements = 5
+
+b_linxian = castle
+b_luju = city
+#b_qingko = city
+#b_ganqi = castle
+#b_nanming = temple
+
+# Misc
+culture = minyue
+religion = animist
+
+#History
+194.1.1={
+	b_qingko = city
+}
+204.1.1={
+	b_ganqi = castle
+}

@@ -1,0 +1,20 @@
+# c_xinping
+
+# County Title
+title = c_xinping
+
+# Settlements
+max_settlements = 6
+
+b_xinping = castle
+b_hongmen = castle
+b_quyou = city
+b_xiting = castle
+#b_xiling = city
+#b_xinqing = temple
+
+# Misc
+culture = han
+religion = confucian
+
+#History

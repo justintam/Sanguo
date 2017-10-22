@@ -1,0 +1,19 @@
+# c_chonghe
+
+# County Title
+title = c_chonghe
+
+# Settlements
+max_settlements = 5
+
+b_chonghe = castle
+b_yueling = city
+#b_chentu = temple
+#b_yuzhi = castle
+#b_zhongwan = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

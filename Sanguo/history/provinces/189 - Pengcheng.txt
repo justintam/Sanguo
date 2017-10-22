@@ -1,0 +1,25 @@
+# c_pengcheng
+
+# County Title
+title = c_pengcheng
+
+# Settlements
+max_settlements = 5
+
+b_xuzhou = castle
+b_wuzhou = city
+b_pengcheng = city
+#b_jinjiang = temple
+#b_linjizhen = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History
+65.1.1={
+	religion = buddhist
+}
+194.1.1={
+	b_jinjiang = temple
+}

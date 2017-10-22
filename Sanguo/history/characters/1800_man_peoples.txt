@@ -1,0 +1,588 @@
+####### Man Peoples #######
+
+1800 = {
+	name="Shamoke"
+	dynasty=700
+    diplomacy=5
+    martial=7
+    stewardship=3
+    intrigue=1
+	learning=4
+	religion="huojiao"
+	culture="nanman"
+	trait="destined"
+    trait="duel_skilled_warrior"
+	trait="content"
+	trait="strong"
+	145.1.1={
+		birth=yes
+	}
+	222.1.1={
+		death=yes
+	}
+}
+1801 = {
+	name="Huo"
+	dynasty=700
+    diplomacy=8
+    martial=8
+    stewardship=4
+    intrigue=5
+	learning=4
+	religion="huojiao"
+	culture="nanman"
+	father=1800
+	trait="charismatic_negotiator"
+	trait="strategist"
+	trait="destined"
+    trait="duel_trained_warrior"
+	trait="strong"
+	trait="wroth"
+	165.1.1={
+		birth=yes
+	}
+	184.1.1={
+		add_spouse=1815
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1802 = {
+	name="Kai" #Yong
+	dynasty=134
+    diplomacy=7
+    martial=8
+    stewardship=5
+    intrigue=6
+	learning=5
+	religion="confucian"
+	culture="han"
+	father=1818
+	mother=1821
+    trait="duel_trained_warrior"
+	trait="strong"
+	trait="brave"
+	trait="zealous"
+	165.1.1={
+		birth=yes
+	}
+	225.8.1={
+		death=yes
+	}
+}
+1803 = {
+	name="Ding" #Gao
+	dynasty=197
+    diplomacy=5
+    martial=6
+    stewardship=4
+    intrigue=4
+	learning=4
+	religion="confucian"
+	culture="bandunman"
+    trait="duel_trained_warrior"
+	165.1.1={
+		birth=yes
+	}
+	225.8.1={
+		death=yes
+	}
+}
+1804 = {
+	name="Huan"
+	dynasty=158
+    diplomacy=5
+    martial=8
+    stewardship=5
+    intrigue=3
+	learning=4
+	religion="confucian"
+	culture="han"
+    trait="duel_skilled_warrior"
+	trait="wroth"
+	trait="brave"
+	trait="quick"
+	165.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=1803
+	}
+	225.8.1={
+		death=yes
+	}
+}
+1805 = {
+	name="Bao"
+	dynasty=171
+    diplomacy=4
+    martial=7
+    stewardship=1
+    intrigue=2
+	learning=1
+	religion="confucian"
+	culture="han"
+	trait="tough_soldier"
+    trait="duel_trained_warrior"
+	trait="wroth"
+	168.1.1={
+		birth=yes
+	}
+	225.8.1={
+		death=yes
+	}
+}
+1806 = {
+	name="Ahuinan"
+	dynasty=701
+    diplomacy=4
+    martial=7
+    stewardship=3
+    intrigue=3
+	learning=2
+	religion="huojiao"
+	culture="nanman"
+    trait="duel_skilled_warrior"
+	trait="patient"
+	trait="brave"
+	165.1.1={
+		birth=yes
+	}
+	225.8.1={
+		death=yes
+	}
+}
+1807 = {
+	name="Jinhuansanjie"
+	dynasty=702
+    diplomacy=4
+    martial=7
+    stewardship=2
+    intrigue=2
+	learning=2
+	religion="huojiao"
+	culture="nanman"
+    trait="duel_poor_warrior"
+	trait="patient"
+	165.1.1={
+		birth=yes
+	}
+	225.8.1={
+		death=yes
+	}
+}
+1808 = {
+	name="Dongtuna"
+	dynasty=703
+    diplomacy=5
+    martial=7
+    stewardship=3
+    intrigue=4
+	learning=3
+	religion="huojiao"
+	culture="nanman"
+    trait="duel_trained_warrior"
+	trait="wroth"
+	165.1.1={
+		birth=yes
+	}
+	225.8.1={
+		death=yes
+	}
+}
+1809 = {
+	name="Duosi"
+	dynasty=713 #Tulong
+    diplomacy=5
+    martial=6
+    stewardship=7
+    intrigue=6
+	learning=7
+	religion="huojiao"
+	culture="nanman"
+    trait="duel_poor_warrior"
+	trait="patient"
+	trait="quick"
+	165.1.1={
+		birth=yes
+	}
+	225.8.1={
+		death=yes
+	}
+}
+1810 = {
+	name="Mulu"
+	dynasty=714 #Bana
+    diplomacy=3
+    martial=7
+    stewardship=4
+    intrigue=1
+	learning=4
+	religion="huojiao"
+	culture="nanman"
+	trait="mystic"
+    trait="duel_poor_warrior"
+	trait="zealous"
+	trait="war_elephant_leader"
+	165.1.1={
+		birth=yes
+	}
+	225.8.1={
+		death=yes
+	}
+}
+1811 = {
+	name="Wutugu"
+	dynasty=764 #Wuge
+    diplomacy=2
+    martial=8
+    stewardship=1
+    intrigue=1
+	learning=1
+	religion="huojiao"
+	culture="bandunman"
+	trait="brilliant_strategist"
+    trait="duel_skilled_warrior"
+	trait="tall"
+	trait="strong"
+	trait="brave"
+	trait="aggressive_leader"
+	trait="unyielding_leader"
+	trait="inspiring_leader"
+	trait="zealous"
+	165.1.1={
+		birth=yes
+	}
+	225.8.1={
+		death=yes
+	}
+}
+1812 = {
+	name="Mangyachang"
+	dynasty=706 #Man
+    diplomacy=1
+    martial=6
+    stewardship=1
+    intrigue=1
+	learning=1
+	religion="huojiao"
+	culture="nanman"
+	trait="tough_soldier"
+	trait="duelist"
+    trait="duel_skilled_warrior"
+	trait="brave"
+	trait="zealous"
+	165.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=1801
+	}
+	225.8.1={
+		death=yes
+	}
+}
+1813 = {
+	name="You"
+	dynasty=700
+    diplomacy=4
+    martial=6
+    stewardship=2
+    intrigue=2
+	learning=3
+	religion="huojiao"
+	culture="nanman"
+	father=1800
+    trait="duel_poor_warrior"
+	167.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1814 = {
+	name="Fang"
+	dynasty=704 #Yang
+    diplomacy=4
+    martial=5
+    stewardship=5
+    intrigue=4
+	learning=5
+	religion="huojiao"
+	culture="nanman"
+    trait="duel_poor_warrior"
+	trait="diligent"
+	165.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1815 = {
+	name="Zhurong"
+	female=yes
+	dynasty=705
+	dna="pkxycougaxa"
+	properties="gi0hif000000"
+    diplomacy=8
+    martial=8
+    stewardship=3
+    intrigue=2
+	learning=4
+	religion="huojiao"
+	culture="nanman"
+	father=1817
+	trait="destined"
+	trait="duelist"
+    trait="duel_master_warrior"
+	trait="strong"
+	trait="ambitious"
+	trait="brave"
+	trait="wroth"
+	167.1.1={
+		birth=yes
+	}
+	184.1.1={
+		add_spouse=1801
+		effect = {
+			add_artifact = weapon_flyingsword
+		}
+	}
+	240.1.1={
+		effect = {
+			remove_artifact = weapon_flyingsword
+		}
+		death=yes
+	}
+}
+1816 = {
+	name="Dailaidongzhu"
+	dynasty=705
+    diplomacy=6
+    martial=5
+    stewardship=5
+    intrigue=4
+	learning=6
+	religion="huojiao"
+	culture="nanman"
+	father=1817
+	trait="charismatic_negotiator"
+    trait="duel_trained_warrior"
+	trait="humble"
+	trait="patient"
+	trait="brave"
+	trait="gregarious"
+	168.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1817 = {
+	name="Mulu"
+	dynasty=705
+	religion="huojiao"
+	culture="nanman"
+	120.1.1={
+		birth=yes
+	}
+	180.1.1={
+		death=yes
+	}
+}
+1818 = {
+	name="Ding"
+	dynasty=134
+	religion="confucian"
+	culture="han"
+    trait="duel_trained_warrior"
+	trait="strong"
+	140.1.1={
+		birth=yes
+	}
+	160.1.1={
+		add_spouse=1821
+	}
+	225.1.1={
+		death=yes
+	}
+}
+1819 = {
+	name="Ji"
+	dynasty=100
+	religion="confucian"
+	culture="han"
+	trait="content"
+	trait="humble"
+	120.1.1={
+		birth=yes
+	}
+	180.1.1={
+		death=yes
+	}
+}
+1820 = {
+	name="Xi"
+	dynasty=100
+	religion="confucian"
+	culture="han"
+	father=1819
+	trait="content"
+	trait="humble"
+	142.1.1={
+		birth=yes
+	}
+	230.1.1={
+		death=yes
+	}
+}
+1821 = {
+	name="Peng"
+	female=yes
+	dynasty=100
+	religion="confucian"
+	culture="han"
+	father=1819
+	trait="content"
+	trait="humble"
+	145.1.1={
+		birth=yes
+	}
+	160.1.1={
+		add_spouse=1818
+	}
+	230.1.1={
+		death=yes
+	}
+}
+1822 = {
+	name="Hu"
+	dynasty=758
+	religion="tianshi"
+	culture="bandunman"
+	trait="deceitful"
+	trait="zealous"
+	trait="brave"
+	160.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1823 = {
+	name="Huo"
+	dynasty=765
+	religion="tianshi"
+	culture="bandunman"
+	trait="wroth"
+	trait="zealous"
+	trait="brave"
+	160.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1824 = {
+	name="Hu"
+	dynasty=754
+	religion="baihu"
+	culture="bandunman"
+	trait="wroth"
+	trait="zealous"
+	trait="brave"
+	160.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1825 = {
+	name="Yue"
+	dynasty=769
+	religion="baihu"
+	culture="bandunman"
+	trait="wroth"
+	trait="zealous"
+	trait="brave"
+	160.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1826 = { #Unused
+	name="Che"
+	dynasty=768
+	religion="baihu"
+	culture="bandunman"
+	trait="wroth"
+	trait="zealous"
+	trait="brave"
+	160.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1827 = { #Unused
+	name="Hei"
+	dynasty=758
+	religion="baihu"
+	culture="bandunman"
+	trait="wroth"
+	trait="zealous"
+	trait="brave"
+	160.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1828 = {
+	name="Muyu"
+	dynasty=755
+	religion="tianshi"
+	culture="bandunman"
+	trait="wroth"
+	trait="zealous"
+	trait="brave"
+	160.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1829 = {
+	name="Renmin"
+	religion="huojiao"
+	culture="nanman"
+	160.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1830 = {
+	name="Huli"
+	religion="huojiao"
+	culture="nanman"
+	160.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}

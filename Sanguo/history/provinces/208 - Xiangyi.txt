@@ -1,0 +1,18 @@
+# c_xiangyi
+
+# County Title
+title = c_xiangyi
+
+# Settlements
+max_settlements = 4
+
+b_xiangyi = castle
+b_chengkuang = city
+#b_kuanwai = temple
+#b_pengyou = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

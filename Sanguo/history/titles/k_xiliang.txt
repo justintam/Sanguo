@@ -1,0 +1,22 @@
+# k_xiliang
+1.1.1={
+	active = no
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+194.1.1={
+	holder=809 #Ma Teng
+}
+201.1.1={
+	holder=808 #Han Sui
+}
+211.10.1={
+	holder=815 #Ma Chao
+}
+213.9.1={
+	holder=808 #Han Sui
+}
+215.1.1={
+	holder=0 #None
+	active=no
+}

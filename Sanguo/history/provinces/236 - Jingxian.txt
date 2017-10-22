@@ -1,0 +1,18 @@
+# c_jingxian
+
+# County Title
+title = c_jingxian
+
+# Settlements
+max_settlements = 4
+
+b_jingxian = tribal
+#b_jingpo = city
+#b_jinwupo = temple
+#b_baidu = castle
+
+# Misc
+culture = shanyue
+religion = animist
+
+#History

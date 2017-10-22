@@ -1,0 +1,18 @@
+# c_linyu
+
+# County Title
+title = c_linyu
+
+# Settlements
+max_settlements = 4
+
+b_linyu = castle
+b_changli = city
+#b_minyucheng = temple
+#b_bianqi = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

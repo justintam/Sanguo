@@ -1,0 +1,21 @@
+# c_zhenyang
+
+# County Title
+title = c_zhenyang
+
+# Settlements
+max_settlements = 4
+
+b_zhenyang = castle
+b_fenpi = tribal
+#b_yucai = city
+#b_risheng = temple
+
+# Misc
+culture = minyue
+religion = animist
+
+#History
+214.1.1={
+	b_yucai = city
+}

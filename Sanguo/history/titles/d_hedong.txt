@@ -1,0 +1,44 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=k_sili
+	vice_royalty = yes
+}
+80.1.1={
+	holder=3428 #Chen Du
+}
+120.1.1={
+	holder=3806 #Han Shu
+}
+176.1.1={
+	holder=3369 #Cui Lie
+}
+178.1.1={
+	holder=0 #None
+}
+184.1.1={
+	holder=300 #Dong Zhuo
+}
+189.8.22={
+	holder=3488 #Wang Hong
+}
+192.7.1={
+	holder=3855 #Wang Yi
+}
+197.1.1={
+	liege=k_sili
+}
+#202 Guo Yuan - claim - works with YS and Gao Gan
+205.1.1={
+	holder=10486 #Du Ji
+}
+213.6.1={
+	liege=k_ji
+}
+
+
+
+# Incomplete

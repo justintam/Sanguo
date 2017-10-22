@@ -1,0 +1,17 @@
+# c_suitang
+
+# County Title
+title = c_suitang
+
+# Settlements
+max_settlements = 3
+
+b_suitang = tribal
+#b_suitangfu = city
+#b_baoshan = temple
+
+# Misc
+culture = nanman
+religion = huojiao
+
+#History

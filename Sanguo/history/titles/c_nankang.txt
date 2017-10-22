@@ -1,0 +1,20 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_yuzhang
+}
+184.1.1={
+	liege=0 #Independent
+	holder=2018 #Random
+}
+199.1.1={
+	liege=d_luling
+}
+#204?
+
+
+
+#Incomplete

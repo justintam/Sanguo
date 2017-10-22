@@ -1,0 +1,10 @@
+# e_jin
+1.1.1={
+	active = no
+	law = agnatic_succession
+	law = succ_primogeniture
+}
+265.2.8={
+#	active = yes
+#	holder=5013 # Son of Sima Zhao
+}

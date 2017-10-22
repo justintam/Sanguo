@@ -1,0 +1,156 @@
+###########################################
+#                                         #
+# Finale Events		  	            	  #
+#                                         #
+# ID FIN.1-FIN.99						  #
+#                                         #
+#                                         #
+#                                         #
+#                                         #
+#                                         #
+#                                         #
+#                                         #
+###########################################
+
+namespace = FIN
+
+# Mohe in Goguryeo
+# Xiongnu in North
+# Yuezhi in West
+# Nanyue in South
+# Roman legion?
+
+# Rise of the North
+narrative_event = {
+	id = FIN.1
+	desc = EVTDESC_FIN.1
+	title = EVTTITLE_FIN.1
+	picture = GFX_evt_mongols_rise
+
+	#Fast event triggers
+	ai = no
+
+	major = yes
+	
+	trigger = {
+		year = 300
+		NOT = { year = 600 }
+		any_playable_ruler = {
+			culture_group = mongol
+		}
+		NOT = { culture_group = mongol }
+		NOT = { has_global_flag = mongol_rise }
+		NOT = { has_global_flag = mongol_end }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = mongol_rise
+		chronicle = {
+			entry = CHRONICLE_MONGOL_RISE
+			portrait = [Root.GetID]
+		}
+	}
+	
+	option = {
+		name = "OHNO"
+		trigger = {
+			region = world_china
+		}
+	}
+}
+
+#End of the Mongols
+narrative_event = {
+	id = FIN.2
+	desc = EVTDESC_FIN.2
+	title = EVTTITLE_FIN.2
+	picture = GFX_evt_mongols_end
+
+	#Fast event triggers
+	ai = no
+
+	major = yes
+	
+	trigger = {
+		has_global_flag = mongol_rise
+		OR = {
+			year = 600
+			NOT ={
+				any_playable_ruler = {
+					culture_group = mongol
+				}
+			}
+		}
+		NOT = { culture_group = mongol }
+		NOT = { has_global_flag = mongol_end }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = mongol_end
+		clr_global_flag = mongol_rise
+		chronicle = {
+			entry = CHRONICLE_MONGOL_END
+			portrait = [Root.GetID]
+		}
+	}
+	
+	option = {
+		name = "EXCELLENT"
+		trigger = {
+			region = world_china
+		}
+	}
+}
+
+#Spawn Mongols
+character_event = {
+	id = FIN.3
+	
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	only_playable = yes
+	only_independent = yes
+	culture_group = mongol
+	
+	trigger = {
+		has_global_flag = mongol_rise
+	}
+	
+	immediate = {
+		capital_scope = {
+			owner = {
+				spawn_unit = {
+					province = PREV
+					home = PREV
+					owner = THIS
+					troops = {
+						knights = { 500 500 }
+						light_infantry = { 2000 2000 }
+						heavy_infantry = { 2000 2000 }
+						light_cavalry = { 1000 1000 }
+						horse_archers = { 1000 1000 }
+						archers = { 2000 2000 }
+						pikemen = { 2500 2500 }
+					}
+					attrition = 1.0
+				}
+			}
+		}
+		k_confucian = {
+			reverse_war = {
+				target = ROOT
+				casus_belli = invasion
+			}
+		}
+	}
+}

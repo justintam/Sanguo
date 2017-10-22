@@ -1,0 +1,19 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_wu
+}
+184.1.1={
+	liege=0 #Independent
+	holder=2000 #Yan Baihu
+}
+197.6.1={
+	liege=d_wu
+	holder=508 #Sun Ce
+}
+200.2.1={
+	holder=509 #Sun Quan
+}

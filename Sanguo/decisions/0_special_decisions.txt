@@ -1,0 +1,884 @@
+decisions = {
+	
+	summon_empire = {
+		is_high_prio = yes
+		potential = {
+			NOT = { has_character_flag = summoned_empire }
+			has_landed_title = k_kushan
+		}
+		allow = {
+			is_primary_war_defender = yes
+		}
+		effect = {
+			set_character_flag = summoned_empire
+			capital_scope = {
+				owner = {
+					spawn_unit = {
+						province = PREV
+						home = PREV
+						owner = ROOT
+						troops = {
+							knights = { 600 600 }
+							horse_archers = { 900 900 }
+							light_infantry = { 4000 4000 }
+							heavy_infantry = { 1000 1000 }
+							light_cavalry = { 1000 1000 }
+							camel_cavalry = { 500 500 }
+							archers = { 1000 1000 }
+							pikemen = { 1000 1000 }
+							war_elephants = { 50 50 }
+						}
+						attrition = 1.0
+					}
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	launch_rebellion = {
+		is_high_prio = yes
+		potential = {
+			primary_title = {
+				OR = {
+					title = k_liangzei
+					title = k_man
+					title = k_yue
+				}
+			}
+			independent = yes
+			controls_religion = no
+			OR = {
+				AND = {
+					has_landed_title = k_liangzei
+					NOT = { has_landed_title = k_liang }
+				}
+				AND = {
+					has_landed_title = k_man
+					NOT = { has_landed_title = k_yi }
+				}
+				AND = {
+					has_landed_title = k_yue
+					NOT = { has_landed_title = k_jiaozhi }
+				}
+			}
+			NOT = { has_character_flag = rebel_start }
+		}
+		allow = {
+			war = no	
+			NOT = { trait = in_hiding }
+			prisoner = no
+			is_adult = yes
+		}
+		effect = {
+			set_character_flag = rebel_start
+			if = {
+				limit = { has_landed_title = k_liangzei }
+				k_liang = {
+					reverse_war = {
+						target = ROOT
+						casus_belli = invasion
+					}
+				}
+			}
+			if = {
+				limit = { has_landed_title = k_man }
+				k_yi = {
+					reverse_war = {
+						target = ROOT
+						casus_belli = invasion
+					}
+				}
+			}
+			if = {
+				limit = { has_landed_title = k_yue }
+				k_jiaozhi = {
+					reverse_war = {
+						target = ROOT
+						casus_belli = invasion
+					}
+				}
+			}
+			if = { limit = { war = yes }
+				any_playable_ruler = {
+					limit = { is_liege_or_above = ROOT }
+					join_attacker_wars = ROOT
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.25 #Reduce chance of call
+			}
+			modifier = {
+				factor = 100
+				has_character_flag = destiny
+			}
+			modifier = {
+				factor = 2
+				NOT = { religion = confucian }
+				trait = zealous
+			}
+			modifier = {
+				factor = 1.1
+				trait = fate_lead
+			}
+			modifier = {
+				factor = 1.05
+				trait = ambitious
+			}
+			modifier = {
+				factor = 0.25
+				trait = content
+			}
+			modifier = {
+				factor = 1.05
+				trait = envious
+			}
+			modifier = {
+				factor = 1.05
+				trait = greedy
+			}
+			modifier = {
+				factor = 1.05
+				trait = ruthless
+			}
+			modifier = {
+				factor = 1.05
+				trait = dishonorable
+			}
+			modifier = {
+				factor = 1.05
+				trait = selfish
+			}
+			modifier = {
+				factor = 1.025
+				demesne_size = 5
+			}
+			modifier = {
+				factor = 1.05
+				demesne_size = 10
+			}
+			modifier = {
+				factor = 1.1
+				demesne_size = 15
+			}
+		}
+	}
+	
+	form_clan_army = {
+		potential = {
+			ai = no
+			
+			age = 16
+			NOT = { age = 50 }
+			is_ruler = yes
+			has_regent = no
+			prisoner = no
+			war = no
+			NOR = {
+				trait = content
+				trait = craven
+				trait = incapable
+				trait = sick_incapable
+			}
+			
+			real_tier = COUNT
+			
+			primary_title = {
+				is_landless_type_title = no
+				is_titular = no
+			}
+			
+			controls_religion = no
+			holy_order = no
+			
+			NOT = { dynasty = none }
+			NOT = { government = nomadic_government }
+			NOT = {
+				any_demesne_title = {
+					has_title_flag = warlord_flag
+				}
+			}
+			NOT = { has_earmarked_regiments = clan_army }
+		}
+		allow = {
+			wealth = 500
+			prestige = 100
+		}
+		effect = {
+			custom_tooltip = {
+				text="TOOLTIPform_clan"				
+				hidden_tooltip = {
+					wealth = -500
+					prestige = -50
+					piety = -100
+					character_event = { id = WRL.1 }
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0.001
+		}
+	}
+	
+	demand_mass_conversion = {
+		potential = {
+			ai = no
+			
+			is_adult = yes
+			is_ruler = yes
+			has_regent = no
+			prisoner = no
+			war = no
+			NOR = {
+				trait = incapable
+				trait = sick_incapable
+			}
+			
+			real_tier = EMPEROR
+			
+			NOT = {
+				any_demesne_title = {
+					has_title_flag = warlord_flag
+				}
+			}
+			
+			any_courtier = {
+				NOT = { religion = ROOT }
+				liege = { character = ROOT }
+				prisoner = no
+				count = 10
+			}
+		}
+		effect = {
+			custom_tooltip = {
+				text="TOOLTIPmass_conversion"				
+				hidden_tooltip = {
+					any_courtier = {
+						limit = {
+							NOT = { religion = ROOT }
+							liege = { character = FROM }
+							prisoner = no
+							OR = {
+								AND = {
+									opinion = { who = ROOT value = 40 }
+									NOT = { trait = zealous }
+								}
+								AND = {
+									opinion = { who = ROOT value = 80 }
+									trait = zealous
+								}
+							}
+						}
+						opinion = {
+							who = ROOT
+							modifier = opinion_demanded_conversion
+						}
+						religion = ROOT
+					}
+					any_courtier = {
+						limit = {
+							NOT = { religion = ROOT }
+							liege = { character = FROM }
+							prisoner = no
+						}
+						opinion = {
+							who = ROOT
+							modifier = opinion_tyrant
+						}
+					}
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+	}
+	
+	take_clan_head = {
+		only_playable = yes
+		is_high_prio = yes
+		
+		potential = {
+			age = 20
+			NOR = {
+				trait = content
+				trait = craven
+				trait = incapable
+				trait = sick_incapable
+			}
+			OR = {
+				is_female = no
+				AND = {
+					OR = {
+						culture_group = yue
+						culture_group = tibetan
+						culture_group = man
+					}
+					liege = { religion = ROOT }
+				}
+				liege = {
+					primary_title = {
+						has_law = status_of_women_4
+					}
+				}
+			}
+			prisoner = no
+			war = no
+			OR = {
+				NOT = { has_dynasty_flag = clan_patriarch }
+				AND = {
+					has_dynasty_flag = clan_patriarch
+					NOT = { has_character_modifier = clan_patriarch }
+				}
+			}
+			has_regent = no
+			num_of_dynasty_members = 10
+			
+			any_courtier = {
+				dynasty = ROOT
+				is_adult = yes
+				is_female = no
+				liege = { character = ROOT }
+				prisoner = no
+				count = 5
+			}
+		}
+		effect = {
+			hidden_tooltip = { 
+				set_dynasty_flag = clan_patriarch
+				any_dynasty_member = {
+					if = {
+						limit = {
+							NOT = { character = ROOT }
+							has_character_modifier = clan_patriarch
+						}
+						character_event = { id = CRV.1 }
+						break = yes
+					}
+				}
+			}
+			add_character_modifier = {
+				name = clan_patriarch
+				duration = -1
+			}
+			hidden_tooltip = {
+				any_courtier = {
+					limit = {
+						dynasty = ROOT
+						is_adult = yes
+						is_female = no
+						liege = { character = ROOT }
+						prisoner = no
+					}
+					random = {
+						chance = 25
+						modifier = {
+							factor = 2
+							age = 50
+						}
+						add_character_modifier = {
+							name = clan_voter
+							duration = -1
+						}
+					}
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	hear_petition = {
+		only_playable = yes
+		is_high_prio = yes
+		
+		potential = {
+			prisoner = no
+			war = no
+			is_nomadic = no
+			NOR = {
+				trait = incapable
+				trait = sick_incapable
+			}
+			any_demesne_province = {
+				OR = {
+					has_province_modifier = petition_1
+					has_province_modifier = petition_2
+					has_province_modifier = petition_3
+					has_province_modifier = petition_4
+					has_province_modifier = petition_5
+					has_province_modifier = petition_6
+					has_province_modifier = petition_7
+					has_province_modifier = petition_8
+					has_province_modifier = petition_9
+					has_province_modifier = petition_10
+					has_province_modifier = petition_11
+					has_province_modifier = petition_12
+					has_province_modifier = petition_13
+					has_province_modifier = petition_14
+					has_province_modifier = petition_15
+					has_province_modifier = petition_16
+					has_province_modifier = petition_17
+					has_province_modifier = petition_18
+					has_province_modifier = petition_19
+					has_province_modifier = petition_20
+					has_province_modifier = petition_21
+					has_province_modifier = petition_22
+					has_province_modifier = petition_23
+					has_province_modifier = petition_24
+					has_province_modifier = petition_25
+				}
+			}
+		}
+		effect = {
+			hidden_tooltip = {
+				any_demesne_province = {
+					limit = {
+						OR = {
+							has_province_modifier = petition_1
+							has_province_modifier = petition_2
+							has_province_modifier = petition_3
+							has_province_modifier = petition_4
+							has_province_modifier = petition_5
+							has_province_modifier = petition_6
+							has_province_modifier = petition_7
+							has_province_modifier = petition_8
+							has_province_modifier = petition_9
+							has_province_modifier = petition_10
+							has_province_modifier = petition_11
+							has_province_modifier = petition_12
+							has_province_modifier = petition_13
+							has_province_modifier = petition_14
+							has_province_modifier = petition_15
+							has_province_modifier = petition_16
+							has_province_modifier = petition_17
+							has_province_modifier = petition_18
+							has_province_modifier = petition_19
+							has_province_modifier = petition_20
+							has_province_modifier = petition_21
+							has_province_modifier = petition_22
+							has_province_modifier = petition_23
+							has_province_modifier = petition_24
+							has_province_modifier = petition_25
+						}
+					}
+					save_event_target_as = target_province
+					e_rebels = { holder_scope = { character_event = { id = SAN.4 } } }
+					break = yes
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.85
+				trait = arbitrary
+			}
+			modifier = {
+				factor = 0.85
+				trait = erudite
+			}
+			modifier = {
+				factor = 0.85
+				trait = slothful
+			}
+			modifier = {
+				factor = 0.85
+				trait = wroth
+			}
+			modifier = {
+				factor = 1.05
+				trait = ambitious
+			}
+			modifier = {
+				factor = 1.05
+				trait = diligent
+			}
+			modifier = {
+				factor = 1.05
+				trait = temperate
+			}
+			modifier = {
+				factor = 1.05
+				trait = zealous
+			}
+			
+			# REGENT
+			modifier = {
+				factor = 0.85
+				has_regent = yes
+				regent = {
+					trait = arbitrary
+				}
+			}
+			modifier = {
+				factor = 0.85
+				has_regent = yes
+				regent = {
+					trait = erudite
+				}
+			}
+			modifier = {
+				factor = 0.85
+				has_regent = yes
+				regent = {
+					trait = slothful
+				}
+			}
+			modifier = {
+				factor = 0.85
+				has_regent = yes
+				regent = {
+					trait = wroth
+				}
+				
+			}
+			modifier = {
+				factor = 1.05
+				has_regent = yes
+				regent = {
+					trait = ambitious
+				}
+			}
+			modifier = {
+				factor = 1.05
+				has_regent = yes
+				regent = {
+					trait = diligent
+				}
+			}
+			modifier = {
+				factor = 1.05
+				has_regent = yes
+				regent = {
+					trait = temperate
+				}
+			}
+			modifier = {
+				factor = 1.05
+				has_regent = yes
+				regent = {
+					trait = zealous
+				}
+			}
+		}
+	}
+	
+	build_hospitals_1 = {
+		only_playable = yes
+		is_high_prio = yes
+		
+		potential = {
+			ai = no
+			war = no
+			has_regent = no
+			OR = {
+				AND = {
+					wealth = 200
+					any_realm_province = {
+						NOT = { hospital_level = 1 }
+						count = 3
+						NOT = { count = 5 }
+					}
+				}
+				AND = {
+					wealth = 400
+					any_realm_province = {
+						NOT = { hospital_level = 1 }
+						count = 5
+						NOT = { count = 10 }
+					}
+				}
+				AND = {
+					wealth = 800
+					any_realm_province = {
+						NOT = { hospital_level = 1 }
+						count = 10
+						NOT = { count = 20 }
+					}
+				}
+				AND = {
+					wealth = 1500
+					any_realm_province = {
+						NOT = { hospital_level = 1 }
+						count = 20
+						NOT = { count = 30 }
+					}
+				}
+				AND = {
+					wealth = 2000
+					any_realm_province = {
+						NOT = { hospital_level = 1 }
+						count = 30
+						NOT = { count = 40 }
+					}
+				}
+				AND = {
+					wealth = 2000
+					any_realm_province = {
+						NOT = { hospital_level = 1 }
+						count = 40
+						NOT = { count = 50 }
+					}
+				}
+				AND = {
+					wealth = 2500
+					any_realm_province = {
+						NOT = { hospital_level = 1 }
+						count = 50
+						NOT = { count = 75 }
+					}
+				}
+				AND = {
+					wealth = 3000
+					any_realm_province = {
+						NOT = { hospital_level = 1 }
+						count = 75
+						NOT = { count = 100 }
+					}
+				}
+				AND = {
+					wealth = 4000
+					any_realm_province = {
+						NOT = { hospital_level = 1 }
+						count = 100
+						NOT = { count = 150 }
+					}
+				}
+				AND = {
+					wealth = 5000
+					any_realm_province = {
+						NOT = { hospital_level = 1 }
+						count = 150
+						NOT = { count = 200 }
+					}
+				}
+			}
+		}
+		allow = {
+			OR = {
+				AND = {
+					wealth = 250
+					any_realm_province = {
+						NOT = { hospital_level = 1 }
+						count = 3
+						NOT = { count = 5 }
+					}
+				}
+				AND = {
+					wealth = 500
+					any_realm_province = {
+						NOT = { hospital_level = 1 }
+						count = 5
+						NOT = { count = 10 }
+					}
+				}
+				AND = {
+					wealth = 1000
+					any_realm_province = {
+						NOT = { hospital_level = 1 }
+						count = 10
+						NOT = { count = 20 }
+					}
+				}
+				AND = {
+					wealth = 2000
+					any_realm_province = {
+						NOT = { hospital_level = 1 }
+						count = 20
+						NOT = { count = 30 }
+					}
+				}
+				AND = {
+					wealth = 3000
+					any_realm_province = {
+						NOT = { hospital_level = 1 }
+						count = 30
+						NOT = { count = 40 }
+					}
+				}
+				AND = {
+					wealth = 4000
+					any_realm_province = {
+						NOT = { hospital_level = 1 }
+						count = 40
+						NOT = { count = 50 }
+					}
+				}
+				AND = {
+					wealth = 5000
+					any_realm_province = {
+						NOT = { hospital_level = 1 }
+						count = 50
+						NOT = { count = 75 }
+					}
+				}
+				AND = {
+					wealth = 6000
+					any_realm_province = {
+						NOT = { hospital_level = 1 }
+						count = 75
+						NOT = { count = 100 }
+					}
+				}
+				AND = {
+					wealth = 7500
+					any_realm_province = {
+						NOT = { hospital_level = 1 }
+						count = 100
+						NOT = { count = 150 }
+					}
+				}
+				AND = {
+					wealth = 10000
+					any_realm_province = {
+						NOT = { hospital_level = 1 }
+						count = 150
+						NOT = { count = 200 }
+					}
+				}
+			}
+		}
+		effect = {
+			hidden_tooltip = {
+				if = {
+					limit = {
+						any_realm_province = {
+							NOT = { hospital_level = 1 }
+							count = 3
+							NOT = { count = 5 }
+						}
+					}
+					wealth = -250
+				}
+				if = {
+					limit = {
+						any_realm_province = {
+							NOT = { hospital_level = 1 }
+							count = 5
+							NOT = { count = 10 }
+						}
+					}
+					wealth = -500
+				}
+				if = {
+					limit = {
+						any_realm_province = {
+							NOT = { hospital_level = 1 }
+							count = 10
+							NOT = { count = 20 }
+						}
+					}
+					wealth = -1000
+				}
+				if = {
+					limit = {
+						any_realm_province = {
+							NOT = { hospital_level = 1 }
+							count = 20
+							NOT = { count = 30 }
+						}
+					}
+					wealth = -2000
+				}
+				if = {
+					limit = {
+						any_realm_province = {
+							NOT = { hospital_level = 1 }
+							count = 30
+							NOT = { count = 40 }
+						}
+					}
+					wealth = -3000
+				}
+				if = {
+					limit = {
+						any_realm_province = {
+							NOT = { hospital_level = 1 }
+							count = 40
+							NOT = { count = 50 }
+						}
+					}
+					wealth = -4000
+				}
+				if = {
+					limit = {
+						any_realm_province = {
+							NOT = { hospital_level = 1 }
+							count = 50
+							NOT = { count = 75 }
+						}
+					}
+					wealth = -5000
+				}
+				if = {
+					limit = {
+						any_realm_province = {
+							NOT = { hospital_level = 1 }
+							count = 75
+							NOT = { count = 100 }
+						}
+					}
+					wealth = -6000
+				}
+				if = {
+					limit = {
+						any_realm_province = {
+							NOT = { hospital_level = 1 }
+							count = 100
+							NOT = { count = 150 }
+						}
+					}
+					wealth = -7500
+				}
+				if = {
+					limit = {
+						any_realm_province = {
+							NOT = { hospital_level = 1 }
+							count = 150
+							NOT = { count = 200 }
+						}
+					}
+					wealth = -10000
+				}
+				any_realm_province = {
+					limit = {
+						NOT = { hospital_level = 1 }
+					}
+					owner = { save_event_target_as = target_owner }
+					build_holding = {
+						type = hospital
+						holder = event_target:target_owner
+					}
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}

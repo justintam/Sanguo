@@ -1,0 +1,25 @@
+# c_weigong
+
+# County Title
+title = c_weigong
+
+# Settlements
+max_settlements = 5
+
+b_weigong = castle
+b_hemucheng = temple
+#b_nianji = city
+#b_weicheng = city
+#b_demuzhi = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History
+208.1.1={
+	b_nianji = city
+}
+214.1.1={
+	b_weicheng = city
+}

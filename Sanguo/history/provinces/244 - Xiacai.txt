@@ -1,0 +1,18 @@
+# c_xiacai
+
+# County Title
+title = c_xiacai
+
+# Settlements
+max_settlements = 4
+
+b_xiacai = castle
+#b_qingcai = city
+#b_ganjia = temple
+#b_jinxiugu = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

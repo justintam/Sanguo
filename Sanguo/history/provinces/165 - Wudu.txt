@@ -1,0 +1,18 @@
+# c_wudu
+
+# County Title
+title = c_wudu
+
+# Settlements
+max_settlements = 4
+
+b_wudu = tribal
+b_sanguan = castle
+#b_xining = temple
+#b_deqen = castle
+
+# Misc
+culture = di
+religion = baima
+
+#History

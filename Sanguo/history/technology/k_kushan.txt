@@ -1,0 +1,16 @@
+#KUSHAN
+technology = {
+	titles = {
+		d_turpan
+	}
+	184 = {
+		military = 2.0
+		economy = 2.0
+		culture = 2.0
+	}
+	300 = {
+		military = 4.0
+		economy = 4.0
+		culture = 4.0
+	}
+}

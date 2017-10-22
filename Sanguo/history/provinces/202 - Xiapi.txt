@@ -1,0 +1,23 @@
+# c_xiapi
+
+# County Title
+title = c_xiapi
+
+# Settlements
+max_settlements = 5
+
+b_xiapi = castle
+b_tuzhong = city
+b_tutang = city
+#b_jiaoyi = temple
+#b_dingfei = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History
+192.1.1={
+	religion = buddhist
+	b_jiaoyi = temple
+}

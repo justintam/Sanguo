@@ -1,0 +1,22 @@
+# c_wannian
+
+# County Title
+title = c_wannian
+
+# Settlements
+max_settlements = 5
+
+b_wannian = castle
+b_xiaguixian = city
+#b_chenying = city
+#b_chengguan = castle
+#b_chennian = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History
+210.1.1={
+	b_chenying = city
+}

@@ -1,0 +1,20 @@
+# c_anyi
+
+# County Title
+title = c_anyi
+
+# Settlements
+max_settlements = 6
+
+b_anyi = castle
+b_yanjian = city
+b_yucheng = city
+b_pubang = city
+#b_wanli = city
+#b_xinjian = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

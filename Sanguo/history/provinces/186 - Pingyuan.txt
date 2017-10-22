@@ -1,0 +1,19 @@
+# c_pingyuan
+
+# County Title
+title = c_pingyuan
+
+# Settlements
+max_settlements = 5
+
+b_pingyuan = castle
+b_gaotang = city
+#b_nongwu = temple
+#b_dongshi = castle
+#b_hetou = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

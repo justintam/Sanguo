@@ -1,0 +1,17 @@
+# c_luoluo
+
+# County Title
+title = c_luoluo
+
+# Settlements
+max_settlements = 3
+
+b_luoluo = tribal
+#b_xinha = city
+#b_tumu = temple
+
+# Misc
+culture = xianbei
+religion = tengri_pagan
+
+#History

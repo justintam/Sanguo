@@ -1,0 +1,18 @@
+# c_licheng
+
+# County Title
+title = c_licheng
+
+# Settlements
+max_settlements = 4
+
+b_licheng = castle
+b_zhongcheng = city
+#b_binzhe = temple
+#b_jinzhe = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

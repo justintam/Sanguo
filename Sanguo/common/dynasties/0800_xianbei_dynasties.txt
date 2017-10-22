@@ -1,0 +1,120 @@
+800 = {
+	name="Tanshihuai"
+	culture = xianbei
+}
+801 = {
+	name="Murong"
+	culture = xianbei
+}
+802 = {
+	name="Tuoba"
+	culture = xianbei
+}
+803 = {
+	name="Huaitou"
+	culture = xianbei
+}
+804 = {
+	name="Kezui"
+	culture = xianbei
+}
+805 = {
+	name="Mijia"
+	culture = xianbei
+}
+806 = {
+	name="Queji"
+	culture = xianbei
+}
+807 = {
+	name="Queju"
+	culture = xianbei
+}
+808 = {
+	name="Rilutuiyan"
+	culture = xianbei
+}
+809 = {
+	name="Suli"
+	culture = xianbei
+}
+810 = {
+	name="Yanliyou"
+	culture = xianbei
+}
+811 = {
+	name="Zhijianluoluo"
+	culture = xianbei
+}
+812 = {
+	name="Duan"
+	culture = xianbei
+}
+813 = {
+	name="Jujuan"
+	culture = xianbei
+}
+814 = {
+	name="Khitan"
+	culture = xianbei
+}
+815 = {
+	name="Muyu"
+	culture = xianbei
+}
+816 = {
+	name="Muyun"
+	culture = xianbei
+}
+817 = {
+	name="Nirun"
+	culture = xianbei
+}
+818 = {
+	name="Qifu"
+	culture = xianbei
+}
+819 = {
+	name="Rouran"
+	culture = xianbei
+}
+820 = {
+	name="Shiwei"
+	culture = xianbei
+}
+821 = {
+	name="Shizhen"
+	culture = xianbei
+}
+822 = {
+	name="Tufa"
+	culture = xianbei
+}
+823 = {
+	name="Tuyuhun"
+	culture = xianbei
+}
+824 = {
+	name="Yelu"
+	culture = xianbei
+}
+825 = {
+	name="Yujiuliu"
+	culture = xianbei
+}
+826 = {
+	name="Yuwen"
+	culture = xianbei
+}
+827 = {
+	name="Ding"
+	culture = xianbei
+}
+828 = {
+	name="Dugu"
+	culture = xianbei
+}
+829 = {
+	name="Zhejue"
+	culture = xianbei
+}

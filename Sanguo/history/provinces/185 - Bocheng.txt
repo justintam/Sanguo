@@ -1,0 +1,19 @@
+# c_bocheng
+
+# County Title
+title = c_bocheng
+
+# Settlements
+max_settlements = 5
+
+b_bocheng = castle
+b_baogu = city
+b_beizhongju = city
+#b_binsha = castle
+#b_jiajin = city
+
+# Misc
+culture = han
+religion = taiping
+
+#History

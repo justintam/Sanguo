@@ -1,0 +1,18 @@
+# c_turpan
+
+# County Title
+title = c_turpan
+
+# Settlements
+max_settlements = 4
+
+b_turpan = castle
+b_jiaohe = temple
+#b_lukeqin = temple
+#b_karakhoja = castle
+
+# Misc
+culture = yuezhi
+religion = buddhist
+
+#History

@@ -1,0 +1,28 @@
+# c_hepu
+
+# County Title
+title = c_hepu
+
+# Settlements
+max_settlements = 5
+
+b_hepu = castle
+#b_wumu = city
+#b_leizhou = city
+#b_maoming = castle
+#b_zhanjiang = city
+
+# Misc
+culture = nanyue
+religion = animist
+
+#History
+200.1.1={
+	b_wumu = city
+}
+208.1.1={
+	b_leizhou = city
+}
+214.1.1={
+	b_maoming = castle
+}

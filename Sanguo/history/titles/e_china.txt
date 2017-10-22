@@ -1,0 +1,81 @@
+# e_china
+1.1.1={
+	law = succ_feudal_elective
+	law = agnatic_succession
+	law = imperial_administration
+	law = vice_royalty_3
+	law = crown_authority_0
+	law = centralization_0
+	effect = {
+		set_title_flag = premier_title
+	}
+}
+#Li Gu
+147.1.1={
+	holder=4404 #Zhao Jie
+}
+149.1.1={
+	holder=0 #None
+}
+166.1.1={
+	holder=4283 #Zhou Jing
+}
+168.1.1={
+	holder=0 #None
+}
+178.1.1={
+	holder=4297 #Qiao Xuan
+}
+179.1.1={
+	holder=0 #None
+}
+182.1.1={
+	holder=1297 #Yang Ci
+}
+184.1.1={
+	holder=100 #He Jin
+}
+188.1.1={
+	law = feudal_administration
+	law = vice_royalty_0
+}
+189.8.22={
+	holder=300 #Dong Zhuo
+}
+190.1.1={
+	law = vice_royalty_1
+	law = crown_authority_1
+	law = centralization_1
+	law = execution_voting_power_0
+	law = banish_voting_power_0
+}
+192.5.22={
+	holder=120 #Wang Yun
+}
+192.7.1={
+	holder=307 #Li Jue
+}
+196.1.1={
+	holder=400 #Cao Cao
+}
+207.1.1={
+	law = vice_royalty_2
+	law = crown_authority_2
+	law = centralization_2
+	law = war_voting_power_0
+	law = imprison_voting_power_0
+}
+213.6.1={
+	law = vice_royalty_3
+	law = crown_authority_3
+	law = centralization_3
+	law = grant_title_voting_power_0
+}
+220.3.15={
+	holder=10400 #Cao Pi
+}
+220.12.10={
+	holder=0 #None
+}
+
+#Next Dynasty

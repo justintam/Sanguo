@@ -1,0 +1,100 @@
+500 = {
+	name="Luandi"
+	culture = xiongnu
+}
+501 = {
+	name="Lao"
+	culture = xiongnu
+}
+502 = {
+	name="Chubei"
+	culture = xiongnu
+}
+503 = {
+	name="Huyan"
+	culture = xiongnu
+}
+504 = {
+	name="Lan"
+	culture = xiongnu
+}
+505 = {
+	name="Qiulin"
+	culture = xiongnu
+}
+506 = {
+	name="Suibu" #Xubu
+	culture = xiongnu
+}
+507 = {
+	name="Hao"
+	culture = xiongnu
+}
+508 = {
+	name="Helian"
+	culture = xiongnu
+}
+509 = {
+	name="Juqu"
+	culture = xiongnu
+}
+510 = {
+	name="Tiefa"
+	culture = xiongnu
+}
+511 = {
+	name="Kiyan"
+	culture = xiongnu
+}
+512 = {
+	name="Rizhu"
+	culture = xiongnu
+}
+513 = {
+	name="Jie"
+	culture = xiongnu
+}
+514 = {
+	name="Ashina"
+	culture = xiongnu
+}
+515 = {
+	name="Yujiulu"
+	culture = xiongnu
+}
+516 = {
+	name="Hulu"
+	culture = xiongnu
+}
+517 = {
+	name="Xiutu"
+	culture = xiongnu
+}
+518 = {
+	name="Luhou"
+	culture = xiongnu
+}
+519 = {
+	name="Zhelan"
+	culture = xiongnu
+}
+520 = {
+	name="Jin"
+	culture = xiongnu
+}
+521 = {
+	name="Mo"
+	culture = xiongnu
+}
+522 = {
+	name="Xiluo"
+	culture = xiongnu
+}
+523 = {
+	name="Xiuchuge"
+	culture = xiongnu
+}
+524 = {
+	name="Goulong"
+	culture = xiongnu
+}

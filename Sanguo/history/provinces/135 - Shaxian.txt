@@ -1,0 +1,20 @@
+# c_shaxian
+
+# County Title
+title = c_shaxian
+
+# Settlements
+max_settlements = 3
+
+b_shaxian = castle
+#b_panqi = city
+#b_sanli = temple
+
+# Misc
+culture = han
+religion = confucian
+
+#History
+214.1.1={
+	b_panqi = city
+}

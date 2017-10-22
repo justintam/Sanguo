@@ -1,0 +1,19 @@
+# c_ju
+
+# County Title
+title = c_ju
+
+# Settlements
+max_settlements = 5
+
+b_ju = castle
+b_pixiang = city
+b_yunting = city
+#b_wangxi = castle
+#b_niuhai = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

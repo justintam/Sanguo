@@ -1,0 +1,18 @@
+# c_dianchi
+
+# County Title
+title = c_dianchi
+
+# Settlements
+max_settlements = 4
+
+b_dianchi = castle
+b_mayishu = temple
+#b_fanghu = temple
+#b_yiting = castle
+
+# Misc
+culture = nanman
+religion = huojiao
+
+#History

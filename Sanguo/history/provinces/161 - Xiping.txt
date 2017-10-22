@@ -1,0 +1,18 @@
+# c_xiping
+
+# County Title
+title = c_xiping
+
+# Settlements
+max_settlements = 4
+
+b_xiping = castle
+b_lingbo = tribal
+#b_zezhou = city
+#b_nancun = temple
+
+# Misc
+culture = qiang
+religion = baishi
+
+#History

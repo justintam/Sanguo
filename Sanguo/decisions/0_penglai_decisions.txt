@@ -1,0 +1,647 @@
+decisions = {
+	
+	seek_refuge = {
+		from_potential = {
+			is_landed = yes
+			NOT = { has_landed_title = k_confucian }
+		}
+		potential = {
+			is_ruler = no
+			NOR = {
+				trait = refuge
+				trait = eunuch
+				trait = incapable
+			}
+			is_female = no
+			is_adult = yes
+			prisoner = no
+			is_primary_heir = no
+			culture = han
+			religion = confucian
+			NOT = { dynasty = none }
+			NOT = { dynasty = FROM }
+			NOT = { prestige = 50 }
+			NOT = { num_of_claims = 1}
+			host = { character = FROM }
+			liege = { character = FROM }
+			personal_opinion_diff = { first = ROOT second = LIEGE value = 80 }
+		}
+		allow = {
+			in_command = no
+		}
+		effect = {
+			character_event = { id = SAN.53 }
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.01 #Percent
+			}
+			modifier = {
+				factor = 0.25
+				is_married = yes
+			}
+			modifier = {
+				factor = 0.25
+				num_of_children = 1
+			}
+			modifier = {
+				factor = 0.1
+				is_councillor = yes
+			}
+			modifier = {
+				factor = 5
+				any_liege = {
+					war = yes
+				}
+			}
+			modifier = {
+				factor = 2
+				trait = erudite
+			}
+			modifier = {
+				factor = 2
+				trait = scholar
+			}
+			modifier = {
+				factor = 2
+				trait = gardener
+			}
+			modifier = {
+				factor = 0.75
+				OR = {
+					trait = misguided_warrior
+					trait = tough_soldier
+					trait = skilled_tactician
+					trait = indulgent_wastrel
+					trait = thrifty_clerk
+					trait = fortune_builder
+					trait = naive_appeaser
+					trait = underhanded_rogue
+					trait = charismatic_negotiator
+					trait = amateurish_plotter
+					trait = flamboyant_schemer
+					trait = intricate_webweaver
+					trait = detached_priest
+					trait = martial_cleric
+					trait = scholarly_theologian
+				}
+			}
+			modifier = {
+				factor = 1.25
+				OR = {
+					trait = brilliant_strategist
+					trait = midas_touched
+					trait = grey_eminence
+					trait = elusive_shadow
+					trait = mastermind_theologian
+				}
+			}
+			modifier = {
+				factor = 1.25
+				trait = detached_priest
+			}
+			modifier = {
+				factor = 1.25
+				trait = martial_cleric
+			}
+			modifier = {
+				factor = 1.25
+				trait = scholarly_theologian
+			}
+			modifier = {
+				factor = 1.5
+				trait = mastermind_theologian
+			}
+			modifier = {
+				factor = 1.05
+				trait = chaste
+			}
+			modifier = {
+				factor = 1.05
+				trait = craven
+			}
+			modifier = {
+				factor = 1.05
+				trait = genius
+			}
+			modifier = {
+				factor = 1.05
+				trait = humble
+			}
+			modifier = {
+				factor = 1.05
+				trait = patient
+			}
+			modifier = {
+				factor = 1.05
+				trait = quick
+			}
+			modifier = {
+				factor = 1.05
+				trait = zealous
+			}
+		}
+	}
+	
+	hire_scholar = {
+		potential = {
+			AND = {
+				ai = no
+				in_command = no
+			}
+			is_playable = yes
+			is_adult = yes
+			prisoner = no
+			OR = {
+				AND = {
+					capital_scope = {
+						region = world_china_bing
+					}
+					c_penglai = {
+						holder_scope = {
+							any_courtier = {
+								is_adult = yes
+								has_character_flag = refuge_bing
+							}
+						}
+					}
+				}
+				AND = {
+					capital_scope = {
+						region = world_china_ji
+					}
+					c_penglai = {
+						holder_scope = {
+							any_courtier = {
+								is_adult = yes
+								has_character_flag = refuge_ji
+							}
+						}
+					}
+				}
+				AND = {
+					capital_scope = {
+						region = world_china_jiaozhi
+					}
+					c_penglai = {
+						holder_scope = {
+							any_courtier = {
+								is_adult = yes
+								has_character_flag = refuge_jiaozhi
+							}
+						}
+					}
+				}
+				AND = {
+					capital_scope = {
+						region = world_china_jing
+					}
+					c_penglai = {
+						holder_scope = {
+							any_courtier = {
+								is_adult = yes
+								has_character_flag = refuge_jing
+							}
+						}
+					}
+				}
+				AND = {
+					capital_scope = {
+						region = world_china_liang
+					}
+					c_penglai = {
+						holder_scope = {
+							any_courtier = {
+								is_adult = yes
+								has_character_flag = refuge_liang
+							}
+						}
+					}
+				}
+				AND = {
+					capital_scope = {
+						region = world_china_qing
+					}
+					c_penglai = {
+						holder_scope = {
+							any_courtier = {
+								is_adult = yes
+								has_character_flag = refuge_qing
+							}
+						}
+					}
+				}
+				AND = {
+					capital_scope = {
+						region = world_china_sili
+					}
+					c_penglai = {
+						holder_scope = {
+							any_courtier = {
+								is_adult = yes
+								has_character_flag = refuge_sili
+							}
+						}
+					}
+				}
+				AND = {
+					capital_scope = {
+						region = world_china_xu
+					}
+					c_penglai = {
+						holder_scope = {
+							any_courtier = {
+								is_adult = yes
+								has_character_flag = refuge_xu
+							}
+						}
+					}
+				}
+				AND = {
+					capital_scope = {
+						region = world_china_yan
+					}
+					c_penglai = {
+						holder_scope = {
+							any_courtier = {
+								is_adult = yes
+								has_character_flag = refuge_yan
+							}
+						}
+					}
+				}
+				AND = {
+					capital_scope = {
+						region = world_china_yang
+					}
+					c_penglai = {
+						holder_scope = {
+							any_courtier = {
+								is_adult = yes
+								has_character_flag = refuge_yang
+							}
+						}
+					}
+				}
+				AND = {
+					capital_scope = {
+						region = world_china_yi
+					}
+					c_penglai = {
+						holder_scope = {
+							any_courtier = {
+								is_adult = yes
+								has_character_flag = refuge_yi
+							}
+						}
+					}
+				}
+				AND = {
+					capital_scope = {
+						region = world_china_you
+					}
+					c_penglai = {
+						holder_scope = {
+							any_courtier = {
+								is_adult = yes
+								has_character_flag = refuge_you
+							}
+						}
+					}
+				}
+				AND = {
+					capital_scope = {
+						region = world_china_yu
+					}
+					c_penglai = {
+						holder_scope = {
+							any_courtier = {
+								is_adult = yes
+								has_character_flag = refuge_yu
+							}
+						}
+					}
+				}
+			}
+		}
+		allow = {
+			prestige = 100
+			wealth = 25
+		}
+		effect = {
+			prestige = -25
+			wealth = -25
+			hidden_tooltip = {
+				set_character_flag = search_officer
+				if = {
+					limit = {
+						capital_scope = {
+							region = world_china_bing
+						}
+					}
+					c_penglai = {
+						holder_scope = {
+							random_courtier = {
+								limit = {
+									is_adult = yes
+									has_character_flag = refuge_bing
+								}
+								character_event = { id = SAN.27 }
+								ROOT = {
+									clr_character_flag = search_officer
+								}
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						capital_scope = {
+							region = world_china_ji
+						}
+					}
+					c_penglai = {
+						holder_scope = {
+							random_courtier = {
+								limit = {
+									is_adult = yes
+									has_character_flag = refuge_ji
+								}
+								character_event = { id = SAN.27 }
+								ROOT = {
+									clr_character_flag = search_officer
+								}
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						capital_scope = {
+							region = world_china_jiaozhi
+						}
+					}
+					c_penglai = {
+						holder_scope = {
+							random_courtier = {
+								limit = {
+									is_adult = yes
+									has_character_flag = refuge_jiaozhi
+								}
+								character_event = { id = SAN.27 }
+								ROOT = {
+									clr_character_flag = search_officer
+								}
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						capital_scope = {
+							region = world_china_jing
+						}
+					}
+					c_penglai = {
+						holder_scope = {
+							random_courtier = {
+								limit = {
+									is_adult = yes
+									has_character_flag = refuge_jing
+								}
+								character_event = { id = SAN.27 }
+								ROOT = {
+									clr_character_flag = search_officer
+								}
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						capital_scope = {
+							region = world_china_liang
+						}
+					}
+					c_penglai = {
+						holder_scope = {
+							random_courtier = {
+								limit = {
+									is_adult = yes
+									has_character_flag = refuge_liang
+								}
+								character_event = { id = SAN.27 }
+								ROOT = {
+									clr_character_flag = search_officer
+								}
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						capital_scope = {
+							region = world_china_qing
+						}
+					}
+					c_penglai = {
+						holder_scope = {
+							random_courtier = {
+								limit = {
+									is_adult = yes
+									has_character_flag = refuge_qing
+								}
+								character_event = { id = SAN.27 }
+								ROOT = {
+									clr_character_flag = search_officer
+								}
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						capital_scope = {
+							region = world_china_sili
+						}
+					}
+					c_penglai = {
+						holder_scope = {
+							random_courtier = {
+								limit = {
+									is_adult = yes
+									has_character_flag = refuge_sili
+								}
+								character_event = { id = SAN.27 }
+								ROOT = {
+									clr_character_flag = search_officer
+								}
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						capital_scope = {
+							region = world_china_xu
+						}
+					}
+					c_penglai = {
+						holder_scope = {
+							random_courtier = {
+								limit = {
+									is_adult = yes
+									has_character_flag = refuge_xu
+								}
+								character_event = { id = SAN.27 }
+								ROOT = {
+									clr_character_flag = search_officer
+								}
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						capital_scope = {
+							region = world_china_yan
+						}
+					}
+					c_penglai = {
+						holder_scope = {
+							random_courtier = {
+								limit = {
+									is_adult = yes
+									has_character_flag = refuge_yan
+								}
+								character_event = { id = SAN.27 }
+								ROOT = {
+									clr_character_flag = search_officer
+								}
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						capital_scope = {
+							region = world_china_yang
+						}
+					}
+					c_penglai = {
+						holder_scope = {
+							random_courtier = {
+								limit = {
+									is_adult = yes
+									has_character_flag = refuge_yang
+								}
+								character_event = { id = SAN.27 }
+								ROOT = {
+									clr_character_flag = search_officer
+								}
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						capital_scope = {
+							region = world_china_yi
+						}
+					}
+					c_penglai = {
+						holder_scope = {
+							random_courtier = {
+								limit = {
+									is_adult = yes
+									has_character_flag = refuge_yi
+								}
+								character_event = { id = SAN.27 }
+								ROOT = {
+									clr_character_flag = search_officer
+								}
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						capital_scope = {
+							region = world_china_you
+						}
+					}
+					c_penglai = {
+						holder_scope = {
+							random_courtier = {
+								limit = {
+									is_adult = yes
+									has_character_flag = refuge_you
+								}
+								character_event = { id = SAN.27 }
+								ROOT = {
+									clr_character_flag = search_officer
+								}
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						capital_scope = {
+							region = world_china_yu
+						}
+					}
+					c_penglai = {
+						holder_scope = {
+							random_courtier = {
+								limit = {
+									is_adult = yes
+									has_character_flag = refuge_yu
+								}
+								character_event = { id = SAN.27 }
+								ROOT = {
+									clr_character_flag = search_officer
+								}
+							}
+						}
+					}
+				}
+				
+				###
+				
+				if = {
+					limit = {
+						has_character_flag = search_officer
+					}
+					clr_character_flag = search_officer
+					character_event = { id = SAN.28 }
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1 #Percent
+			}
+			modifier = {
+				factor = 1.5
+				trait = erudite
+			}
+			modifier = {
+				factor = 1.5
+				trait = scholar
+			}
+			modifier = {
+				factor = 1.5
+				trait = zealous
+			}
+		}
+	}
+}

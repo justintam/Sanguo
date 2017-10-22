@@ -1,0 +1,436 @@
+#######Gongsun Dynasty range: 900 - 999######
+
+900 = {
+	name="Zan"
+	dynasty=26
+	dna="hyqfjiwbkse"
+	properties="ceyeck000000"
+	religion="confucian"
+	culture="han"
+	father=905
+    trait="brilliant_strategist"
+    trait="fate_lead"
+    trait="destined"
+    trait="duel_master_warrior"
+    trait="strong"
+    trait="fair"
+    trait="ambitious"
+    trait="diligent"
+    trait="patient"
+    trait="cynical"
+    trait="brave"
+	trait="organizer"
+	trait="cavalry_leader"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		add_spouse=908
+	}
+	188.4.1={
+		effect={
+			add_rival=1600
+		}
+	}
+	191.1.1={
+		effect={
+			add_rival=700
+		}
+	}
+	193.4.1={
+		effect={
+			add_rival=1604
+		}
+	}
+	199.1.1={
+		death=yes
+	}
+}
+901 = {
+	name="Yue"
+	dynasty=26
+	religion="confucian"
+	culture="han"
+	father=906
+    trait="skilled_tactician"
+    trait="duelist"
+    trait="humble"
+    trait="diligent"
+    trait="patient"
+    trait="strong"
+    trait="brave"
+	trait="organizer"
+	trait="cavalry_leader"
+	162.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=900
+	}
+	191.6.1={
+		death=yes
+	}
+}
+902 = {
+	name="Fan"
+	dynasty=26
+	religion="confucian"
+	culture="han"
+	father=906
+    trait="skilled_tactician"
+    trait="strategist"
+    trait="humble"
+    trait="diligent"
+    trait="patient"
+    trait="strong"
+    trait="brave"
+	trait="organizer"
+	trait="cavalry_leader"
+	163.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=900
+	}
+	199.1.1={
+		death=yes
+	}
+}
+903 = {
+	name="Xu"
+	dynasty=26
+	dna="hyqfjiwbkse"
+	properties="ceyeck000000"
+	religion="confucian"
+	culture="han"
+	father=900
+    trait="skilled_tactician"
+    trait="duel_trained_warrior"
+    trait="robust"
+    trait="fair"
+    trait="brave"
+    trait="ambitious"
+    trait="diligent"
+    trait="patient"
+	trait="zealous"
+	trait="organizer"
+	180.1.1={
+		birth=yes
+	}
+	199.3.1={
+		death=yes
+	}
+}
+904 = {
+	name="Zhen"
+	dynasty=26
+	religion="confucian"
+	culture="han"
+	father=911
+	100.1.1={
+		birth=yes
+	}
+	160.1.1={
+		death=yes
+	}
+}
+905 = {
+	name="Bin"
+	dynasty=26
+	religion="confucian"
+	culture="han"
+	father=904
+	125.1.1={
+		birth=yes
+	}
+	180.1.1={
+		death=yes
+	}
+}
+906 = {
+	name="Fu"
+	dynasty=26
+	religion="confucian"
+	culture="han"
+	father=904
+	130.1.1={
+		birth=yes
+	}
+	180.1.1={
+		death=yes
+	}
+}
+907 = {
+	name="Jie"
+	dynasty=70
+	religion="confucian"
+	culture="han"
+    trait="scholarly_theologian"
+    trait="content"
+    trait="diligent"
+    trait="patient"
+    trait="gregarious"
+    trait="temperate"
+	140.1.1={
+		birth=yes
+	}
+	200.1.1={
+		death=yes
+	}
+}
+908 = {
+	name="Ya"
+	female=yes
+	dynasty=70
+	religion="confucian"
+	culture="han"
+	father=907
+    trait="scholarly_theologian"
+    trait="content"
+    trait="diligent"
+    trait="patient"
+    trait="gregarious"
+    trait="temperate"
+	165.1.1={
+		birth=yes
+	}
+	184.1.1={
+		add_spouse=900
+	}
+	200.1.1={
+		death=yes
+	}
+}
+909 = {
+	name="Dan"
+	dynasty=966
+	religion="confucian"
+	culture="han"
+    trait="misguided_warrior"
+    trait="content"
+    trait="diligent"
+    trait="patient"
+    trait="brave"
+    trait="zealous"
+	160.1.1={
+		birth=yes
+	}
+	195.1.1={
+		death=yes
+	}
+}
+910 = {
+	name="Kai"
+	dynasty=1442
+	religion="confucian"
+	culture="han"
+    trait="skilled_tactician"
+    trait="strategist"
+    trait="diligent"
+    trait="patient"
+    trait="brave"
+    trait="zealous"
+	trait="organizer"
+	trait="aggressive_leader"
+	160.1.1={
+		birth=yes
+	}
+	199.1.1={
+		death=yes
+	}
+}
+911 = {
+	name="Gao"
+	dynasty=26
+	religion="confucian"
+	culture="han"
+	75.1.1={
+		birth=yes
+	}
+	130.1.1={
+		death=yes
+	}
+}
+912 = {
+	name="Ming"
+	dynasty=26
+	religion="confucian"
+	culture="han"
+	father=911
+	105.1.1={
+		birth=yes
+	}
+	160.1.1={
+		death=yes
+	}
+}
+913 = {
+	name="Shen"
+	dynasty=26
+	religion="confucian"
+	culture="han"
+	father=912
+	135.1.1={
+		birth=yes
+	}
+	180.1.1={
+		death=yes
+	}
+}
+914 = {
+	name="Ji"
+	dynasty=26
+	religion="confucian"
+	culture="han"
+	father=913
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=39
+	}
+	193.1.1={
+		employer=900
+	}
+	230.1.1={
+		death=yes
+	}
+}
+
+### 970-999  ###
+### Gongsun  ###
+### Liaodong ###
+
+970 = {
+	name="Yan"
+	dynasty=1441
+	religion="confucian"
+	culture="han"
+	120.1.1={
+		birth=yes
+	}
+	180.1.1={
+		death=yes
+	}
+}
+971 = {
+	name="Du"
+	dynasty=1441
+	religion="confucian"
+	culture="han"
+	father=970
+    trait="skilled_tactician"
+    trait="strategist"
+    trait="ambitious"
+    trait="diligent"
+    trait="patient"
+    trait="deceitful"
+    trait="temperate"
+	trait="organizer"
+	trait="flanker"
+	150.1.1={
+		birth=yes
+	}
+	204.1.1={
+		death=yes
+	}
+}
+972 = {
+	name="Kang"
+	dynasty=1441
+	religion="confucian"
+	culture="han"
+	father=971
+    trait="skilled_tactician"
+    trait="strategist"
+    trait="ambitious"
+    trait="diligent"
+    trait="patient"
+    trait="deceitful"
+    trait="temperate"
+	trait="organizer"
+	trait="aggressive_leader"
+	180.1.1={
+		birth=yes
+	}
+	220.1.1={
+		death=yes
+	}
+}
+973 = {
+	name="Gong"
+	dynasty=1441
+	religion="confucian"
+	culture="han"
+	father=971
+    trait="skilled_tactician"
+    trait="strategist"
+    trait="ambitious"
+    trait="diligent"
+    trait="patient"
+    trait="deceitful"
+    trait="temperate"
+	trait="organizer"
+	trait="flanker"
+	183.1.1={
+		birth=yes
+	}
+	250.1.1={
+		death=yes
+	}
+}
+974 = {
+	name="Yuan"
+	dynasty=1441
+	religion="confucian"
+	culture="han"
+	father=972
+    trait="intricate_webweaver"
+    trait="schemer"
+    trait="ambitious"
+    trait="diligent"
+    trait="patient"
+    trait="deceitful"
+    trait="temperate"
+	200.1.1={
+		birth=yes
+	}
+	238.1.1={
+		death=yes
+	}
+}
+975 = {
+	name="Huang"
+	dynasty=1441
+	religion="confucian"
+	culture="han"
+	father=972
+    trait="detached_priest"
+    trait="honest"
+    trait="ambitious"
+    trait="patient"
+	trait="cynical"
+	trait="deceitful"
+    trait="temperate"
+	198.1.1={
+		birth=yes
+	}
+	238.1.1={
+		death=yes
+	}
+}
+976 = {
+	name="Xiu"
+	dynasty=1441
+	religion="confucian"
+	culture="han"
+	father=974
+	225.1.1={
+		birth=yes
+	}
+	238.1.1={
+		death=yes
+	}
+}
+
+#Yue Hedang - Merchant friend

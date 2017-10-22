@@ -1,0 +1,20 @@
+name = "Showdown in Changan"
+
+casus_belli={
+	actor=308
+	recipient=307
+	casus_belli=claim_all
+	date=195.4.1
+}
+
+195.4.1 = {
+	add_defender = 307 #Li Jue
+	add_attacker = 308 #Guo Si
+}
+
+196.1.1={
+	rem_defender = 307 #Li Jue
+	rem_attacker = 308 #Guo Si
+}
+
+   

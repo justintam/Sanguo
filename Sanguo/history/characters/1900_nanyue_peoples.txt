@@ -1,0 +1,98 @@
+1900 = {
+	name="Tien"
+	dynasty=316
+	religion="confucian"
+	culture="nanyue"
+	155.1.1={
+		birth=yes
+	}
+	215.1.1={
+		death=yes
+	}
+}
+1901 = {
+	name="Oulin"
+	dynasty=342
+	religion="animist"
+	culture="nanyue"
+	110.1.1={
+		birth=yes
+	}
+	180.1.1={
+		death=yes
+	}
+}
+1902 = {
+	name="Oulian"
+	dynasty=342
+	religion="animist"
+	culture="nanyue"
+	father=1901
+	160.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1903 = {
+	name="Thien"
+	dynasty=337
+	religion="animist"
+	culture="nanyue"
+	160.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1904 = {
+	name="Truc"
+	dynasty=348
+	religion="animist"
+	culture="nanyue"
+	160.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1905 = {
+	name="Khanh"
+	female=yes
+	dynasty=344
+	religion="animist"
+	culture="nanyue"
+	160.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1906 = {
+	name="Giap"
+	dynasty=319
+	religion="animist"
+	culture="nanyue"
+	160.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1907 = {
+	name="Long"
+	dynasty=323
+	religion="animist"
+	culture="nanyue"
+	160.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}

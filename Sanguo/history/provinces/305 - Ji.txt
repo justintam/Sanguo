@@ -1,0 +1,17 @@
+# c_ji
+
+# County Title
+title = c_ji
+
+# Settlements
+max_settlements = 3
+
+b_tianjin = castle
+#b_tianjincheng = city
+#b_yanshan = temple
+
+# Misc
+culture = han
+religion = confucian
+
+#History

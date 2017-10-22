@@ -1,0 +1,1506 @@
+###########################################
+#                                         #
+# Sanguo Events		  	            	  #
+#                                         #
+# ID FAT.1		              		  	  #
+#                                         #
+#                                         #
+#                                         #
+#                                         #
+#                                         #
+#                                         #
+#                                         #
+###########################################
+
+namespace = FAT
+
+#Sex Count
+character_event = {
+	id = FAT.1
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	trigger = {
+		NOT = { trait = fate_sex }
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				NOR = {
+					has_character_flag = loved_1
+					has_character_flag = loved_2
+					has_character_flag = loved_3
+					has_character_flag = loved_4
+					has_character_flag = loved_5
+					has_character_flag = loved_6
+					has_character_flag = loved_7
+					has_character_flag = loved_8
+					has_character_flag = loved_9
+					has_character_flag = loved_10
+					has_character_flag = loved_11
+					has_character_flag = loved_12
+					has_character_flag = loved_13
+					has_character_flag = loved_14
+					has_character_flag = loved_15
+					has_character_flag = loved_16
+					has_character_flag = loved_17
+					has_character_flag = loved_18
+					has_character_flag = loved_19
+					has_character_flag = loved_20
+					has_character_flag = loved_21
+					has_character_flag = loved_22
+					has_character_flag = loved_23
+					has_character_flag = loved_24
+					has_character_flag = loved_25
+				}
+			}
+			set_character_flag = loved_1
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = loved_1 }
+			clr_character_flag = loved_1
+			set_character_flag = loved_2
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = loved_2 }
+			clr_character_flag = loved_2
+			set_character_flag = loved_3
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = loved_3 }
+			clr_character_flag = loved_3
+			set_character_flag = loved_4
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = loved_4 }
+			clr_character_flag = loved_4
+			set_character_flag = loved_5
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = loved_5 }
+			clr_character_flag = loved_5
+			set_character_flag = loved_6
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = loved_6 }
+			clr_character_flag = loved_6
+			set_character_flag = loved_7
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = loved_7 }
+			clr_character_flag = loved_7
+			set_character_flag = loved_8
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = loved_8 }
+			clr_character_flag = loved_8
+			set_character_flag = loved_9
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = loved_9 }
+			clr_character_flag = loved_9
+			set_character_flag = loved_10
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = loved_10 }
+			clr_character_flag = loved_10
+			set_character_flag = loved_11
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = loved_11 }
+			clr_character_flag = loved_11
+			set_character_flag = loved_12
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = loved_12 }
+			clr_character_flag = loved_12
+			set_character_flag = loved_13
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = loved_13 }
+			clr_character_flag = loved_13
+			set_character_flag = loved_14
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = loved_14 }
+			clr_character_flag = loved_14
+			set_character_flag = loved_15
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = loved_15 }
+			clr_character_flag = loved_15
+			set_character_flag = loved_16
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = loved_16 }
+			clr_character_flag = loved_16
+			set_character_flag = loved_17
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = loved_17 }
+			clr_character_flag = loved_17
+			set_character_flag = loved_18
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = loved_18 }
+			clr_character_flag = loved_18
+			set_character_flag = loved_19
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = loved_19 }
+			clr_character_flag = loved_19
+			set_character_flag = loved_20
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = loved_20 }
+			clr_character_flag = loved_20
+			set_character_flag = loved_21
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = loved_21 }
+			clr_character_flag = loved_21
+			set_character_flag = loved_22
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = loved_22 }
+			clr_character_flag = loved_22
+			set_character_flag = loved_23
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = loved_23 }
+			clr_character_flag = loved_23
+			set_character_flag = loved_24
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = loved_24 }
+			clr_character_flag = loved_24
+			set_character_flag = loved_25
+			character_event = { id = FAT.2 }
+			break = yes
+		}
+	}
+}
+
+#Fated Rake
+character_event = {
+	id = FAT.2
+	desc = EVTDESC_FAT.2
+	title = EVTTITLE_FAT.2
+	picture = GFX_evt_lovers
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		add_trait = fate_sex
+	}
+	
+	option = {
+		name = EXCELLENT
+		
+		add_trait = fate_sex
+	}
+}
+
+#Battle Count
+character_event = {
+	id = FAT.3
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	trigger = {
+		NOT = { trait = fate_war }
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				NOR = {
+					has_character_flag = battle_1
+					has_character_flag = battle_2
+					has_character_flag = battle_3
+					has_character_flag = battle_4
+					has_character_flag = battle_5
+					has_character_flag = battle_6
+					has_character_flag = battle_7
+					has_character_flag = battle_8
+					has_character_flag = battle_9
+					has_character_flag = battle_10
+					has_character_flag = battle_11
+					has_character_flag = battle_12
+					has_character_flag = battle_13
+					has_character_flag = battle_14
+					has_character_flag = battle_15
+					has_character_flag = battle_16
+					has_character_flag = battle_17
+					has_character_flag = battle_18
+					has_character_flag = battle_19
+					has_character_flag = battle_20
+					has_character_flag = battle_21
+					has_character_flag = battle_22
+					has_character_flag = battle_23
+					has_character_flag = battle_24
+					has_character_flag = battle_25
+				}
+			}
+			set_character_flag = battle_1
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = battle_1 }
+			clr_character_flag = battle_1
+			set_character_flag = battle_2
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = battle_2 }
+			clr_character_flag = battle_2
+			set_character_flag = battle_3
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = battle_3 }
+			clr_character_flag = battle_3
+			set_character_flag = battle_4
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = battle_4 }
+			clr_character_flag = battle_4
+			set_character_flag = battle_5
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = battle_5 }
+			clr_character_flag = battle_5
+			set_character_flag = battle_6
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = battle_6 }
+			clr_character_flag = battle_6
+			set_character_flag = battle_7
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = battle_7 }
+			clr_character_flag = battle_7
+			set_character_flag = battle_8
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = battle_8 }
+			clr_character_flag = battle_8
+			set_character_flag = battle_9
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = battle_9 }
+			clr_character_flag = battle_9
+			set_character_flag = battle_10
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = battle_10 }
+			clr_character_flag = battle_10
+			set_character_flag = battle_11
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = battle_11 }
+			clr_character_flag = battle_11
+			set_character_flag = battle_12
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = battle_12 }
+			clr_character_flag = battle_12
+			set_character_flag = battle_13
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = battle_13 }
+			clr_character_flag = battle_13
+			set_character_flag = battle_14
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = battle_14 }
+			clr_character_flag = battle_14
+			set_character_flag = battle_15
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = battle_15 }
+			clr_character_flag = battle_15
+			set_character_flag = battle_16
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = battle_16 }
+			clr_character_flag = battle_16
+			set_character_flag = battle_17
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = battle_17 }
+			clr_character_flag = battle_17
+			set_character_flag = battle_18
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = battle_18 }
+			clr_character_flag = battle_18
+			set_character_flag = battle_19
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = battle_19 }
+			clr_character_flag = battle_19
+			set_character_flag = battle_20
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = battle_20 }
+			clr_character_flag = battle_20
+			set_character_flag = battle_21
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = battle_21 }
+			clr_character_flag = battle_21
+			set_character_flag = battle_22
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = battle_22 }
+			clr_character_flag = battle_22
+			set_character_flag = battle_23
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = battle_23 }
+			clr_character_flag = battle_23
+			set_character_flag = battle_24
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = battle_24 }
+			clr_character_flag = battle_24
+			set_character_flag = battle_25
+			character_event = { id = FAT.4 }
+			break = yes
+		}
+	}
+}
+
+#Fated General
+character_event = {
+	id = FAT.4
+	desc = EVTDESC_FAT.4
+	title = EVTTITLE_FAT.4
+	picture = GFX_evt_battle
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		add_trait = fate_war
+	}
+	
+	option = {
+		name = EXCELLENT
+
+		add_trait = fate_war
+	}
+}
+
+
+#Campaign Count
+character_event = {
+	id = FAT.5
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	trigger = {
+		NOT = { trait = fate_lead }
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				NOR = {
+					has_character_flag = campaign_1
+					has_character_flag = campaign_2
+					has_character_flag = campaign_3
+					has_character_flag = campaign_4
+					has_character_flag = campaign_5
+					has_character_flag = campaign_6
+					has_character_flag = campaign_7
+					has_character_flag = campaign_8
+					has_character_flag = campaign_9
+					has_character_flag = campaign_10
+					has_character_flag = campaign_11
+					has_character_flag = campaign_12
+					has_character_flag = campaign_13
+					has_character_flag = campaign_14
+					has_character_flag = campaign_15
+					has_character_flag = campaign_16
+					has_character_flag = campaign_17
+					has_character_flag = campaign_18
+					has_character_flag = campaign_19
+					has_character_flag = campaign_20
+					has_character_flag = campaign_21
+					has_character_flag = campaign_22
+					has_character_flag = campaign_23
+					has_character_flag = campaign_24
+					has_character_flag = campaign_25
+				}
+			}
+			set_character_flag = campaign_1
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = campaign_1 }
+			clr_character_flag = campaign_1
+			set_character_flag = campaign_2
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = campaign_2 }
+			clr_character_flag = campaign_2
+			set_character_flag = campaign_3
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = campaign_3 }
+			clr_character_flag = campaign_3
+			set_character_flag = campaign_4
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = campaign_4 }
+			clr_character_flag = campaign_4
+			set_character_flag = campaign_5
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = campaign_5 }
+			clr_character_flag = campaign_5
+			set_character_flag = campaign_6
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = campaign_6 }
+			clr_character_flag = campaign_6
+			set_character_flag = campaign_7
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = campaign_7 }
+			clr_character_flag = campaign_7
+			set_character_flag = campaign_8
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = campaign_8 }
+			clr_character_flag = campaign_8
+			set_character_flag = campaign_9
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = campaign_9 }
+			clr_character_flag = campaign_9
+			set_character_flag = campaign_10
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = campaign_10 }
+			clr_character_flag = campaign_10
+			set_character_flag = campaign_11
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = campaign_11 }
+			clr_character_flag = campaign_11
+			set_character_flag = campaign_12
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = campaign_12 }
+			clr_character_flag = campaign_12
+			set_character_flag = campaign_13
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = campaign_13 }
+			clr_character_flag = campaign_13
+			set_character_flag = campaign_14
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = campaign_14 }
+			clr_character_flag = campaign_14
+			set_character_flag = campaign_15
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = campaign_15 }
+			clr_character_flag = campaign_15
+			set_character_flag = campaign_16
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = campaign_16 }
+			clr_character_flag = campaign_16
+			set_character_flag = campaign_17
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = campaign_17 }
+			clr_character_flag = campaign_17
+			set_character_flag = campaign_18
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = campaign_18 }
+			clr_character_flag = campaign_18
+			set_character_flag = campaign_19
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = campaign_19 }
+			clr_character_flag = campaign_19
+			set_character_flag = campaign_20
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = campaign_20 }
+			clr_character_flag = campaign_20
+			set_character_flag = campaign_21
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = campaign_21 }
+			clr_character_flag = campaign_21
+			set_character_flag = campaign_22
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = campaign_22 }
+			clr_character_flag = campaign_22
+			set_character_flag = campaign_23
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = campaign_23 }
+			clr_character_flag = campaign_23
+			set_character_flag = campaign_24
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = campaign_24 }
+			clr_character_flag = campaign_24
+			set_character_flag = campaign_25
+			character_event = { id = FAT.6 }
+			break = yes
+		}
+	}
+}
+
+#Fated Warlord
+character_event = {
+	id = FAT.6
+	desc = EVTDESC_FAT.6
+	title = EVTTITLE_FAT.6
+	picture = GFX_evt_battle
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		add_trait = fate_lead
+	}
+	
+	option = {
+		name = EXCELLENT
+		
+		add_trait = fate_lead
+	}
+}
+
+#Siege Count
+character_event = {
+	id = FAT.7
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	trigger = {
+		NOT = { trait = fate_strat }
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				NOR = {
+					has_character_flag = siege_1
+					has_character_flag = siege_2
+					has_character_flag = siege_3
+					has_character_flag = siege_4
+					has_character_flag = siege_5
+					has_character_flag = siege_6
+					has_character_flag = siege_7
+					has_character_flag = siege_8
+					has_character_flag = siege_9
+					has_character_flag = siege_10
+					has_character_flag = siege_11
+					has_character_flag = siege_12
+					has_character_flag = siege_13
+					has_character_flag = siege_14
+					has_character_flag = siege_15
+					has_character_flag = siege_16
+					has_character_flag = siege_17
+					has_character_flag = siege_18
+					has_character_flag = siege_19
+					has_character_flag = siege_20
+					has_character_flag = siege_21
+					has_character_flag = siege_22
+					has_character_flag = siege_23
+					has_character_flag = siege_24
+					has_character_flag = siege_25
+				}
+			}
+			set_character_flag = siege_1
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = siege_1 }
+			clr_character_flag = siege_1
+			set_character_flag = siege_2
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = siege_2 }
+			clr_character_flag = siege_2
+			set_character_flag = siege_3
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = siege_3 }
+			clr_character_flag = siege_3
+			set_character_flag = siege_4
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = siege_4 }
+			clr_character_flag = siege_4
+			set_character_flag = siege_5
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = siege_5 }
+			clr_character_flag = siege_5
+			set_character_flag = siege_6
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = siege_6 }
+			clr_character_flag = siege_6
+			set_character_flag = siege_7
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = siege_7 }
+			clr_character_flag = siege_7
+			set_character_flag = siege_8
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = siege_8 }
+			clr_character_flag = siege_8
+			set_character_flag = siege_9
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = siege_9 }
+			clr_character_flag = siege_9
+			set_character_flag = siege_10
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = siege_10 }
+			clr_character_flag = siege_10
+			set_character_flag = siege_11
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = siege_11 }
+			clr_character_flag = siege_11
+			set_character_flag = siege_12
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = siege_12 }
+			clr_character_flag = siege_12
+			set_character_flag = siege_13
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = siege_13 }
+			clr_character_flag = siege_13
+			set_character_flag = siege_14
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = siege_14 }
+			clr_character_flag = siege_14
+			set_character_flag = siege_15
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = siege_15 }
+			clr_character_flag = siege_15
+			set_character_flag = siege_16
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = siege_16 }
+			clr_character_flag = siege_16
+			set_character_flag = siege_17
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = siege_17 }
+			clr_character_flag = siege_17
+			set_character_flag = siege_18
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = siege_18 }
+			clr_character_flag = siege_18
+			set_character_flag = siege_19
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = siege_19 }
+			clr_character_flag = siege_19
+			set_character_flag = siege_20
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = siege_20 }
+			clr_character_flag = siege_20
+			set_character_flag = siege_21
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = siege_21 }
+			clr_character_flag = siege_21
+			set_character_flag = siege_22
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = siege_22 }
+			clr_character_flag = siege_22
+			set_character_flag = siege_23
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = siege_23 }
+			clr_character_flag = siege_23
+			set_character_flag = siege_24
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = siege_24 }
+			clr_character_flag = siege_24
+			set_character_flag = siege_25
+			character_event = { id = FAT.8 }
+			break = yes
+		}
+	}
+}
+
+#Fated Strategist
+character_event = {
+	id = FAT.8
+	desc = EVTDESC_FAT.8
+	title = EVTTITLE_FAT.8
+	picture = GFX_evt_siege
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		add_trait = fate_strat
+	}
+	
+	option = {
+		name = EXCELLENT
+		
+		add_trait = fate_strat
+	}
+}
+
+#Assassin Count
+character_event = {
+	id = FAT.9
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	trigger = {
+		NOT = { trait = fate_plot }
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				NOR = {
+					has_character_flag = killt_1
+					has_character_flag = killt_2
+					has_character_flag = killt_3
+					has_character_flag = killt_4
+					has_character_flag = killt_5
+					has_character_flag = killt_6
+					has_character_flag = killt_7
+					has_character_flag = killt_8
+					has_character_flag = killt_9
+					has_character_flag = killt_10
+					has_character_flag = killt_11
+					has_character_flag = killt_12
+					has_character_flag = killt_13
+					has_character_flag = killt_14
+					has_character_flag = killt_15
+					has_character_flag = killt_16
+					has_character_flag = killt_17
+					has_character_flag = killt_18
+					has_character_flag = killt_19
+					has_character_flag = killt_20
+					has_character_flag = killt_21
+					has_character_flag = killt_22
+					has_character_flag = killt_23
+					has_character_flag = killt_24
+					has_character_flag = killt_25
+				}
+			}
+			set_character_flag = killt_1
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = killt_1 }
+			clr_character_flag = killt_1
+			set_character_flag = killt_2
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = killt_2 }
+			clr_character_flag = killt_2
+			set_character_flag = killt_3
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = killt_3 }
+			clr_character_flag = killt_3
+			set_character_flag = killt_4
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = killt_4 }
+			clr_character_flag = killt_4
+			set_character_flag = killt_5
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = killt_5 }
+			clr_character_flag = killt_5
+			set_character_flag = killt_6
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = killt_6 }
+			clr_character_flag = killt_6
+			set_character_flag = killt_7
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = killt_7 }
+			clr_character_flag = killt_7
+			set_character_flag = killt_8
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = killt_8 }
+			clr_character_flag = killt_8
+			set_character_flag = killt_9
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = killt_9 }
+			clr_character_flag = killt_9
+			set_character_flag = killt_10
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = killt_10 }
+			clr_character_flag = killt_10
+			set_character_flag = killt_11
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = killt_11 }
+			clr_character_flag = killt_11
+			set_character_flag = killt_12
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = killt_12 }
+			clr_character_flag = killt_12
+			set_character_flag = killt_13
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = killt_13 }
+			clr_character_flag = killt_13
+			set_character_flag = killt_14
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = killt_14 }
+			clr_character_flag = killt_14
+			set_character_flag = killt_15
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = killt_15 }
+			clr_character_flag = killt_15
+			set_character_flag = killt_16
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = killt_16 }
+			clr_character_flag = killt_16
+			set_character_flag = killt_17
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = killt_17 }
+			clr_character_flag = killt_17
+			set_character_flag = killt_18
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = killt_18 }
+			clr_character_flag = killt_18
+			set_character_flag = killt_19
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = killt_19 }
+			clr_character_flag = killt_19
+			set_character_flag = killt_20
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = killt_20 }
+			clr_character_flag = killt_20
+			set_character_flag = killt_21
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = killt_21 }
+			clr_character_flag = killt_21
+			set_character_flag = killt_22
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = killt_22 }
+			clr_character_flag = killt_22
+			set_character_flag = killt_23
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = killt_23 }
+			clr_character_flag = killt_23
+			set_character_flag = killt_24
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = killt_24 }
+			clr_character_flag = killt_24
+			set_character_flag = killt_25
+			character_event = { id = FAT.10 }
+			break = yes
+		}
+	}
+}
+
+#Assassination Count
+character_event = {
+	id = FAT.10
+	desc = EVTDESC_FAT.10
+	title = EVTTITLE_FAT.10
+	picture = GFX_evt_shadow
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		add_trait = fate_plot
+	}
+	
+	option = {
+		name = EXCELLENT
+		
+		add_trait = fate_plot
+	}
+}
+
+#Duel Count
+character_event = {
+	id = FAT.11
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	trigger = {
+		NOT = { trait = fate_duel }
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				NOR = {
+					has_character_flag = duel_1
+					has_character_flag = duel_2
+					has_character_flag = duel_3
+					has_character_flag = duel_4
+					has_character_flag = duel_5
+					has_character_flag = duel_6
+					has_character_flag = duel_7
+					has_character_flag = duel_8
+					has_character_flag = duel_9
+					has_character_flag = duel_10
+					has_character_flag = duel_11
+					has_character_flag = duel_12
+					has_character_flag = duel_13
+					has_character_flag = duel_14
+					has_character_flag = duel_15
+					has_character_flag = duel_16
+					has_character_flag = duel_17
+					has_character_flag = duel_18
+					has_character_flag = duel_19
+					has_character_flag = duel_20
+					has_character_flag = duel_21
+					has_character_flag = duel_22
+					has_character_flag = duel_23
+					has_character_flag = duel_24
+					has_character_flag = duel_25
+				}
+			}
+			set_character_flag = duel_1
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = duel_1 }
+			clr_character_flag = duel_1
+			set_character_flag = duel_2
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = duel_2 }
+			clr_character_flag = duel_2
+			set_character_flag = duel_3
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = duel_3 }
+			clr_character_flag = duel_3
+			set_character_flag = duel_4
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = duel_4 }
+			clr_character_flag = duel_4
+			set_character_flag = duel_5
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = duel_5 }
+			clr_character_flag = duel_5
+			set_character_flag = duel_6
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = duel_6 }
+			clr_character_flag = duel_6
+			set_character_flag = duel_7
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = duel_7 }
+			clr_character_flag = duel_7
+			set_character_flag = duel_8
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = duel_8 }
+			clr_character_flag = duel_8
+			set_character_flag = duel_9
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = duel_9 }
+			clr_character_flag = duel_9
+			set_character_flag = duel_10
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = duel_10 }
+			clr_character_flag = duel_10
+			set_character_flag = duel_11
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = duel_11 }
+			clr_character_flag = duel_11
+			set_character_flag = duel_12
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = duel_12 }
+			clr_character_flag = duel_12
+			set_character_flag = duel_13
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = duel_13 }
+			clr_character_flag = duel_13
+			set_character_flag = duel_14
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = duel_14 }
+			clr_character_flag = duel_14
+			set_character_flag = duel_15
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = duel_15 }
+			clr_character_flag = duel_15
+			set_character_flag = duel_16
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = duel_16 }
+			clr_character_flag = duel_16
+			set_character_flag = duel_17
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = duel_17 }
+			clr_character_flag = duel_17
+			set_character_flag = duel_18
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = duel_18 }
+			clr_character_flag = duel_18
+			set_character_flag = duel_19
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = duel_19 }
+			clr_character_flag = duel_19
+			set_character_flag = duel_20
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = duel_20 }
+			clr_character_flag = duel_20
+			set_character_flag = duel_21
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = duel_21 }
+			clr_character_flag = duel_21
+			set_character_flag = duel_22
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = duel_22 }
+			clr_character_flag = duel_22
+			set_character_flag = duel_23
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = duel_23 }
+			clr_character_flag = duel_23
+			set_character_flag = duel_24
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = duel_24 }
+			clr_character_flag = duel_24
+			set_character_flag = duel_25
+			character_event = { id = FAT.12 }
+			break = yes
+		}
+	}
+}
+
+#Duel Count
+character_event = {
+	id = FAT.12
+	desc = EVTDESC_FAT.12
+	title = EVTTITLE_FAT.12
+	picture = GFX_evt_duel
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		add_trait = fate_duel
+	}
+	
+	option = {
+		name = EXCELLENT
+		
+		add_trait = fate_duel
+	}
+}
+
+#Fated Loved
+character_event = {
+	id = FAT.13
+	desc = EVTDESC_FAT.13
+	title = EVTTITLE_FAT.13
+	picture = GFX_evt_brothel
+	
+	trigger = {
+		NOT = { trait = fate_loved }
+		any_realm_character = {
+			opinion = { who = ROOT value = 90 }
+			count = 25
+		}
+		num_of_friends = 3
+	}
+	
+	immediate = {
+		add_trait = fate_loved
+	}
+	
+	option = {
+		name = EXCELLENT
+		
+		add_trait = fate_loved
+	}
+}
+
+#Fated Teach
+character_event = {
+	id = FAT.14
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	trigger = {
+		educator = { NOT = { trait = fate_teach } }
+	}
+	
+	immediate = {
+		educator = { character_event = { id = FAT.15 } }
+	}
+}
+
+#Fated Teach
+character_event = {
+	id = FAT.15
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	trigger = { NOT = { trait = fate_teach } }
+	
+	immediate = {
+		if = {
+			limit = {
+				NOR = {
+					has_character_flag = teach_1
+					has_character_flag = teach_2
+					has_character_flag = teach_3
+					has_character_flag = teach_4
+					has_character_flag = teach_5
+					has_character_flag = teach_6
+					has_character_flag = teach_7
+					has_character_flag = teach_8
+					has_character_flag = teach_9
+					has_character_flag = teach_10
+				}
+			}
+			set_character_flag = teach_1
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = teach_1 }
+			clr_character_flag = teach_1
+			set_character_flag = teach_2
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = teach_2 }
+			clr_character_flag = teach_2
+			set_character_flag = teach_3
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = teach_3 }
+			clr_character_flag = teach_3
+			set_character_flag = teach_4
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = teach_4 }
+			clr_character_flag = teach_4
+			set_character_flag = teach_5
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = teach_5 }
+			clr_character_flag = teach_5
+			set_character_flag = teach_6
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = teach_6 }
+			clr_character_flag = teach_6
+			set_character_flag = teach_7
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = teach_7 }
+			clr_character_flag = teach_7
+			set_character_flag = teach_8
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = teach_8 }
+			clr_character_flag = teach_8
+			set_character_flag = teach_9
+			break = yes
+		}
+		if = {
+			limit = { has_character_flag = teach_9 }
+			clr_character_flag = teach_9
+			set_character_flag = teach_10
+			character_event = { id = FAT.16 }
+			break = yes
+		}
+	}
+}
+
+#Fated Scholar
+character_event = {
+	id = FAT.16
+	desc = EVTDESC_FAT.16
+	title = EVTTITLE_FAT.16
+	picture = GFX_evt_guardian
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		add_trait = fate_teach
+	}
+	
+	option = {
+		name = EXCELLENT
+		
+		add_trait = fate_teach
+	}
+}
+
+#Fated Admin
+character_event = {
+	id = FAT.17
+	desc = EVTDESC_FAT.17
+	title = EVTTITLE_FAT.17
+	picture = GFX_evt_trade_post_republic
+	
+	trigger = {
+		NOT = { trait = fate_admin }
+		NOT = { dynasty = none }
+		is_adult = yes
+		OR = {
+			AND = {
+				is_ruler = no
+				NOT = { num_of_claims = 1 }
+				yearly_income = 45
+			}
+			AND = {
+				NOT = { higher_tier_than = BARON }
+				tier = BARON
+				yearly_income = 75
+			}
+			AND = {
+				NOT = { higher_tier_than = COUNT }
+				tier = COUNT
+				yearly_income = 85
+			}
+			AND = {
+				NOT = { higher_tier_than = DUKE }
+				tier = DUKE
+				yearly_income = 115
+			}
+			AND = {
+				NOT = { higher_tier_than = KING }
+				tier = KING
+				yearly_income = 175
+			}
+			AND = {
+				tier = EMPEROR
+				yearly_income = 375
+			}
+		}
+	}
+	
+	immediate = {
+		add_trait = fate_admin
+	}
+	
+	option = {
+		name = EXCELLENT
+		
+		add_trait = fate_admin
+	}
+}

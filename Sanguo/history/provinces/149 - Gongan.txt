@@ -1,0 +1,18 @@
+# c_gongan
+
+# County Title
+title = c_gongan
+
+# Settlements
+max_settlements = 4
+
+b_gongan = castle
+b_chanling = city
+#b_pianshou = temple
+#b_pingsha = castle
+
+# Misc
+culture = bandunman
+religion = baihu
+
+#History

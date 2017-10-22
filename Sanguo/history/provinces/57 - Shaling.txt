@@ -1,0 +1,18 @@
+# c_shaling
+
+# County Title
+title = c_shaling
+
+# Settlements
+max_settlements = 4
+
+b_shaling = tribal
+#b_shunting = city
+#b_shalizhu = temple
+#b_shaliao = castle
+
+# Misc
+culture = xiongnu
+religion = tengri_pagan
+
+#History

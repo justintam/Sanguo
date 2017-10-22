@@ -1,0 +1,23 @@
+# c_poyang
+
+# County Title
+title = c_poyang
+
+# Settlements
+max_settlements = 6
+
+b_poyang = castle
+b_hukou = castle
+b_chaifu = temple
+#b_gongshu = city
+#b_jiangcun = city
+#b_shangrao = city
+
+# Misc
+culture = shanyue
+religion = animist
+
+#History
+204.1.1={
+	b_gongshu = city
+}

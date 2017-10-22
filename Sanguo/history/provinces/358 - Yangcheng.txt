@@ -1,0 +1,19 @@
+# c_yangcheng
+
+# County Title
+title = c_yangcheng
+
+# Settlements
+max_settlements = 5
+
+b_yangcheng = castle
+b_fushuju = city
+#b_yangqifu = temple
+#b_mishu = castle
+#b_changcun = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

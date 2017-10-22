@@ -1,0 +1,19 @@
+# c_pingcheng
+
+# County Title
+title = c_pingcheng
+
+# Settlements
+max_settlements = 5
+
+b_pingcheng = castle
+b_baideng = castle
+#b_yanmen = temple
+#b_wenwei = castle
+#b_daideng = city
+
+# Misc
+culture = xiongnu
+religion = tengri_pagan
+
+#History

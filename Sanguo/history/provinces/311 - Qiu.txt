@@ -1,0 +1,17 @@
+# c_qiu
+
+# County Title
+title = c_qiu
+
+# Settlements
+max_settlements = 3
+
+b_qiu = castle
+#b_shawuli = city
+#b_pingbian = temple
+
+# Misc
+culture = han
+religion = confucian
+
+#History

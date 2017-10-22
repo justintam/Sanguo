@@ -1,0 +1,20 @@
+# c_rencheng
+
+# County Title
+title = c_rencheng
+
+# Settlements
+max_settlements = 6
+
+b_rencheng = castle
+b_taoju = city
+#b_bianman = temple
+#b_jianglu = castle
+#b_liying = city
+#b_nanzhan = temple
+
+# Misc
+culture = han
+religion = confucian
+
+#History

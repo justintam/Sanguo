@@ -1,0 +1,17 @@
+# c_yongshou
+
+# County Title
+title = c_yongshou
+
+# Settlements
+max_settlements = 3
+
+b_yongshou = tribal
+#b_yongshouzi = city
+#b_puer = temple
+
+# Misc
+culture = nanman
+religion = huojiao
+
+#History

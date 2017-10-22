@@ -1,0 +1,116 @@
+# Define mercenary types here now instead of in the static_composition.txt file
+# Also remember to tell the landed title to use this mercenary type instead.
+# Several titles can refer to the same type as well now.
+
+tiger_guard_composition = {
+	levy_size = 1
+	heavy_infantry = 750
+	knights = 100
+	archers = 250
+}
+
+zealots_composition = {
+	levy_size = 1
+	heavy_infantry = 500
+	light_infantry = 400
+	archers = 200
+}
+
+baima_composition = {
+	levy_size = 1
+	knights = 50
+	horse_archers = 400
+	light_cavalry = 150
+}
+
+bashu_composition = {
+	levy_size = 1
+	light_infantry = 300
+	heavy_infantry = 50
+	archers = 400
+	pikemen = 150
+}
+
+qiang_composition = {
+	levy_size = 1
+	light_infantry = 400
+	heavy_infantry = 100
+	horse_archers = 50
+	light_cavalry = 50
+	archers = 200
+	pikemen = 100
+}
+
+wuxia_composition = {
+	levy_size = 1
+	light_infantry = 400
+	heavy_infantry = 100
+	archers = 300
+	pikemen = 100
+}
+
+feather_composition = {
+	levy_size = 1
+	light_infantry = 100
+	light_cavalry = 100
+	archers = 200
+}
+
+liang_composition = {
+	levy_size = 1
+	knights = 200
+	light_infantry = 100
+	heavy_infantry = 100
+	horse_archers = 50
+	light_cavalry = 100
+}
+
+yellow_composition = {
+	levy_size = 10
+	light_infantry = 450
+	heavy_infantry = 50
+	light_cavalry = 100
+	archers = 150
+	pikemen = 150
+}
+
+imperial_guard_composition = {
+	levy_size = 1
+	knights = 50
+	light_infantry = 100
+	heavy_infantry = 450
+	light_cavalry = 100
+	archers = 100
+	pikemen = 100
+}
+
+south_company_composition = {
+	levy_size = 3
+	light_infantry = 300
+	heavy_infantry = 200
+	light_cavalry = 200
+	archers = 100
+	war_elephants = 10
+}
+
+south_band_composition = {
+	levy_size = 1
+	light_infantry = 300
+	heavy_infantry = 200
+	light_cavalry = 200
+	archers = 100
+	war_elephants = 10
+}
+
+
+## Must exist or else dynamic mercenary band might fail for nomads!
+default_culture_band_composition = {
+	levy_size = 1
+	light_infantry = 100
+}
+
+mongol_culture_band_composition = {
+	levy_size = 1
+	light_cavalry = 60
+	horse_archers = 40
+}

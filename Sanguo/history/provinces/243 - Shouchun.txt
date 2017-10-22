@@ -1,0 +1,19 @@
+# c_shouchun
+
+# County Title
+title = c_shouchun
+
+# Settlements
+max_settlements = 5
+
+b_shouchun = castle
+b_chengde = city
+#b_lindang = temple
+#b_hemian = castle
+#b_yangfu = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

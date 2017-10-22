@@ -1,0 +1,22 @@
+# c_zhaoling
+
+# County Title
+title = c_zhaoling
+
+# Settlements
+max_settlements = 5
+
+b_zhaoling = castle
+b_buping = city
+#b_xima = city
+#b_shiyantou = castle
+#b_daqingping = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History
+214.1.1={
+	b_xima = city
+}

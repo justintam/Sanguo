@@ -1,0 +1,7 @@
+# e_china
+1.1.1={
+	liege=c_xijun
+}
+184.1.1={
+	holder=1709 #Random
+}

@@ -1,0 +1,19 @@
+# c_nanpi
+
+# County Title
+title = c_nanpi
+
+# Settlements
+max_settlements = 5
+
+b_nanpi = castle
+b_dezhou = city
+#b_beizhou = temple
+#b_nanzhou = castle
+#b_shajing = city
+
+# Misc
+culture = han
+religion = taiping
+
+#History

@@ -1,0 +1,1712 @@
+#######Han Dynasty range: 1 - 99######
+
+##################################
+########### IMPERIAL #############
+##################################
+
+1 = {   ### 1st Emperor Gaozu - Founder
+	name="Bang"
+	dynasty=2
+	religion="tianshi"
+	culture="han"
+	trait="grey_eminence"
+	trait="ambitious"
+	trait="diligent"
+	trait="gregarious"
+	trait="temperate"
+	trait="patient"
+	1.1.1={
+		birth=yes
+	}
+	1.1.1={
+		name="Gao"
+	}
+	25.1.1={
+		death=yes
+	}
+}
+2 = {   ### 1st Emperor of Eastern Han
+	name="Xiu"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=1
+	trait="born_in_the_purple"
+	trait="brilliant_strategist"
+	trait="ambitious"
+	trait="diligent"
+	trait="gregarious"
+	trait="temperate"
+	trait="just"
+	trait="quick"
+	1.1.13={
+		birth=yes
+	}
+	25.1.1={
+		name="Guangwu"
+		capital=c_henan
+	}
+	27.1.1={
+		add_spouse=35
+	}
+	28.1.1={
+		add_spouse=3
+	}
+	57.3.29={
+		death=yes
+	}
+}
+3 = {
+	name="Lihua"
+	female=yes
+	dynasty=1657
+	religion="confucian"
+	culture="han"
+	15.1.1={
+		birth=yes
+	}
+	28.1.1={
+		add_spouse=2
+	}
+	64.1.1={
+		death=yes
+	}
+}
+4 = {   ### 2nd Emperor
+	name="Zhuang"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=2
+	mother=3
+	trait="born_in_the_purple"
+	trait="paranoid"
+	28.1.1={
+		birth=yes
+	}
+	55.1.1={
+		add_spouse=5
+	}
+	57.3.29={
+		name="Ming"
+	}
+	75.1.1={
+		death=yes
+	}
+}
+5 = {
+	name="Mingde"
+	female=yes
+	dynasty=1659
+	religion="confucian"
+	culture="han"
+	40.1.1={
+		birth=yes
+	}
+	55.1.1={
+		add_spouse=4
+	}
+	79.8.16={
+		death=yes
+	}
+}
+6 = {   ### 3rd Emperor
+	name="Da"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=4
+	mother=5
+	trait="born_in_the_purple"
+	57.1.1={
+		birth=yes
+	}
+	75.1.1={
+		name="Zhang"
+	}
+	77.1.1={
+		add_spouse=11
+	}
+	78.1.1={
+		add_spouse=7
+	}
+	79.1.1={
+		add_spouse=3813
+	}
+	88.4.9={
+		death=yes
+	}
+}
+7 = {
+	name="Zhangde"
+	female=yes
+	dynasty=1447
+	religion="confucian"
+	culture="han"
+	65.1.1={
+		birth=yes
+	}
+	79.1.1={
+		add_spouse=6
+	}
+	97.1.1={
+		death=yes
+	}
+}
+8 = {   ### 4th Emperor
+	name="Zhao"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=6
+	mother=7
+	trait="born_in_the_purple"
+	79.6.1={
+		birth=yes
+	}
+	88.4.9={
+		name="He"
+	}
+	96.1.1={
+		add_spouse=9
+	}
+	105.2.13={
+		death=yes
+	}
+}
+9 = {
+	name="Hexi"
+	female=yes
+	dynasty=38
+	religion="confucian"
+	culture="han"
+	81.1.1={
+		birth=yes
+	}
+	96.1.1={
+		add_spouse=8
+	}
+	121.1.1={
+		death=yes
+	}
+}
+10 = {   ### 5th Emperor
+	name="Long"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=8
+	mother=9
+	trait="born_in_the_purple"
+	105.1.1={
+		birth=yes
+	}
+	105.2.13={
+		name="Shang"
+	}
+	106.8.1={
+		death=yes
+	}
+}
+11 = {
+	name="Zhi"
+	female=yes
+	dynasty=1660
+	religion="confucian"
+	culture="han"
+	64.1.1={
+		birth=yes
+	}
+	78.1.1={
+		add_spouse=6
+	}
+	82.1.1={
+		death=yes
+	}
+}
+12 = {
+	name="Qing"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=6
+	mother=11
+	trait="born_in_the_purple"
+	78.1.1={
+		birth=yes
+	}
+	93.1.1={
+		add_spouse=13
+	}
+	106.1.1={
+		death=yes
+	}
+}
+13 = {
+	name="Xiao E"
+	female=yes
+	dynasty=1496
+	religion="confucian"
+	culture="han"
+	79.1.1={
+		birth=yes
+	}
+	93.1.1={
+		add_spouse=12
+	}
+	100.1.1={
+		death=yes
+	}
+}
+14 = {   ### 6th Emperor
+	name="Hu"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=12
+	mother=13
+	94.1.1={
+		birth=yes
+	}
+	106.8.1={
+		name="An"
+	}
+	114.1.1={
+		add_spouse=15
+	}
+	125.4.30={
+		death=yes
+	}
+}
+15 = {
+	name="Li"
+	female=yes
+	religion="confucian"
+	culture="han"
+	100.1.1={
+		birth=yes
+	}
+	114.1.1={
+		add_spouse=14
+	}
+	115.1.1={
+		death=yes
+	}
+}
+16 = {   ### 7th Emperor
+	name="Bao"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=14
+	mother=15
+	trait="born_in_the_purple"
+	115.1.1={
+		birth=yes
+	}
+	125.4.30={
+		name="Shun"
+	}
+	140.1.1={
+		add_spouse=17
+	}
+	144.1.1={
+		death=yes
+	}
+}
+17 = {
+	name="Yu"
+	female=yes
+	religion="confucian"
+	culture="han"
+	125.1.1={
+		birth=yes
+	}
+	140.1.1={
+		add_spouse=16
+	}
+	179.1.1={
+		death=yes
+	}
+}
+18 = {   ### 8th Emperor
+	name="Bing"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=16
+	mother=17
+	trait="born_in_the_purple"
+	143.1.1={
+		birth=yes
+	}
+	144.1.1={
+		name="Chong"
+	}
+	145.1.1={
+		death=yes
+	}
+}
+19 = {
+	name="Kang"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=6
+	trait="born_in_the_purple"
+	73.1.1={
+		birth=yes
+	}
+	93.1.1={
+		death=yes
+	}
+}
+20 = {
+	name="Hong"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=3820
+	110.1.1={
+		birth=yes
+	}
+	135.1.1={
+		add_spouse=21
+	}
+	147.1.1={
+		death=yes
+	}
+}
+21 = {
+	name="Chen"
+	female=yes
+	religion="confucian"
+	culture="han"
+	120.1.1={
+		birth=yes
+	}
+	135.1.1={
+		add_spouse=20
+	}
+	140.1.1={
+		death=yes
+	}
+}
+22 = {   ### 9th Emperor
+	name="Zuan"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=20
+	mother=21
+	138.1.1={
+		birth=yes
+	}
+	145.1.1={
+		name="Zhi"
+	}
+	146.1.1={
+		death = {
+			death_reason=death_murder_unknown
+		}
+	}
+}
+23 = {
+	name="Kai"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=6
+	mother=3813
+	trait="born_in_the_purple"
+	80.1.1={
+		birth=yes
+	}
+	131.1.1={
+		death=yes
+	}
+}
+24 = {
+	name="Yi"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=23
+	105.1.1={
+		birth=yes
+	}
+	125.1.1={
+		add_spouse=25
+	}
+	140.1.1={
+		death=yes
+	}
+}
+25 = {
+	name="Ming"
+	female=yes
+	dynasty=16
+	religion="confucian"
+	culture="han"
+	110.1.1={
+		birth=yes
+	}
+	125.1.1={
+		add_spouse=24
+	}
+	152.1.1={
+		death=yes
+	}
+}
+26 = {   ### 10th Emperor
+	name="Zhi"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=24
+	mother=25
+	trait="twin"
+	132.1.1={
+		birth=yes
+	}
+	146.1.1={
+		name="Huan"
+	}
+	168.1.1={
+		death=yes
+	}
+}
+27 = {
+	name="Shu"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=23
+	110.1.1={
+		birth=yes
+	}
+	130.1.1={
+		death=yes
+	}
+}
+28 = {
+	name="Chang"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=27
+	130.1.1={
+		birth=yes
+	}
+	146.1.1={
+		add_spouse=29
+	}
+	170.1.1={
+		death=yes
+	}
+}
+29 = {
+	name="Xiaocheng"
+	female=yes
+	dynasty=17
+	religion="confucian"
+	culture="han"
+	father=1218
+	trait="ambitious"
+	trait="paranoid"
+	trait="deceitful"
+	trait="patient"
+	trait="envious"
+	trait="quick"
+	130.1.1={
+		birth=yes
+	}
+	146.1.1={
+		add_spouse=28
+	}
+	189.1.1={
+		death=yes
+	}
+}
+30 = {   ### 11th Emperor
+	name="Hong"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=28
+	mother=29
+    trait="indulgent_wastrel"
+    trait="gluttonous"
+    trait="lustful"
+    trait="slothful"
+    trait="arbitrary"
+    trait="paranoid"
+    trait="cynical"
+    trait="shy"
+	156.1.1={
+		birth=yes
+	}
+	168.1.1={
+		name="Ling"
+	}
+	171.1.1={
+		add_spouse=1233
+	}
+	175.8.1={
+		add_spouse=31
+	}
+	180.1.1={
+		add_spouse=32
+	}
+	184.1.1={
+		effect = {
+			add_artifact=imperial_seal
+			health = -2.5
+			fertility = -0.4
+		}
+	}
+	189.5.13={
+		effect = {
+			remove_artifact=imperial_seal
+		}
+		death=yes
+	}
+}
+31 = {
+	name="Lingsi"
+	female=yes
+	dynasty=33
+	religion="confucian"
+	culture="han"
+	father=101
+	mother=102
+	trait="fair"
+	trait="ambitious"
+	trait="greedy"
+	trait="cruel"
+	trait="wroth"
+	trait="envious"
+	trait="deceitful"
+	160.1.1={
+		birth=yes
+	}
+	175.8.1={
+		add_spouse=30
+	}
+	189.9.30={
+		death = {
+			death_reason = death_murder
+			killer = 306
+		}
+	}
+}
+32 = {
+	name="Rong"
+	female=yes
+	dynasty=1448
+	religion="confucian"
+	culture="han"
+	trait="fair"
+	165.1.1={
+		birth=yes
+	}
+	180.1.1={
+		add_spouse=30
+	}
+	181.1.1={
+		death = {
+			death_reason=death_murder
+			killer=31
+		}
+	}
+}
+33 = {   ### 12th Emperor
+	name="Bian"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=30
+	mother=31
+	trait="born_in_the_purple"
+	trait="content"
+	trait="humble"
+	trait="gamer"
+	trait="greedy"
+	trait="craven"
+	trait="shy"
+	176.1.1={
+		birth=yes
+	}
+	189.5.13={
+		name="Shao"
+		effect = {
+			add_artifact=imperial_seal
+		}
+	}
+	189.8.22={
+		employer=300
+	}
+	189.9.28={
+		effect = {
+			remove_artifact=imperial_seal
+		}
+	}
+	190.1.1={
+		name="Huai"
+		death = {
+		   death_reason = death_murder
+		   killer = 306
+		}
+	}
+}
+34 = {   ### 13th Emperor
+	name="Xie"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=30
+	mother=32
+	trait="born_in_the_purple"
+    trait="destined"
+	trait="proud"
+	trait="diligent"
+	trait="zealous"
+	trait="temperate"
+	trait="patient"
+	181.1.1={
+		birth=yes
+	}
+	189.8.22={
+		employer=300
+	}
+	189.9.28={
+		name="Xian"
+		effect = {
+			add_artifact=imperial_seal
+		}
+	}
+	190.1.1={
+		effect = {
+			remove_artifact=imperial_seal
+		}
+	}
+	220.3.15={
+	}
+	234.4.21={
+		death=yes
+	}
+}
+35 = {
+	name="Shengtong"
+	female=yes
+	dynasty=1656
+	religion="confucian"
+	culture="han"
+	10.1.1={
+		birth=yes
+	}
+	27.1.1={
+		add_spouse=2
+	}
+	52.1.1={
+		death=yes
+	}
+}
+36 = {
+	name="Jiang"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=2
+	mother=35
+	trait="born_in_the_purple"
+	27.1.1={
+		birth=yes
+	}
+	58.1.1={
+		death=yes
+	}
+}
+37 = {
+	name="Jia"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=36
+	50.1.1={
+		birth=yes
+	}
+	130.1.1={
+		death=yes
+	}
+}
+38 = {
+	name="Shu"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=37
+	100.1.1={
+		birth=yes
+	}
+	150.1.1={
+		death=yes
+	}
+}
+39 = {
+	name="Yu"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=38
+	135.1.1={
+		birth=yes
+	}
+	193.4.1={
+		death={death_reason=death_execution killer=900}
+	}
+}
+40 = {
+	name="Jing"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=1
+	trait="born_in_the_purple"
+	20.1.1={
+		birth=yes
+	}
+	60.1.1={
+		add_spouse=45
+	}
+	80.1.1={
+		death=yes
+	}
+}
+41 = {
+	name="Shing"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=40
+	50.1.1={
+		birth=yes
+	}
+	110.1.1={
+		death=yes
+	}
+}
+42 = {
+	name="Zhen"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=41
+	70.1.1={
+		birth=yes
+	}
+	130.1.1={
+		death=yes
+	}
+}
+43 = {
+	name="Xiong"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=42
+	100.1.1={
+		birth=yes
+	}
+	150.1.1={
+		death=yes
+	}
+}
+44 = {
+	name="Hong"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=43
+	130.1.1={
+		birth=yes
+	}
+	170.1.1={
+		death=yes
+	}
+}
+45 = {
+	name="Ji"
+	female=yes
+	dynasty=1658
+	religion="confucian"
+	culture="han"
+	40.1.1={
+		birth=yes
+	}
+	60.1.1={
+		add_spouse=40
+	}
+	110.1.1={
+		death=yes
+	}
+}
+46 = {
+	name="Yu"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=40
+	mother=45
+	60.1.1={
+		birth=yes
+	}
+	140.1.1={
+		death=yes
+	}
+}
+47 = {
+	name="Lu"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=46
+	100.1.1={
+		birth=yes
+	}
+	150.1.1={
+		death=yes
+	}
+}
+48 = {
+	name="Biao"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=47
+    trait="fortune_builder"
+    trait="schemer"
+    trait="destined"
+	trait="tall"
+	trait="genius"
+	trait="fair"
+	trait="just"
+	trait="patient"
+	142.1.1={
+		birth=yes
+	}
+	170.1.1={
+		add_spouse=49
+	}
+	190.1.1={
+		add_spouse=3911
+	}
+	208.8.1={
+		death=yes
+	}
+}
+49 = {
+	name="Chen"
+	female=yes
+	religion="confucian"
+	culture="han"
+	150.1.1={
+		birth=yes
+	}
+	170.1.1={
+		add_spouse=48
+	}
+	230.1.1={
+		death=yes
+	}
+}
+50 = {
+	name="Yan"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=51
+	trait="brilliant_strategist"
+    trait="destined"
+	trait="ambitious"
+	trait="genius"
+	trait="just"
+	135.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=100
+	}
+	194.4.1={
+		death=yes
+	}
+}
+51 = {
+	name="Gong"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=46
+	110.1.1={
+		birth=yes
+	}
+	160.1.1={
+		death=yes
+	}
+}
+52 = {
+	name="Qi"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=48
+	mother=49
+	trait="destined"
+	trait="just"
+	trait="weak"
+	173.1.1={
+		birth=yes
+	}
+	209.3.1={
+		death=yes
+	}
+}
+53 = {
+	name="Cong"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=48
+	mother=49
+	trait="destined"
+	trait="tall"
+	trait="genius"
+	178.1.1={
+		birth=yes
+	}
+	250.1.1={
+		death=yes
+	}
+}
+54 = {
+	name="Jianglu"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=1
+	trait="born_in_the_purple"
+	25.1.1={
+		birth=yes
+	}
+	50.1.1={
+		death=yes
+	}
+}
+55 = {
+	name="Xie"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=54
+	50.1.1={
+		birth=yes
+	}
+	120.1.1={
+		death=yes
+	}
+}
+56 = {
+	name="Yu"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=55
+	100.1.1={
+		birth=yes
+	}
+	150.1.1={
+		add_spouse=57
+	}
+	160.1.1={
+		death=yes
+	}
+}
+57 = {
+	name="Xi"
+	female=yes
+	religion="confucian"
+	culture="han"
+	130.1.1={
+		birth=yes
+	}
+	150.1.1={
+		add_spouse=56
+	}
+	180.1.1={
+		death=yes
+	}
+}
+58 = {
+	name="Yao"
+	dynasty=2
+    diplomacy=8
+    martial=3
+    stewardship=10
+    intrigue=7
+	learning=10
+	religion="confucian"
+	culture="han"
+	father=56
+	mother=57
+	trait="midas_touched"
+	trait="genius"
+	trait="administrator"
+	trait="temperate"
+	trait="diligent"
+	trait="patient"
+	154.1.1={
+		birth=yes
+	}
+	198.1.1={
+		death=yes
+	}
+}
+59 = {
+	name="Dai"
+	dynasty=2
+    diplomacy=5
+    martial=6
+    stewardship=9
+    intrigue=6
+	learning=10
+	religion="confucian"
+	culture="han"
+	father=56
+	mother=57
+	trait="midas_touched"
+	trait="genius"
+	trait="administrator"
+	trait="temperate"
+	trait="diligent"
+	trait="patient"
+	153.1.1={
+		birth=yes
+	}
+	184.1.1={
+		effect={
+			add_rival=134
+		}
+	}
+	192.6.1={
+		death=yes
+	}
+}
+60 = {
+	name="Chong"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=55
+	trait="brilliant_strategist"
+	trait="genius"
+	trait="honest"
+	trait="temperate"
+	trait="diligent"
+	trait="zealous"
+	110.1.1={
+		birth=yes
+	}
+	197.1.1={
+		death=yes
+	}
+}
+61 = {
+	name="He"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=39
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=39
+	}
+	228.1.1={
+		death=yes
+	}
+}
+62 = {
+	name="Junshi"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=75
+	trait="greedy"
+	125.1.1={
+		birth=yes
+	}
+	215.1.1={
+		death=yes
+	}
+}
+63 = {
+	name="Zheng"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=76
+	140.1.1={
+		birth=yes
+	}
+	187.1.1={
+		death=yes
+	}
+}
+64 = {
+	name="Ji"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=76
+	trait="greedy"
+	trait="cruel"
+	150.1.1={
+		birth=yes
+	}
+	187.1.1={
+		death=yes
+	}
+}
+65 = {
+	name="Kui"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=24
+	mother=25
+	trait="twin"
+	132.1.1={
+		birth=yes
+	}
+	172.1.1={
+		death={death_reason=death_suicide}
+	}
+}
+66 = {
+	name="Xian"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=4
+	mother=5
+	trait="born_in_the_purple"
+	58.1.1={
+		birth=yes
+	}
+	96.1.1={
+		death=yes
+	}
+}
+67 = {
+	name="Chong"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=66
+	82.1.1={
+		birth=yes
+	}
+	124.1.1={
+		death=yes
+	}
+}
+68 = {
+	name="Cheng"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=67
+	105.1.1={
+		birth=yes
+	}
+	165.1.1={
+		death=yes
+	}
+}
+69 = {
+	name="Chong"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=68
+	trait="brilliant_strategist"
+	trait="fate_war"
+	trait="genius"
+	trait="administrator"
+	trait="ambitious"
+	trait="temperate"
+	trait="diligent"
+	trait="patient"
+	trait="sympathy_tao"
+	trait="zealous"
+	130.1.1={
+		birth=yes
+	}
+	197.1.1={
+		death={death_reason=death_murder killer=705}
+	}
+}
+70 = {
+	name="Wei"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=55
+	103.1.1={
+		birth=yes
+	}
+	165.1.1={
+		death=yes
+	}
+}
+71 = {
+	name="Ai"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=77
+	trait="grey_eminence"
+	trait="fate_teach"
+	trait="destined"
+	trait="quick"
+	trait="deceitful"
+	trait="humble"
+	trait="gregarious"
+	trait="zealous"
+	160.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+72 = {
+	name="Wen"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=1
+	trait="born_in_the_purple"
+	20.1.1={
+		birth=yes
+	}
+	70.1.1={
+		death=yes
+	}
+}
+73 = {
+	name="Can"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=72
+	55.1.1={
+		birth=yes
+	}
+	120.1.1={
+		death=yes
+	}
+}
+74 = {
+	name="Yi"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=72
+	60.1.1={
+		birth=yes
+	}
+	130.1.1={
+		death=yes
+	}
+}
+75 = {
+	name="Fa"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=73
+	90.1.1={
+		birth=yes
+	}
+	148.1.1={
+		death=yes
+	}
+}
+76 = {
+	name="Pengzu"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=74
+	92.1.1={
+		birth=yes
+	}
+	156.1.1={
+		death=yes
+	}
+}
+77 = {
+	name="Yue"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=74
+	95.1.1={
+		birth=yes
+	}
+	160.1.1={
+		death=yes
+	}
+}
+78 = {
+	name="Fan"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=50
+	176.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=100
+	}
+	189.8.22={
+		employer=300
+	}
+	194.2.1={
+		death = {
+			death_reason=death_execution
+			killer = 307
+		}
+	}
+}
+79 = {
+	name="Dan"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=50
+	177.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=100
+	}
+	189.8.22={
+		employer=300
+	}
+	194.2.1={
+		death = {
+			death_reason=death_execution
+			killer = 307
+		}
+	}
+}
+80 = {
+	name="Zhang"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=50
+	178.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=100
+	}
+	189.8.22={
+		employer=300
+	}
+	190.2.1={
+		employer=50
+	}
+	219.1.1={
+		death=yes
+	}
+}
+81 = {
+	name="Mao"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=50
+	182.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=100
+	}
+	189.8.22={
+		employer=300
+	}
+	194.1.1={
+		employer=50
+		trait="infirm"
+	}
+	210.1.1={
+		death=yes
+	}
+}
+82 = {
+	name="Zheng"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=23
+	trait="cruel"
+	trait="ruthless"
+	105.1.1={
+		birth=yes
+	}
+	141.1.1={
+		death=yes
+	}
+}
+83 = {
+	name="Jian"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=82
+	123.1.1={
+		birth=yes
+	}
+	151.1.1={
+		death=yes
+	}
+}
+84 = {
+	name="Li"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=83
+	140.1.1={
+		birth=yes
+	}
+	179.1.1={
+		death=yes
+	}
+}
+85 = {
+	name="Gai"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=84
+	160.1.1={
+		birth=yes
+	}
+	225.1.1={
+		death=yes
+	}
+}
+86 = {
+	name="De"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=23
+	106.1.1={
+		birth=yes
+	}
+	151.1.1={
+		death=yes
+	}
+}
+87 = {
+	name="Xu"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=86
+	124.1.1={
+		birth=yes
+	}
+	184.10.1={
+		death=yes
+	}
+}
+88 = {
+	name="Li"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=86
+	126.1.1={
+		birth=yes
+	}
+	172.1.1={
+		death=yes
+	}
+}
+89 = {
+	name="Ding"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=88
+	144.1.1={
+		birth=yes
+	}
+	176.1.1={
+		death=yes
+	}
+}
+90 = {
+	name="Zhong"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=89
+	161.1.1={
+		birth=yes
+	}
+	189.5.1={
+		death=yes
+	}
+}
+91 = {
+	name="Yan"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=4
+	trait="born_in_the_purple"
+	57.1.1={
+		birth=yes
+	}
+	125.1.1={
+		death=yes
+	}
+}
+92 = {
+	name="Cheng"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=91
+	74.1.1={
+		birth=yes
+	}
+	127.1.1={
+		death=yes
+	}
+}
+93 = {
+	name="Yi"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=92
+	95.1.1={
+		birth=yes
+	}
+	184.10.1={
+		death=yes
+	}
+}
+94 = {
+	name="Yi"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=93
+	120.1.1={
+		birth=yes
+	}
+	185.5.1={
+		death=yes
+	}
+}
+95 = {
+	name="Cang"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=2
+	mother=3
+	trait="mastermind_theologian"
+	trait="honest"
+	trait="zealous"
+	trait="content"
+	trait="genius"
+	trait="born_in_the_purple"
+	32.1.1={
+		birth=yes
+	}
+	83.1.1={
+		death=yes
+	}
+}
+96 = {
+	name="Zhong"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=95
+	trait="content"
+	48.1.1={
+		birth=yes
+	}
+	84.1.1={
+		death=yes
+	}
+}
+97 = {
+	name="Chang"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=96
+	trait="diligent"
+	trait="honest"
+	trait="zealous"
+	trait="content"
+	66.1.1={
+		birth=yes
+	}
+	132.1.1={
+		death=yes
+	}
+}
+98 = {
+	name="Duan"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=97
+	trait="content"
+	104.1.1={
+		birth=yes
+	}
+	179.1.1={
+		death=yes
+	}
+}
+99 = {
+	name="Kai"
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=98
+	trait="content"
+	140.1.1={
+		birth=yes
+	}
+	230.1.1={
+		death=yes
+	}
+}

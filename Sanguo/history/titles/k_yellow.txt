@@ -1,0 +1,19 @@
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+182.1.1={
+	holder=200 #Zhang Jue
+}
+184.8.1={
+	holder=201 #Zhang Bao
+}
+184.9.1={
+	holder=202 #Zhang Liang
+}
+184.10.1={
+	holder=225 #Han Zhong
+}
+185.1.11={
+	holder=0 #None
+}

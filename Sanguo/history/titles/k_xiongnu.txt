@@ -1,0 +1,25 @@
+# e_northern
+1.1.1={
+	historical_nomad = yes
+	active = no
+}
+1.1.1={
+	liege=e_northern
+}
+184.1.1={
+	active = yes
+	liege=0
+	set_tribute_suzerain = { who = e_china percentage = 0.25 }
+	holder=1500 #Qiangqui
+}
+188.1.1={
+	clear_tribute_suzerain = e_china
+	holder=1501 #Yufuluo
+}
+189.1.1={
+	active=no
+	#Replaced by Xubu
+}
+195.1.1={
+	holder=0 #None
+}

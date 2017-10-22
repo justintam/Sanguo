@@ -1,0 +1,18 @@
+# c_buwei
+
+# County Title
+title = c_buwei
+
+# Settlements
+max_settlements = 4
+
+b_buwei = castle
+b_aifucheng = city
+#b_yuxi = temple
+#b_honghe = castle
+
+# Misc
+culture = nanman
+religion = huojiao
+
+#History

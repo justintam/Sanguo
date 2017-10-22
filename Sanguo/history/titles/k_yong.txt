@@ -1,0 +1,36 @@
+# k_yong
+1.1.1={
+	active=no
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=e_china
+	vice_royalty = yes
+}
+194.1.1={
+	active=yes
+	holder=3739 # Handan Shang
+}
+206.3.1={
+	liege=0 #Killed Handan
+	holder=1255 #Zhang Meng
+}
+210.6.1={
+	holder=0 #None
+	active=no
+}
+211.10.1={
+	active=yes
+	liege=e_china
+	holder=20478 #Xu Yi
+}
+213.9.1={
+	holder=20418 #Zhang Ji
+}
+220.12.10={
+	liege=e_wei
+}
+221.1.1={
+	#Changed
+}

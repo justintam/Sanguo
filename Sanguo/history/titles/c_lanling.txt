@@ -1,0 +1,21 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_donghai
+}
+184.1.1={
+	holder=4413 #Man You
+}
+187.4.1={
+	holder=3865 #Zhao Zi
+}
+191.1.1={
+	holder=4206 #Liu Kui
+}
+215.1.1={
+	#Pan Xu named but died before leaving, over 50
+	holder=4162 #Random
+}

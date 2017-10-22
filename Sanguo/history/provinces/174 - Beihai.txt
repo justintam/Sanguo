@@ -1,0 +1,20 @@
+# c_beihai
+
+# County Title
+title = c_beihai
+
+# Settlements
+max_settlements = 6
+
+b_beihai = castle
+b_jichenghai = city
+b_quqiuting = temple
+#b_bengtai = castle
+#b_jilin = city
+#b_tushan = temple
+
+# Misc
+culture = han
+religion = confucian
+
+#History

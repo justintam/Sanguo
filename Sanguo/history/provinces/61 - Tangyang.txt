@@ -1,0 +1,19 @@
+# c_tangyang
+
+# County Title
+title = c_tangyang
+
+# Settlements
+max_settlements = 5
+
+b_tangyang = castle
+b_raoyang = city
+#b_tangji = temple
+#b_muling = castle
+#b_chengyou = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

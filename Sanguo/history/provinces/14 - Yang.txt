@@ -1,0 +1,19 @@
+# c_yang
+
+# County Title
+title = c_yang
+
+# Settlements
+max_settlements = 5
+
+b_yang = castle
+b_gaoliangting = city
+#b_xie = city
+#b_yuanqu = city
+#b_yangxing = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

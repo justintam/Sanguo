@@ -1,0 +1,33 @@
+name = "Northern Revolt"
+
+casus_belli={
+	actor=2680
+	recipient=100
+	casus_belli=invasion
+	landed_title=k_you
+	date=187.1.1
+}
+
+187.1.1={
+	add_defender = 100 #He Jin
+	add_defender = 3473 #Wang Mao
+	add_defender = 131 #Zou Jing
+	add_defender = 600 #Liu Bei
+	add_attacker = 1400 #Budugen
+	add_attacker = 1500 #Qiangqui
+	add_attacker = 1600 #Qiuliju
+	add_attacker = 2681 #Zhang Ju
+	add_attacker = 2680 #Zhang Chun
+}
+
+188.1.1={
+	rem_defender = 600 #Liu Bei
+	rem_defender = 131 #Zou Jing
+	rem_defender = 3473 #Wang Mao
+	rem_defender = 100 #He Jin
+	rem_attacker = 1400 #Budugen
+	rem_attacker = 1500 #Qiangqui
+	rem_attacker = 1600 #Qiuliju
+	rem_attacker = 2681 #Zhang Ju
+	rem_attacker = 2680 #Zhang Chun
+}

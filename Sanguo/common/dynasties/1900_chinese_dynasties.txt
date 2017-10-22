@@ -1,0 +1,64 @@
+1900 = {
+	name="Bu" #Bu Yong - RAN
+	culture = han
+}
+1901 = {
+	name="Du" #Du Yun - RAN
+	culture = han
+}
+1902 = {
+	name="Fang" #Fang Yuan - RAN
+	culture = han
+}
+1903 = {
+	name="Feng" #Feng Mi - RAN
+	culture = han
+}
+1904 = {
+	name="Liu" #Liu Huan - RAN
+	culture = han
+}
+1905 = {
+	name="Jian" #Jian Suo - RAN
+	culture = han
+}
+1906 = {
+	name="Ren" #Ren Ding - RAN
+	culture = han
+}
+1907 = {
+	name="Wu" #Wu Xing - RAN
+	culture = han
+}
+1908 = {
+	name="Zi" #Zi Ding - RAN
+	culture = han
+}
+1909 = {
+	name="Xu" #Xu Kang - RAN
+	culture = han
+}
+1910 = {
+	name="Zhuang" #Zhuang Miao - RAN
+	culture = han
+}
+1911 = {
+	name="Li" #Li Ju - RAN
+	culture = han
+}
+1912 = {
+	name="Li" #Li Kai - RAN
+	culture = han
+}
+1913 = {
+	name="Xu" #Xu Jian - RAN
+	culture = han
+}
+1914 = {
+	name="Kou" #Kou Mian - RAN
+	culture = han
+}
+1915 = {
+	name="Zhao" #Zhao Shi - RAN
+	culture = han
+}

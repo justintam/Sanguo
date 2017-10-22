@@ -1,0 +1,20 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_longxi
+}
+184.1.1={
+	holder=810 #Song Jian
+}
+184.11.1={
+	liege=k_liangzei #Liang Rebellion
+}
+186.5.1={
+	liege=d_longxi
+}
+214.1.1={
+	holder=1016 #Kong Xin
+}

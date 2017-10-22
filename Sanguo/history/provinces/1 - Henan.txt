@@ -1,0 +1,46 @@
+# c_henan
+
+# County Title
+title = c_henan
+
+# Settlements
+max_settlements = 7
+
+b_luoyang = castle
+b_baima = temple
+b_xiqe = temple
+b_beiguan = temple
+b_nanguan = temple
+b_huangchao = castle
+#b_yanshi = temple
+
+# Misc
+culture = han
+religion = confucian
+
+#History
+190.4.9={
+	remove_settlement = b_baima
+	remove_settlement = b_xiqe
+	remove_settlement = b_beiguan
+	remove_settlement = b_nanguan
+	remove_settlement = b_huangchao
+}
+192.10.1={
+	b_baima = temple
+}
+200.1.1={
+	b_xiqe = temple
+}
+208.1.1={
+	b_yanshi = temple
+}
+214.1.1={
+	b_nanguan = temple
+}
+218.1.1={
+	b_huangchao = temple
+}
+220.12.10={
+	b_beiguan = temple
+}

@@ -1,0 +1,19 @@
+# c_chaoge
+
+# County Title
+title = c_chaoge
+
+# Settlements
+max_settlements = 5
+
+b_chaoge = castle
+b_muye = castle
+#b_hebi = city
+#b_chaocheng = city
+#b_mendang = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

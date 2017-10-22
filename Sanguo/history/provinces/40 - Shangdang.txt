@@ -1,0 +1,20 @@
+# c_shangdang
+
+# County Title
+title = c_shangdang
+
+# Settlements
+max_settlements = 6
+
+b_shangdang = castle
+b_huguan = castle
+b_hukoudang = castle
+b_yanga = temple
+#b_baode = city
+#b_shangku = temple
+
+# Misc
+culture = han
+religion = confucian
+
+#History

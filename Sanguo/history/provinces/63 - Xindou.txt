@@ -1,0 +1,18 @@
+# c_xindou
+
+# County Title
+title = c_xindou
+
+# Settlements
+max_settlements = 4
+
+b_xindou = castle
+b_xiabo = city
+#b_xinlei = temple
+#b_xiacun = castle
+
+# Misc
+culture = han
+religion = taiping
+
+#History

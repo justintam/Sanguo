@@ -1,0 +1,104 @@
+200 = {
+	name="Yao"
+	culture = qiang
+}
+201 = {
+	name="Baima"
+	culture = qiang
+}
+202 = {
+	name="Canlang"
+	culture = qiang
+}
+203 = {
+	name="Chuo"
+	culture = qiang
+}
+204 = {
+	name="Dou"
+	culture = qiang
+}
+205 = {
+	name="Goujia"
+	culture = qiang
+}
+206 = {
+	name="Huangniu"
+	culture = qiang
+}
+207 = {
+	name="Hecong"
+	culture = qiang
+}
+208 = {
+	name="Lian"
+	culture = qiang
+}
+209 = {
+	name="Malan"
+	culture = qiang
+}
+210 = {
+	name="Maoniu"
+	culture = qiang
+}
+211 = {
+	name="Peng"
+	culture = qiang
+}
+212 = {
+	name="Rong"
+	culture = qiang
+}
+213 = {
+	name="Shaodang"
+	culture = qiang
+}
+214 = {
+	name="Xianlian"
+	culture = qiang
+}
+215 = {
+	name="Dangxiang"
+	culture = qiang
+}
+216 = {
+	name="Binan"
+	culture = qiang
+}
+217 = {
+	name="Dangjian"
+	culture = qiang
+}
+218 = {
+	name="Jiaogong"
+	culture = qiang
+}
+219 = {
+	name="Lejie"
+	culture = qiang
+}
+220 = {
+	name="Yan"
+	culture = qiang
+}
+221 = {
+	name="Zhong"
+	culture = qiang
+}
+222 = {
+	name="Dianna"
+	culture = qiang
+}
+223 = {
+	name="Shaohe"
+	culture = qiang
+}
+224 = {
+	name="Shendi"
+	culture = qiang
+}
+225 = {
+	name="Qibi"
+	culture = qiang
+}

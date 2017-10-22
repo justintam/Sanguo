@@ -1,0 +1,60 @@
+# e_china
+1.1.1={
+	law = succ_primogeniture
+	law = agnatic_succession
+}
+1.1.1={
+	liege=c_henan
+}
+1.1.1={
+	holder=1 #Liu Bang
+}
+25.1.1={
+	holder=2 #Guangwu
+}
+57.1.1={
+	holder=4 #Ming
+}
+75.1.1={
+	holder=6 #Zhang
+}
+88.1.1={
+	holder=8 #He
+}
+106.1.1={
+	holder=10 #Shang
+}
+106.8.1={
+	holder=14 #An
+}
+125.5.18={
+	holder=3825 #Liu Yi
+}
+125.12.10={
+	holder=16 #Shun
+}
+144.1.1={
+	holder=18 #Chong
+}
+145.1.1={
+	holder=22 #Zhi
+}
+146.1.1={
+	holder=26 #Huan
+}
+168.1.1={
+	holder=30 #Ling
+}
+184.1.1={
+	liege=k_confucian
+}
+189.5.13={
+	holder=33 #Shao
+}
+189.9.1={
+	holder=34 #Xian
+}
+190.4.9={
+	liege=c_henan
+	holder=0 #None
+}

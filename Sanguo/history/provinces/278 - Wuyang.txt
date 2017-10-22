@@ -1,0 +1,18 @@
+# c_wuyang
+
+# County Title
+title = c_wuyang
+
+# Settlements
+max_settlements = 4
+
+b_wuyang = castle
+b_pengwangju = city
+#b_manghu = temple
+#b_shizicheng = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

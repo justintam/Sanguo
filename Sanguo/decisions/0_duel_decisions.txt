@@ -1,0 +1,1476 @@
+decisions = {
+	battle_challenge = {
+		is_high_prio = yes
+		potential = {
+			NOT = { has_character_modifier = battlefield_fight }
+			OR = {
+				trait = duelist
+				trait = fate_duel
+				trait = berserker
+				trait = wroth
+				trait = duel_poor_warrior
+				trait = duel_trained_warrior
+				trait = duel_skilled_warrior
+				trait = duel_master_warrior
+				ai = no
+			}
+			OR = {
+				NOT = { has_character_flag = flag_battlefield_duel }
+				had_character_flag = { flag = flag_battlefield_duel days = 10 }
+			}
+			in_battle = yes
+		}
+		allow = {
+			custom_tooltip = {
+				text = "TOOLTIPbattle_challenge"
+				hidden_tooltip = {
+					OR = {
+						### ROOT WAR
+						AND = {
+							is_ruler = yes
+							war = yes
+							any_current_enemy = {
+								OR = {
+									AND = {
+										at_location = ROOT
+										in_battle = yes
+										is_adult = yes
+										prisoner = no
+										is_alive = yes
+										NOT = { has_character_modifier = battlefield_fight }
+										OR = {
+											NOT = { has_character_flag = flag_battlefield_duel }
+											had_character_flag = { flag = flag_battlefield_duel days = 10 }
+										}
+									}
+									any_realm_character = {
+										at_location = ROOT
+										in_battle = yes
+										is_adult = yes
+										prisoner = no
+										is_alive = yes
+										NOT = { has_character_modifier = battlefield_fight }
+										OR = {
+											NOT = { has_character_flag = flag_battlefield_duel }
+											had_character_flag = { flag = flag_battlefield_duel days = 10 }
+										}
+									}
+									any_current_enemy = {
+										NOR = {
+											character = ROOT
+											same_liege = ROOT
+											de_facto_liege = ROOT
+											top_liege = {
+												ROOT = {
+													top_liege = {
+														character = PREVPREV
+													}
+												}
+											}
+										}
+										in_revolt = yes
+										OR = {
+											AND = {
+												at_location = ROOT
+												in_battle = yes
+												is_adult = yes
+												prisoner = no
+												is_alive = yes
+												NOT = { has_character_modifier = battlefield_fight }
+												OR = {
+													NOT = { has_character_flag = flag_battlefield_duel }
+													had_character_flag = { flag = flag_battlefield_duel days = 10 }
+												}
+											}
+											any_realm_character = {
+												NOR = {
+													character = ROOT
+													same_liege = ROOT
+													de_facto_liege = ROOT
+													top_liege = {
+														ROOT = {
+															top_liege = {
+																character = PREVPREV
+															}
+														}
+													}
+												}
+												at_location = ROOT
+												in_battle = yes
+												is_adult = yes
+												prisoner = no
+												is_alive = yes
+												NOT = { has_character_modifier = battlefield_fight }
+												OR = {
+													NOT = { has_character_flag = flag_battlefield_duel }
+													had_character_flag = { flag = flag_battlefield_duel days = 10 }
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+						### LIEGE WAR
+						any_liege = {
+							war = yes
+							any_current_enemy = {
+								OR = {
+									AND = {
+										at_location = ROOT
+										in_battle = yes
+										is_adult = yes
+										prisoner = no
+										is_alive = yes
+										NOT = { has_character_modifier = battlefield_fight }
+										OR = {
+											NOT = { has_character_flag = flag_battlefield_duel }
+											had_character_flag = { flag = flag_battlefield_duel days = 10 }
+										}
+									}
+									any_realm_character = {
+										at_location = ROOT
+										in_battle = yes
+										is_adult = yes
+										prisoner = no
+										is_alive = yes
+										NOT = { has_character_modifier = battlefield_fight }
+										OR = {
+											NOT = { has_character_flag = flag_battlefield_duel }
+											had_character_flag = { flag = flag_battlefield_duel days = 10 }
+										}
+									}
+									any_current_enemy = {
+										NOR = {
+											character = ROOT
+											same_liege = ROOT
+											de_facto_liege = ROOT
+											top_liege = {
+												ROOT = {
+													top_liege = {
+														character = PREVPREV
+													}
+												}
+											}
+										}
+										in_revolt = yes
+										OR = {
+											AND = {
+												at_location = ROOT
+												in_battle = yes
+												is_adult = yes
+												prisoner = no
+												is_alive = yes
+												NOT = { has_character_modifier = battlefield_fight }
+												OR = {
+													NOT = { has_character_flag = flag_battlefield_duel }
+													had_character_flag = { flag = flag_battlefield_duel days = 10 }
+												}
+											}
+											any_realm_character = {
+												NOR = {
+													character = ROOT
+													same_liege = ROOT
+													de_facto_liege = ROOT
+													top_liege = {
+														ROOT = {
+															top_liege = {
+																character = PREVPREV
+															}
+														}
+													}
+												}
+
+												at_location = ROOT
+												in_battle = yes
+												is_adult = yes
+												prisoner = no
+												is_alive = yes
+												NOT = { has_character_modifier = battlefield_fight }
+												OR = {
+													NOT = { has_character_flag = flag_battlefield_duel }
+													had_character_flag = { flag = flag_battlefield_duel days = 10 }
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+						### RAID
+						any_independent_ruler = {
+							OR = {
+								AND = {
+									at_location = ROOT
+									in_battle = yes
+									is_adult = yes
+									prisoner = no
+									is_alive = yes
+									NOT = { has_character_modifier = battlefield_fight }
+									OR = {
+										NOT = { has_character_flag = flag_battlefield_duel }
+										had_character_flag = { flag = flag_battlefield_duel days = 10 }
+									}
+									NOR = {
+										character = ROOT
+										same_liege = ROOT
+										de_facto_liege = ROOT
+										top_liege = {
+											ROOT = {
+												top_liege = {
+													character = PREVPREV
+												}
+											}
+										}
+									}
+									OR = {
+										any_army = {
+											is_looter = yes
+										}
+										has_character_flag = raiding_adventurer
+									}
+								}
+								any_realm_character = {
+									at_location = ROOT
+									in_battle = yes
+									is_adult = yes
+									prisoner = no
+									is_alive = yes
+									NOT = { has_character_modifier = battlefield_fight }
+									OR = {
+										NOT = { has_character_flag = flag_battlefield_duel }
+										had_character_flag = { flag = flag_battlefield_duel days = 10 }
+									}
+									NOR = {
+										character = ROOT
+										same_liege = ROOT
+										de_facto_liege = ROOT
+										top_liege = {
+											ROOT = {
+												top_liege = {
+													character = PREVPREV
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+						any_playable_ruler = {
+							OR = {
+								AND = {
+									at_location = ROOT
+									in_battle = yes
+									is_adult = yes
+									prisoner = no
+									is_alive = yes
+									NOT = { has_character_modifier = battlefield_fight }
+									OR = {
+										NOT = { has_character_flag = flag_battlefield_duel }
+										had_character_flag = { flag = flag_battlefield_duel days = 10 }
+									}
+									NOR = {
+										character = ROOT
+										same_liege = ROOT
+										de_facto_liege = ROOT
+										top_liege = {
+											ROOT = {
+												top_liege = {
+													character = PREVPREV
+												}
+											}
+										}
+									}
+									OR = {
+										any_army = {
+											is_looter = yes
+										}
+										has_character_flag = raiding_adventurer
+									}
+								}
+								any_realm_character = {
+									at_location = ROOT
+									in_battle = yes
+									is_adult = yes
+									prisoner = no
+									is_alive = yes
+									NOT = { has_character_modifier = battlefield_fight }
+									OR = {
+										NOT = { has_character_flag = flag_battlefield_duel }
+										had_character_flag = { flag = flag_battlefield_duel days = 10 }
+									}
+									NOR = {
+										character = ROOT
+										same_liege = ROOT
+										de_facto_liege = ROOT
+										top_liege = {
+											ROOT = {
+												top_liege = {
+													character = PREVPREV
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			add_character_modifier = {
+				name = battlefield_fight
+				duration = 20
+			}
+			hidden_tooltip = {
+				### Start
+				if = {
+					limit = { war = yes }
+					random_current_enemy = {
+						if = {
+							limit = {
+								at_location = ROOT
+								in_battle = yes
+								is_adult = yes
+								prisoner = no
+								is_alive = yes
+								NOT = { has_character_modifier = battlefield_fight }
+								OR = {
+									NOT = { has_character_flag = flag_battlefield_duel }
+									had_character_flag = { flag = flag_battlefield_duel days = 10 }
+								}
+							}
+							character_event = { id = challenge.1 }
+							break = yes
+						}
+						random_realm_character = {
+							limit = {
+								at_location = ROOT
+								in_battle = yes
+								is_adult = yes
+								prisoner = no
+								is_alive = yes
+								NOT = { has_character_modifier = battlefield_fight }
+								OR = {
+									NOT = { has_character_flag = flag_battlefield_duel }
+									had_character_flag = { flag = flag_battlefield_duel days = 10 }
+								}
+							}
+							character_event = { id = challenge.1 }
+							break = yes
+						}
+						random_current_enemy = {
+							limit = {
+								NOR = {
+									character = ROOT
+									same_liege = ROOT
+									de_facto_liege = ROOT
+									top_liege = {
+										ROOT = {
+											top_liege = {
+												character = PREVPREV
+											}
+										}
+									}
+								}
+								in_revolt = yes
+							}
+							if = {
+								limit = {
+									at_location = ROOT
+									in_battle = yes
+									is_adult = yes
+									prisoner = no
+									is_alive = yes
+									NOT = { has_character_modifier = battlefield_fight }
+									OR = {
+										NOT = { has_character_flag = flag_battlefield_duel }
+										had_character_flag = { flag = flag_battlefield_duel days = 10 }
+									}
+								}
+								character_event = { id = challenge.1 }
+								break = yes
+							}
+							random_realm_character = {
+								limit = {
+									NOR = {
+										character = ROOT
+										same_liege = ROOT
+										de_facto_liege = ROOT
+										top_liege = {
+											ROOT = {
+												top_liege = {
+													character = PREVPREV
+												}
+											}
+										}
+									}
+									at_location = ROOT
+									in_battle = yes
+									is_adult = yes
+									prisoner = no
+									is_alive = yes
+									NOT = { has_character_modifier = battlefield_fight }
+									OR = {
+										NOT = { has_character_flag = flag_battlefield_duel }
+										had_character_flag = { flag = flag_battlefield_duel days = 10 }
+									}
+								}
+								character_event = { id = challenge.1 }
+								break = yes
+							}
+						}
+					}
+				}
+				### Middle
+				any_liege = {
+					limit = {
+						war = yes
+					}
+					random_current_enemy = {
+						if = {
+							limit = {
+								at_location = ROOT
+								in_battle = yes
+								is_adult = yes
+								prisoner = no
+								is_alive = yes
+								NOT = { has_character_modifier = battlefield_fight }
+								OR = {
+									NOT = { has_character_flag = flag_battlefield_duel }
+									had_character_flag = { flag = flag_battlefield_duel days = 10 }
+								}
+							}
+							character_event = { id = challenge.1 }
+							break = yes
+						}
+						random_realm_character = {
+							limit = {
+								at_location = ROOT
+								in_battle = yes
+								is_adult = yes
+								prisoner = no
+								is_alive = yes
+								NOT = { has_character_modifier = battlefield_fight }
+								OR = {
+									NOT = { has_character_flag = flag_battlefield_duel }
+									had_character_flag = { flag = flag_battlefield_duel days = 10 }
+								}
+							}
+							character_event = { id = challenge.1 }
+							break = yes
+						}
+						random_current_enemy = {
+							limit = {
+								NOR = {
+									character = ROOT
+									same_liege = ROOT
+									de_facto_liege = ROOT
+									top_liege = {
+										ROOT = {
+											top_liege = {
+												character = PREVPREV
+											}
+										}
+									}
+								}
+								in_revolt = yes
+							}
+							if = {
+								limit = {
+									at_location = ROOT
+									in_battle = yes
+									is_adult = yes
+									prisoner = no
+									is_alive = yes
+									NOT = { has_character_modifier = battlefield_fight }
+									OR = {
+										NOT = { has_character_flag = flag_battlefield_duel }
+										had_character_flag = { flag = flag_battlefield_duel days = 10 }
+									}
+								}
+								character_event = { id = challenge.1 }
+								break = yes
+							}
+							random_realm_character = {
+								limit = {
+									NOR = {
+										character = ROOT
+										same_liege = ROOT
+										de_facto_liege = ROOT
+										top_liege = {
+											ROOT = {
+												top_liege = {
+													character = PREVPREV
+												}
+											}
+										}
+									}
+									at_location = ROOT
+									in_battle = yes
+									is_adult = yes
+									prisoner = no
+									is_alive = yes
+									NOT = { has_character_modifier = battlefield_fight }
+									OR = {
+										NOT = { has_character_flag = flag_battlefield_duel }
+										had_character_flag = { flag = flag_battlefield_duel days = 10 }
+									}
+								}
+								character_event = { id = challenge.1 }
+								break = yes
+							}
+						}
+					}
+				}
+				### End
+				random_independent_ruler = {
+					if = {
+						limit = {
+							at_location = ROOT
+							in_battle = yes
+							is_adult = yes
+							prisoner = no
+							is_alive = yes
+							NOT = { has_character_modifier = battlefield_fight }
+							OR = {
+								NOT = { has_character_flag = flag_battlefield_duel }
+								had_character_flag = { flag = flag_battlefield_duel days = 10 }
+							}
+							NOR = {
+								character = ROOT
+								same_liege = ROOT
+								de_facto_liege = ROOT
+								top_liege = {
+									ROOT = {
+										top_liege = {
+											character = PREVPREV
+										}
+									}
+								}
+							}
+							OR = {
+								any_army = {
+									is_looter = yes
+								}
+								has_character_flag = raiding_adventurer
+							}
+						}
+						character_event = { id = challenge.1 }
+						break = yes
+					}
+					random_realm_character = {
+						limit = {
+							at_location = ROOT
+							in_battle = yes
+							is_adult = yes
+							prisoner = no
+							is_alive = yes
+							NOT = { has_character_modifier = battlefield_fight }
+							OR = {
+								NOT = { has_character_flag = flag_battlefield_duel }
+								had_character_flag = { flag = flag_battlefield_duel days = 10 }
+							}
+							NOR = {
+								character = ROOT
+								same_liege = ROOT
+								de_facto_liege = ROOT
+								top_liege = {
+									ROOT = {
+										top_liege = {
+											character = PREVPREV
+										}
+									}
+								}
+							}
+						}
+						character_event = { id = challenge.1 }
+						break = yes
+					}
+				}
+				random_playable_ruler = {
+					if = {
+						limit = {
+							at_location = ROOT
+							in_battle = yes
+							is_adult = yes
+							prisoner = no
+							is_alive = yes
+							NOT = { has_character_modifier = battlefield_fight }
+							OR = {
+								NOT = { has_character_flag = flag_battlefield_duel }
+								had_character_flag = { flag = flag_battlefield_duel days = 10 }
+							}
+							NOR = {
+								character = ROOT
+								same_liege = ROOT
+								de_facto_liege = ROOT
+								top_liege = {
+									ROOT = {
+										top_liege = {
+											character = PREVPREV
+										}
+									}
+								}
+							}
+							OR = {
+								any_army = {
+									is_looter = yes
+								}
+								has_character_flag = raiding_adventurer
+							}
+						}
+						character_event = { id = challenge.1 }
+						break = yes
+					}
+					random_realm_character = {
+						limit = {
+							at_location = ROOT
+							in_battle = yes
+							is_adult = yes
+							prisoner = no
+							is_alive = yes
+							NOT = { has_character_modifier = battlefield_fight }
+							OR = {
+								NOT = { has_character_flag = flag_battlefield_duel }
+								had_character_flag = { flag = flag_battlefield_duel days = 10 }
+							}
+							NOR = {
+								character = ROOT
+								same_liege = ROOT
+								de_facto_liege = ROOT
+								top_liege = {
+									ROOT = {
+										top_liege = {
+											character = PREVPREV
+										}
+									}
+								}
+							}
+						}
+						character_event = { id = challenge.1 }
+						break = yes
+					}
+				}
+				### Nothing
+				character_event = { id = challenge.5 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1 #Percent
+			}
+			modifier = {
+				factor = 0.85
+				age = 40
+			}
+			modifier = {
+				factor = 0.85
+				age = 50
+			}
+			modifier = {
+				factor = 0.85
+				age = 60
+			}
+			modifier = {
+				factor = 0.4
+				tier = BARON
+			}
+			modifier = {
+				factor = 0.2
+				tier = COUNT
+			}
+			modifier = {
+				factor = 0.1
+				tier = DUKE
+			}
+			modifier = {
+				factor = 0.05
+				tier = KING
+			}
+			modifier = {
+				factor = 0
+				tier = EMPEROR
+			}
+			modifier = {
+				factor = 0.5
+				trait = destined
+				NOT = { 
+					trait = fate_duel
+					trait = duelist
+				}
+			}
+			modifier = {
+				factor = 0.1
+				trait = back_seat_leader
+			}
+			modifier = {
+				factor = 5
+				trait = fate_duel
+			}
+			modifier = {
+				factor = 1.5
+				trait = duel_poor_warrior
+			}
+			modifier = {
+				factor = 2
+				trait = duel_trained_warrior
+			}
+			modifier = {
+				factor = 2.5
+				trait = duel_skilled_warrior
+			}
+			modifier = {
+				factor = 3
+				trait = duel_master_warrior
+			}
+			modifier = {
+				factor = 1.5
+				trait = brave
+			}
+			modifier = {
+				factor = 2
+				trait = proud
+			}
+			modifier = {
+				factor = 1.5
+				trait = wroth
+			}
+			modifier = {
+				factor = 1.5
+				trait = strong
+			}
+			modifier = {
+				factor = 1.5
+				trait = tall
+			}
+			#Avoid fights
+			modifier = {
+				factor = 0
+				OR = {
+					trait = infirm
+					trait = blinded
+				}
+			}
+			modifier = {
+				factor = 0.1
+				is_ill = yes
+			}
+			modifier = {
+				factor = 0.1
+				trait = maimed
+			}
+			modifier = {
+				factor = 0.1
+				trait = wounded
+			}
+			modifier = {
+				factor = 0.1
+				trait = craven
+			}
+			modifier = {
+				factor = 0.25
+				trait = patient
+			}
+		}
+	}
+	siege_challenge = {
+		is_high_prio = yes
+		potential = {
+			NOT = { has_character_modifier = battlefield_fight }
+			OR = {
+				trait = duelist
+				trait = fate_duel
+				trait = berserker
+				trait = wroth
+				trait = duel_poor_warrior
+				trait = duel_trained_warrior
+				trait = duel_skilled_warrior
+				trait = duel_master_warrior
+				ai = no
+			}
+			OR = {
+				is_female = no
+				AND = {
+					is_female = yes
+					OR = {
+						culture_group = mongol
+						culture_group = yue
+						culture_group = tibetan
+						culture_group = man
+					}
+				}
+			}
+			is_adult = yes
+			OR = {
+				in_siege = yes
+				any_demesne_province = {
+					any_province_holding = {
+						has_siege = yes
+					}
+					ROOT = { at_location = PREV }
+				}
+			}
+			NOT = { in_battle = yes }
+			OR = {
+				NOT = { has_character_flag = flag_battlefield_duel }
+				had_character_flag = { flag = flag_battlefield_duel days = 10 }
+			}
+		}
+		allow = {
+			custom_tooltip = {
+				text = "TOOLTIPsiege_challenge"
+				hidden_tooltip = {
+					OR = {
+						in_siege = yes
+						AND = {
+							any_demesne_province = {
+								any_province_holding = {
+									has_siege = yes
+								}
+								ROOT = { at_location = PREV }
+							}
+							OR = {
+								AND = {
+									war = yes
+									any_current_enemy = {
+										OR = {
+											AND = {
+												at_location = ROOT
+												OR = {
+													is_female = no
+													AND = {
+														is_female = yes
+														OR = {
+															culture_group = mongol
+															culture_group = yue
+															culture_group = tibetan
+															culture_group = man
+														}
+													}
+												}
+												is_adult = yes
+												prisoner = no
+												is_alive = yes
+												NOT = { in_battle = yes }
+												NOT = { has_character_modifier = battlefield_fight }
+												OR = {
+													NOT = { has_character_flag = flag_battlefield_duel }
+													had_character_flag = { flag = flag_battlefield_duel days = 10 }
+												}
+											}
+											any_realm_character = {
+												at_location = ROOT
+												OR = {
+													is_female = no
+													AND = {
+														is_female = yes
+														OR = {
+															culture_group = mongol
+															culture_group = yue
+															culture_group = tibetan
+															culture_group = man
+														}
+													}
+												}
+												is_adult = yes
+												prisoner = no
+												is_alive = yes
+												NOT = { in_battle = yes }
+												NOT = { has_character_modifier = battlefield_fight }
+												OR = {
+													NOT = { has_character_flag = flag_battlefield_duel }
+													had_character_flag = { flag = flag_battlefield_duel days = 10 }
+												}
+											}
+										}
+									}
+								}
+								any_liege = {
+									war = yes
+									any_current_enemy = {
+										OR = {
+											AND = {
+												at_location = ROOT
+												OR = {
+													is_female = no
+													AND = {
+														is_female = yes
+														OR = {
+															culture_group = mongol
+															culture_group = yue
+															culture_group = tibetan
+															culture_group = man
+														}
+													}
+												}
+												is_adult = yes
+												prisoner = no
+												is_alive = yes
+												NOT = { in_battle = yes }
+												NOT = { has_character_modifier = battlefield_fight }
+												OR = {
+													NOT = { has_character_flag = flag_battlefield_duel }
+													had_character_flag = { flag = flag_battlefield_duel days = 10 }
+												}
+											}
+											any_realm_character = {
+												at_location = ROOT
+												OR = {
+													is_female = no
+													AND = {
+														is_female = yes
+														OR = {
+															culture_group = mongol
+															culture_group = yue
+															culture_group = tibetan
+															culture_group = man
+														}
+													}
+												}
+												is_adult = yes
+												prisoner = no
+												is_alive = yes
+												NOT = { in_battle = yes }
+												NOT = { has_character_modifier = battlefield_fight }
+												OR = {
+													NOT = { has_character_flag = flag_battlefield_duel }
+													had_character_flag = { flag = flag_battlefield_duel days = 10 }
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		effect = {
+			add_character_modifier = {
+				name = battlefield_fight
+				duration = 20
+			}
+			hidden_tooltip = {
+				if = {
+					limit = {
+						siege = {
+							enemy = {
+								leader = {
+									at_location = ROOT
+									prisoner = no
+									is_alive = yes
+									NOT = { in_battle = yes }
+									NOT = { has_character_modifier = battlefield_fight }
+									OR = {
+										NOT = { has_character_flag = flag_battlefield_duel }
+										had_character_flag = { flag = flag_battlefield_duel days = 10 }
+									}
+								}
+							}
+						}
+					}
+					siege = {
+						enemy = {
+							leader = {
+								character_event = { id = challenge.2 }
+								break = yes
+							}
+						}
+					}
+				}
+				
+				if = {
+					limit = { siege = { is_attacker = yes } }
+					if = {
+						limit = { war = yes }
+						random_current_enemy = {
+							limit = {
+								ROOT = {
+									location = {
+										controlled_by = PREVPREV
+									}
+								}
+							}
+							if = {
+								limit = {
+									at_location = ROOT
+									OR = {
+										is_female = no
+										AND = {
+											is_female = yes
+											OR = {
+												culture_group = mongol
+												culture_group = yue
+												culture_group = tibetan
+												culture_group = man
+											}
+										}
+									}
+									is_adult = yes
+									prisoner = no
+									is_alive = yes
+									NOT = { in_battle = yes }
+									NOT = { has_character_modifier = battlefield_fight }
+									OR = {
+										NOT = { has_character_flag = flag_battlefield_duel }
+										had_character_flag = { flag = flag_battlefield_duel days = 10 }
+									}
+								}
+								character_event = { id = challenge.2 }
+								break = yes
+							}
+							random_realm_character = {
+								limit = {
+									OR = {
+										at_location = ROOT
+										AND = {
+											in_command = no
+											is_councillor = no
+											is_landed = no
+										}
+									}
+									OR = {
+										is_female = no
+										AND = {
+											is_female = yes
+											OR = {
+												culture_group = mongol
+												culture_group = yue
+												culture_group = tibetan
+												culture_group = man
+											}
+										}
+									}
+									is_adult = yes
+									prisoner = no
+									is_alive = yes
+									NOT = { in_battle = yes }
+									NOT = { has_character_modifier = battlefield_fight }
+									OR = {
+										NOT = { has_character_flag = flag_battlefield_duel }
+										had_character_flag = { flag = flag_battlefield_duel days = 10 }
+									}
+								}
+								character_event = { id = challenge.2 }
+								break = yes
+							}
+						}
+					}
+					if = {
+						limit = { any_liege = { war = yes } }
+						any_liege = {
+							limit = { war = yes }
+							random_current_enemy = {
+								limit = {
+									ROOT = {
+										location = {
+											controlled_by = PREVPREV
+										}
+									}
+								}
+								if = {
+									limit = {
+										at_location = ROOT
+										OR = {
+											is_female = no
+											AND = {
+												is_female = yes
+												OR = {
+													culture_group = mongol
+													culture_group = yue
+													culture_group = tibetan
+													culture_group = man
+												}
+											}
+										}
+										is_adult = yes
+										prisoner = no
+										is_alive = yes
+										NOT = { in_battle = yes }
+										NOT = { has_character_modifier = battlefield_fight }
+										OR = {
+											NOT = { has_character_flag = flag_battlefield_duel }
+											had_character_flag = { flag = flag_battlefield_duel days = 10 }
+										}
+									}
+									character_event = { id = challenge.2 }
+									break = yes
+								}
+								random_realm_character = {
+									limit = {
+										OR = {
+											at_location = ROOT
+											AND = {
+												in_command = no
+												is_councillor = no
+												is_landed = no
+											}
+										}
+										OR = {
+											is_female = no
+											AND = {
+												is_female = yes
+												OR = {
+													culture_group = mongol
+													culture_group = yue
+													culture_group = tibetan
+													culture_group = man
+												}
+											}
+										}
+										is_adult = yes
+										prisoner = no
+										is_alive = yes
+										NOT = { in_battle = yes }
+										NOT = { has_character_modifier = battlefield_fight }
+										OR = {
+											NOT = { has_character_flag = flag_battlefield_duel }
+											had_character_flag = { flag = flag_battlefield_duel days = 10 }
+										}
+									}
+									character_event = { id = challenge.2 }
+									break = yes
+								}
+							}
+						}
+					}
+					location = {
+						owner = {
+							if = {
+								limit = {
+									at_location = ROOT
+									OR = {
+										is_female = no
+										AND = {
+											is_female = yes
+											OR = {
+												culture_group = mongol
+												culture_group = yue
+												culture_group = tibetan
+												culture_group = man
+											}
+										}
+									}
+									is_adult = yes
+									prisoner = no
+									is_alive = yes
+									NOT = { in_battle = yes }
+									NOT = { has_character_modifier = battlefield_fight }
+									OR = {
+										NOT = { has_character_flag = flag_battlefield_duel }
+										had_character_flag = { flag = flag_battlefield_duel days = 10 }
+									}
+									capital_holding = { controller = { character = PREVPREV } }
+									capital_scope = { ROOT = { at_location = PREV } }
+								}
+								character_event = { id = challenge.2 }
+								break = yes
+							}
+							random_realm_character = {
+								limit = {
+									OR = {
+										at_location = ROOT
+										AND = {
+											in_command = no
+											is_councillor = no
+											is_landed = no
+										}
+									}
+									OR = {
+										is_female = no
+										AND = {
+											is_female = yes
+											OR = {
+												culture_group = mongol
+												culture_group = yue
+												culture_group = tibetan
+												culture_group = man
+											}
+										}
+									}
+									is_adult = yes
+									prisoner = no
+									is_alive = yes
+									NOT = { in_battle = yes }
+									NOT = { has_character_modifier = battlefield_fight }
+									OR = {
+										NOT = { has_character_flag = flag_battlefield_duel }
+										had_character_flag = { flag = flag_battlefield_duel days = 10 }
+									}
+								}
+								character_event = { id = challenge.2 }
+								break = yes
+							}
+						}
+					}
+				}
+				if = {
+					limit = {
+						any_demesne_province = {
+							any_province_holding = {
+								has_siege = yes
+							}
+							ROOT = { at_location = PREV }
+						}
+					}
+					if = {
+						limit = { war = yes }
+						random_current_enemy = {
+							if = {
+								limit = {
+									at_location = ROOT
+									OR = {
+										is_female = no
+										AND = {
+											is_female = yes
+											OR = {
+												culture_group = mongol
+												culture_group = yue
+												culture_group = tibetan
+												culture_group = man
+											}
+										}
+									}
+									is_adult = yes
+									prisoner = no
+									is_alive = yes
+									NOT = { in_battle = yes }
+									NOT = { has_character_modifier = battlefield_fight }
+									OR = {
+										NOT = { has_character_flag = flag_battlefield_duel }
+										had_character_flag = { flag = flag_battlefield_duel days = 10 }
+									}
+								}
+								character_event = { id = challenge.2 }
+								break = yes
+							}
+							random_realm_character = {
+								limit = {
+									at_location = ROOT
+									OR = {
+										is_female = no
+										AND = {
+											is_female = yes
+											OR = {
+												culture_group = mongol
+												culture_group = yue
+												culture_group = tibetan
+												culture_group = man
+											}
+										}
+									}
+									is_adult = yes
+									prisoner = no
+									is_alive = yes
+									NOT = { in_battle = yes }
+									NOT = { has_character_modifier = battlefield_fight }
+									OR = {
+										NOT = { has_character_flag = flag_battlefield_duel }
+										had_character_flag = { flag = flag_battlefield_duel days = 10 }
+									}
+								}
+								character_event = { id = challenge.2 }
+								break = yes
+							}
+						}
+					}
+					any_liege = {
+						limit = { war = yes }
+						random_current_enemy = {
+							if = {
+								limit = {
+									at_location = ROOT
+									OR = {
+										is_female = no
+										AND = {
+											is_female = yes
+											OR = {
+												culture_group = mongol
+												culture_group = yue
+												culture_group = tibetan
+												culture_group = man
+											}
+										}
+									}
+									is_adult = yes
+									prisoner = no
+									is_alive = yes
+									NOT = { in_battle = yes }
+									NOT = { has_character_modifier = battlefield_fight }
+									OR = {
+										NOT = { has_character_flag = flag_battlefield_duel }
+										had_character_flag = { flag = flag_battlefield_duel days = 10 }
+									}
+								}
+								character_event = { id = challenge.2 }
+								break = yes
+							}
+							random_realm_character = {
+								limit = {
+									at_location = ROOT
+									OR = {
+										is_female = no
+										AND = {
+											is_female = yes
+											OR = {
+												culture_group = mongol
+												culture_group = yue
+												culture_group = tibetan
+												culture_group = man
+											}
+										}
+									}
+									is_adult = yes
+									prisoner = no
+									is_alive = yes
+									NOT = { in_battle = yes }
+									NOT = { has_character_modifier = battlefield_fight }
+									OR = {
+										NOT = { has_character_flag = flag_battlefield_duel }
+										had_character_flag = { flag = flag_battlefield_duel days = 10 }
+									}
+								}
+								character_event = { id = challenge.2 }
+								break = yes
+							}
+						}
+					}
+				}
+				
+				character_event = { id = challenge.5 }
+			}
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.1 #Percent
+			}
+			modifier = {
+				factor = 0.85
+				age = 40
+			}
+			modifier = {
+				factor = 0.85
+				age = 50
+			}
+			modifier = {
+				factor = 0.85
+				age = 60
+			}
+			modifier = {
+				factor = 0.4
+				tier = BARON
+			}
+			modifier = {
+				factor = 0.2
+				tier = COUNT
+			}
+			modifier = {
+				factor = 0.1
+				tier = DUKE
+			}
+			modifier = {
+				factor = 0.05
+				tier = KING
+			}
+			modifier = {
+				factor = 0
+				tier = EMPEROR
+			}
+			modifier = {
+				factor = 0.5
+				trait = destined
+				NOT = { 
+					trait = fate_duel
+					trait = duelist
+				}
+			}
+			modifier = {
+				factor = 0.1
+				trait = back_seat_leader
+			}
+			modifier = {
+				factor = 5
+				trait = fate_duel
+			}
+			modifier = {
+				factor = 1.5
+				trait = duel_poor_warrior
+			}
+			modifier = {
+				factor = 2
+				trait = duel_trained_warrior
+			}
+			modifier = {
+				factor = 2.5
+				trait = duel_skilled_warrior
+			}
+			modifier = {
+				factor = 3
+				trait = duel_master_warrior
+			}
+			modifier = {
+				factor = 1.5
+				trait = brave
+			}
+			modifier = {
+				factor = 2
+				trait = proud
+			}
+			modifier = {
+				factor = 1.5
+				trait = wroth
+			}
+			modifier = {
+				factor = 1.5
+				trait = strong
+			}
+			modifier = {
+				factor = 1.5
+				trait = tall
+			}
+			#Avoid fights
+			modifier = {
+				factor = 0
+				OR = {
+					trait = infirm
+					trait = blinded
+				}
+			}
+			modifier = {
+				factor = 0.1
+				is_ill = yes
+			}
+			modifier = {
+				factor = 0.1
+				trait = maimed
+			}
+			modifier = {
+				factor = 0.1
+				trait = wounded
+			}
+			modifier = {
+				factor = 0.1
+				trait = craven
+			}
+			modifier = {
+				factor = 0.25
+				trait = patient
+			}
+			modifier = {
+				factor = 0.1
+				siege = {
+					is_attacker = no
+				}
+			}
+			modifier = {
+				factor = 0.1
+				in_command = no
+			}
+		}
+	}
+}

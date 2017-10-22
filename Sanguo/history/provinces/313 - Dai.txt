@@ -1,0 +1,19 @@
+# c_dai
+
+# County Title
+title = c_dai
+
+# Settlements
+max_settlements = 5
+
+b_dai = castle
+b_daijiao = temple
+#b_daifu = temple
+#b_huyu = castle
+#b_jinmu = city
+
+# Misc
+culture = wuhuan
+religion = tengri_pagan
+
+#History

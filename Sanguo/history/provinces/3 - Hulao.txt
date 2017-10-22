@@ -1,0 +1,19 @@
+# c_hulao
+
+# County Title
+title = c_hulao
+
+# Settlements
+max_settlements = 5
+
+b_hulaoguan = castle
+b_hulaocheng = city
+#b_hulaodong = city
+#b_gaoshanzhen = city
+#b_xiawozhen = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

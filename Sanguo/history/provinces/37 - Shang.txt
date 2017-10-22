@@ -1,0 +1,19 @@
+# c_shang
+
+# County Title
+title = c_shang
+
+# Settlements
+max_settlements = 5
+
+b_shang = castle
+b_dingyang = castle
+b_qiuci = temple
+#b_jingle = castle
+#b_shangding = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

@@ -1,0 +1,23 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_rinan
+}
+137.1.1={
+	holder=1901 #Oulin
+}
+150.1.1={
+	holder=560 #Yu Xin
+}
+160.1.1={
+	holder=1004 #Shi Ci
+}
+180.1.1={
+	holder=560 #Yu Xin
+}
+191.1.1={
+	holder=1902 #Oulian
+}

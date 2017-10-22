@@ -1,0 +1,18 @@
+# c_gaolang
+
+# County Title
+title = c_gaolang
+
+# Settlements
+max_settlements = 4
+
+b_gaolang = tribal
+#b_zhuanlou = city
+#b_gaodong = temple
+#b_banlou = castle
+
+# Misc
+culture = xiongnu
+religion = tengri_pagan
+
+#History

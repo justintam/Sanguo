@@ -1,0 +1,20 @@
+# c_anping
+
+# County Title
+title = c_anping
+
+# Settlements
+max_settlements = 6
+
+b_xinduan = castle
+b_fuliu = city
+b_guanjin = city
+#b_guantu = castle
+#b_fuming = city
+#b_huanjin = temple
+
+# Misc
+culture = han
+religion = confucian
+
+#History

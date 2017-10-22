@@ -1,0 +1,51 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=k_yi
+	vice_royalty = yes
+}
+120.1.1={
+	holder=1213 #Chen Wei
+}
+130.1.1={
+	holder=720 #Yuan Peng
+}
+#Zhao Yao?
+184.1.1={
+	holder=116 #Que Jian
+}
+188.8.1={
+	vice_royalty = no
+	holder=50 #Liu Yan
+}
+190.1.1={
+	holder=4306 #Random
+}
+200.1.1={
+	holder=1279 #Zhao Yao
+}
+#208.8.1={
+#	holder=0 #Zhang Su
+#}
+210.1.1={
+	holder=3615 #Xu Jing
+}
+211.1.1={
+	holder=3619 #Zhang Su
+}
+#Zhang Cun claim
+214.1.1={
+	holder=616 #Xiahou Zuan
+}	#Served by Gu Pu, Qin Mi, Wang Pu
+#She Jian until 220
+#Deng Zhi
+#Zhang Yi 221
+223.6.10={
+	holder=0 #Yao Zhou
+}
+#Luo Meng
+#Ma Qi until 234
+#He Zhi

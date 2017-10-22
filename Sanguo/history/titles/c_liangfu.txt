@@ -1,0 +1,19 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_taishan
+}
+180.1.1={
+	holder=1246 #Yang Dao
+}
+184.1.1={
+	liege=d_donghuang
+	holder=213 #Guan Hai
+}
+184.4.1={
+	liege=d_taishan
+	holder=3567 #Random
+}

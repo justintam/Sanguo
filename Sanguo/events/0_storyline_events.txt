@@ -1,0 +1,2617 @@
+###########################################
+#                                         #
+# Storyline Events  	            	  #
+#                                         #
+# ID RTK.130000-RTK.131999                #
+#                                         #
+#                                         #
+#                                         #
+#                                         #
+#                                         #
+#                                         #
+#                                         #
+###########################################
+
+namespace = RTK
+
+# Rise of the YT
+narrative_event = {
+	id = RTK.130000
+	desc = EVTDESC_RTK.130000
+	title = EVTTITLE_RTK.130000
+	picture = GFX_evt_yellow_turban_rise
+
+	is_triggered_only = yes
+	
+	#Fast event triggers
+	ai = no
+
+	major = yes
+	
+	trigger = {
+		year = 184
+		NOT = { year = 188 }
+		NOT = { has_global_flag = yellow_turban_rise }
+	}
+	
+	immediate = {
+		set_global_flag = yellow_turban_rise
+		k_yellow = {
+			holder_scope = {
+				ROOT = {
+					chronicle = {
+						entry = CHRONICLE_YELLOW_TURBAN_RISE
+						portrait = [Prev.GetID]
+					}
+				}
+			}
+		}
+		d_cao = {
+			holder_scope = {
+				capital_scope = {
+					owner = {
+						spawn_unit = {
+							province = PREV
+							home = PREV
+							owner = THIS
+							reinforces = yes
+							troops = {
+								knights = { 50 50 }
+								light_infantry = { 200 200 }
+								heavy_infantry = { 200 200 }
+								light_cavalry = { 100 100 }
+								archers = { 200 200 }
+								pikemen = { 250 250 }
+							}
+							attrition = 0.25
+							earmark = clan_army
+						}
+					}
+				}
+			}
+		}
+		d_liu = {
+			holder_scope = {
+				capital_scope = {
+					owner = {
+						spawn_unit = {
+							province = PREV
+							home = PREV
+							owner = THIS
+							reinforces = yes
+							troops = {
+								light_infantry = { 100 100 }
+								heavy_infantry = { 100 100 }
+								light_cavalry = { 100 100 }
+								archers = { 100 100 }
+								pikemen = { 100 100 }
+							}
+							attrition = 0.25
+							earmark = clan_army
+						}
+					}
+				}
+			}
+		}
+		d_sun = {
+			holder_scope = {
+				capital_scope = {
+					owner = {
+						spawn_unit = {
+							province = PREV
+							home = PREV
+							owner = THIS
+							reinforces = yes
+							troops = {
+								knights = { 50 50 }
+								light_infantry = { 200 200 }
+								heavy_infantry = { 200 200 }
+								light_cavalry = { 100 100 }
+								archers = { 350 350 }
+								pikemen = { 100 100 }
+							}
+							attrition = 0.25
+							earmark = clan_army
+						}
+					}
+				}
+			}
+		}
+		d_feather = {
+			holder_scope = {
+				capital_scope = {
+					owner = {
+						spawn_unit = {
+							province = PREV
+							home = PREV
+							owner = THIS
+							reinforces = yes
+							troops = {
+								light_infantry = { 100 100 }
+								light_cavalry = { 100 100 }
+								archers = { 300 300 }
+							}
+							attrition = 0.25
+							earmark = clan_army
+						}
+					}
+				}
+			}
+		}
+		any_independent_ruler = {
+			limit = {
+				ai = yes
+				OR = {
+					has_landed_title = d_zhonghuang
+					has_landed_title = d_beihuang
+					has_landed_title = d_xihuang
+					has_landed_title = d_nanhuang
+					has_landed_title = d_donghuang
+				}
+			}
+			any_realm_province = {
+				owner = {
+					spawn_unit = {
+						province = PREV
+						home = PREV
+						owner = THIS
+						troops = {
+							light_infantry = { 6800 6800 }
+							heavy_infantry = { 200 200 }
+							pikemen = { 500 500 }
+							archers = { 500 500 }
+						}
+						attrition = 1.0
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_landed_title = d_zhonghuang
+					has_landed_title = d_beihuang
+					has_landed_title = d_xihuang
+					has_landed_title = d_nanhuang
+					has_landed_title = d_donghuang
+				}
+			}
+			any_realm_province = {
+				owner = {
+					spawn_unit = {
+						province = PREV
+						home = PREV
+						owner = THIS
+						troops = {
+							light_infantry = { 6800 6800 }
+							heavy_infantry = { 200 200 }
+							pikemen = { 500 500 }
+							archers = { 500 500 }
+						}
+						attrition = 1.0
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EXCELLENT"
+		trigger = {
+			top_liege = {
+				OR = {
+					has_landed_title = k_yellow
+					has_landed_title = d_zhonghuang
+					has_landed_title = d_beihuang
+					has_landed_title = d_xihuang
+					has_landed_title = d_nanhuang
+					has_landed_title = d_donghuang
+					has_landed_title = d_white
+					has_landed_title = d_black
+				}
+			}
+		}
+	}
+	option = {
+		name = "OHNO"
+		trigger = {
+			top_liege = {
+				OR = {
+					has_landed_title = e_china
+					has_landed_title = k_sili
+					has_landed_title = k_ji
+					has_landed_title = k_yan
+					has_landed_title = k_you
+					has_landed_title = k_yu
+					has_landed_title = k_yi
+					has_landed_title = k_xu
+					has_landed_title = k_bing
+					has_landed_title = k_jing
+					has_landed_title = k_qing
+					has_landed_title = k_yang
+					has_landed_title = k_liang
+					has_landed_title = k_jiaozhi
+				}
+			}
+		}
+	}
+	option = {
+		name = "OH"
+		trigger = {
+			top_liege = {
+				NOR = {
+					has_landed_title = d_zhonghuang
+					has_landed_title = d_beihuang
+					has_landed_title = d_xihuang
+					has_landed_title = d_nanhuang
+					has_landed_title = d_donghuang
+					has_landed_title = d_white
+					has_landed_title = d_black
+					has_landed_title = e_china
+					has_landed_title = k_sili
+					has_landed_title = k_ji
+					has_landed_title = k_yan
+					has_landed_title = k_you
+					has_landed_title = k_yu
+					has_landed_title = k_yi
+					has_landed_title = k_xu
+					has_landed_title = k_bing
+					has_landed_title = k_jing
+					has_landed_title = k_qing
+					has_landed_title = k_yang
+					has_landed_title = k_liang
+					has_landed_title = k_jiaozhi
+				}
+			}
+		}
+	}
+}
+
+#Liang Rebellion
+narrative_event = {
+	id = RTK.130001
+	desc = EVTDESC_RTK.130001
+	title = EVTTITLE_RTK.130001
+	picture = GFX_evt_nomad_camp
+
+	#Fast event triggers
+	ai = no
+
+	major = yes
+	
+	trigger = {
+		OR = {
+			AND = {
+				year = 184
+				month=10
+			}
+			year = 185
+		}
+		NOT = { year = 190 }
+		NOT = { has_global_flag = liang_rebel_rise }
+		NOT = { has_global_flag = liang_rebel_end }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = liang_rebel_rise
+		if = {
+			limit = {
+				k_liangzei = { has_holder = no }				
+				AND = {
+					c_baidi = { 
+						holder_scope = {
+							character = 800 #Beigong Boyu
+						}
+					}
+					has_landed_title = c_baidi
+				}
+			}
+			religion = folk
+			k_liangzei = { gain_title = ROOT }
+		}
+		if = { limit = { NOT = { has_landed_title = k_liangzei } }
+			random_playable_ruler = {
+				limit = { character = 800 }
+				religion = folk
+				k_liangzei = { gain_title = PREV }
+			}
+		}
+		if = { limit = { k_liangzei = { has_holder = yes } }
+			any_playable_ruler = {
+				limit = {
+					capital_scope = { region = world_china_liang }
+					OR = {
+						real_tier = COUNT
+						real_tier = DUKE
+					}
+				}
+				character_event = { id=SAN.22 }
+			}
+			if = {
+				limit = {
+					NOT = { has_landed_title = k_liangzei }
+					capital_scope = { region = world_china_liang }
+					OR = {
+						real_tier = COUNT
+						real_tier = DUKE
+					}
+				}
+				e_rebels = { holder_scope = { character_event = { id=SAN.23 } } }
+			}
+			k_liangzei = {
+				holder_scope = {
+					any_realm_province = {
+						owner = {
+							spawn_unit = {
+								province = PREV
+								home = PREV
+								owner = THIS
+								troops = {
+									light_infantry = { 1500 1500 }
+									heavy_infantry = { 500 500 }
+									light_cavalry = { 500 500 }
+									archers = { 500 500 }
+								}
+								attrition = 1.0
+							}
+						}
+					}
+					ROOT = {
+						chronicle = {
+							entry = CHRONICLE_LIANG_REBEL_RISE
+							portrait = [Prev.GetID]
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "EXCELLENT"
+		trigger = {
+			top_liege = { has_landed_title = k_liangzei }
+		}
+	}
+	option = {
+		name = "OHNO"
+		trigger = {
+			top_liege = {
+				OR = {
+					has_landed_title = e_china
+					has_landed_title = k_sili
+					has_landed_title = k_ji
+					has_landed_title = k_yan
+					has_landed_title = k_you
+					has_landed_title = k_yu
+					has_landed_title = k_yi
+					has_landed_title = k_xu
+					has_landed_title = k_bing
+					has_landed_title = k_jing
+					has_landed_title = k_qing
+					has_landed_title = k_yang
+					has_landed_title = k_liang
+					has_landed_title = k_jiaozhi
+				}
+			}
+		}
+	}
+	option = {
+		name = "OH"
+		trigger = {
+			top_liege = {
+				NOR = {
+					has_landed_title = k_liangzei
+					has_landed_title = e_china
+					has_landed_title = k_sili
+					has_landed_title = k_ji
+					has_landed_title = k_yan
+					has_landed_title = k_you
+					has_landed_title = k_yu
+					has_landed_title = k_yi
+					has_landed_title = k_xu
+					has_landed_title = k_bing
+					has_landed_title = k_jing
+					has_landed_title = k_qing
+					has_landed_title = k_yang
+					has_landed_title = k_liang
+					has_landed_title = k_jiaozhi
+				}
+			}
+		}
+	}
+}
+
+#Ten Eunuchs
+narrative_event = {
+	id = RTK.130002
+	desc = EVTDESC_RTK.130002
+	title = EVTTITLE_RTK.130002
+	picture = GFX_evt_ten_eunuchs_rise
+
+	#Fast event triggers
+	ai = no
+
+	major = yes
+	
+	trigger = {
+#		year = 188
+#		NOT = { year = 190 }
+		e_china = { has_holder = yes }
+		NOT = {
+			k_confucian = {
+				holder_scope = {
+					character = 30 # Emperor Ling
+				}
+			}
+		}
+		NOT = { has_global_flag = ten_eunuchs_rise }
+		NOT = { has_global_flag = ten_eunuchs_chaos }
+		NOT = { has_global_flag = ten_eunuchs_end }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = ten_eunuchs_rise
+		e_china = {
+			add_law = vice_royalty_0
+			add_law = feudal_administration
+		}
+	}
+	
+	option = {
+		name = "OHNO"
+		trigger = {
+			top_liege = {
+				OR = {
+					has_landed_title = e_china
+					has_landed_title = k_sili
+					has_landed_title = k_ji
+					has_landed_title = k_yan
+					has_landed_title = k_you
+					has_landed_title = k_yu
+					has_landed_title = k_yi
+					has_landed_title = k_xu
+					has_landed_title = k_bing
+					has_landed_title = k_jing
+					has_landed_title = k_qing
+					has_landed_title = k_yang
+					has_landed_title = k_liang
+					has_landed_title = k_jiaozhi
+				}
+			}
+		}
+	}
+	option = {
+		name = "OH"
+		trigger = {
+			top_liege = {
+				NOR = {
+					has_landed_title = e_china
+					has_landed_title = k_sili
+					has_landed_title = k_ji
+					has_landed_title = k_yan
+					has_landed_title = k_you
+					has_landed_title = k_yu
+					has_landed_title = k_yi
+					has_landed_title = k_xu
+					has_landed_title = k_bing
+					has_landed_title = k_jing
+					has_landed_title = k_qing
+					has_landed_title = k_yang
+					has_landed_title = k_liang
+					has_landed_title = k_jiaozhi
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+	id = RTK.130003
+	desc = EVTDESC_RTK.130003
+	title = EVTTITLE_RTK.130003
+	picture = "GFX_evt_ten_eunuchs_chaos"
+	
+	only_playable = yes
+	only_men = yes
+	prisoner = no
+	ai = yes
+
+	trigger = {
+		has_global_flag = ten_eunuchs_rise
+		has_landed_title = c_eunuch
+		k_sili = {
+			holder_scope = {
+				character = 100 #He Jin
+			}
+		}
+		NOT = { has_global_flag = ten_eunuchs_chaos }
+		NOT = { has_global_flag = ten_eunuchs_end }
+	}
+
+	mean_time_to_happen = {
+		days = 1
+		
+		modifier = {
+			factor = 0
+		}
+	}
+	
+	immediate = {
+		set_global_flag = ten_eunuchs_chaos
+		clr_global_flag = ten_eunuchs_rise
+		
+		e_china = {
+			holder_scope = {
+				set_character_flag = ten_eunuchs_flag
+			}
+			reverse_war = {
+				target = ROOT
+				casus_belli = invasion
+			}
+		}
+		
+		create_random_soldier = {
+			random_traits = yes
+			dynasty = none
+			religion = confucian
+			culture = han
+			female = no
+			age = 30
+			employer = c_eunuch
+		}
+		new_character = {
+			spawn_unit = {
+				province = 1
+				home = 1
+				owner = ROOT
+				leader = THIS
+				troops = {
+					light_infantry = { 3000 3000 }
+					heavy_infantry = { 2000 2000 }
+					archers = { 2000 2000 }
+				}
+				attrition = 1.0
+				disband_on_peace = yes
+			}
+		}
+	}
+	
+	option = {
+		name = "OK"
+	}
+}
+
+#Liang End
+character_event = {
+	id = RTK.130004
+	desc = EVTDESC_RTK.130004
+	title = EVTTITLE_RTK.130004
+	picture = "GFX_evt_nomad_camp"
+	
+	#Fast event triggers
+	ai = no
+
+	major = yes
+	
+	trigger = {
+		has_global_flag = liang_rebel_rise
+		year = 190
+		k_liangzei = { has_holder = no }
+		NOT = { has_global_flag = liang_rebel_end }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = liang_rebel_end
+		clr_global_flag = liang_rebel_rise
+		chronicle = {
+			entry = CHRONICLE_LIANG_REBEL_END
+		}
+	}
+	
+	option = {
+		name = "EXCELLENT"
+		trigger = {
+			top_liege = {
+				OR = {
+					has_landed_title = e_china
+					has_landed_title = k_sili
+					has_landed_title = k_ji
+					has_landed_title = k_yan
+					has_landed_title = k_you
+					has_landed_title = k_yu
+					has_landed_title = k_yi
+					has_landed_title = k_xu
+					has_landed_title = k_bing
+					has_landed_title = k_jing
+					has_landed_title = k_qing
+					has_landed_title = k_yang
+					has_landed_title = k_liang
+					has_landed_title = k_jiaozhi
+				}
+			}
+		}
+	}
+	option = {
+		name = "OHNO"
+		trigger = {
+			top_liege = { has_landed_title = k_liangzei }
+		}
+	}
+	option = {
+		name = "OH"
+		trigger = {
+			top_liege = {
+				NOR = {
+					has_landed_title = e_china
+					has_landed_title = k_sili
+					has_landed_title = k_ji
+					has_landed_title = k_yan
+					has_landed_title = k_you
+					has_landed_title = k_yu
+					has_landed_title = k_yi
+					has_landed_title = k_xu
+					has_landed_title = k_bing
+					has_landed_title = k_jing
+					has_landed_title = k_qing
+					has_landed_title = k_yang
+					has_landed_title = k_liang
+					has_landed_title = k_jiaozhi
+					has_landed_title = k_liangzei
+				}
+			}
+		}
+	}
+}
+
+character_event = {
+	id = RTK.130005
+	desc = EVTDESC_RTK.130005
+	title = EVTTITLE_RTK.130005
+	picture = "GFX_evt_ten_eunuchs_chaos"
+	
+	only_playable = yes
+	only_men = yes
+	prisoner = no
+	
+	trigger = {
+		has_global_flag = ten_eunuchs_chaos
+		OR = {
+			AND = {
+				d_bohai = {
+					holder_scope = {
+						character = 700 #Yuan Shao
+					}
+				}
+				has_landed_title = d_bohai
+			}
+			AND = {
+				k_bing = {
+					holder_scope = {
+						character = 115 #Ding Yuan
+					}
+				}
+				has_landed_title = k_bing
+			}
+			AND = {
+				d_hedong = { 
+					holder_scope = {
+						character = 300 #Dong_Zhuo
+					}
+				}
+				has_landed_title = d_hedong
+			}
+		}
+		NOT = { has_character_flag = ten_eunuchs_flag }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_character_flag = ten_eunuchs_flag
+	}
+	
+	option = {
+		name = "OK"
+		
+		e_china = {
+			holder_scope = {
+				ROOT = { join_defender_wars = PREV }
+			}
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = "OH"
+		
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+#Dong Zhuo - Set
+narrative_event = {
+	id = RTK.130006
+	desc = EVTDESC_RTK.130006
+	title = EVTTITLE_RTK.130006
+	picture = GFX_evt_dong_zhuo_rise
+
+	#Fast event triggers
+	ai = no
+	
+	major = yes
+	
+	trigger = {
+		has_global_flag = ten_eunuchs_chaos
+		d_hedong = {
+			holder_scope = {
+				has_character_flag = ten_eunuchs_flag
+				character = 300 #Dong_Zhuo
+			}
+		}
+		NOT = { has_global_flag = ten_eunuchs_end }
+	}
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	immediate = {
+		set_global_flag = ten_eunuchs_end
+		clr_global_flag = ten_eunuchs_chaos
+	}
+	
+	option = {
+		name = "EXCELLENT"
+		trigger = {
+			any_liege = {
+				character = 300
+			}
+		}
+	}
+	option = {
+		name = "OHNO"
+		trigger = {
+			NOT = {
+				any_liege = { character = 300 }
+			}
+			top_liege = {
+				OR = {
+					has_landed_title = e_china
+					has_landed_title = k_sili
+					has_landed_title = k_ji
+					has_landed_title = k_yan
+					has_landed_title = k_you
+					has_landed_title = k_yu
+					has_landed_title = k_yi
+					has_landed_title = k_xu
+					has_landed_title = k_bing
+					has_landed_title = k_jing
+					has_landed_title = k_qing
+					has_landed_title = k_yang
+					has_landed_title = k_liang
+					has_landed_title = k_jiaozhi
+				}
+			}
+		}
+	}
+	option = {
+		name = "OH"
+		trigger = {
+			top_liege = {
+				NOR = {
+					has_landed_title = e_china
+					has_landed_title = k_sili
+					has_landed_title = k_ji
+					has_landed_title = k_yan
+					has_landed_title = k_you
+					has_landed_title = k_yu
+					has_landed_title = k_yi
+					has_landed_title = k_xu
+					has_landed_title = k_bing
+					has_landed_title = k_jing
+					has_landed_title = k_qing
+					has_landed_title = k_yang
+					has_landed_title = k_liang
+					has_landed_title = k_jiaozhi
+				}
+			}
+		}
+	}
+}
+
+#Ten Eunuchs End
+character_event = {
+	id = RTK.130007
+	desc = EVTDESC_RTK.130007
+	title = EVTTITLE_RTK.130007
+	picture = GFX_evt_dong_zhuo_rise
+
+	#Fast event triggers
+	only_playable = yes
+	only_men = yes
+	ai = yes
+	
+	trigger = {
+		has_global_flag = ten_eunuchs_end
+		d_hedong = {
+			holder_scope = {
+				character = 300 #Dong_Zhuo
+			}
+		}
+		OR = {
+			AND = {
+				has_landed_title = d_bohai
+				d_bohai = {
+					holder_scope = {
+						character = 700 #Yuan Shao
+					}
+				}
+			}
+			AND = {
+				has_landed_title = e_china
+				e_china = {
+					holder_scope = {
+						character = 100 #He Jin
+					}
+				}
+			}
+		}
+		has_character_flag = ten_eunuchs_flag
+		NOT = { has_character_flag = dong_zhuo_flag }
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	immediate = {
+		set_character_flag = dong_zhuo_flag
+		
+		if = { # Yuan Shao set Coalition flag
+			limit = {
+				has_landed_title = d_bohai
+			}
+			d_bohai = {
+				holder_scope = {
+					set_character_flag = destiny
+				}
+			}
+		}
+		if = { # He Jin loses Yingchuan
+			limit = {
+				has_landed_title = e_china
+			}
+			c_eunuch = {
+				holder_scope = {
+					death = { death_reason = death_execution killer = ROOT }
+				}
+			}
+			any_dynasty_member = {
+				limit = {
+					age = 16
+					is_alive = yes
+				}
+				death = { death_reason = death_murder_unknown }
+			}
+		}
+	}
+	
+	option = {
+		name = "OK"
+	}
+}
+
+#Abdication to Dong Zhuo and execute Eunuchs
+narrative_event = {
+	id = RTK.130008
+	desc = EVTDESC_RTK.130008
+	title = EVTTITLE_RTK.130008
+	picture = GFX_evt_dong_zhuo_rise
+
+	#Fast event triggers
+	only_playable = yes
+	only_men = yes
+	
+	major = yes
+	
+	trigger = {
+		has_global_flag = ten_eunuchs_end
+		has_character_flag = ten_eunuchs_flag
+		OR = {
+			AND = {
+				has_landed_title = d_hedong
+				d_hedong = {
+					holder_scope = {
+						character = 300 #Dong_Zhuo
+					}
+				}
+			}
+			AND = {
+				has_landed_title = e_china
+				e_china = {
+					holder_scope = {
+						character = 300 #Dong_Zhuo
+					}
+				}
+			}
+		}
+		e_china = {
+			holder_scope = {
+				ai = yes
+			}
+		}
+		NOR = {
+			has_global_flag = dong_zhuo_rise
+			has_global_flag = dong_zhuo_retreat
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 4
+	}
+	
+	immediate = {
+		set_global_flag = dong_zhuo_rise
+		add_trait = tyrant
+		any_playable_ruler = {
+			limit = { ai = no }
+			chronicle = {
+				entry = CHRONICLE_DONG_ZHUO_RISE
+				portrait = [Root.GetID]
+			}
+		}
+		capital_scope = {
+			owner = {
+				spawn_unit = {
+					province = PREV
+					home = PREV
+					owner = ROOT
+					troops = {
+						knights = { 1500 1500 }
+						light_infantry = { 3000 3000 }
+						heavy_infantry = { 2000 2000 }
+						light_cavalry = { 1500 1500 }
+						archers = { 1500 1500 }
+						pikemen = { 2000 2000 }
+					}
+					attrition = 1.0
+				}
+			}
+		}
+		if = {
+			limit = {
+				k_bing = {
+					holder_scope = {
+						ai = yes
+						character = 115 #Ding Yuan
+					}
+				}
+			}
+			k_bing = {
+				holder_scope = {
+					any_realm_character = {
+						limit = { character = 309 } #Lu Bu
+						set_father = ROOT
+						move_character = ROOT
+						add_trait = adopted
+						add_trait = horse_redhare
+						ROOT = { remove_trait = horse_redhare }
+					}
+					death = {
+						death_reason = death_execution
+						killer = ROOT
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				k_bing = {
+					holder_scope = {
+						ai = yes
+						NOT = { character = 300 }
+					}
+				}
+			}
+			k_bing = {
+				holder_scope = {
+					abdicate_to = ROOT
+				}
+			}
+		}
+		if = {
+			limit = {
+				k_liang = {
+					holder_scope = {
+						ai = yes
+						NOT = { character = 300 }
+					}
+				}
+			}
+			k_liang = {
+				holder_scope = {
+					abdicate_to = ROOT
+				}
+			}
+		}
+		if = {
+			limit = {
+				k_sili = {
+					holder_scope = {
+						ai = yes
+						NOT = { character = 300 }
+					}
+				}
+			}
+			k_sili = {
+				holder_scope = {
+					abdicate_to = ROOT
+				}
+			}
+		}
+		if = {
+			limit = {
+				c_henan = {
+					holder_scope = {
+						ai = yes
+						NOT = { character = 300 }
+					}
+				}
+			}
+			c_henan = {
+				holder_scope = {
+					abdicate_to = ROOT
+				}
+			}
+		}
+		if = {
+			limit = {
+				e_china = {
+					holder_scope = {
+						ai = yes
+						NOT = { character = 300 }
+					}
+				}
+			}
+			e_china = {
+				holder_scope = {
+					abdicate_to = ROOT
+				}
+			}
+		}
+		# Dong Zhuo destroys eunuch faction
+		if = {
+			limit = {
+				c_eunuch = {
+					holder_scope = {
+						war_with = ROOT
+					}
+				}
+			}
+			c_eunuch = {
+				holder_scope = {
+					end_war = invalid
+					any_courtier = {
+						limit = {
+							prisoner = no
+							is_female = no
+							is_adult = yes
+							trait = eunuch
+						}
+						death = {
+							death_reason = death_execution
+							killer = ROOT
+						}
+					}
+					death = {
+						death_reason = death_execution
+						killer = ROOT
+					}
+				}
+			}
+			activate_title = { title = c_eunuch status = no }
+		}
+		if = { #Dong Zhuo forces Emperor abdication
+			limit = {
+				k_confucian = {
+					holder_scope = {
+						character = 33 #Shao
+					}
+				}
+			}
+			k_confucian = {
+				holder_scope = {
+					random_sibling = {
+						limit = {
+							character = 34 #Xian
+							is_alive = yes
+						}
+						k_confucian = {
+							holder_scope = {
+								abdicate_to = PREVPREV
+							}
+						}
+					}
+				}
+			}
+		}
+		any_playable_ruler = {
+			limit = { religion = confucian }
+			character_event = { id = EMP.10 }
+		}
+	}
+	
+	option = {
+		name = "OK"
+	}
+}
+
+#Dong Zhuo - Retreat
+narrative_event = {
+	id = RTK.130020
+	desc = EVTDESC_RTK.130020
+	title = EVTTITLE_RTK.130020
+	picture = GFX_evt_civil_war
+	
+	only_playable = yes
+	only_men = yes
+	prisoner = no
+	has_global_flag = dong_zhuo_rise
+	
+	trigger = {
+		NOT = { has_global_flag = dong_zhuo_retreat }
+		k_sili = {
+			holder_scope = {
+				character = 300
+			}
+		}
+		has_landed_title = k_sili
+		NOT = { has_landed_title = e_china }
+		any_playable_ruler = {
+			has_character_flag = coalition_won
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_global_flag = dong_zhuo_retreat
+		clr_global_flag = dong_zhuo_rise
+		
+		if = {
+			limit = {
+				d_jingzhao = {
+					holder_scope = {
+						ai = yes
+						independent = no
+					}
+				}
+			}
+			d_jingzhao = {
+				holder_scope = {
+					abdicate_to = ROOT
+				}
+				any_de_jure_vassal = {
+					limit = {
+						ai = yes
+					}
+					abdicate_to = ROOT
+				}
+			}
+		}
+		if = {
+			limit = {
+				c_changan = {
+					holder_scope = {
+						ai = yes
+						independent = no
+					}
+				}
+			}
+			c_changan = {
+				holder_scope = {
+					abdicate_to = ROOT
+				}
+				any_de_jure_vassal = {
+					limit = {
+						ai = yes
+					}
+					abdicate_to = ROOT
+				}
+			}
+		}
+		k_confucian = {
+			holder_scope = {
+				b_changle = {
+					grant_title_no_opinion = PREV
+				}
+			}
+		}
+		c_henan = {
+			any_direct_de_jure_vassal_title = {
+				limit = { is_capital = no }
+				destroy_settlement = THIS
+			}
+			any_playable_ruler = {
+				limit = { has_character_flag = coalition_won }
+				gain_title = PREV
+			}
+		}
+	}
+	
+	option = { # Move capital
+		name = "OK"
+		b_changan = {
+			ROOT = { capital = PREV }
+		}
+	}
+}
+
+#Lubu - Start
+narrative_event = {
+	id = RTK.130021
+	title = EVTTITLE_RTK.130021
+	picture = GFX_evt_civil_war
+	
+	desc = {
+		text = EVTDESCA_RTK.130021
+		trigger = {
+			religion_group = chinese_religion
+			top_liege = {
+				NOT = { has_landed_title = k_sili }
+			}
+		}
+	}
+	desc = {
+		text = EVTDESCB_RTK.130021
+		trigger = {
+			top_liege = {
+				has_landed_title = k_sili
+			}
+		}
+	}
+	desc = {
+		text = EVTDESCC_RTK.130021
+		trigger = {
+			NOT = { religion_group = chinese_religion }
+			top_liege = {
+				NOT = { has_landed_title = k_sili }
+			}
+		}
+	}
+	
+	ai = no
+	
+	major = yes
+	
+	trigger = {
+		has_global_flag = dong_zhuo_retreat
+		NOR = {
+			has_global_flag = lu_bu_plot_start
+			has_global_flag = lu_bu_plot_end
+		}
+		k_sili = {
+			holder_scope = {
+				character = 300
+				any_realm_character = {
+					OR = {
+						character = 309 #Lu Bu
+						AND = {
+							character = 120 #Wang Yun
+							any_child = {
+								character = 3910 #Diaochan
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	immediate = {
+		set_global_flag = lu_bu_plot_start
+		k_sili = {
+			holder_scope = {
+				any_realm_character = {
+					limit = {
+						OR = {
+							character = 309 #Lu Bu
+							character = 120 #Wang Yun
+						}
+					}
+					set_character_flag = lu_bu_plot
+					any_child = {
+						limit = { character = 3910 }
+						remove_spouse = yes
+						any_consort = {
+							remove_consort = PREV
+						}
+						any_lover = {
+							remove_lover = PREV
+						}
+						move_character = PREVPREV
+						add_trait = inner_court
+						set_character_flag = lu_bu_plot
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = "OH"
+	}
+}
+
+#Lu Bu - Diaochan
+narrative_event = {
+	id = RTK.130022
+	
+	hide_window = yes
+	
+	only_playable = yes
+	only_men = yes
+	prisoner = no
+	
+	trigger = {
+		has_global_flag = lu_bu_plot_start
+		NOT = { has_global_flag = lu_bu_plot_end }
+		k_sili = {
+			holder_scope = {
+				character = 300
+				any_realm_character = {
+					OR = {
+						character = 309 #Lu Bu
+						character = 120 #Wang Yun
+						character = 3910 #Diaochan
+					}
+					has_character_flag = lu_bu_plot
+					count = 3
+				}
+			}
+		}
+		has_landed_title = k_sili
+	}
+	
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	immediate = {
+		k_sili = {
+			holder_scope = {
+				any_realm_character = {
+					limit = {
+						character = 309 #Lu Bu
+						has_character_flag = lu_bu_plot
+					}
+					add_lover = 3910
+				}
+			}
+		}
+	}
+}
+
+#Dong Zhuo - Diaochan
+narrative_event = {
+	id = RTK.130023
+	
+	hide_window = yes
+	
+	only_playable = yes
+	only_men = yes
+	prisoner = no
+	
+	trigger = {
+		has_global_flag = lu_bu_plot_start
+		NOT = { has_global_flag = lu_bu_plot_end }
+		k_sili = {
+			holder_scope = {
+				character = 300
+				any_realm_character = {
+					character = 309 #Lu Bu
+					has_character_flag = lu_bu_plot
+					any_lover = {
+						character = 3910
+						has_character_flag = lu_bu_plot
+					}
+				}
+			}
+		}
+		has_landed_title = k_sili
+	}
+	
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	immediate = {
+		k_sili = {
+			holder_scope = {
+				add_consort = 3910
+			}
+		}
+	}
+}
+
+#Dong Zhuo - Lu Bu
+narrative_event = {
+	id = RTK.130024
+	
+	hide_window = yes
+	
+	only_playable = yes
+	only_men = yes
+	prisoner = no
+	
+	trigger = {
+		has_global_flag = lu_bu_plot_start
+		NOT = { has_global_flag = lu_bu_plot_end }
+		k_sili = {
+			holder_scope = {
+				character = 300
+				any_realm_character = {
+					character = 309 #Lu Bu
+					has_character_flag = lu_bu_plot
+					any_lover = {
+						character = 3910
+						has_character_flag = lu_bu_plot
+					}
+				}
+			}
+		}
+		has_landed_title = k_sili
+	}
+	
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	immediate = {
+		k_sili = {
+			holder_scope = {
+				add_rival = 309
+				any_realm_character = {
+					limit = { character = 309 }
+					add_trait = wounded
+				}
+			}
+		}
+	}
+}
+
+#Dong Zhuo - Lu Bu
+narrative_event = {
+	id = RTK.130025
+	title = EVTTITLE_RTK.130025
+	picture = GFX_evt_civil_war
+	
+	desc = {
+		text = EVTDESCA_RTK.130025
+		trigger = {
+			religion_group = chinese_religion
+			top_liege = {
+				NOT = { has_landed_title = k_sili }
+			}
+		}
+	}
+	desc = {
+		text = EVTDESCB_RTK.130025
+		trigger = {
+			top_liege = {
+				has_landed_title = k_sili
+			}
+		}
+	}
+	desc = {
+		text = EVTDESCC_RTK.130025
+		trigger = {
+			NOT = { religion_group = chinese_religion }
+			top_liege = {
+				NOT = { has_landed_title = k_sili }
+			}
+		}
+	}
+	
+	ai = no
+	
+	major = yes
+	
+	trigger = {
+		has_global_flag = lu_bu_plot_start
+		NOT = { has_global_flag = lu_bu_plot_end }
+		k_sili = {
+			holder_scope = {
+				ai = yes
+				character = 300
+				any_rival = {
+					character = 309
+					has_character_flag = lu_bu_plot
+				}
+				any_realm_character = {
+					character = 120
+					has_character_flag = lu_bu_plot
+				}
+			}
+		}
+		k_liang = {
+			holder_scope = {
+				OR = {
+					character = 300
+					character = 307
+				}
+			}
+		}
+		e_china = {
+			OR = {
+				has_holder = no
+				holder_scope = { ai = yes }
+			}
+		}
+		c_duling = {
+			holder_scope = { ai = yes }
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	immediate = {
+		set_global_flag = lu_bu_plot_end
+		k_sili = {
+			holder_scope = {
+				save_event_target_as = target_dongzhuo
+				any_playable_ruler = {
+					limit = { character = 307 }
+					save_event_target_as = target_lijue
+				}
+				any_realm_character = {
+					limit = { character = 307 }
+					save_event_target_as = target_lijue
+				}
+				k_liang = {
+					any_de_jure_vassal_title = {
+						limit = { holder_scope = { character = 300 } }
+						grant_title = event_target:target_lijue
+					}
+					if = {
+						limit = { holder_scope = { NOT = { character = 307 } } }
+						grant_title = event_target:target_lijue
+					}
+				}
+				any_realm_character = {
+					limit = { character = 120 }
+					save_event_target_as = story_heir
+				}
+				abdicate_to = event_target:story_heir
+			}
+		}
+		activate_title = { title = e_china status = yes }
+		e_china = {
+			grant_title_no_opinion = event_target:story_heir
+		}
+		event_target:target_dongzhuo = {
+			any_opinion_modifier_target = {
+				limit = {
+					NOR = {
+						character = 307
+						character = 309
+					}
+					is_ruler = no
+					reverse_has_opinion_modifier = {
+						who = PREV
+						modifier = opinion_loyalty
+					}
+				}
+				any_close_relative = {
+					limit = { top_liege = { character = event_target:story_heir } }
+					move_character = event_target:target_lijue
+				}
+				move_character = event_target:target_lijue
+			}
+			any_child = {
+				limit = { character = 309 }
+				save_event_target_as = target_lubu
+			}
+			any_dynasty_member = {
+				limit = { ai = yes }
+				death = { death_reason = death_execution killer = event_target:target_lubu }
+			}
+		}
+		c_duling = {
+			gain_title = event_target:target_lubu
+		}
+		k_sili = {
+			gain_title = event_target:target_lubu
+		}
+		event_target:target_lubu = {
+			remove_spouse = yes
+			add_spouse = 3910
+			spouse = {
+				remove_trait = inner_court
+			}
+			any_close_relative = {
+				move_character = PREV
+			}
+		}
+	}
+	
+	option = {
+		name = OK
+	}
+}
+
+#Chaos in Changan
+narrative_event = {
+	id = RTK.130026
+	desc = EVTDESC_RTK.130026
+	title = EVTTITLE_RTK.130026
+	picture = GFX_evt_dong_zhuo_rise
+	
+	ai = no
+	
+	major = yes
+	
+	trigger = {
+		has_global_flag = lu_bu_plot_end
+		year = 192
+		OR = {
+			month = 6
+			month = 7
+			month = 8
+			month = 9
+			month = 10
+			month = 11
+		}
+		NOT = { year = 193 }
+		e_china = {
+			holder_scope = {
+				ai = yes
+				character = 120
+			}
+		}
+		k_liang = {
+			holder_scope = {
+				character = 307
+				any_realm_character = { character = 308 }
+			}
+		}
+		k_sili = {
+			holder_scope = {
+				ai = yes
+				character = 309
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	immediate = {
+		k_liang = {
+			holder_scope = {
+				save_event_target_as = target_lijue
+				e_china = {
+					holder_scope = {
+						save_event_target_as = target_wangyun
+						abdicate_to = event_target:target_lijue
+					}
+				}
+				any_realm_character = {
+					limit = { character = 308 }
+					save_event_target_as = target_guosi
+				}
+			}
+		}
+		k_sili = {
+			holder_scope = {
+				save_event_target_as = target_lubu
+				abdicate_to = event_target:target_guosi
+			}
+		}
+		activate_title = { title = c_lubu status = yes }
+		c_lubu = {
+			grant_title_no_opinion = event_target:target_lubu
+		}
+		event_target:target_wangyun = {
+			any_dynasty_member = {
+				limit = {
+					ai = yes
+					NOR = {
+						character = 120
+						character = 3910
+					}
+					martial = 8
+				}
+				death = { death_reason = death_execution killer = event_target:target_guosi }
+			}
+			any_dynasty_member = {
+				limit = {
+					ai = yes
+					NOT = { character = 3910 }
+				}
+				death = { death_reason = death_execution killer = event_target:target_lijue }
+			}
+		}
+	}
+	
+	option = {
+		name = OK
+	}
+}
+
+#Wrath of Cao
+narrative_event = {
+	id = RTK.130027
+	desc = EVTDESC_RTK.130027
+	title = EVTTITLE_RTK.130027
+	picture = GFX_evt_death
+	
+	ai = no
+	
+	major = yes
+	
+	trigger = {
+		NOT = { has_global_flag = cao_cao_wrath }
+		AND = {
+			year = 193
+			OR = {
+				month = 7
+				month = 8
+				month = 9
+				month = 10
+				month = 11
+			}
+		}
+		NOT = { year = 194 }
+		k_yan = {
+			holder_scope = {
+				character = 400
+				father = { is_alive = yes }
+			}
+		}
+		k_xu = {
+			holder_scope = {
+				character = 119
+				any_courtier = {
+					character = 235
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	immediate = {
+		set_global_flag = cao_cao_wrath
+		k_yan = {
+			holder_scope = {
+				father = {
+					save_event_target_as = target_victim
+				}
+				add_claim = k_xu
+				add_claim = k_yu
+				k_xu = {
+					holder_scope = {
+						any_courtier = {
+							limit = { character = 235 }
+							event_target:target_victim = {
+								death = { death_reason = death_murder killer = PREV }
+							}
+							character_event = { id = SAN.53 }
+						}
+						add_rival = PREVPREV
+						reverse_war = { target = PREVPREV casus_belli = rivalry_cb }
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = OK
+	}
+}
+
+#Lu Bu Rise
+narrative_event = {
+	id = RTK.130028
+	desc = EVTDESC_RTK.130028
+	title = EVTTITLE_RTK.130028
+	picture = GFX_evt_lubu_rise
+	
+	ai = no
+	
+	major = yes
+	
+	trigger = {
+		NOT = { has_global_flag = lu_bu_rise }
+		year = 193
+		OR = {
+			month = 9
+			month = 10
+			month = 11
+		}
+		NOT = { year = 195 }
+		c_lubu = { holder_scope = { character = 309 } }
+		d_yingchuan = {
+			holder_scope = {
+				ai = yes
+			}
+		}
+		k_yan = {
+			holder_scope = {
+				ai = yes
+				character = 400
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	immediate = {
+		set_global_flag = lu_bu_rise
+		c_lubu = {
+			holder_scope = {
+				save_event_target_as = story_heir
+				set_defacto_liege = THIS
+			}
+		}
+		d_yingchuan = { holder_scope = { save_event_target_as = story_lost } }
+		activate_title = { title = k_cao status = yes }
+		k_yan = {
+			holder_scope = {
+				save_event_target_as = target_caocao
+				k_cao = { grant_title_no_opinion = PREV }
+			}
+			event_target:story_lost = { abdicate_to = event_target:target_caocao }
+			any_de_jure_vassal_title = {
+				limit = { holder_scope = { character = 400 } }
+				event_target:story_heir = {
+					usurp_title_plus_barony_if_unlanded = PREV
+				}
+			}
+			event_target:story_heir = {
+				usurp_title_plus_barony_if_unlanded = PREV
+				event_target:target_caocao = {
+					set_defacto_liege = THIS
+					war = { target = PREV casus_belli = claim_all }
+				}
+				any_realm_character = {
+					limit = {
+						is_ruler = yes
+						OR = {
+							character = 20456 #Zao Zhi
+							character = 154 #Jin Yun
+							character = 10488 #Cheng Yu
+							character = 10489 #Xun Yu
+							event_target:target_caocao = {
+								reverse_has_opinion_modifier = {
+									who = PREV
+									modifier = opinion_loyalty
+								}
+							}
+						}
+					}
+					set_defacto_liege = event_target:target_caocao
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = OK
+	}
+}
+
+#Liu Bei Rise
+narrative_event = {
+	id = RTK.130029
+	desc = EVTDESC_RTK.130029
+	title = EVTTITLE_RTK.130029
+	picture = GFX_evt_bodyguard
+	
+	ai = no
+	
+	major = yes
+	
+	trigger = {
+		NOT = { has_global_flag = liu_bei_rise }
+		year = 194
+		NOT = { year = 195 }
+		OR = {
+			d_liu = {
+				holder_scope = {
+					character = 600
+				}
+			}
+			k_yu = {
+				holder_scope = {
+					character = 600
+				}
+			}
+		}
+		k_xu = {
+			holder_scope = {
+				ai = yes
+				character = 119
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	immediate = {
+		set_global_flag = liu_bei_rise
+		if = {
+			limit = { NOT = { is_title_active = d_liu } }
+			k_yu = {
+				holder_scope = {
+					save_event_target_as = story_heir
+				}
+			}
+		}
+		if = {
+			limit = { is_title_active = d_liu }
+			d_liu = {
+				holder_scope = {
+					save_event_target_as = story_heir
+				}
+			}
+		}
+		if = {
+			limit = { NOT = { is_title_active = e_xu } }
+			k_xu = {
+				holder_scope = {
+					add_trait = ill
+					death = {
+						death_reason = death_trait
+					}
+				}
+			}
+			k_xu = {
+				holder_scope = {
+					abdicate_to = event_target:story_heir
+				}
+			}
+			break = yes
+		}
+		if = {
+			limit = { is_title_active = e_xu }
+			e_xu = {
+				holder_scope = {
+					abdicate_to = event_target:story_heir
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = OK
+	}
+}
+
+#Northern Unification
+narrative_event = {
+	id = RTK.130030
+	desc = EVTDESC_RTK.130030
+	title = EVTTITLE_RTK.130030
+	picture = GFX_evt_rival_rulers
+	
+	ai = no
+	
+	major = yes
+	
+	trigger = {
+		NOT = { has_global_flag = north_unify_start }
+		NOT = { has_global_flag = north_unify_end }
+		year = 195
+		NOT = { year = 199 }
+		k_ji = {
+			holder_scope = {
+				character = 700
+				k_you = {
+					holder_scope = {
+						character = 900
+						NOT = {
+							war_with = PREVPREV
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	immediate = {
+		set_global_flag = north_unify_start
+		k_ji = {
+			holder_scope = {
+				add_rival = 900
+				add_claim = k_you
+				k_you = {
+					holder_scope = {
+						add_claim = k_ji
+						reverse_war = {
+							target = PREVPREV
+							casus_belli = claim
+							thirdparty_title = PREV
+						}
+					}
+				}
+			}
+		}
+		
+	}
+	
+	option = {
+		name = OK
+	}
+}
+
+#Li Jue - Guo Si
+narrative_event = {
+	id = RTK.130031
+	desc = EVTDESC_RTK.130031
+	title = EVTTITLE_RTK.130031
+	picture = GFX_evt_rival_rulers
+	
+	ai = no
+	
+	major = yes
+	has_global_flag = lu_bu_plot_end
+	
+	trigger = {
+		NOR = {
+			has_global_flag = changan_duel_start
+			has_global_flag = changan_duel_end
+		}
+		year = 195
+		OR = {
+			month = 3
+			month = 4
+			month = 5
+			month = 6
+			month = 7
+			month = 8
+			month = 9
+			month = 10
+			month = 11
+		}
+		NOT = { year = 196 }
+		k_liang = {
+			holder_scope = {
+				character = 307
+				k_sili = {
+					holder_scope = {
+						character = 308
+						NOT = {
+							war_with = PREVPREV
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	immediate = {
+		set_global_flag = changan_duel_start
+		k_sili = {
+			holder_scope = {
+				add_rival = 307
+				add_claim = k_liang
+				k_liang = {
+					holder_scope = {
+						reverse_war = {
+							target = PREVPREV
+							casus_belli = claim
+							thirdparty_title = PREV
+						}
+					}
+				}
+			}
+		}
+		
+	}
+	
+	option = {
+		name = OK
+	}
+}
+
+#Emperor Flees
+narrative_event = {
+	id = RTK.130032
+	desc = EVTDESC_RTK.130032
+	title = EVTTITLE_RTK.130032
+	picture = GFX_evt_carriage
+	
+	ai = no
+	
+	major = yes
+	has_global_flag = changan_duel_start
+	
+	trigger = {
+		NOT = { has_global_flag = changan_duel_end }
+		year = 195
+		OR = {
+			month = 7
+			month = 8
+			month = 9
+			month = 10
+			month = 11
+		}
+		NOT = { year = 196 }
+		k_liang = {
+			holder_scope = {
+				character = 307
+				k_sili = {
+					holder_scope = {
+						character = 308
+						war_with = PREVPREV
+					}
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	immediate = {
+		clr_global_flag = changan_duel_start
+		set_global_flag = changan_duel_end
+		k_liang = {
+			holder_scope = {
+				save_event_target_as = story_heir
+				any_war = {
+					limit = {
+						using_cb = claim
+						war_title = k_liang
+					}
+					end_war = invalid
+				}
+			}
+		}
+		k_confucian = {
+			holder_scope = {
+				1 = {
+					build_holding = { title = b_beiguan type = temple holder = PREV }
+				}
+				b_changle = {
+					grant_title_no_opinion = event_target:story_heir
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = OK
+	}
+}
+
+#Cao Cao Rise
+narrative_event = {
+	id = RTK.130033
+	desc = EVTDESC_RTK.130033
+	title = EVTTITLE_RTK.130033
+	picture = GFX_evt_emissary_byzantine
+	
+	ai = no
+	
+	major = yes
+	has_global_flag = changan_duel_end
+	
+	trigger = {
+		NOT = { has_global_flag = cao_cao_rise }
+		year = 196
+		NOT = { year = 197 }
+		k_confucian = {
+			holder_scope = {
+				has_landed_title = b_beiguan
+				NOT = { has_landed_title = b_changan }
+			}
+		}
+		k_yan = {
+			holder_scope = {
+				character = 400
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	immediate = {
+		set_global_flag = cao_cao_rise
+		k_yan = {
+			holder_scope = {
+				save_event_target_as = story_heir
+			}
+		}
+		e_china = {
+			grant_title_no_opinion = event_target:story_heir
+		}
+		k_liang = {
+			set_defacto_liege = THIS
+		}
+		k_yong = {
+			set_defacto_liege = THIS
+		}
+		k_confucian = {
+			holder_scope = {
+				b_xutian = {
+					grant_title_no_opinion = PREV
+				}
+				b_beiguan = {
+					destroy_settlement = THIS
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = OK
+	}
+}
+
+#Liu Bei's Kindness
+narrative_event = {
+	id = RTK.130034
+	desc = EVTDESC_RTK.130034
+	title = EVTTITLE_RTK.130034
+	picture = GFX_evt_emissary
+	
+	ai = no
+	
+	major = yes
+	has_global_flag = lu_bu_rise
+	has_global_flag = liu_bei_rise
+	
+	trigger = {
+		NOT = { has_global_flag = liu_bei_kindness }
+		year = 196
+		NOT = { year = 197 }
+		k_xu = {
+			holder_scope = {
+				ai = yes
+				character = 600
+			}
+		}
+		c_xiao = {
+			holder_scope = {
+				ai = yes
+			}
+		}
+		c_lubu = {
+			holder_scope = {
+				character = 309
+				is_landed = no
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	immediate = {
+		set_global_flag = liu_bei_kindness
+		c_lubu = {
+			holder_scope = {
+				save_event_target_as = story_heir
+			}
+		}
+		k_xu = {
+			holder_scope = {
+				event_target:story_heir = {
+					set_defacto_liege = PREV
+				}
+			}
+		}
+		c_xiao = {
+			grant_title_no_opinion = event_target:story_heir
+		}
+	}
+	
+	option = {
+		name = OK
+	}
+}
+
+#Lu Bu Resurgence
+narrative_event = {
+	id = RTK.130035
+	desc = EVTDESC_RTK.130035
+	title = EVTTITLE_RTK.130035
+	picture = GFX_evt_emissary
+	
+	ai = no
+	
+	major = yes
+	has_global_flag = liu_bei_kindness
+	
+	trigger = {
+		NOT = { has_global_flag = lu_bu_betray }
+		year = 196
+		NOT = { year = 197 }
+		k_xu = {
+			holder_scope = {
+				ai = yes
+				character = 600
+				war = yes
+				any_realm_character = {
+					character = 309
+					has_landed_title = c_lubu
+					has_landed_title = c_xiao
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	immediate = {
+		set_global_flag = lu_bu_betray
+		c_lubu = {
+			holder_scope = {
+				save_event_target_as = story_heir
+			}
+		}
+		k_xu = {
+			holder_scope = {
+				abdicate_to = event_target:story_heir
+				c_xiao = {
+					grant_title_no_opinion = PREV
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = OK
+	}
+}
+
+#Liu Bei Returns
+narrative_event = {
+	id = RTK.130036
+	desc = EVTDESC_RTK.130036
+	title = EVTTITLE_RTK.130036
+	picture = GFX_evt_emissary
+	
+	ai = no
+	
+	major = yes
+	has_global_flag = lu_bu_betray
+	
+	trigger = {
+		NOT = { has_global_flag = liu_bei_returns }
+		year = 199
+		NOT = { year = 200 }
+		e_china = {
+			holder_scope = {
+				character = 400
+			}
+		}
+		k_xu = {
+			holder_scope = {
+				ai = yes
+				character = 309
+				any_realm_character = {
+					character = 600
+					has_landed_title = c_xiao
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 15
+	}
+	
+	immediate = {
+		set_global_flag = liu_bei_returns
+		e_china = {
+			holder_scope = {
+				save_event_target_as = story_heir
+			}
+		}
+		k_xu = {
+			holder_scope = {
+				abdicate_to = event_target:story_heir
+				death = { death_reason = death_execution killer = event_target:story_heir }
+				c_xiao = {
+					holder_scope = {
+						if = {
+							limit = {
+								NOT = { has_landed_title = d_liu }
+							}
+							activate_title = { title = d_liu status = yes }
+							d_liu = {
+								grant_title_no_opinion = PREV
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = OK
+	}
+}
+
+#32 - Liu Bei
+# northern unification
+#33 - Guandu
+#34 - Liu Bei
+
+#End of YT
+narrative_event = {
+	id = RTK.130040
+	desc = EVTDESC_RTK.130040
+	title = EVTTITLE_RTK.130040
+	picture = GFX_evt_yellow_turban_end
+
+	#Fast event triggers
+	ai = no
+
+	major = yes
+	
+	trigger = {
+		OR = {
+			AND = {
+				year = 207
+				NOT = { year = 208 }
+			}
+			AND = {
+				k_yellow = { has_holder = no }
+				d_beihuang = { has_holder = no }
+				d_zhonghuang = { has_holder = no }
+				d_donghuang = { has_holder = no }
+				d_nanhuang = { has_holder = no }
+				d_xihuang = { has_holder = no }
+			}
+		}
+		has_global_flag = yellow_turban_rise
+		NOT = { has_global_flag = yellow_turban_end }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		clr_global_flag = yellow_turban_rise
+		set_global_flag = yellow_turban_end
+		chronicle = {
+			entry = CHRONICLE_YELLOW_TURBAN_END
+		}
+	}
+	
+	option = {
+		name = "EXCELLENT"
+		trigger = {
+			top_liege = {
+				OR = {
+					has_landed_title = k_yellow
+					has_landed_title = d_beihuang
+					has_landed_title = d_zhonghuang
+					has_landed_title = d_donghuang
+					has_landed_title = d_nanhuang
+					has_landed_title = d_xihuang
+					has_landed_title = d_white
+					has_landed_title = d_black
+				}
+			}
+		}
+	}
+	option = {
+		name = "OHNO"
+		trigger = {
+			top_liege = {
+				OR = {
+					has_landed_title = e_china
+					has_landed_title = k_sili
+					has_landed_title = k_ji
+					has_landed_title = k_yan
+					has_landed_title = k_you
+					has_landed_title = k_yu
+					has_landed_title = k_yi
+					has_landed_title = k_xu
+					has_landed_title = k_bing
+					has_landed_title = k_jing
+					has_landed_title = k_qing
+					has_landed_title = k_yang
+					has_landed_title = k_liang
+					has_landed_title = k_jiaozhi
+				}
+			}
+		}
+	}
+	option = {
+		name = "OH"
+		trigger = {
+			top_liege = {
+				NOR = {
+					has_landed_title = k_yellow
+					has_landed_title = d_beihuang
+					has_landed_title = d_zhonghuang
+					has_landed_title = d_donghuang
+					has_landed_title = d_nanhuang
+					has_landed_title = d_xihuang
+					has_landed_title = d_white
+					has_landed_title = d_black
+					has_landed_title = e_china
+					has_landed_title = k_sili
+					has_landed_title = k_ji
+					has_landed_title = k_yan
+					has_landed_title = k_you
+					has_landed_title = k_yu
+					has_landed_title = k_yi
+					has_landed_title = k_xu
+					has_landed_title = k_bing
+					has_landed_title = k_jing
+					has_landed_title = k_qing
+					has_landed_title = k_yang
+					has_landed_title = k_liang
+					has_landed_title = k_jiaozhi
+				}
+			}
+		}
+	}
+}
+#35 - Liu Biao Sons
+#36 - Liu Biao dies
+#37 - Cao Cao Invades
+#38 - Chibi Alliance
+#39 - Chibi starts
+#40 - Chibi ends
+#41 - Bashu Starts

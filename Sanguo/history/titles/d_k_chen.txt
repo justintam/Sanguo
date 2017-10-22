@@ -1,0 +1,39 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_primogeniture
+	effect = {
+		set_title_flag = noble_king
+	}
+}
+1.1.1={
+	liege=k_yu
+}
+39.1.1={
+	holder=0 #Liu Yan - Son of Guangwu
+}
+79.1.1={
+	holder=0 #Liu Bing - Son of Ming
+}
+88.1.1={
+	holder=66 #Liu Xian
+}
+96.1.1={
+	holder=3844 #Liu Jun
+}
+117.1.1={
+	holder=3845 #Liu Song
+}
+120.1.1={
+	holder=67 #Liu Chong
+}
+124.1.1={
+	holder=68 #Liu Cheng
+}
+165.1.1={
+	holder=69 #Liu Chong
+}
+197.1.1={
+	holder=0
+	active = no
+}

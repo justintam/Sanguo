@@ -1,0 +1,19 @@
+# c_changshe
+
+# County Title
+title = c_changshe
+
+# Settlements
+max_settlements = 5
+
+b_changshe = castle
+b_fuchengying = city
+#b_changge = temple
+#b_changshefu = castle
+#b_lushan = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

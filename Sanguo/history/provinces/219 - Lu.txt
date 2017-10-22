@@ -1,0 +1,21 @@
+# c_lu
+
+# County Title
+title = c_lu
+
+# Settlements
+max_settlements = 7
+
+b_lu = castle
+b_fangmen = castle
+b_feichengxian = city
+b_guangli = city
+b_pingyin = city
+#b_chizhou = temple
+#b_chiping = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

@@ -1,0 +1,18 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=k_jiaozhi
+}
+170.1.1={
+	holder=1000 #Shi Xie
+}
+190.3.1={
+	liege=k_shi
+}
+
+
+
+#Incomplete

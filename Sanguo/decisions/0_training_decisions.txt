@@ -1,0 +1,423 @@
+########################################
+###Written by Ogaburan aka Ran Miller###
+########################################
+
+# Targetted decisions are possible vs _all_ other characters and shown are in the Diplomacy View, not the Intrigue View. The taker is in the FROM scope.
+#
+# filter = [self/court/home_court/vassals/sub_realm/realm/dynasty/all] ('self' MUST be set for decisions targetting only the taker, the other filter types can be set to lessen CPU load)
+# ai_target_filter = [self/court/home_court/vassals/sub_realm/realm/dynasty/all] (which characters for which the AI evaluates the decision.)
+#	court: all characters in the AI's host court, including prisoners, and characters currently away (wards, prisoners, etc)
+#	home_court: all characters in the AI's home court, including prisoners, and characters currently away (wards, prisoners, etc)
+#	vassals: direct vassal rulers of the AI's employer
+#	sub_realm: all characters below the AI's employer
+#	realm: all characters in the same top realm as the AI
+#	dynasty: all members of the same dynasty
+#	all: all living characters (Avoid if possible. VERY CPU-HEAVY!)
+#	
+
+targetted_decisions = {
+
+	force_train_son_1 = {
+		ai_target_filter = dynasty
+		filter = dynasty
+		from_potential = {
+			ai = no
+		}
+		potential = {
+			OR = {
+				is_child_of = FROM
+				father_even_if_dead = { is_child_of = FROM }
+				mother_even_if_dead = { is_child_of = FROM }
+			}
+			OR = {
+				is_female = no
+				FROM = {
+					OR = {
+						culture_group = yue
+						culture_group = tibetan
+						culture_group = man
+						culture_group = mongol
+					}
+				}
+			}
+		}
+		
+		allow = {
+			FROM = {				
+				prisoner = no
+				in_command = no
+				NOT = { trait = incapable }
+				NOT = { has_character_modifier = training_son }
+				custom_tooltip = {
+					text = TOOLTIPforce_train_son
+					hidden_tooltip = {
+						OR = {
+							trait = duel_master_warrior
+							trait = duel_skilled_warrior
+							AND = {
+								trait = duel_trained_warrior
+								ROOT = { NOT = { trait = duel_trained_warrior } }
+							}
+							AND = {
+								trait = duel_poor_warrior
+								ROOT = { 
+									NOT = { trait = duel_trained_warrior } 
+									NOT = { trait = duel_poor_warrior }
+								}
+							}
+						}
+					}	
+				}	
+			}
+			age = 8
+			NOT = { age = 20 }
+			liege = { character = FROM }
+			is_ruler = no
+			in_command = no
+			prisoner = no
+			
+			NOT = { trait = duel_master_warrior }
+			NOT = { trait = duel_skilled_warrior }		
+			NOT = { trait = wounded }
+			NOT = { trait = maimed }
+			NOT = { trait = incapable }
+			NOT = { trait = blinded }
+			NOT = { trait = crippled }
+			
+			NOT = { trait = weak }
+			NOT = { trait = craven }
+			NOT = { trait = slothful }
+			NOT = { trait = dwarf }
+			NOT = { trait = hunchback }	
+			NOT = { trait = in_hiding }
+			
+			NOT = { has_character_modifier = force_trained }
+		}
+		
+		effect = {
+			#FROM = { set_character_flag = training_son }
+			hidden_tooltip = {
+				FROM = {
+					add_character_modifier = {
+						name = training_son
+						duration = 30
+					}
+				}	
+				add_character_modifier = {
+					name = force_trained
+					duration = 365
+				}
+			}
+			random_list = {
+				35 = { #Success - 35%
+					modifier = {
+						factor = 1.2
+						trait = diligent
+					}
+					modifier = {
+						factor = 0.83
+						trait = slothful
+					}
+					modifier = {
+						factor = 1.2
+						trait = brave
+					}
+					modifier = {
+						factor = 1.2
+						trait = martial_artist
+					}
+					modifier = {
+						factor = 0.83
+						trait = craven
+					}
+					modifier = {
+						factor = 1.2
+						trait = ambitious
+					}
+					modifier = {
+						factor = 0.83
+						trait = content
+					}
+					modifier = {
+						factor = 1.25
+						FROM = { trait = duel_skilled_warrior }
+					}
+					modifier = {
+						factor = 1.5
+						FROM = { trait = duel_master_warrior }
+					}
+					modifier = {
+						factor = 0.8
+						FROM = { trait = duel_poor_warrior }
+					}
+					modifier = {
+						factor = 1.2
+						FROM = { trait = duelist }
+					}
+					modifier = {
+						factor = 1.2
+						FROM = { trait = diligent }
+					}
+					modifier = {
+						factor = 1.2
+						FROM = { trait = patient }
+					}
+					modifier = {
+						factor = 1.2
+						FROM = { trait = kind }
+					}
+					modifier = {
+						factor = 0.83
+						FROM = { trait = slothful }
+					}
+					modifier = {
+						factor = 0.83
+						FROM = { trait = wroth }
+					}
+					modifier = {
+						factor = 0.83
+						FROM = { trait = cruel }
+					}
+					modifier = {
+						factor = 0.83
+						FROM = { trait = lunatic }
+					}
+					modifier = {
+						factor = 1.15
+						opinion = { who = FROM value = 100 }
+					}
+					modifier = {
+						factor = 1.15
+						opinion = { who = FROM value = 75 }
+					}
+					modifier = {
+						factor = 1.15
+						opinion = { who = FROM value = 50 }
+					}
+					modifier = {
+						factor = 1.15
+						opinion = { who = FROM value = 25 }
+					}
+					modifier = {
+						factor = 0.87
+						NOT = { opinion = { who = FROM value = -24 } }
+					}
+					modifier = {
+						factor = 0.87
+						NOT = { opinion = { who = FROM value = -49 } }
+					}
+					modifier = {
+						factor = 0.87
+						NOT = { opinion = { who = FROM value = -74 } }
+					}
+					modifier = {
+						factor = 0.87
+						NOT = { opinion = { who = FROM value = -99 } }
+					}
+					custom_tooltip = { text = TOOLTIPforce_train_sonSUCCESS }
+					hidden_tooltip = {
+						random_list = {
+							5 = {
+								modifier = {
+									factor = 0
+									OR = {
+										trait = ruthless
+										trait = honorable
+									}
+								}
+								modifier = {
+									factor = 0.5
+									personality_traits = 6
+								}
+								FROM = { set_character_flag = training_ruthless }				
+							}
+							5 = {
+								modifier = {
+									factor = 0
+									OR = {
+										trait = brave
+										trait = craven
+									}
+								}
+								modifier = {
+									factor = 0.5
+									personality_traits = 6
+								}
+								FROM = { set_character_flag = training_brave }
+							}
+							5 = {
+								modifier = {
+									factor = 0
+									OR = {
+										trait = patient
+										trait = wroth
+									}
+								}
+								modifier = {
+									factor = 0.5
+									personality_traits = 6
+								}
+								FROM = { set_character_flag = training_wroth }
+							}
+							3 = {
+								FROM = { set_character_flag = training_martial }
+							}
+							2 = {
+								modifier = {
+									factor = 0
+									OR = {
+										trait = cruel
+										trait = kind
+									}
+								}
+								modifier = {
+									factor = 0.5
+									personality_traits = 6
+								}
+								FROM = { set_character_flag = training_cruel }
+							}
+							10 = {
+								FROM = { set_character_flag = training_nothing }
+							}
+							5 = {
+								modifier = {
+									factor = 0
+									OR = {
+										trait = chaste
+										trait = lustful
+										trait = celibate
+										trait = eunuch
+									}
+								}
+								modifier = {
+									factor = 0.5
+									personality_traits = 6
+								}
+								FROM = { set_character_flag = training_lustful }
+							}
+						}
+						FROM = { character_event = { id = combat_trait.5 } }
+						character_event = { id = combat_trait.6 }
+					}
+				}
+				65 = { #Failure - 65%
+					custom_tooltip = { text = TOOLTIPforce_train_sonFAIL }
+					hidden_tooltip = {
+						random_list = {
+							4 = {
+								modifier = {
+									factor = 0
+									OR = {
+										trait = ambitious
+										trait = content
+									}
+								}
+								modifier = {
+									factor = 0.5
+									personality_traits = 6
+								}
+								FROM = { set_character_flag = training_ambitious }					
+							}
+							5 = {
+								modifier = {
+									factor = 0
+									OR = {
+										trait = slothful
+										trait = diligent
+									}
+								}
+								modifier = {
+									factor = 0.5
+									personality_traits = 6
+								}
+								FROM = { set_character_flag = training_slothful }
+							}
+							4 = {
+								modifier = {
+									factor = 0
+									OR = {
+										trait = brave
+										trait = craven
+									}
+								}
+								modifier = {
+									factor = 0.5
+									personality_traits = 6
+								}
+								FROM = { set_character_flag = training_brave }
+							}
+							4 = {
+								modifier = {
+									factor = 0
+									OR = {
+										trait = ruthless
+										trait = honorable
+									}
+								}
+								modifier = {
+									factor = 0.5
+									personality_traits = 6
+								}
+								FROM = { set_character_flag = training_ruthless }
+							}
+							4 = {
+								FROM = { set_character_flag = training_intrigue }
+							}
+							5 = {
+								modifier = {
+									factor = 0
+									trait = maimed
+								}
+								FROM = { set_character_flag = training_maimed }
+							}
+							15 = {
+								modifier = {
+									factor = 0
+									trait = wounded
+								}
+								FROM = { set_character_flag = training_wounded }
+							}
+							4 = {
+								modifier = {
+									factor = 0
+									OR = {
+										trait = slothful
+										trait = diligent
+									}
+								}
+								modifier = {
+									factor = 0.5
+									personality_traits = 6
+								}
+								FROM = { set_character_flag = training_diligent }
+							}
+							6 = {
+								FROM = { set_character_flag = training_no_progress }
+							}
+							2 = {
+								modifier = {
+									factor = 0
+									trait = homosexual
+								}
+								modifier = {
+									factor = 0.5
+									personality_traits = 6
+								}
+								FROM = { set_character_flag = training_homosexual }
+							}
+							5 = {
+								FROM = { set_character_flag = training_stewardship }
+							}
+						}	
+						FROM = { character_event = { id = combat_trait.3 } }
+						character_event = { id = combat_trait.4 }
+					}
+				}
+			}	
+		}
+		
+		ai_will_do = {
+			factor = 0					
+		}
+	}	
+}

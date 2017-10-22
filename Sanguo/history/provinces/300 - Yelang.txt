@@ -1,0 +1,17 @@
+# c_yelang
+
+# County Title
+title = c_yelang
+
+# Settlements
+max_settlements = 3
+
+b_yelang = tribal
+#b_yelangfu = city
+#b_midu = temple
+
+# Misc
+culture = nanman
+religion = huojiao
+
+#History

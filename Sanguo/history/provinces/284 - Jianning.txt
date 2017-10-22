@@ -1,0 +1,17 @@
+# c_jianning
+
+# County Title
+title = c_jianning
+
+# Settlements
+max_settlements = 3
+
+b_jianning = tribal
+b_jianzhou = temple
+#b_wuping = temple
+
+# Misc
+culture = nanman
+religion = huojiao
+
+#History

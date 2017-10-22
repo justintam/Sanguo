@@ -1,0 +1,17 @@
+# c_queju
+
+# County Title
+title = c_queju
+
+# Settlements
+max_settlements = 3
+
+b_queju = tribal
+#b_funiu = city
+#b_kuzhou = temple
+
+# Misc
+culture = xianbei
+religion = tengri_pagan
+
+#History

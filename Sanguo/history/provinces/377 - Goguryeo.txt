@@ -1,0 +1,18 @@
+# c_goguryeo
+
+# County Title
+title = c_goguryeo
+
+# Settlements
+max_settlements = 4
+
+b_jolbon = tribal
+b_gungnae = tribal
+b_hwando = temple
+#b_namso = castle
+
+# Misc
+culture = joseon
+religion = shamanist
+
+#History

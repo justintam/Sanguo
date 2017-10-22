@@ -1,0 +1,284 @@
+###########################################
+#                                         #
+# Sanguo Events		  	            	  #
+#                                         #
+# ID WRL.1		              		  	  #
+#                                         #
+#                                         #
+#                                         #
+#                                         #
+#                                         #
+#                                         #
+#                                         #
+###########################################
+
+namespace = WRL
+
+### NEW CLAN ###
+character_event = {
+	id = WRL.1
+	desc = EVTDESC_WRL.1
+	title = EVTTITLE_WRL.1
+	picture = GFX_evt_crusaders
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		add_trait = adventurer
+		dejure_liege_title = {
+			holder_scope = {
+				ROOT = {
+					capital_scope = {
+						save_event_target_as = target_province
+					}
+					set_defacto_liege = ROOT
+					create_title = {
+						tier = DUKE
+						landless = yes
+						custom_created = yes
+						culture = ROOT
+						holder = ROOT
+						name = "CLAN_ARMY"
+						ruler = "LORD"
+						ruler_female = "LADY"
+					}
+					new_title = {
+						set_title_flag = warlord_flag
+					}
+					any_demesne_title = {
+						limit = { NOT = { has_title_flag = warlord_flag } }
+						grant_title_no_opinion = PREVPREV
+					}
+					set_character_flag = claimant_adventurer
+					
+					character_event = { id = WRL.2 }
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = OK
+	}
+}
+
+### NEW ARMY ###
+character_event = {
+	id = WRL.2
+ 
+	is_triggered_only = yes
+
+	hide_window = yes
+	
+	immediate = {
+		spawn_unit = {
+			province = event_target:target_province
+			home = event_target:target_province
+			owner = ROOT
+			leader = ROOT
+			reinforces = yes
+			troops = {
+				knights = { 50 50 }
+				light_infantry = { 250 250 }
+				heavy_infantry = { 100 100 }
+				light_cavalry = { 100 100 }
+				archers = { 250 250 }
+				pikemen = { 250 250 }
+			}
+			attrition = 0.25
+			earmark = clan_army
+		}
+	}
+}
+
+### REMOVE ARMY ###
+character_event = {
+	id = WRL.3
+ 
+	is_triggered_only = yes
+
+	hide_window = yes
+	
+	immediate = {
+		disband_event_forces = clan_army
+		character_event = { id = WRL.6 }
+	}
+}
+
+### REMOVE TITLE ###
+character_event = {
+	id = WRL.4
+ 
+	is_triggered_only = yes
+
+	hide_window = yes
+	
+	immediate = {
+		if = {
+			limit = { event_target:target_title = { has_title_flag = warlord_flag } }
+			character_event = { id = WRL.3 days = 1 }
+		}
+		event_target:target_title = {
+			activate_title = { title = THIS status = no }
+			unsafe_destroy_landed_title = THIS
+		}
+		if = {
+			limit = { independent = no }
+			dejure_liege_title = {
+				holder_scope = {
+					if = {
+						limit = { is_liege_or_above = event_target:target_liege }
+						ROOT = { set_defacto_liege = PREV }
+						break = yes
+					}
+				}
+			}
+		}
+	}
+}
+
+### CONTINUE CLAN? ###
+character_event = {
+	id = WRL.5
+	desc = EVTDESC_WRL.5
+	title = EVTTITLE_WRL.5
+	picture = GFX_evt_crusaders
+	border = GFX_event_normal_frame_war
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ACCEPT
+		
+		trigger = { wealth = 150 }
+		
+		wealth = -150
+		
+		hidden_tooltip = {
+			capital_scope = {
+				save_event_target_as = target_province
+			}
+			character_event = { id = WRL.2 }
+		}
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 10
+				war = yes
+			}
+			modifier = {
+				factor = 1.5
+				has_focus = focus_war
+			}
+			modifier = {
+				factor = 1.05
+				trait = ambitious
+			}
+			modifier = {
+				factor = 1.05
+				trait = proud
+			}
+			modifier = {
+				factor = 1.05
+				trait = wroth
+			}
+			modifier = {
+				factor = 1.05
+				trait = zealous
+			}
+		}
+	}
+	
+	option = {
+		name = REFUSE
+		
+		piety = 50
+		
+		hidden_tooltip = {
+			character_event = { id = WRL.4 }
+		}
+		
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0.9
+				war = no
+			}
+			modifier = {
+				factor = 0.9
+				NOT = { has_focus = focus_war }
+			}
+			modifier = {
+				factor = 0.95
+				trait = arbitrary
+			}
+			modifier = {
+				factor = 0.95
+				trait = content
+			}
+			modifier = {
+				factor = 0.95
+				trait = humble
+			}
+			modifier = {
+				factor = 0.95
+				trait = patient
+			}
+		}
+	}
+}
+
+### NEW ARMY ###
+character_event = {
+	id = WRL.6
+ 
+	is_triggered_only = yes
+
+	hide_window = yes
+	
+	only_rulers = yes
+	
+	trigger = {
+		year = 188
+		primary_title = {
+			is_titular = yes
+			has_title_flag = warlord_flag
+		}
+		NOT = { has_earmarked_regiments = clan_army }
+	}
+	
+	immediate = {
+		capital_scope = {
+			save_event_target_as = target_province
+		}
+#		if = {
+#			limit = {
+#				NOT = {
+#					any_demesne_title = {
+#						is_landless_type_title = no
+#						higher_tier_than = COUNT
+#					}
+#				}
+#			}
+#			capital_holding = {
+#				dejure_liege_title = {
+#					dejure_liege_title = {
+#						holder_scope = {
+#							ROOT = {
+#								set_defacto_liege = ROOT
+#								any_demesne_title = {
+#									limit = { NOT = { has_title_flag = warlord_flag } }
+#									grant_title_no_opinion = PREVPREV
+#								}
+#								set_character_flag = claimant_adventurer
+#							}
+#						}
+#					}
+#				}
+#			}
+#		}
+		character_event = { id = WRL.2 }
+	}
+}

@@ -1,0 +1,58 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=e_china
+	vice_royalty = yes
+}
+100.1.1={
+	holder=1281 #Yang Fu
+}
+144.1.1={
+	holder=1287 #Yang Bing
+}
+147.1.1={
+	holder=0 #None
+}
+181.1.1={
+	holder=106 #Zhu Jun
+}
+184.1.1={
+	holder=123 #Jia Zong
+}
+187.1.1={
+	holder=3402 #Ding Gong
+}
+188.1.1={
+	holder=3401 #Zhu Fu
+}
+190.1.1={
+	liege=0
+}
+190.3.1={
+	holder=0 #None
+}
+#Liu Yan - corrupt, Yu Bao, others join him
+#Zhang Jin sent in 201, fails and dies by 204
+#Governor of Jiao in 203
+204.1.1={
+	liege=0 #Independent
+	holder=4215 #Lai Gong
+}
+#Lai Gong driven north
+204.5.1={
+	holder=0 #None
+}
+211.1.1={
+	liege=e_sun
+	holder=10510 #Bu Zhi
+}
+220.1.1={
+	holder=540 #Lü Dai
+}
+
+
+
+# Incomplete

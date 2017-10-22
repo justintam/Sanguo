@@ -1,0 +1,11 @@
+# Chronicle,,,,,
+CHRONICLE_YELLOW_TURBAN_RISE;Pestilence, famine, and other forms of natural disasters seized all of China, opening up the way for the Yellow Turbans, led by Zhang Jiao and his brothers, to rile up the afflicted peasantry and cause further disaster to the already unstable realm.;;;;;;;;;;;;;x
+CHRONICLE_YELLOW_TURBAN_WAVE;A new band of bandits have emerged under the auspices of the Yellow Turbans. Regardless of their real goals or intentions, this threat to the empire must be put down if the Han Dynasty is to survive.;;;;;;;;;;;;;x,,,,
+CHRONICLE_YELLOW_TURBAN_END;News of the Yellow Turbans' end is welcomed across the land. The Emperor's name is once more celebrated in the streets.;;;;;;;;;;;;;x,,,,,
+CHRONICLE_LIANG_REBEL_RISE;The Province of Liang has fallen into chaos as the Qiang and Di tribes have started raiding villages. Local officials and commanders have used this opportunity to rebel against the Empire's court.;;;;;;;;;;;;;x,,,,,
+CHRONICLE_LIANG_REBEL_END;Though the peace in Liang is tenuous, the Imperial court has regained nominal stability over the region.;;;;;;;;;;;;;x,,,,
+CHRONICLE_DONG_ZHUO_RISE;Dong Zhuo has seized power at court. He now dominates the Emperor and commands the multitudes of soldiers and resources of the Empire.;;;;;;;;;;;;;x,,,,,
+CHRONICLE_MADE_MARK;§Y[Root.GetOnlyDynastyName] [Root.GetFirstName] § was enfeoffed as a Marquis by [Root.RelHead.GetBestName] on [GetDateText].;;;;;;;;;;;;;x,,,,,
+CHRONICLE_MADE_DUKE;§Y[Root.GetOnlyDynastyName] [Root.GetFirstName] § was enfeoffed as a Duke by [Root.RelHead.GetBestName] on [GetDateText].;;;;;;;;;;;;;x,,,,,
+CHRONICLE_MADE_KING;§Y[Root.GetOnlyDynastyName] [Root.GetFirstName] § was enfeoffed as a King by [Root.RelHead.GetBestName] on [GetDateText].;;;;;;;;;;;;;x,,,,,
+CHRONICLE_MADE_EMP;§Y[Root.GetOnlyDynastyName] [Root.GetFirstName] § was created Emperor following the self-abdication of [Root.RelHead.GetBestName] on [GetDateText].;;;;;;;;;;;;;x,,,,,

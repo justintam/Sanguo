@@ -1,0 +1,378 @@
+#######Jin Dynasty range: 400-499######
+
+##################################
+########### IMPERIAL #############
+##################################
+
+5000={
+	name="Yi"
+	dynasty=22
+	religion="confucian"
+	culture="han"
+	father=5004
+    trait="genius"
+	trait="strong"
+	trait="deceitful"
+	trait="ambitious"
+	trait="patient"
+	trait="just"
+	trait="temperate"
+	trait="zealous"
+	179.1.1={
+		birth=yes
+	}
+	251.1.1={
+		death=yes
+	}
+}
+5001={
+	name="Jun"
+	dynasty=22
+	religion="confucian"
+	culture="han"
+	50.1.1={
+		birth=yes
+	}
+	115.6.1={
+		death={death_reason=death_suicide}
+	}
+}
+5002={
+	name="Liang"
+	dynasty=22
+	religion="confucian"
+	culture="han"
+	father=5001
+	80.1.1={
+		birth=yes
+	}
+	160.1.1={
+		death=yes
+	}
+}
+5003={
+	name="Jun"
+	dynasty=22
+	religion="confucian"
+	culture="han"
+	father=5002
+	trait="tall"
+	113.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=4000
+		add_trait = "refuge"
+		effect = {
+			set_character_flag = refuge_sili
+		}
+	}
+	197.1.1={
+		death=yes
+		remove_trait = "refuge"
+		effect = {
+			clr_character_flag = refuge_sili
+		}
+	}
+}
+5004={
+	name="Fang"
+	dynasty=22
+	religion="confucian"
+	culture="han"
+	father=5003
+	trait="honorable"
+	trait="honest"
+	trait="just"
+	trait="temperate"
+	trait="zealous"
+	149.1.1={
+		birth=yes
+	}
+	189.8.22={
+		employer=300
+	}
+	192.5.22={
+		employer=120
+	}
+	192.7.1={
+		employer=307
+	}
+	195.1.1={
+		employer=308
+	}
+	196.1.1={
+		employer=400
+	}
+	219.1.1={
+		death=yes
+	}
+}
+5005={
+	name="Lang"
+	dynasty=22
+	religion="confucian"
+	culture="han"
+	father=5004
+	trait="tall"
+	trait="strong"
+	trait="honorable"
+	trait="honest"
+	trait="just"
+	trait="temperate"
+	trait="zealous"
+	171.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=5004
+	}
+	190.1.1={
+		employer=4000
+		add_trait = "refuge"
+		effect = {
+			set_character_flag = refuge_ji
+		}
+	}
+	194.1.1={
+		effect = {
+			clr_character_flag = refuge_ji
+			set_character_flag = refuge_sili
+		}
+	}
+	195.1.1={
+		employer=400
+		remove_trait = "refuge"
+		effect = {
+			clr_character_flag = refuge_sili
+		}
+	}
+	217.4.1={
+		add_trait = ill
+	}
+	217.5.1={
+		death={death_reason=death_trait}
+	}
+}
+5006={
+	name="Fu"
+	dynasty=22
+	religion="confucian"
+	culture="han"
+	father=5004
+	trait="scholar"
+	trait="tall"
+	trait="humble"
+	trait="patient"
+	trait="just"
+	trait="temperate"
+	trait="zealous"
+	180.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=5004
+	}
+	272.1.1={
+		death=yes
+	}
+}
+5007={
+	name="Kui"
+	dynasty=22
+	religion="confucian"
+	culture="han"
+	father=5004
+	180.10.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=5004
+	}
+	260.1.1={
+		death=yes
+	}
+}
+5008={
+	name="Xun"
+	dynasty=22
+	religion="confucian"
+	culture="han"
+	father=5004
+	181.8.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=5004
+	}
+	260.1.1={
+		death=yes
+	}
+}
+5009={
+	name="Jin"
+	dynasty=22
+	religion="confucian"
+	culture="han"
+	father=5004
+	182.6.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=5004
+	}
+	260.1.1={
+		death=yes
+	}
+}
+5010={
+	name="Tong"
+	dynasty=22
+	religion="confucian"
+	culture="han"
+	father=5004
+	183.4.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=5004
+	}
+	260.1.1={
+		death=yes
+	}
+}
+5011={
+	name="Min"
+	dynasty=22
+	religion="confucian"
+	culture="han"
+	father=5004
+	184.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=5004
+	}
+	195.1.1={
+		death=yes
+	}
+}
+5012={
+	name="Shi"
+	dynasty=22
+	religion="confucian"
+	culture="han"
+	father=5000
+	208.1.1={
+		birth=yes
+	}
+	208.1.1={
+		employer=5000
+	}
+	255.1.1={
+		death=yes
+	}
+}
+5013={
+	name="Zhao"
+	dynasty=22
+	religion="confucian"
+	culture="han"
+	father=5000
+	211.1.1={
+		birth=yes
+	}
+	211.1.1={
+		employer=5000
+	}
+	265.1.1={
+		death=yes
+	}
+}
+5014={
+	name="Kun"
+	dynasty=22
+	religion="confucian"
+	culture="han"
+	father=5001
+	85.1.1={
+		birth=yes
+	}
+	135.1.1={
+		death=yes
+	}
+}
+5015={
+	name="Hu"
+	dynasty=22
+	religion="confucian"
+	culture="han"
+	father=5014
+	110.1.1={
+		birth=yes
+	}
+	170.1.1={
+		death=yes
+	}
+}
+5016={
+	name="Ci"
+	dynasty=22
+	religion="confucian"
+	culture="han"
+	father=5015
+	135.1.1={
+		birth=yes
+	}
+	184.1.1={
+		death=yes
+	}
+}
+5017={
+	name="Zhi"
+	dynasty=22
+	religion="confucian"
+	culture="han"
+	father=5016
+	trait="quick"
+	trait="just"
+	trait="honest"
+	trait="diligent"
+	trait="temperate"
+	trait="zealous"
+	165.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=4000
+		add_trait = "refuge"
+		effect = {
+			set_character_flag = refuge_yan
+		}
+	}
+	191.1.1={
+		effect = {
+			clr_character_flag = refuge_yan
+			set_character_flag = refuge_jing
+		}
+	}
+	208.10.1={
+		employer=400
+		remove_trait = "refuge"
+		effect = {
+			clr_character_flag = refuge_jing
+		}
+	}
+	213.6.1={
+		employer=400
+	}
+	240.1.1={
+		death=yes
+	}
+}
+#Sima Yan
+#	265.2.8={
+#		effect = {
+#			add_artifact=imperial_seal
+#		}
+#	}

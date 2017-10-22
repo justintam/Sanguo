@@ -1,0 +1,23 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_hedong
+}
+184.1.1={
+	liege=d_white #White Wave Bandits
+	holder=2605 #Xu Huang
+}
+195.6.1={
+	liege=d_hedong
+	holder=3792 #Yan Gan
+}
+206.1.1={
+	holder=3512 #Random
+}
+
+
+
+# Incomplete

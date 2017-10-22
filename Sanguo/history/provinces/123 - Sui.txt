@@ -1,0 +1,19 @@
+# c_sui
+
+# County Title
+title = c_sui
+
+# Settlements
+max_settlements = 5
+
+b_sui = castle
+b_duansheqiu = city
+b_pinglin = city
+#b_zhangling = castle
+#b_juexi = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

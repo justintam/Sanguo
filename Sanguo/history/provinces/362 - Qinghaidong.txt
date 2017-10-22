@@ -1,0 +1,17 @@
+# c_qinghaidong
+
+# County Title
+title = c_qinghaidong
+
+# Settlements
+max_settlements = 3
+
+b_qinghaidong = tribal
+b_qiangjiao = temple
+#b_qiangjue = temple
+
+# Misc
+culture = qiang
+religion = baishi
+
+#History

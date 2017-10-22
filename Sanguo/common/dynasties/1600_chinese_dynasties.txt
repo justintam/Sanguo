@@ -1,0 +1,400 @@
+1600 = {
+	name="Jiao" #Jiao Chu - WEI
+	culture = han
+}
+1601 = {
+	name="Zhang" #Zhang Nan - WEI
+	culture = han
+}
+1602 = {
+	name="Bei" #Bei Gong - RAN
+	culture = han
+}
+1603 = {
+	name="Luo" #Luo An - RAN
+	culture = han
+}
+1604 = {
+	name="Ren" #Ren Ao - RAN
+	culture = han
+}
+1605 = {
+	name="Tian" #Tian Dai - RAN
+	culture = han
+}
+1606 = {
+	name="Deng" #Deng Kai - RAN
+	culture = han
+}
+1607 = {
+	name="Pan" #Pan Yi - RAN
+	culture = han
+}
+1608 = {
+	name="Li" #Li Mo - RAN
+	culture = han
+}
+1609 = {
+	name="Zu" #Zu Heng - RAN
+	culture = han
+}
+1610 = {
+	name="Bao" #Bao Tai - RAN
+	culture = han
+}
+1611 = {
+	name="Gan" #Gan De - RAN
+	culture = han
+}
+1612 = {
+	name="Mu" #Mu Zi - RAN
+	culture = han
+}
+1613 = {
+	name="Li" #Li Tiao - BAN
+	culture = han
+}
+1614 = {
+	name="Yang" #Yang Ping - WEI
+	culture = han
+}
+1615 = {
+	name="Luo" #Luo Ye - WEI
+	culture = han
+}
+1616 = {
+	name="Ru" #Ru Bin - RAN
+	culture = han
+}
+1617 = {
+	name="Wen" #Wen Du - RAN
+	culture = han
+}
+1618 = {
+	name="Zao" #Zao Zhi - WEI
+	culture = han
+}
+1619 = {
+	name="Bu" #Bu Ying - RAN
+	culture = han
+}
+1620 = {
+	name="Wang" #Wang Ding - RAN
+	culture = han
+}
+1621 = {
+	name="Yin" #Yin Pu - RAN
+	culture = han
+}
+1622 = {
+	name="Ban" #Ban Mao - RAN
+	culture = han
+}
+1623 = {
+	name="Gu" #Gu Rei - RAN
+	culture = han
+}
+1624 = {
+	name="Hu" #Hu Gao - RAN
+	culture = han
+}
+1625 = {
+	name="Bi" #Bi Pang - RAN
+	culture = han
+}
+1626 = {
+	name="Mi" #Mi Dang - RAN
+	culture = han
+}
+1627 = {
+	name="Ji" #Ji Wang - RAN
+	culture = han
+}
+1628 = {
+	name="Yu" #Yu Wu - RAN
+	culture = han
+}
+1629 = {
+	name="Xin" #Xin You - RAN
+	culture = han
+}
+1630 = {
+	name="Liu" #Liu Jingzong - Han
+	culture = han
+}
+1631 = {
+	name="Lou" #Lou Ban - RAN
+	culture = han
+}
+1632 = {
+	name="Pan" #Pan Bei - RAN
+	culture = han
+}
+1633 = {
+	name="Liang" #Liang Mao - WEI
+	culture = han
+}
+1634 = {
+	name="Xue" #Xue Ti - WEI
+	culture = han
+}
+1635 = {
+	name="Zhang" #Zhang Shi - WEI
+	culture = han
+}
+1636 = {
+	name="Yan" #Yan Fei - WEI
+	culture = han
+}
+1637 = {
+	name="Fan" #Fan Zeng - HAN
+	culture = han
+}
+1638 = {
+	name="Liu" #Liu Jun - HAN
+	culture = han
+}
+1639 = {
+	name="Zhao" #Zhao Fan - LB
+	culture = han
+}
+1640 = {
+	name="You" #You Chu - WEI
+	culture = han
+}
+1641 = {
+	name="Chang" #Chang Xia - HAN
+	culture = han
+}
+1642 = {
+	name="Dian" #Dian Di - RAN
+	culture = han
+}
+1643 = {
+	name="Diwu" #Diwu Dan - RAN
+	culture = han
+}
+1644 = {
+	name="Zheng" #Zheng Jian - RAN
+	culture = han
+}
+1645 = {
+	name="Dian" #Dian Wei - WEI
+	culture = han
+}
+1646 = {
+	name="Tong" #Tong Zhi - IND
+	culture = han
+}
+1647 = {
+	name="Xu" #Xu Ying - HAN
+	culture = han
+}
+1648 = {
+	name="Pan" #Pan Jing - RAN
+	culture = han
+}
+1649 = {
+	name="Tian" #Tian Tai - RAN
+	culture = han
+}
+1650 = {
+	name="Han" #Han Ji - HAN
+	culture = han
+}
+1651 = {
+	name="Wan" #Wan Ju - RAN
+	culture = han
+}
+1652 = {
+	name="Chen" #Chen Peng - RAN
+	culture = han
+}
+1653 = {
+	name="Xin" #Xin Qi - RAN
+	culture = han
+}
+1654 = {
+	name="Deng" #Deng Ji - HAN
+	culture = han
+}
+1655 = {
+	name="Shen" #Shen Clan - HAN
+	culture = han
+}
+1656 = {
+	name="Guo" #Empress
+	culture = han
+}
+1657 = {
+	name="Yin" #Empress
+	culture = han
+}
+1658 = {
+	name="Cheng" #Empress
+	culture = han
+}
+1659 = {
+	name="Ma" #Empress
+	culture = han
+}
+1660 = {
+	name="Song" #Empress
+	culture = han
+}
+1661 = {
+	name="Li" #Li Xiangru - LNG
+	culture = han
+}
+1662 = {
+	name="Jia" #Jia Long - IND
+	culture = han
+}
+1663 = {
+	name="Liu" #Liu Heng - HAN
+	culture = han
+}
+1664 = {
+	name="Yan" #Yan Yi - RAN
+	culture = han
+}
+1665 = {
+	name="Jin" #Jin Du - RAN
+	culture = han
+}
+1666 = {
+	name="Ban" #Ban Ding - RAN
+	culture = han
+}
+1667 = {
+	name="Hu" #Hu Jiao - RAN
+	culture = han
+}
+1668 = {
+	name="Mi" #Mi Zhen - RAN
+	culture = han
+}
+1669 = {
+	name="Ding" #Ding Feng - RAN
+	culture = han
+}
+1670 = {
+	name="Luo" #Luo Jun - HAN
+	culture = han
+}
+1671 = {
+	name="Bei" #Bei Jin - RAN
+	culture = han
+}
+1672 = {
+	name="Man" #Man Ding - RAN
+	culture = han
+}
+1673 = {
+	name="Guan" #Guan Song - RAN
+	culture = han
+}
+1674 = {
+	name="Mian" #Mian Ju - RAN
+	culture = han
+}
+1675 = {
+	name="Fen" #Fen Bu - RAN
+	culture = han
+}
+1676 = {
+	name="Xu" #Xu Dian - RAN
+	culture = han
+}
+1677 = {
+	name="Wu" #Wu Mo - RAN
+	culture = han
+}
+1678 = {
+	name="Bin" #Bin Zhou - RAN
+	culture = han
+}
+1679 = {
+	name="Bao" #Bao Ming - RAN
+	culture = han
+}
+1680 = {
+	name="Gu" #Gu Yong - WU
+	culture = han
+}
+1681 = {
+	name="Xu" #Xu Gan - RAN
+	culture = han
+}
+1682 = {
+	name="Jin" #Jin He - RAN
+	culture = han
+}
+1683 = {
+	name="Min" #Min Jie - RAN
+	culture = han
+}
+1684 = {
+	name="Li" #Li Shu - WU
+	culture = han
+}
+1685 = {
+	name="Yan" #Yan Xiang - WEI
+	culture = han
+}
+1686 = {
+	name="Liu" #Liu Fu - WEI
+	culture = han
+}
+1687 = {
+	name="Chen" #Chen Ji - YS
+	culture = han
+}
+1688 = {
+	name="Zhu" #Zhu Zhi - WU
+	culture = han
+}
+1689 = {
+	name="Chunyu" #Chunyu Shi - WU
+	culture = han
+}
+1690 = {
+	name="Yu" #Yu Fan - WU
+	culture = han
+}
+1691 = {
+	name="He" #He Qi - WU
+	culture = han
+}
+1692 = {
+	name="Ding" #Ding Jingzhao - RAN
+	culture = han
+}
+1693 = {
+	name="Yang" #Yang Zan - RAN
+	culture = han
+}
+1694 = {
+	name="Zhu" #Zhu Guang - WEI
+	culture = han
+}
+1695 = {
+	name="Hao" #Hao Zhou - WEI
+	culture = han
+}
+1696 = {
+	name="Jin" #Jin Gen - RAN
+	culture = han
+}
+1697 = {
+	name="Tian" #Tian Chou - IND
+	culture = han
+}
+1698 = {
+	name="Wei" #Wei Ji - WEI
+	culture = han
+}
+1699 = {
+	name="Gao" #Gao Fan - YUAN
+	culture = han
+}

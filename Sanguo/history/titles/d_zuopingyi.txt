@@ -1,0 +1,31 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=k_sili
+	vice_royalty = yes
+}
+110.1.1={
+	holder=5001 #Sima Jun
+}
+115.6.1={
+	holder=0 #None
+}
+180.1.1={
+	holder=3471 #Wang Hong
+}
+192.5.22={
+	liege=e_china
+}
+192.7.1={
+	holder=4307 #Random
+}
+196.1.1={
+	liege=k_sili
+	holder=142 #Han Bin
+}
+213.6.1={
+	liege=k_yong
+}

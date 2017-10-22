@@ -1,0 +1,20 @@
+# c_zhang
+
+# County Title
+title = c_zhang
+
+# Settlements
+max_settlements = 6
+
+b_dongping = castle
+b_zhang = city
+b_tangyangting = city
+b_zhangcheng = city
+#b_luka = city
+#b_ninzhou = temple
+
+# Misc
+culture = han
+religion = confucian
+
+#History

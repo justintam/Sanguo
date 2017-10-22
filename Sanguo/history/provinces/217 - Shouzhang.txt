@@ -1,0 +1,19 @@
+# c_shouzhang
+
+# County Title
+title = c_shouzhang
+
+# Settlements
+max_settlements = 5
+
+b_shouzhang = castle
+b_hanting = city
+b_zhimicheng = city
+#b_zhinengqi = castle
+#b_daning = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

@@ -1,0 +1,28 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_donghai
+}
+175.1.1={
+	holder=106 #Zhu Jun
+}
+184.1.1={
+	holder=2638 #Zang Ba
+}
+193.1.1={
+	liege=d_tai
+}
+#198 ally lu bu
+199.3.1={
+	liege=d_donghai
+}
+207.1.1={
+	holder=4111 #Random
+}
+
+
+
+# Incomplete

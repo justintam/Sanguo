@@ -1,0 +1,1688 @@
+#######Han Court range: 1200 - 1299######
+
+##################################
+########### IMPERIAL #############
+##################################
+
+1200 = {
+	name="Miao"
+	dynasty=33
+	religion="confucian"
+	culture="han"
+	father=1235
+	mother=102
+	trait="greedy"
+	trait="arbitrary"
+	133.1.1={
+		birth=yes
+	}
+	175.1.1={
+		employer=100
+	}
+	189.9.1={
+		death=yes
+	}
+}
+1201 = {
+	name="Xian"
+	dynasty=33
+	religion="confucian"
+	culture="han"
+	father=100
+	175.1.1={
+		birth=yes
+	}
+	200.1.1={
+		death=yes
+	}
+}
+1202 = {
+	name="Tao"
+	dynasty=64
+	religion="confucian"
+	culture="han"
+	father=135
+	154.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=136
+	}
+	190.1.1={
+		death=yes
+	}
+}
+1203 = {
+	name="Zhong"
+	dynasty=64
+	religion="confucian"
+	culture="han"
+	father=135
+	trait="tough_soldier"
+	155.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=136
+	}
+	190.1.1={
+		death=yes
+	}
+}
+1204 = {
+	name="She"
+	dynasty=20
+	diplomacy=4
+	martial=6
+	stewardship=5
+	intrigue=3
+	learning=5
+	religion="confucian"
+	culture="han"
+	father=148
+	trait="tough_soldier"
+	trait="zealous"
+	trait="brave"
+	trait="wroth"
+	trait="proud"
+	trait="organizer"
+	168.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=148
+	}
+	225.1.1={
+		death=yes
+	}
+}
+1205 = {
+	name="Wenzhao"
+	female=yes
+	dynasty=141
+    diplomacy=10
+    martial=3
+    stewardship=8
+    intrigue=8
+	learning=9
+	religion="confucian"
+	culture="han"
+	father=109
+	mother=1206
+    trait="grey_eminence"
+    trait="fair"
+    trait="gregarious"
+    trait="temperate"
+    trait="diligent"
+    trait="patient"
+    trait="humble"
+    trait="zealous"
+    trait="just"
+    trait="brave"
+    trait="ambitious"
+	183.1.26={
+		birth=yes
+	}
+	185.1.1={
+		employer=400
+	}
+	195.1.1={
+		add_spouse=708
+	}
+	204.1.1={
+		remove_spouse=708
+		employer=400
+		add_spouse=10400
+	}
+	221.8.4={
+		death={
+			death_reason = death_suicide
+		}
+	}
+}
+1206 = {
+	name="Xing"
+	female=yes
+	dynasty=9000
+	religion="confucian"
+	culture="han"
+	150.1.1={
+		birth=yes
+	}
+	165.1.1={
+		add_spouse=109
+	}
+	200.1.1={
+		death=yes
+	}
+}
+1207 = {
+	name="Bao"
+	dynasty=13
+	religion="confucian"
+	culture="han"
+	trait="mastermind_theologian"
+	trait="honest"
+	trait="diligent"
+	trait="honorable"
+	trait="zealous"
+	trait="just"
+	trait="brave"
+	father=1208
+	70.1.1={
+		birth=yes
+	}
+	140.1.1={
+		death=yes
+	}
+}
+1208 = {
+	name="Xu"
+	dynasty=13
+	religion="confucian"
+	culture="han"
+	father=3308
+	trait="mastermind_theologian"
+	trait="honest"
+	trait="diligent"
+	trait="honorable"
+	trait="zealous"
+	trait="just"
+	trait="brave"
+	45.1.1={
+		birth=yes
+	}
+	120.1.1={
+		death=yes
+	}
+}
+1209 = {
+	name="Feng"
+	dynasty=153
+	religion="confucian"
+	culture="han"
+	father=1210
+	125.1.1={
+		birth=yes
+	}
+	180.1.1={
+		death=yes
+	}
+}
+1210 = {
+	name="Peng"
+	dynasty=153
+	religion="confucian"
+	culture="han"
+	90.1.1={
+		birth=yes
+	}
+	160.1.1={
+		death=yes
+	}
+}
+1211 = {
+	name="Peng"
+	dynasty=6
+	religion="confucian"
+	culture="han"
+	father=1213
+	108.1.1={
+		birth=yes
+	}
+	180.1.1={
+		death=yes
+	}
+}
+1212 = {
+	name="Qiu"
+	dynasty=6
+	religion="confucian"
+	culture="han"
+	father=1213
+	118.1.1={
+		birth=yes
+	}
+	179.1.1={
+		death=yes
+	}
+}
+1213 = {
+	name="Wei"
+	dynasty=6
+	religion="confucian"
+	culture="han"
+	father=3426
+	90.1.1={
+		birth=yes
+	}
+	150.1.1={
+		death=yes
+	}
+}
+1214 = {
+	name="Deng"
+	dynasty=6
+	religion="confucian"
+	culture="han"
+	father=166
+	trait="intricate_webweaver"
+	trait="brave"
+	trait="deceitful"
+	trait="diligent"
+	trait="patient"
+	trait="zealous"
+	166.1.1={
+		birth=yes
+	}
+	205.1.1={
+		death=yes
+	}
+}
+1215 = {
+	name="She"
+	female=yes
+	religion="confucian"
+	culture="han"
+	160.1.1={
+		birth=yes
+	}
+	174.1.1={
+		add_spouse=136
+	}
+	224.1.1={
+		death=yes
+	}
+}
+1216 = {
+	name="Xun"
+	dynasty=64
+	religion="confucian"
+	culture="han"
+	father=136
+	mother=1215
+	trait="elusive_shadow"
+	trait="quick"
+	trait="honest"
+	trait="honorable"
+	trait="diligent"
+	trait="temperate"
+	trait="zealous"
+	175.1.1={
+		birth=yes
+	}
+	192.6.1={
+		employer=400
+	}
+	226.1.1={
+		death=yes
+	}
+}
+1217 = {
+	name="Shao"
+	dynasty=64
+	religion="confucian"
+	culture="han"
+	father=136
+	mother=1215
+    trait="skilled_tactician"
+	trait="duel_trained_warrior"
+	trait="honest"
+	trait="honorable"
+	trait="diligent"
+	trait="temperate"
+	trait="zealous"
+	180.1.1={
+		birth=yes
+	}
+	192.6.1={
+		employer=400
+	}
+	230.1.1={
+		death=yes
+	}
+}
+1218 = {
+	name="Su"
+	dynasty=17
+	religion="confucian"
+	culture="han"
+	80.1.1={
+		birth=yes
+	}
+	150.1.1={
+		death=yes
+	}
+}
+1219 = {
+	name="Laozi"
+	dynasty=8
+	religion="confucian"
+	culture="han"
+	trait="mastermind_theologian"
+	trait="genius"
+	1.1.1={
+		birth=yes
+	}
+	50.1.1={
+		death=yes
+	}
+}
+1220 = {
+	name="Hu"
+	dynasty=8
+	religion="confucian"
+	culture="han"
+	father=1219
+	trait="mastermind_theologian"
+	trait="genius"
+	25.1.1={
+		birth=yes
+	}
+	80.1.1={
+		death=yes
+	}
+}
+1221 = {
+	name="Wu"
+	dynasty=8
+	religion="confucian"
+	culture="han"
+	father=1220
+	trait="mastermind_theologian"
+	trait="genius"
+	45.1.1={
+		birth=yes
+	}
+	100.1.1={
+		death=yes
+	}
+}
+1222 = {
+	name="Xiu"
+	dynasty=8
+	religion="confucian"
+	culture="han"
+	father=1221
+	trait="mastermind_theologian"
+	trait="genius"
+	65.1.1={
+		birth=yes
+	}
+	120.1.1={
+		death=yes
+	}
+}
+1223 = {
+	name="Liang"
+	dynasty=8
+	religion="confucian"
+	culture="han"
+	father=1222
+	trait="mastermind_theologian"
+	trait="genius"
+	85.1.1={
+		birth=yes
+	}
+	140.1.1={
+		death=yes
+	}
+}
+1224 = {
+	name="Fuzi"
+	dynasty=75
+	religion="confucian"
+	culture="han"
+	trait="mastermind_theologian"
+	trait="genius"
+	1.1.1={
+		birth=yes
+	}
+	90.1.1={
+		death=yes
+	}
+}
+1225 = {
+	name="Li"
+	dynasty=75
+	religion="confucian"
+	culture="han"
+	father=1224
+	trait="mastermind_theologian"
+	trait="genius"
+	25.1.1={
+		birth=yes
+	}
+	100.1.1={
+		death=yes
+	}
+}
+1226 = {
+	name="Ji"
+	dynasty=75
+	religion="confucian"
+	culture="han"
+	father=1225
+	trait="mastermind_theologian"
+	trait="genius"
+	50.1.1={
+		birth=yes
+	}
+	115.1.1={
+		death=yes
+	}
+}
+1227 = {
+	name="Qiu"
+	dynasty=75
+	religion="confucian"
+	culture="han"
+	father=1226
+	trait="mastermind_theologian"
+	trait="genius"
+	80.1.1={
+		birth=yes
+	}
+	140.1.1={
+		death=yes
+	}
+}
+1228 = {
+	name="Zhou"
+	dynasty=75
+	religion="confucian"
+	culture="han"
+	father=1227
+	trait="mastermind_theologian"
+	trait="genius"
+	103.1.1={
+		birth=yes
+	}
+	163.1.1={
+		death=yes
+	}
+}
+1229 = {
+	name="Bi"
+	dynasty=107
+	religion="confucian"
+	culture="han"
+	trait="misguided_warrior"
+	trait="wroth"
+	150.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=114
+	}
+	187.4.1={
+		death=yes
+	}
+}
+1230 = {
+	name="Nie"
+	dynasty=56
+	religion="confucian"
+	culture="han"
+	father=1232
+	trait="scholarly_theologian"
+	trait="patient"
+	trait="zealous"
+	150.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=100
+	}
+	195.1.1={
+		death=yes
+	}
+}
+1231 = {
+	name="Yong"
+	dynasty=7
+	religion="confucian"
+	culture="han"
+	trait="tough_soldier"
+	trait="patient"
+	trait="zealous"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=114
+	}
+	200.1.1={
+		death=yes
+	}
+}
+1232 = {
+	name="Feng"
+	dynasty=56
+	religion="confucian"
+	culture="han"
+	120.1.1={
+		birth=yes
+	}
+	178.1.1={
+		death={death_reason=death_execution killer=30}
+	}
+}
+1233 = {
+	name="Songling"
+	female=yes
+	dynasty=56
+	religion="confucian"
+	culture="han"
+	father=1232
+	trait="scholarly_theologian"
+	trait="patient"
+	trait="zealous"
+	155.1.1={
+		birth=yes
+	}
+	171.1.1={
+		add_spouse=30
+	}
+	178.1.1={
+		death={death_reason=death_dungeon killer=30}
+	}
+}
+1234 = {
+	name="Ying"
+	dynasty=8
+	religion="confucian"
+	culture="han"
+	father=1223
+	trait="genius"
+	trait="proud"
+	110.1.1={
+		birth=yes
+	}
+	169.1.1={
+		death={
+			death_reason=death_execution
+			killer=26
+		}
+	}
+}
+1235 = {
+	name="Lun"
+	dynasty=33
+	religion="confucian"
+	culture="han"
+	father=1236
+	100.1.1={
+		birth=yes
+	}
+	133.1.1={
+		add_spouse=102
+	}
+	180.1.1={
+		death=yes
+	}
+}
+1236 = {
+	name="Min"
+	dynasty=33
+	religion="confucian"
+	culture="han"
+	80.1.1={
+		birth=yes
+	}
+	140.1.1={
+		death=yes
+	}
+}
+1237 = {
+	name="Yan"
+	dynasty=952
+	religion="confucian"
+	culture="han"
+	trait="grey_eminence"
+	trait="deceitful"
+	trait="ambitious"
+	trait="zealous"
+	130.1.1={
+		birth=yes
+	}
+	187.1.1={
+		death={death_reason=death_dungeon killer=1100}
+	}
+}
+1238 = {
+	name="Fan"
+	dynasty=952
+	religion="confucian"
+	culture="han"
+	father=1237
+	trait="mastermind_theologian"
+	trait="shy"
+	trait="brave"
+	trait="humble"
+	trait="diligent"
+	trait="patient"
+	trait="temperate"
+	trait="zealous"
+	trait="content"
+	156.1.1={
+		birth=yes
+	}
+	212.1.1={
+		death=yes
+	}
+}
+1239 = {
+	name="Cheng"
+	dynasty=952
+	religion="confucian"
+	culture="han"
+	father=1237
+	trait="scholarly_theologian"
+	trait="honest"
+	trait="diligent"
+	trait="zealous"
+	158.1.1={
+		birth=yes
+	}
+	215.1.1={
+		death=yes
+	}
+}
+1240 = {
+	name="Zhao"
+	dynasty=952
+	religion="confucian"
+	culture="han"
+	father=1237
+	trait="scholarly_theologian"
+	trait="cynical"
+	trait="paranoid"
+	162.1.1={
+		birth=yes
+	}
+	220.1.1={
+		death=yes
+	}
+}
+1241 = {
+	name="Ling"
+	dynasty=952
+	religion="confucian"
+	culture="han"
+	father=1238
+	186.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1242 = {
+	name="Jian"
+	dynasty=952
+	religion="confucian"
+	culture="han"
+	father=1239
+	186.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1243 = {
+	name="Jin"
+	dynasty=953
+	religion="confucian"
+	culture="han"
+	90.1.1={
+		birth=yes
+	}
+	140.1.1={
+		death=yes
+	}
+}
+1244 = {
+	name="Ru"
+	dynasty=953
+	religion="confucian"
+	culture="han"
+	father=1243
+	115.1.1={
+		birth=yes
+	}
+	165.1.1={
+		death=yes
+	}
+}
+1245 = {
+	name="Xu"
+	dynasty=953
+	religion="confucian"
+	culture="han"
+	father=1244
+	trait="skilled_tactician"
+	trait="brave"
+	142.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=100
+	}
+	189.8.1={
+		death=yes
+	}
+}
+1246 = {
+	name="Dao"
+	dynasty=953
+	religion="confucian"
+	culture="han"
+	father=1245
+	166.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=100
+	}
+	189.8.22={
+		employer=300
+	}
+	192.5.22={
+		employer=120
+	}
+	192.7.1={
+		employer=308
+	}
+	196.1.1={
+		employer=400
+	}
+	232.1.1={
+		death=yes
+	}
+}
+1247 = {
+	name="Du"
+	dynasty=954
+	religion="confucian"
+	culture="han"
+	160.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1248 = {
+	name="Quan"
+	dynasty=955 #Guo
+	religion="confucian"
+	culture="han"
+	140.1.1={
+		birth=yes
+	}
+	199.1.1={
+		death=yes
+	}
+}
+1249 = {
+	name="Wen"
+	dynasty=955 #Guo
+	religion="confucian"
+	culture="han"
+	father=1248
+	161.1.1={
+		birth=yes
+	}
+	220.1.1={
+		death=yes
+	}
+}
+1250 = {
+	name="Hong"
+	dynasty=956
+	religion="confucian"
+	culture="han"
+	150.1.1={
+		birth=yes
+	}
+	230.1.1={
+		death=yes
+	}
+}
+1251 = {
+	name="Du"
+	female=yes
+	dynasty=956
+	religion="confucian"
+	culture="han"
+	father=1250
+	trait="fair"
+	175.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1252 = {
+	name="Huan"
+	dynasty=958
+	religion="confucian"
+	culture="han"
+	trait="brilliant_strategist"
+	trait="genius"
+	trait="honest"
+	trait="temperate"
+	trait="diligent"
+	trait="brave"
+	trait="zealous"
+	trait="fate_lead"
+	104.1.1={
+		birth=yes
+	}
+	181.1.1={
+		death=yes
+	}
+}
+1253 = {
+	name="Zhi"
+	dynasty=958
+	religion="confucian"
+	culture="han"
+	father=1252
+	trait="scholar"
+	trait="genius"
+	trait="content"
+	trait="honest"
+	trait="temperate"
+	trait="diligent"
+	trait="fate_teach"
+	135.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=4000
+		add_trait = "refuge"
+		effect = {
+			set_character_flag = refuge_liang
+		}
+	}
+	198.1.1={
+		remove_trait = "refuge"
+		effect = {
+			set_character_flag = refuge_liang
+		}
+		death=yes
+	}
+}
+1254 = {
+	name="Chang"
+	dynasty=958
+	religion="confucian"
+	culture="han"
+	father=1252
+	trait="scholar"
+	trait="quick"
+	trait="content"
+	trait="diligent"
+	trait="fate_teach"
+	139.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=4000
+		add_trait = "refuge"
+		effect = {
+			set_character_flag = refuge_liang
+		}
+	}
+	203.1.1={
+		remove_trait = "refuge"
+		effect = {
+			set_character_flag = refuge_liang
+		}
+		death=yes
+	}
+}
+1255 = {
+	name="Meng"
+	dynasty=958
+	religion="confucian"
+	culture="han"
+	father=1252
+	trait="ambitious"
+	trait="diligent"
+	trait="brave"
+	trait="zealous"
+	142.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=175 # Zhang Wen
+	}
+	187.4.1={
+		employer=105 #Huangfu Song
+	}
+	210.6.1={
+		death={death_reason=death_suicide}
+	}
+}
+1256 = {
+	name="Ji"
+	dynasty=959
+	religion="confucian"
+	culture="han"
+	150.1.1={
+		birth=yes
+	}
+	188.1.1={
+		death=yes
+	}
+}
+1257 = {
+	name="Shang"
+	dynasty=85
+	religion="confucian"
+	culture="han"
+	135.1.1={
+		birth=yes
+	}
+	200.1.1={
+		death=yes
+	}
+}
+1258 = {
+	name="Ba"
+	dynasty=960
+	religion="confucian"
+	culture="han"
+	115.1.1={
+		birth=yes
+	}
+	169.1.1={
+		death=yes
+	}
+}
+1259 = {
+	name="He"
+	dynasty=960
+	religion="confucian"
+	culture="han"
+	father=1258
+	140.1.1={
+		birth=yes
+	}
+	210.1.1={
+		death=yes
+	}
+}
+1260 = {
+	name="Xi"
+	dynasty=961
+	religion="confucian"
+	culture="han"
+	trait="honest"
+	trait="quick"
+	trait="gregarious"
+	trait="just"
+	trait="diligent"
+	trait="temperate"
+	trait="zealous"
+	140.1.1={
+		birth=yes
+	}
+	179.1.1={
+		death=yes
+	}
+}
+1261 = {
+	name="Hong"
+	dynasty=961
+	religion="confucian"
+	culture="han"
+	father=1260
+	160.1.1={
+		birth=yes
+	}
+	215.1.1={
+		death=yes
+	}
+}
+1262 = {
+	name="Rou"
+	dynasty=961
+	religion="confucian"
+	culture="han"
+	father=1260
+	162.1.1={
+		birth=yes
+	}
+	220.1.1={
+		death=yes
+	}
+}
+1263 = {
+	name="Song"
+	dynasty=964
+	religion="confucian"
+	culture="han"
+	trait="tough_soldier"
+	trait="duelist"
+	trait="brave"
+	trait="honest"
+	trait="chivalrous"
+	trait="zealous"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=125
+		effect = {
+			add_friend=125
+		}
+	}
+	190.6.1={
+		death=yes
+	}
+}
+1264 = {
+	name="Tiao"
+	dynasty=965
+	religion="confucian"
+	culture="han"
+	trait="skilled_tactician"
+	trait="strategist"
+	trait="brave"
+	trait="honest"
+	trait="chivalrous"
+	trait="zealous"
+	trait="organizer"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=125
+		effect = {
+			add_friend=125
+		}
+	}
+	190.6.1={
+		death=yes
+	}
+}
+1265 = {
+	name="Lin"
+	dynasty=57
+	religion="confucian"
+	culture="han"
+	1.1.1={
+		birth=yes
+	}
+	50.1.1={
+		death=yes
+	}
+}
+1266 = {
+	name="Wei"
+	dynasty=57
+	religion="confucian"
+	culture="han"
+	father=1265
+	20.1.1={
+		birth=yes
+	}
+	70.1.1={
+		death=yes
+	}
+}
+1267 = {
+	name="Hui"
+	dynasty=57
+	religion="confucian"
+	culture="han"
+	father=1266
+	45.1.1={
+		birth=yes
+	}
+	100.1.1={
+		death=yes
+	}
+}
+1268 = {
+	name="Ben"
+	dynasty=57
+	religion="confucian"
+	culture="han"
+	father=1267
+	70.1.1={
+		birth=yes
+	}
+	130.1.1={
+		death=yes
+	}
+}
+1269 = {
+	name="Zhen"
+	dynasty=57
+	religion="confucian"
+	culture="han"
+	father=1268
+	93.1.1={
+		birth=yes
+	}
+	156.1.1={
+		death=yes
+	}
+}
+1270 = {
+	name="Mao"
+	dynasty=57
+	religion="confucian"
+	culture="han"
+	father=1269
+	115.1.1={
+		birth=yes
+	}
+	200.1.1={
+		death=yes
+	}
+}
+1271 = {
+	name="Xiang"
+	dynasty=57
+	religion="confucian"
+	culture="han"
+	father=1270
+	135.1.1={
+		birth=yes
+	}
+	215.1.1={
+		death=yes
+	}
+}
+1272 = {
+	name="Ji"
+	female=yes
+	dynasty=57
+	religion="confucian"
+	culture="han"
+	father=1270
+	175.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1273 = {
+	name="Gu"
+	dynasty=57
+	religion="confucian"
+	culture="han"
+	father=1271
+	156.1.1={
+		birth=yes
+	}
+	238.1.1={
+		death=yes
+	}
+}
+1274 = {
+	name="Zhi"
+	dynasty=967
+	religion="confucian"
+	culture="han"
+	140.1.1={
+		birth=yes
+	}
+	170.1.1={
+		effect = {
+			add_friend=121
+		}
+	}
+	193.1.1={
+		death=yes
+	}
+}
+1275 = {
+	name="Ting"
+	dynasty=968
+	religion="confucian"
+	culture="han"
+	160.1.1={
+		birth=yes
+	}
+	210.1.1={
+		death=yes
+	}
+}
+1276 = {
+	name="Shao"
+	dynasty=969
+	religion="confucian"
+	culture="han"
+	140.1.1={
+		birth=yes
+	}
+	190.1.1={
+		death=yes
+	}
+}
+1277 = {
+	name="Xuan"
+	dynasty=175
+	religion="confucian"
+	culture="han"
+	trait="scholarly_theologian"
+	trait="humble"
+	trait="honest"
+	trait="diligent"
+	trait="temperate"
+	trait="brave"
+	trait="zealous"
+	123.1.1={
+		birth=yes
+	}
+	140.1.1={
+		add_spouse=3913
+	}
+	200.1.1={
+		death=yes
+	}
+}
+1278 = {
+	name="Yan"
+	dynasty=175
+    diplomacy=7
+    martial=9
+    stewardship=5
+    intrigue=3
+	learning=6
+	religion="confucian"
+	culture="han"
+	father=1277
+	mother=3913
+	trait="skilled_tactician"
+	trait="strategist"
+	trait="brave"
+	trait="zealous"
+	140.1.1={
+		birth=yes
+	}
+	210.1.1={
+		death=yes
+	}
+}
+1279 = {
+	name="Yao"
+	dynasty=175
+	religion="confucian"
+	culture="han"
+	father=1277
+	mother=3913
+	trait="fortune_builder"
+	trait="administrator"
+	trait="diligent"
+	trait="zealous"
+	142.1.1={
+		birth=yes
+	}
+	210.1.1={
+		death=yes
+	}
+}
+1280 = {
+	name="Mao"
+	dynasty=970
+	religion="confucian"
+	culture="han"
+	trait="brilliant_strategist"
+	trait="strategist"
+	trait="brave"
+	trait="strong"
+	trait="diligent"
+	trait="zealous"
+	1.1.1={
+		birth=yes
+	}
+	90.1.1={
+		death=yes
+	}
+}
+1281 = {
+	name="Fu"
+	dynasty=970
+	religion="confucian"
+	culture="han"
+	father=1280
+	trait="scholarly_theologian"
+	trait="administrator"
+	trait="temperate"
+	trait="diligent"
+	trait="zealous"
+	60.1.1={
+		birth=yes
+	}
+	140.1.1={
+		death=yes
+	}
+}
+1282 = {
+	name="Bao"
+	dynasty=971
+	religion="confucian"
+	culture="han"
+	trait="scholarly_theologian"
+	trait="administrator"
+	trait="temperate"
+	trait="diligent"
+	trait="zealous"
+	1.1.1={
+		birth=yes
+	}
+	80.1.1={
+		death=yes
+	}
+}
+1283 = {
+	name="Zhen"
+	dynasty=971
+	religion="confucian"
+	culture="han"
+	father=1282
+	trait="scholarly_theologian"
+	trait="administrator"
+	trait="temperate"
+	trait="diligent"
+	trait="honest"
+	trait="zealous"
+	57.1.1={
+		birth=yes
+	}
+	124.1.1={
+		death=yes
+	}
+}
+1284 = {
+	name="Heng"
+	dynasty=971
+	religion="confucian"
+	culture="han"
+	father=1282
+	60.1.1={
+		birth=yes
+	}
+	120.1.1={
+		death=yes
+	}
+}
+1285 = {
+	name="Mu"
+	dynasty=971
+	religion="confucian"
+	culture="han"
+	father=1283
+	87.1.1={
+		birth=yes
+	}
+	163.1.1={
+		death=yes
+	}
+}
+1286 = {
+	name="Li"
+	dynasty=971
+	religion="confucian"
+	culture="han"
+	father=1283
+	90.1.1={
+		birth=yes
+	}
+	122.1.1={
+		death=yes
+	}
+}
+1287 = {
+	name="Bing"
+	dynasty=971
+	religion="confucian"
+	culture="han"
+	father=1283
+	trait="scholarly_theologian"
+	trait="administrator"
+	trait="temperate"
+	trait="celibate"
+	trait="diligent"
+	trait="honest"
+	trait="zealous"
+	94.1.1={
+		birth=yes
+	}
+	167.1.1={
+		death=yes
+	}
+}
+1288 = {
+	name="Rang"
+	dynasty=971
+	religion="confucian"
+	culture="han"
+	father=1283
+	trait="scholarly_theologian"
+	trait="administrator"
+	trait="temperate"
+	trait="diligent"
+	trait="honest"
+	trait="zealous"
+	97.1.1={
+		birth=yes
+	}
+	171.1.1={
+		death=yes
+	}
+}
+1289 = {
+	name="Feng"
+	dynasty=971
+	religion="confucian"
+	culture="han"
+	father=1283
+	99.1.1={
+		birth=yes
+	}
+	173.1.1={
+		death=yes
+	}
+}
+1290 = {
+	name="Tong"
+	dynasty=971
+	religion="confucian"
+	culture="han"
+	father=1285
+	113.1.1={
+		birth=yes
+	}
+	168.1.1={
+		death=yes
+	}
+}
+1291 = {
+	name="Fu"
+	dynasty=971
+	religion="confucian"
+	culture="han"
+	father=1285
+	125.1.1={
+		birth=yes
+	}
+	175.1.1={
+		death=yes
+	}
+}
+1292 = {
+	name="Fu"
+	dynasty=971
+	religion="confucian"
+	culture="han"
+	father=1289
+	trait="scholarly_theologian"
+	trait="administrator"
+	trait="honest"
+	trait="shy"
+	trait="content"
+	trait="temperate"
+	125.1.1={
+		birth=yes
+	}
+	150.1.1={
+		death=yes
+	}
+}
+1293 = {
+	name="Zhu"
+	dynasty=971
+	religion="confucian"
+	culture="han"
+	father=1288
+	116.1.1={
+		birth=yes
+	}
+	168.1.1={
+		death=yes
+	}
+}
+1294 = {
+	name="Qi"
+	dynasty=971
+	religion="confucian"
+	culture="han"
+	father=1290
+	trait="scholarly_theologian"
+	trait="administrator"
+	trait="temperate"
+	trait="diligent"
+	trait="honest"
+	trait="zealous"
+	135.1.1={
+		birth=yes
+	}
+	189.8.22={
+		employer=300
+	}
+	196.1.1={
+		death=yes
+	}
+}
+1295 = {
+	name="Zhong"
+	dynasty=971
+	religion="confucian"
+	culture="han"
+	father=1291
+	trait="administrator"
+	trait="temperate"
+	trait="diligent"
+	trait="honest"
+	trait="zealous"
+	140.1.1={
+		birth=yes
+	}
+	180.1.1={
+		add_spouse=3903
+	}
+	210.1.1={
+		death=yes
+	}
+}
+1296 = {
+	name="Liang"
+	dynasty=971
+	religion="confucian"
+	culture="han"
+	father=1294
+	160.1.1={
+		birth=yes
+	}
+	230.1.1={
+		death=yes
+	}
+}
+1297 = {
+	name="Ci"
+	dynasty=971
+	religion="confucian"
+	culture="han"
+	father=1287
+	trait="administrator"
+	trait="temperate"
+	trait="diligent"
+	trait="honest"
+	trait="zealous"
+	120.1.1={
+		birth=yes
+	}
+	185.10.1={
+		death=yes
+	}
+}
+1298 = {
+	name="Biao"
+	dynasty=971
+	religion="confucian"
+	culture="han"
+	father=1297
+	trait="administrator"
+	trait="temperate"
+	trait="diligent"
+	trait="honest"
+	trait="zealous"
+	142.1.1={
+		birth=yes
+	}
+	174.1.1={
+		add_spouse=719
+	}
+	184.1.1={
+		employer=100
+	}
+	189.8.22={
+		employer=300
+	}
+	192.5.22={
+		employer=120
+	}
+	192.7.1={
+		employer=307
+	}
+	195.1.1={
+		employer=308
+	}
+	196.1.1={
+		employer=400
+	}
+	225.1.1={
+		death=yes
+	}
+}
+1299 = {
+	name="Xiu"
+	dynasty=971
+	religion="confucian"
+	culture="han"
+	father=1298
+	mother=719
+	trait="administrator"
+	trait="temperate"
+	trait="diligent"
+	trait="honest"
+	trait="zealous"
+	175.1.1={
+		birth=yes
+	}
+	219.1.1={
+		death=yes
+	}
+}

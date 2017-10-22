@@ -1,0 +1,18 @@
+# c_langye
+
+# County Title
+title = c_langye
+
+# Settlements
+max_settlements = 4
+
+b_langye = castle
+b_dongwuchengye = city
+#b_puting = temple
+#b_kaiyang = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

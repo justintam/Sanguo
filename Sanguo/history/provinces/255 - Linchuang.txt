@@ -1,0 +1,21 @@
+# c_linchuang
+
+# County Title
+title = c_linchuang
+
+# Settlements
+max_settlements = 4
+
+b_linchuang = castle
+b_fuhuai = tribal
+#b_pengbu = city
+#b_jianggan = temple
+
+# Misc
+culture = minyue
+religion = animist
+
+#History
+190.1.1={
+	b_pengbu = city
+}

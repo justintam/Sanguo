@@ -1,0 +1,19 @@
+# c_dingling
+
+# County Title
+title = c_dingling
+
+# Settlements
+max_settlements = 5
+
+b_dingling = castle
+b_dongbugeng = city
+#b_weiduzhen = temple
+#b_fongning = castle
+#b_pingding = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

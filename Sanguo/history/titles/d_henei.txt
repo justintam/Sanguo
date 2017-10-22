@@ -1,0 +1,51 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=k_sili
+	vice_royalty = yes
+}
+156.1.1={
+	holder=4283 #Zhou Jing
+}
+160.1.1={
+	holder=0 #None
+}
+178.1.1={
+	holder=3369 #Cui Lie
+}
+180.1.1={
+	holder=111 #Chen Yan
+}
+184.1.1={
+	holder=106 #Zhu Jun
+}
+188.1.1={
+	holder=174 #Wang Kuang
+}
+190.1.1={
+	holder=3347 #Zhang Yang
+}
+192.5.22={
+	liege=0
+}
+#Sui Gu
+198.3.1={
+	holder=3445 #Miao Shang
+	set_tribute_suzerain = { who = e_yuan percentage = 0.25 }
+}
+199.1.1={
+	liege=k_sili
+	clear_tribute_suzerain = e_yuan
+}
+199.10.1={
+	holder=20435 #Liu Xun
+}
+201.1.1={
+	holder=4212 #Liu Xun
+}
+213.6.1={
+	liege=k_ji
+}

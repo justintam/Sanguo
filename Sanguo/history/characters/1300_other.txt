@@ -1,0 +1,2981 @@
+1300 = {
+	name="Zhenzhong"
+	dynasty=130
+	dna="dikadrgabad"
+	properties="ke0dgk0000"
+	diplomacy=10
+	martial=8
+	stewardship=7
+	intrigue=5
+	learning=10
+	religion="confucian"
+	culture="han"
+	father=1302
+	mother=1303
+	disallow_random_traits=yes
+	trait="tall"
+	trait="fair"
+	trait="strong"
+	trait="genius"
+	trait="diligent"
+	trait="gregarious"
+	trait="brave"
+	trait="zealous"
+	trait="temperate"
+	trait="lustful"
+	trait="organizer"
+	trait="unyielding_leader"
+	trait="flat_terrain_leader"
+	trait="brilliant_strategist"
+    trait="duel_trained_warrior"
+	145.1.1 = {
+		birth=yes
+	}
+	164.1.1 = {
+		add_spouse=1301
+	}
+	184.1.1 = {
+		add_spouse=1337
+	}
+	250.1.1 = {
+		death=yes
+	}
+}
+1301 = {
+	name="Huimin"
+	female="yes"
+	dynasty=161
+	dna="dehhkzjcaal"
+	properties="0mhdja0000"
+	diplomacy=8
+	martial=5
+	stewardship=9
+	intrigue=10
+	learning=8
+	religion="confucian"
+	culture="han"
+	father=1341
+	mother=1342
+	disallow_random_traits=yes
+	trait="shrewd"
+	trait="strong"
+	trait="greedy"
+	trait="brave"
+	trait="kind"
+	trait="deceitful"
+	trait="zealous"
+	trait="fair"
+	trait="chaste"
+	trait="elusive_shadow"
+	trait="familyperson"
+    trait="duel_trained_warrior"
+	150.1.1 = {
+		birth=yes
+	}
+	164.1.1 = {
+		add_spouse=1300
+	}
+	166.1.1 = {
+		remove_spouse=1300
+		add_spouse=1306
+	}
+	184.1.1 = {
+	}
+	260.1.1 = {
+		death=yes
+	}
+}
+1302 = {
+	name="Jingquan"
+	dynasty=130
+	dna="dikadrgabad"
+	diplomacy=10
+	martial=6
+	stewardship=10
+	intrigue=4
+	learning=10
+	religion="confucian"
+	culture="han"
+	father=1365
+	disallow_random_traits=yes
+	trait="tall"
+	trait="diligent"
+	trait="strong"
+	trait="genius"
+	trait="brave"
+	trait="fair"
+	trait="temperate"
+	trait="patient"
+	trait="chaste"
+	trait="midas_touched"
+    trait="duel_trained_warrior"
+	120.1.1 = {
+		birth=yes
+	}
+	145.1.1 = {
+		add_spouse=1303
+	}
+	206.1.1 = {
+		death=yes
+	}
+}
+1303 = {
+	name="Yuhua"
+	female="yes"
+	dynasty=160
+	dna="dkjicmjcfam"
+	diplomacy=10
+	martial=3
+	stewardship=7
+	intrigue=10
+	learning=10
+	religion="confucian"
+	culture="han"
+	father=1359
+	disallow_random_traits=yes
+	trait="diligent"
+	trait="just"
+	trait="strong"
+	trait="charitable"
+	trait="brave"
+	trait="kind"
+	trait="genius"
+	trait="fair"
+	trait="chaste"
+	trait="grey_eminence"
+    trait="duel_trained_warrior"
+	130.1.1 = {
+		birth=yes
+	}
+	145.1.1 = {
+		add_spouse=1302
+	}
+	184.1.1 = {
+	}
+	225.1.30 = {
+		death=yes
+	}
+}
+1304 = {
+	name="Youcheng"
+	dynasty=162
+	dna="bfejbsmcaam"
+	diplomacy=9
+	martial=7
+	stewardship=10
+	intrigue=4
+	learning=10
+	religion="confucian"
+	culture="han"
+	father=1358
+	disallow_random_traits=yes
+	trait="diligent"
+	trait="humble"
+	trait="genius"
+	trait="brave"
+	trait="zealous"
+	trait="temperate"
+	trait="chaste"
+	trait="fortune_builder"
+    trait="duel_trained_warrior"
+	148.1.1 = {
+		birth=yes
+	}
+	164.1.1 = {
+		add_spouse=1305
+	}
+	184.1.1 = {
+		employer=1312
+		
+	}
+	250.1.1 = {
+		death=yes
+	}
+}
+1305 = {
+	name="Qingqing"
+	female="yes"
+	dynasty=940
+	diplomacy=10
+	martial=6
+	stewardship=8
+	intrigue=10
+	learning=6
+	religion="confucian"
+	culture="han"
+	father=1359
+	disallow_random_traits=yes
+	trait="just"
+	trait="gregarious"
+	trait="brave"
+	trait="kind"
+	trait="honest"
+	trait="zealous"
+	trait="chaste"
+	trait="charismatic_negotiator"
+    trait="duel_trained_warrior"
+	150.1.1 = {
+		birth=yes
+	}
+	164.1.1 = {
+		add_spouse=1304
+	}
+	184.1.1 = {
+		employer=1304
+	}
+	250.1.1 = {
+		death=yes
+	}
+}
+1306 = {
+	name="Lei"
+	dynasty=163
+	dna="afbfgrgaiaa"
+	properties="kc0jhj0000"
+	diplomacy=10
+	martial=10
+	stewardship=7
+	intrigue=9
+	learning=4
+	religion="confucian"
+	culture="han"
+	father=1366
+	disallow_random_traits=yes
+	trait="ambitious"
+	trait="diligent"
+	trait="just"
+	trait="proud"
+	trait="strong"
+	trait="gregarious"
+	trait="brave"
+	trait="fair"
+	trait="charismatic_negotiator"
+    trait="duel_trained_warrior"
+	150.1.1 = {
+		birth=yes
+	}
+	166.1.1 = {
+		add_spouse=1301
+	}
+	184.1.1 = {
+		employer=1301
+	}
+	250.1.1 = {
+		death=yes
+	}
+}
+1307 = {
+	name="Zhiren"
+	dynasty=163
+	diplomacy=4
+	martial=6
+	stewardship=10
+	intrigue=10
+	learning=10
+	religion="confucian"
+	culture="han"
+	father=1306
+	mother=1301
+	disallow_random_traits=yes
+	trait="ambitious"
+	trait="diligent"
+	trait="just"
+	trait="quick"
+	trait="strong"
+	trait="homosexual"
+	trait="envious"
+	trait="brave"
+	trait="deceitful"
+	trait="scholarly_theologian"
+    trait="duel_trained_warrior"
+	167.1.1 = {
+		birth=yes
+	}
+	184.1.1 = {
+		employer=1301
+		effect = {
+			add_friend=1313
+		}
+	}
+	270.1.1 = {
+		death=yes
+	}
+}
+1308 = {
+	name="Zhiguo"
+	dynasty=163
+	diplomacy=10
+	martial=10
+	stewardship=7
+	intrigue=5
+	learning=8
+	religion="confucian"
+	culture="han"
+	father=1306
+	mother=1301
+	disallow_random_traits=yes
+	trait="ambitious"
+	trait="diligent"
+	trait="just"
+	trait="strong"
+	trait="gregarious"
+	trait="brave"
+	trait="kind"
+	trait="fair"
+	trait="chaste"
+	trait="aggressive_leader"
+	trait="unyielding_leader"
+	trait="skilled_tactician"
+    trait="duel_trained_warrior"
+	168.1.1 = {
+		birth=yes
+	}
+	184.1.1 = {
+		add_spouse=1322
+		effect = {
+			add_friend=1313
+		}
+	}
+	270.1.1 = {
+		death=yes
+	}
+}
+1309 = {
+	name="Kyungjik"
+	dynasty=2252
+	diplomacy=7
+	martial=6
+	stewardship=10
+	intrigue=7
+	learning=10
+	religion="confucian"
+	culture="samhan"
+	father=1356
+	disallow_random_traits=yes
+	trait="ambitious"
+	trait="diligent"
+	trait="just"
+	trait="genius"
+	trait="strong"
+	trait="gregarious"
+	trait="brave"
+	trait="kind"
+	trait="chaste"
+	trait="mastermind_theologian"
+    trait="duel_trained_warrior"
+	150.1.1 = {
+		birth=yes
+	}
+	168.1.1 = {
+		add_spouse=1321
+	}
+	184.1.1 = {
+		employer=1316
+	}
+	250.1.1 = {
+		death=yes
+	}
+}
+1310 = {
+	name="Xiaomei"
+	female="yes"
+	dynasty=162
+	dna="zpzoptybqfq"
+	properties="0kfeik0000"
+	diplomacy=10
+	martial=3
+	stewardship=7
+	intrigue=10
+	learning=10
+	religion="confucian"
+	culture="han"
+	father=1304
+	mother=1305
+	disallow_random_traits=yes
+	trait="ambitious"
+	trait="genius"
+	trait="diligent"
+	trait="brave"
+	trait="strong"
+	trait="humble"
+	trait="zealous"
+	trait="fair"
+	trait="chaste"
+	trait="elusive_shadow"
+    trait="duel_trained_warrior"
+	168.1.1 = {
+		birth=yes
+	}
+	184.1.1 = {
+		employer=1313
+		effect = {
+			add_friend=1313
+			add_friend=1316
+			add_friend=1332
+			add_friend=1364
+			liege = {
+				ROOT = {
+					add_consort = PREV
+				}
+			}
+			any_friend={
+				add_lover = ROOT
+			}
+		}
+	}
+	270.1.1 = {
+		death=yes
+	}
+}
+1311 = {
+	name="Kaidi"
+	female="yes"
+	dynasty=130
+	properties="ae0000"
+	diplomacy=10
+	martial=6
+	stewardship=9
+	intrigue=8
+	learning=7
+	religion="confucian"
+	culture="han"
+	father=1300
+	mother=1301
+	disallow_random_traits=yes
+	trait="tall"
+	trait="ambitious"
+	trait="diligent"
+	trait="gregarious"
+	trait="charitable"
+	trait="brave"
+	trait="strong"
+	trait="fair"
+	trait="chaste"
+	trait="grey_eminence"
+    trait="duel_trained_warrior"
+	166.1.30 = {
+		birth=yes
+	}
+	184.1.1 = {
+		add_spouse=1377
+		effect = {
+			add_friend=1313
+		}
+	}
+	270.1.1 = {
+		death=yes
+	}
+}
+1312 = {
+	name="Zhongrei"
+	dynasty=162
+	dna="afbfgmmcaaa"
+	properties="0i0ehk0000"
+	diplomacy=7
+	martial=6
+	stewardship=10
+	intrigue=7
+	learning=10
+	religion="confucian"
+	culture="han"
+	father=1304
+	mother=1305
+	disallow_random_traits=yes
+	trait="diligent"
+	trait="strong"
+	trait="brave"
+	trait="genius"
+	trait="zealous"
+	trait="fair"
+	trait="temperate"
+	trait="patient"
+	trait="chaste"
+	trait="mastermind_theologian"
+    trait="duel_trained_warrior"
+	166.1.1 = {
+		birth=yes
+	}
+	184.1.1 = {
+		add_spouse=1375
+		effect = {
+			add_friend=1313
+		}
+	}
+	280.1.1 = {
+		death=yes
+	}
+}
+1313 = {
+	name="Zhihan"
+	dynasty=130	
+	dna="dikadrgaiad"
+	properties="ke0dgk0000"
+	diplomacy=9
+	martial=5
+	stewardship=10
+	intrigue=7
+	learning=9
+	religion="confucian"
+	culture="han"
+	father=1300
+	mother=1301
+	disallow_random_traits=yes
+	trait="tall"
+	trait="fair"
+	trait="strong"
+	trait="genius"
+	trait="ambitious"
+	trait="just"
+	trait="brave"
+	trait="diligent"
+	trait="zealous"
+	trait="flat_terrain_leader"
+	trait="unyielding_leader"
+	trait="heavy_infantry_leader"
+	trait="inspiring_leader"
+	trait="organizer"
+	trait="siege_leader"
+	trait="brilliant_strategist"
+    trait="duel_skilled_warrior"
+	165.5.30 = {
+		birth=yes
+	}
+	184.1.1 = {
+		add_spouse=1316
+		effect = {
+			health = 10
+			fertility = 1
+			wealth = 50
+			add_friend=1307
+			add_friend=1308
+			add_friend=1310
+			add_friend=1311
+			add_friend=1312
+			add_friend=1316
+			add_friend=1319
+			add_friend=1323
+			add_friend=1324
+			add_friend=1325
+			add_friend=1326
+			add_friend=1328
+			add_friend=1332
+			add_friend=1353
+			add_friend=1364
+			
+			any_friend={
+				limit = {
+					is_female = yes
+					NOT = {
+						dynasty = ROOT
+					}
+				}
+				add_lover = ROOT
+			}
+		}
+		
+		effect = {
+			any_friend = {
+				opinion = {
+					modifier = opinion_loyalty
+					who = ROOT
+				}
+				reverse_opinion = {
+					modifier = opinion_loyalty
+					who = ROOT
+				}
+			}
+		}
+	}
+	189.9.1={
+		effect = {
+			set_global_flag = ten_eunuchs_end
+		}
+	}
+	190.4.9={
+		effect = {
+			set_global_flag = dong_zhuo_retreat
+		}
+	}
+	190.10.1={
+		effect = {
+			set_global_flag = liang_rebel_end
+		}
+	}
+	192.5.22={
+		effect = {
+			set_global_flag = lu_bu_plot_end
+		}
+	}
+	196.1.1={
+		effect = {
+			set_global_flag = changan_duel_end
+		}
+	}
+	199.1.1={
+		effect = {
+			set_global_flag = north_unify_end
+		}
+	}
+	205.5.1={
+		effect = {
+			set_global_flag = yellow_turban_end
+		}
+	}
+	220.12.10={
+		effect = {
+			set_global_flag = founded_empire_flag
+		}
+	}
+	280.1.1 = {
+		death=yes
+	}
+}
+1314 = {
+	name="Lingfeng"
+	female="yes"
+	dynasty=164
+	dna="zpzoptybqfc"
+	properties="0cfeik0000"
+	diplomacy=8
+	martial=6
+	stewardship=10
+	intrigue=6
+	learning=10
+	religion="confucian"
+	culture="han"
+	father=1380
+	disallow_random_traits=yes
+	trait="humble"
+	trait="genius"
+	trait="diligent"
+	trait="gregarious"
+	trait="brave"
+	trait="strong"
+	trait="zealous"
+	trait="fair"
+	trait="chaste"
+	trait="midas_touched"
+    trait="duel_trained_warrior"
+	168.1.1 = {
+		birth=yes
+	}
+	184.1.1 = {
+		employer=1313
+		add_spouse=1323
+	}
+	270.1.1 = {
+		death=yes
+	}
+}
+1315 = {
+	name="Chenwei"
+	female="yes"
+	dynasty=160
+	dna="zpooptyaqfm"
+	properties="0cfeik0000"
+	diplomacy=10
+	martial=7
+	stewardship=9
+	intrigue=4
+	learning=10
+	religion="confucian"
+	culture="han"
+	father=1320
+	disallow_random_traits=yes
+	trait="genius"
+	trait="twin"
+	trait="diligent"
+	trait="humble"
+	trait="gregarious"
+	trait="brave"
+	trait="strong"
+	trait="zealous"
+	trait="fair"
+	trait="chaste"
+	trait="grey_eminence"
+    trait="duel_trained_warrior"
+	168.1.1 = {
+		birth=yes
+	}
+	184.1.1 = {
+		employer=1313
+		add_spouse=1324
+	}
+	270.1.1 = {
+		death=yes
+	}
+}
+1316 = {
+	name="Shinu"
+	female="yes"
+	dynasty=2252
+	dna="dcaigaebeam"
+	properties="0cfeik0000"
+	diplomacy=8
+	martial=5
+	stewardship=8
+	intrigue=10
+	learning=9
+	religion="confucian"
+	culture="samhan"
+	father=1309
+	mother=1321
+	disallow_random_traits=yes
+	trait="diligent"
+	trait="gregarious"
+	trait="ambitious"
+	trait="humble"
+	trait="genius"
+	trait="strong"
+	trait="zealous"
+	trait="fair"
+	trait="chaste"
+	trait="twin"
+	trait="elusive_shadow"
+    trait="duel_trained_warrior"
+	168.1.1 = {
+		birth=yes
+	}
+	184.1.1 = {
+		add_spouse=1313
+		effect= {
+			add_friend=1313
+			add_friend=1310
+			add_friend=1332
+			add_friend=1364
+			any_friend={
+				add_lover = ROOT
+			}
+		}
+	}
+	280.1.1 = {
+		death=yes
+	}
+}
+1317 = {
+	name="Kai"
+	dynasty=163
+	diplomacy=7
+	martial=8
+	stewardship=9
+	intrigue=6
+	learning=10
+	religion="confucian"
+	culture="han"
+	father=1366
+	disallow_random_traits=yes
+	trait="ambitious"
+	trait="robust"
+	trait="diligent"
+	trait="charitable"
+	trait="brave"
+	trait="strong"
+	trait="zealous"
+	trait="fair"
+	trait="unyielding_leader"
+	trait="organizer"
+	trait="skilled_tactician"
+    trait="duel_trained_warrior"
+	148.1.1 = {
+		birth=yes
+	}
+	184.1.1 = {
+		employer=1301
+	}
+	250.1.1 = {
+		death=yes
+	}
+}
+1318 = {
+	name="Jie"
+	dynasty=164
+	diplomacy=10
+	martial=6
+	stewardship=10
+	intrigue=5
+	learning=9
+	religion="confucian"
+	culture="han"
+	father=1380
+	disallow_random_traits=yes
+	trait="quick"
+	trait="diligent"
+	trait="gregarious"
+	trait="charitable"
+	trait="brave"
+	trait="strong"
+	trait="zealous"
+	trait="fair"
+	trait="chaste"
+	trait="fortune_builder"
+    trait="duel_trained_warrior"
+	168.1.1 = {
+		birth=yes
+	}
+	184.1.1 = {
+		employer=1301
+	}
+	270.1.1 = {
+		death=yes
+	}
+}
+1319 = {
+	name="Jintao"
+	dynasty=160
+	diplomacy=7
+	martial=10
+	stewardship=10
+	intrigue=8
+	learning=5
+	religion="confucian"
+	culture="han"
+	father=1320
+	disallow_random_traits=yes
+	trait="ambitious"
+	trait="shrewd"
+	trait="diligent"
+	trait="humble"
+	trait="brave"
+	trait="strong"
+	trait="zealous"
+	trait="fair"
+	trait="chaste"
+	trait="inspiring_leader"
+	trait="organizer"
+	trait="skilled_tactician"
+    trait="duel_trained_warrior"
+	167.1.1 = {
+		birth=yes
+	}
+	184.1.1 = {
+		employer=1313
+		add_spouse=1338
+	}
+	270.1.1 = {
+		death=yes
+	}
+}
+1320 = {
+	name="Xian"
+	dynasty=160
+	dna="dkjicmjcfam"
+	properties="0cfeik0000"
+	diplomacy=10
+	martial=9
+	stewardship=9
+	intrigue=6
+	learning=6
+	religion="confucian"
+	culture="han"
+	father=1359
+	disallow_random_traits=yes
+	trait="shrewd"
+	trait="diligent"
+	trait="charitable"
+	trait="brave"
+	trait="strong"
+	trait="kind"
+	trait="zealous"
+	trait="fair"
+	trait="chaste"
+	trait="charismatic_negotiator"
+    trait="duel_trained_warrior"
+	150.1.1 = {
+		birth=yes
+	}
+	184.1.1 = {
+		employer=1316
+	}
+	250.1.1 = {
+		death=yes
+	}
+}
+1321 = {
+	name="Aerye"
+	female="yes"
+	dynasty=2253
+	dna="dkjicmjcaam"
+	properties="0cfeik0000"
+	diplomacy=10
+	martial=7
+	stewardship=8
+	intrigue=5
+	learning=10
+	religion="confucian"
+	culture="samhan"
+	disallow_random_traits=yes
+	trait="shrewd"
+	trait="diligent"
+	trait="gregarious"
+	trait="just"
+	trait="humble"
+	trait="strong"
+	trait="honest"
+	trait="zealous"
+	trait="chaste"
+	trait="scholarly_theologian"
+    trait="duel_trained_warrior"
+	150.1.1 = {
+		birth=yes
+	}
+	168.1.1 = {
+		add_spouse=1309
+	}
+	184.1.1 = {
+		employer=1316
+	}
+	250.1.1 = {
+		death=yes
+	}
+}
+1322 = {
+	name="Zhiying"
+	female="yes"
+	dynasty=1454
+	diplomacy=8
+	martial=8
+	stewardship=10
+	intrigue=4
+	learning=10
+	religion="confucian"
+	culture="han"
+	father=1348
+	mother=1343
+	disallow_random_traits=yes
+	trait="tall"
+	trait="ambitious"
+	trait="quick"
+	trait="diligent"
+	trait="humble"
+	trait="strong"
+	trait="zealous"
+	trait="fair"
+	trait="chaste"
+	trait="midas_touched"
+    trait="duel_trained_warrior"
+	168.1.1 = {
+		birth=yes
+	}
+	184.1.1 = {
+		employer=1313
+		add_spouse=1308
+	}
+	270.1.1 = {
+		death=yes
+	}
+}
+1323 = {
+	name="Baochou"
+	dynasty=1454
+	diplomacy=8
+	martial=8
+	stewardship=10
+	intrigue=5
+	learning=9
+	religion="confucian"
+	culture="han"
+	father=1348
+	mother=1343
+	disallow_random_traits=yes
+	trait="tall"
+	trait="ambitious"
+	trait="shrewd"
+	trait="diligent"
+	trait="brave"
+	trait="strong"
+	trait="zealous"
+	trait="fair"
+	trait="chaste"
+	trait="fortune_builder"
+    trait="duel_trained_warrior"
+	165.1.1 = {
+		birth=yes
+	}
+	184.1.1 = {
+		employer=1313
+		add_spouse=1314
+	}
+	270.1.1 = {
+		death=yes
+	}
+}
+1324 = {
+	name="Mengjie"
+	dynasty=1452
+	diplomacy=6
+	martial=10
+	stewardship=8
+	intrigue=6
+	learning=10
+	religion="confucian"
+	culture="han"
+	father=1349
+	mother=1344
+	disallow_random_traits=yes
+	trait="tall"
+	trait="robust"
+	trait="just"
+	trait="brave"
+	trait="strong"
+	trait="kind"
+	trait="zealous"
+	trait="fair"
+	trait="chaste"
+	trait="unyielding_leader"
+	trait="organizer"
+	trait="skilled_tactician"
+    trait="duel_trained_warrior"
+	164.1.1 = {
+		birth=yes
+	}
+	184.1.1 = {
+		employer=1313
+		add_spouse=1315
+	}
+	270.1.1 = {
+		death=yes
+	}
+}
+1325 = {
+	name="Jiaoshan"
+	dynasty=1452
+	diplomacy=10
+	martial=5
+	stewardship=7
+	intrigue=8
+	learning=10
+	religion="confucian"
+	culture="han"
+	father=1349
+	mother=1344
+	disallow_random_traits=yes
+	trait="tall"
+	trait="shrewd"
+	trait="diligent"
+	trait="gregarious"
+	trait="charitable"
+	trait="strong"
+	trait="honest"
+	trait="fair"
+	trait="chaste"
+	trait="charismatic_negotiator"
+    trait="duel_trained_warrior"
+	165.1.1 = {
+		birth=yes
+	}
+	184.1.1 = {
+		employer=1313
+		add_spouse=1335
+	}
+	270.1.1 = {
+		death=yes
+	}
+}
+1326 = {
+	name="Wuzhen"
+	dynasty=1455
+	diplomacy=9
+	martial=10
+	stewardship=9
+	intrigue=3
+	learning=9
+	religion="confucian"
+	culture="han"
+	father=1350
+	mother=1345
+	disallow_random_traits=yes
+	trait="tall"
+	trait="robust"
+	trait="diligent"
+	trait="brave"
+	trait="strong"
+	trait="honest"
+	trait="zealous"
+	trait="fair"
+	trait="chaste"
+	trait="unyielding_leader"
+	trait="organizer"
+	trait="skilled_tactician"
+    trait="duel_trained_warrior"
+	164.1.1 = {
+		birth=yes
+	}
+	184.1.1 = {
+		employer=1313
+		add_spouse=1336
+	}
+	270.1.1 = {
+		death=yes
+	}
+}
+1327 = {
+	name="Bisai"
+	female="yes"
+	dynasty=1455
+	dna="alezpxlhwjh"
+	properties="0efeik0000"
+	diplomacy=10
+	martial=7
+	stewardship=5
+	intrigue=10
+	learning=8
+	religion="confucian"
+	culture="han"
+	father=1350
+	mother=1345
+	disallow_random_traits=yes
+	trait="tall"
+	trait="ambitious"
+	trait="quick"
+	trait="diligent"
+	trait="brave"
+	trait="strong"
+	trait="zealous"
+	trait="fair"
+	trait="chaste"
+	trait="elusive_shadow"
+    trait="duel_trained_warrior"
+	168.1.1 = {
+		birth=yes
+	}
+	184.1.1 = {
+		employer=1313
+		add_spouse=1357
+	}
+	270.1.1 = {
+		death=yes
+	}
+}
+1328 = {
+	name="Longlong"
+	dynasty=1453
+	diplomacy=7
+	martial=9
+	stewardship=10
+	intrigue=4
+	learning=10
+	religion="confucian"
+	culture="han"
+	father=1352
+	mother=1347
+	disallow_random_traits=yes
+	trait="tall"
+	trait="shrewd"
+	trait="diligent"
+	trait="just"
+	trait="humble"
+	trait="strong"
+	trait="zealous"
+	trait="fair"
+	trait="chaste"
+	trait="scholarly_theologian"
+    trait="duel_trained_warrior"
+	165.1.1 = {
+		birth=yes
+	}
+	184.1.1 = {
+		employer=1313
+		add_spouse=1360
+	}
+	270.1.1 = {
+		death=yes
+	}
+}
+1329 = {
+	name="Zhiyun"
+	dynasty=166
+	diplomacy=8
+	martial=8
+	stewardship=8
+	intrigue=8
+	learning=8
+	religion="confucian"
+	culture="han"
+	disallow_random_traits=yes
+	trait="shrewd"
+	trait="diligent"
+	trait="gregarious"
+	trait="brave"
+	trait="strong"
+	trait="kind"
+	trait="zealous"
+	trait="fair"
+	trait="chaste"
+	trait="charismatic_negotiator"
+    trait="duel_trained_warrior"
+	140.1.1 = {
+		birth=yes
+	}
+	160.1.1 = {
+		add_spouse=1330
+	}
+	250.1.1 = {
+		death=yes
+	}
+}
+1330 = {
+	name="Li"
+	female="yes"
+	dynasty=160
+	dna="dcaigaebeam"
+	diplomacy=8
+	martial=8
+	stewardship=10
+	intrigue=4
+	learning=10
+	religion="confucian"
+	culture="han"
+	father=1359
+	disallow_random_traits=yes
+	trait="shrewd"
+	trait="diligent"
+	trait="gregarious"
+	trait="charitable"
+	trait="brave"
+	trait="strong"
+	trait="zealous"
+	trait="fair"
+	trait="chaste"
+	trait="fortune_builder"
+    trait="duel_trained_warrior"
+	140.1.1 = {
+		birth=yes
+	}
+	160.1.1 = {
+		add_spouse=1329
+		employer=1329
+	}
+	220.1.1 = {
+		death=yes
+	}
+}
+1331 = {
+	name="Zhaofei"
+	dynasty=166
+	diplomacy=8
+	martial=7
+	stewardship=10
+	intrigue=6
+	learning=9
+	religion="confucian"
+	culture="han"
+	father=1329
+	mother=1330
+	disallow_random_traits=yes
+	trait="ambitious"
+	trait="shrewd"
+	trait="diligent"
+	trait="kind"
+	trait="honest"
+	trait="zealous"
+	trait="fair"
+	trait="chaste"
+	trait="fortune_builder"
+    trait="duel_trained_warrior"
+	167.1.1 = {
+		birth=yes
+	}
+	184.1.1 = {
+		employer=1329
+	}
+	270.1.1 = {
+		death=yes
+	}
+}
+1332 = {
+	name="Zhimei"
+	female="yes"
+	dynasty=166
+	dna="dcaigfybeam"
+	diplomacy=10
+	martial=7
+	stewardship=8
+	intrigue=5
+	learning=10
+	religion="confucian"
+	culture="han"
+	father=1329
+	mother=1330
+	disallow_random_traits=yes
+	trait="twin"
+	trait="quick"
+	trait="gregarious"
+	trait="humble"
+	trait="charitable"
+	trait="strong"
+	trait="honest"
+	trait="zealous"
+	trait="fair"
+	trait="chaste"
+	trait="mastermind_theologian"
+    trait="duel_trained_warrior"
+	168.1.1 = {
+		birth=yes
+	}
+	184.1.1 = {
+		employer=1313
+		effect = {
+			add_friend=1313
+			add_friend=1310
+			add_friend=1316
+			add_friend=1364
+			liege = {
+				ROOT = {
+					add_consort = PREV
+				}
+			}
+			any_friend={
+				add_lover = ROOT
+			}
+		}
+	}
+	270.1.1 = {
+		death=yes
+	}
+}
+1333 = {
+	name="Zhizhong"
+	dynasty=165
+	diplomacy=8
+	martial=10
+	stewardship=10
+	intrigue=6
+	learning=6
+	religion="confucian"
+	culture="han"
+	disallow_random_traits=yes
+	trait="ambitious"
+	trait="robust"
+	trait="diligent"
+	trait="just"
+	trait="brave"
+	trait="strong"
+	trait="zealous"
+	trait="fair"
+	trait="chaste"
+	trait="unyielding_leader"
+	trait="light_foot_leader"
+	trait="skilled_tactician"
+    trait="duel_trained_warrior"
+	150.1.1 = {
+		birth=yes
+	}
+	184.1.1 = {
+		employer=1329
+	}
+	250.1.1 = {
+		death=yes
+	}
+}
+1334 = {
+	name="Xun"
+	dynasty=165
+	diplomacy=8
+	martial=10
+	stewardship=9
+	intrigue=7
+	learning=6
+	religion="confucian"
+	culture="han"
+	father=1333
+	disallow_random_traits=yes
+	trait="robust"
+	trait="diligent"
+	trait="gregarious"
+	trait="charitable"
+	trait="brave"
+	trait="strong"
+	trait="zealous"
+	trait="fair"
+	trait="chaste"
+	trait="inspiring_leader"
+	trait="organizer"
+	trait="skilled_tactician"
+    trait="duel_trained_warrior"
+	168.1.1 = {
+		birth=yes
+	}
+	184.1.1 = {
+		employer=1329
+	}
+	218.2.5 = {
+		employer=1333
+	}
+	280.1.1 = {
+		death=yes
+	}
+}
+1335 = {
+	name="Shi"
+	female="yes"
+	dynasty=165
+	dna="bcbegfebeam"
+	diplomacy=7
+	martial=10
+	stewardship=8
+	intrigue=5
+	learning=10
+	religion="confucian"
+	culture="han"
+	father=1333
+	disallow_random_traits=yes
+	trait="twin"
+	trait="ambitious"
+	trait="robust"
+	trait="diligent"
+	trait="gregarious"
+	trait="fair"
+	trait="brave"
+	trait="strong"
+	trait="zealous"
+	trait="chaste"
+	trait="flat_terrain_leader"
+	trait="unyielding_leader"
+	trait="organizer"
+	trait="brilliant_strategist"
+    trait="duel_trained_warrior"
+	168.1.1 = {
+		birth=yes
+	}
+	184.1.1 = {
+		employer=1313
+		add_spouse=1325
+	}
+	270.1.1 = {
+		death=yes
+	}
+}
+1336 = {
+	name="Meihua"
+	female="yes"
+	dynasty=165
+	diplomacy=8
+	martial=6
+	stewardship=10
+	intrigue=6
+	learning=10
+	religion="confucian"
+	culture="han"
+	father=1333
+	disallow_random_traits=yes
+	trait="twin"
+	trait="ambitious"
+	trait="genius"
+	trait="diligent"
+	trait="gregarious"
+	trait="strong"
+	trait="kind"
+	trait="zealous"
+	trait="fair"
+	trait="chaste"
+	trait="midas_touched"
+    trait="duel_trained_warrior"
+	168.1.1 = {
+		birth=yes
+	}
+	184.1.1 = {
+		employer=1313
+		add_spouse=1326
+	}
+	270.1.1 = {
+		death=yes
+	}
+}
+1337 = {
+	name="Honghua"
+	female="yes"
+	dynasty=1453
+	diplomacy=10
+	martial=6
+	stewardship=6
+	intrigue=8
+	learning=10
+	religion="confucian"
+	culture="han"
+	father=1352
+	disallow_random_traits=yes
+	trait="shrewd"
+	trait="diligent"
+	trait="gregarious"
+	trait="kind"
+	trait="brave"
+	trait="strong"
+	trait="zealous"
+	trait="fair"
+	trait="chaste"
+	trait="grey_eminence"
+    trait="duel_trained_warrior"
+	160.1.1 = {
+		birth=yes
+	}
+	184.1.1 = {
+		employer=1313
+		add_spouse=1300
+	}
+	250.1.1 = {
+		death=yes
+	}
+}
+1338 = {
+	name="Mei"
+	female="yes"
+	dynasty=163
+	diplomacy=9
+	martial=3
+	stewardship=10
+	intrigue=8
+	learning=10
+	religion="confucian"
+	culture="han"
+	father=1366
+	disallow_random_traits=yes
+	trait="ambitious"
+	trait="shrewd"
+	trait="humble"
+	trait="charitable"
+	trait="brave"
+	trait="strong"
+	trait="zealous"
+	trait="fair"
+	trait="chaste"
+	trait="midas_touched"
+    trait="duel_trained_warrior"
+	168.1.1 = {
+		birth=yes
+	}
+	184.1.1 = {
+		employer=1313
+		add_spouse=1319
+	}
+	280.1.1 = {
+		death=yes
+	}
+}
+1339 = {
+	name="Dongkai"
+	dynasty=161
+	diplomacy=7
+	martial=9
+	stewardship=8
+	intrigue=6
+	learning=10
+	religion="confucian"
+	culture="han"
+	father=1341
+	mother=1342
+	disallow_random_traits=yes
+	trait="quick"
+	trait="diligent"
+	trait="gregarious"
+	trait="charitable"
+	trait="strong"
+	trait="honest"
+	trait="zealous"
+	trait="fair"
+	trait="chaste"
+	trait="scholarly_theologian"
+    trait="duel_trained_warrior"
+	148.1.1 = {
+		birth=yes
+	}
+	184.1.1 = {
+		employer=1301
+	}
+	250.1.1 = {
+		death=yes
+	}
+}
+1340 = {
+	name="Dongjie"
+	dynasty=161
+	diplomacy=8
+	martial=6
+	stewardship=9
+	intrigue=8
+	learning=9
+	religion="confucian"
+	culture="han"
+	father=1341
+	mother=1342
+	disallow_random_traits=yes
+	trait="diligent"
+	trait="humble"
+	trait="brave"
+	trait="strong"
+	trait="quick"
+	trait="honest"
+	trait="zealous"
+	trait="fair"
+	trait="chaste"
+	trait="scholarly_theologian"
+    trait="duel_trained_warrior"
+	149.1.1 = {
+		birth=yes
+	}
+	184.1.1 = {
+		employer=1301
+	}
+	250.1.1 = {
+		death=yes
+	}
+}
+1341 = {
+	name="Yushu"
+	dynasty=161
+	diplomacy=10
+	martial=9
+	stewardship=5
+	intrigue=8
+	learning=8
+	religion="confucian"
+	culture="han"
+	disallow_random_traits=yes
+	trait="ambitious"
+	trait="shrewd"
+	trait="diligent"
+	trait="gregarious"
+	trait="strong"
+	trait="honest"
+	trait="zealous"
+	trait="fair"
+	trait="chaste"
+	trait="charismatic_negotiator"
+    trait="duel_trained_warrior"
+	120.1.1 = {
+		birth=yes
+	}
+	145.1.1 = {
+		add_spouse=1342
+	}
+	184.1.1 = {
+		employer=1301
+	}
+	210.1.1 = {
+		death=yes
+	}
+}
+1342 = {
+	name="Ayue"
+	female="yes"
+	dynasty=1451
+	diplomacy=8
+	martial=4
+	stewardship=9
+	intrigue=8
+	learning=10
+	religion="confucian"
+	culture="han"
+	disallow_random_traits=yes
+	trait="quick"
+	trait="diligent"
+	trait="charitable"
+	trait="strong"
+	trait="kind"
+	trait="honest"
+	trait="zealous"
+	trait="fair"
+	trait="chaste"
+	trait="scholarly_theologian"
+    trait="duel_trained_warrior"
+	120.1.1 = {
+		birth=yes
+	}
+	145.1.1 = {
+		add_spouse=1341
+	}
+	184.1.1 = {
+		employer=1301
+	}
+	210.1.1 = {
+		death=yes
+	}
+}
+1343 = {
+	name="Dagu"
+	female="yes"
+	dynasty=130
+	diplomacy=7
+	martial=6
+	stewardship=9
+	intrigue=10
+	learning=8
+	religion="confucian"
+	culture="han"
+	father=1302
+	disallow_random_traits=yes
+	trait="tall"
+	trait="ambitious"
+	trait="shrewd"
+	trait="diligent"
+	trait="gregarious"
+	trait="strong"
+	trait="zealous"
+	trait="fair"
+	trait="chaste"
+	trait="intricate_webweaver"
+    trait="duel_trained_warrior"
+	144.1.1 = {
+		birth=yes
+	}
+	164.1.1 = {
+		add_spouse=1348
+	}
+	184.1.1 = {
+		employer=1300
+	}
+	240.1.1 = {
+		death=yes
+	}
+}
+1344 = {
+	name="Ergu"
+	female="yes"
+	dynasty=130
+	diplomacy=7
+	martial=8
+	stewardship=9
+	intrigue=6
+	learning=10
+	religion="confucian"
+	culture="han"
+	father=1302
+	mother=1303
+	disallow_random_traits=yes
+	trait="tall"
+	trait="shrewd"
+	trait="gregarious"
+	trait="charitable"
+	trait="strong"
+	trait="honest"
+	trait="zealous"
+	trait="fair"
+	trait="chaste"
+	trait="scholarly_theologian"
+    trait="duel_trained_warrior"
+	146.1.1 = {
+		birth=yes
+	}
+	164.1.1 = {
+		add_spouse=1349
+	}
+	184.1.1 = {
+		employer=1300
+	}
+	250.1.1 = {
+		death=yes
+	}
+}
+1345 = {
+	name="Dayagu"
+	female="yes"
+	dynasty=130
+	diplomacy=10
+	martial=8
+	stewardship=8
+	intrigue=4
+	learning=10
+	religion="confucian"
+	culture="han"
+	father=1302
+	mother=1303
+	disallow_random_traits=yes
+	trait="tall"
+	trait="ambitious"
+	trait="robust"
+	trait="diligent"
+	trait="gregarious"
+	trait="just"
+	trait="strong"
+	trait="fair"
+	trait="twin"
+	trait="chaste"
+	trait="charismatic_negotiator"
+    trait="duel_trained_warrior"
+	147.1.1 = {
+		birth=yes
+	}
+	164.1.1 = {
+		add_spouse=1350
+	}
+	184.1.1 = {
+		employer=1300
+	}
+	250.1.1 = {
+		death=yes
+	}
+}
+1346 = {
+	name="Xiaoyagu"
+	female="yes"
+	dynasty=130
+	diplomacy=7
+	martial=9
+	stewardship=9
+	intrigue=7
+	learning=8
+	religion="confucian"
+	culture="han"
+	father=1302
+	mother=1303
+	disallow_random_traits=yes
+	trait="tall"
+	trait="robust"
+	trait="diligent"
+	trait="brave"
+	trait="strong"
+	trait="honest"
+	trait="zealous"
+	trait="fair"
+	trait="twin"
+	trait="chaste"
+	trait="fortune_builder"
+    trait="duel_trained_warrior"
+	147.1.1 = {
+		birth=yes
+	}
+	164.1.1 = {
+		add_spouse=1351
+	}
+	184.1.1 = {
+		employer=1300
+	}
+	250.1.1 = {
+		death=yes
+	}
+}
+1347 = {
+	name="Xiaogu"
+	female="yes"
+	dynasty=130
+	diplomacy=10
+	martial=6
+	stewardship=10
+	intrigue=8
+	learning=6
+	religion="confucian"
+	culture="han"
+	father=1302
+	mother=1303
+	disallow_random_traits=yes
+	trait="tall"
+	trait="shrewd"
+	trait="diligent"
+	trait="strong"
+	trait="kind"
+	trait="honest"
+	trait="zealous"
+	trait="fair"
+	trait="chaste"
+	trait="charismatic_negotiator"
+    trait="duel_trained_warrior"
+	148.1.1 = {
+		birth=yes
+	}
+	164.1.1 = {
+		add_spouse=1352
+	}
+	184.1.1 = {
+		employer=1300
+	}
+	197.6.1={
+		employer=1352
+	}
+	220.1.1={
+		employer=1353
+	}
+	250.1.1 = {
+		death=yes
+	}
+}
+1348 = {
+	name="Daguzhang"
+	dynasty=1454
+	diplomacy=8
+	martial=10
+	stewardship=10
+	intrigue=2
+	learning=10
+	religion="confucian"
+	culture="han"
+	disallow_random_traits=yes
+	trait="robust"
+	trait="diligent"
+	trait="charitable"
+	trait="brave"
+	trait="strong"
+	trait="kind"
+	trait="zealous"
+	trait="fair"
+	trait="chaste"
+	trait="unyielding_leader"
+	trait="organizer"
+	trait="skilled_tactician"
+    trait="duel_trained_warrior"
+	145.1.1 = {
+		birth=yes
+	}
+	164.1.1 = {
+		add_spouse=1343
+	}
+	184.1.1 = {
+		employer=1300
+	}
+	250.1.1 = {
+		death=yes
+	}
+}
+1349 = {
+	name="Erguzhang"
+	dynasty=1452
+	diplomacy=8
+	martial=8
+	stewardship=10
+	intrigue=6
+	learning=8
+	religion="confucian"
+	culture="han"
+	disallow_random_traits=yes
+	trait="ambitious"
+	trait="shrewd"
+	trait="diligent"
+	trait="charitable"
+	trait="brave"
+	trait="strong"
+	trait="zealous"
+	trait="fair"
+	trait="chaste"
+	trait="fortune_builder"
+    trait="duel_trained_warrior"
+	145.1.1 = {
+		birth=yes
+	}
+	164.1.1 = {
+		add_spouse=1344
+	}
+	184.1.1 = {
+		employer=1300
+	}
+	250.1.1 = {
+		death=yes
+	}
+}
+1350 = {
+	name="Pang"
+	dynasty=1455
+	diplomacy=8
+	martial=8
+	stewardship=10
+	intrigue=4
+	learning=10
+	religion="confucian"
+	culture="han"
+	disallow_random_traits=yes
+	trait="shrewd"
+	trait="diligent"
+	trait="gregarious"
+	trait="just"
+	trait="strong"
+	trait="honest"
+	trait="zealous"
+	trait="fair"
+	trait="chaste"
+	trait="fortune_builder"
+    trait="duel_trained_warrior"
+	145.1.1 = {
+		birth=yes
+	}
+	164.1.1 = {
+		add_spouse=1345
+	}
+	184.1.1 = {
+		employer=1300
+	}
+	240.1.1 = {
+		death=yes
+	}
+}
+1351 = {
+	name="Xiaolong"
+	dynasty=160
+	diplomacy=10
+	martial=8
+	stewardship=9
+	intrigue=6
+	learning=7
+	religion="confucian"
+	culture="han"
+	father=1359
+	disallow_random_traits=yes
+	trait="shrewd"
+	trait="diligent"
+	trait="gregarious"
+	trait="just"
+	trait="strong"
+	trait="honest"
+	trait="zealous"
+	trait="fair"
+	trait="chaste"
+	trait="charismatic_negotiator"
+    trait="duel_trained_warrior"
+	145.1.1 = {
+		birth=yes
+	}
+	164.1.1 = {
+		add_spouse=1346
+	}
+	184.1.1 = {
+		employer=1300
+	}
+	250.1.1 = {
+		death=yes
+	}
+}
+1352 = {
+	name="Min"
+	dynasty=1453
+	diplomacy=10
+	martial=10
+	stewardship=9
+	intrigue=7
+	learning=4
+	religion="confucian"
+	culture="han"
+	disallow_random_traits=yes
+	trait="robust"
+	trait="diligent"
+	trait="gregarious"
+	trait="just"
+	trait="brave"
+	trait="strong"
+	trait="zealous"
+	trait="fair"
+	trait="chaste"
+	trait="unyielding_leader"
+	trait="organizer"
+	trait="skilled_tactician"
+    trait="duel_trained_warrior"
+	125.1.1 = {
+		birth=yes
+	}
+	164.1.1 = {
+		add_spouse=1347
+	}
+	184.1.1 = {
+		employer=1300
+	}
+	220.1.1 = {
+		death=yes
+	}
+}
+1353 = {
+	name="Laohu"
+	dynasty=1453
+	diplomacy=7
+	martial=10
+	stewardship=10
+	intrigue=3
+	learning=10
+	religion="confucian"
+	culture="han"
+	father=1352
+	mother=1347
+	disallow_random_traits=yes
+	trait="tall"
+	trait="ambitious"
+	trait="quick"
+	trait="gregarious"
+	trait="brave"
+	trait="strong"
+	trait="zealous"
+	trait="fair"
+	trait="chaste"
+	trait="fortune_builder"
+    trait="duel_trained_warrior"
+	164.1.1 = {
+		birth=yes
+	}
+	184.1.1 = {
+		employer=1313
+		add_spouse=1361
+	}
+	270.1.1 = {
+		death=yes
+	}
+}
+1354 = {
+	name="Minghua"
+	dynasty=1453
+	diplomacy=7
+	martial=10
+	stewardship=10
+	intrigue=6
+	learning=7
+	religion="confucian"
+	culture="han"
+	father=1352
+	mother=1347
+	disallow_random_traits=yes
+	trait="tall"
+	trait="robust"
+	trait="diligent"
+	trait="just"
+	trait="brave"
+	trait="strong"
+	trait="zealous"
+	trait="fair"
+	trait="chaste"
+	trait="unyielding_leader"
+	trait="inspiring_leader"
+	trait="skilled_tactician"
+    trait="duel_trained_warrior"
+	167.1.1 = {
+		birth=yes
+	}
+	184.1.1 = {
+		employer=1300
+		add_spouse=1362
+	}
+	260.1.1 = {
+		death=yes
+	}
+}
+1355 = {
+	name="Jiaoshu"
+	dynasty=1453
+	diplomacy=10
+	martial=10
+	stewardship=7
+	intrigue=6
+	learning=7
+	religion="confucian"
+	culture="han"
+	father=1352
+	mother=1347
+	disallow_random_traits=yes
+	trait="tall"
+	trait="kind"
+	trait="robust"
+	trait="humble"
+	trait="brave"
+	trait="strong"
+	trait="honest"
+	trait="zealous"
+	trait="fair"
+	trait="chaste"
+	trait="light_foot_leader"
+	trait="heavy_infantry_leader"
+	trait="skilled_tactician"
+    trait="duel_trained_warrior"
+	168.1.1 = {
+		birth=yes
+	}
+	184.1.1 = {
+		employer=1300
+		add_spouse=1363
+	}
+	280.1.1 = {
+		death=yes
+	}
+}
+1356 = {
+	name="Jaegi"
+	dynasty=2252
+	religion="confucian"
+	culture="samhan"
+	110.1.1 = {
+		birth=yes
+	}
+	180.1.1 = {
+		death=yes
+	}
+}
+1357 = {
+	name="Myeongjang"
+	dynasty=2252
+	diplomacy=7
+	martial=8
+	stewardship=10
+	intrigue=5
+	learning=10
+	religion="confucian"
+	culture="samhan"
+	father=1309
+	mother=1321
+	disallow_random_traits=yes
+	trait="strong"
+	trait="diligent"
+	trait="gregarious"
+	trait="ambitious"
+	trait="brave"
+	trait="quick"
+	trait="zealous"
+	trait="fair"
+	trait="chaste"
+	trait="twin"
+	trait="scholarly_theologian"
+    trait="duel_trained_warrior"
+	168.1.1 = {
+		birth=yes
+	}
+	184.1.1 = {
+		employer=1316
+		add_spouse=1327
+	}
+	280.1.1 = {
+		death=yes
+	}
+}
+1358 = {
+	name="Buzhi"
+	dynasty=162
+	religion="confucian"
+	culture="han"
+	110.1.1 = {
+		birth=yes
+	}
+	180.1.1 = {
+		death=yes
+	}
+}
+1359 = {
+	name="Wenzhou"
+	dynasty=160
+	religion="confucian"
+	culture="han"
+	110.1.1 = {
+		birth=yes
+	}
+	180.1.1 = {
+		death=yes
+	}
+}
+1360 = {
+	name="Pingyue"
+	female="yes"
+	dynasty=166
+	dna="dcbigfebeam"
+	diplomacy=10
+	martial=4
+	stewardship=9
+	intrigue=7
+	learning=10
+	religion="confucian"
+	culture="han"
+	father=1329
+	mother=1330
+	disallow_random_traits=yes
+	trait="twin"
+	trait="quick"
+	trait="temperate"
+	trait="diligent"
+	trait="humble"
+	trait="strong"
+	trait="honest"
+	trait="zealous"
+	trait="fair"
+	trait="chaste"
+	trait="mastermind_theologian"
+    trait="duel_trained_warrior"
+	168.1.1 = {
+		birth=yes
+	}
+	184.1.1 = {
+		employer=1313
+		add_spouse=1328
+	}
+	270.1.1 = {
+		death=yes
+	}
+}
+1361 = {
+	name="Meiling"
+	female="yes"
+	dynasty=166
+	dna="dcacdfebeam"
+	diplomacy=10
+	martial=8
+	stewardship=9
+	intrigue=3
+	learning=10
+	religion="confucian"
+	culture="han"
+	father=1329
+	mother=1330
+	disallow_random_traits=yes
+	trait="twin"
+	trait="quick"
+	trait="gregarious"
+	trait="temperate"
+	trait="diligent"
+	trait="strong"
+	trait="honest"
+	trait="zealous"
+	trait="fair"
+	trait="chaste"
+	trait="grey_eminence"
+    trait="duel_trained_warrior"
+	168.1.1 = {
+		birth=yes
+	}
+	184.1.1 = {
+		employer=1313
+		add_spouse=1353
+	}
+	220.1.1 = {
+		employer=1353
+	}
+	270.1.1 = {
+		death=yes
+	}
+}
+1362 = {
+	name="Baoyu"
+	female="yes"
+	dynasty=166
+	dna="dcafffebeam"
+	diplomacy=6
+	martial=10
+	stewardship=4
+	intrigue=10
+	learning=10
+	religion="confucian"
+	culture="han"
+	father=1329
+	mother=1330
+	disallow_random_traits=yes
+	trait="twin"
+	trait="quick"
+	trait="brave"
+	trait="temperate"
+	trait="diligent"
+	trait="strong"
+	trait="honest"
+	trait="zealous"
+	trait="fair"
+	trait="chaste"
+	trait="unyielding_leader"
+	trait="organizer"
+	trait="skilled_tactician"
+    trait="duel_trained_warrior"
+	168.1.1 = {
+		birth=yes
+	}
+	184.1.1 = {
+		employer=1300
+		add_spouse=1354
+	}
+	270.1.1 = {
+		death=yes
+	}
+}
+1363 = {
+	name="Mai"
+	female="yes"
+	dynasty=166
+	dna="dcaiefecebm"
+	diplomacy=7
+	martial=5
+	stewardship=9
+	intrigue=9
+	learning=10
+	religion="confucian"
+	culture="han"
+	father=1329
+	mother=1330
+	disallow_random_traits=yes
+	trait="twin"
+	trait="quick"
+	trait="temperate"
+	trait="diligent"
+	trait="kind"
+	trait="strong"
+	trait="honest"
+	trait="zealous"
+	trait="fair"
+	trait="chaste"
+	trait="elusive_shadow"
+    trait="duel_trained_warrior"
+	168.1.1 = {
+		birth=yes
+	}
+	184.1.1 = {
+		employer=1300
+		add_spouse=1355
+	}
+	270.1.1 = {
+		death=yes
+	}
+}
+1364 = {
+	name="Huiying"
+	female="yes"
+	dynasty=166
+	dna="alezpxlhwjh"
+	properties="ekfeik0000"
+	diplomacy=10
+	martial=4
+	stewardship=10
+	intrigue=6
+	learning=10
+	religion="confucian"
+	culture="han"
+	father=1329
+	mother=1330
+	disallow_random_traits=yes
+	trait="twin"
+	trait="genius"
+	trait="temperate"
+	trait="diligent"
+	trait="charitable"
+	trait="strong"
+	trait="honest"
+	trait="zealous"
+	trait="fair"
+	trait="chaste"
+	trait="mastermind_theologian"
+    trait="duel_trained_warrior"
+	168.1.1 = {
+		birth=yes
+	}
+	184.1.1 = {
+		employer=1313
+		effect = {
+			add_friend=1313
+			add_friend=1310
+			add_friend=1316
+			add_friend=1332
+			liege = {
+				ROOT = {
+					add_consort = PREV
+				}
+			}
+			any_friend={
+				add_lover = ROOT
+			}
+		}
+	}
+	270.1.1 = {
+		death=yes
+	}
+}
+1365 = {
+	name="Yisun"
+	dynasty=130
+	dna="dikadrgabad"
+	diplomacy=10
+	martial=7
+	stewardship=10
+	intrigue=6
+	learning=7
+	religion="confucian"
+	culture="han"
+	disallow_random_traits=yes
+	trait="tall"
+	trait="fair"
+	trait="brave"
+	trait="chaste"
+	trait="strong"
+	trait="genius"
+	trait="diligent"
+	trait="temperate"
+	trait="patient"
+	trait="midas_touched"
+    trait="duel_trained_warrior"
+	90.1.1 = {
+		birth=yes
+	}
+	180.1.1 = {
+		death=yes
+	}
+}
+1366 = {
+	name="Bei"
+	dynasty=163
+	religion="confucian"
+	culture="han"
+	130.1.1 = {
+		birth=yes
+	}
+	184.1.1 = {
+		employer=1307
+	}
+	200.1.1 = {
+		death=yes
+	}
+}
+1367 = {
+	name="Zancheng"
+	dynasty=1522
+	diplomacy=8
+	martial=5
+	stewardship=10
+	intrigue=7
+	learning=10
+	religion="confucian"
+	culture="han"
+	disallow_random_traits=yes
+	trait="diligent"
+	trait="humble"
+	trait="shrewd"
+	trait="brave"
+	trait="zealous"
+	trait="temperate"
+	trait="chaste"
+	trait="scholarly_theologian"
+    trait="duel_trained_warrior"
+	148.1.1 = {
+		birth=yes
+	}
+	164.1.1 = {
+		add_spouse=1368
+	}
+	184.1.1 = {
+		employer=1369
+	}
+	250.1.1 = {
+		death=yes
+	}
+}
+1368 = {
+	name="Youyu"
+	female=yes
+	dynasty=162
+	diplomacy=4
+	martial=8
+	stewardship=8
+	intrigue=10
+	learning=10
+	religion="confucian"
+	culture="han"
+	father=1358
+	disallow_random_traits=yes
+	trait="diligent"
+	trait="humble"
+	trait="shrewd"
+	trait="brave"
+	trait="zealous"
+	trait="temperate"
+	trait="chaste"
+	trait="scholarly_theologian"
+    trait="duel_trained_warrior"
+	150.1.1 = {
+		birth=yes
+	}
+	164.1.1 = {
+		add_spouse=1367
+	}
+	184.1.1 = {
+		employer=1369
+	}
+	250.1.1 = {
+		death=yes
+	}
+}
+1369 = {
+	name="Yuxin"
+	dynasty=1522
+	diplomacy=6
+	martial=9
+	stewardship=9
+	intrigue=6
+	learning=10
+	religion="confucian"
+	culture="han"
+	father=1367
+	mother=1368
+	disallow_random_traits=yes
+	trait="diligent"
+	trait="humble"
+	trait="quick"
+	trait="brave"
+	trait="zealous"
+	trait="temperate"
+	trait="chaste"
+	trait="scholarly_theologian"
+    trait="duel_trained_warrior"
+	167.1.1 = {
+		birth=yes
+	}
+	250.1.1 = {
+		death=yes
+	}
+}
+1370 = {
+	name="Yukai"
+	dynasty=1522
+	diplomacy=10
+	martial=7
+	stewardship=8
+	intrigue=5
+	learning=10
+	religion="confucian"
+	culture="han"
+	father=1367
+	mother=1368
+	disallow_random_traits=yes
+	trait="diligent"
+	trait="humble"
+	trait="quick"
+	trait="brave"
+	trait="zealous"
+	trait="temperate"
+	trait="chaste"
+	trait="charismatic_negotiator"
+    trait="duel_trained_warrior"
+	168.1.1 = {
+		birth=yes
+	}
+	184.1.1 = {
+		employer=1369
+	}
+	250.1.1 = {
+		death=yes
+	}
+}
+1371 = {
+	name="Zhichao"
+	dynasty=163
+	diplomacy=8
+	martial=10
+	stewardship=8
+	intrigue=7
+	learning=7
+	religion="confucian"
+	culture="han"
+	father=1317
+	disallow_random_traits=yes
+	trait="ambitious"
+	trait="robust"
+	trait="diligent"
+	trait="charitable"
+	trait="brave"
+	trait="strong"
+	trait="zealous"
+	trait="fair"
+	trait="unyielding_leader"
+	trait="organizer"
+	trait="skilled_tactician"
+    trait="duel_trained_warrior"
+	164.1.1 = {
+		birth=yes
+	}
+	184.1.1 = {
+		employer=1301
+	}
+	250.1.1 = {
+		death=yes
+	}
+}
+1372 = {
+	name="Jingguo"
+	dynasty=130
+	dna="dikadrgabad"
+	diplomacy=8
+	martial=10
+	stewardship=8
+	intrigue=9
+	learning=5
+	religion="confucian"
+	culture="han"
+	father=1365
+	disallow_random_traits=yes
+	trait="tall"
+	trait="fair"
+	trait="brave"
+	trait="ambitious"
+	trait="strong"
+	trait="genius"
+	trait="diligent"
+	trait="temperate"
+	trait="zealous"
+	trait="intricate_webweaver"
+    trait="duel_trained_warrior"
+	121.1.1 = {
+		birth=yes
+	}
+	184.1.1 = {
+		add_spouse=1373
+	}
+	200.1.1 = {
+		death=yes
+	}
+}
+1373 = {
+	name="Shanshan"
+	female=yes
+	dynasty=160
+	diplomacy=10
+	martial=5
+	stewardship=5
+	intrigue=10
+	learning=10
+	religion="confucian"
+	culture="han"
+	father=1320
+	disallow_random_traits=yes
+	trait="ambitious"
+	trait="hedonist"
+	trait="twin"
+	trait="diligent"
+	trait="deceitful"
+	trait="envious"
+	trait="paranoid"
+	trait="strong"
+	trait="zealous"
+	trait="brave"
+	trait="fair"
+	trait="intricate_webweaver"
+    trait="duel_trained_warrior"
+	168.1.1 = {
+		birth=yes
+	}
+	184.1.1 = {
+		employer=1372
+		add_spouse=1372
+	}
+	200.1.1 = {
+		employer=1374
+		add_spouse=1374
+	}
+	270.1.1 = {
+		death=yes
+	}
+}
+1374 = {
+	name="Weiping"
+	dynasty=130
+	dna="dikadrgabad"
+	diplomacy=8
+	martial=10
+	stewardship=6
+	intrigue=10
+	learning=6
+	religion="confucian"
+	culture="han"
+	father=1372
+	disallow_random_traits=yes
+	trait="tall"
+	trait="fair"
+	trait="brave"
+	trait="ambitious"
+	trait="strong"
+	trait="genius"
+	trait="diligent"
+	trait="temperate"
+	trait="zealous"
+	trait="intricate_webweaver"
+    trait="duel_trained_warrior"
+	148.1.1 = {
+		birth=yes
+	}
+	184.1.1 = {
+		employer=1372
+	}
+	200.1.1 = {
+		add_spouse=1373
+	}
+	250.1.1 = {
+		death=yes
+	}
+}
+1375 = {
+	name="Ying"
+	female=yes
+	dynasty=1472
+	diplomacy=6
+	martial=4
+	stewardship=10
+	intrigue=10
+	learning=10
+	religion="confucian"
+	culture="han"
+	disallow_random_traits=yes
+	trait="fair"
+	trait="shy"
+	trait="just"
+	trait="chaste"
+	trait="humble"
+	trait="content"
+	trait="envious"
+	trait="diligent"
+	trait="temperate"
+	trait="zealous"
+	trait="intricate_webweaver"
+    trait="duel_trained_warrior"
+	165.1.1 = {
+		birth=yes
+	}
+	184.1.1 = {
+		employer=1312
+		add_spouse=1312
+	}
+	250.1.1 = {
+		death=yes
+	}
+}
+1376 = {
+	name="Zhou"
+	dynasty=1483
+	diplomacy=9
+	martial=9
+	stewardship=10
+	intrigue=6
+	learning=6
+	religion="confucian"
+	culture="han"
+	disallow_random_traits=yes
+	trait="diligent"
+	trait="humble"
+	trait="shrewd"
+	trait="brave"
+	trait="patient"
+	trait="zealous"
+	trait="temperate"
+	trait="chaste"
+	trait="fortune_builder"
+    trait="duel_trained_warrior"
+	145.1.1 = {
+		birth=yes
+	}
+	250.1.1 = {
+		death=yes
+	}
+}
+1377 = {
+	name="Siyun"
+	dynasty=1483
+	diplomacy=8
+	martial=10
+	stewardship=10
+	intrigue=6
+	learning=6
+	religion="confucian"
+	culture="han"
+	father=1376
+	disallow_random_traits=yes
+	trait="brave"
+	trait="chaste"
+	trait="humble"
+	trait="strong"
+	trait="patient"
+	trait="zealous"
+	trait="diligent"
+	trait="temperate"
+	trait="skilled_tactician"
+    trait="duel_master_warrior"
+	trait="unyielding_leader"
+	trait="inspiring_leader"
+	165.3.1 = {
+		birth=yes
+	}
+	184.1.1={
+		add_spouse=1311
+	}
+	280.1.1 = {
+		death=yes
+	}
+}
+1378 = {
+	name="Quan"
+	dynasty=1483
+	diplomacy=7
+	martial=7
+	stewardship=10
+	intrigue=6
+	learning=10
+	religion="confucian"
+	culture="han"
+	father=1376
+	disallow_random_traits=yes
+	trait="brave"
+	trait="robust"
+	trait="chaste"
+	trait="humble"
+	trait="strong"
+	trait="patient"
+	trait="zealous"
+	trait="diligent"
+	trait="temperate"
+	trait="scholarly_theologian"
+    trait="duel_trained_warrior"
+	168.1.1 = {
+		birth=yes
+	}
+	280.1.1 = {
+		death=yes
+	}
+}
+1379 = {
+	name="Jinmei"
+	female=yes
+	dynasty=1483
+	diplomacy=10
+	martial=4
+	stewardship=8
+	intrigue=10
+	learning=8
+	religion="confucian"
+	culture="han"
+	father=1376
+	disallow_random_traits=yes
+	trait="brave"
+	trait="quick"
+	trait="chaste"
+	trait="humble"
+	trait="cynical"
+	trait="envious"
+	trait="patient"
+	trait="diligent"
+	trait="deceitful"
+	trait="temperate"
+	trait="intricate_webweaver"
+    trait="duel_trained_warrior"
+	168.1.1 = {
+		birth=yes
+	}
+	184.1.1={
+		employer=1312
+		effect = {
+			liege = {
+				ROOT = {
+					add_consort = PREV
+				}
+			}
+		}
+	}
+	280.1.1 = {
+		death=yes
+	}
+}
+1380 = {
+	name="Fengzhu"
+	dynasty=164
+	diplomacy=10
+	martial=6
+	stewardship=10
+	intrigue=5
+	learning=9
+	religion="confucian"
+	culture="han"
+	disallow_random_traits=yes
+	trait="quick"
+	trait="diligent"
+	trait="gregarious"
+	trait="charitable"
+	trait="patient"
+	trait="strong"
+	trait="zealous"
+	trait="humble"
+	trait="chaste"
+	trait="intricate_webweaver"
+    trait="duel_trained_warrior"
+	140.1.1 = {
+		birth=yes
+	}
+	184.1.1 = {
+		employer=1301
+	}
+	240.1.1 = {
+		death=yes
+	}
+}

@@ -1,0 +1,18 @@
+# c_fushi
+
+# County Title
+title = c_fushi
+
+# Settlements
+max_settlements = 4
+
+b_fushi = castle
+b_qiaomen = castle
+#b_fanshi = temple
+#b_fuhai = castle
+
+# Misc
+culture = xiongnu
+religion = tengri_pagan
+
+#History

@@ -1,0 +1,256 @@
+#######Han Court range: 4100 - 4199######
+
+#All fake filler characters
+
+4300 = {
+	name="Yong"
+	dynasty=1900 #Bu
+	religion="confucian"
+	culture="han"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=185 #Geng Lin
+	}
+	189.9.1={
+		employer=1357 #Yi Myeongjang
+	}
+	240.1.1={
+		death=yes
+	}
+}
+4301 = {
+	name="Yun"
+	dynasty=1901 #Du
+	religion="confucian"
+	culture="han"
+	160.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+4302 = {
+	name="Yuan"
+	dynasty=1902 #Fang
+	religion="confucian"
+	culture="han"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=580 #Gan Ning
+	}
+	240.1.1={
+		death=yes
+	}
+}
+4303 = {
+	name="Mi"
+	dynasty=1903 #Feng
+	religion="confucian"
+	culture="han"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=580 #Gan Ning
+	}
+	240.1.1={
+		death=yes
+	}
+}
+4304 = {
+	name="Huan"
+	dynasty=1904 #Liu
+	religion="confucian"
+	culture="han"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=580 #Gan Ning
+	}
+	240.1.1={
+		death=yes
+	}
+}
+4305 = {
+	name="Suo"
+	dynasty=1905 #Jian
+	religion="confucian"
+	culture="han"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=162 #Dong Fu
+	}
+	240.1.1={
+		death=yes
+	}
+}
+4306 = {
+	name="Ding"
+	dynasty=1906 #Ren
+	religion="confucian"
+	culture="han"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=162 #Dong Fu
+	}
+	240.1.1={
+		death=yes
+	}
+}
+4307 = {
+	name="Xing"
+	dynasty=1907 #Wu
+	religion="confucian"
+	culture="han"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=162 #Dong Fu
+	}
+	240.1.1={
+		death=yes
+	}
+}
+4308 = {
+	name="Ding"
+	dynasty=1908 #Zi
+	religion="confucian"
+	culture="han"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=1312
+	}
+	240.1.1={
+		death=yes
+	}
+}
+4309 = {
+	name="Kang"
+	dynasty=1909 #Xu
+	religion="confucian"
+	culture="han"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=1312
+	}
+	240.1.1={
+		death=yes
+	}
+}
+4310 = {
+	name="Miao"
+	dynasty=1910 #Zhuang
+	religion="confucian"
+	culture="han"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=1372
+	}
+	240.1.1={
+		death=yes
+	}
+}
+4311 = {
+	name="Ju"
+	dynasty=1911 #Li
+	religion="confucian"
+	culture="han"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=1372
+	}
+	240.1.1={
+		death=yes
+	}
+}
+4312 = {
+	name="Kai"
+	dynasty=1912 #Li
+	religion="confucian"
+	culture="han"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=1372
+	}
+	240.1.1={
+		death=yes
+	}
+}
+4313 = {
+	name="Jian"
+	dynasty=1913 #Xu
+	religion="confucian"
+	culture="han"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=1372
+	}
+	240.1.1={
+		death=yes
+	}
+}
+4314 = {
+	name="Mian"
+	dynasty=1914 #Kou
+	religion="confucian"
+	culture="han"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=705
+	}
+	197.1.1={
+		employer=508 #Sun Ce
+	}
+	200.2.1={
+		employer=509 #Sun Quan
+	}
+	240.1.1={
+		death=yes
+	}
+}
+4315 = {
+	name="Shi"
+	dynasty=1915 #Zhao
+	religion="confucian"
+	culture="han"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=3865 #Zhao Zi
+	}
+	190.1.1={
+		employer=173 #Zhao Qi
+	}
+	191.1.1={
+		employer=3873 #Ma Ai
+	}
+	240.1.1={
+		death=yes
+	}
+}

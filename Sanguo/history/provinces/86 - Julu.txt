@@ -1,0 +1,25 @@
+# c_julu
+
+# County Title
+title = c_julu
+
+# Settlements
+max_settlements = 5
+
+b_julu = castle
+#b_qinmi = city
+#b_guanting = castle
+#b_guanxian = temple
+#b_julixin = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History
+194.1.1={
+	b_qinmi = city
+}
+200.1.1={
+	b_guanting = castle
+}

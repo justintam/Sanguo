@@ -1,0 +1,22 @@
+# c_chencang
+
+# County Title
+title = c_chencang
+
+# Settlements
+max_settlements = 5
+
+b_chencang = castle
+b_hanxing = city
+#b_weibin = city
+#b_jintai = castle
+#b_chending = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History
+204.1.1={
+	b_weibin = city
+}

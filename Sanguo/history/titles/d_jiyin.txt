@@ -1,0 +1,33 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=k_yan
+	vice_royalty = yes
+}
+
+184.1.1={
+	holder=3400 #Hu Hao
+}
+193.1.1={
+	holder=3460 #Wu Zi, supported lu bu
+}
+195.1.1={
+	liege=k_cao #Lost Yan
+	holder=400 #Cao Cao
+}
+196.1.1={
+	liege=k_yan
+	holder=10488 #Cheng Yu
+}
+201.1.1={
+	holder=405 #Xiahou Dun
+}
+204.9.13={
+	holder=4125 #Random
+}
+212.1.1={
+	#Liu Xi, son of Xian enfeoffed
+}

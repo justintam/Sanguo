@@ -1,0 +1,17 @@
+# c_yuyuang
+
+# County Title
+title = c_yuyuang
+
+# Settlements
+max_settlements = 3
+
+b_yuyuang = castle
+b_yuyuangjiao = temple
+#b_yuyuangfu = temple
+
+# Misc
+culture = wuhuan
+religion = tengri_pagan
+
+#History

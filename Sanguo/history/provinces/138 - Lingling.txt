@@ -1,0 +1,25 @@
+# c_lingling
+
+# County Title
+title = c_lingling
+
+# Settlements
+max_settlements = 5
+
+b_quanling = castle
+b_langxi = city
+#b_huaihai = city
+#b_lanjiao = castle
+#b_huangtian = temple
+
+# Misc
+culture = bandunman
+religion = baihu
+
+#History
+194.1.1={
+	b_huaihai = city
+}
+204.1.1={
+	b_lanjiao = castle
+}

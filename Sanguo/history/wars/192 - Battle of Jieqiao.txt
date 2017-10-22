@@ -1,0 +1,19 @@
+name = "Battle of Jieqiao"
+
+casus_belli={
+	actor=700
+	recipient=900
+	casus_belli=seize
+	landed_title=d_julu
+	date=192.1.1
+}
+
+192.1.1={
+	add_defender = 900 #Gongsun Zan
+	add_attacker = 700 #Yuan Shao
+}
+
+193.1.1={
+	rem_defender = 900 #Gongsun Zan
+	rem_attacker = 700 #Yuan Shao
+}

@@ -1,0 +1,18 @@
+# c_wuzhong
+
+# County Title
+title = c_wuzhong
+
+# Settlements
+max_settlements = 4
+
+b_wuzhong = castle
+b_wuzhongdi = tribal
+#b_balasu = temple
+#b_dabei = castle
+
+# Misc
+culture = wuhuan
+religion = tengri_pagan
+
+#History

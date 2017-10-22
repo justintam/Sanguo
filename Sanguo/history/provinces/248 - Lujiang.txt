@@ -1,0 +1,23 @@
+# c_lujiang
+
+# County Title
+title = c_lujiang
+
+# Settlements
+max_settlements = 6
+
+b_lujiang = castle
+b_anfeng = city
+b_huancheng = city
+b_qianshan = city
+#b_luming = city
+#b_qingming = temple
+
+# Misc
+culture = han
+religion = confucian
+
+#History
+214.1.1={
+	b_luming = city
+}

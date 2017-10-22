@@ -1,0 +1,17 @@
+# c_xihai
+
+# County Title
+title = c_xihai
+
+# Settlements
+max_settlements = 3
+
+b_xihai = castle
+b_bingdo = tribal
+#b_yinhong = temple
+
+# Misc
+culture = qiang
+religion = baishi
+
+#History

@@ -1,0 +1,26 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_liaoxi
+}
+170.1.1={
+	holder=907 #Hou Jie
+}
+180.1.1={
+	holder=64 #Liu Ji
+}
+184.1.1={
+	holder=3374 #Zhao Bao
+}
+187.1.1={
+	holder=2681 #Zhang Ju
+}
+188.4.1={
+	holder=900 #Gongsun Zan
+}
+189.9.1={
+	holder=3551 #Random
+}

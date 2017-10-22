@@ -1,0 +1,513 @@
+3900 = {
+	name="Gui"
+	female=yes
+	religion="confucian"
+	culture="han"
+	155.1.1={
+		birth=yes
+	}
+	170.1.1={
+		add_spouse=3421
+	}
+	180.1.1={
+		death=yes
+	}
+}
+3901 = {
+	name="Gui"
+	female=yes
+	religion="confucian"
+	culture="han"
+	165.1.1={
+		birth=yes
+	}
+	180.1.1={
+		add_spouse=3421
+	}
+	205.1.1={
+		death=yes
+	}
+}
+3902 = {
+	name="Hua"
+	female=yes
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=26
+	trait="brave"
+	trait="fair"
+	trait="born_in_the_purple"
+	158.1.1={
+		birth=yes
+	}
+	172.1.1={
+		add_spouse=3703
+	}
+	214.1.1={
+		death=yes
+	}
+}
+3903 = {
+	name="Jian"
+	female=yes
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=26
+	mother=3907
+	trait="brave"
+	trait="fair"
+	trait="born_in_the_purple"
+	164.1.1={
+		birth=yes
+	}
+	180.1.1={
+		add_spouse=1295
+	}
+	214.1.1={
+		death=yes
+	}
+}
+3904 = {
+	name="Xiu"
+	female=yes
+	dynasty=2
+	religion="confucian"
+	culture="han"
+	father=26
+	mother=3907
+	trait="brave"
+	trait="fair"
+	trait="born_in_the_purple"
+	166.1.1={
+		birth=yes
+	}
+	180.1.1={
+		add_spouse=3488
+	}
+	214.1.1={
+		death=yes
+	}
+}
+3905 = {
+	name="Ying"
+	female=yes
+	religion="confucian"
+	culture="han"
+	trait="fair"
+	160.1.1={
+		birth=yes
+	}
+	174.1.1={
+		employer=3703
+		effect = {
+			liege = {
+				ROOT = {
+					add_consort = PREV
+				}
+			}
+		}
+	}
+	214.1.1={
+		#Exiled
+	}
+	240.1.1={
+		death=yes
+	}
+}
+3906 = {
+	name="Shou"
+	female=yes
+	dynasty=1590
+	religion="confucian"
+	culture="han"
+	father=3703
+	mother=3905
+	trait="flamboyant_schemer"
+	trait="fair"
+	trait="ambitious"
+	trait="deceitful"
+	174.1.1={
+		birth=yes
+	}
+	214.1.1={
+		death={death_reason=death_execution killer=400}
+	}
+}
+3907 = {
+	name="Feng"
+	female=yes
+	religion="confucian"
+	culture="han"
+	trait="brave"
+	trait="fair"
+	trait="lustful"
+	148.1.1={
+		birth=yes
+	}
+	163.1.1={
+		employer=26
+		effect = {
+			liege = {
+				ROOT = {
+					add_consort = PREV
+				}
+			}
+		}
+	}
+	170.1.1={
+		death=yes
+	}
+}
+3908 = {
+	name="Ping"
+	female=yes
+	dynasty=1411
+	religion="confucian"
+	culture="han"
+	trait="flamboyant_schemer"
+	trait="fair"
+	trait="content"
+	trait="deceitful"
+	trait="humble"
+	trait="seductress"
+	trait="zealous"
+	170.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=500
+		effect = {
+			liege = {
+				ROOT = {
+					add_consort = PREV
+				}
+			}
+		}
+	}
+	230.1.1={
+		death=yes
+	}
+}
+3909 = {
+	name="Yueying"
+	female=yes
+	dynasty=1813
+    diplomacy=4
+    martial=4
+    stewardship=9
+    intrigue=9
+	learning=9
+	religion="confucian"
+	culture="han"
+	father=3856
+	trait="brave"
+	trait="ugly"
+	trait="genius"
+	trait="lustful"
+	184.1.1={
+		birth=yes
+		employer=4000
+		add_trait = "refuge"
+		effect = {
+			set_character_flag = refuge_jing
+		}
+	}
+	200.1.1={
+		add_spouse=615
+	}
+	207.11.1={
+		employer=600
+		remove_trait = "refuge"
+		effect = {
+			clr_character_flag = refuge_jing
+		}
+	}
+	240.1.1={
+		death=yes
+	}
+}
+3910 = {
+	name="Diaochan"
+	female=yes
+	dna="jpkpptygqam"
+	religion="confucian"
+	culture="han"
+	trait="destined"
+	trait="brave"
+	trait="fair"
+	trait="deceitful"
+	trait="lustful"
+	169.1.1={
+		birth=yes
+	}
+	184.1.1={
+		dynasty=3
+		add_trait = "adopted"
+		father=120
+		employer=120
+	}
+	184.10.1={
+		employer=100
+	}
+	189.9.1={
+		employer=300
+	}
+	191.1.1={
+		add_trait = "fate_sex"
+		effect = {
+			add_lover = 300
+			add_lover = 309
+		}
+	}
+	192.5.22={
+		employer=309
+		add_spouse=309
+		effect = {
+			remove_lover = 300
+		}
+	}
+	240.1.1={
+		death=yes
+	}
+}
+3911 = {
+	name="Xi"
+	female=yes
+	dynasty=43
+	religion="confucian"
+	culture="han"
+	father=3858
+	trait="fair"
+	trait="deceitful"
+	trait="envious"
+	165.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=117 #Xu Qiu 
+	}
+	186.1.1={
+		employer=3345 #Wang Min
+	}
+	187.1.1={
+		employer=122 #Wang Rui
+	}
+	189.9.1={
+		employer=48 #Liu Biao
+	}
+	190.1.1={
+		add_spouse=48
+	}
+	208.8.1={
+		employer=53 #Liu Cong
+	}
+	250.1.1={
+		death=yes
+	}
+}
+3912 = {
+	name="Shi"
+	female=yes
+	dynasty=1844 #Fan
+	religion="confucian"
+	culture="han"
+	trait="fair"
+	190.1.1={
+		birth=yes
+	}
+	190.1.1={
+		employer=156
+	}
+	205.1.1={
+		add_spouse=4211
+	}
+	260.1.1={
+		death=yes
+	}
+}
+3913 = {
+	name="Taiji"
+	female=yes
+	dynasty=957 #Du
+	religion="confucian"
+	culture="han"
+	trait="scholarly_theologian"
+	trait="chaste"
+	trait="humble"
+	trait="honest"
+	trait="diligent"
+	trait="temperate"
+	trait="zealous"
+	125.1.1={
+		birth=yes
+	}
+	140.1.1={
+		add_spouse=1277
+	}
+	215.1.1={
+		death=yes
+	}
+}
+3914 = {
+	name="Da"
+	female=yes
+	dynasty=55 #Qiao
+	religion="confucian"
+	culture="han"
+	father=4298
+	trait="fair"
+	182.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=4000
+		add_trait = "refuge"
+		effect = {
+			set_character_flag = refuge_yang
+		}
+	}
+	200.1.1={
+		employer=508 #Sun Ce
+		add_spouse=508
+		remove_trait = "refuge"
+		effect = {
+			clr_character_flag = refuge_yang
+		}
+	}
+	200.2.1={
+		employer=509 #Sun Quan
+	}
+	260.1.1={
+		death=yes
+	}
+}
+3915 = {
+	name="Xiao"
+	female=yes
+	dynasty=55 #Qiao
+	religion="confucian"
+	culture="han"
+	father=4298
+	trait="fair"
+	184.1.1={
+		birth=yes
+		employer=4000
+		add_trait = "refuge"
+		effect = {
+			set_character_flag = refuge_yang
+		}
+	}
+	200.1.1={
+		employer=508 #Sun Ce
+		add_spouse=10528
+		remove_trait = "refuge"
+		effect = {
+			clr_character_flag = refuge_yang
+		}
+	}
+	200.2.1={
+		employer=509 #Sun Quan
+	}
+	209.3.1={
+		employer=10528 #Zhou Yu
+	}
+	210.2.1={
+		employer=509 #Sun Quan
+	}
+	260.1.1={
+		death=yes
+	}
+}
+3916 = {
+	name="Shi"
+	female=yes
+	dynasty=13
+	religion="confucian"
+	culture="han"
+	father=151
+	170.1.1={
+		birth=yes
+	}
+	185.1.1={
+		add_spouse=550 #Gu Yong
+	}
+	250.1.1={
+		death=yes
+	}
+}
+3917 = {
+	name="Wenji"
+	female=yes
+	dynasty=1809
+	religion="confucian"
+	culture="han"
+	father=4435
+	118.1.1={
+		birth=yes
+	}
+	180.1.1={
+		death=yes
+	}
+}
+3918 = {
+	name="Yunlu"
+	female=yes
+	dynasty=10 #Ma
+	religion="confucian"
+	culture="han"
+	father=809
+	183.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=809
+	}
+	187.4.1={
+		religion="folk"
+	}
+	208.1.1={
+		employer=815
+	}
+	213.9.1={
+		employer=1009
+	}
+	213.11.1={
+		employer=1706 #Agui
+	}
+	214.1.1={
+		employer=600
+		religion="confucian"
+	}
+	215.1.1={
+		add_spouse=603
+	}
+	223.6.10={
+		employer=610
+	}
+	225.7.1={
+		death=yes
+	}
+}
+3919 = {
+	name="Ying"
+	female=yes
+	dynasty=10 #Ma
+	religion="confucian"
+	culture="han"
+	father=815
+	220.1.1={
+		birth=yes
+		employer=600
+	}
+	223.6.10={
+		employer=610
+	}
+	235.1.1={
+		add_spouse=603
+	}
+	290.1.1={
+		death=yes
+	}
+}

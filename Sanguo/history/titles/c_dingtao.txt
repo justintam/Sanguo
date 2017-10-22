@@ -1,0 +1,28 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_jiyin
+}
+184.1.1={
+	liege=d_zhonghuang
+	holder=237 #Wang Du
+}
+184.10.1={
+	liege=d_jiyin
+	holder=10488 #Cheng Yu
+}
+190.8.1={
+	holder=3344 #Wang Hong
+}
+192.1.1={
+	holder=3460 #Wu Zi, supported lu bu
+}
+195.1.1={
+	holder=4126 #Random
+}
+212.1.1={
+	#Liu Xi, son of Xian enfeoffed
+}

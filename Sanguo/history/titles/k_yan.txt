@@ -1,0 +1,52 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=e_china
+	vice_royalty = yes
+}
+140.1.1={
+	holder=1287 #Yang Bing
+}
+144.1.1={
+	holder=0 #None
+}
+180.1.1={
+	holder=134 #Qiao Mao
+}
+189.9.1={
+	holder=59 #Liu Dai
+}
+190.1.1={
+	liege=0
+}
+#191 Shan Jing - Claim under GZ
+192.6.1={
+	holder=400 #Cao Cao
+} #Jin Shang - Claim
+194.1.1={
+	vice_royalty = no
+	holder=309 #Lu Bu
+}
+196.1.1={
+	liege=e_china
+	holder=400 #Cao Cao
+}
+213.6.1={
+	vice_royalty = yes
+	holder=5005 #Sima Lang
+}
+217.4.1 = {
+	holder=10400 #Cao Pi
+}
+219.1.1 = {
+	holder=20443 #Pei Qian
+}
+220.12.10={
+	liege=e_wei
+}
+#Linghu Yan - 249
+#Huang Hua - 251
+#Deng Ai - 255

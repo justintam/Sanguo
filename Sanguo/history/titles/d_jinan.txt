@@ -1,0 +1,54 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=k_qing
+}
+39.1.1={
+	holder=3832 #Liu Kang
+}
+97.1.1={
+	holder=3833 #Liu Cuo
+}
+103.1.1={
+	holder=3837 #Liu Xiang
+}
+126.1.1={
+	holder=3838 #Liu Xian
+}
+128.1.1={
+	holder=3841 #Liu Guang
+}
+174.1.1={
+	holder=3304 #Liu Yu
+}
+192.1.1={
+	liege=0
+}
+194.1.1={
+	holder=3305 #Liu Yun
+}
+195.1.1={
+	liege=k_qing
+}
+196.1.1={
+	liege=k_yan
+}
+205.2.1={
+	liege=k_qing
+}
+207.1.1={
+	holder=3306 #Liu Kai
+}
+210.1.1={
+	holder=4400 #Hao Guang
+}
+220.12.10={
+	#holder=0 #Sun Yu
+}
+
+
+
+#Incomplete

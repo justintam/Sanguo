@@ -1,0 +1,68 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_hanyang
+}
+150.1.1={
+	holder=4297 #Qiao Xuan
+}
+155.1.1={
+	holder=3363 #Zhao Zhongtai
+}
+158.1.1={
+	holder=0 #None
+}
+184.1.1={
+	holder=114 #Zuo Chang
+}
+184.12.1={
+	holder=1230 #Song Nie
+}
+185.1.1={
+	holder=1231 #Yang Yong
+}
+186.1.1={
+	holder=1229 #Geng Bi
+}
+187.4.1={
+	holder=175 #Zhang Wen
+}
+188.12.1={
+	holder=105 #Huangfu Song
+}
+189.10.1={
+	holder=300 #Dong Zhuo
+}
+192.5.22={
+	holder=307 #Li Jue
+}
+196.1.1={
+	holder=2606 #Li Le
+}
+199.1.1={
+	holder=3461 #Wei Duan
+}
+209.1.1={
+	holder=20494 #Meng Jian
+}
+210.1.1={
+	holder=3462 #Wei Kang
+}
+213.6.1={
+	holder=815 #Ma Chao
+}
+213.9.1={
+	holder=3792 #Yan Gan
+}
+221.1.1={
+	holder=20469 #Xu Miao
+}
+223.1.1={
+	holder=20453 #Wen Hui
+}
+223.6.1={
+	holder=20469 #Xu Miao
+}

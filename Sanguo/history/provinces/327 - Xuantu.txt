@@ -1,0 +1,17 @@
+# c_xuantu
+
+# County Title
+title = c_xuantu
+
+# Settlements
+max_settlements = 3
+
+b_xuantu = castle
+#b_miantu = city
+#b_caochang = temple
+
+# Misc
+culture = han
+religion = confucian
+
+#History

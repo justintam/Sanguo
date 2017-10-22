@@ -1,0 +1,17 @@
+# c_buyeo
+
+# County Title
+title = c_buyeo
+
+# Settlements
+max_settlements = 3
+
+b_buyeoseong = tribal
+#b_nanleung = city
+#b_gumi = temple
+
+# Misc
+culture = joseon
+religion = shamanist
+
+#History

@@ -1,0 +1,743 @@
+#Common
+title_bodyguard = {
+	dignity = 0.1
+	grant_limit = 9
+	
+	show_as_title = no
+	realm_in_name = no
+	
+	monthly_salary = 0.05
+	monthly_prestige = 0.05
+	opinion_effect = 5
+	
+	allowed_to_hold = {
+		is_ruler = no
+		is_adult = yes
+		is_councillor = no
+		NOT = { has_minor_title = title_commander } 
+		NOT = { trait = incapable }
+		NOT = { trait = crippled }
+		NOT = { trait = infirm }
+		OR = {
+			trait = fate_duel
+			trait = duel_trained_warrior
+			trait = duel_skilled_warrior
+			trait = duel_master_warrior
+			FROM = { ai = no }
+		}
+	}
+	
+	gain_effect = { }
+	lose_effect = { }
+
+	message = yes
+}
+
+#Generals
+
+title_general_of_the_left = {
+	dignity = 0.15
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 15
+	
+	monthly_salary = 0.025
+	monthly_prestige = 0.5
+	
+	is_unique = yes
+	
+	allowed_to_hold = {
+		is_adult = yes
+		NOT = { has_minor_title = title_general_of_the_left }
+		has_minor_title = title_commander
+	}
+	
+	allowed_to_grant = {
+		is_feudal = yes
+		primary_title = {
+			tier = emperor
+		}
+		religion_group = chinese_religion
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+		opinion = { who = FROM modifier = opinion_fired_from_council }
+		opinion = { who = FROM modifier = opinion_recently_fired }
+	}
+
+	message = yes
+}
+
+title_general_of_the_right = {
+	dignity = 0.15
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 15
+	
+	monthly_salary = 0.025
+	monthly_prestige = 0.5
+	
+	is_unique = yes
+	
+	allowed_to_hold = {
+		is_adult = yes
+		NOT = { has_minor_title = title_general_of_the_right }
+		has_minor_title = title_commander
+	}
+	
+	allowed_to_grant = {
+		is_feudal = yes
+		primary_title = {
+			tier = emperor
+		}
+		religion_group = chinese_religion
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+		opinion = { who = FROM modifier = opinion_fired_from_council }
+		opinion = { who = FROM modifier = opinion_recently_fired }
+	}
+
+	message = yes
+}
+
+title_general_of_the_van = {
+	dignity = 0.15
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 15
+	
+	monthly_salary = 0.025
+	monthly_prestige = 0.5
+	
+	is_unique = yes
+	
+	allowed_to_hold = {
+		is_adult = yes
+		NOT = { has_minor_title = title_general_of_the_van }
+		has_minor_title = title_commander
+	}
+	
+	allowed_to_grant = {
+		is_feudal = yes
+		primary_title = {
+			tier = emperor
+		}
+		religion_group = chinese_religion
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+		opinion = { who = FROM modifier = opinion_fired_from_council }
+		opinion = { who = FROM modifier = opinion_recently_fired }
+	}
+
+	message = yes
+}
+
+title_general_of_the_rear = {
+	dignity = 0.15
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 15
+	
+	monthly_salary = 0.025
+	monthly_prestige = 0.5
+	
+	is_unique = yes
+	
+	allowed_to_hold = {
+		is_adult = yes
+		NOT = { has_minor_title = title_general_of_the_rear }
+		has_minor_title = title_commander
+	}
+	
+	allowed_to_grant = {
+		is_feudal = yes
+		primary_title = {
+			tier = emperor
+		}
+		religion_group = chinese_religion
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+		opinion = { who = FROM modifier = opinion_fired_from_council }
+		opinion = { who = FROM modifier = opinion_recently_fired }
+	}
+
+	message = yes
+}
+
+title_general_of_chariots_and_cavalry = {
+	dignity = 0.15
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 15
+	
+	monthly_salary = 0.025
+	monthly_prestige = 0.5
+	
+	is_unique = yes
+	
+	allowed_to_hold = {
+		is_adult = yes
+		NOT = { has_minor_title = title_general_of_chariots_and_cavalry }
+		has_minor_title = title_commander
+	}
+	
+	allowed_to_grant = {
+		is_feudal = yes
+		primary_title = {
+			tier = emperor
+		}
+		religion_group = chinese_religion
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+		opinion = { who = FROM modifier = opinion_fired_from_council }
+		opinion = { who = FROM modifier = opinion_recently_fired }
+	}
+
+	message = yes
+}
+
+title_general_of_the_flying_cavalry = {
+	dignity = 0.15
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 15
+	
+	monthly_salary = 0.025
+	monthly_prestige = 0.5
+	
+	is_unique = yes
+	
+	allowed_to_hold = {
+		is_adult = yes
+		NOT = { has_minor_title = title_general_of_the_flying_cavalry }
+		has_minor_title = title_commander
+	}
+	
+	allowed_to_grant = {
+		is_feudal = yes
+		primary_title = {
+			tier = emperor
+		}
+		religion_group = chinese_religion
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+		opinion = { who = FROM modifier = opinion_fired_from_council }
+		opinion = { who = FROM modifier = opinion_recently_fired }
+	}
+
+	message = yes
+}
+
+title_general_who_conquers = {
+	dignity = 0.15
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 15
+	
+	monthly_salary = 0.025
+	monthly_prestige = 0.5
+	
+	is_unique = yes
+	
+	allowed_to_hold = {
+		is_adult = yes
+		NOT = { has_minor_title = title_general_who_conquers }
+		has_minor_title = title_commander
+	}
+	
+	allowed_to_grant = {
+		is_feudal = yes
+		primary_title = {
+			tier = emperor
+		}
+		religion_group = chinese_religion
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+		opinion = { who = FROM modifier = opinion_fired_from_council }
+		opinion = { who = FROM modifier = opinion_recently_fired }
+	}
+
+	message = yes
+}
+
+title_general_who_guards = {
+	dignity = 0.15
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 15
+	
+	monthly_salary = 0.025
+	monthly_prestige = 0.5
+	
+	is_unique = yes
+	
+	allowed_to_hold = {
+		is_adult = yes
+		NOT = { has_minor_title = title_general_who_guards }
+		has_minor_title = title_commander
+	}
+	
+	allowed_to_grant = {
+		is_feudal = yes
+		primary_title = {
+			tier = emperor
+		}
+		religion_group = chinese_religion
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+		opinion = { who = FROM modifier = opinion_fired_from_council }
+		opinion = { who = FROM modifier = opinion_recently_fired }
+	}
+
+	message = yes
+}
+
+title_general_who_supports_the_empire = {
+	dignity = 0.15
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 15
+	
+	monthly_salary = 0.025
+	monthly_prestige = 0.5
+	
+	is_unique = yes
+	
+	allowed_to_hold = {
+		is_adult = yes
+		NOT = { has_minor_title = title_general_who_supports_the_empire }
+		has_minor_title = title_commander
+	}
+	
+	allowed_to_grant = {
+		is_feudal = yes
+		primary_title = {
+			tier = emperor
+		}
+		religion_group = chinese_religion
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+		opinion = { who = FROM modifier = opinion_fired_from_council }
+		opinion = { who = FROM modifier = opinion_recently_fired }
+	}
+
+	message = yes
+}
+
+title_general_who_manifests_might = {
+	dignity = 0.15
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 15
+	
+	monthly_salary = 0.025
+	monthly_prestige = 0.5
+	
+	is_unique = yes
+	
+	allowed_to_hold = {
+		is_adult = yes
+		NOT = { has_minor_title = title_general_who_manifests_might }
+		has_minor_title = title_commander
+	}
+	
+	allowed_to_grant = {
+		is_feudal = yes
+		primary_title = {
+			tier = emperor
+		}
+		religion_group = chinese_religion
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+		opinion = { who = FROM modifier = opinion_fired_from_council }
+		opinion = { who = FROM modifier = opinion_recently_fired }
+	}
+
+	message = yes
+}
+
+#Ministers
+
+title_minister_of_the_imperial_clan = {
+	dignity = 0.15
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 15
+	
+	monthly_salary = 0.05
+	monthly_prestige = 0.25
+	
+	is_unique = yes
+	
+	allowed_to_hold = {
+		is_adult = yes
+		NOT = { has_minor_title = title_minister_of_the_imperial_clan }
+		host = { is_liege_of = ROOT }
+		k_confucian = {
+			holder_scope = {
+				dynasty = ROOT
+			}
+		}
+	}
+	
+	allowed_to_grant = {
+		is_feudal = yes
+		primary_title = {
+			tier = emperor
+		}
+		religion_group = chinese_religion
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+		opinion = { who = FROM modifier = opinion_fired_from_council }
+		opinion = { who = FROM modifier = opinion_recently_fired }
+	}
+
+	message = yes
+}
+
+title_minister_of_agriculture = {
+	dignity = 0.15
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 15
+	
+	monthly_salary = 0.05
+	monthly_prestige = 0.25
+	
+	is_unique = yes
+	
+	allowed_to_hold = {
+		is_adult = yes
+		NOT = { has_minor_title = title_minister_of_agriculture }
+		host = { is_liege_of = ROOT }
+	}
+	
+	allowed_to_grant = {
+		is_feudal = yes
+		primary_title = {
+			tier = emperor
+		}
+		religion_group = chinese_religion
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+		opinion = { who = FROM modifier = opinion_fired_from_council }
+		opinion = { who = FROM modifier = opinion_recently_fired }
+	}
+
+	message = yes
+}
+
+title_minister_of_ceremonies = {
+	dignity = 0.15
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 15
+	
+	monthly_salary = 0.05
+	monthly_prestige = 0.25
+	
+	is_unique = yes
+	
+	allowed_to_hold = {
+		is_adult = yes
+		NOT = { has_minor_title = title_minister_of_ceremonies }
+		host = { is_liege_of = ROOT }
+	}
+	
+	allowed_to_grant = {
+		is_feudal = yes
+		primary_title = {
+			tier = emperor
+		}
+		religion_group = chinese_religion
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+		opinion = { who = FROM modifier = opinion_fired_from_council }
+		opinion = { who = FROM modifier = opinion_recently_fired }
+	}
+
+	message = yes
+}
+
+title_minister_coachman = {
+	dignity = 0.15
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 15
+	
+	monthly_salary = 0.05
+	monthly_prestige = 0.25
+	
+	is_unique = yes
+	
+	allowed_to_hold = {
+		is_adult = yes
+		NOT = { has_minor_title = title_minister_coachman }
+		host = { is_liege_of = ROOT }
+	}
+	
+	allowed_to_grant = {
+		is_feudal = yes
+		primary_title = {
+			tier = emperor
+		}
+		religion_group = chinese_religion
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+		opinion = { who = FROM modifier = opinion_fired_from_council }
+		opinion = { who = FROM modifier = opinion_recently_fired }
+	}
+
+	message = yes
+}
+
+title_minister_of_finance = {
+	dignity = 0.15
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 15
+	
+	monthly_salary = 0.05
+	monthly_prestige = 0.25
+	
+	is_unique = yes
+	
+	allowed_to_hold = {
+		is_adult = yes
+		NOT = { has_minor_title = title_minister_of_finance }
+		host = { is_liege_of = ROOT }
+	}
+	
+	allowed_to_grant = {
+		is_feudal = yes
+		primary_title = {
+			tier = emperor
+		}
+		religion_group = chinese_religion
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+		opinion = { who = FROM modifier = opinion_fired_from_council }
+		opinion = { who = FROM modifier = opinion_recently_fired }
+	}
+
+	message = yes
+}
+
+title_minister_of_the_guard = {
+	dignity = 0.15
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 15
+	
+	monthly_salary = 0.05
+	monthly_prestige = 0.25
+	
+	is_unique = yes
+	
+	allowed_to_hold = {
+		is_adult = yes
+		NOT = { has_minor_title = title_minister_of_the_guard }
+		host = { is_liege_of = ROOT }
+	}
+	
+	allowed_to_grant = {
+		is_feudal = yes
+		primary_title = {
+			tier = emperor
+		}
+		religion_group = chinese_religion
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+		opinion = { who = FROM modifier = opinion_fired_from_council }
+		opinion = { who = FROM modifier = opinion_recently_fired }
+	}
+
+	message = yes
+}
+
+title_minister_herald = {
+	dignity = 0.15
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 15
+	
+	monthly_salary = 0.05
+	monthly_prestige = 0.25
+	
+	is_unique = yes
+	
+	allowed_to_hold = {
+		is_adult = yes
+		NOT = { has_minor_title = title_minister_herald }
+		host = { is_liege_of = ROOT }
+	}
+	
+	allowed_to_grant = {
+		is_feudal = yes
+		primary_title = {
+			tier = emperor
+		}
+		religion_group = chinese_religion
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+		opinion = { who = FROM modifier = opinion_fired_from_council }
+		opinion = { who = FROM modifier = opinion_recently_fired }
+	}
+
+	message = yes
+}
+
+title_minister_of_the_household = {
+	dignity = 0.15
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 15
+	
+	monthly_salary = 0.05
+	monthly_prestige = 0.25
+	
+	is_unique = yes
+	
+	allowed_to_hold = {
+		is_adult = yes
+		NOT = { has_minor_title = title_minister_of_the_household }
+		host = { is_liege_of = ROOT }
+	}
+	
+	allowed_to_grant = {
+		is_feudal = yes
+		primary_title = {
+			tier = emperor
+		}
+		religion_group = chinese_religion
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+		opinion = { who = FROM modifier = opinion_fired_from_council }
+		opinion = { who = FROM modifier = opinion_recently_fired }
+	}
+
+	message = yes
+}
+
+title_minister_of_justice = {
+	dignity = 0.15
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 15
+	
+	monthly_salary = 0.05
+	monthly_prestige = 0.25
+	
+	is_unique = yes
+	
+	allowed_to_hold = {
+		is_adult = yes
+		NOT = { has_minor_title = title_minister_of_justice }
+		host = { is_liege_of = ROOT }
+	}
+	
+	allowed_to_grant = {
+		is_feudal = yes
+		primary_title = {
+			tier = emperor
+		}
+		religion_group = chinese_religion
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+		opinion = { who = FROM modifier = opinion_fired_from_council }
+		opinion = { who = FROM modifier = opinion_recently_fired }
+	}
+
+	message = yes
+}
+
+title_minister_steward = {
+	dignity = 0.15
+	realm_in_name = yes
+	grant_limit = 1
+	opinion_effect = 15
+	
+	monthly_salary = 0.05
+	monthly_prestige = 0.25
+	
+	is_unique = yes
+	
+	allowed_to_hold = {
+		is_adult = yes
+		NOT = { has_minor_title = title_minister_steward }
+		host = { is_liege_of = ROOT }
+	}
+	
+	allowed_to_grant = {
+		is_feudal = yes
+		primary_title = {
+			tier = emperor
+		}
+		religion_group = chinese_religion
+	}
+	
+	gain_effect = {
+	}
+	lose_effect = {
+		opinion = { who = FROM modifier = opinion_fired_from_council }
+		opinion = { who = FROM modifier = opinion_recently_fired }
+	}
+
+	message = yes
+}

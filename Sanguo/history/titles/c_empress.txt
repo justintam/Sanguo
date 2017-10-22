@@ -1,0 +1,37 @@
+# e_china
+1.1.1={
+	liege=k_confucian
+}
+1.1.1={
+	law=enatic_succession
+}
+27.1.1={
+	holder=35 #Shengtong
+}
+28.1.1={
+	holder=3 #Lihua
+}
+55.1.1={
+	holder=5 #Mingde
+}
+74.1.1={
+	holder=7 #Zhangde
+}
+96.1.1={
+	holder=9 #Hexi
+}
+#114.1.1={
+#	holder=15 #Li - Not Empress
+#}
+140.1.1={
+	holder=17 #Shi
+}
+146.1.1={
+	holder=29 #Dong Xiaocheng
+}
+175.8.1={
+	holder=31 #He Lingsi
+}
+189.9.1={
+	holder=0 #None
+}

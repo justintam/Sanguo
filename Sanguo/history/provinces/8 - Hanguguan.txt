@@ -1,0 +1,19 @@
+# c_hanguguan
+
+# County Title
+title = c_hanguguan
+
+# Settlements
+max_settlements = 5
+
+b_hanguguan = castle
+b_tongguan = castle
+b_huayin = city
+#b_shanzhou = city
+#b_hangucheng = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

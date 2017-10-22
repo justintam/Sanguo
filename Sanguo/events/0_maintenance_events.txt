@@ -1,0 +1,4082 @@
+###########################################
+#                                         #
+# Sanguo Events		  	            	  #
+#                                         #
+# ID MAN.1		              		  	  #
+#                                         #
+#                                         #
+#                                         #
+#                                         #
+#                                         #
+#                                         #
+#                                         #
+###########################################
+
+namespace = MAN
+
+### INITIATE nick_dynasty ###
+character_event = {
+	id = MAN.1
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	trigger = {
+		has_nickname = no
+		is_ruler=yes
+		NOT = { dynasty = none }
+		OR = {
+			culture_group = chinese
+			culture_group = korean
+			culture_group = yue
+		}
+	}
+	
+	immediate = {
+		give_nickname = nick_dyn
+	}
+}
+
+### NEW EMPRESS ###
+character_event = {
+	id = MAN.2
+	
+	hide_window = yes
+	
+	is_triggered_only = no
+	
+	trigger = {
+		k_confucian = {
+			holder_scope = {
+				is_married = ROOT
+			}
+		}
+		is_main_spouse = yes
+		NOT = { has_landed_title = c_empress }
+	}
+	
+	immediate = {
+		c_empress = {
+			holder_scope = {
+				save_event_target_as = target_oldempress
+			}
+		}
+		c_empress = {
+			grant_title_no_opinion = ROOT
+		}
+		event_target:target_oldempress = {
+			any_courtier = {
+				limit = {
+					is_ruler = no
+					OR = {
+						trait = inner_court
+						AND = {
+							OR = {
+								father = { has_landed_title = k_confucian }
+								mother = { has_landed_title = k_confucian }
+							}
+							NOT = { age = 16 }
+						}
+					}
+				}
+				move_character = ROOT
+			}
+		}
+		spouse = {
+			ROOT = {
+				if = {
+					limit = { liege = { NOT = { has_landed_title = k_confucian } } }
+					set_defacto_liege = PREV
+				}
+			}
+			character_event = { id = MAN.41 }
+		}
+	}
+}
+
+### NEW EMPIRE ###
+character_event = {
+	id = MAN.3
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	trigger = {
+		primary_title = { real_tier = EMPEROR }
+	}
+	
+	immediate = {
+		character_event = { id = MAN.4 }
+	#if chancelllor give him chancellor title, call cha.1?
+#		if = {
+#			limit = {
+#				has_character_flag = chancellor
+#			}
+#			k_confucian = {
+#				holder_scope = {
+#					save_event_target_as = target_emperor
+#				}
+#			}
+#			primary_title = {
+#				any_vassal = {
+#					set_defacto_liege = FROM
+#				}
+#				grant_title_no_opinion = event_target:target_emperor
+#			}
+#		}
+#		if = {
+#			limit = {
+#				num_of_emperor_titles = 2
+#				NOT = { has_character_flag = chancellor }
+#			}
+#			primary_title = {
+#				any_vassal = {
+#					set_defacto_liege = FROM
+#				}
+#				activate_title = { title = THIS status = no }
+#				unsafe_destroy_landed_title = THIS
+#			}
+#		}
+		event_target:target_empire = { make_primary_title = yes }
+		primary_title = {
+			add_law = imperial_administration
+		}
+		if = { limit = { has_character_flag = chancellor }
+			primary_title = {
+				set_title_flag = premier_title
+				add_law = succ_feudal_elective
+			}
+			clr_character_flag = chancellor
+			break = yes
+		}
+		chronicle = {
+			entry = CHRONICLE_FOUNDED_NEW_KINGDOM_OR_EMPIRE
+			portrait = [Root.GetID]
+		}
+		primary_title = {
+			add_law = succ_primogeniture
+		}
+		any_realm_lord = {
+			limit = {
+				NOT = { dynasty = ROOT }
+				any_demesne_title = {
+					is_titular = yes
+					OR = {
+						has_title_flag = noble_mark
+						has_title_flag = noble_duke
+						has_title_flag = noble_king
+						has_title_flag = warlord_flag
+					}
+				}
+			}
+			any_demesne_title = {
+				limit = {
+					is_titular = yes
+					OR = {
+						has_title_flag = noble_mark
+						has_title_flag = noble_duke
+						has_title_flag = noble_king
+						has_title_flag = warlord_flag
+					}
+				}
+				#Make this an event to give up or revolt
+				activate_title = { title = THIS status = no }
+				unsafe_destroy_landed_title = THIS
+			}
+		}
+	}
+}
+
+character_event = { # Remove Titular
+	id = MAN.4
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	only_playable = yes
+	only_independent = yes
+	
+	trigger = {
+		NOT = { has_character_flag = chancellor }
+		OR = {
+			primary_title = {
+				tier = EMPEROR
+				NOR = {
+					has_title_flag = premier_title
+					has_title_flag = warlord_flag
+				}
+			}
+			num_of_emperor_titles = 2
+			has_landed_title = k_confucian
+		}
+		any_demesne_title = {
+			OR = {
+				AND = {
+					tier = EMPEROR
+					NOT = { title = event_target:target_empire }
+				}
+				has_title_flag = premier_title
+				has_title_flag = noble_mark
+				has_title_flag = noble_duke
+				has_title_flag = noble_king
+				has_title_flag = warlord_flag
+			}
+		}
+	}
+	
+	immediate = {
+		any_demesne_title = {
+			limit = {
+				OR = {
+					AND = {
+						tier = EMPEROR
+						NOT = { title = event_target:target_empire }
+					}
+					has_title_flag = premier_title
+					has_title_flag = noble_mark
+					has_title_flag = noble_duke
+					has_title_flag = noble_king
+					has_title_flag = warlord_flag
+				}
+			}
+			activate_title = { title = THIS status = no }
+			unsafe_destroy_landed_title = THIS
+		}
+	}
+}
+
+### Loyalty ###
+character_event = {
+	id = MAN.5
+	desc = EVTDESC_MAN.5
+	title = EVTTITLE_MAN.5
+	picture = GFX_evt_civil_war
+	
+	only_playable = yes
+	prisoner = no
+	
+	trigger = {
+		NOT = { year = 190 }
+		NOT = { has_character_flag = loyalty_flag }
+		e_china = { has_holder = yes }
+		top_liege = { has_landed_title = e_china }
+		real_tier = KING
+		primary_title = {
+			OR = {
+				title = k_sili
+				title = k_ji
+				title = k_yan
+				title = k_you
+				title = k_yu
+				title = k_yi
+				title = k_xu
+				title = k_bing
+				title = k_jing
+				title = k_qing
+				title = k_yang
+				title = k_liang
+				title = k_jiaozhi
+			}
+		}
+		war = no
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		set_character_flag = loyalty_flag
+	}
+	
+	option = {
+		name=EVTOPTA_MAN.5
+		
+		set_defacto_liege = e_china
+		
+		hidden_tooltip = {
+			primary_title = {
+				succession = gavelkind
+			}
+		}
+		
+		ai_chance = {
+			factor = 1
+			
+			modifier = {
+				factor = 0.1 #Everyone hates the player!
+				e_china = { holder_scope = { ai = no } }
+			}
+			modifier = {
+				factor = 0.1
+				NOT = { culture = han }
+			}
+			modifier = {
+				factor = 0.1
+				NOT = { religion = confucian }
+			}
+			modifier = {
+				factor = 0.5
+				trait = fate_admin
+			}
+			modifier = {
+				factor = 0.5
+				trait = fate_lead
+			}
+			modifier = {
+				factor = 0.5
+				trait = fate_loved
+			}
+			modifier = {
+				factor = 0.5
+				trait = fate_plot
+			}
+			modifier = {
+				factor = 1.05
+				trait = content
+			}
+			modifier = {
+				factor = 0.9
+				trait = ambitious
+			}
+			modifier = {
+				factor = 1.05
+				trait = chivalrous
+			}
+			modifier = {
+				factor = 1.05
+				trait = honorable
+			}
+			modifier = {
+				factor = 0.9
+				trait = dishonorable
+			}
+			modifier = {
+				factor = 0.9
+				trait = wroth
+			}
+			modifier = {
+				factor = 0.9
+				trait = greedy
+			}
+			modifier = {
+				factor = 0.9
+				trait = envious
+			}
+			modifier = {
+				factor = 1.05
+				trait = just
+			}
+			modifier = {
+				factor = 2
+				trait = zealous
+			}
+			modifier = {
+				factor = 1.15
+				dynasty = 2
+			}
+		}
+	}
+	
+	option = {
+		name=EVTOPTB_MAN.5
+		
+		set_defacto_liege = THIS
+		
+		hidden_tooltip = {
+			primary_title = {
+				succession = primogeniture
+			}
+		}
+	}
+}
+
+### Morale Troop Effects
+
+character_event = { # Battle Minor Neg
+	id = MAN.6
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	trigger = { in_battle = yes }
+	
+	immediate = {
+		morale = -0.1
+	}
+}
+
+character_event = { # Winner Effect
+	id = MAN.7
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	immediate = {
+		morale = 0.5
+	}
+}
+
+character_event = { # Winner Effect
+	id = MAN.8
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	immediate = {
+		siege = {
+			enemy = {
+				troops = -0.3
+				morale = -0.5
+			}
+		}
+	}
+}
+
+character_event = { # Loser Effect
+	id = MAN.9
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	immediate = {
+		troops = -0.3
+		morale = -0.5
+	}
+}
+
+character_event = { # Loser Effect
+	id = MAN.10
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	immediate = {
+		siege = {
+			enemy = {
+				morale = 0.5
+			}
+		}
+	}
+}
+
+character_event = { # Winner Recovery
+	id = MAN.11
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	immediate = {
+		siege = {
+			enemy = {
+				troops = 0.2
+				morale = 0.4
+			}
+		}
+	}
+}
+
+character_event = { # Loser Recovery
+	id = MAN.12
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	immediate = {
+		troops = 0.2
+		morale = 0.4
+	}
+}
+
+#######################
+### LIMIT TERRITORY ###
+#######################
+
+character_event = { # Independent or No?
+	id = MAN.13
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	only_playable = yes
+	
+	trigger = {
+		is_feudal = yes
+		capital_scope = {
+			region = world_china
+		}
+		OR = {
+			current_heir = {
+				OR = {
+					dynasty = ROOT
+					is_close_relative = ROOT
+					is_vassal_or_below = ROOT
+				}
+			}
+			primary_title = { has_title_flag = premier_title }
+		}
+	}
+
+	immediate = {
+		top_liege = { save_event_target_as = target_liege }
+		if = {
+			limit = {
+				primary_title = { NOT = { has_title_flag = premier_title } }
+			}
+			current_heir = {
+				save_event_target_as = target_heir
+				ROOT = { character_event = { id = MAN.14 } }
+			}
+		}
+		if = {
+			limit = {
+				primary_title = {
+					OR = {
+						AND = {
+							is_vice_royalty = yes
+							ROOT = { independent = no }
+						}
+						has_title_flag = premier_title
+					}
+				}
+			}
+			any_demesne_title = {
+				limit = {
+					holder_scope = { character = ROOT }
+					is_capital = no
+					is_vice_royalty = no
+					NOR = {
+						has_title_flag = premier_title
+						has_title_flag = noble_mark
+						has_title_flag = noble_duke
+						has_title_flag = noble_king
+						has_title_flag = warlord_flag
+					}
+				}
+				heir_under_primogeniture_law = {
+					if = {
+						limit = { NOT = { character = event_target:target_heir } }
+						event_target:target_heir = { top_liege = { save_event_target_as = target_liege } }
+						save_event_target_as = target_heir
+						ROOT = { character_event = { id = MAN.14 } }
+						break = yes
+					}
+				}
+			}
+		}
+	}
+}
+
+character_event = { # Take Inheritance or Not?
+	id = MAN.14
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				OR = {
+					independent = no
+					primary_title = { has_title_flag = premier_title }
+				}
+				OR = {
+					top_liege = {
+						OR = {
+							NOT = { tier = EMPEROR }
+							has_law = crown_authority_3
+							has_law = crown_authority_4
+							has_law = vice_royalty_3
+						}
+					}
+					event_target:target_heir = { is_adult = no }
+				}
+				primary_title = {
+					NOR = {
+						has_title_flag = noble_mark
+						has_title_flag = noble_duke
+						has_title_flag = noble_king
+					}
+				}
+			}
+			#If vassal pass decision to top liege
+			top_liege = {
+				random_list = {
+					50 = { #Accept Heir
+						ROOT = { character_event = { id = MAN.15 } }
+						modifier = {
+							factor = 0
+							event_target:target_heir = { is_adult = no }
+						}
+						modifier = {
+							factor = 0
+							event_target:target_heir = {
+								is_ruler = yes
+								NOT = { is_vassal_or_below = PREV }
+							}
+						}
+						modifier = {
+							factor = 1.5
+							trait = kind
+						}
+						modifier = {
+							factor = 1.5
+							trait = charitable
+						}
+						modifier = {
+							factor = 1.5
+							trait = content
+						}
+						modifier = {
+							factor = 1.5
+							opinion = { who = event_target:target_heir value = 25 }
+						}
+						modifier = {
+							factor = 1.5
+							opinion = { who = event_target:target_heir value = 50 }
+						}
+						modifier = {
+							factor = 1.5
+							opinion = { who = event_target:target_heir value = 75 }
+						}
+						modifier = {
+							factor = 2
+							opinion = { who = event_target:target_heir value = 100 }
+						}
+					}
+					50 = { #Give it to the Liege
+						ROOT = { character_event = { id = MAN.16 } }
+						modifier = {
+							factor = 1.5
+							trait = greedy
+						}
+						modifier = {
+							factor = 1.5
+							trait = cruel
+						}
+						modifier = {
+							factor = 1.5
+							trait = dishonorable
+						}
+						modifier = {
+							factor = 1.5
+							NOT = { opinion = { who = event_target:target_heir value = -25 } }
+						}
+						modifier = {
+							factor = 1.5
+							NOT = { opinion = { who = event_target:target_heir value = -50 } }
+						}
+						modifier = {
+							factor = 1.5
+							NOT = { opinion = { who = event_target:target_heir value = -75 } }
+						}
+						modifier = {
+							factor = 2
+							NOT = { opinion = { who = event_target:target_heir value = -100 } }
+						}
+					}
+				}
+			}
+			break = yes
+		}
+		
+		character_event = { id = MAN.15 }
+	}
+}
+
+character_event = { # Take Inheritance or Not?
+	id = MAN.15
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+
+	trigger = {
+		event_target:target_heir = {
+			is_ruler=yes
+			NOT = {
+				is_liege_or_above = ROOT
+			}
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				independent = yes
+				event_target:target_heir = {
+					independent = yes
+					lower_tier_than = ROOT
+					primary_title = {
+						NOT = { has_title_flag = warlord_flag }
+					}
+				}
+			}
+			event_target:target_heir = {
+				character_event = { id = MAN.16 }
+			}
+			break = yes
+		}
+		character_event = { id = MAN.16 }
+	}
+}
+
+character_event = { # Give up land to Liege
+	id = MAN.16
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	immediate = {
+		any_demesne_title = {
+			if = {
+				limit = {
+					holder_scope = { character = ROOT }
+					is_capital = no
+					NOT = { has_title_flag = inherit_flag }
+					NOR = {
+						has_title_flag = premier_title
+						has_title_flag = noble_mark
+						has_title_flag = noble_duke
+						has_title_flag = noble_king
+						has_title_flag = warlord_flag
+					}
+				}
+				set_title_flag = inherit_flag
+			}
+		}
+		if = {
+			limit = {
+				character = event_target:target_liege
+				primary_title = {
+					OR = {
+						has_title_flag = noble_mark
+						has_title_flag = noble_duke
+						has_title_flag = noble_king
+						has_title_flag = warlord_flag
+					}
+				}
+				any_realm_character = {
+					NOT = { character = ROOT }
+					is_landed=yes
+					is_dying=no
+					is_adult=yes
+					is_female=no
+					prisoner=no
+					culture=ROOT
+					religion=ROOT
+					NOT = { dynasty = none }
+					OR = {
+						tier = DUKE
+						tier = COUNT
+					}
+					is_liege_or_above = ROOT
+					NOT = { distance = { who = ROOT distance = 50 } }
+				}
+			}
+			random_realm_character = {
+				limit = {
+					NOT = { character = ROOT }
+					is_landed=yes
+					is_dying=no
+					is_adult=yes
+					is_female=no
+					prisoner=no
+					culture=ROOT
+					religion=ROOT
+					NOT = { dynasty = none }
+					OR = {
+						tier = DUKE
+						tier = COUNT
+					}
+					is_liege_or_above = ROOT
+					NOT = { distance = { who = ROOT distance = 50 } }
+				}
+				save_event_target_as = target_liege
+			}
+		}
+		if = {
+			limit = {
+				character = event_target:target_liege
+				primary_title = {
+					OR = {
+						has_title_flag = noble_mark
+						has_title_flag = noble_duke
+						has_title_flag = noble_king
+						has_title_flag = warlord_flag
+					}
+				}
+				NOT = {
+					any_realm_character = {
+						NOT = { character = ROOT }
+						is_landed=yes
+						is_dying=no
+						is_adult=yes
+						is_female=no
+						prisoner=no
+						culture=ROOT
+						religion=ROOT
+						NOT = { dynasty = none }
+						OR = {
+							tier = DUKE
+							tier = COUNT
+						}
+						is_liege_or_above = ROOT
+						NOT = { distance = { who = ROOT distance = 50 } }
+					}
+				}
+			}
+			current_heir = {
+				top_liege = {
+					save_event_target_as = target_liege
+				}
+			}
+		}
+		if = {
+			limit = {
+				character = event_target:target_liege
+				primary_title = {
+					NOR = {
+						has_title_flag = noble_mark
+						has_title_flag = noble_duke
+						has_title_flag = noble_king
+						has_title_flag = warlord_flag
+					}
+				}
+			}
+			primary_title = { save_event_target_as = target_title }
+			random_realm_character = {
+				limit = {
+					NOT = { character = ROOT }
+					is_landed=yes
+					is_dying=no
+					is_adult=yes
+					is_female=no
+					prisoner=no
+					culture=ROOT
+					religion=ROOT
+					NOT = { dynasty = none }
+					OR = {
+						tier = DUKE
+						tier = COUNT
+					}
+					OR = {
+						any_demesne_title = { de_jure_liege_or_above = event_target:target_title }
+						capital_holding = {
+							OR = {
+								kingdom = {
+									title = event_target:target_title
+								}
+								duchy = {
+									title = event_target:target_title
+								}
+							}
+						}
+					}
+					NOT = { distance = { who = ROOT distance = 50 } }
+				}
+				save_event_target_as = target_liege
+			}
+		}
+		event_target:target_heir = {
+			set_character_flag = heir_flag
+			if = {
+				limit = {
+					is_landed = no
+					NOT = { ROOT = { current_heir = { character = event_target:target_heir } } }
+				}
+				ROOT = {
+					current_heir = {
+						opinion = { who = PREVPREV modifier = opinion_oldheir_target }
+						reverse_opinion = { who = PREVPREV modifier = opinion_oldheir_target }
+					}
+				}
+			}
+			if = {
+				limit = {
+					is_landed = yes
+					independent = no
+				}
+				liege = {
+					opinion = { who = PREV modifier = opinion_oldheir_target }
+					reverse_opinion = { who = PREV modifier = opinion_oldheir_target }
+				}
+			}
+			if = {
+				limit = { NOT = { character = event_target:target_liege } }
+				event_target:target_liege = {
+					opinion = { who = PREV modifier = opinion_heir_target }
+					reverse_opinion = { who = PREV modifier = opinion_heir_target }
+				}
+			}
+			if = {
+				limit = { character = event_target:target_liege }
+				set_character_flag = liege_flag
+			}
+		}
+		if = {
+			limit = { independent = yes }
+			random_demesne_title = {
+				limit = {
+					holder_scope = { character = ROOT }
+					has_title_flag = inherit_flag
+					real_tier = KING
+				}
+				set_title_flag = independent_flag
+				break = yes
+			}
+			random_demesne_title = {
+				limit = {
+					holder_scope = { character = ROOT }
+					has_title_flag = inherit_flag
+					real_tier = DUKE
+				}
+				set_title_flag = independent_flag
+				break = yes
+			}
+			capital_holding = {
+				county = {
+					set_title_flag = independent_flag
+				}
+			}
+		}
+	}
+}
+
+character_event = { # Limit Territory
+	id = MAN.17
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	only_playable = yes
+	has_character_flag = heir_flag
+	
+	trigger = {
+		has_game_started = yes
+		NOT = { has_character_flag = inherit_empire }
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				FROMFROM = {
+					tier = EMPEROR
+				}
+			}
+			set_character_flag = inherit_empire
+			character_event = { id = MAN.20 days = 1 }
+			break = yes
+		}
+		if = {
+			limit = {
+				has_character_flag = liege_flag
+			}
+			FROM = {
+				clr_title_flag = inherit_flag
+				save_event_target_as = target_title
+				ROOT = {
+					character_event = { id = MAN.18 }
+					character_event = { id = MAN.20 days = 1 }
+				}
+				break = yes
+			}
+		}
+		random_playable_ruler = {
+			limit = { has_opinion_modifier = { who = ROOT modifier = opinion_heir_target } }
+			save_event_target_as = target_liege
+		}
+		FROM = {
+			if = {
+				limit = {
+					has_title_flag = inherit_flag
+				}
+				clr_title_flag = inherit_flag
+				save_event_target_as = target_title
+				event_target:target_liege = {
+					event_target:target_title = {
+						grant_title_no_opinion = PREV
+					}
+					character_event = { id = MAN.18 }
+				}
+				random_playable_ruler = {
+					limit = { has_opinion_modifier = { who = ROOT modifier = opinion_oldheir_target } }
+					ROOT = { set_defacto_liege = PREV }
+				}
+			}
+		}
+		any_demesne_title = {
+			if = {
+				limit = {
+					holder_scope = { character = ROOT }
+					has_title_flag = inherit_flag
+				}
+				clr_title_flag = inherit_flag
+				save_event_target_as = target_title
+				event_target:target_liege = {
+					event_target:target_title = {
+						grant_title_no_opinion = PREV
+					}
+					character_event = { id = MAN.18 }
+				}
+			}
+		}
+		event_target:target_liege = { character_event = { id = MAN.20 days = 1 } }
+	}
+}
+
+character_event = { # Liege handles land
+	id = MAN.18
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				capital_holding = {
+					de_jure_liege_or_above = event_target:target_title
+				}
+			}
+			character_event = { id = MAN.19 }
+			break = yes
+		}
+		### KING
+		if = {
+			limit = {
+				event_target:target_title = {
+					NOT = { higher_tier_than = KING }
+					tier = KING
+				}
+			}
+			random_realm_character = {
+				limit = {
+					NOT = { character = ROOT }
+					is_ruler=yes
+					is_dying=no
+					is_adult=yes
+					is_female=no
+					prisoner=no
+					culture=ROOT
+					religion=ROOT
+					NOT = { dynasty = none }
+					OR = {
+						tier = COUNT
+						tier = DUKE
+					}
+					OR = {
+						any_demesne_title = { de_jure_liege_or_above = event_target:target_title }
+						capital_holding = {
+							kingdom = {
+								title = event_target:target_title
+							}
+						}
+					}
+					has_newly_acquired_titles = yes
+				}
+				character_event = { id = MAN.19 }
+				break = yes
+			}
+			random_realm_character = {
+				limit = {
+					NOT = { character = ROOT }
+					is_ruler=yes
+					is_dying=no
+					is_adult=yes
+					is_female=no
+					prisoner=no
+					culture=ROOT
+					religion=ROOT
+					NOT = { dynasty = none }
+					OR = {
+						tier = COUNT
+						tier = DUKE
+					}
+					OR = {
+						any_demesne_title = { de_jure_liege_or_above = event_target:target_title }
+						capital_holding = {
+							kingdom = {
+								title = event_target:target_title
+							}
+						}
+					}
+				}
+				character_event = { id = MAN.19 }
+				break = yes
+			}
+		}
+		### DUKE
+		if = {
+			limit = {
+				event_target:target_title = {
+					NOT = { higher_tier_than = DUKE }
+					tier = DUKE
+				}
+			}
+			random_realm_character = {
+				limit = {
+					NOT = { character = ROOT }
+					is_ruler=yes
+					is_dying=no
+					is_adult=yes
+					is_female=no
+					prisoner=no
+					culture=ROOT
+					religion=ROOT
+					NOT = { dynasty = none }
+					tier = COUNT
+					OR = {
+						any_demesne_title = { de_jure_liege_or_above = event_target:target_title }
+						capital_holding = {
+							duchy = {
+								title = event_target:target_title
+							}
+						}
+					}
+					has_newly_acquired_titles = yes
+				}
+				character_event = { id = MAN.19 }
+				break = yes
+			}
+			random_realm_character = {
+				limit = {
+					NOT = { character = ROOT }
+					is_ruler=yes
+					is_dying=no
+					is_adult=yes
+					is_female=no
+					prisoner=no
+					culture=ROOT
+					religion=ROOT
+					NOT = { dynasty = none }
+					tier = COUNT
+					OR = {
+						any_demesne_title = { de_jure_liege_or_above = event_target:target_title }
+						capital_holding = {
+							duchy = {
+								title = event_target:target_title
+							}
+						}
+					}
+				}
+				character_event = { id = MAN.19 }
+				break = yes
+			}
+		}
+		### COUNT
+		if = {
+			limit = {
+				event_target:target_title = {
+					NOT = { higher_tier_than = COUNT }
+					tier = COUNT
+				}
+			}
+			random_realm_character = {
+				limit = {
+					NOT = { character = ROOT }
+					is_ruler=yes
+					is_dying=no
+					is_adult=yes
+					is_female=no
+					prisoner=no
+					culture=ROOT
+					religion=ROOT
+					NOT = { dynasty = none }
+					higher_tier_than = COUNT
+					NOT = { demesne_size = 1 }
+					has_newly_acquired_titles = yes
+				}
+				character_event = { id = MAN.19 }
+				break = yes
+			}
+			random_realm_character = {
+				limit = {
+					NOT = { character = ROOT }
+					is_ruler=yes
+					is_dying=no
+					is_adult=yes
+					is_female=no
+					prisoner=no
+					culture=ROOT
+					religion=ROOT
+					NOT = { dynasty = none }
+					higher_tier_than = COUNT
+					NOT = { demesne_size = 1 }
+				}
+				character_event = { id = MAN.19 }
+				break = yes
+			}
+		}
+		### Everyone
+		random_courtier = {
+			limit = {
+				is_dying=no
+				is_adult=yes
+				is_female=no
+				prisoner=no
+				is_ruler=no
+				culture=ROOT
+				religion=ROOT
+				NOT = { is_primary_heir = ROOT }
+				NOT = { dynasty = none }
+				reverse_opinion = { who = ROOT value = 70 }
+			}
+			character_event = { id = MAN.19 }
+			break = yes
+		}
+		random_courtier = {
+			limit = {
+				is_dying=no
+				is_adult=yes
+				is_female=no
+				prisoner=no
+				is_ruler=no
+				culture=ROOT
+				religion=ROOT
+				NOT = { is_primary_heir = ROOT }
+				NOT = { dynasty = none }
+				trait = gentleman_3
+			}
+			remove_trait = gentleman_3
+			character_event = { id = MAN.19 }
+			break = yes
+		}
+		random_courtier = {
+			limit = {
+				is_dying=no
+				is_adult=yes
+				is_female=no
+				prisoner=no
+				is_ruler=no
+				culture=ROOT
+				religion=ROOT
+				NOT = { is_primary_heir = ROOT }
+				NOT = { dynasty = none }
+				trait = gentleman_2
+			}
+			remove_trait = gentleman_2
+			character_event = { id = MAN.19 }
+			break = yes
+		}
+		random_courtier = {
+			limit = {
+				is_dying=no
+				is_adult=yes
+				is_female=no
+				prisoner=no
+				is_ruler=no
+				culture=ROOT
+				religion=ROOT
+				NOT = { is_primary_heir = ROOT }
+				NOT = { dynasty = none }
+				trait = gentleman_1
+			}
+			remove_trait = gentleman_1
+			character_event = { id = MAN.19 }
+			break = yes
+		}
+		random_courtier = {
+			limit = {
+				is_dying=no
+				is_adult=yes
+				is_female=no
+				prisoner=no
+				is_ruler=no
+				culture=ROOT
+				religion=ROOT
+				NOT = { is_primary_heir = ROOT }
+				NOT = { dynasty = none }
+				trait = gentleman_0
+			}
+			remove_trait = gentleman_0
+			character_event = { id = MAN.19 }
+			break = yes
+		}
+		random_courtier = {
+			limit = {
+				is_dying=no
+				is_adult=yes
+				is_female=no
+				prisoner=no
+				is_ruler=no
+				culture=ROOT
+				religion=ROOT
+				NOT = { is_primary_heir = ROOT }
+				NOT = { dynasty = none }
+				trait = crusader
+			}
+			character_event = { id = MAN.19 }
+			break = yes
+		}
+		random_courtier = {
+			limit = {
+				is_dying=no
+				is_adult=yes
+				is_female=no
+				prisoner=no
+				is_ruler=no
+				culture=ROOT
+				religion=ROOT
+				NOT = { is_primary_heir = ROOT }
+				NOT = { dynasty = none }
+				reverse_opinion = { who = ROOT value = 30 }
+			}
+			character_event = { id = MAN.19 }
+			break = yes
+		}
+		random_courtier = {
+			limit = {
+				is_dying=no
+				is_adult=yes
+				is_female=no
+				prisoner=no
+				is_ruler=no
+				culture=ROOT
+				religion=ROOT
+				NOT = { is_primary_heir = ROOT }
+				NOT = { dynasty = none }
+			}
+			character_event = { id = MAN.19 }
+			break = yes
+		}
+		random_realm_character = {
+			limit = {
+				NOT = { character = ROOT }
+				is_ruler=yes
+				is_dying=no
+				is_adult=yes
+				is_female=no
+				prisoner=no
+				NOT = { dynasty = none }
+				tier = COUNT
+				OR = {
+					any_demesne_title = { de_jure_liege_or_above = event_target:target_title }
+					capital_holding = {
+						kingdom = {
+							title = event_target:target_title
+						}
+					}
+					capital_holding = {
+						duchy = {
+							title = event_target:target_title
+						}
+					}
+				}
+			}
+			character_event = { id = MAN.19 }
+			break = yes
+		}
+		random_realm_character = {
+			limit = {
+				NOT = { character = ROOT }
+				is_ruler=no
+				is_dying=no
+				is_adult=yes
+				is_female=no
+				prisoner=no
+				culture=ROOT
+				religion=ROOT
+				NOT = { dynasty = none }
+			}
+			character_event = { id = MAN.19 }
+			break = yes
+		}
+		random_realm_character = {
+			limit = {
+				NOT = { character = ROOT }
+				is_ruler=no
+				is_dying=no
+				is_adult=yes
+				is_female=no
+				prisoner=no
+				NOT = { dynasty = none }
+			}
+			character_event = { id = MAN.19 }
+			break = yes
+		}
+		create_character = {
+			dynasty = random
+			religion = ROOT
+			culture = ROOT
+			random_traits = yes
+			female = no
+			age = 30
+		}
+		new_character = {
+			character_event = { id = MAN.19 }
+		}
+	}
+}
+
+character_event = { # Handle Land
+	id = MAN.19
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	immediate = {
+		event_target:target_title = {
+			grant_title = ROOT
+		}
+		FROM = {
+			any_vassal = {
+				limit = {
+					NOT = { character = ROOT }
+					NOT = { real_tier = BARON }
+					capital_holding = {
+						de_jure_liege_or_above = event_target:target_title
+					}
+				}
+				set_defacto_liege = ROOT
+			}
+		}
+		if = {
+			limit = {
+				primary_title = {
+					OR = {
+						has_title_flag = noble_mark
+						has_title_flag = noble_duke
+						has_title_flag = noble_king
+						has_title_flag = warlord_flag
+					}
+					tier = COUNT
+				}
+				event_target:target_title = {
+					tier = BARON
+					dejure_liege_title = {
+						dejure_liege_title = {
+							holder_scope = {
+								NOT = { character = ROOT }
+								is_liege_or_above = FROM
+							}
+						}
+					}
+				}
+			}
+			event_target:target_title = {
+				dejure_liege_title = {
+					dejure_liege_title = {
+						holder_scope = {
+							ROOT = { set_defacto_liege = PREV }
+							break = yes
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				primary_title = {
+					OR = {
+						has_title_flag = noble_mark
+						has_title_flag = noble_duke
+						has_title_flag = noble_king
+						has_title_flag = warlord_flag
+					}
+					tier = COUNT
+				}
+				event_target:target_title = {
+					dejure_liege_title = {
+						holder_scope = {
+							NOT = { character = ROOT }
+							is_liege_or_above = FROM
+						}
+					}
+				}
+			}
+			event_target:target_title = {
+				dejure_liege_title = {
+					holder_scope = {
+						ROOT = { set_defacto_liege = PREV }
+						break = yes
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				primary_title = {
+					OR = {
+						has_title_flag = noble_mark
+						has_title_flag = noble_duke
+						has_title_flag = noble_king
+						has_title_flag = warlord_flag
+					}
+					tier = COUNT
+				}
+				event_target:target_title = {
+					dejure_liege_title = {
+						dejure_liege_title = {
+							holder_scope = {
+								NOT = { character = ROOT }
+								is_liege_or_above = FROM
+							}
+						}
+					}
+				}
+			}
+			event_target:target_title = {
+				dejure_liege_title = {
+					dejure_liege_title = {
+						holder_scope = {
+							ROOT = { set_defacto_liege = PREV }
+							break = yes
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				primary_title = {
+					OR = {
+						has_title_flag = noble_mark
+						has_title_flag = noble_duke
+						has_title_flag = noble_king
+						has_title_flag = warlord_flag
+					}
+					tier = COUNT
+				}
+				event_target:target_title = {
+					dejure_liege_title = {
+						dejure_liege_title = {
+							dejure_liege_title = {
+								holder_scope = {
+									NOT = { character = ROOT }
+									is_liege_or_above = FROM
+								}
+							}
+						}
+					}
+				}
+			}
+			event_target:target_title = {
+				dejure_liege_title = {
+					dejure_liege_title = {
+						dejure_liege_title = {
+							holder_scope = {
+								ROOT = { set_defacto_liege = PREV }
+								break = yes
+							}
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				primary_title = {
+					OR = {
+						has_title_flag = noble_mark
+						has_title_flag = noble_duke
+						has_title_flag = noble_king
+						has_title_flag = warlord_flag
+					}
+					tier = DUKE
+				}
+				event_target:target_title = {
+					tier = COUNT
+					dejure_liege_title = {
+						dejure_liege_title = {
+							holder_scope = {
+								NOT = { character = ROOT }
+								is_liege_or_above = FROM
+							}
+						}
+					}
+				}
+			}
+			event_target:target_title = {
+				dejure_liege_title = {
+					dejure_liege_title = {
+						holder_scope = {
+							ROOT = { set_defacto_liege = PREV }
+							break = yes
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				primary_title = {
+					OR = {
+						has_title_flag = noble_mark
+						has_title_flag = noble_duke
+						has_title_flag = noble_king
+						has_title_flag = warlord_flag
+					}
+					tier = DUKE
+				}
+				event_target:target_title = {
+					tier = COUNT
+					dejure_liege_title = {
+						dejure_liege_title = {
+							dejure_liege_title = {
+								holder_scope = {
+									NOT = { character = ROOT }
+									is_liege_or_above = FROM
+								}
+							}
+						}
+					}
+				}
+			}
+			event_target:target_title = {
+				dejure_liege_title = {
+					dejure_liege_title = {
+						dejure_liege_title = {
+							holder_scope = {
+								ROOT = { set_defacto_liege = PREV }
+								break = yes
+							}
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				primary_title = {
+					OR = {
+						has_title_flag = noble_mark
+						has_title_flag = noble_duke
+						has_title_flag = noble_king
+						has_title_flag = warlord_flag
+					}
+					tier = DUKE
+				}
+				event_target:target_title = {
+					dejure_liege_title = {
+						holder_scope = {
+							NOT = { character = ROOT }
+							is_liege_or_above = FROM
+						}
+					}
+				}
+			}
+			event_target:target_title = {
+				dejure_liege_title = {
+					holder_scope = {
+						ROOT = { set_defacto_liege = PREV }
+						break = yes
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				primary_title = {
+					OR = {
+						has_title_flag = noble_mark
+						has_title_flag = noble_duke
+						has_title_flag = noble_king
+						has_title_flag = warlord_flag
+					}
+					tier = DUKE
+				}
+				event_target:target_title = {
+					dejure_liege_title = {
+						dejure_liege_title = {
+							holder_scope = {
+								NOT = { character = ROOT }
+								is_liege_or_above = FROM
+							}
+						}
+					}
+				}
+			}
+			event_target:target_title = {
+				dejure_liege_title = {
+					dejure_liege_title = {
+						holder_scope = {
+							ROOT = { set_defacto_liege = PREV }
+							break = yes
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				primary_title = {
+					OR = {
+						has_title_flag = noble_mark
+						has_title_flag = noble_duke
+						has_title_flag = noble_king
+						has_title_flag = warlord_flag
+					}
+					tier = KING
+				}
+				event_target:target_title = {
+					tier = COUNT
+					dejure_liege_title = {
+						dejure_liege_title = {
+							dejure_liege_title = {
+								holder_scope = {
+									NOT = { character = ROOT }
+									is_liege_or_above = FROM
+								}
+							}
+						}
+					}
+				}
+			}
+			event_target:target_title = {
+				dejure_liege_title = {
+					dejure_liege_title = {
+						dejure_liege_title = {
+							holder_scope = {
+								ROOT = { set_defacto_liege = PREV }
+								break = yes
+							}
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				primary_title = {
+					OR = {
+						has_title_flag = noble_mark
+						has_title_flag = noble_duke
+						has_title_flag = noble_king
+						has_title_flag = warlord_flag
+					}
+					tier = KING
+				}
+				event_target:target_title = {
+					tier = DUKE
+					dejure_liege_title = {
+						dejure_liege_title = {
+							holder_scope = {
+								NOT = { character = ROOT }
+								is_liege_or_above = FROM
+							}
+						}
+					}
+				}
+			}
+			event_target:target_title = {
+				dejure_liege_title = {
+					dejure_liege_title = {
+						holder_scope = {
+							ROOT = { set_defacto_liege = PREV }
+							break = yes
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				primary_title = {
+					OR = {
+						has_title_flag = noble_mark
+						has_title_flag = noble_duke
+						has_title_flag = noble_king
+						has_title_flag = warlord_flag
+					}
+					tier = KING
+				}
+				event_target:target_title = {
+					dejure_liege_title = {
+						holder_scope = {
+							NOT = { character = ROOT }
+							is_liege_or_above = FROM
+						}
+					}
+				}
+			}
+			event_target:target_title = {
+				dejure_liege_title = {
+					holder_scope = {
+						ROOT = { set_defacto_liege = PREV }
+						break = yes
+					}
+				}
+			}
+		}
+		dejure_liege_title = {
+			holder_scope = {
+				if = {
+					limit = { is_liege_or_above = FROM }
+					ROOT = { set_defacto_liege = PREV }
+					break = yes
+				}
+			}
+		}
+		set_defacto_liege = FROM
+	}
+}
+
+character_event = { # Handle Land
+	id = MAN.20
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	immediate = {
+		if = {
+			limit = { has_character_flag = inherit_empire }
+			clr_character_flag = inherit_empire
+			break = yes
+		}
+		remove_claim = FROMFROM
+		FROM = {
+			clr_character_flag = heir_flag
+			clr_character_flag = liege_flag
+			remove_claim = FROMFROM
+			any_sibling = {
+				limit = { has_claim = FROMFROM }
+				remove_claim = FROMFROM
+			}
+		}
+		if = {
+			limit = {
+				FROMFROM = {
+					has_title_flag = independent_flag
+				}
+			}
+			FROMFROM = {
+				clr_title_flag = independent_flag
+			}
+			set_defacto_liege = THIS
+			break = yes
+		}
+		random_playable_ruler = {
+			limit = { has_opinion_modifier = { who = FROM modifier = opinion_oldheir_target } }
+			remove_opinion = { who = FROM modifier = opinion_oldheir_target }
+			reverse_remove_opinion = { who = FROM modifier = opinion_oldheir_target }
+		}
+		remove_opinion = { who = FROM modifier = opinion_heir_target }
+		reverse_remove_opinion = { who = FROM modifier = opinion_heir_target }
+	}
+}
+
+#Remove Warlord
+character_event = {
+	id = MAN.21
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	only_rulers = yes
+	
+	trigger = {
+		has_game_started = yes
+		FROM = {
+			is_titular = yes
+			OR = {
+				has_title_flag = noble_mark
+				has_title_flag = noble_duke
+				has_title_flag = noble_king
+				has_title_flag = warlord_flag
+			}
+		}
+		OR = {
+			NOT = { is_close_relative = FROMFROM }
+			AND = {
+				FROM = { has_title_flag = noble_mark }
+				any_demesne_title = {
+					OR = {
+						AND = {
+							has_title_flag = noble_mark
+							count = 2
+						}
+						has_title_flag = noble_duke
+						has_title_flag = noble_king
+					}
+				}
+			}
+			AND = {
+				FROM = { has_title_flag = noble_duke }
+				any_demesne_title = {
+					OR = {
+						AND = {
+							has_title_flag = noble_duke
+							count = 2
+						}
+						has_title_flag = noble_king
+					}
+				}
+			}
+			AND = {
+				FROM = { has_title_flag = noble_king }
+				any_demesne_title = {
+					has_title_flag = noble_king
+					count = 2
+				}
+			}
+			AND = {
+				FROM = { has_title_flag = warlord_flag }
+				any_demesne_title = {
+					has_title_flag = warlord_flag
+					count = 2
+				}
+			}
+			OR = {
+				primary_title = {
+					tier = EMPEROR
+					NOR = {
+						has_title_flag = premier_title
+						has_title_flag = warlord_flag
+					}
+				}
+				num_of_emperor_titles = 2
+				has_landed_title = k_confucian
+			}
+		}
+	}
+	
+	immediate = {
+		top_liege = {
+			save_event_target_as = target_liege
+		}
+		FROM = {
+			save_event_target_as = target_title
+		}
+		character_event = { id = WRL.4 }
+	}
+}
+
+#Remove Independent
+character_event = {
+	id = MAN.22
+	
+	hide_window = yes
+	
+	only_rulers = yes
+	
+	trigger = {
+		any_demesne_title = {
+			OR = {
+				has_title_flag = inherit_flag
+				has_title_flag = independent_flag
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+		modifier = {
+			factor = 0
+			any_demesne_title = {
+				OR = {
+					has_title_flag = inherit_flag
+					has_title_flag = independent_flag
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		any_demesne_title = {
+			limit = {
+				OR = {
+					has_title_flag = inherit_flag
+					has_title_flag = independent_flag
+				}
+			}
+			clr_title_flag = inherit_flag
+			clr_title_flag = independent_flag
+		}
+	}
+}
+
+character_event = { # Remove Historical
+	id = MAN.23
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	only_playable = yes
+	religion = confucian
+	
+	trigger = {
+		any_demesne_title = {
+			is_titular = yes
+			is_primary_type_title = yes
+			NOR = {
+				tier = EMPEROR
+				has_title_flag = noble_mark
+				has_title_flag = noble_duke
+				has_title_flag = noble_king
+				has_title_flag = warlord_flag
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 1000
+			religion = confucian
+			any_demesne_title = {
+				is_titular = yes
+				is_primary_type_title = yes
+				NOR = {
+					tier = EMPEROR
+					has_title_flag = noble_mark
+					has_title_flag = noble_duke
+					has_title_flag = noble_king
+					has_title_flag = warlord_flag
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		any_demesne_title = {
+			limit = {
+				is_titular = yes
+				is_primary_type_title = yes
+				NOR = {
+					tier = EMPEROR
+					has_title_flag = noble_mark
+					has_title_flag = noble_duke
+					has_title_flag = noble_king
+					has_title_flag = warlord_flag
+				}
+			}
+			activate_title = { title = THIS status = no }
+			unsafe_destroy_landed_title = THIS
+		}
+	}
+}
+
+#Remove Empires
+character_event = {
+	id = MAN.24
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	only_playable = yes
+	only_independent = yes
+	
+	trigger = {
+		num_of_emperor_titles = 2
+		FROM = { tier = EMPEROR }
+	}
+	
+	immediate = {
+		FROM = {
+			activate_title = { title = THIS status = no }
+			unsafe_destroy_landed_title = THIS
+		}
+	}
+}
+
+# Conquer k_confucian
+character_event = { 
+	id = MAN.25
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	only_playable = yes
+	
+	trigger = {
+		FROMFROM = { NOT = { tier = EMPEROR } }
+		FROM = { title = k_confucian }
+		primary_title = { NOT = { real_tier = EMPEROR } }
+	}
+	
+	immediate = {
+		character_event = { id = DYN.1 }
+	}
+}
+
+# Inherit k_confucian
+character_event = {
+	id = MAN.26
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	only_playable = yes
+	
+	trigger = {
+		independent = no
+		has_landed_title = k_confucian
+		top_liege = {
+			NOT = { character = ROOT }
+			primary_title = {
+				NOR = {
+					has_title_flag = premier_title
+					has_title_flag = warlord_flag
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		top_liege = {
+			save_event_target_as = target_liege
+		}
+		any_demesne_title = {
+			grant_title_no_opinion = event_target:target_liege
+		}
+	}
+}
+
+### Imperial Assign ###
+character_event = {
+	id = MAN.27
+	
+	hide_window = yes
+	
+	only_rulers = yes
+	
+	trigger = {
+		k_confucian = { has_holder = yes }
+		OR = {
+			has_landed_title = c_guard
+			has_landed_title = c_eunuch
+			has_landed_title = c_empress
+		}
+		NOT = { has_landed_title = k_confucian }
+		liege = {
+			NOT = { has_landed_title = k_confucian }
+		}
+		top_liege = {
+			has_landed_title = k_confucian
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 120
+		modifier = {
+			factor = 0
+			k_confucian = { has_holder = yes }
+			OR = {
+				has_landed_title = c_guard
+				has_landed_title = c_eunuch
+				has_landed_title = c_empress
+			}
+			NOT = { has_landed_title = k_confucian }
+			liege = {
+				NOT = { has_landed_title = k_confucian }
+			}
+			top_liege = {
+				has_landed_title = k_confucian
+			}
+		}
+	}
+	
+	immediate = {
+		k_confucian = {
+			holder_scope = {
+				save_event_target_as = target_emperor
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_landed_title = c_guard
+					has_landed_title = c_eunuch
+					has_landed_title = c_empress
+				}
+			}
+			set_defacto_liege = event_target:target_emperor
+		}
+	}
+}
+
+### Guard Assign ###
+character_event = {
+	id = MAN.28
+	
+	hide_window = yes
+	
+	only_rulers = yes
+	
+	trigger = {
+		has_landed_title = c_guard
+		OR = {
+			AND = {
+				has_landed_title = k_confucian
+				any_courtier = {
+					is_adult = yes
+					has_minor_title = title_bodyguard
+				}
+			}
+			AND = {
+				top_liege = {
+					NOT = {
+						has_landed_title = k_confucian
+					}
+				}
+				k_confucian = {
+					holder_scope = {
+						any_courtier = {
+							is_adult = yes
+							has_minor_title = title_bodyguard
+						}
+					}
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 120
+		modifier = {
+			factor = 0
+			has_landed_title = c_guard
+			OR = {
+				has_landed_title = k_confucian
+				top_liege = {
+					NOT = {
+						has_landed_title = k_confucian
+					}
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		k_confucian = {
+			holder_scope = {
+				if = {
+					limit = {
+						NOT = { has_landed_title = c_guard }
+					}
+					c_guard = { grant_title_no_opinion = PREV }
+				}
+				any_courtier = {
+					limit = {
+						is_adult = yes
+						has_minor_title = title_bodyguard
+						reverse_opinion = { who = ROOT value = 70 }
+					}
+					c_guard = {
+						grant_title = PREV
+					}
+					if = {
+						limit = { liege = { NOT = { has_landed_title = k_confucian } } }
+						set_defacto_liege = PREV
+					}
+					break = yes
+				}
+				any_courtier = {
+					limit = {
+						is_adult = yes
+						has_minor_title = title_bodyguard
+					}
+					c_guard = {
+						grant_title = PREV
+					}
+					if = {
+						limit = { liege = { NOT = { has_landed_title = k_confucian } } }
+						set_defacto_liege = PREV
+					}
+					break = yes
+				}
+			}
+		}
+	}
+}
+
+### Eunuch Assign ###
+character_event = {
+	id = MAN.29
+	
+	hide_window = yes
+	
+	only_rulers = yes
+	
+	trigger = {
+		has_landed_title = c_eunuch
+		OR = {
+			AND = {
+				has_landed_title = k_confucian
+				any_courtier = {
+					is_adult = yes
+					trait = eunuch
+				}
+			}
+			AND = {
+				top_liege = {
+					NOT = {
+						has_landed_title = k_confucian
+					}
+				}
+				k_confucian = {
+					holder_scope = {
+						any_courtier = {
+							is_adult = yes
+							trait = eunuch
+						}
+					}
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 120
+		modifier = {
+			factor = 0
+			has_landed_title = c_eunuch
+			OR = {
+				has_landed_title = k_confucian
+				top_liege = {
+					NOT = {
+						has_landed_title = k_confucian
+					}
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		k_confucian = {
+			holder_scope = {
+				if = {
+					limit = {
+						NOT = {
+							has_landed_title = c_eunuch
+						}
+					}
+					c_eunuch = { grant_title_no_opinion = PREV }
+				}
+				any_courtier = {
+					limit = {
+						is_adult = yes
+						trait = eunuch
+						reverse_opinion = { who = ROOT value = 70 }
+					}
+					c_eunuch = {
+						grant_title = PREV
+					}
+					if = {
+						limit = { liege = { NOT = { has_landed_title = k_confucian } } }
+						set_defacto_liege = PREV
+					}
+					break = yes
+				}
+				any_courtier = {
+					limit = {
+						is_adult = yes
+						trait = eunuch
+					}
+					c_eunuch = {
+						grant_title = PREV
+					}
+					if = {
+						limit = { liege = { NOT = { has_landed_title = k_confucian } } }
+						set_defacto_liege = PREV
+					}
+					break = yes
+				}
+			}
+		}
+	}
+}
+
+character_event = { # Add spouse
+	id = MAN.30
+	
+	hide_window = yes
+	
+	min_age = 20
+	only_playable = yes
+	prisoner = no
+	is_married = no
+	capable_only = yes
+	
+	ai = yes
+	
+	trigger = {
+		NOT = {
+			is_female = yes
+			age = 50
+		}
+		is_consort = no
+		is_landed = yes
+		NOR = {
+			trait = inner_court
+			trait = refuge
+		}
+		NOT = { dynasty = none }
+		NOT = {
+			any_child = {
+				is_female = no
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		days = 150
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				is_landed = no
+			}
+			break = yes
+		}
+		prestige = -50
+		if = {
+			limit = {
+				is_female = yes
+				NOT = { age = 24 }
+			}
+			create_character = {
+				dynasty = none
+				religion = ROOT
+				culture = ROOT
+				random_traits = yes
+				female = no
+				age = 24
+			}
+			new_character = {
+				add_spouse = ROOT
+			}
+			break = yes
+		}
+		if = {
+			limit = {
+				is_female = yes
+				NOT = { age = 30 }
+			}
+			create_character = {
+				dynasty = none
+				religion = ROOT
+				culture = ROOT
+				random_traits = yes
+				female = no
+				age = 30
+			}
+			new_character = {
+				add_spouse = ROOT
+			}
+			break = yes
+		}
+		if = {
+			limit = {
+				is_female = yes
+				NOT = { age = 40 }
+			}
+			create_character = {
+				dynasty = none
+				religion = ROOT
+				culture = ROOT
+				random_traits = yes
+				female = no
+				age = 40
+			}
+			new_character = {
+				add_spouse = ROOT
+			}
+			break = yes
+		}
+		if = {
+			limit = {
+				is_female = yes
+				age = 40
+			}
+			create_character = {
+				dynasty = none
+				religion = ROOT
+				culture = ROOT
+				random_traits = yes
+				female = no
+				age = 60
+			}
+			new_character = {
+				add_spouse = ROOT
+			}
+			break = yes
+		}
+		if = {
+			limit = {
+				is_female = no
+				NOT = { age = 30 }
+			}
+			create_character = {
+				dynasty = none
+				religion = ROOT
+				culture = ROOT
+				random_traits = yes
+				female = yes
+				age = 16
+			}
+			new_character = {
+				add_spouse = ROOT
+			}
+			break = yes
+		}
+		if = {
+			limit = {
+				is_female = no
+				NOT = { age = 40 }
+			}
+			create_character = {
+				dynasty = none
+				religion = ROOT
+				culture = ROOT
+				random_traits = yes
+				female = yes
+				age = 20
+			}
+			new_character = {
+				add_spouse = ROOT
+			}
+			break = yes
+		}
+		if = {
+			limit = {
+				is_female = no
+				age = 40
+			}
+			create_character = {
+				dynasty = none
+				religion = ROOT
+				culture = ROOT
+				random_traits = yes
+				female = yes
+				age = 30
+			}
+			new_character = {
+				add_spouse = ROOT
+			}
+			break = yes
+		}
+	}
+}
+
+##Coalition War - War Fails
+character_event = {
+	id = MAN.31
+	
+	is_triggered_only = yes	
+	
+	hide_window = yes
+	
+	has_global_flag = coalition_start
+	
+	trigger = {
+		NOT = {
+			any_playable_ruler = {
+				has_character_flag = coalition_leader
+			}
+		}
+	}
+
+	immediate = {
+		any_playable_ruler = {
+			limit = {
+				OR = {
+					has_character_flag = coalition_member
+					has_character_flag = neutral
+				}
+			}
+			character_event = { id = RTK.130014 }
+		}
+	}
+}
+
+#Setup Revolts and Jail
+character_event = {
+	id = MAN.32
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	only_playable = yes
+	has_character_flag = setup_flag
+	
+	immediate = {
+		clr_character_flag = setup_flag
+		if = {
+			limit = {
+				year = 184
+				NOT = { year = 185 }
+			}
+			character_event = { id = MAN.50 }
+		}
+	}
+}
+
+character_event = { # Clear Inner Court Claim
+	id = MAN.33
+	
+	hide_window = yes
+	
+	trigger = {
+		has_claim = c_empress
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+		modifier = {
+			factor = 0
+			has_claim = c_empress
+		}
+	}
+	
+	immediate = {
+		remove_claim = c_empress
+	}
+}
+
+character_event = { # Clear Yellow Guard Claim
+	id = MAN.34
+	
+	hide_window = yes
+	
+	trigger = {
+		has_claim = c_guard
+	}
+	
+	mean_time_to_happen = {
+		months = 120
+		modifier = {
+			factor = 0
+			has_claim = c_guard
+		}
+	}
+	
+	immediate = {
+		remove_claim = c_guard
+	}
+}
+
+#Combat Traits Initialization
+character_event = {
+	id = MAN.35
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	min_age = 15
+	
+	trigger = {
+		NOR = {
+			trait = duel_master_warrior
+			trait = duel_skilled_warrior
+			trait = duel_trained_warrior
+			trait = duel_poor_warrior
+		}
+		NOT = { has_character_flag = combat_init_flag }
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 5
+			NOT = { has_character_flag = combat_init_flag }
+			is_adult = yes
+		}
+	}
+	
+	immediate = {
+		set_character_flag = combat_init_flag
+		random_list = {
+			5 = { add_trait = duel_skilled_warrior }
+			30 = { add_trait = duel_trained_warrior }
+			55 = { add_trait = duel_poor_warrior }
+			10 = {
+				modifier = {
+					factor = 5
+					NOR = {
+						trait = misguided_warrior
+						trait = tough_soldier
+						trait = skilled_tactician
+						trait = brilliant_strategist
+						trait = duelist
+						trait = strong
+						trait = robust
+					}
+				}
+				modifier = {
+					factor = 5
+					is_female = yes
+					NOR = {
+						culture_group = yue
+						culture_group = tibetan
+						culture_group = man
+					}
+				}
+			}
+		}
+	}
+}
+
+character_event = { # Remove Duel Flags
+	id = MAN.36
+	
+	hide_window = yes
+	
+	trigger = {
+		is_adult = yes
+		OR = {
+			is_female = no
+			AND = {
+				is_female = yes
+				OR = {
+					culture_group = mongol
+					culture_group = yue
+					culture_group = tibetan
+					culture_group = man
+				}
+			}
+		}
+		has_character_flag = flag_battlefield_duel
+	}
+
+	mean_time_to_happen = {
+		months = 120
+		modifier = {
+			factor = 0
+			has_character_flag = flag_battlefield_duel
+		}
+	}
+	
+	immediate = {
+		clr_character_flag = flag_battlefield_duel
+	}
+}
+
+### Empress Eunuchs ###
+character_event = {
+	id = MAN.37
+	
+	hide_window = yes
+	
+	trigger = {
+		has_landed_title = c_empress
+		NOT = { has_landed_title = k_confucian }
+		NOT = { demesne_size = 1 }
+		any_courtier = {
+			is_adult = yes
+			is_female = no
+			dynasty = none
+			NOT = { trait = eunuch }
+		}
+	}
+	
+	immediate = {
+		liege = {
+			ROOT = {
+				any_courtier = {
+					limit = {
+						is_adult = yes
+						is_female = no
+						NOT = { dynasty = none }
+						NOT = { trait = eunuch }
+					}
+					move_character = PREVPREV
+				}
+			}
+		}
+		any_courtier = {
+			limit = {
+				is_ruler = no
+				is_adult = yes
+				is_female = no
+				dynasty = none
+				NOT = { trait = eunuch }
+			}
+			add_trait = eunuch
+		}
+	}
+}
+
+### Empress Set ###
+character_event = {
+	id = MAN.38
+	
+	hide_window = yes
+	
+	only_rulers = yes
+	
+	trigger = {
+		has_landed_title = c_empress
+		NOT = { has_landed_title = k_confucian }
+		OR = {
+			AND = {
+				is_female = no
+				k_confucian = {
+					holder_scope = {
+						is_female = no
+					}
+				}
+			}
+			AND = {
+				is_female = yes
+				k_confucian = {
+					holder_scope = {
+						is_female = yes
+					}
+				}
+			}
+		}
+	}
+
+	mean_time_to_happen = {
+		months = 120
+		modifier = {
+			factor = 0
+			has_landed_title = c_empress
+			NOT = { has_landed_title = k_confucian }
+			OR = {
+				AND = {
+					is_female = no
+					k_confucian = {
+						holder_scope = {
+							is_female = no
+						}
+					}
+				}
+				AND = {
+					is_female = yes
+					k_confucian = {
+						holder_scope = {
+							is_female = yes
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	immediate = {
+		k_confucian = {
+			holder_scope = {
+				spouse = {
+					c_empress = {
+						grant_title_no_opinion = PREV
+					}
+					break = yes
+				}
+				any_dynasty_member = {
+					limit = {
+						OR = {
+							AND = {
+								is_female = yes
+								is_adult = yes
+								PREV = { is_female = no }
+							}
+							AND = {
+								is_female = no
+								is_adult = yes
+								PREV = { is_female = yes }
+							}
+						}
+					}
+					c_empress = {
+						grant_title_no_opinion = PREV
+					}
+					break = yes
+				}
+			}
+		}
+	}
+}
+
+character_event = { # Stop Illegal War
+	id = MAN.39	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	war = yes
+	
+	trigger = {
+		has_landed_title = k_confucian
+		is_landed = no
+	}
+	
+	weight_multiplier = {
+		days = 1
+	}
+	
+	immediate = {
+		end_war = invalid
+	}
+}
+
+character_event = { # Remove founded_empire_flag
+	id = MAN.40
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	ai = no
+	
+	trigger = {
+		has_global_flag = founded_empire_flag
+	}
+	
+	weight_multiplier = {
+		days = 1
+		modifier = {
+			factor = 0.2
+		}
+	}
+	
+	immediate = {
+		clr_global_flag = founded_empire_flag
+	}
+}
+
+#Handle Consorts
+character_event = {
+	id = MAN.41
+	desc = EVTDESC_MAN.41
+	title = EVTTITLE_MAN.41
+	picture = GFX_evt_sultan
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		spouse = {
+			save_event_target_as = target_spouse
+		}
+		if = {
+			limit = { c_eunuch = { has_holder = yes } }
+			c_eunuch = {
+				holder_scope = {
+					set_defacto_liege = k_confucian
+					save_event_target_as = target_eunuch
+				}
+			}
+			any_courtier = {
+				limit = {
+					trait = eunuch
+					is_ruler = no
+				}
+				move_character = event_target:target_eunuch
+			}
+		}
+		any_consort = {
+			add_trait = inner_court
+		}
+		any_courtier = {
+			limit = {
+				OR = {
+					trait = inner_court
+					trait = eunuch
+				}
+				is_ruler = no
+			}
+			move_character = event_target:target_spouse
+		}
+	}
+	
+	option = {
+		name = OK
+	}
+}
+
+character_event = { # Add Petition
+	id = MAN.42
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	only_playable = yes
+	
+	trigger = {
+		is_feudal = yes
+	}
+	
+	immediate = {
+		random_list = {
+			40 = {
+				# Do Nothing
+			}
+			40 = {
+				character_event = { id = MAN.43	}
+			}
+			15 = {
+				character_event = { id = MAN.43	}
+				character_event = { id = MAN.43	}
+			}
+			5 = {
+				character_event = { id = MAN.43	}
+				character_event = { id = MAN.43	}
+				character_event = { id = MAN.43	}
+			}
+		}
+	}
+}
+
+character_event = {
+	id = MAN.43
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	immediate = {
+		random_demesne_province = {
+			save_event_target_as = target_province
+			if = {
+				limit = { has_province_modifier = petition_25 }
+				add_province_modifier = { name = peasant_crisis duration = 900 }
+				holder_scope = { character_event = { id = SAN.40 } }
+				break = yes
+			}
+			if = {
+				limit = {
+					NOR = {
+						has_province_modifier = petition_1
+						has_province_modifier = petition_2
+						has_province_modifier = petition_3
+						has_province_modifier = petition_4
+						has_province_modifier = petition_5
+						has_province_modifier = petition_6
+						has_province_modifier = petition_7
+						has_province_modifier = petition_8
+						has_province_modifier = petition_9
+						has_province_modifier = petition_10
+						has_province_modifier = petition_11
+						has_province_modifier = petition_12
+						has_province_modifier = petition_13
+						has_province_modifier = petition_14
+						has_province_modifier = petition_15
+						has_province_modifier = petition_16
+						has_province_modifier = petition_17
+						has_province_modifier = petition_18
+						has_province_modifier = petition_19
+						has_province_modifier = petition_20
+						has_province_modifier = petition_21
+						has_province_modifier = petition_22
+						has_province_modifier = petition_23
+						has_province_modifier = petition_24
+						has_province_modifier = petition_25
+					}
+				}
+				add_province_modifier = { name = petition_1 duration = 3600 }
+				break = yes
+			}
+			if = {
+				limit = { has_province_modifier = petition_1 }
+				remove_province_modifier = petition_1
+				add_province_modifier = { name = petition_2 duration = 3600 }
+				break = yes
+			}
+			if = {
+				limit = { has_province_modifier = petition_2 }
+				remove_province_modifier = petition_2
+				add_province_modifier = { name = petition_3 duration = 3600 }
+				break = yes
+			}
+			if = {
+				limit = { has_province_modifier = petition_3 }
+				remove_province_modifier = petition_3
+				add_province_modifier = { name = petition_4 duration = 3600 }
+				break = yes
+			}
+			if = {
+				limit = { has_province_modifier = petition_4 }
+				remove_province_modifier = petition_4
+				add_province_modifier = { name = petition_5 duration = 3600 }
+				break = yes
+			}
+			if = {
+				limit = { has_province_modifier = petition_5 }
+				remove_province_modifier = petition_5
+				add_province_modifier = { name = petition_6 duration = 3600 }
+				break = yes
+			}
+			if = {
+				limit = { has_province_modifier = petition_6 }
+				remove_province_modifier = petition_6
+				add_province_modifier = { name = petition_7 duration = 3600 }
+				break = yes
+			}
+			if = {
+				limit = { has_province_modifier = petition_7 }
+				remove_province_modifier = petition_7
+				add_province_modifier = { name = petition_8 duration = 3600 }
+				break = yes
+			}
+			if = {
+				limit = { has_province_modifier = petition_8 }
+				remove_province_modifier = petition_8
+				add_province_modifier = { name = petition_9 duration = 3600 }
+				break = yes
+			}
+			if = {
+				limit = { has_province_modifier = petition_9 }
+				remove_province_modifier = petition_9
+				add_province_modifier = { name = petition_10 duration = 3600 }
+				holder_scope = { character_event = { id = SAN.40 } }
+				break = yes
+			}
+			if = {
+				limit = { has_province_modifier = petition_10 }
+				remove_province_modifier = petition_10
+				add_province_modifier = { name = petition_11 duration = 3600 }
+				break = yes
+			}
+			if = {
+				limit = { has_province_modifier = petition_11 }
+				remove_province_modifier = petition_11
+				add_province_modifier = { name = petition_12 duration = 3600 }
+				break = yes
+			}
+			if = {
+				limit = { has_province_modifier = petition_12 }
+				remove_province_modifier = petition_12
+				add_province_modifier = { name = petition_13 duration = 3600 }
+				break = yes
+			}
+			if = {
+				limit = { has_province_modifier = petition_13 }
+				remove_province_modifier = petition_13
+				add_province_modifier = { name = petition_14 duration = 3600 }
+				break = yes
+			}
+			if = {
+				limit = { has_province_modifier = petition_14 }
+				remove_province_modifier = petition_14
+				add_province_modifier = { name = petition_15 duration = 3600 }
+				holder_scope = { character_event = { id = SAN.40 } }
+				break = yes
+			}
+			if = {
+				limit = { has_province_modifier = petition_15 }
+				remove_province_modifier = petition_15
+				add_province_modifier = { name = petition_16 duration = 3600 }
+				break = yes
+			}
+			if = {
+				limit = { has_province_modifier = petition_16 }
+				remove_province_modifier = petition_16
+				add_province_modifier = { name = petition_17 duration = 3600 }
+				break = yes
+			}
+			if = {
+				limit = { has_province_modifier = petition_17 }
+				remove_province_modifier = petition_17
+				add_province_modifier = { name = petition_18 duration = 3600 }
+				break = yes
+			}
+			if = {
+				limit = { has_province_modifier = petition_18 }
+				remove_province_modifier = petition_18
+				add_province_modifier = { name = petition_19 duration = 3600 }
+				break = yes
+			}
+			if = {
+				limit = { has_province_modifier = petition_19 }
+				remove_province_modifier = petition_19
+				add_province_modifier = { name = petition_20 duration = 3600 }
+				holder_scope = { character_event = { id = SAN.40 } }
+				break = yes
+			}
+			if = {
+				limit = { has_province_modifier = petition_20 }
+				remove_province_modifier = petition_20
+				add_province_modifier = { name = petition_21 duration = 3600 }
+				break = yes
+			}
+			if = {
+				limit = { has_province_modifier = petition_21 }
+				remove_province_modifier = petition_21
+				add_province_modifier = { name = petition_22 duration = 3600 }
+				break = yes
+			}
+			if = {
+				limit = { has_province_modifier = petition_22 }
+				remove_province_modifier = petition_22
+				add_province_modifier = { name = petition_23 duration = 3600 }
+				break = yes
+			}
+			if = {
+				limit = { has_province_modifier = petition_23 }
+				remove_province_modifier = petition_23
+				add_province_modifier = { name = petition_24 duration = 3600 }
+				break = yes
+			}
+			if = {
+				limit = { has_province_modifier = petition_24 }
+				remove_province_modifier = petition_24
+				add_province_modifier = { name = petition_25 duration = 3600 }
+				break = yes
+			}
+		}
+	}
+}
+
+#Destroy Imperial Court
+character_event = {
+	id = MAN.44
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+
+	immediate = {
+		k_confucian = {
+			activate_title = { title = THIS status = no }
+			unsafe_destroy_landed_title = THIS
+		}
+		c_penglai = {
+			holder_scope = {
+				c_guard = {
+					grant_title_no_opinion = PREV
+				}
+				c_empress = {
+					grant_title_no_opinion = PREV
+				}
+				c_eunuch = {
+					grant_title_no_opinion = PREV
+				}
+			}
+		}
+	}
+}
+
+character_event = { # Border Tensions
+	id = MAN.45
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	only_playable = yes
+	
+	trigger = {
+		OR = {
+			tier = EMPEROR
+			tier = KING
+			independent = yes
+		}
+		capital_scope = {
+			region = world_china
+		}
+	}
+	
+	immediate = {
+		random_independent_ruler = {
+			limit = {
+				is_landed = yes
+				capital_scope = {
+					region = world_china
+				}
+				NOT = { character = ROOT }
+				any_realm_province = {
+					any_neighbor_province = {
+						any_province_lord = {
+							OR = {
+								character = ROOT
+								any_liege = { character = ROOT }
+							}
+						}
+					}
+				}
+			}
+			random = {
+				chance = 50
+				modifier = {
+					factor = 1.2
+					year = 194
+				}
+				modifier = {
+					factor = 1.5
+					year = 220
+				}
+				modifier = {
+					factor = 1.5
+					e_china = { has_holder = no }
+				}
+				add_claim = ROOT
+				opinion = {
+					who = ROOT
+					modifier = opinion_border_tensions
+				}
+				ROOT = {
+					add_claim = PREV
+					opinion = {
+						who = PREV
+						modifier = opinion_border_tensions
+					}
+				}
+			}
+			break = yes
+		}
+	}
+}
+
+#46-49 Unused
+
+character_event = { # Remove initial claims
+	id = MAN.47
+
+	is_triggered_only = yes
+
+	hide_window = yes
+	
+	ai = no
+
+	trigger = {
+		NOT = { has_global_flag = added_claims_flag }
+	}
+
+	immediate = {
+		any_title = {
+			any_claimant = {
+				limit = {
+					NOR = {
+						liege = {
+							is_primary_war_attacker = yes
+							any_war = {
+								using_cb = other_claim
+							}
+						}
+						AND = {
+							is_primary_war_attacker = yes
+							OR = {
+								any_war = {
+									using_cb = claim_all
+								}
+								any_war = {
+									using_cb = claim
+								}
+							}
+						}
+					}
+				}
+				remove_claim = PREV
+			}
+		}
+	}
+}
+
+character_event = { # Set Flag
+	id = MAN.48
+
+	is_triggered_only = yes
+
+	hide_window = yes
+	
+	ai = no
+
+	trigger = {
+		has_game_started = yes
+		NOT = { has_global_flag = removed_claims_flag }
+	}
+
+	immediate = {
+		set_global_flag = removed_claims_flag
+		character_event = { id = MAN.49 days = 1 }
+	}
+}
+
+character_event = { # Set Claims
+	id = MAN.49
+
+	is_triggered_only = yes
+
+	hide_window = yes
+	
+	ai = no
+
+	trigger = {
+		NOT = { has_global_flag = added_claims_flag }
+	}
+
+	immediate = {
+		#Balgi
+		if = {
+			limit = {
+				year = 179
+				NOT = { year = 198 }
+			}
+			k_goguryeo = {
+				holder_scope = {
+					any_courtier = {
+						limit = { character = 2214 }
+						add_claim=k_goguryeo
+					}
+				}
+			}
+		}
+		
+		#Gongsun Zan
+		if = {
+			limit = { 
+				year = 184
+				NOT = { year = 194 }
+			}
+			d_gongsun = {
+				holder_scope = {
+					add_claim=k_you
+				}
+			}
+		}
+		
+		#Lu Jun
+		if = {
+			limit = {
+				year = 190
+				NOT = { year = 191 }
+				c_yutai = {
+					holder_scope = {
+						character = 3319
+					}
+				}
+			}
+			c_yutai = {
+				holder_scope = {
+					add_claim=d_jiujiang
+				}
+			}
+		}
+		
+		#Zhou Ang
+		if = {
+			limit = {
+				year = 190
+				NOT = { year = 191 }
+			}
+			d_danyang = {
+				holder_scope = {
+					any_courtier = {
+						limit = { character = 3378 }
+						add_claim=d_jiujiang
+					}
+				}
+			}
+		}
+		
+		#Liu Mao
+		if = {
+			limit = {
+				year = 190
+				NOT = { year = 191 }
+			}
+			d_k_langye = {
+				holder_scope = {
+					any_courtier = {
+						limit = { character = 3391 }
+						add_claim=d_jiujiang
+					}
+				}
+			}
+		}
+		
+		#Yuan Shao
+		if = {
+			limit = {
+				year = 190
+				NOT = { year = 191 }
+				d_bohai = {
+					holder_scope = {
+						character = 700
+					}
+				}
+			}
+			d_bohai = {
+				holder_scope = {
+					add_claim=k_ji
+					add_claim=c_ye
+				}
+			}
+		}
+		
+		#Zang Hong
+		if = {
+			limit = { 
+				year = 192
+				NOT = { year = 196 }
+			}
+			c_yan = {
+				holder_scope = {
+					any_courtier = {
+						limit = { character = 3742 }
+						add_claim=d_dong
+					}
+				}
+			}
+		}
+		
+		#Chen Yu
+		if = {
+			limit = { 
+				year = 193
+				NOT = { year = 196 }
+				c_hefei = {
+					holder_scope = {
+						character = 167
+					}
+				}
+			}
+			c_hefei = {
+				holder_scope = {
+					add_claim=k_yang
+				}
+			}
+		}
+		
+		#Yuan Shu
+		if = {
+			limit = {
+				year = 193
+				NOT = { year = 197 }
+				k_yuan = {
+					holder_scope = {
+						character = 700
+					}
+				}
+			}
+			k_yuan = {
+				holder_scope = {
+					add_claim=k_yang
+					add_claim=k_xu
+				}
+			}
+		}
+		
+		#Cao Cao
+		if = {
+			limit = { 
+				year = 194
+				NOT = { year = 196 }
+				k_cao = {
+					holder_scope = {
+						character = 400
+					}
+				}
+			}
+			k_cao = {
+				holder_scope = {
+					add_claim=k_yan
+				}
+			}
+		}
+		
+		#Cao Ren
+		if = {
+			limit = { 
+				year = 193
+				NOT = { year = 194 }
+			}
+			k_cao = {
+				holder_scope = {
+					any_courtier = {
+						limit = { character = 433 }
+						add_claim=d_guangyang
+					}
+				}
+			}
+		}
+		
+		#Zhou Shang
+		if = {
+			limit = { 
+				year = 194
+				NOT = { year = 196 }
+			}
+			k_yuan = {
+				holder_scope = {
+					any_courtier = {
+						limit = { character = 4290 }
+						add_claim=d_danyang
+					}
+				}
+			}
+		}
+		
+		#Cai Mao
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						year = 194
+						OR = {
+							month = 3
+							month = 4
+							month = 5
+							month = 6
+							month = 7
+							month = 8
+							month = 9
+							month = 10
+							month = 11
+						}
+					}
+					year = 195
+				}
+				NOT = { year = 196 }
+			}
+			k_jing = {
+				holder_scope = {
+					any_courtier = {
+						limit = { character = 4447 }
+						add_claim=k_yi
+					}
+				}
+			}
+		}
+		
+		#Guo Si
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						year = 194
+						OR = {
+							month = 3
+							month = 4
+							month = 5
+							month = 6
+							month = 7
+							month = 8
+							month = 9
+							month = 10
+							month = 11
+						}
+					}
+					year = 195
+				}
+				NOT = { year = 198 }
+				k_sili = {
+					holder_scope = {
+						character = 308
+					}
+				}
+			}
+			k_sili = {
+				holder_scope = {
+					add_claim=e_china
+				}
+			}
+		}
+		
+		#Li Zheng
+		if = {
+			limit = { 
+				year = 195
+				NOT = { year = 196 }
+			}
+			k_cao = {
+				holder_scope = {
+					any_courtier = {
+						limit = { character = 20476 }
+						add_claim=k_qing
+					}
+				}
+			}
+		}
+		
+		#Yuan Si
+		if = {
+			limit = {
+				year = 196
+				NOT = { year = 197 }
+			}
+			k_yuan = {
+				holder_scope = {
+					any_courtier = {
+						limit = { character = 712 }
+						add_claim=c_ku
+					}
+				}
+			}
+		}
+		
+		#Chen Yu
+		if = {
+			limit = { 
+				year = 197
+				NOT = { year = 198 }
+				c_fuchun = {
+					holder_scope = {
+						character = 167
+					}
+				}
+			}
+			c_fuchun = {
+				holder_scope = {
+					add_claim=d_wu
+				}
+			}
+		}
+		
+		#Xiang
+		if = {
+			limit = {
+				year = 197
+				NOT = { year = 198 }
+			}
+			e_zhong = {
+				holder_scope = {
+					any_courtier = {
+						limit = { character = 546 }
+						add_claim = d_runan
+					}
+				}
+			}
+		}
+		
+		#Cheng Pu
+		if = {
+			limit = {
+				year = 196
+				NOT = { year = 197 }
+			}
+			k_yuan = {
+				holder_scope = {
+					any_courtier = {
+						limit = { character = 515 }
+						add_claim = d_wu
+					}
+				}
+			}
+		}
+		
+		#Cheng Pu
+		if = {
+			limit = {
+				year = 197
+				NOT = { year = 198 }
+			}
+			e_zhong = {
+				holder_scope = {
+					any_courtier = {
+						limit = { character = 515 }
+						add_claim = d_danyang
+					}
+				}
+			}
+		}
+		
+		#Cheng Pu
+		if = {
+			limit = {
+				year = 198
+				NOT = { year = 199 }
+			}
+			e_zhong = {
+				holder_scope = {
+					any_courtier = {
+						limit = { character = 515 }
+						add_claim = d_lingling
+					}
+				}
+			}
+		}
+		
+		#Zhou Yu
+		if = {
+			limit = {
+				year = 199
+				OR = {
+					month = 5
+					month = 6
+					month = 7
+					month = 8
+					month = 9
+					month = 10
+					month = 11
+				}
+				NOT = { year = 200 }
+			}
+			k_sun = {
+				holder_scope = {
+					any_courtier = {
+						limit = { character = 10528 }
+						add_claim = d_jiangxia
+					}
+				}
+			}
+		}
+		
+		#Yuan Shao
+		if = {
+			limit = {
+				year = 199
+				NOT = { year = 203 }
+				e_yuan = {
+					holder_scope = {
+						character = 700
+					}
+				}
+			}
+			e_yuan = {
+				holder_scope = {
+					add_claim = e_china
+				}
+			}
+		}
+		
+		#Yuan Tan
+		if = {
+			limit = {
+				year = 202
+				OR = {
+					month = 6
+					month = 7
+					month = 8
+					month = 9
+					month = 10
+					month = 11
+				}
+				NOT = { year = 206 }
+				k_qing = {
+					holder_scope = {
+						character = 709
+					}
+				}
+			}
+			k_qing = {
+				holder_scope = {
+					add_claim=e_yuan
+					add_claim=k_ji
+					add_claim=c_ye
+				}
+			}
+		}
+		
+		#Liu Qi
+		if = {
+			limit = {
+				year = 208
+				OR = {
+					month = 7
+					month = 8
+					month = 9
+					month = 10
+					month = 11
+				}
+				NOT = { year = 209 }
+				d_jiangxia = {
+					holder_scope = {
+						character = 52
+					}
+				}
+			}
+			d_jiangxia = {
+				holder_scope = {
+					add_claim = k_jing
+				}
+			}
+		}
+		
+		#Sun Quan
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						year = 208
+						OR = {
+							month = 9
+							month = 10
+							month = 11
+						}
+					}
+					year = 209
+				}
+				NOT = { year = 211 }
+				k_sun = {
+					holder_scope = {
+						character = 509
+					}
+				}
+			}
+			k_sun = {
+				holder_scope = {
+					add_pressed_claim = k_jing
+				}
+			}
+		}
+		
+		#Sun Quan
+		if = {
+			limit = {
+				year = 211
+				NOT = { year = 220 }
+				e_sun = {
+					holder_scope = {
+						character = 509
+					}
+				}
+			}
+			e_sun = {
+				holder_scope = {
+					add_pressed_claim = k_jing
+				}
+			}
+		}
+		
+		#Liu Bei
+		if = {
+			limit = {
+				year = 211
+				NOT = { year = 214 }
+				k_liu = {
+					holder_scope = {
+						character = 600
+					}
+				}
+			}
+			k_liu = {
+				holder_scope = {
+					add_claim=k_yi
+				}
+			}
+		}
+		
+		#Li Yi
+		if = {
+			limit = {
+				year = 215
+				NOT = { year = 220 }
+			}
+			e_china = {
+				holder_scope = {
+					any_courtier = {
+						limit = { character = 3791 }
+						add_claim=k_yi
+					}
+				}
+			}
+		}
+		
+		#Liu Bei
+		if = {
+			limit = {
+				year = 220
+				NOT = { year = 221 }
+				e_liu = {
+					holder_scope = {
+						character = 600
+					}
+				}
+			}
+			e_liu = {
+				holder_scope = {
+					add_claim=k_jing
+				}
+			}
+		}
+		
+		#Xin Ji
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						year = 220
+						OR = {
+							month = 2
+							month = 3
+							month = 4
+							month = 5
+							month = 6
+							month = 7
+							month = 8
+							month = 9
+							month = 10
+							month = 11
+						}
+					}
+					year = 221
+				}
+				NOT = { year = 225 }
+			}
+			e_wei = {
+				holder_scope = {
+					any_courtier = {
+						limit = { character = 3883 }
+						add_claim=d_jiuquan
+					}
+				}
+			}
+		}
+		
+		#Chao
+		if = {
+			limit = {
+				year = 221
+				NOT = { year = 222 }
+			}
+			e_liu = {
+				holder_scope = {
+					any_courtier = {
+						limit = { character = 815 }
+						add_claim=k_liang
+					}
+				}
+			}
+		}
+		
+		#Zhuge Jin
+		if = {
+			limit = {
+				year = 229
+				NOT = { year = 234 }
+				d_nan = {
+					holder_scope = {
+						character = 537
+					}
+				}
+			}
+			d_nan = {
+				holder_scope = {
+					add_claim=k_yu
+				}
+			}
+		}
+		
+		set_global_flag = added_claims_flag
+	}
+}
+
+#Setup Revolts and Jail
+character_event = {
+	id = MAN.50
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	immediate = {
+		if = {
+			limit = { has_landed_title = d_hepu }
+			character_event = { id = SAN.24 }
+			any_war = {
+				limit = { using_cb = peasant_revolt }
+				attacker = {
+					reverse_imprison = ROOT
+				}
+			}
+		}
+	}
+}

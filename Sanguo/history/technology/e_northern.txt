@@ -1,0 +1,20 @@
+#NORTHERN
+technology = {
+	titles = {
+		d_zhongbei
+		d_dongbei
+		d_xibei
+		d_nanbei
+		d_xiongnunan
+	}
+	184 = {
+		military = 1.0
+		economy = 1.0
+		culture = 1.0
+	}
+	300 = {
+		military = 3.0
+		economy = 3.0
+		culture = 3.0
+	}
+}

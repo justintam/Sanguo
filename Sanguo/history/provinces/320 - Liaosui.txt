@@ -1,0 +1,18 @@
+# c_liaosui
+
+# County Title
+title = c_liaosui
+
+# Settlements
+max_settlements = 4
+
+b_liaosui = castle
+#b_liaosuicheng = city
+#b_buyuquan = temple
+#b_panjin = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

@@ -1,0 +1,18 @@
+# c_chenguo
+
+# County Title
+title = c_chenguo
+
+# Settlements
+max_settlements = 4
+
+b_chenguo = castle
+#b_chencheng = city
+#b_suntuan = temple
+#b_linhuan = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

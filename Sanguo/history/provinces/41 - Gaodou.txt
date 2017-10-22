@@ -1,0 +1,18 @@
+# c_gaodou
+
+# County Title
+title = c_gaodou
+
+# Settlements
+max_settlements = 4
+
+b_gaodou = castle
+b_tiankai = castle
+#b_hequ = temple
+#b_gaoden = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

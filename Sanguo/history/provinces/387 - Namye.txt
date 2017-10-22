@@ -1,0 +1,17 @@
+# c_namye
+
+# County Title
+title = c_namye
+
+# Settlements
+max_settlements = 3
+
+b_namye = tribal
+#b_wanggeomseong = city
+#b_donghae = temple
+
+# Misc
+culture = samhan
+religion = shamanist
+
+#History

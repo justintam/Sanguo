@@ -1,0 +1,17 @@
+# c_tongguo
+
+# County Title
+title = c_tongguo
+
+# Settlements
+max_settlements = 3
+
+b_tongguo = castle
+#b_yuanping = city
+#b_tongxin = temple
+
+# Misc
+culture = han
+religion = confucian
+
+#History

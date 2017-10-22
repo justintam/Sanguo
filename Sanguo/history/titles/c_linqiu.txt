@@ -1,0 +1,20 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_jiyin
+}
+184.1.1={
+	holder=10493 #Li Qian
+}
+194.1.1={
+	holder=327 #Li Feng
+}
+195.1.1={
+	holder=4128 #Random
+}
+212.1.1={
+	#Liu Xi, son of Xian enfeoffed
+}

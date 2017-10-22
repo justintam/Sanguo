@@ -1,0 +1,20 @@
+# c_yangdi
+
+# County Title
+title = c_yangdi
+
+# Settlements
+max_settlements = 6
+
+b_yangdi = castle
+b_yingchuan = city
+b_yangguan = castle
+#b_yangdifu = temple
+#b_guaihe = city
+#b_yangdibo = temple
+
+# Misc
+culture = han
+religion = confucian
+
+#History

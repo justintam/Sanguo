@@ -1,0 +1,18 @@
+# c_zitong
+
+# County Title
+title = c_zitong
+
+# Settlements
+max_settlements = 4
+
+b_zitong = tribal
+b_deyangguzhi = city
+b_shiguan = castle
+#b_bichu = castle
+
+# Misc
+culture = bandunman
+religion = baihu
+
+#History

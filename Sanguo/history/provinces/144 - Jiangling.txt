@@ -1,0 +1,18 @@
+# c_jiangling
+
+# County Title
+title = c_jiangling
+
+# Settlements
+max_settlements = 4
+
+b_jiangling = castle
+b_mayiting = city
+b_yiling = castle
+#b_huangyang = temple
+
+# Misc
+culture = han
+religion = confucian
+
+#History

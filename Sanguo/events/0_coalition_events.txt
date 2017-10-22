@@ -1,0 +1,757 @@
+###########################################
+#                                         #
+# Storyline Events  	            	  #
+#                                         #
+# ID RTK.130009-RTK.130019                #
+#                                         #
+#                                         #
+#                                         #
+#                                         #
+#                                         #
+#                                         #
+#                                         #
+###########################################
+
+namespace = RTK
+
+#Coalition - Target
+character_event = {
+	id = RTK.130009
+	desc = EVTDESC_RTK.130009
+	title = EVTTITLE_RTK.130009
+	picture = GFX_evt_dong_zhuo_coalition
+	
+	is_triggered_only = yes
+
+	#Fast event triggers
+	only_playable = yes
+	only_independent = yes
+	
+	trigger = {
+		NOT = { has_global_flag = coalition_called }
+		NOT = { has_global_flag = coalition_start }
+		NOT = { has_character_flag = coalition_target }
+		NOT = {
+			any_independent_ruler = {
+				has_character_flag = coalition_target
+			}
+		}
+		capital_scope = {
+			region = world_china
+		}
+		OR = {
+			num_of_king_titles = 3
+			num_of_emperor_titles = 1
+		}
+		OR = {
+			trait = tyrant
+			NOT = { piety = -500 }
+			AND = {
+				realm_size = 200
+				NOT = { prestige = 2000 }
+			}
+			AND = {
+				realm_size = 400
+				NOT = { prestige = 4000 }
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		days = 1
+		
+		modifier = {
+			factor = 5
+			OR = {
+				num_of_king_titles = 3
+				num_of_emperor_titles = 1
+			}
+		}
+	}
+	
+	immediate = {
+		set_character_flag = coalition_target
+	}
+	
+	option = {
+		name="OH"
+	}
+}
+
+#Coalition - Join
+character_event = {
+	id = RTK.130010
+	desc = EVTDESC_RTK.130010
+	title = EVTTITLE_RTK.130010
+	picture = GFX_evt_dong_zhuo_coalition
+	
+	is_triggered_only = yes
+	
+	option = { # Join Coalition
+		name = "EXCELLENT"
+		
+		trigger = {
+			any_liege = { in_revolt = no }
+		}
+		
+		set_character_flag = coalition_member
+		if = {
+			limit = {
+				is_tributary = yes
+				pays_tribute_to = event_target:target_coalition
+			}
+			event_target:target_coalition = {
+				remove_tributary = ROOT
+			}
+		}
+		prestige = 50
+		
+		ai_chance = {
+			factor = 1
+			
+			modifier = {
+				factor = 0.25 #Reduce chance of call
+			}
+			modifier = {
+				factor = 1.5 #Everyone hates the player!
+				event_target:target_coalition = {
+					ai = no
+				}
+			}
+			modifier = {
+				factor = 0.1
+				NOT = { culture = han }
+			}
+			modifier = {
+				factor = 0.1
+				NOT = { religion = confucian }
+			}
+			modifier = {
+				factor = 0.25
+				in_faction = faction_install_chancellor
+			}
+			modifier = {
+				factor = 5
+				trait = destined
+			}
+			modifier = {
+				factor = 2
+				trait = fate_admin
+			}
+			modifier = {
+				factor = 2
+				trait = fate_lead
+			}
+			modifier = {
+				factor = 2
+				trait = fate_loved
+			}
+			modifier = {
+				factor = 2
+				trait = fate_plot
+			}
+			modifier = {
+				factor = 1.05
+				trait = ambitious
+			}
+			modifier = {
+				factor = 1.05
+				trait = brave
+			}
+			modifier = {
+				factor = 1.05
+				trait = chivalrous
+			}
+			modifier = {
+				factor = 1.05
+				trait = envious
+			}
+			modifier = {
+				factor = 1.05
+				trait = just
+			}
+			modifier = {
+				factor = 2
+				trait = zealous
+			}
+			modifier = {
+				factor = 1.15
+				dynasty = 2
+			}
+			modifier = {
+				factor = 2
+				independent = yes
+			}
+			modifier = {
+				factor = 10
+				higher_tier_than = king
+			}
+			modifier = {
+				factor = 10
+				primary_title = {
+					has_title_flag = warlord_flag
+				}
+			}
+			modifier = {
+				factor = 0.25
+				primary_title = {
+					OR = {
+						region = world_china_jiaozhi
+						region = world_china_yang
+						region = world_china_yi
+					}
+				}
+			}
+			
+			
+			
+			# Coalition Target
+			
+			modifier = {
+				factor = 2
+				has_opinion_modifier = { who = event_target:target_coalition modifier = opinion_traitor }
+			}
+			modifier = {
+				factor = 1.15
+				event_target:target_coalition = {
+					trait = ambitious
+				}
+			}
+			modifier = {
+				factor = 1.05
+				event_target:target_coalition = {
+					trait = cruel
+				}
+			}
+			modifier = {
+				factor = 1.05
+				event_target:target_coalition = {
+					trait = deceitful
+				}
+			}
+			modifier = {
+				factor = 1.05
+				event_target:target_coalition = {
+					trait = dishonorable
+				}
+			}
+			modifier = {
+				factor = 1.05
+				event_target:target_coalition = {
+					trait = ruthless
+				}
+			}
+			modifier = {
+				factor = 0.25
+				event_target:target_coalition = {
+					trait = content
+				}
+			}
+			modifier = {
+				factor = 0.25
+				is_liege_or_above = event_target:target_coalition
+			}
+			modifier = {
+				factor = 0.25
+				dynasty = event_target:target_coalition
+			}
+			modifier = {
+				factor = 0
+				is_close_relative = event_target:target_coalition
+			}
+			modifier = {
+				factor = 0
+				is_father = event_target:target_coalition
+			}
+			modifier = {
+				factor = 0
+				is_friend = event_target:target_coalition
+			}
+			modifier = {
+				factor = 0
+				is_lover = event_target:target_coalition
+			}
+			modifier = {
+				factor = 5
+				is_foe = event_target:target_coalition
+			}
+			
+			
+			
+			# Coalition Leader
+			
+			modifier = {
+				factor = 1.05
+				opinion = { who = FROM value = 25 }
+			}
+			modifier = {
+				factor = 1.05
+				opinion = { who = FROM value = 50 }
+			}
+			modifier = {
+				factor = 1.05
+				opinion = { who = FROM value = 75 }
+			}
+			modifier = {
+				factor = 1.05
+				opinion = { who = FROM value = 100 }
+			}
+			modifier = {
+				factor = 1.05
+				dynasty = FROM
+			}
+			modifier = {
+				factor = 1.05
+				is_close_relative = FROM
+			}
+			modifier = {
+				factor = 1.05
+				is_father = FROM
+			}
+			modifier = {
+				factor = 1.05
+				is_friend = FROM
+			}
+			modifier = {
+				factor = 1.05
+				is_lover = FROM
+			}
+			modifier = {
+				factor = 0.1
+				is_foe = FROM
+			}
+			modifier = {
+				factor = 0
+				NOT = {
+					is_within_diplo_range = FROM
+				}
+			}
+		}
+	}
+	option = { # Ignore
+		name = "OH"
+		
+		set_character_flag = neutral
+		
+		ai_chance = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.15
+				trait = arbitrary
+			}
+			modifier = {
+				factor = 1.15
+				trait = content
+			}
+			modifier = {
+				factor = 1.15
+				trait = craven
+			}
+			modifier = {
+				factor = 1.15
+				trait = gluttonous
+			}
+			modifier = {
+				factor = 1.5
+				trait = slothful
+			}
+		}
+	}
+}
+
+##Coalition War - Leader
+character_event = {
+	id = RTK.130011
+	desc = EVTDESC_RTK.130011
+	title = EVTTITLE_RTK.130011
+	picture = GFX_evt_civil_war
+	
+	#Fast event triggers
+	has_global_flag = coalition_called
+	has_character_flag = coalition_leader
+	only_playable = yes
+	
+	trigger = {
+		NOT = { has_global_flag = coalition_start }
+		prisoner = no
+		war = no
+		any_independent_ruler = {
+			has_character_flag = coalition_target
+			prisoner = no
+			NOR = {
+				war_with = ROOT
+				has_truce = ROOT
+			}
+		}
+	}
+	
+	weight_multiplier = {
+		days = 1
+		
+		modifier = {
+			factor = 10
+			has_character_flag = coalition_leader
+		}
+	}
+	
+	option = { # Start war
+		name = "EXCELLENT"
+		clr_global_flag = coalition_called
+		set_global_flag = coalition_start
+		any_independent_ruler = {
+			limit = {
+				has_character_flag = coalition_target
+				NOT = { has_truce = ROOT }
+			}
+			if = {
+				limit = { NOT = { de_jure_liege_or_above = ROOT } }
+				primary_title = {
+					reverse_war = {
+						target = ROOT
+						casus_belli = coalition
+					}
+				}
+			}
+			if = {
+				limit = { de_jure_liege_or_above = ROOT }
+				set_defacto_liege = THIS
+				primary_title = {
+					reverse_war = {
+						target = ROOT
+						casus_belli = imperial_reconquest
+					}
+				}
+			}
+		}
+	}
+}
+
+##Coalition War - Members
+character_event = {
+	id = RTK.130012
+	desc = EVTDESC_RTK.130012
+	title = EVTTITLE_RTK.130012
+	picture = GFX_evt_civil_war
+	
+	#Fast event triggers
+	has_global_flag = coalition_start
+	has_character_flag = coalition_member
+	only_playable = yes
+	capable_only = yes
+	prisoner = no
+	
+	trigger = {
+		any_independent_ruler = { 
+			has_character_flag = coalition_target
+			war = yes
+			prisoner = no
+			is_primary_war_defender = yes
+			NOT = { war_with = ROOT }
+		}
+		any_playable_ruler = {
+			has_character_flag = coalition_leader
+			war = yes
+			is_ruler = yes
+			prisoner = no
+			is_primary_war_attacker = yes
+		}
+	}
+	
+	weight_multiplier = {
+		days = 1
+		
+		modifier = {
+			factor = 10
+			has_character_flag = coalition_member
+		}
+	}
+	
+	option = { # Join war
+		name = "EXCELLENT"
+		hidden_tooltip = {
+			if = {
+				limit = {
+					top_liege = { has_character_flag = coalition_target }
+				}
+				set_defacto_liege = THIS
+			}
+			if = {
+				limit = {
+					AND = {
+						NOT = { top_liege = { has_character_flag = coalition_target } }
+						liege = { has_character_flag = coalition_target }
+					}
+				}
+				top_liege = {
+					ROOT = { set_defacto_liege = PREV }
+				}
+			}
+		}
+		any_playable_ruler = {
+			limit = {
+				has_character_flag = coalition_leader
+			}
+			ROOT = {
+				join_attacker_wars = PREV
+			}
+			opinion = {
+				modifier = opinion_very_grateful
+				who = ROOT
+				years = 5
+			}
+		}
+	}
+}
+
+##Coalition War - Leader Falters
+character_event = {
+	id = RTK.130013
+	desc = EVTDESC_RTK.130013
+	title = EVTTITLE_RTK.130013
+	picture = GFX_evt_civil_war
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		any_war = {
+			limit = {
+				attacker = { character = ROOT }
+				defender = { has_character_flag = coalition_target }
+			}
+			end_war = whitepeace
+		}
+	}
+	
+	option = { # Leave War
+		name = "OHNO"
+		clr_global_flag = coalition_start
+		clr_character_flag = coalition_leader
+		prestige = -50
+	}
+}
+
+##Coalition War - Members Falter
+character_event = {
+	id = RTK.130014
+	desc = EVTDESC_RTK.130014
+	title = EVTTITLE_RTK.130014
+	picture = GFX_evt_civil_war
+	
+	is_triggered_only = yes
+	
+	option = { # Leave War
+		name = "OHNO"
+		trigger = {
+			has_character_flag = coalition_member
+		}
+		clr_character_flag = coalition_member
+		prestige = -50
+	}
+	option = { # War Over
+		name = "OH"
+		trigger = {
+			has_character_flag = neutral
+		}
+		clr_character_flag = neutral
+	}
+}
+
+##Coalition War - Leader Victory
+character_event = {
+	id = RTK.130015
+	desc = EVTDESC_RTK.130015
+	title = EVTTITLE_RTK.130015
+	picture = GFX_evt_civil_war
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		any_war = {
+			limit = {
+				attacker = { character = ROOT }
+				defender = { has_character_flag = coalition_target }
+			}
+			end_war = invalid
+		}
+		clr_character_flag = coalition_leader
+		clr_global_flag = coalition_start
+		set_character_flag = coalition_won
+	}
+	
+	option = { # Win War
+		name = "EXCELLENT"
+		prestige = 500
+	}
+}
+
+##Coalition War - Target Defeat
+character_event = {
+	id = RTK.130016
+	desc = EVTDESC_RTK.130016
+	title = EVTTITLE_RTK.130016
+	picture = GFX_evt_civil_war
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		hidden_tooltip = {
+			primary_title = {
+				any_vassal = {
+					if = {
+						limit = {
+							top_liege = { has_character_flag = coalition_target }
+						}
+						set_defacto_liege = THIS
+					}
+					if = {
+						limit = {
+							AND = {
+								NOT = { top_liege = { has_character_flag = coalition_target } }
+								liege = { has_character_flag = coalition_target }
+							}
+						}
+						top_liege = {
+							ROOT = { set_defacto_liege = PREV }
+						}
+					}
+				}
+				destroy_landed_title = THIS
+			}
+			clr_character_flag = coalition_target
+		}
+	}
+	
+	option = { # Leave War
+		name = "CURSES"
+	}
+}
+
+##Coalition War - Members Victory
+character_event = {
+	id = RTK.130017
+	desc = EVTDESC_RTK.130017
+	title = EVTTITLE_RTK.130017
+	picture = GFX_evt_civil_war
+	
+	is_triggered_only = yes
+	
+	option = { # Win War
+		name = "EXCELLENT"
+		trigger = {
+			has_character_flag = coalition_member
+		}
+		clr_character_flag = coalition_member
+		prestige = 50
+	}
+	option = { # Neutral
+		name = "OH"
+		trigger = {
+			has_character_flag = neutral
+		}
+		clr_character_flag = neutral
+	}
+}
+
+##Coalition War - Victory
+character_event = {
+	id = RTK.130018
+	desc = EVTDESC_RTK.130018
+	title = EVTTITLE_RTK.130018
+	picture = GFX_evt_civil_war
+	
+	#Fast event triggers
+	only_playable = yes
+	has_global_flag = coalition_start
+	
+	trigger = {
+		OR = {
+			has_character_flag = coalition_leader
+			has_character_flag = coalition_member
+			has_character_flag = neutral
+		}
+		any_playable_ruler = {
+			has_character_flag = coalition_target
+			is_nomadic = no
+			NOR = {
+				num_of_king_titles = 3
+				tier = EMPEROR
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = { # War Over
+		name = "EXCELLENT"
+		trigger = {
+			has_character_flag = coalition_leader
+		}
+		clr_character_flag = coalition_leader
+		set_character_flag = coalition_won
+		prestige = 200
+	}
+	
+	option = { # War Over
+		name = "EXCELLENT"
+		trigger = {
+			has_character_flag = coalition_member
+		}
+		clr_character_flag = coalition_member
+	}
+	
+	option = { # War Over
+		name = "OH"
+		trigger = {
+			has_character_flag = neutral
+		}
+		clr_character_flag = neutral
+	}
+}
+
+##Coalition War - Defeat
+character_event = {
+	id = RTK.130019
+	desc = EVTDESC_RTK.130019
+	title = EVTTITLE_RTK.130019
+	picture = GFX_evt_civil_war
+	
+	#Fast event triggers
+	only_playable = yes
+	has_global_flag = coalition_start
+	has_character_flag = coalition_target
+	
+	trigger = {
+		is_nomadic = no
+		NOR = {
+			num_of_king_titles = 3
+			tier = EMPEROR
+		}
+		NOR = {
+			any_playable_ruler = {
+				has_character_flag = coalition_leader
+			}
+			any_playable_ruler = {
+				has_character_flag = coalition_member
+			}
+			any_playable_ruler = {
+				has_character_flag = neutral
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		clr_global_flag = coalition_start
+		clr_character_flag = coalition_target
+	}
+	
+	option = { # War Over
+		name = "CURSES"
+	}
+}

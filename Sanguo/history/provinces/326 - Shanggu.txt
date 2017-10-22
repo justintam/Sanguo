@@ -1,0 +1,17 @@
+# c_shanggu
+
+# County Title
+title = c_shanggu
+
+# Settlements
+max_settlements = 3
+
+b_shanggu = tribal
+#b_hangwu = city
+#b_daying = temple
+
+# Misc
+culture = wuhuan
+religion = tengri_pagan
+
+#History

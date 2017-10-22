@@ -1,0 +1,1260 @@
+#######Yellow Turban Rebels range: 200 - 299######
+
+##################################
+######### YELLOW TURBANS #########
+##################################
+
+#200-232
+
+200 = {
+	name="Jiao"
+	dynasty=148
+	dna="fzgqrculerw"
+	properties="ae00bc00000"
+    diplomacy=9
+    martial=8
+    stewardship=10
+    intrigue=10
+	learning=10
+	religion="taiping"
+	culture="han"
+	father=203
+	mother=204
+    trait="mastermind_theologian"
+	trait="mystic"
+    trait="genius"
+    trait="deceitful"
+    trait="temperate"
+    trait="diligent"
+    trait="proud"
+    trait="ambitious"
+    trait="brave"
+    trait="just"
+    trait="zealous"
+	140.1.1={
+		birth=yes
+	}
+	184.1.1={
+		effect={
+			add_friend=201
+			add_friend=202
+		}
+	}
+	184.8.1={
+		death=yes
+	}
+}
+201 = {
+	name="Bao"
+	dynasty=148
+    diplomacy=8
+    martial=9
+    stewardship=8
+    intrigue=8
+	learning=9
+	religion="taiping"
+	culture="han"
+	father=203
+	mother=204
+    trait="skilled_tactician"
+	trait="duelist"
+    trait="duel_poor_warrior"
+    trait="wroth"
+    trait="temperate"
+    trait="diligent"
+    trait="proud"
+    trait="ambitious"
+    trait="honest"
+    trait="brave"
+    trait="zealous"
+    trait="cruel"
+    trait="holy_warrior"
+	143.1.1={
+		birth=yes
+	}
+	184.1.1={
+		effect={
+			add_friend=200
+			add_friend=202
+		}
+	}
+	184.9.1={
+		death=yes
+	}
+}
+202 = {
+	name="Liang"
+	dynasty=148
+    diplomacy=9
+    martial=7
+    stewardship=9
+    intrigue=9
+	learning=10
+	religion="taiping"
+	culture="han"
+	father=203
+	mother=204
+    trait="charismatic_negotiator"
+    trait="deceitful"
+    trait="temperate"
+    trait="diligent"
+    trait="proud"
+    trait="ambitious"
+    trait="gregarious"
+    trait="zealous"
+    trait="just"
+    trait="charitable"
+	144.1.1={
+		birth=yes
+	}
+	184.1.1={
+		effect={
+			add_friend=200
+			add_friend=201
+		}
+	}
+	184.10.1={
+		death=yes
+	}
+}
+203 = {
+	name="Lao"
+	dynasty=148
+	religion="taiping"
+	culture="han"
+	father=233
+    trait="mastermind_theologian"
+	trait="mystic"
+    trait="genius"
+    trait="deceitful"
+    trait="temperate"
+    trait="diligent"
+    trait="proud"
+    trait="ambitious"
+    trait="brave"
+    trait="just"
+    trait="zealous"
+	100.1.1={
+		birth=yes
+	}
+	140.1.1={
+		add_spouse=204
+	}
+	156.1.1={
+		death=yes
+	}
+}
+204 = {
+	name="Li"
+	female=yes
+	religion="taiping"
+	culture="han"
+	120.1.1={
+		birth=yes
+	}
+	140.1.1={
+		add_spouse=203
+	}
+	160.1.1={
+		death=yes
+	}
+}
+205 = {
+	name="Mancheng"
+	dynasty=148
+    diplomacy=5
+    martial=8
+    stewardship=5
+    intrigue=4
+	learning=5
+	religion="taiping"
+	culture="han"
+	father=234
+    trait="skilled_tactician"
+	trait="duelist"
+    trait="duel_poor_warrior"
+    trait="wroth"
+    trait="temperate"
+    trait="proud"
+    trait="ambitious"
+    trait="brave"
+    trait="zealous"
+    trait="cruel"
+    trait="holy_warrior"
+	160.1.1={
+		birth=yes
+	}
+	184.6.1={
+		death=yes
+	}
+}
+206 = {
+	name="Cai" #Bo Cai
+	dynasty=96
+    diplomacy=4
+    martial=7
+    stewardship=5
+    intrigue=3
+	learning=3
+	religion="taiping"
+	culture="han"
+    trait="skilled_tactician"
+	trait="strategist"
+    trait="wroth"
+    trait="temperate"
+    trait="proud"
+    trait="ambitious"
+    trait="brave"
+    trait="envious"
+    trait="cruel"
+    trait="holy_warrior"
+    trait="inspiring_leader"
+	160.1.1={
+		birth=yes
+	}
+	184.10.1={
+		death=yes
+	}
+}
+207 = {
+	name="Yi"
+	dynasty=904 #He
+    diplomacy=2
+    martial=7
+    stewardship=4
+    intrigue=1
+	learning=1
+	religion="taiping"
+	culture="han"
+    trait="skilled_tactician"
+	trait="duelist"
+    trait="duel_poor_warrior"
+    trait="wroth"
+    trait="diligent"
+    trait="ambitious"
+    trait="brave"
+    trait="proud"
+    trait="siege_leader"
+	160.1.1={
+		birth=yes
+	}
+	196.10.1={
+		death=yes
+	}
+}
+208 = {
+	name="Xi"
+	dynasty=903
+    diplomacy=1
+    martial=6
+    stewardship=6
+    intrigue=4
+	learning=1
+	religion="taiping"
+	culture="han"
+    trait="tough_soldier"
+	trait="duelist"
+    trait="duel_poor_warrior"
+    trait="wroth"
+    trait="ambitious"
+    trait="brave"
+    trait="proud"
+	160.1.1={
+		birth=yes
+	}
+	200.1.1={
+		death=yes
+	}
+}
+209 = {
+	name="Yi"
+	dynasty=901 #Bu
+    diplomacy=4
+    martial=5
+    stewardship=3
+    intrigue=2
+	learning=1
+	religion="taiping"
+	culture="han"
+    trait="misguided_warrior"
+    trait="duel_poor_warrior"
+    trait="ruthless"
+    trait="cruel"
+    trait="wroth"
+    trait="ambitious"
+    trait="brave"
+    trait="proud"
+	165.1.1={
+		birth=yes
+	}
+	184.10.1={
+		death=yes
+	}
+}
+210 = {
+	name="Bao" #Chen
+	dynasty=900
+    diplomacy=2
+    martial=4
+    stewardship=1
+    intrigue=5
+	learning=1
+	religion="taiping"
+	culture="han"
+    trait="amateurish_plotter"
+    trait="duel_poor_warrior"
+    trait="ruthless"
+    trait="cruel"
+    trait="wroth"
+    trait="lustful"
+    trait="craven"
+    trait="envious"
+    trait="greedy"
+	165.1.1={
+		birth=yes
+	}
+	184.10.1={
+		death=yes
+	}
+}
+211 = { #Dong
+	name="Yuanzhi" #Cheng
+	dynasty=199
+    diplomacy=3
+    martial=7
+    stewardship=2
+    intrigue=3
+	learning=3
+	religion="taiping"
+	culture="han"
+    trait="misguided_warrior"
+    trait="duel_poor_warrior"
+    trait="ruthless"
+    trait="cruel"
+    trait="wroth"
+    trait="ambitious"
+    trait="proud"
+	155.1.1={
+		birth=yes
+	}
+	184.4.1={
+		death=yes
+	}
+}
+212 = {
+	name="Meng"
+	dynasty=198 #Deng
+    diplomacy=4
+    martial=7
+    stewardship=3
+    intrigue=2
+	learning=2
+	religion="taiping"
+	culture="han"
+	father=252
+    trait="misguided_warrior"
+    trait="duel_poor_warrior"
+    trait="honorable"
+    trait="wroth"
+    trait="temperate"
+    trait="ambitious"
+    trait="brave"
+    trait="proud"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=200
+	}
+	184.4.1={
+		death=yes
+	}
+}
+213 = {
+	name="Hai"
+	dynasty=190
+    diplomacy=3
+    martial=8
+    stewardship=1
+    intrigue=1
+	learning=1
+	religion="taiping"
+	culture="han"
+    trait="skilled_tactician"
+    trait="duel_trained_warrior"
+    trait="honorable"
+    trait="patient"
+    trait="temperate"
+    trait="ambitious"
+    trait="brave"
+    trait="humble"
+    trait="unyielding_leader"
+    trait="organizer"
+	160.1.1={
+		birth=yes
+	}
+	184.4.1={
+		death=yes
+	}
+}
+214 = { #Yi Province
+	name="Xiang"
+	dynasty=189
+    diplomacy=4
+    martial=6
+    stewardship=3
+    intrigue=4
+	learning=1
+	religion="taiping"
+	culture="han"
+    trait="skilled_tactician"
+    trait="brave"
+    trait="organizer"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=200
+	}
+	188.12.1={
+		death=yes
+	}
+}
+215 = {
+	name="Zi"
+	dynasty=188
+    diplomacy=2
+    martial=7
+    stewardship=1
+    intrigue=2
+	learning=1
+	religion="taiping"
+	culture="han"
+    trait="tough_soldier"
+    trait="duel_poor_warrior"
+    trait="brave"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=200
+	}
+	184.4.1={
+		death=yes
+	}
+}
+216 = {
+	name="Hong"
+	dynasty=923
+    diplomacy=3
+    martial=3
+    stewardship=3
+    intrigue=3
+	learning=1
+	religion="taiping"
+	culture="han"
+    trait="tough_soldier"
+    trait="duel_poor_warrior"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=205
+	}
+	184.8.1={
+		death=yes
+	}
+}
+217 = {
+	name="He" #Xu He
+	dynasty=191
+    diplomacy=4
+    martial=6
+    stewardship=4
+    intrigue=3
+	learning=1
+	religion="taiping"
+	culture="han"
+    trait="tough_soldier"
+    trait="duel_poor_warrior"
+	160.1.1={
+		birth=yes
+	}
+	207.6.1={
+		death=yes
+	}
+}
+218 = {
+	name="Juhe"
+	dynasty=192
+    diplomacy=4
+    martial=6
+    stewardship=6
+    intrigue=5
+	learning=8
+	religion="taiping"
+	culture="han"
+	father=249
+    trait="skilled_tactician"
+    trait="duel_poor_warrior"
+	160.1.1={
+		birth=yes
+	}
+	207.1.1={
+		death=yes
+	}
+}
+219 = { #Sun
+	name="Zhong"
+	dynasty=924
+    diplomacy=2
+    martial=6
+    stewardship=3
+    intrigue=7
+	learning=1
+	religion="taiping"
+	culture="han"
+    trait="tough_soldier"
+    trait="duel_trained_warrior"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=205
+	}
+	184.12.1={
+		death=yes
+	}
+}
+220 = {
+	name="Yuan"
+	dynasty=1410
+    diplomacy=3
+    martial=5
+    stewardship=3
+    intrigue=2
+	learning=1
+	religion="taiping"
+	culture="han"
+    trait="tough_soldier"
+    trait="duel_poor_warrior"
+    trait="brave"
+	trait="cruel"
+    trait="wroth"
+	trait="greedy"
+    trait="trusting"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=236 #Sima Ju
+	}
+	184.4.1={
+		employer=242 #Liang Boning
+	}
+	184.10.1={
+		employer=0 #None
+	}
+	188.7.1={
+		employer=226 #Liu Pi
+	}
+	200.11.1={
+		death={death_reason=death_murder killer=613}
+	}
+}
+221 = {
+	name="Mao"
+	dynasty=198 #Deng
+    diplomacy=4
+    martial=7
+    stewardship=3
+    intrigue=2
+	learning=2
+	religion="taiping"
+	culture="han"
+	father=252
+    trait="tough_soldier"
+    trait="duel_poor_warrior"
+    trait="brave"
+	150.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=211
+	}
+	184.1.1={
+		death=yes
+	}
+}
+222 = {
+	name="Sheng" #Gao Sheng
+	dynasty=31
+    diplomacy=2
+    martial=7
+    stewardship=4
+    intrigue=2
+	learning=2
+	religion="taiping"
+	culture="han"
+    trait="tough_soldier"
+    trait="duel_poor_warrior"
+    trait="brave"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=200
+	}
+	185.2.1={
+		death=yes
+	}
+}
+223 = {
+	name="Du" #Gong Du
+	dynasty=193
+    diplomacy=3
+    martial=6
+    stewardship=3
+    intrigue=2
+	learning=2
+	religion="taiping"
+	culture="han"
+    trait="tough_soldier"
+    trait="duel_poor_warrior"
+    trait="brave"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=236 #Zhang Bo
+	}
+	184.4.1={
+		employer=242 #Liang Boning
+	}
+	201.2.1={
+		death=yes
+	}
+}
+224 = {
+	name="Xian"
+	dynasty=194 #Han
+    diplomacy=1
+    martial=3
+    stewardship=1
+    intrigue=1
+	learning=1
+	religion="taiping"
+	culture="han"
+	father=251
+    trait="misguided_warrior"
+	trait="wroth"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=200
+	}
+	185.2.1={
+		death=yes
+	}
+}
+225 = {
+	name="Zhong"
+	dynasty=194 #Han
+    diplomacy=2
+    martial=7
+    stewardship=2
+    intrigue=1
+	learning=1
+	religion="taiping"
+	culture="han"
+	father=251
+    trait="tough_soldier"
+    trait="duel_poor_warrior"
+	trait="wroth"
+	162.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=205
+	}
+	184.10.1={
+		death=yes
+	}
+}
+226 = {
+	name="Pi"
+	dynasty=195
+    diplomacy=6
+    martial=7
+    stewardship=5
+    intrigue=4
+	learning=5
+	religion="taiping"
+	culture="han"
+    trait="skilled_tactician"
+    trait="duel_poor_warrior"
+	trait="diligent"
+	trait="patient"
+    trait="brave"
+    trait="proud"
+	165.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=236 #Zhang Bo
+	}
+	184.4.1={
+		employer=242 #Liang Boning
+	}
+	201.2.1={
+		death=yes
+	}
+}
+227 = {
+	name="Zheng"
+	dynasty=922
+    diplomacy=3
+    martial=2
+    stewardship=1
+    intrigue=3
+	learning=2
+	religion="taiping"
+	culture="han"
+    trait="misguided_warrior"
+    trait="ambitious"
+    trait="craven"
+    trait="wroth"
+    trait="deceitful"
+	165.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=201
+	}
+	195.1.1={
+		death=yes
+	}
+}
+228 = {
+	name="Man"
+	dynasty=196
+    diplomacy=3
+    martial=6
+    stewardship=2
+    intrigue=3
+	learning=2
+	religion="taiping"
+	culture="han"
+    trait="tough_soldier"
+    trait="duelist"
+    trait="duel_poor_warrior"
+    trait="ambitious"
+    trait="brave"
+    trait="proud"
+    trait="wroth"
+    trait="gregarious"
+    trait="unyielding_leader"
+    trait="aggressive_leader"
+	159.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=207
+	}
+	197.1.1={
+		death=yes
+	}
+}
+229 = {
+	name="Xia"
+	dynasty=929
+    diplomacy=3
+    martial=4
+    stewardship=3
+    intrigue=3
+	learning=1
+	religion="taiping"
+	culture="han"
+    trait="tough_soldier"
+    trait="duel_poor_warrior"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=205
+	}
+	185.1.11={
+		death=yes
+	}
+}
+230 = { #Yingchuan
+	name="Shao" #Huang
+	dynasty=934
+    diplomacy=3
+    martial=4
+    stewardship=3
+    intrigue=3
+	learning=1
+	religion="taiping"
+	culture="han"
+    trait="tough_soldier"
+    trait="duel_poor_warrior"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=207
+	}
+	196.3.1={
+		death=yes
+	}
+}
+231 = { #Bei
+	name="Cang" #Zhou
+	dynasty=935
+    diplomacy=3
+    martial=4
+    stewardship=3
+    intrigue=3
+	learning=1
+	religion="taiping"
+	culture="han"
+    trait="tough_soldier"
+    trait="fate_duel"
+    trait="destined"
+    trait="duel_poor_warrior"
+	160.1.1={
+		birth=yes
+	}
+	219.1.1={
+		death=yes
+	}
+}
+232 = { #Bei
+	name="Yuanshao" #Pei
+	dynasty=83
+    diplomacy=3
+    martial=4
+    stewardship=3
+    intrigue=3
+	learning=1
+	religion="taiping"
+	culture="han"
+    trait="tough_soldier"
+    trait="duel_poor_warrior"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=231
+	}
+	200.1.1={
+		death=yes
+	}
+}
+233 = {
+	name="Ping"
+	dynasty=148
+	religion="taiping"
+	culture="han"
+	father=1007
+	80.1.1={
+		birth=yes
+	}
+	140.1.1={
+		death=yes
+	}
+}
+234 = {
+	name="Bing"
+	dynasty=148 #Zhang
+	religion="taiping"
+	culture="han"
+	father=233
+	110.1.1={
+		birth=yes
+	}
+	180.1.1={
+		death=yes
+	}
+}
+235 = { #Dong
+	name="Kai"
+	dynasty=148 #Zhang
+    diplomacy=1
+    martial=5
+    stewardship=1
+    intrigue=1
+	learning=1
+	religion="taiping"
+	culture="han"
+	father=234
+    trait="tough_soldier"
+    trait="ruthless"
+    trait="duel_poor_warrior"
+    trait="wroth"
+    trait="cruel"
+    trait="greedy"
+    trait="deceitful"
+    trait="dishonorable"
+	140.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=201 #Zhang Bao
+	}
+	184.9.1={
+		employer=202 #Zhang Liang
+	}
+	184.10.1={
+		employer=240 #Sima Ju
+	}
+	191.1.1={
+		employer=119 #Tao Qian
+	}
+	193.8.1={
+		employer=705 #Yuan Shu
+	}
+	195.1.1={
+		death=yes
+	}
+}
+236 = { #Yingchuan
+	name="Bo"
+	dynasty=148
+    diplomacy=4
+    martial=2
+    stewardship=3
+    intrigue=1
+	learning=5
+	religion="taiping"
+	culture="han"
+	father=234
+    trait="detached_priest"
+    trait="duel_poor_warrior"
+    trait="wroth"
+    trait="temperate"
+	140.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=201
+	}
+	184.4.1={
+		death=yes
+	}
+}
+237 = { 
+	name="Du" #Wang Du
+	dynasty=979
+	religion="taiping"
+	culture="han"
+	trait="ambitious"
+	160.1.1={
+		birth=yes
+	}
+	184.10.1={
+		death=yes
+	}
+}
+238 = { 
+	name="Zhen"
+	dynasty=1504 #Zhao
+	religion="taiping"
+	culture="han"
+	trait="humble"
+	140.1.1={
+		birth=yes
+	}
+	184.1.1={
+		death=yes
+	}
+}
+239 = { #Runan
+	name="Tuo"
+	dynasty=120
+    diplomacy=3
+    martial=3
+    stewardship=1
+    intrigue=1
+	learning=1
+	religion="taiping"
+	culture="han"
+    trait="misguided_warrior"
+    trait="duel_poor_warrior"
+    trait="brave"
+    trait="temperate"
+	165.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=241
+	}
+	184.10.1={
+		death=yes
+	}
+}
+240 = { #Qing
+	name="Ju"
+	dynasty=192
+    diplomacy=4
+    martial=6
+    stewardship=3
+    intrigue=4
+	learning=2
+	religion="taiping"
+	culture="han"
+	father=249
+    trait="skilled_tactician"
+    trait="duel_trained_warrior"
+    trait="brave"
+    trait="ambitious"
+    trait="wroth"
+	165.1.1={
+		birth=yes
+	}
+	207.6.1={
+		death=yes
+	}
+}
+241 = { #Runan
+	name="Ba"
+	dynasty=1502
+    diplomacy=3
+    martial=6
+    stewardship=3
+    intrigue=3
+	learning=1
+	religion="taiping"
+	culture="han"
+    trait="tough_soldier"
+    trait="duel_trained_warrior"
+    trait="brave"
+    trait="ambitious"
+	trait="diligent"
+    trait="wroth"
+	trait="zealous"
+	165.1.1={
+		birth=yes
+	}
+	185.1.11={
+		death=yes
+	}
+}
+242 = { #Yingchuan
+	name="Boning"
+	dynasty=1503
+    diplomacy=1
+    martial=3
+    stewardship=2
+    intrigue=2
+	learning=1
+	religion="taiping"
+	culture="han"
+	father=250
+    trait="misguided_warrior"
+    trait="duel_poor_warrior"
+    trait="brave"
+    trait="ambitious"
+    trait="wroth"
+	163.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=236
+	}
+	184.10.1={
+		death=yes
+	}
+}
+243 = { #Yingchuan
+	name="Zhongning"
+	dynasty=1503
+    diplomacy=1
+    martial=3
+    stewardship=2
+    intrigue=2
+	learning=1
+	religion="taiping"
+	culture="han"
+	father=250
+    trait="misguided_warrior"
+    trait="duel_poor_warrior"
+    trait="brave"
+    trait="ambitious"
+    trait="wroth"
+	165.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=236
+	}
+	184.10.1={
+		death=yes
+	}
+}
+244 = { #Yi
+	name="Bo"
+	dynasty=1504 #Zhao
+    diplomacy=2
+    martial=5
+    stewardship=3
+    intrigue=3
+	learning=1
+	religion="taiping"
+	culture="han"
+	father=238
+    trait="tough_soldier"
+    trait="duel_trained_warrior"
+    trait="brave"
+    trait="ambitious"
+    trait="wroth"
+	167.1.1={
+		birth=yes
+	}
+	188.1.1={
+		death=yes
+	}
+}
+245 = { #Yi
+	name="Zhi"
+	dynasty=1504 #Zhao
+    diplomacy=2
+    martial=3
+    stewardship=2
+    intrigue=1
+	learning=1
+	religion="taiping"
+	culture="han"
+	father=238
+    trait="misguided_warrior"
+    trait="duel_poor_warrior"
+    trait="brave"
+    trait="wroth"
+	165.1.1={
+		birth=yes
+	}
+	188.1.1={
+		death=yes
+	}
+}
+246 = { #Yi
+	name="Rao"
+	dynasty=1505
+    diplomacy=4
+    martial=7
+    stewardship=5
+    intrigue=3
+	learning=3
+	religion="taiping"
+	culture="han"
+    trait="tough_soldier"
+    trait="duel_trained_warrior"
+    trait="brave"
+    trait="proud"
+    trait="ambitious"
+    trait="wroth"
+	165.1.1={
+		birth=yes
+	}
+	188.1.1={
+		death=yes
+	}
+}
+247 = { #Fake
+	name="Heng"
+    diplomacy=4
+    martial=4
+    stewardship=3
+    intrigue=2
+	learning=2
+	religion="taiping"
+	culture="han"
+    trait="misguided_warrior"
+    trait="duel_poor_warrior"
+    trait="brave"
+    trait="wroth"
+	165.1.1={
+		birth=yes
+	}
+	184.10.1={
+		death=yes
+	}
+}
+248 = {
+	name="Li"
+	dynasty=1407
+    diplomacy=3
+    martial=5
+    stewardship=4
+    intrigue=2
+	learning=2
+	religion="taiping"
+	culture="han"
+    trait="tough_soldier"
+    trait="duel_poor_warrior"
+    trait="brave"
+    trait="wroth"
+    trait="temperate"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=240 #Sima Ju
+	}
+	191.1.1={
+		employer=217 #Xu He
+	}
+	240.1.1={
+		death=yes
+	}
+}
+249 = {
+	name="Kang"
+	dynasty=192
+	religion="taiping"
+	culture="han"
+    140.1.1={
+		birth=yes
+	}
+	184.1.1={
+		death=yes
+	}
+}
+250 = {
+	name="Jiangning"
+	dynasty=1503
+	religion="taiping"
+	culture="han"
+	140.1.1={
+		birth=yes
+	}
+	184.1.1={
+		death=yes
+	}
+}
+251 = {
+	name="Wan"
+	dynasty=194 #Han
+    religion="taiping"
+	culture="han"
+	140.1.1={
+		birth=yes
+	}
+	184.1.1={
+		death=yes
+	}
+}
+252 = {
+	name="Liao"
+	dynasty=198 #Deng
+    religion="taiping"
+	culture="han"
+    130.1.1={
+		birth=yes
+	}
+	180.1.1={
+		death=yes
+	}
+}

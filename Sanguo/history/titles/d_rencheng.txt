@@ -1,0 +1,39 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=k_yan
+}
+84.1.1={
+	holder=3728 #Liu Shang
+}
+101.1.1={
+	holder=3729 #Liu An
+}
+120.1.1={
+	holder=3730 #Liu Chong
+}
+151.1.1={
+	vice_royalty=yes
+	holder=1287 #Yang Bing
+}
+160.1.1={
+	holder=4298 #Qiao Yu
+}
+175.1.1={
+	vice_royalty=no
+	holder=3735 #Liu Tuo
+}
+220.12.10={
+	vice_royalty=yes
+	holder=4141 #Random
+}
+
+#Zheng Sui - 192
+#Qiao Yu - 196
+
+
+
+#Incomplete

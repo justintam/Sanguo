@@ -1,0 +1,18 @@
+# c_pingshou
+
+# County Title
+title = c_pingshou
+
+# Settlements
+max_settlements = 4
+
+b_pingshou = castle
+b_zhencheng = city
+#b_buqu = temple
+#b_lushou = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

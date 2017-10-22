@@ -1,0 +1,17 @@
+# c_mahan
+
+# County Title
+title = c_mahan
+
+# Settlements
+max_settlements = 3
+
+b_sabi = tribal
+b_geanma = tribal
+#b_samsung = temple
+
+# Misc
+culture = samhan
+religion = shamanist
+
+#History

@@ -1,0 +1,492 @@
+PROV1;Henan;Henan;Henan;;;;;;;;;x
+PROV2;Fanshui;Fanshui;Fanshui;;;;;;;;;x
+PROV3;Hulao;Hulao;Hulao;;;;;;;;;x
+PROV4;Qiguan;Qiguan;Qiguan;;;;;;;;;x
+PROV5;Shenchi;Shenchi;Shenchi;;;;;;;;;x
+PROV6;Yongning;Yongning;Yongning;;;;;;;;;x
+PROV7;Hongnong;Hongnong;Hongnong;;;;;;;;;x
+PROV8;Hanguguan;Hanguguan;Hanguguan;;;;;;;;;x
+PROV9;Lushi;Lushi;Lushi;;;;;;;;;x
+PROV10;Anyi;Anyi;Anyi;;;;;;;;;x
+PROV11;Dongyuan;Dongyuan;Dongyuan;;;;;;;;;x
+PROV12;Pishi;Pishi;Pishi;;;;;;;;;x
+PROV13;Wenxi;Wenxi;Wenxi;;;;;;;;;x
+PROV14;Yang;Yang;Yang;;;;;;;;;x
+PROV15;Huai;Huai;Huai;;;;;;;;;x
+PROV16;Chaoge;Chaoge;Chaoge;;;;;;;;;x
+PROV17;Liyang;Liyang;Liyang;;;;;;;;;x
+PROV18;Shanyangyi;Shanyangyi;Shanyangyi;;;;;;;;;x
+PROV19;Yanjing;Yanjing;Yanjing;;;;;;;;;x
+PROV20;Changan;Changan;Changan;;;;;;;;;x
+PROV21;Baling;Baling;Baling;;;;;;;;;x
+PROV22;Duling;Duling;Duling;;;;;;;;;x
+PROV23;Lantian;Lantian;Lantian;;;;;;;;;x
+PROV24;Xinping;Xinping;Xinping;;;;;;;;;x
+PROV25;Youfufeng;Youfufeng;Youfufeng;;;;;;;;;x
+PROV26;Chencang;Chencang;Chencang;;;;;;;;;x
+PROV27;Wuzhang;Wuzhang;Wuzhang;;;;;;;;;x
+PROV28;Zuopingyi;Zuopingyi;Zuopingyi;;;;;;;;;x
+PROV29;Wannian;Wannian;Wannian;;;;;;;;;x
+PROV30;Jinyang;Jinyang;Jinyang;;;;;;;;;x
+PROV31;Jiexu;Jiexu;Jiexu;;;;;;;;;x
+PROV32;Yangyi;Yangyi;Yangyi;;;;;;;;;x
+PROV33;Zhongdu;Zhongdu;Zhongdu;;;;;;;;;x
+PROV34;Dingxiang;Dingxiang;Dingxiang;;;;;;;;;x
+PROV35;Tongguo;Tongguo;Tongguo;;;;;;;;;x
+PROV36;Zhongling;Zhongling;Zhongling;;;;;;;;;x
+PROV37;Shang;Shang;Shang;;;;;;;;;x
+PROV38;Fushi;Fushi;Fushi;;;;;;;;;x
+PROV39;Zhenlin;Zhenlin;Zhenlin;;;;;;;;;x
+PROV40;Shangdang;Shangdang;Shangdang;;;;;;;;;x
+PROV41;Gaodou;Gaodou;Gaodou;;;;;;;;;x
+PROV42;Zhan;Zhan;Zhan;;;;;;;;;x
+PROV43;Shuofang;Shuofang;Shuofang;;;;;;;;;x
+PROV44;Dacheng;Dacheng;Dacheng;;;;;;;;;x
+PROV45;Sanfeng;Sanfeng;Sanfeng;;;;;;;;;x
+PROV46;Wuyuan;Wuyuan;Wuyuan;;;;;;;;;x
+PROV47;Jiuyuan;Jiuyuan;Jiuyuan;;;;;;;;;x
+PROV48;Xianyang;Xianyang;Xianyang;;;;;;;;;x
+PROV49;Xihe;Xihe;Xihe;;;;;;;;;x
+PROV50;Gaolang;Gaolang;Gaolang;;;;;;;;;x
+PROV51;Meiji;Meiji;Meiji;;;;;;;;;x
+PROV52;Pingcheng;Pingcheng;Pingcheng;;;;;;;;;x
+PROV53;Guangwu;Guangwu;Guangwu;;;;;;;;;x
+PROV54;Mayi;Mayi;Mayi;;;;;;;;;x
+PROV55;Yunzhong;Yunzhong;Yunzhong;;;;;;;;;x
+PROV56;Dingxiangyun;Dingxiangyun;Dingxiangyun;;;;;;;;;x
+PROV57;Shaling;Shaling;Shaling;;;;;;;;;x
+PROV58;Anping;Anping;Anping;;;;;;;;;x
+PROV59;Fucheng;Fucheng;Fucheng;;;;;;;;;x
+PROV60;Nangong;Nangong;Nangong;;;;;;;;;x
+PROV61;Tangyang;Tangyang;Tangyang;;;;;;;;;x
+PROV62;Wusui;Wusui;Wusui;;;;;;;;;x
+PROV63;Xindou;Xindou;Xindou;;;;;;;;;x
+PROV64;Qinghe;Qinghe;Qinghe;;;;;;;;;x
+PROV65;Beiqiu;Beiqiu;Beiqiu;;;;;;;;;x
+PROV66;Dongwucheng;Dongwucheng;Dongwucheng;;;;;;;;;x
+PROV67;Ganling;Ganling;Ganling;;;;;;;;;x
+PROV68;Yimu;Yimu;Yimu;;;;;;;;;x
+PROV69;Bohai;Bohai;Bohai;;;;;;;;;x
+PROV70;Chonghe;Chonghe;Chonghe;;;;;;;;;x
+PROV71;Fuyangsi;Fuyangsi;Fuyangsi;;;;;;;;;x
+PROV72;Gaocheng;Gaocheng;Gaocheng;;;;;;;;;x
+PROV73;Nanpi;Nanpi;Nanpi;;;;;;;;;x
+PROV74;Yangxin;Yangxin;Yangxin;;;;;;;;;x
+PROV75;Zhending;Zhending;Zhending;;;;;;;;;x
+PROV76;Fangzi;Fangzi;Fangzi;;;;;;;;;x
+PROV77;Jiumen;Jiumen;Jiumen;;;;;;;;;x
+PROV78;Luancheng;Luancheng;Luancheng;;;;;;;;;x
+PROV79;Puwu;Puwu;Puwu;;;;;;;;;x
+PROV80;Yuanshi;Yuanshi;Yuanshi;;;;;;;;;x
+PROV81;Hejian;Hejian;Hejian;;;;;;;;;x
+PROV82;Gaoyang;Gaoyang;Gaoyang;;;;;;;;;x
+PROV83;Mao;Mao;Mao;;;;;;;;;x
+PROV84;Shuzhou;Shuzhou;Shuzhou;;;;;;;;;x
+PROV85;Yi;Yi;Yi;;;;;;;;;x
+PROV86;Julu;Julu;Julu;;;;;;;;;x
+PROV87;Guangping;Guangping;Guangping;;;;;;;;;x
+PROV88;Guangzong;Guangzong;Guangzong;;;;;;;;;x
+PROV89;Nanhe;Nanhe;Nanhe;;;;;;;;;x
+PROV90;Qiao;Qiao;Qiao;;;;;;;;;x
+PROV91;Xiaquyang;Xiaquyang;Xiaquyang;;;;;;;;;x
+PROV92;Yingtao;Yingtao;Yingtao;;;;;;;;;x
+PROV93;Wei;Wei;Wei;;;;;;;;;x
+PROV94;Chiqiu;Chiqiu;Chiqiu;;;;;;;;;x
+PROV95;Qingyuan;Qingyuan;Qingyuan;;;;;;;;;x
+PROV96;Sha;Sha;Sha;;;;;;;;;x
+PROV97;Ye;Ye;Ye;;;;;;;;;x
+PROV98;Yuancheng;Yuancheng;Yuancheng;;;;;;;;;x
+PROV99;Handan;Handan;Handan;;;;;;;;;x
+PROV100;Yiyang;Yiyang;Yiyang;;;;;;;;;x
+PROV101;Zhongqiu;Zhongqiu;Zhongqiu;;;;;;;;;x
+PROV102;Zhongshan;Zhongshan;Zhongshan;;;;;;;;;x
+PROV103;Anxi;Anxi;Anxi;;;;;;;;;x
+PROV104;Beiping;Beiping;Beiping;;;;;;;;;x
+PROV105;Shangquyang;Shangquyang;Shangquyang;;;;;;;;;x
+PROV106;Xinshi;Xinshi;Xinshi;;;;;;;;;x
+PROV107;Cangwu;Cangwu;Cangwu;;;;;;;;;x
+PROV108;Longbian;Longbian;Longbian;;;;;;;;;x
+PROV109;Leilou;Leilou;Leilou;;;;;;;;;x
+PROV110;Miling;Miling;Miling;;;;;;;;;x
+PROV111;Quyang;Quyang;Quyang;;;;;;;;;x
+PROV112;Zhugou;Zhugou;Zhugou;;;;;;;;;x
+PROV113;Hepu;Hepu;Hepu;;;;;;;;;x
+PROV114;Anguan;Anguan;Anguan;;;;;;;;;x
+PROV115;Xupu;Xupu;Xupu;;;;;;;;;x
+PROV116;Panyu;Panyu;Panyu;;;;;;;;;x
+PROV117;Zhuwu;Zhuwu;Zhuwu;;;;;;;;;x
+PROV118;Bushan;Bushan;Bushan;;;;;;;;;x
+PROV119;Wan;Wan;Wan;;;;;;;;;x
+PROV120;Xinye;Xinye;Xinye;;;;;;;;;x
+PROV121;Shunyang;Shunyang;Shunyang;;;;;;;;;x
+PROV122;Luyang;Luyang;Luyang;;;;;;;;;x
+PROV123;Sui;Sui;Sui;;;;;;;;;x
+PROV124;Fuyang;Fuyang;Fuyang;;;;;;;;;x
+PROV125;Changsha;Changsha;Changsha;;;;;;;;;x
+PROV126;Anfu;Anfu;Anfu;;;;;;;;;x
+PROV127;Hanshou;Hanshou;Hanshou;;;;;;;;;x
+PROV128;Baqiu;Baqiu;Baqiu;;;;;;;;;x
+PROV129;Xiangtan;Xiangtan;Xiangtan;;;;;;;;;x
+PROV130;Youxian;Youxian;Youxian;;;;;;;;;x
+PROV131;Guiyang;Guiyang;Guiyang;;;;;;;;;x
+PROV132;Leiyang;Leiyang;Leiyang;;;;;;;;;x
+PROV133;Jingling;Jingling;Jingling;;;;;;;;;x
+PROV134;Nanxinshi;Nanxinshi;Nanxinshi;;;;;;;;;x
+PROV135;Shaxian;Shaxian;Shaxian;;;;;;;;;x
+PROV136;Chibi;Chibi;Chibi;;;;;;;;;x
+PROV137;Xiakou;Xiakou;Xiakou;;;;;;;;;x
+PROV138;Lingling;Lingling;Lingling;;;;;;;;;x
+PROV139;Guiling;Guiling;Guiling;;;;;;;;;x
+PROV140;Hengyang;Hengyang;Hengyang;;;;;;;;;x
+PROV141;Yingdao;Yingdao;Yingdao;;;;;;;;;x
+PROV142;Zhaoling;Zhaoling;Zhaoling;;;;;;;;;x
+PROV143;Zhenyang;Zhenyang;Zhenyang;;;;;;;;;x
+PROV144;Jiangling;Jiangling;Jiangling;;;;;;;;;x
+PROV145;Fanjing;Fanjing;Fanjing;;;;;;;;;x
+PROV146;Ruo;Ruo;Ruo;;;;;;;;;x
+PROV147;Xiangyang;Xiangyang;Xiangyang;;;;;;;;;x
+PROV148;Wuling;Wuling;Wuling;;;;;;;;;x
+PROV149;Gongan;Gongan;Gongan;;;;;;;;;x
+PROV150;Wuxi;Wuxi;Wuxi;;;;;;;;;x
+PROV151;Tianshui;Tianshui;Tianshui;;;;;;;;;x
+PROV152;Shangfanggu;Shangfanggu;Shangfanggu;;;;;;;;;x
+PROV153;Yicheng;Yicheng;Yicheng;;;;;;;;;x
+PROV154;Anding;Anding;Anding;;;;;;;;;x
+PROV155;Beidi;Beidi;Beidi;;;;;;;;;x
+PROV156;Chidi;Chidi;Chidi;;;;;;;;;x
+PROV157;Baidi;Baidi;Baidi;;;;;;;;;x
+PROV158;Dunhuang;Dunhuang;Dunhuang;;;;;;;;;x
+PROV159;Jincheng;Jincheng;Jincheng;;;;;;;;;x
+PROV160;Linqiang;Linqiang;Linqiang;;;;;;;;;x
+PROV161;Xiping;Xiping;Xiping;;;;;;;;;x
+PROV162;Jiuquan;Jiuquan;Jiuquan;;;;;;;;;x
+PROV163;Lintao;Lintao;Lintao;;;;;;;;;x
+PROV164;Beiyuan;Beiyuan;Beiyuan;;;;;;;;;x
+PROV165;Wudu;Wudu;Wudu;;;;;;;;;x
+PROV166;Xiabian;Xiabian;Xiabian;;;;;;;;;x
+PROV167;Wuwei;Wuwei;Wuwei;;;;;;;;;x
+PROV168;Longyou;Longyou;Longyou;;;;;;;;;x
+PROV169;Lianju;Lianju;Lianju;;;;;;;;;x
+PROV170;Juyan;Juyan;Juyan;;;;;;;;;x
+PROV171;Xihai;Xihai;Xihai;;;;;;;;;x
+PROV172;Zhangye;Zhangye;Zhangye;;;;;;;;;x
+PROV173;Xijun;Xijun;Xijun;;;;;;;;;x
+PROV174;Beihai;Beihai;Beihai;;;;;;;;;x
+PROV175;Chunyu;Chunyu;Chunyu;;;;;;;;;x
+PROV176;Duchang;Duchang;Duchang;;;;;;;;;x
+PROV177;Pingchang;Pingchang;Pingchang;;;;;;;;;x
+PROV178;Pingshou;Pingshou;Pingshou;;;;;;;;;x
+PROV179;Xiami;Xiami;Xiami;;;;;;;;;x
+PROV180;Donglai;Donglai;Donglai;;;;;;;;;x
+PROV181;Jinan;Jinan;Jinan;;;;;;;;;x
+PROV182;Dongpingling;Dongpingling;Dongpingling;;;;;;;;;x
+PROV183;Licheng;Licheng;Licheng;;;;;;;;;x
+PROV184;Lean;Lean;Lean;;;;;;;;;x
+PROV185;Bocheng;Bocheng;Bocheng;;;;;;;;;x
+PROV186;Pingyuan;Pingyuan;Pingyuan;;;;;;;;;x
+PROV187;Zhoua;Zhoua;Zhoua;;;;;;;;;x
+PROV188;Qi;Qi;Qi;;;;;;;;;x
+PROV189;Pengcheng;Pengcheng;Pengcheng;;;;;;;;;x
+PROV190;Guangqi;Guangqi;Guangqi;;;;;;;;;x
+PROV191;Peifeng;Peifeng;Peifeng;;;;;;;;;x
+PROV192;Donghai;Donghai;Donghai;;;;;;;;;x
+PROV193;Jiqiu;Jiqiu;Jiqiu;;;;;;;;;x
+PROV194;Lanling;Lanling;Lanling;;;;;;;;;x
+PROV195;Qu;Qu;Qu;;;;;;;;;x
+PROV196;Yinping;Yinping;Yinping;;;;;;;;;x
+PROV197;Jiangdu;Jiangdu;Jiangdu;;;;;;;;;x
+PROV198;Langye;Langye;Langye;;;;;;;;;x
+PROV199;Ju;Ju;Ju;;;;;;;;;x
+PROV200;Yangdu;Yangdu;Yangdu;;;;;;;;;x
+PROV201;Zeng;Zeng;Zeng;;;;;;;;;x
+PROV202;Xiapi;Xiapi;Xiapi;;;;;;;;;x
+PROV203;Xiaqiu;Xiaqiu;Xiaqiu;;;;;;;;;x
+PROV204;Chenliu;Chenliu;Chenliu;;;;;;;;;x
+PROV205;Changyuan;Changyuan;Changyuan;;;;;;;;;x
+PROV206;Jiyu;Jiyu;Jiyu;;;;;;;;;x
+PROV207;Pingqiu;Pingqiu;Pingqiu;;;;;;;;;x
+PROV208;Xiangyi;Xiangyi;Xiangyi;;;;;;;;;x
+PROV209;Yongqiu;Yongqiu;Yongqiu;;;;;;;;;x
+PROV210;Dongwuyang;Dongwuyang;Dongwuyang;;;;;;;;;x
+PROV211;Dunqiu;Dunqiu;Dunqiu;;;;;;;;;x
+PROV212;Fanyan;Fanyan;Fanyan;;;;;;;;;x
+PROV213;Puyang;Puyang;Puyang;;;;;;;;;x
+PROV214;Weigong;Weigong;Weigong;;;;;;;;;x
+PROV215;Yan;Yan;Yan;;;;;;;;;x
+PROV216;Zhang;Zhang;Zhang;;;;;;;;;x
+PROV217;Shouzhang;Shouzhang;Shouzhang;;;;;;;;;x
+PROV218;Jibei;Jibei;Jibei;;;;;;;;;x
+PROV219;Lu;Lu;Lu;;;;;;;;;x
+PROV220;Sheqiu;Sheqiu;Sheqiu;;;;;;;;;x
+PROV221;Chengwu;Chengwu;Chengwu;;;;;;;;;x
+PROV222;Dingtao;Dingtao;Dingtao;;;;;;;;;x
+PROV223;Juancheng;Juancheng;Juancheng;;;;;;;;;x
+PROV224;Linqiu;Linqiu;Linqiu;;;;;;;;;x
+PROV225;Rencheng;Rencheng;Rencheng;;;;;;;;;x
+PROV226;Changyi;Changyi;Changyi;;;;;;;;;x
+PROV227;Fangyu;Fangyu;Fangyu;;;;;;;;;x
+PROV228;Gaoping;Gaoping;Gaoping;;;;;;;;;x
+PROV229;Nanpingyang;Nanpingyang;Nanpingyang;;;;;;;;;x
+PROV230;Bo;Bo;Bo;;;;;;;;;x
+PROV231;Fei;Fei;Fei;;;;;;;;;x
+PROV232;Liangfu;Liangfu;Liangfu;;;;;;;;;x
+PROV233;Nanwuyang;Nanwuyang;Nanwuyang;;;;;;;;;x
+PROV234;Jianye;Jianye;Jianye;;;;;;;;;x
+PROV235;Danyang;Danyang;Danyang;;;;;;;;;x
+PROV236;Jingxian;Jingxian;Jingxian;;;;;;;;;x
+PROV237;Shicheng;Shicheng;Shicheng;;;;;;;;;x
+PROV238;Wu;Wu;Wu;;;;;;;;;x
+PROV239;Fuchun;Fuchun;Fuchun;;;;;;;;;x
+PROV240;Jiaxing;Jiaxing;Jiaxing;;;;;;;;;x
+PROV241;Qiantang;Qiantang;Qiantang;;;;;;;;;x
+PROV242;Wucheng;Wucheng;Wucheng;;;;;;;;;x
+PROV243;Shouchun;Shouchun;Shouchun;;;;;;;;;x
+PROV244;Xiacai;Xiacai;Xiacai;;;;;;;;;x
+PROV245;Yutai;Yutai;Yutai;;;;;;;;;x
+PROV246;Kuaiji;Kuaiji;Kuaiji;;;;;;;;;x
+PROV247;Wenzhou;Wenzhou;Wenzhou;;;;;;;;;x
+PROV248;Lujiang;Lujiang;Lujiang;;;;;;;;;x
+PROV249;Hefei;Hefei;Hefei;;;;;;;;;x
+PROV250;Juchao;Juchao;Juchao;;;;;;;;;x
+PROV251;Shulu;Shulu;Shulu;;;;;;;;;x
+PROV252;Nanchang;Nanchang;Nanchang;;;;;;;;;x
+PROV253;Poyang;Poyang;Poyang;;;;;;;;;x
+PROV254;Luling;Luling;Luling;;;;;;;;;x
+PROV255;Linchuang;Linchuang;Linchuang;;;;;;;;;x
+PROV256;Nankang;Nankang;Nankang;;;;;;;;;x
+PROV257;Chengdu;Chengdu;Chengdu;;;;;;;;;x
+PROV258;Deyang;Deyang;Deyang;;;;;;;;;x
+PROV259;Fanshu;Fanshu;Fanshu;;;;;;;;;x
+PROV260;Jiangyuan;Jiangyuan;Jiangyuan;;;;;;;;;x
+PROV261;Linqiong;Linqiong;Linqiong;;;;;;;;;x
+PROV262;Pi;Pi;Pi;;;;;;;;;x
+PROV263;Qingcheng;Qingcheng;Qingcheng;;;;;;;;;x
+PROV264;Jiangzhou;Jiangzhou;Jiangzhou;;;;;;;;;x
+PROV265;Dianjiang;Dianjiang;Dianjiang;;;;;;;;;x
+PROV266;Linjiang;Linjiang;Linjiang;;;;;;;;;x
+PROV267;Langzhong;Langzhong;Langzhong;;;;;;;;;x
+PROV268;Yongan;Yongan;Yongan;;;;;;;;;x
+PROV269;Zhi;Zhi;Zhi;;;;;;;;;x
+PROV270;Guanghan;Guanghan;Guanghan;;;;;;;;;x
+PROV271;Mianzhu;Mianzhu;Mianzhu;;;;;;;;;x
+PROV272;Xindu;Xindu;Xindu;;;;;;;;;x
+PROV273;Yangquan;Yangquan;Yangquan;;;;;;;;;x
+PROV274;Zitong;Zitong;Zitong;;;;;;;;;x
+PROV275;Baishui;Baishui;Baishui;;;;;;;;;x
+PROV276;Hanzhong;Hanzhong;Hanzhong;;;;;;;;;x
+PROV277;Chenggu;Chenggu;Chenggu;;;;;;;;;x
+PROV278;Wuyang;Wuyang;Wuyang;;;;;;;;;x
+PROV279;Bodao;Bodao;Bodao;;;;;;;;;x
+PROV280;Nanan;Nanan;Nanan;;;;;;;;;x
+PROV281;Shuyong;Shuyong;Shuyong;;;;;;;;;x
+PROV282;Dianchi;Dianchi;Dianchi;;;;;;;;;x
+PROV283;Cun;Cun;Cun;;;;;;;;;x
+PROV284;Jianning;Jianning;Jianning;;;;;;;;;x
+PROV285;Yuyuan;Yuyuan;Yuyuan;;;;;;;;;x
+PROV286;Buwei;Buwei;Buwei;;;;;;;;;x
+PROV287;Ailao;Ailao;Ailao;;;;;;;;;x
+PROV288;Bisu;Bisu;Bisu;;;;;;;;;x
+PROV289;Bonan;Bonan;Bonan;;;;;;;;;x
+PROV290;Nanfu;Nanfu;Nanfu;;;;;;;;;x
+PROV291;Suitang;Suitang;Suitang;;;;;;;;;x
+PROV292;Yongshou;Yongshou;Yongshou;;;;;;;;;x
+PROV293;Anshang;Anshang;Anshang;;;;;;;;;x
+PROV294;Beishui;Beishui;Beishui;;;;;;;;;x
+PROV295;Huiwu;Huiwu;Huiwu;;;;;;;;;x
+PROV296;Qiongdu;Qiongdu;Qiongdu;;;;;;;;;x
+PROV297;Tanzhi;Tanzhi;Tanzhi;;;;;;;;;x
+PROV298;Qielan;Qielan;Qielan;;;;;;;;;x
+PROV299;Wulian;Wulian;Wulian;;;;;;;;;x
+PROV300;Yelang;Yelang;Yelang;;;;;;;;;x
+PROV301;Zhuti;Zhuti;Zhuti;;;;;;;;;x
+PROV302;Nanchangzhu;Nanchangzhu;Nanchangzhu;;;;;;;;;x
+PROV303;Guangyang;Guangyang;Guangyang;;;;;;;;;x
+PROV304;Changping;Changping;Changping;;;;;;;;;x
+PROV305;Ji;Ji;Ji;;;;;;;;;x
+PROV306;Jundu;Jundu;Jundu;;;;;;;;;x
+PROV307;Zhuo;Zhuo;Zhuo;;;;;;;;;x
+PROV308;Beixincheng;Beixincheng;Beixincheng;;;;;;;;;x
+PROV309;Fanyang;Fanyang;Fanyang;;;;;;;;;x
+PROV310;Guan;Guan;Guan;;;;;;;;;x
+PROV311;Qiu;Qiu;Qiu;;;;;;;;;x
+PROV312;Wanchengzhuo;Wanchengzhuo;Wanchengzhuo;;;;;;;;;x
+PROV313;Dai;Dai;Dai;;;;;;;;;x
+PROV314;Beipingyi;Beipingyi;Beipingyi;;;;;;;;;x
+PROV315;Pingshu;Pingshu;Pingshu;;;;;;;;;x
+PROV316;Sanggan;Sanggan;Sanggan;;;;;;;;;x
+PROV317;Daifang;Daifang;Daifang;;;;;;;;;x
+PROV318;Lelang;Lelang;Lelang;;;;;;;;;x
+PROV319;Xiangping;Xiangping;Xiangping;;;;;;;;;x
+PROV320;Liaosui;Liaosui;Liaosui;;;;;;;;;x
+PROV321;Liaoyong;Liaoyong;Liaoyong;;;;;;;;;x
+PROV322;Lingzhi;Lingzhi;Lingzhi;;;;;;;;;x
+PROV323;Yangle;Yangle;Yangle;;;;;;;;;x
+PROV324;Haiyang;Haiyang;Haiyang;;;;;;;;;x
+PROV325;Linyu;Linyu;Linyu;;;;;;;;;x
+PROV326;Shanggu;Shanggu;Shanggu;;;;;;;;;x
+PROV327;Xuantu;Xuantu;Xuantu;;;;;;;;;x
+PROV328;Youbeiping;Youbeiping;Youbeiping;;;;;;;;;x
+PROV329;Tuyin;Tuyin;Tuyin;;;;;;;;;x
+PROV330;Fanyangji;Fanyangji;Fanyangji;;;;;;;;;x
+PROV331;Wuzhong;Wuzhong;Wuzhong;;;;;;;;;x
+PROV332;Yuyuang;Yuyuang;Yuyuang;;;;;;;;;x
+PROV333;Pingyu;Pingyu;Pingyu;;;;;;;;;x
+PROV334;Anyang;Anyang;Anyang;;;;;;;;;x
+PROV335;Chengfu;Chengfu;Chengfu;;;;;;;;;x
+PROV336;Shansang;Shansang;Shansang;;;;;;;;;x
+PROV337;Xincai;Xincai;Xincai;;;;;;;;;x
+PROV338;Xipingru;Xipingru;Xipingru;;;;;;;;;x
+PROV339;Yangan;Yangan;Yangan;;;;;;;;;x
+PROV340;Chenguo;Chenguo;Chenguo;;;;;;;;;x
+PROV341;Ku;Ku;Ku;;;;;;;;;x
+PROV342;Xinpingchen;Xinpingchen;Xinpingchen;;;;;;;;;x
+PROV343;Liangguo;Liangguo;Liangguo;;;;;;;;;x
+PROV344;Ningling;Ningling;Ningling;;;;;;;;;x
+PROV345;Gexiang;Gexiang;Gexiang;;;;;;;;;x
+PROV346;Suiyang;Suiyang;Suiyang;;;;;;;;;x
+PROV347;Yu;Yu;Yu;;;;;;;;;x
+PROV348;Luguo;Luguo;Luguo;;;;;;;;;x
+PROV349;Bian;Bian;Bian;;;;;;;;;x
+PROV350;Feng;Feng;Feng;;;;;;;;;x
+PROV351;Peiguo;Peiguo;Peiguo;;;;;;;;;x
+PROV352;Qipei;Qipei;Qipei;;;;;;;;;x
+PROV353;Xiao;Xiao;Xiao;;;;;;;;;x
+PROV354;Xuchang;Xuchang;Xuchang;;;;;;;;;x
+PROV355;Dingling;Dingling;Dingling;;;;;;;;;x
+PROV356;Changshe;Changshe;Changshe;;;;;;;;;x
+PROV357;Lunshi;Lunshi;Lunshi;;;;;;;;;x
+PROV358;Yangcheng;Yangcheng;Yangcheng;;;;;;;;;x
+PROV359;Yangdi;Yangdi;Yangdi;;;;;;;;;x
+PROV360;Yingyang;Yingyang;Yingyang;;;;;;;;;x
+PROV361;Qinghaixi;Qinghaixi;Qinghaixi;;;;;;;;;x
+PROV362;Qinghaidong;Qinghaidong;Qinghaidong;;;;;;;;;x
+PROV363;Turpan;Turpan;Turpan;;;;;;;;;x
+PROV364;Murong;Murong;Murong;;;;;;;;;x
+PROV365;Kezui;Kezui;Kezui;;;;;;;;;x
+PROV366;Queju;Queju;Queju;;;;;;;;;x
+PROV367;Luoluo;Luoluo;Luoluo;;;;;;;;;x
+PROV368;Tuiyan;Tuiyan;Tuiyan;;;;;;;;;x
+PROV369;Yanliyou;Yanliyou;Yanliyou;;;;;;;;;x
+PROV370;Mijia;Mijia;Mijia;;;;;;;;;x
+PROV371;Queji;Queji;Queji;;;;;;;;;x
+PROV372;Suli;Suli;Suli;;;;;;;;;x
+PROV373;Xiongnudong;Xiongnudong;Xiongnudong;;;;;;;;;x
+PROV374;Xiongnuxi;Xiongnuxi;Xiongnuxi;;;;;;;;;x
+PROV375;Wuhuandong;Wuhuandong;Wuhuandong;;;;;;;;;x
+PROV376;Wuhuanxi;Wuhuanxi;Wuhuanxi;;;;;;;;;x
+PROV377;Goguryeo;Goguryeo;Goguryeo;;;;;;;;;x
+PROV378;Dongye;Dongye;Dongye;;;;;;;;;x
+PROV379;Baekje;Baekje;Baekje;;;;;;;;;x
+PROV380;Mahan;Mahan;Mahan;;;;;;;;;x
+PROV381;Buyeo;Buyeo;Buyeo;;;;;;;;;x
+PROV382;Dongbuyeo;Dongbuyeo;Dongbuyeo;;;;;;;;;x
+PROV383;Byeonhan;Byeonhan;Byeonhan;;;;;;;;;x
+PROV384;Okjeo;Okjeo;Okjeo;;;;;;;;;x
+PROV385;Bukokjeo;Bukokjeo;Bukokjeo;;;;;;;;;x
+PROV386;Jinhan;Jinhan;Jinhan;;;;;;;;;x
+PROV387;Namye;Namye;Namye;;;;;;;;;x
+PROV388;Yellow River;Yellow River;Yellow River;;;;;;;;;x
+PROV389;Yellow River;Yellow River;Yellow River;;;;;;;;;x
+PROV390;Yellow River;Yellow River;Yellow River;;;;;;;;;x
+PROV391;Yellow River;Yellow River;Yellow River;;;;;;;;;x
+PROV392;Yellow River;Yellow River;Yellow River;;;;;;;;;x
+PROV393;Yellow River;Yellow River;Yellow River;;;;;;;;;x
+PROV394;Yellow River;Yellow River;Yellow River;;;;;;;;;x
+PROV395;Yellow River;Yellow River;Yellow River;;;;;;;;;x
+PROV396;Yangtze River;Yangtze River;Yangtze River;;;;;;;;;x
+PROV397;Yangtze River;Yangtze River;Yangtze River;;;;;;;;;x
+PROV398;Yangtze River;Yangtze River;Yangtze River;;;;;;;;;x
+PROV399;Yangtze River;Yangtze River;Yangtze River;;;;;;;;;x
+PROV400;Dongting Lake;Dongting Lake;Dongting Lake;;;;;;;;;x
+PROV401;Qinghai Lake;Qinghai Lake;Qinghai Lake;;;;;;;;;x
+PROV402;Nansi Lake;Nansi Lake;Nansi Lake;;;;;;;;;x
+PROV403;Luoma Lake;Luoma Lake;Luoma Lake;;;;;;;;;x
+PROV404;Hongze Lake;Hongze Lake;Hongze Lake;;;;;;;;;x
+PROV405;Chao Lake;Chao Lake;Chao Lake;;;;;;;;;x
+PROV406;Shijiu Lake;Shijiu Lake;Shijiu Lake;;;;;;;;;x
+PROV407;Nan Lake;Nan Lake;Nan Lake;;;;;;;;;x
+PROV408;Changdang Lake;Changdang Lake;Changdang Lake;;;;;;;;;x
+PROV409;Ge Lake;Ge Lake;Ge Lake;;;;;;;;;x
+PROV410;Tai Lake;Tai Lake;Tai Lake;;;;;;;;;x
+PROV411;Yangcheng Lake;Yangcheng Lake;Yangcheng Lake;;;;;;;;;x
+PROV412;Dongping Lake;Dongping Lake;Dongping Lake;;;;;;;;;x
+PROV413;Har Lake;Har Lake;Har Lake;;;;;;;;;x
+PROV414;Hong Lake;Hong Lake;Hong Lake;;;;;;;;;x
+PROV415;Dong Lake;Dong Lake;Dong Lake;;;;;;;;;x
+PROV416;Zhangdu Lake;Zhangdu Lake;Zhangdu Lake;;;;;;;;;x
+PROV417;Wu Lake;Wu Lake;Wu Lake;;;;;;;;;x
+PROV418;Ulansu Lake;Ulansu Lake;Ulansu Lake;;;;;;;;;x
+PROV419;Dalinur Lake;Dalinur Lake;Dalinur Lake;;;;;;;;;x
+PROV420;Shenjin Lake;Shenjin Lake;Shenjin Lake;;;;;;;;;x
+PROV421;Songhua Lake;Songhua Lake;Songhua Lake;;;;;;;;;x
+PROV422;Qingcao Lake;Qingcao Lake;Qingcao Lake;;;;;;;;;x
+PROV423;Xiliang Lake;Xiliang Lake;Xiliang Lake;;;;;;;;;x
+PROV424;Liangzi Lake;Liangzi Lake;Liangzi Lake;;;;;;;;;x
+PROV425;Lu Lake;Lu Lake;Lu Lake;;;;;;;;;x
+PROV426;Baoan Lake;Baoan Lake;Baoan Lake;;;;;;;;;x
+PROV427;Wusi Lake;Wusi Lake;Wusi Lake;;;;;;;;;x
+PROV428;Huama Lake;Huama Lake;Huama Lake;;;;;;;;;x
+PROV429;Daye Lake;Daye Lake;Daye Lake;;;;;;;;;x
+PROV430;Wabu Lake;Wabu Lake;Wabu Lake;;;;;;;;;x
+PROV431;Cheng Lake;Cheng Lake;Cheng Lake;;;;;;;;;x
+PROV432;Gyaring Lake;Gyaring Lake;Gyaring Lake;;;;;;;;;x
+PROV433;Ngoring Lake;Ngoring Lake;Ngoring Lake;;;;;;;;;x
+PROV434;Donggei Lake;Donggei Lake;Donggei Lake;;;;;;;;;x
+PROV435;Liaodong Bay;Liaodong Bay;Liaodong Bay;;;;;;;;;x
+PROV436;Bohai Bay;Bohai Bay;Bohai Bay;;;;;;;;;x
+PROV437;Northern Bohai;Northern Bohai;Northern Bohai;;;;;;;;;x
+PROV438;Western Bohai;Western Bohai;Western Bohai;;;;;;;;;x
+PROV439;Southern Bohai;Southern Bohai;Southern Bohai;;;;;;;;;x
+PROV440;Eastern Bohai;Eastern Bohai;Eastern Bohai;;;;;;;;;x
+PROV441;Taozi Bay;Taozi Bay;Taozi Bay;;;;;;;;;x
+PROV442;Zhuanghe Bay;Zhuanghe Bay;Zhuanghe Bay;;;;;;;;;x
+PROV443;Xiaoyao Bay;Xiaoyao Bay;Xiaoyao Bay;;;;;;;;;x
+PROV444;Haiyang Bay;Haiyang Bay;Haiyang Bay;;;;;;;;;x
+PROV445;Rongcheng Bay;Rongcheng Bay;Rongcheng Bay;;;;;;;;;x
+PROV446;Sanggou Bay;Sanggou Bay;Sanggou Bay;;;;;;;;;x
+PROV447;Xiaodou Bay;Xiaodou Bay;Xiaodou Bay;;;;;;;;;x
+PROV448;Shenshan Bay;Shenshan Bay;Shenshan Bay;;;;;;;;;x
+PROV449;Ondong Bay;Ondong Bay;Ondong Bay;;;;;;;;;x
+PROV450;Ongjingun Bay;Ongjingun Bay;Ongjingun Bay;;;;;;;;;x
+PROV451;Sindun Bay;Sindun Bay;Sindun Bay;;;;;;;;;x
+PROV452;Manchurian Bay;Manchurian Bay;Manchurian Bay;;;;;;;;;x
+PROV453;East Sea;East Sea;East Sea;;;;;;;;;x
+PROV454;Tsushima Strait;Tsushima Strait;Tsushima Strait;;;;;;;;;x
+PROV455;Korean Strait;Korean Strait;Korean Strait;;;;;;;;;x
+PROV456;Tamna;Tamna;Tamna;;;;;;;;;x
+PROV457;Hangzhou Bay;Hangzhou Bay;Hangzhou Bay;;;;;;;;;x
+PROV458;Moupan Sea;Moupan Sea;Moupan Sea;;;;;;;;;x
+PROV459;Dinghai Bay;Dinghai Bay;Dinghai Bay;;;;;;;;;x
+PROV460;Zhenhai Bay;Zhenhai Bay;Zhenhai Bay;;;;;;;;;x
+PROV461;Bashi Channel;Bashi Channel;Bashi Channel;;;;;;;;;x
+PROV462;Daoyu Channel;Daoyu Channel;Daoyu Channel;;;;;;;;;x
+PROV463;Haimen Bay;Haimen Bay;Haimen Bay;;;;;;;;;x
+PROV464;Daya Bay;Daya Bay;Daya Bay;;;;;;;;;x
+PROV465;Shenzhen Bay;Shenzhen Bay;Shenzhen Bay;;;;;;;;;x
+PROV466;Jinxing Bay;Jinxing Bay;Jinxing Bay;;;;;;;;;x
+PROV467;Bohe Bay;Bohe Bay;Bohe Bay;;;;;;;;;x
+PROV468;Qiongzhou Bay;Qiongzhou Bay;Qiongzhou Bay;;;;;;;;;x
+PROV469;Beibu Gulf;Beibu Gulf;Beibu Gulf;;;;;;;;;x
+PROV470;Qinzhou Bay;Qinzhou Bay;Qinzhou Bay;;;;;;;;;x
+PROV471;Ha Long Bay;Ha Long Bay;Ha Long Bay;;;;;;;;;x
+PROV472;Jiuzhen Coast;Jiuzhen Coast;Jiuzhen Coast;;;;;;;;;x
+PROV473;Rinan Coast;Rinan Coast;Rinan Coast;;;;;;;;;x
+PROV474;Tonkin Gulf;Tonkin Gulf;Tonkin Gulf;;;;;;;;;x
+PROV475;East China Sea;East China Sea;East China Sea;;;;;;;;;x
+PROV476;Northern Bay;Northern Bay;Northern Bay;;;;;;;;;x
+PROV477;South China Sea;South China Sea;South China Sea;;;;;;;;;x
+PROV478;Southeast China Sea;Southeast China Sea;Southeast China Sea;;;;;;;;;x
+PROV479;Taiwan Strait;Taiwan Strait;Taiwan Strait;;;;;;;;;x
+PROV480;Northern Yellow Sea;Northern Yellow Sea;Northern Yellow Sea;;;;;;;;;x
+PROV481;Yellow Sea;Yellow Sea;Yellow Sea;;;;;;;;;x
+PROV482;Southern Yellow Sea;Southern Yellow Sea;Southern Yellow Sea;;;;;;;;;x
+PROV483;Northern Steppes;Northern Steppes;Northern Steppes;;;;;;;;;x
+PROV484;Gobi Desert;Gobi Desert;Gobi Desert;;;;;;;;;x
+PROV485;Tibetan Plateau;Tibetan Plateau;Tibetan Plateau;;;;;;;;;x
+PROV486;Southern Jungles;Southern Jungles;Southern Jungles;;;;;;;;;x
+PROV487;Jeju Island;Jeju Island;Jeju Island;;;;;;;;;x
+PROV488;Tsushima Island;Tsushima Island;Tsushima Island;;;;;;;;;x
+PROV489;Yizhou;Yizhou;Yizhou;;;;;;;;;x
+PROV490;Penghu Island;Penghu Island;Penghu Island;;;;;;;;;x
+PROV491;Zhuya;Zhuya;Zhuya;;;;;;;;;x
+PROV492;Huangtu Plateau;Huangtu Plateau;Huangtu Plateau;;;;;;;;;x

@@ -1,0 +1,20 @@
+# c_huai
+
+# County Title
+title = c_huai
+
+# Settlements
+max_settlements = 6
+
+b_huai = castle
+b_wencheng = city
+b_heyang = city
+#b_zhongzhan = city
+#b_qinyang = city
+#b_mengzhou = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

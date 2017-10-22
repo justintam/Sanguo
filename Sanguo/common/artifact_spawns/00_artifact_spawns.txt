@@ -1,0 +1,24 @@
+book_way_of_peace = {
+    max_amount = 1
+    spawn_date = -1.1.1
+	
+	spawn_chance = {
+		value = 100
+	}
+    
+    weight = {
+		value = 0
+		additive_modifier = {
+			value = 100
+			primary_title = {
+				title = k_yellow
+			}
+			NOT = { year = 190 }
+		}
+	}
+    artifacts = {
+        book_way_of_peace = {
+            value = 1
+        }
+    }
+}

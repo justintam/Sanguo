@@ -1,0 +1,20 @@
+# c_xincai
+
+# County Title
+title = c_xincai
+
+# Settlements
+max_settlements = 6
+
+b_xincai = castle
+b_daluting = city
+b_fanyangting = city
+b_geling = city
+#b_xuncaifu = city
+#b_gending = temple
+
+# Misc
+culture = han
+religion = confucian
+
+#History

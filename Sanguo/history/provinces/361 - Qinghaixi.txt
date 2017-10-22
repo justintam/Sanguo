@@ -1,0 +1,18 @@
+# c_qinghaixi
+
+# County Title
+title = c_qinghaixi
+
+# Settlements
+max_settlements = 4
+
+b_qinghaixi = tribal
+b_qiangjiu = temple
+#b_qingjiang = temple
+#b_qinghaifu = castle
+
+# Misc
+culture = qiang
+religion = baishi
+
+#History

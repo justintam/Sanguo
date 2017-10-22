@@ -1,0 +1,31 @@
+# e_northern
+1.1.1={
+	historical_nomad = yes
+}
+1.1.1={
+	liege=k_xiongnu
+}
+166.1.1={
+	liege=k_xianbei
+}
+181.1.1={
+	liege=k_xiongnu
+}
+184.1.1={
+	holder=1500 #Qiangqui
+}
+188.1.1={
+	holder=1501 #Yufuluo
+}
+189.1.1={
+	#Replaced by Xubu
+}
+190.2.1={
+	#Xubu dies, not replaced
+}
+195.1.1={
+	holder=1505 #Huchuquan
+}
+#216.1.1={
+	#holder=0 #dies
+#}

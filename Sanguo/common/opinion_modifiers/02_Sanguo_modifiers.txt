@@ -1,0 +1,308 @@
+opinion_duel_target = {
+	opinion = -10
+	months = 120
+}
+opinion_bodyguard_protection = {
+	opinion = 5
+	months = 120
+}
+opinion_battle_duel_target = {
+	opinion = 0
+	months = 120
+}
+
+opinion_gave_horse_to_me = {
+	opinion = 50
+}
+
+opinion_oldheir_target = {
+	opinion = 0
+	months = 1
+}
+opinion_heir_target = {
+	opinion = 0
+	months = 1
+}
+
+opinion_ennobled = {
+	opinion = 100
+	months = 60
+}
+
+opinion_loyalty = {
+	opinion = 50
+	months = 1200
+}
+
+#Kidnap
+devious_plotter = {
+	opinion = -50
+	prison_reason = yes # This one gives righteous cause to imprison a character
+	revoke_reason = yes # This one gives righteous cause to revoke ONE title		
+}
+attempted_kidnapping = {
+	opinion = -100
+	prison_reason = yes # This one gives righteous cause to imprison a character
+	revoke_reason = yes # This one gives righteous cause to revoke ONE title	
+	crime = yes
+}
+attempted_kidnapping_of_kin = {
+	opinion = -50
+	prison_reason = yes # This one gives righteous cause to imprison a character
+	revoke_reason = yes # This one gives righteous cause to revoke ONE title	
+	crime = yes
+}
+attempted_kidnapping_of_vassal = {
+	opinion = -10
+	prison_reason = yes # This one gives righteous cause to imprison a character
+	revoke_reason = yes # This one gives righteous cause to revoke ONE title	
+}
+attempted_murder_of_close_kin = {
+	opinion = -100
+	prison_reason = yes # This one gives righteous cause to imprison a character
+	execute_reason = yes # This one gives righteous cause to revoke ONE title	
+	crime = yes
+}
+killed_vassal = {
+	opinion = -20
+	prison_reason = yes # This one gives righteous cause to imprison a character
+	execute_reason = yes # This one gives righteous cause to revoke ONE title	
+}
+kidnapped_me = {
+	opinion = -100
+	crime = yes
+}
+opinion_kidnapped = {
+	opinion = -30
+	crime = yes
+}
+opinion_attempted_kidnapped = {
+	opinion = -25
+	prison_reason = yes # This one gives righteous cause to imprison a character
+	crime = yes
+}
+
+# Execute
+executed_kin = {
+	opinion = -35
+}
+executed_lover = {
+	opinion = -35
+	months = 120
+}
+executed_friend = {
+	opinion = -35
+	months = 120
+}
+
+opinion_vengeance = {
+	opinion = -150
+	months = 300
+	prison_reason = yes
+	execute_reason = yes
+	crime = yes
+}
+
+opinion_defected_to_me = {
+	opinion = 100
+	months = 240
+}
+
+opinion_service_rendered = {
+	opinion = 5
+}
+
+opinion_slayed_kinsman = {
+	opinion = -30
+	months = 60
+}
+
+#Exam
+opinion_sponsored_exam = {
+	opinion = 25
+	years = 10
+}
+
+#Nobility
+opinion_raised_to_nobility = {
+	opinion = 25
+	years = 10
+}
+
+#Coalition
+opinion_rejected_coalition = {
+	opinion = -25
+	months = 60
+}
+
+#Restoration
+opinion_restored_to_luoyang = {
+	opinion = 100
+	months = 1200
+}
+
+#Adopt
+opinion_adopted_me = {
+	opinion = 60
+	months = 120
+}
+opinion_adopted_a_son = {
+	opinion = -50
+	months = 120
+}
+
+#Castrate
+opinion_castrated_son = {
+	opinion = -50
+	months = 360
+	prison_reason = yes
+	crime = yes
+}
+opinion_castrated_kin = {
+	opinion = -30
+	months = 240
+	prison_reason = yes
+	crime = yes
+}
+opinion_castrated_spouse = {
+	opinion = -50
+	months = 240
+	prison_reason = yes
+	crime = yes
+}
+
+#Blind
+opinion_blinded_child = {
+	opinion = -50
+	months = 360
+	prison_reason = yes
+	crime = yes
+}
+opinion_blinded_kin = {
+	opinion = -30
+	months = 240
+	prison_reason = yes
+	crime = yes
+}
+opinion_blinded_spouse = {
+	opinion = -50
+	months = 240
+	prison_reason = yes
+	crime = yes
+}
+
+#Forced
+opinion_forced_upon_me = {
+	opinion = -60
+	months = 120
+	prison_reason = yes
+	crime = yes
+}
+opinion_forced_upon_kin = {
+	opinion = -50
+	months = 120
+	prison_reason = yes
+	crime = yes
+}
+opinion_forced_upon_spouse = {
+	opinion = -50
+	months = 120
+	prison_reason = yes
+	crime = yes
+}
+opinion_forced_upon_lover = {
+	opinion = -50
+	months = 120
+	prison_reason = yes
+	crime = yes
+}
+opinion_forced_upon_friend = {
+	opinion = -35
+	months = 120
+	prison_reason = yes
+	crime = yes
+}
+opinion_forced_marriage = {
+	opinion = -100
+	months = 1200
+	prison_reason = yes
+	crime = yes
+}
+opinion_forced_marriage_child = {
+	opinion = -50
+	months = 1200
+	prison_reason = yes
+	crime = yes
+}
+opinion_forced_marriage_kin = {
+	opinion = -25
+	months = 1200
+	prison_reason = yes
+	crime = yes
+}
+opinion_cuckold_child = {
+	opinion = -40
+}
+
+
+#Torture
+opinion_tortured_me = {
+	opinion = -80
+	months = 360
+	prison_reason = yes
+	crime = yes
+}
+opinion_tortured_kin = {
+	opinion = -40
+	months = 180
+	prison_reason = yes
+	crime = yes
+}
+opinion_tortured_lover = {
+	opinion = -40
+	months = 180
+	prison_reason = yes
+	crime = yes
+}
+opinion_tortured_friend = {
+	opinion = -40
+	months = 180
+	prison_reason = yes
+	crime = yes
+}
+
+#Refuse Tax
+opinion_ask_tax = {
+	opinion = -10
+	months = 60
+}
+opinion_ask_trib = {
+	opinion = 5
+	months = 60
+}
+opinion_ask_none = {
+	opinion = 5
+	months = 60
+}
+opinion_tax_full = {
+	opinion = 5
+	months = 60
+}
+opinion_tax_part = {
+	opinion = -10
+	months = 60
+}
+opinion_tax_none = {
+	opinion = -25
+	months = 60
+}
+opinion_tax_refused = {
+	opinion = -50
+	months = 60
+}
+
+#Border Tensions
+opinion_border_tensions = {
+	opinion = -50
+	months = 60
+}

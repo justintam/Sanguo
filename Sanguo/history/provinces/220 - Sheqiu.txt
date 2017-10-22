@@ -1,0 +1,18 @@
+# c_sheqiu
+
+# County Title
+title = c_sheqiu
+
+# Settlements
+max_settlements = 4
+
+b_sheqiu = castle
+b_suixiang = city
+#b_muli = temple
+#b_mixiangdu = castle
+
+# Misc
+culture = han
+religion = taiping
+
+#History

@@ -1,0 +1,17 @@
+# c_anshang
+
+# County Title
+title = c_anshang
+
+# Settlements
+max_settlements = 3
+
+b_anshang = castle
+#b_anshangyi = city
+#b_shidian = temple
+
+# Misc
+culture = nanman
+religion = huojiao
+
+#History

@@ -1,0 +1,528 @@
+# Xianbei Clan
+1400 = {
+	name="Budugen"
+	dynasty=800
+	religion="tengri_pagan"
+	culture="xianbei"
+	father=1406
+	trait="grey_eminence"
+	trait="destined"
+    trait="duel_trained_warrior"
+	trait="quick"
+	trait="strong"
+	trait="ambitious"
+	165.1.1={
+		birth=yes
+	}
+	233.1.1={
+		death=yes
+	}
+}
+1401 = {
+	name="Bianhe"
+	dynasty=800
+	religion="tengri_pagan"
+	culture="xianbei"
+	1.1.1={
+		birth=yes
+	}
+	49.1.1={
+		death=yes
+	}
+}
+1402 = {
+	name="Yuchoupen"
+	dynasty=800
+	religion="tengri_pagan"
+	culture="xianbei"
+	father=1401
+	20.1.1={
+		birth=yes
+	}
+	54.1.1={
+		death=yes
+	}
+}
+1403 = {
+	name="Cizhiqian"
+	dynasty=800
+	religion="tengri_pagan"
+	culture="xianbei"
+	father=1402
+	50.1.1={
+		birth=yes
+	}
+	132.1.1={
+		death=yes
+	}
+}
+1404 = {
+	name="Touluhou"
+	dynasty=800
+	religion="tengri_pagan"
+	culture="xianbei"
+	father=1403
+	100.1.1={
+		birth=yes
+	}
+	156.1.1={
+		death=yes
+	}
+}
+1405 = {
+	name="Tanshihuai"
+	dynasty=800
+	religion="tengri_pagan"
+	culture="xianbei"
+	father=1404
+	trait="brilliant_strategist"
+	trait="genius"
+	trait="strong"
+	trait="ambitious"
+	trait="diligent"
+	trait="temperate"
+	141.1.1={
+		birth=yes
+	}
+	181.1.1={
+		death=yes
+	}
+}
+1406 = {
+	name="Bishibi"
+	dynasty=800
+	religion="tengri_pagan"
+	culture="xianbei"
+	father=1404
+    trait="duel_poor_warrior"
+	145.1.1={
+		birth=yes
+	}
+	190.1.1={
+		death=yes
+	}
+}
+1407 = {
+	name="Helian"
+	dynasty=800
+	religion="tengri_pagan"
+	culture="xianbei"
+	father=1405
+	trait="arbitrary"
+	157.1.1={
+		birth=yes
+	}
+	184.1.1={
+		effect = { health = -3 fertility = -0.4 }
+	}
+	185.8.1={
+		death=yes
+	}
+}
+1408 = {
+	name="Kuitou"
+	dynasty=800
+	religion="tengri_pagan"
+	culture="xianbei"
+	father=1406
+	trait="grey_eminence"
+    trait="duel_poor_warrior"
+	trait="quick"
+	trait="strong"
+	trait="content"
+	161.1.1={
+		birth=yes
+	}
+	223.1.1={
+		death=yes
+	}
+}
+1409 = {
+	name="Fuluohan"
+	dynasty=800
+	religion="tengri_pagan"
+	culture="xianbei"
+	father=1406
+	trait="misguided_warrior"
+    trait="duel_poor_warrior"
+	trait="ambitious"
+	trait="envious"
+	trait="greedy"
+	trait="craven"
+	163.1.1={
+		birth=yes
+	}
+	218.1.1={
+		death={
+			death_reason=death_murder
+			killer=1410
+		}
+	}
+}
+1410 = {
+	name="Kebineng"
+	religion="tengri_pagan"
+	culture="xianbei"
+	trait="brilliant_strategist"
+    trait="fate_lead"
+    trait="destined"
+    trait="duel_skilled_warrior"
+	trait="ambitious"
+	trait="brave"
+	trait="just"
+	trait="honest"
+	trait="strong"
+	trait="diligent"
+	trait="gregarious"
+	trait="temperate"
+	trait="patient"
+	trait="zealous"
+	163.1.1={
+		birth=yes
+	}
+	235.4.1={
+		death=yes #Killed by Han Long, a man under Wang Xiong
+	}
+}
+1411 = {
+	name="Qianman"
+	dynasty=800
+	religion="tengri_pagan"
+	culture="xianbei"
+	father=1407
+	trait="ambitious"
+	174.1.1={
+		birth=yes
+	}
+	195.1.1={
+		death={
+			death_reason=death_murder_unknown
+		}
+	}
+}
+#Right
+1412 = {
+	name="Huaitou"
+	dynasty=803
+	religion="tengri_pagan"
+	culture="xianbei"
+	trait="tough_soldier"
+    trait="duel_trained_warrior"
+	trait="humble"
+	trait="brave"
+	trait="diligent"
+	150.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1413 = {
+	name="Mijia"
+	dynasty=805
+	religion="tengri_pagan"
+	culture="xianbei"
+	trait="tough_soldier"
+    trait="duel_trained_warrior"
+	trait="humble"
+	trait="brave"
+	trait="diligent"
+	150.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1414 = {
+	name="Queji"
+	dynasty=806
+	religion="tengri_pagan"
+	culture="xianbei"
+	trait="tough_soldier"
+    trait="duel_trained_warrior"
+	trait="humble"
+	trait="brave"
+	trait="diligent"
+	150.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1415 = {
+	name="Suli"
+	dynasty=809
+	religion="tengri_pagan"
+	culture="xianbei"
+	trait="tough_soldier"
+    trait="duel_trained_warrior"
+	trait="humble"
+	trait="brave"
+	trait="diligent"
+	150.1.1={
+		birth=yes
+	}
+	228.1.1={
+		death=yes
+	}
+}
+#Middle
+1416 = {
+	name="Kezui"
+	dynasty=804
+	religion="tengri_pagan"
+	culture="xianbei"
+	trait="tough_soldier"
+    trait="duel_trained_warrior"
+	trait="humble"
+	trait="brave"
+	trait="diligent"
+	150.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1417 = {
+	name="Queju"
+	dynasty=807
+	religion="tengri_pagan"
+	culture="xianbei"
+	trait="tough_soldier"
+    trait="duel_trained_warrior"
+	trait="humble"
+	trait="brave"
+	trait="diligent"
+	150.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1418 = {
+	name="Murong"
+	dynasty=801
+	religion="tengri_pagan"
+	culture="xianbei"
+	trait="tough_soldier"
+    trait="duel_trained_warrior"
+	trait="humble"
+	trait="brave"
+	trait="diligent"
+	150.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=1400
+	}
+	240.1.1={
+		death=yes
+	}
+}
+#Left
+1419 = {
+	name="Rilutuiyan"
+	dynasty=808
+	religion="tengri_pagan"
+	culture="xianbei"
+	trait="tough_soldier"
+    trait="duel_trained_warrior"
+	trait="humble"
+	trait="brave"
+	trait="diligent"
+	150.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1420 = {
+	name="Yanliyou"
+	dynasty=810
+	religion="tengri_pagan"
+	culture="xianbei"
+	trait="tough_soldier"
+    trait="duel_trained_warrior"
+	trait="humble"
+	trait="brave"
+	trait="diligent"
+	150.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1421 = {
+	name="Zhijianluoluo"
+	dynasty=811
+	religion="tengri_pagan"
+	culture="xianbei"
+	trait="tough_soldier"
+    trait="duel_trained_warrior"
+	trait="humble"
+	trait="brave"
+	trait="diligent"
+	150.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1422 = {
+	name="Liwei"
+	dynasty=802
+	religion="tengri_pagan"
+	culture="xianbei"
+	trait="skilled_tactician"
+    trait="duel_skilled_warrior"
+	trait="humble"
+	trait="brave"
+	trait="strong"
+	trait="diligent"
+	184.1.1={
+		birth=yes
+	}
+	277.1.1={
+		death=yes
+	}
+}
+1423 = {
+	name="Xilu"
+	dynasty=802
+	religion="tengri_pagan"
+	culture="xianbei"
+	father=1422
+	trait="skilled_tactician"
+    trait="duel_trained_warrior"
+	trait="humble"
+	trait="brave"
+	trait="strong"
+	trait="diligent"
+	206.1.1={
+		birth=yes
+	}
+	286.1.1={
+		death=yes
+	}
+}
+1424 = {
+	name="Chuo"
+	dynasty=802
+	religion="tengri_pagan"
+	culture="xianbei"
+	father=1422
+	trait="skilled_tactician"
+    trait="duel_trained_warrior"
+	trait="humble"
+	trait="brave"
+	trait="strong"
+	trait="diligent"
+	210.1.1={
+		birth=yes
+	}
+	293.1.1={
+		death=yes
+	}
+}
+1425 = {
+	name="Chuo"
+	dynasty=802
+	religion="tengri_pagan"
+	culture="xianbei"
+	father=1422
+	trait="skilled_tactician"
+    trait="duel_trained_warrior"
+	trait="humble"
+	trait="brave"
+	trait="strong"
+	trait="diligent"
+	210.1.1={
+		birth=yes
+	}
+	293.1.1={
+		death=yes
+	}
+}
+1426 = {
+	name="Suonu"
+	religion="tengri_pagan"
+	culture="xianbei"
+	trait="skilled_tactician"
+    trait="duel_skilled_warrior"
+	trait="humble"
+	trait="content"
+	trait="brave"
+	trait="strong"
+	trait="diligent"
+	trait="zealous"
+	165.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=1410
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1427 = {
+	name="Yuzhujian"
+	religion="tengri_pagan"
+	culture="xianbei"
+	trait="tough_soldier"
+    trait="duel_trained_warrior"
+	trait="humble"
+	trait="content"
+	trait="wroth"
+	trait="brave"
+	trait="diligent"
+	trait="zealous"
+	170.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=1410
+	}
+	198.1.1={
+		add_spouse=1428
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1428 = {
+	name="Yuzhu"
+	female=yes
+	religion="tengri_pagan"
+	culture="xianbei"
+	father=1410
+	trait="scholarly_theologian"
+    trait="duel_trained_warrior"
+	trait="humble"
+	trait="content"
+	trait="wroth"
+	trait="brave"
+	trait="strong"
+	trait="diligent"
+	trait="zealous"
+	184.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=1410
+	}
+	198.1.1={
+		add_spouse=1427
+	}
+	260.1.1={
+		death=yes
+	}
+}

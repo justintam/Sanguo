@@ -1,0 +1,38 @@
+# e_northern
+1.1.1={
+	historical_nomad = yes
+	active = no
+}
+1.1.1={
+	liege=e_northern
+}
+49.1.1={
+# Hedan?
+}
+184.1.1={
+	active = yes
+	liege=0
+	holder=1600 #Qiuliju
+}
+190.1.1={
+	set_tribute_suzerain = { who = k_you percentage = 0.25 }
+}
+193.2.1={
+	holder=1604 #Tadun
+}
+193.4.1={
+	clear_tribute_suzerain = k_you
+	set_tribute_suzerain = { who = e_yuan percentage = 0.25 }
+}
+201.1.1={
+	holder=1605 #Louban
+}
+207.11.1={
+	clear_tribute_suzerain = e_yuan
+	set_tribute_suzerain = { who = e_china percentage = 0.25 }
+	holder=1610 #Nanlou
+}
+220.12.10={
+	clear_tribute_suzerain = e_china
+	set_tribute_suzerain = { who = e_wei percentage = 0.25 }
+}

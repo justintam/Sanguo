@@ -1,0 +1,17 @@
+# c_beipingyi
+
+# County Title
+title = c_beipingyi
+
+# Settlements
+max_settlements = 3
+
+b_beipingyi = tribal
+#b_beipingfu = city
+#b_yukou = temple
+
+# Misc
+culture = xiongnu
+religion = tengri_pagan
+
+#History

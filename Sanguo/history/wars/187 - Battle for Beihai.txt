@@ -1,0 +1,21 @@
+name = "Yellow Turban Battle for Beihai"
+
+casus_belli={
+	actor=240
+	recipient=153
+	casus_belli=invasion
+	landed_title=c_beihai
+	date=187.1.1
+}
+
+187.1.1 = {
+	add_defender = 153 #Jiao He
+	add_attacker = 240 #Sima Juhe
+	add_attacker = 217 #Xu He
+}
+
+190.1.1={
+	rem_defender = 153 #Jiao He
+	rem_attacker = 217 #Xu He
+	rem_attacker = 240 #Sima Juhe
+}

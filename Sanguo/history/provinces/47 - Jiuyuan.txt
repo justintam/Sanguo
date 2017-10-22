@@ -1,0 +1,18 @@
+# c_jiuyuan
+
+# County Title
+title = c_jiuyuan
+
+# Settlements
+max_settlements = 4
+
+b_jiuyuan = tribal
+#b_changzhi = city
+#b_jiuwen = temple
+#b_jiucheng = castle
+
+# Misc
+culture = xiongnu
+religion = tengri_pagan
+
+#History

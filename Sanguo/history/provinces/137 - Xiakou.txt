@@ -1,0 +1,20 @@
+# c_xiakou
+
+# County Title
+title = c_xiakou
+
+# Settlements
+max_settlements = 3
+
+b_xiakou = castle
+#b_pingchuo = city
+#b_julong = temple
+
+# Misc
+culture = shanyue
+religion = animist
+
+#History
+214.1.1={
+	b_pingchuo = city
+}

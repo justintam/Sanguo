@@ -1,0 +1,20 @@
+# c_donglai
+
+# County Title
+title = c_donglai
+
+# Settlements
+max_settlements = 6
+
+b_donglai = castle
+b_chengyang = city
+b_huangxian = city
+b_mouping = city
+#b_ningxiu = city
+#b_biansha = temple
+
+# Misc
+culture = han
+religion = confucian
+
+#History

@@ -1,0 +1,17 @@
+# e_wu
+1.1.1={
+	active = no
+	law = agnatic_succession
+	law = succ_primogeniture
+}
+229.1.1={
+	active = yes
+	holder = 509 #Sun Quan
+}
+252.5.1={
+#	holder = 509 #Sun Liang
+}
+280.5.31={
+	holder = 0
+	active = no
+}

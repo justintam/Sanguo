@@ -1,0 +1,23 @@
+# Skin tones are 0 (light), 1 (tan), 2 (dark) and 3 (black)
+
+#Vanilla
+
+easterngfx = {
+	skin_tone = 2
+}
+indiangfx = {
+	skin_tone = 1
+}
+mongolgfx = {
+	skin_tone = 1
+}
+muslimgfx = {
+	skin_tone = 0
+}
+turkishgfx = {
+	skin_tone = 2
+}
+
+# Hard coded government graphical cultures
+tribalgfx = {}
+nomadgfx = {}

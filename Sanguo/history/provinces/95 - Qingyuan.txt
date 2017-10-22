@@ -1,0 +1,25 @@
+# c_qingyuan
+
+# County Title
+title = c_qingyuan
+
+# Settlements
+max_settlements = 5
+
+b_qingyuan = castle
+#b_muyuan = city
+#b_liyuan = temple
+#b_qingzhu = castle
+#b_wangqiao = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History
+194.1.1={
+	b_muyuan = city
+}
+204.1.1={
+	b_liyuan = temple
+}

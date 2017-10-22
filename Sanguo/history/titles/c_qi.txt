@@ -1,0 +1,38 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_qi
+}
+20.1.1={
+	holder=3328 #Liu Bosheng
+}
+35.1.1={
+	holder=3329 #Liu Zhang
+}
+46.1.1={
+	holder=3330 #Liu Shi
+}
+70.1.1={
+	holder=3331 #Liu Huang died 88
+}
+87.1.1={
+	holder=0 #Fief Reduced
+}
+90.1.1={
+	holder=3332 #Liu Wuji
+}
+141.1.1={
+	holder=3333 #Liu Xi
+}
+146.1.1={
+	holder=3334 #Liu Cheng
+}
+206.1.1={
+	holder=4229 #Xu Xuan
+}
+212.1.1={
+	holder=4121 #Random
+}

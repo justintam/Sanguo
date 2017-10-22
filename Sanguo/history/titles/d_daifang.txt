@@ -1,0 +1,23 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=k_you
+}
+184.1.1={
+	holder=0 #Not created
+}
+204.1.1={
+	holder=971 #Gongsun Kang
+}
+210.1.1={
+	holder=972 #Gongsun Gong
+}
+213.6.1={
+	liege=k_ji
+}
+228.1.1={
+	holder=973 #Gongsun Yuan
+}

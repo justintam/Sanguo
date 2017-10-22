@@ -1,0 +1,21 @@
+name = "Yizhou Suppression"
+
+casus_belli={
+	actor=50
+	recipient=214
+	casus_belli=religious
+	landed_title=d_guanghan
+	date=188.8.1
+}
+
+188.8.1 = {
+	add_defender = 214 #Ma Xiang
+	add_attacker = 50 #Liu Yan
+}
+
+189.1.1={
+	rem_defender = 214 #Ma Xiang
+	rem_attacker = 50 #Liu Yan
+}
+
+   

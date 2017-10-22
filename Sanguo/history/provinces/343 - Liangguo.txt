@@ -1,0 +1,18 @@
+# c_liangguo
+
+# County Title
+title = c_liangguo
+
+# Settlements
+max_settlements = 4
+
+b_liangguo = castle
+#b_liangcheng = city
+#b_caoxian = temple
+#b_fangshan = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

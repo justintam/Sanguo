@@ -1,0 +1,37 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=k_yang
+	vice_royalty=yes
+}
+150.1.1={
+	holder=1270 #Tang Mao
+}
+191.1.1={
+	holder=407 #Wang Lang
+}
+196.6.1={
+	liege=k_sun
+	vice_royalty=no
+	holder=508 #Sun Ce
+}
+200.2.1={
+	vice_royalty=yes
+	holder=550 #Gu Yong
+}
+211.1.1={
+	liege=e_sun
+	holder=10521 #Cen Ke
+}
+217.1.1={
+	holder=556 #Chunyu Shi
+}
+#223 Wu Can
+#250s Puyang Xing
+
+
+
+#Incomplete

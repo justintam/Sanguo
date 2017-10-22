@@ -1,0 +1,18 @@
+castle = {
+	ca_kushan = {
+		desc = ca_kushan_desc
+		potential = {
+			FROMFROM = {
+				title = b_turpan
+			}
+		}
+		trigger = { always = no }
+		
+		gold_cost = 0
+		fort_level = 8
+		tax_income = 1.25
+		levy_size = 3.0
+		garrison_size = 0.5
+		build_time = 300
+	}
+}

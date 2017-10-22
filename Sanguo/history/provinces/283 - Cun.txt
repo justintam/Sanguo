@@ -1,0 +1,17 @@
+# c_cun
+
+# County Title
+title = c_cun
+
+# Settlements
+max_settlements = 3
+
+b_cun = tribal
+#b_hangji = city
+#b_panzi = temple
+
+# Misc
+culture = nanman
+religion = huojiao
+
+#History

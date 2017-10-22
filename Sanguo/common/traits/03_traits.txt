@@ -1,0 +1,422 @@
+## Lifestyle Traits
+
+chivalrous = {
+	lifestyle = yes
+	
+	opposites =  {
+		ruthless
+		dishonorable
+	}
+	
+	martial = 2
+	monthly_character_piety = 0.1
+	monthly_character_prestige = 0.5
+	
+	general_opinion = 10
+	same_opinion = 10
+	liege_opinion = 20
+	opposite_opinion = -10
+	
+	ai_honor = 20
+	ai_rationality = -20
+	ai_ambition = -25
+	
+	same_opinion = 20
+}
+ruthless = {
+	lifestyle = yes
+	
+	opposites =  {
+		honorable
+		kind
+		chivalrous
+	}
+	
+	intrigue = 2
+	
+	opposite_opinion = -10
+	
+	command_modifier = {
+		morale_offence = 0.1
+	}
+	
+	ai_rationality = 10
+	ai_honor = -20
+	ai_ambition = 25
+	
+	same_opinion = 20
+	
+}
+fashionable = {
+	lifestyle = yes
+	
+	diplomacy = 1
+	intrigue = 2
+
+	sex_appeal_opinion = 10
+	same_opinion = 10
+	spouse_opinion = 5
+	
+	monthly_character_prestige = 0.01
+}
+tea_master = {
+	lifestyle = yes
+	
+	intrigue = 1
+	diplomacy = 1
+	health = 0.5
+	
+	same_opinion = 20
+}
+painter = {
+	lifestyle = yes
+	
+	diplomacy = 1
+	
+	same_opinion = 20
+}
+musician = {
+	lifestyle = yes
+	
+	intrigue = 1
+	
+	same_opinion = 20
+}
+calligraphist = {
+	lifestyle = yes
+	
+	stewardship = 1
+	diplomacy = 1
+	
+	same_opinion = 20
+}
+go_player = {
+	lifestyle = yes
+	
+	diplomacy = 1
+	martial = 2
+	
+	same_opinion = 20
+}
+martial_artist = {
+	lifestyle = yes
+	
+	stewardship = 1
+	martial = 4
+	
+	monthly_character_prestige = 1
+	
+	sex_appeal_opinion = 5
+	general_opinion = 10
+	same_opinion = 20
+	vassal_opinion = 10
+	liege_opinion = 5
+	
+	ai_honor = 20
+}
+
+### Birth Traits
+
+tall = {
+	birth = 150
+	inherit_chance = 35
+	
+	opposites =  {
+		dwarf
+	}
+	
+	diplomacy = 1
+	martial = 1
+	
+	health = 0.2
+	
+	sex_appeal_opinion = 5
+	vassal_opinion = 5
+
+}
+deaf = {
+	birth = 50
+	inherit_chance = 25
+
+	same_opinion = 5
+
+	diplomacy = -1		
+	martial = -1
+	intrigue = -2
+	health = -1
+	
+	customizer = no
+	
+	combat_rating = -10
+
+}
+fertile = {
+	birth = 100
+	inherit_chance = 25
+	
+	intrigue = 1
+
+	sex_appeal_opinion = 5
+	spouse_opinion = 10
+
+	fertility = 0.1
+
+	monthly_character_prestige = 0.01
+}
+passionate = {
+	opposites = {
+		arbitrary
+	}
+	
+	martial = 1
+	spouse_opinion = 10
+	vassal_opinion = 5
+	opposite_opinion = -20
+	monthly_character_prestige = 0.5
+	customizer = no
+	combat_rating = 2
+}
+stillborn = { # Marks a stillborn character for cause-of-death purposes
+	is_illness = yes
+	is_epidemic = yes
+	health = -1
+	customizer = no
+}
+
+### Personality Traits
+
+rude = {					
+	personality = yes
+	
+	opposites = {
+		kind
+		humble
+	}
+	
+	diplomacy = -2
+	learning = -2
+	
+	same_opinion = -5
+	vassal_opinion = -5
+	church_opinion = -5
+	
+	ai_honor = -10
+}
+selfish = {					
+	personality = yes
+	
+	opposites =  {
+		charitable
+		humble
+	}
+
+	stewardship = 1
+	
+	church_opinion = -5
+	vassal_opinion = -5
+	
+	ai_greed = 10
+}
+
+#Resulting Traits
+honorable = {
+	
+	random = no
+	
+	opposites = {
+		deceitful
+		dishonorable
+		ruthless
+	}
+	
+	intrigue = -2
+	monthly_character_piety = 1
+	
+	general_opinion = 10
+	same_opinion = 10
+	liege_opinion = 20
+	vassal_opinion = 10
+	opposite_opinion = -10
+	
+	ai_honor = 25
+}
+dishonorable = {
+	
+	random = no
+	
+	opposites = {
+		honest
+		honorable
+		chivalrous
+	}
+	
+	intrigue = 2
+	monthly_character_piety = -1
+	
+	general_opinion = -10
+	same_opinion = 10
+	liege_opinion = -20
+	vassal_opinion = -10
+	opposite_opinion = -10
+	
+	ai_honor = -25
+}
+
+# Old Age Blindness
+blinded_age = {
+	sex_appeal_opinion = -5
+	martial = -6
+	stewardship = -2
+	intrigue = -2
+	
+	customizer = no
+	
+	combat_rating = -30
+	
+	male_insult_adj = INSULT_BLIND
+	female_insult_adj = INSULT_BLIND
+}
+
+#Health
+
+crippled = {
+	is_health = yes
+	
+	sex_appeal_opinion = -20
+	same_opinion = 5
+	general_opinion = -10
+	
+	martial = -1
+	diplomacy = -1 #not taken seriously
+	fertility = -0.3
+	health = -0.5
+	
+	combat_rating = -15
+	
+	command_modifier = {
+		morale_offence = -0.1
+	}
+		
+	male_insult = INSULT_CRIPPLE
+	female_insult = INSULT_CRIPPLE	
+	male_insult_adj = INSULT_LAME
+	female_insult_adj = INSULT_LAME
+}
+
+#Sympathy
+
+sympathy_confucian = {
+	opposites =  {
+		zealous
+	}
+	
+	potential = {
+		NOT = { religion_group = chinese_religion }
+	}
+
+	tolerates_chinese_religion = yes		# Tolerates and is tolerated by Confucians
+	
+	same_opinion_if_same_religion = 5
+
+	customizer = no
+	random = no
+}
+
+sympathy_tao = {
+	opposites =  {
+		zealous
+	}
+	
+	potential = {
+		NOT = { religion_group = tao }
+	}
+
+	tolerates_chinese_religion = yes		# Tolerates and is tolerated by Taoists
+	
+	same_opinion_if_same_religion = 5
+
+	customizer = no
+	random = no
+}
+
+sympathy_pagans = {
+	
+	opposites =  {
+		zealous
+	}
+	
+	potential = {
+		NOT = { religion_group = pagan_group }
+	}
+
+	tolerates_pagan_group = yes		# Tolerates and is tolerated by Pagans
+
+	same_opinion_if_same_religion = 5
+
+	customizer = no
+	random = no
+}
+
+sympathy_buddhist = {
+	opposites =  {
+		zealous
+	}
+	
+	potential = {
+		NOT = { religion_group = buddhist_religion }
+	}
+
+	tolerates_buddhist_religion = yes		# Tolerates and is tolerated by Buddhist religions
+
+	same_opinion_if_same_religion = 5
+
+	customizer = no
+	random = no
+
+	male_insult = INSULT_LOVER_OF_HEATHENS
+	female_insult = INSULT_LOVER_OF_HEATHENS
+	male_insult_adj = INSULT_UNPRINCIPLED
+	female_insult_adj = INSULT_UNPRINCIPLED
+	child_insult_adj = INSULT_STUPID
+}
+
+adopted = {
+	diplomacy = -1
+}
+
+familyperson = {
+	personality = yes
+	
+	opposites = {
+		selfish
+		kinslayer
+	}
+	
+	opposite_opinion = -20
+	same_opinion = 10
+	dynasty_opinion = 5
+	spouse_opinion = 10
+	
+	ruler_designer_cost = 4
+	
+	male_insult_adj = INSULT_NEPOTISTIC
+	female_insult_adj = INSULT_NEPOTISTIC
+}
+
+inner_court = {
+	potential = {
+		is_female = yes
+		host = { has_landed_title = c_empress }
+	}
+	
+	customizer = no
+	random = no
+	birth = 0
+	
+	monthly_character_piety = 1
+	church_opinion = 50
+	same_opinion = -25
+	in_hiding = yes
+	cannot_marry = yes
+	cannot_inherit = yes
+}

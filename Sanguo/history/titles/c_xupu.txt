@@ -1,0 +1,21 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_jiuzhen
+}
+184.1.1={
+	holder=1907 #Random
+}
+193.1.1={
+	holder=1002 #Shi Hui
+}
+220.1.1={
+	holder=3406 #Dan Meng
+}
+226.1.1={
+	#Pan Xin Brother
+}
+#Wang Huiyang under Wei

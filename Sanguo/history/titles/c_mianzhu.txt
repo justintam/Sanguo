@@ -1,0 +1,40 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_guanghan
+}
+184.1.1={
+	holder=129 #Li Sheng
+}
+188.7.1={
+	liege=d_xihuang
+	holder=214 #Ma Xiang
+}
+189.1.1={
+	liege=d_guanghan
+	holder=50 #Liu Yan
+}
+194.4.1={
+	holder=80 #Liu Zhang	
+}
+210.1.1={
+	holder=3615 #Xu Jing
+}
+211.1.1={
+	holder=3624 #Huang Quan
+}
+214.1.1={
+	holder=616 #Xiahou Zuan
+}
+#She Jian until 220
+#Deng Zhi
+#Zhang Yi 221
+223.6.10={
+	holder=0 #Yao Zhou
+}
+#Luo Meng
+#Ma Qi until 234
+#He Zhi

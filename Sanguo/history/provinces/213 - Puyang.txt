@@ -1,0 +1,19 @@
+# c_puyang
+
+# County Title
+title = c_puyang
+
+# Settlements
+max_settlements = 5
+
+b_puyang = castle
+b_chucheng = city
+b_wuchao = castle
+#b_boling = castle
+#b_qiuyang = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

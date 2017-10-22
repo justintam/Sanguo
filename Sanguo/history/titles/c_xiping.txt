@@ -1,0 +1,35 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_jincheng
+}
+184.1.1={
+	holder=803 #Bian Zhang
+}
+184.11.1={
+	liege=k_liangzei #Liang Rebellion
+}
+187.1.1={
+	holder=811 #Qu Yan
+}
+189.9.1={
+	liege=0 #Independent
+}
+196.1.1={
+	liege=d_xiping
+	holder=10486 #Du Ji
+}
+205.1.1={
+	liege=d_jincheng
+	holder=811 #Qu Yan
+}
+215.1.1={
+	liege=0 #Independent
+}
+220.8.1={
+	liege=d_jincheng
+	holder=3501 #Random
+}

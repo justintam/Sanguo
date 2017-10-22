@@ -1,0 +1,18 @@
+# c_jiqiu
+
+# County Title
+title = c_jiqiu
+
+# Settlements
+max_settlements = 4
+
+b_jiqiu = castle
+b_lichengji = city
+#b_mangdi = temple
+#b_huaxi = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

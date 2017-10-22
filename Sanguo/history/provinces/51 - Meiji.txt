@@ -1,0 +1,18 @@
+# c_meiji
+
+# County Title
+title = c_meiji
+
+# Settlements
+max_settlements = 4
+
+b_meiji = castle
+b_mengshan = tribal
+#b_meijing = temple
+#b_mangxiao = castle
+
+# Misc
+culture = xiongnu
+religion = tengri_pagan
+
+#History

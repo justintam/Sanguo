@@ -1,0 +1,403 @@
+1400 = {
+	name="Fu" #Fu Clan, long chain
+	culture = han
+}
+1401 = {
+	name="Zhang" #Zhang Bao - DZ
+	culture = han
+}
+1402 = {
+	name="Zhang" #Zhang Long - DZ
+	culture = han
+}
+1403 = {
+	name="Wang" #Wang Kai - LB
+	culture = han
+}
+1404 = {
+	name="Xu" #Xu Si - LB
+	culture = han
+}
+1405 = {
+	name="Liu" #Liu Jing - DZ
+	culture = han
+}
+1406 = {
+	name="Liu" #Liu Hong
+	culture = han
+}
+1407 = {
+	name="Si" #Si Li - YT
+	culture = han
+}
+1408 = {
+	name="Cao" #Cao Bao - SHU
+	culture = han
+}
+1409 = {
+	name="Cai" #Cai Yang - WEI
+	culture = han
+}
+1410 = {
+	name="Du" #Du Yuan - YT
+	culture = han
+}
+1411 = {
+	name="Ding" #Ding Lady - WU
+	culture = han
+}
+1412 = {
+	name="Xu" #Xu Gong - IND
+	culture = han
+}
+1413 = {
+	name="Guang" #Guang Ping - RAN
+	culture = han
+}
+1414 = {
+	name="Feng" #Feng Deng - RAN
+	culture = han
+}
+1415 = {
+	name="Pang" #Pang Bao - RAN
+	culture = han
+}
+1416 = {
+	name="Shih" #Shih Shi - RAN
+	culture = han
+}
+1417 = {
+	name="Zhang" #Zhang Hao - RAN
+	culture = han
+}
+1418 = {
+	name="Du" #Du Shing - RAN
+	culture = han
+}
+1419 = {
+	name="Jin" #Jin Feng - RAN
+	culture = han
+}
+1420 = {
+	name="Jia" #Jia Rong - RAN
+	culture = han
+}
+1421 = {
+	name="Feng" #Feng Wu - RAN
+	culture = han
+}
+1422 = {
+	name="Ban" #Ban Qiao - RAN
+	culture = han
+}
+1423 = {
+	name="Ji" #Ji Fu - RAN
+	culture = han
+}
+1424 = {
+	name="Luo" #Luo Ji - RAN
+	culture = han
+}
+1425 = {
+	name="Qiu" #Qiu Liao - RAN
+	culture = han
+}
+1426 = {
+	name="Li" #Li Peng - RAN
+	culture = han
+}
+1427 = {
+	name="Fu" #Fu Ren - RAN
+	culture = han
+}
+1428 = {
+	name="Zhu" #Zhu Jikang - RAN
+	culture = han
+}
+1429 = {
+	name="Gan" #Gan Mian - RAN
+	culture = han
+}
+1430 = {
+	name="Bian" #Bian Du - RAN
+	culture = han
+}
+1431 = {
+	name="Gao" #Gao Mingda - RAN
+	culture = han
+}
+1432 = {
+	name="Bu" #Bu Baoxun - RAN
+	culture = han
+}
+1433 = {
+	name="Hu" #Hu Fengting - RAN
+	culture = han
+}
+1434 = {
+	name="Min" #Min Jiang - RAN
+	culture = han
+}
+1435 = {
+	name="Diwu" #Diwu Jun - Han
+	culture = han
+}
+1436 = {
+	name="Wu" #Wu Ju - LBO
+	culture = han
+}
+1437 = {
+	name="Handan" #Handan Shang - Han
+	culture = han
+}
+1438 = {
+	name="Zhang" #Zhang Mu - Han
+	culture = han
+}
+1439 = {
+	name="Zang" #Zang Hong - YS
+	culture = han
+}
+1440 = {
+	name="Ding" #Ding Pang - RAN
+	culture = han
+}
+1441 = {
+	name="Gongsun" #Gongsun clan - GS
+	culture = han
+}
+1442 = {
+	name="Tian" #Tian Kai - GZ
+	culture = han
+}
+1443 = {
+	name="Zhou" #Zhou Gan - Han
+	culture = han
+}
+1444 = {
+	name="Cao" #Cao clan - Han
+	culture = han
+}
+1445 = {
+	name="Cheng" #Cheng Heng - Han
+	culture = han
+}
+1446 = {
+	name="Cheng" #Cheng Ji - LZ
+	culture = han
+	used_for_random=no
+}
+1447 = {
+	name="Dou" #Wife of Emperor
+	culture = han
+	used_for_random=no
+}
+1448 = {
+	name="Wang" #Wife of Emperor
+	culture = han
+	used_for_random=no
+}
+1449 = {
+	name="Zhang" #Zhang Hong - WU
+	culture = han
+}
+1450 = {
+	name="Zhang" #Zhang Zhao - WU
+	culture = han
+}
+1451 = {
+	name="Wang" #Wang - Special
+	culture = han
+}
+1452 = {
+	name="Wu" #Wu - Special
+	culture = han
+}
+1453 = {
+	name="De" #De - Special
+	culture = han
+}
+1454 = {
+	name="Teng" #Teng - Special
+	culture = han
+}
+1455 = {
+	name="Jing" #Jing - Special
+	culture = han
+}
+1456 = {
+	name="Lu" #Lu Zhi - Han
+	culture = han
+}
+1457 = {
+	name="Chang" #Chang Lin - Han
+	culture = han
+}
+1458 = {
+	name="Chang" #Chang Nu - YS
+	culture = han
+}
+1459 = {
+	name="Lü" #Lü Dai - WU
+	culture = han
+}
+1460 = {
+	name="Jiang" #Jiang Qin - WU
+	culture = han
+}
+1461 = {
+	name="Zhou" #Zhou Tai - WU
+	culture = han
+}
+1462 = {
+	name="Zhou" #Zhou Juyang - RAN
+	culture = han
+}
+1463 = {
+	name="Yu" #Yu Minger - RAN
+	culture = han
+}
+1464 = {
+	name="Feng" #Feng Zun - RAN
+	culture = han
+}
+1465 = {
+	name="Fa" #Fa Zheng - SHU
+	culture = han
+}
+1466 = {
+	name="Li" #Li Si - SHU
+	culture = han
+}
+1467 = {
+	name="Li" #Li Yi - SHU
+	culture = han
+}
+1468 = {
+	name="Pang" #Pang Yue - SHU
+	culture = han
+}
+1469 = {
+	name="Zhang" #Zhang Song - SHU
+	culture = han
+}
+1470 = {
+	name="Meng" #Meng Da - SHU
+	culture = han
+}
+1471 = {
+	name="Meng" #Meng Dai - YS
+	culture = han
+}
+1472 = {
+	name="Su" #Su Ying - Special
+	culture = han
+}
+1473 = {
+	name="Chen" #Chen Tiao - HAN
+	culture = han
+}
+1474 = {
+	name="Chen" #Chen Clan - HAN
+	culture = han
+}
+1475 = {
+	name="Chen" #Chen Rong - YS
+	culture = han
+}
+1476 = {
+	name="Muo" #Muo Li - RAN
+	culture = han
+}
+1477 = {
+	name="Lin" #Lin Pao - RAN
+	culture = han
+}
+1478 = {
+	name="Lei" #Lei Yin - RAN
+	culture = han
+}
+1479 = {
+	name="Hu" #Hu Zhao - RAN
+	culture = han
+}
+1480 = {
+	name="Zhang" #Zhang Liao - WEI
+	culture = han
+}
+1481 = {
+	name="Ding" #Ding Yan - RAN
+	culture = han
+}
+1482 = {
+	name="Liu" #Liu Yi - HAN
+	culture = han
+}
+1483 = {
+	name="Tan" #Tan Clan - Special
+	culture = han
+}
+1484 = {
+	name="Wang" #Wang Si - WEI
+	culture = han
+}
+1485 = {
+	name="Liu" #Liu Xun - WEI
+	culture = han
+}
+1486 = {
+	name="Qin" #Qin Bian - RAN
+	culture = han
+}
+1487 = {
+	name="Yao" #Yao Gui - RAN
+	culture = han
+}
+1488 = {
+	name="Li" #Li Yi - WEI
+	culture = han
+}
+1489 = {
+	name="Yan" #Yan Gan - WEI
+	culture = han
+}
+1490 = {
+	name="Pei" #Pei Clan - WEI
+	culture = han
+}
+1491 = {
+	name="Li" #Li Li - WEI
+	culture = han
+}
+1492 = {
+	name="Qin" #Qin Yilu - LB
+	culture = han
+}
+1493 = {
+	name="Hao" #Hao Zhao - WEI
+	culture = han
+}
+1494 = {
+	name="Liang" #Liang Xi - WEI
+	culture = han
+}
+1495 = {
+	name="Zuo" #Zuo Rong - IND
+	culture = han
+}
+1496 = {
+	name="Zuo" #Zuo Xiao E - HAN
+	culture = han
+}
+1497 = {
+	name="Wen" #Wen Hui - WEI
+	culture = han
+}
+1498 = {
+	name="Lü" #Lü Qian - HAN
+	culture = han
+}
+1499 = {
+	name="Rao" #Rao Bin - RAN
+	culture = han
+}

@@ -1,0 +1,18 @@
+# c_liangfu
+
+# County Title
+title = c_liangfu
+
+# Settlements
+max_settlements = 4
+
+b_liangfu = castle
+b_tuqiuju = temple
+#b_banfu = temple
+#b_zhanfu = castle
+
+# Misc
+culture = han
+religion = taiping
+
+#History

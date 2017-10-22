@@ -1,0 +1,20 @@
+# c_baekje
+
+# County Title
+title = c_baekje
+
+# Settlements
+max_settlements = 6
+
+b_ungjin = tribal
+b_mokchi = tribal
+b_sinbungo = temple
+#b_hansung = castle
+#b_bunleung = city
+#b_gyeongseong = temple
+
+# Misc
+culture = samhan
+religion = shamanist
+
+#History

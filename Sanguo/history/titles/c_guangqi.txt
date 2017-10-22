@@ -1,0 +1,35 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_pengcheng
+}
+88.1.1={
+	holder=3707 #Gong
+}
+117.1.1={
+	holder=3708 #Dao
+}
+145.1.1={
+	holder=3709 #Ding
+}
+149.1.1={
+	holder=3710 #He
+}
+213.1.1={
+	holder=3712 #Zhi
+}
+220.12.10={
+	holder=2638 #Zang Ba
+}
+225.1.1={
+	holder=3793 #Lu Qian
+}
+230.1.1={
+	holder=20417 #Zou Qi
+}
+
+
+#191

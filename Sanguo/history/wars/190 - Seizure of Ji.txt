@@ -1,0 +1,20 @@
+name = "Seizure of Ji"
+
+casus_belli={
+	actor=700
+	recipient=118
+	casus_belli=claim_all
+	date=190.1.1
+}
+
+190.1.1 = {
+	add_defender = 118 #Han Fu
+	add_attacker = 700 #Yuan Shao
+	add_attacker = 900 #Gongsun Zan
+}
+
+191.1.1={
+	rem_defender = 118 #Han Fu
+	rem_attacker = 900 #Gongsun Zan
+	rem_attacker = 700 #Yuan Shao
+}

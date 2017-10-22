@@ -1,0 +1,21 @@
+# c_nanxinshi
+
+# County Title
+title = c_nanxinshi
+
+# Settlements
+max_settlements = 4
+
+b_nanxinshi = castle
+b_lixiangju = city
+#b_anmian = castle
+#b_yimo = temple
+
+# Misc
+culture = shanyue
+religion = animist
+
+#History
+214.1.1={
+	b_anmian = castle
+}

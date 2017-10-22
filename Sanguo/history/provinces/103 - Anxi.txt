@@ -1,0 +1,18 @@
+# c_anxi
+
+# County Title
+title = c_anxi
+
+# Settlements
+max_settlements = 4
+
+b_anxi = castle
+b_anguo = city
+#b_dingmo = temple
+#b_funing = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

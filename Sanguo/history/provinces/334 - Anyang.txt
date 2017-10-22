@@ -1,0 +1,19 @@
+# c_anyang
+
+# County Title
+title = c_anyang
+
+# Settlements
+max_settlements = 5
+
+b_anyang = castle
+b_jiangting = temple
+#b_muxi = temple
+#b_zhumadian = castle
+#b_sanqiao = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

@@ -1,0 +1,19 @@
+# c_xinye
+
+# County Title
+title = c_xinye
+
+# Settlements
+max_settlements = 5
+
+b_xinye = castle
+#b_shandu = city
+#b_deng = city
+#b_yiqiuju = city
+#b_huyang = city
+
+# Misc
+culture = han
+religion = taiping
+
+#History

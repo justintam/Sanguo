@@ -1,0 +1,228 @@
+mongol = {
+		graphical_cultures = { khitangfx easterngfx }
+	
+	xianbei = {
+		graphical_cultures = { koreangfx easterngfx }
+		
+		horde = yes
+		
+		color = { 0.885 0.8 0.15 }
+		
+		male_names = {
+			Abaoji Abugu Anagui Anluochen Anzhou
+			Ba Bao Baozhou Bati Bayan Bi Bin Boya Bubenyi
+			Budugen Busabo
+			Ce Chaniandoufa Chao Cheluhui Chengji Chengzhi
+			Chipan Chong Chounu Chui Chuluohou Chuo Cunbahan
+			Dale Dasheng Datan Daxianbian De Deng Dengzhu
+			Dianjue Ding Disuyuan Doulun Duacheng Duojishi
+			Fanni Fu Fudan Fuluohan Futu
+			Gan Gandou Gangui Gu Guang Gui Guo Guoren
+			He Heduohan Heita Helian Hena Heng Heru Hong Hu
+			Huaji Huaitou Huan Huang Hui Huitou Hulu Hutai
+			Jian Jie Jilujian Jilujuan Jing Juan Jue Jun
+			Kai Kangti Ke Kebineng Kezui Kualü Kuitou Kuren
+			Lang Lianxiu Liao Lihua Lilugu Lin Ling Liwei
+			Long Luguan
+			Mangeti Mantu Manu Mijia Min Mingyuan Mogui
+			Mohuai Mohuba Mopei Mugulu Mugului Murong Muyan
+			Nagai Naluoyan Nong Nuohebo
+			Pianhe Pidi Pigu Pihouba Ping Poluomen Poqiang
+			Pugen Puhui Puliuru
+			Qian Qianman Qidegui Qiewanneng Qishou Qiubuqin
+			Qiulun Qizhen Qizhijian Que Queji Queju
+			Rangan Rilujuan Rilutuiyan Rong Ruoliu Rutan
+			Shamohan Shan Shao Shefuchen Shegui Shelun
+			Sheng Shetu Shifu Shiji Shijun Shiyijian
+			Shoutian Shu Shujineng Shun Shuzi Sifujian
+			Subahui Sui Suli Suonu
+			Tanshihuai Tai Tao Tiefa Touluhou Tuhezhen
+			Tuiyan Tunugui Tuyuhun
+			Venheti
+			Wei Wonu Wu Wugu Wulun Wuti Wuwuchen Wuyuan
+			Xi Xibaxiong Xiduguan Xieguini Xilu Xuan
+			Xuanlie Xunniyan
+			Ya Yan Yanliyang Yanliyou Yao Yi Yidou Yidougui
+			Yihuai Yilu Yituo Yong Yongyulu Yu Yuan Yucheng
+			Yuchouben Yulu Yun Yuqiu Yuqiuben Yuyan
+			Yuzhujian
+			Zhao Zhiji Zhijianluoluo Zhong
+		}
+		female_names = {
+			Anyi Awu
+			Bian
+			Changle Cui
+			Dayi Dugu
+			Feng
+			Gao Guanghua Guangping Gutao
+			Hong Huarong Huyang
+			Jinan Jingmu Jue
+			Ke Kedun Kezuhun
+			Lanling Leping Linhe
+			Murong
+			Nanyang
+			Ruru
+			Tufa
+			Qianjin Qieluo
+			Wanan Wenxian Wuwei
+			Xiangguo Xiao
+			Yicheng Yu Yuanfei Yuhong Yuzhu
+			Zhe Zhejue
+		}
+		
+		founder_named_dynasties = yes
+		
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+		pat_grf_name_chance = 35
+		mat_grf_name_chance = 15
+		father_name_chance = 25
+		
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+		pat_grm_name_chance = 35
+		mat_grm_name_chance = 15
+		mother_name_chance = 25
+
+		modifier = mongol_culture_modifier
+	}
+	xiongnu = {
+		graphical_cultures = { khitangfx easterngfx }
+		
+		horde = yes
+		
+		color = { 0.775 0.5 0.15 }
+		
+		male_names = {
+			Ai An Anguo Anzhou Atong Axiu Azu
+			Ba Bao Bey Bi Bing Bobo Bode
+			Bosiuytang Buluzhen
+			Can Cexian Chang Chedi Chedihou Cheli
+			Cheniu Chizhisizhu Cong
+			Daju Dajuququ Deuleuchu Di Ding Dong Donglai
+			Du Dugan Duluogu Duyui Dyaotao Dyaotaomogao
+			Eloutou Err Erzhu
+			Feng Fenghou Fengtan Fu Fujulei Fushen
+			Gaoshengyuan Giheushyan Ghoran Gudu Guduhu
+			Gui Guia Guidi Guiguir Guilihu Gunchen Gushi
+			Hanxie He Heduohan Helian Hou Hu Huandi
+			Huanguo Huching Huchuquan Huduershi Huge
+			Huhanxie Huhanye Hui Hulan Hulanruo Hulu Hulugu
+			Hutu Hutuwusi Huyouhui Huyouzheng Huyuqiu
+			Huyan Huzheng Hyan Hyuibu Hyuilui
+			Ichi Ichise
+			Jilong Jinbo Jizhu Juankui Jucheer Juimigui
+			Juimixui Junchen
+			Khukheniy Kuchi
+			Lan Laoshang Le Lei Li Liu Liuli Luandi Lun
+			Man Maodun Meng Mengxun Midi Mo Modu Mogao Moyu
+			Mujian
+			Nancheng Nangzhiyasi Nengzhiyasi
+			Pi Pu Punu Puti
+			Qi Qiang Qiangpu Qiangqu Qiangqui Qiangshen Qiedi
+			Qifu Qihu Qijushan Qilindi Qiufu Qiulin Qizhen
+			Qoghoshar Qu Qubei Qubi Qujie Qute Quti
+			Rizhu Rong Runzhen Ruo
+			Seuxie Shan Shegan Shelun Shili Shilong Shisu Shizi
+			Shizihou Shizu Shizuqiongdi Shizhujiu Shuloujutang
+			Suibu Sutuhu
+			Tai Taiqi Tan Tanger Tou Toulouchu Touman
+			Tugu Tun Tunchuhe Tuntuhe Tunu Tuqi Tuteruo
+			Uchjulu Uji Ulei Ushylu Uyan Uwei
+			Wei Weichen Weiyidai Woyanqudi Wu Wudadihou
+			Wugui Wuheng Wuhui Wuju Wujuzhan Wuli Wulie
+			Wushiba Wusi Wuzhi Wuzhuliu
+			Xi Xian Xiantong Xianxianchen Xianxianshan
+			Xiluo Xingguo Xinxing Xiuli Xiwei Xiwuqi
+			Xuan Xubu Xuluquanqu Xuqu Xushen Xuzi
+			Yan Yao Yi Yide Yidu Yifa Yigan Yilimu Yilo
+			Yiti Yitu Yituyiluti Yituzhiyashi You Youdi
+			Yougutunu Youliu Yu Yuan Yuanhai Yuchujian
+			Yufuluo Yujian Yuqiu
+			Zan Zhao Zhe Zhen Zhengde Zhi Zhifen Zhizhi
+			Zhu Zhuki Zhunzhen Zhuxing Zuo
+		}
+		female_names = {
+			Dan
+			Fu
+			Guang Guangxian
+			Helian Hu Huan Huanwen Hulan Huyan
+			Lan Lanshi Li Liang Lun Luo
+			Meng Mo Mu Muo
+			Pi Ping
+			Qun
+			Ru Ruo
+			Shi Shiping
+			Wei Wen Wu Wuwei
+			Xian Xing Xingping
+			Yan Yanshi Yi Yimuo Yin Ying Yinge Yuan Yun
+		}
+		
+		founder_named_dynasties = yes
+		
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+		pat_grf_name_chance = 35
+		mat_grf_name_chance = 15
+		father_name_chance = 25
+		
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+		pat_grm_name_chance = 35
+		mat_grm_name_chance = 15
+		mother_name_chance = 25
+
+		modifier = mongol_culture_modifier
+	}
+	wuhuan = {
+		graphical_cultures = { khitangfx easterngfx }
+		
+		horde = yes
+		
+		color = { 0.775 0.5 0.45 }
+		
+		male_names = {
+			Ajian Aluode Aluopan
+			Ban Banxia Bi Bigan Bu
+			Chu
+			Dadun Dai Dun Duogui
+			Fenghou Fu Fushuguan
+			Gan Gu Gujin
+			Haodan Hedan Hui Huliu
+			Jin Juge
+			Kou Kouloudun
+			Louban Luxi
+			Nalou Nanlou Nengchendi Nuolou
+			Pu Pufulu
+			Qiangqu Qiao Qinzhiben Qiuliju Quyan
+			Rong Rongzhuhui
+			Sufu Sufuwan Sufuyan Supu Supuwan Supuyan
+			Tadun Tanzhi Tong
+			Wan Wang Wangtong Wuchendi Wuhe Wuheyun Wuke Wulu Wuyan
+			Xi Xia Xinzhiben Xiuwulu
+			Yan Yuzhiju
+			Zhiben
+		}
+		female_names = {
+			Aga Aji
+			Da Daji
+			Ji Jin
+			Mo Mojin Moxi
+			Nan
+			Qan
+			Su
+			Tu
+			Wen
+		}
+		
+		founder_named_dynasties = yes
+		
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+		pat_grf_name_chance = 35
+		mat_grf_name_chance = 15
+		father_name_chance = 25
+		
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+		pat_grm_name_chance = 35
+		mat_grm_name_chance = 15
+		mother_name_chance = 25
+
+		modifier = mongol_culture_modifier
+	}
+}

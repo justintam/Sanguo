@@ -1,0 +1,23 @@
+name = "Struggle in Bandun"
+
+casus_belli={
+	actor=1008
+	recipient=1010
+	casus_belli=invasion
+	landed_title=d_guanghanyong
+	date=186.1.1
+}
+
+186.1.1 = {
+	add_attacker = 1008 #Zhang Heng
+	add_attacker = 1009 #Zhang Lu
+	add_defender = 1010 #Zhang Xiu
+}
+
+188.1.1={
+	rem_defender = 1010 #Zhang Xiu
+	rem_attacker = 1009 #Zhang Lu
+	rem_attacker = 1008 #Zhang Heng
+}
+
+   

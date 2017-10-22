@@ -1,0 +1,57 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=k_sili
+	vice_royalty = yes
+}
+155.1.1={
+	holder=1287 #Yang Bing
+}
+160.1.1={
+	holder=0 #None
+}
+176.1.1={
+	holder=152 #Cao Quan
+}
+184.1.1={
+	holder=180 #Huang Wan
+}
+185.1.1={
+	holder=1279 #Zhao Yao
+}
+188.1.1={
+	holder=3480 #Song Yi
+}
+#189 Qu Mao Hanan (Hanxing)
+192.5.22={
+	liege=e_china
+}
+192.7.1={
+	holder=4308 #Random
+}
+196.1.1={
+	liege=k_sili
+}
+201.1.1={
+	holder=809 #Ma Teng
+}
+208.1.1={
+	holder=815 #Ma Chao
+}
+211.10.1={
+	holder=3800 #You Chu
+}
+#Hanxing
+213.6.1={
+	liege=k_yong
+	holder=20467 #Zhao Yan
+}
+220.3.15={
+	#Fu Gan
+}
+220.8.1={
+#	liege=k_liang
+}

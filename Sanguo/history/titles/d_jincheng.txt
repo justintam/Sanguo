@@ -1,0 +1,51 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=k_liang
+	vice_royalty = yes
+}
+101.1.1={
+	holder=3755 #Cao Feng
+}
+107.1.1={
+	holder=0 #None
+}
+150.1.1={
+	holder=1290 #Yang Tong
+}
+184.1.1={
+	holder=168 #Chen Yi
+}
+184.11.1={
+	liege=k_liangzei #Liang Rebellion
+	vice_royalty = no
+	holder=808 #Han Sui
+}
+189.9.1={
+	liege=0 #Independent
+}
+191.1.1={
+	liege=k_liang
+	vice_royalty = yes
+}
+194.1.1={
+	liege=k_xiliang
+	vice_royalty = no
+}
+215.1.1={
+	liege=k_yong
+	vice_royalty = yes
+	holder=0 #None
+}
+215.12.1={
+	holder=3872 #Su Ze
+}
+220.8.1={
+	liege=k_liang
+}
+223.1.1={
+	holder=4416 #Zhang Jiu
+}

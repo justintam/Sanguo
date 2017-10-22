@@ -1,0 +1,56 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_guangyang
+}
+147.1.1={
+	holder=1287 #Yang Bing
+}
+151.1.1={
+	holder=0 #None
+}
+170.1.1={
+	holder=50 #Liu Yan
+}
+175.1.1={
+	holder=0 #None
+}
+180.1.1={
+	holder=39 #Liu Yu
+}
+184.1.1={
+	liege=d_beihuang
+	holder=232 #Pei Yuanshao
+}
+185.2.1={
+	liege=d_guangyang
+	holder=3473 #Wang Mao
+}
+189.9.1={
+	liege=d_gongsun
+	holder=900 #Gongsun Zan
+}
+191.7.1={
+	liege=e_gongsun
+}
+193.4.1={
+	liege=d_guangyang
+}
+199.1.1={
+	holder=708 #Yuan Xi
+}
+205.6.1={
+	holder=3795 #Jiao Chu
+}
+209.1.1={
+	holder=3767 #Chang Lin
+}
+211.1.1={
+	holder=3795 #Jiao Chu
+}
+221.3.1={
+	holder=20477 #Wu Zhi
+}

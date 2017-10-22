@@ -1,0 +1,18 @@
+# c_jiuquan
+
+# County Title
+title = c_jiuquan
+
+# Settlements
+max_settlements = 4
+
+b_jiuquan = castle
+#b_jiucaigo = city
+#b_suzhou = temple
+#b_xifeng = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

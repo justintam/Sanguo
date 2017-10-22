@@ -1,0 +1,19 @@
+# c_luyang
+
+# County Title
+title = c_luyang
+
+# Settlements
+max_settlements = 5
+
+b_luyang = castle
+b_hucheng = city
+b_anjou = city
+#b_danjing = castle
+#b_fangcheng = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

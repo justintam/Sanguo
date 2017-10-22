@@ -1,0 +1,19 @@
+# c_fuyangsi
+
+# County Title
+title = c_fuyangsi
+
+# Settlements
+max_settlements = 5
+
+b_fuyangsi = castle
+b_jieshi = castle
+#b_wenya = temple
+#b_zixiazhen = castle
+#b_wujiating = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

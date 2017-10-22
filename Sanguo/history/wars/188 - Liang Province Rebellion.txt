@@ -1,0 +1,29 @@
+name = "5th Liang Province Rebellion"
+
+casus_belli={
+	actor=805
+	recipient=100
+	casus_belli=invasion
+	landed_title=k_liang
+	date=187.4.1
+}
+
+187.4.1 = {
+	add_defender = 100 #He Jin
+	add_defender = 30 #Emperor Ling
+	add_defender = 175 #Zhang Wen
+	add_attacker = 2420 #Shaka
+	add_attacker = 804 #Dianyu
+	add_attacker = 805 #Wang Guo
+}
+
+188.12.1={
+	rem_defender = 30 #Emperor Ling
+	rem_defender = 175 #Zhang Wen
+	rem_defender = 100 #He Jin
+	rem_attacker = 2420 #Shaka
+	rem_attacker = 804 #Dianyu
+	rem_attacker = 805 #Wang Guo
+}
+
+   

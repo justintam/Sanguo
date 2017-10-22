@@ -1,0 +1,429 @@
+#Shanyue
+
+2000 = {
+	name="Baihu"
+	dynasty=354
+	diplomacy=4
+	martial=7
+	stewardship=3
+	intrigue=2
+	learning=2
+	religion="animist"
+	culture="shanyue"
+	father=2007
+	trait="skilled_tactician"
+	trait="duelist"
+	trait="zealous"
+	trait="brave"
+	trait="wroth"
+	trait="ambitious"
+	trait="unyielding_leader"
+	trait="inspiring_leader"
+	160.1.1={
+		birth=yes
+	}
+	199.1.1={
+		death=yes
+	}
+}
+2001 = {
+	name="Zhan"
+	dynasty=350
+	religion="animist"
+	culture="shanyue"
+	165.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=2000
+	}
+	220.1.1={
+		death=yes
+	}
+}
+2002 = {
+	name="Lin"
+	dynasty=352
+	religion="animist"
+	culture="shanyue"
+	180.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=2000
+	}
+	206.1.1={
+		death=yes
+	}
+}
+2003 = {
+	name="Longluo" #Huang
+	dynasty=351
+	religion="animist"
+	culture="shanyue"
+	father=2021
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=2000
+	}
+	196.6.1={
+		death={death_reason=death_battle killer=10520}
+	}
+}
+2004 = {
+	name="Lang"
+	dynasty=356
+	religion="animist"
+	culture="shanyue"
+	father=2019
+    trait="tough_soldier"
+    trait="brave"
+    trait="diligent"
+    trait="wroth"
+    trait="strong"
+    trait="zealous"
+	155.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=2000
+	}
+	205.1.1={
+		death=yes
+	}
+}
+2005 = {
+	name="Shan"
+	dynasty=356
+	diplomacy=3
+	martial=5
+	stewardship=3
+	intrigue=3
+	learning=3
+	religion="animist"
+	culture="shanyue"
+	father=2019
+	trait="tough_soldier"
+	trait="zealous"
+	trait="brave"
+	trait="wroth"
+	trait="aggressive_leader"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		effect={
+			add_friend=2012
+		}
+	}
+	208.1.1={
+		death=yes
+	}
+}
+2006 = {
+	name="Fuwu"
+	dynasty=354
+	religion="animist"
+	culture="shanyue"
+	120.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=2000
+	}
+	200.1.1={
+		death=yes
+	}
+}
+2007 = {
+	name="Dahu"
+	dynasty=354
+	religion="animist"
+	culture="shanyue"
+	father=2006
+	140.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=2000
+	}
+	194.1.1={
+		death=yes
+	}
+}
+2008 = {
+	name="Yu"
+	dynasty=354
+	religion="animist"
+	culture="shanyue"
+	father=2007
+	trait="underhanded_rogue"
+	trait="brave"
+	trait="zealous"
+	164.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=2000
+	}
+	197.1.1={
+		death=yes
+	}
+}
+2009 = {
+	name="Rang"
+	dynasty=351 #Huang
+	diplomacy=4
+	martial=5
+	stewardship=3
+	intrigue=3
+	learning=3
+	religion="animist"
+	culture="shanyue"
+	father=2021
+	trait="tough_soldier"
+	trait="zealous"
+	trait="brave"
+	trait="wroth"
+	trait="aggressive_leader"
+	166.1.1={
+		birth=yes
+	}
+	194.1.1={
+		death=yes
+	}
+}
+2010 = {
+	name="Matun"
+	dynasty=354
+	religion="animist"
+	culture="shanyue"
+	father=2017
+	160.1.1={
+		birth=yes
+	}
+	197.1.1={
+		death=yes
+	}
+}
+2011 = {
+	name="Baotun"
+	dynasty=354
+	religion="animist"
+	culture="shanyue"
+	father=2017
+	161.1.1={
+		birth=yes
+	}
+	197.1.1={
+		death=yes
+	}
+}
+2012 = {
+	name="Pu"
+	dynasty=357
+	diplomacy=3
+	martial=5
+	stewardship=3
+	intrigue=3
+	learning=3
+	religion="animist"
+	culture="shanyue"
+	father=2020
+	trait="tough_soldier"
+	trait="zealous"
+	trait="brave"
+	trait="wroth"
+	trait="aggressive_leader"
+	165.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=2005
+		effect={
+			add_friend=2005
+		}
+	}
+	208.1.1={
+		death=yes
+	}
+}
+2013 = {
+	name="Mu"
+	dynasty=357
+	diplomacy=4
+	martial=4
+	stewardship=3
+	intrigue=3
+	learning=4
+	religion="animist"
+	culture="shanyue"
+	father=2020
+	trait="tough_soldier"
+	trait="duelist"
+	trait="zealous"
+	trait="brave"
+	trait="patient"
+	trait="inspiring_leader"
+	168.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=2011
+	}
+	198.1.1={
+		death=yes
+	}
+}
+2014 = {
+	name="Yi"
+	dynasty=355
+	religion="animist"
+	culture="shanyue"
+	father=2022
+    trait="flamboyant_schemer"
+    trait="cynical"
+    trait="wroth"
+    trait="envious"
+	168.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=2015
+	}
+	218.1.1={
+		death=yes
+	}
+}
+2015 = {
+	name="Bopo"
+	dynasty=358
+	religion="animist"
+	culture="shanyue"
+    trait="flamboyant_schemer"
+    trait="cynical"
+    trait="wroth"
+    trait="envious"
+	160.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+2016 = {
+	name="Ye"
+	dynasty=359
+	religion="animist"
+	culture="shanyue"
+    trait="tough_soldier"
+    trait="cynical"
+    trait="wroth"
+    trait="envious"
+	160.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+2017 = {
+	name="En"
+	dynasty=354
+	religion="animist"
+	culture="shanyue"
+	father=2006
+	143.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=2010
+	}
+	199.1.1={
+		death=yes
+	}
+}
+2018 = {
+	name="Ye"
+	dynasty=360
+	religion="animist"
+	culture="shanyue"
+	160.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+2019 = {
+	name="Fei"
+	dynasty=356
+	religion="animist"
+	culture="shanyue"
+	130.1.1={
+		birth=yes
+	}
+	180.1.1={
+		death=yes
+	}
+}
+2020 = {
+	name="Fei"
+	dynasty=357
+	religion="animist"
+	culture="shanyue"
+	145.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=2016
+	}
+	230.1.1={
+		death=yes
+	}
+}
+2021 = {
+	name="Fei"
+	dynasty=351
+	religion="animist"
+	culture="shanyue"
+	140.1.1={
+		birth=yes
+	}
+	180.1.1={
+		death=yes
+	}
+}
+2022 = {
+	name="Rao"
+	dynasty=355
+	religion="animist"
+	culture="shanyue"
+	140.1.1={
+		birth=yes
+	}
+	180.1.1={
+		death=yes
+	}
+}
+2023 = {
+	name="Bo"
+	dynasty=355
+	religion="animist"
+	culture="shanyue"
+	father=2022
+	165.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=2018
+	}
+	195.1.1={
+		employer=2003 #Huang Longluo
+	}
+	196.6.1={
+		death={death_reason=death_battle killer=10520}
+	}
+}

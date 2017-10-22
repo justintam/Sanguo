@@ -1,0 +1,18 @@
+# c_mao
+
+# County Title
+title = c_mao
+
+# Settlements
+max_settlements = 4
+
+b_mao = castle
+#b_panying = city
+#b_lianhua = temple
+#b_lianzhen = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

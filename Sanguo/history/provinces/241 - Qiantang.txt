@@ -1,0 +1,21 @@
+# c_qiantang
+
+# County Title
+title = c_qiantang
+
+# Settlements
+max_settlements = 4
+
+b_qiantang = castle
+b_lingsi = tribal
+#b_beitang = city
+#b_bixizhen = castle
+
+# Misc
+culture = shanyue
+religion = animist
+
+#History
+204.1.1={
+	b_beitang = city
+}

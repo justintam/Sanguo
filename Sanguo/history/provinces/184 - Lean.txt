@@ -1,0 +1,18 @@
+# c_lean
+
+# County Title
+title = c_lean
+
+# Settlements
+max_settlements = 4
+
+b_lean = castle
+b_fuan = city
+#b_gudaozhen = temple
+#b_teluozhen = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

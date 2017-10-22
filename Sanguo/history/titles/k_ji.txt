@@ -1,0 +1,69 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=e_china
+	vice_royalty = yes
+}
+170.1.1={
+	holder=3471 #Wang Hong
+}
+173.1.1={
+	holder=971 #Gongsun Du
+}
+175.1.1={
+	holder=50 #Liu Yan
+}
+180.1.1={
+	holder=0 #None
+}
+184.1.1={
+	holder=3326 #Li Shao
+}
+185.1.1={
+	holder=105 #Huangfu Song
+}
+187.1.1={
+	vice_royalty = no
+	holder=123 #Jia Zong
+}
+188.1.1={
+	vice_royalty = yes
+	holder=3442 #Wang Fen - Coup
+}
+189.1.1={
+	vice_royalty = no
+	holder=123 #Jia Cong
+}
+189.9.1={
+	holder=118 #Han Fu
+}
+190.1.1={
+	liege=0
+}
+#191 - Yan Gang named by Gongsun Zan
+191.1.1={
+	holder=700 #Yuan Shao
+}
+192.5.1={
+	liege=e_yuan
+}
+193.1.1={
+	#Hu Shou claim
+}
+202.6.28={
+	holder=707 #Yuan Shang
+}
+204.9.13={
+	liege=e_china
+	holder=400 #Cao Cao
+}
+220.12.10={
+	liege=e_wei
+	holder=10400 #Cao Pi
+}
+225.1.1={
+	holder=20444 #Pei Hui
+}

@@ -1,0 +1,49 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=k_jing
+	vice_royalty = yes
+}
+#Fa Xiong
+140.1.1={
+	holder=3807 #Han Chun
+}
+184.1.1={
+	holder=4292 #Guo Yong
+}
+190.1.1={
+	vice_royalty = no
+	holder=48 #Liu Biao
+}
+208.8.1={
+	holder=53 #Liu Cong
+}
+208.9.1={
+	holder=20448 #Li Li
+}
+209.2.1={
+	liege=k_sili
+}
+209.3.1={
+	liege=k_sun
+	holder=10528 #Zhou Yu
+}
+210.2.1={
+	holder=515 #Cheng Pu
+}
+211.1.1={
+	liege=k_jing
+	holder=602 #Zhang Fei
+}
+216.1.1={
+	holder=626 #Mi Fang
+}
+220.1.1={
+	holder=537 #Zhuge Jin
+}
+241.1.1={
+	holder=10553 #Zhang Xuan
+}

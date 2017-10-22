@@ -1,0 +1,18 @@
+# c_yicheng
+
+# County Title
+title = c_yicheng
+
+# Settlements
+max_settlements = 4
+
+b_yicheng = castle
+#b_fengpo = city
+#b_zaojiao = temple
+#b_dianzhen = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

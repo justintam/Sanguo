@@ -1,0 +1,17 @@
+# c_xiongnudong
+
+# County Title
+title = c_xiongnudong
+
+# Settlements
+max_settlements = 3
+
+b_xiongnudong = tribal
+#b_xiongnuwei = city
+#b_linyi = temple
+
+# Misc
+culture = xiongnu
+religion = tengri_pagan
+
+#History

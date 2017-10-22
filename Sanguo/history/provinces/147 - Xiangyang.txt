@@ -1,0 +1,18 @@
+# c_xiangyang
+
+# County Title
+title = c_xiangyang
+
+# Settlements
+max_settlements = 4
+
+b_xiangyang = castle
+b_liqiucheng = city
+#b_puozhi = temple
+#b_dongman = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

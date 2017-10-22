@@ -1,0 +1,22 @@
+1.1.1={
+	active = no
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+191.5.20={
+	active = yes
+	liege=k_jing
+	vice_royalty = yes
+	holder=4242 #Huang She
+}
+199.1.1={
+	holder=4235 #Kuai Yue
+}
+208.9.1={
+	liege=k_sili
+	holder=20467 #Zhao Yan
+}
+213.6.1={
+	liege=k_yu
+	holder=4195 #Random
+}

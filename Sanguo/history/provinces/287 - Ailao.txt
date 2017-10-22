@@ -1,0 +1,17 @@
+# c_ailao
+
+# County Title
+title = c_ailao
+
+# Settlements
+max_settlements = 3
+
+b_ailao = tribal
+b_ailaojiao = temple
+#b_dianhan = temple
+
+# Misc
+culture = nanman
+religion = huojiao
+
+#History

@@ -1,0 +1,17 @@
+# c_liaoyong
+
+# County Title
+title = c_liaoyong
+
+# Settlements
+max_settlements = 3
+
+b_liaoyong = tribal
+#b_liaoyongfu = city
+#b_huludao = temple
+
+# Misc
+culture = wuhuan
+religion = confucian
+
+#History

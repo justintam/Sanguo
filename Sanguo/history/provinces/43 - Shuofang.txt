@@ -1,0 +1,22 @@
+# c_shuofang
+
+# County Title
+title = c_shuofang
+
+# Settlements
+max_settlements = 4
+
+b_shuofang = castle
+b_baotou = tribal
+#b_shuocheng = temple
+#b_jinfang = castle
+
+# Misc
+culture = xiongnu
+religion = tengri_pagan
+
+#History
+200.1.1={
+	remove_settlement = b_baotou
+	b_shuofang = tribal
+}

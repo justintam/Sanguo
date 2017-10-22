@@ -1,0 +1,44 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_wuwei
+}
+184.1.1={
+	holder=3798 #Liu Jun
+}
+184.11.1={
+	liege=k_liangzei #Liang Rebellion
+	holder=805 #Wang Guo
+}
+189.5.1={
+	holder=807 #Yan Zhong
+}
+189.9.1={
+	liege=d_wuwei
+	holder=1255 #Zhang Meng
+}
+194.1.1={
+	holder=3739 # Handan Shang
+}
+206.3.1={
+	holder=4102 #Random
+}
+211.10.1={
+	liege=k_yong
+	holder=20478 #Xu Yi
+}
+213.9.1={
+	holder=3868 #Yan Jun
+}
+215.1.1={
+	liege=d_wuwei
+}
+219.8.1={
+	holder=3727 #He Luan
+}
+219.9.1={
+	holder=3869 #Wang Bi
+}

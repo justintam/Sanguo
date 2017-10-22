@@ -1,0 +1,19 @@
+# c_lunshi
+
+# County Title
+title = c_lunshi
+
+# Settlements
+max_settlements = 5
+
+b_lunshi = castle
+b_kangxiang = city
+b_rongyang = city
+#b_lunshiji = castle
+#b_lunshifu = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

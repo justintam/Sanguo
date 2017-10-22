@@ -1,0 +1,18 @@
+# c_ganling
+
+# County Title
+title = c_ganling
+
+# Settlements
+max_settlements = 4
+
+b_ganling = castle
+b_ling = city
+#b_jiuxi = temple
+#b_jiuxu = castle
+
+# Misc
+culture = han
+religion = taiping
+
+#History

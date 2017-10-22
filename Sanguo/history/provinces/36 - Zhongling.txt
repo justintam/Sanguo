@@ -1,0 +1,17 @@
+# c_zhongling
+
+# County Title
+title = c_zhongling
+
+# Settlements
+max_settlements = 3
+
+b_zhongling = tribal
+#b_xinfu = city
+#b_zhonglingchu = temple
+
+# Misc
+culture = xiongnu
+religion = tengri_pagan
+
+#History

@@ -1,0 +1,17 @@
+# c_haiyang
+
+# County Title
+title = c_haiyang
+
+# Settlements
+max_settlements = 3
+
+b_haiyang = castle
+b_bailangshan = castle
+#b_haiyoushi = temple
+
+# Misc
+culture = wuhuan
+religion = tengri_pagan
+
+#History

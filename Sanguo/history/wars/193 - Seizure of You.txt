@@ -1,0 +1,19 @@
+name = "Seizure of You"
+
+casus_belli={
+	actor=900
+	recipient=39
+	casus_belli=seize_big
+	landed_title=k_you
+	date=193.3.1
+}
+
+193.3.1 = {
+	add_defender = 39 #Liu Yu
+	add_attacker = 900 #Gongsun Zan
+}
+
+193.4.1={
+	rem_defender = 39 #Liu Yu
+	rem_attacker = 900 #Gongsun Zan
+}

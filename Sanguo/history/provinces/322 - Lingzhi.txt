@@ -1,0 +1,19 @@
+# c_lingzhi
+
+# County Title
+title = c_lingzhi
+
+# Settlements
+max_settlements = 5
+
+b_lingzhi = castle
+b_guzhucheng = city
+b_xuwu = castle
+#b_xundu = castle
+#b_woluo = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

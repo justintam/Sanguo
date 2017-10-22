@@ -1,0 +1,18 @@
+# c_feng
+
+# County Title
+title = c_feng
+
+# Settlements
+max_settlements = 4
+
+b_feng = castle
+b_fenyuting = city
+#b_fengfu = temple
+#b_fengcheng = castle
+
+# Misc
+culture = han
+religion = taiping
+
+#History

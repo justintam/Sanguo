@@ -1,0 +1,120 @@
+#CHINA
+technology = {
+	titles = {
+		d_henan
+		d_hedong
+		d_henei
+		d_hongnong
+		d_jingzhao
+		d_youfufeng
+		d_zuopingyi
+		d_taiyuan
+		d_dingxiang
+		d_shang
+		d_shangdang
+		d_shuofang
+		d_wuyuan
+		d_xihe
+		d_yanmen
+		d_yunzhong
+		d_anping
+		d_bohai
+		d_changshan
+		d_hejian
+		d_julu
+		d_qinghe
+		d_wei
+		d_zhao
+		d_zhongshan
+		d_cangwu
+		d_hepu
+		d_jiaozhi
+		d_jiuzhen
+		d_nanhai
+		d_rinan
+		d_yulin
+		d_nanyang
+		d_changsha
+		d_guiyang
+		d_jiangxia
+		d_lingling
+		d_nan
+		d_wuling
+		d_hanyang
+		d_anding
+		d_beidi
+		d_dunhuang
+		d_jincheng
+		d_jiuquan
+		d_longxi
+		d_wudu
+		d_wuwei
+		d_juyan
+		d_xihai
+		d_zhangye
+		d_beihai
+		d_donglai
+		d_jinan
+		d_lean
+		d_pingyuan
+		d_qi
+		d_pengcheng
+		d_donghai
+		d_guangling
+		d_langye
+		d_xiapi
+		d_chenliu
+		d_dong
+		d_dongping
+		d_jibei
+		d_jiyin
+		d_rencheng
+		d_shanyang
+		d_taishan
+		d_danyang
+		d_jiujiang
+		d_kuaiji
+		d_lujiang
+		d_wu
+		d_yuzhang
+		d_shu
+		d_ba
+		d_guanghan
+		d_guanghanyong
+		d_hanzhong
+		d_jianwei
+		d_shuyong
+		d_yizhou
+		d_yongchang
+		d_yuexi
+		d_zangke
+		d_zhuti
+		d_guangyang
+		d_dai
+		d_daifang
+		d_lelang
+		d_liaodong
+		d_liaoxi
+		d_shanggu
+		d_xuantu
+		d_youbeiping
+		d_yuyang
+		d_zhuo
+		d_runan
+		d_chen
+		d_liang
+		d_lu
+		d_pei
+		d_yingchuan
+	}
+	184 = {
+		military = 2.0
+		economy = 2.0
+		culture = 2.0
+	}
+	300 = {
+		military = 4.0
+		economy = 4.0
+		culture = 4.0
+	}
+}

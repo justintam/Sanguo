@@ -1,0 +1,17 @@
+# c_peifeng
+
+# County Title
+title = c_peifeng
+
+# Settlements
+max_settlements = 3
+
+b_zhongyang = castle
+#b_yingxia = city
+#b_tangbali = temple
+
+# Misc
+culture = han
+religion = confucian
+
+#History

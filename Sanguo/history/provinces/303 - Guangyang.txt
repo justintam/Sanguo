@@ -1,0 +1,18 @@
+# c_guangyang
+
+# County Title
+title = c_guangyang
+
+# Settlements
+max_settlements = 4
+
+b_jichengguang = castle
+#b_jichengfu = city
+#b_wenshan = temple
+#b_guangnan = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

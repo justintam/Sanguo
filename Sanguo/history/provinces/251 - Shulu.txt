@@ -1,0 +1,18 @@
+# c_shulu
+
+# County Title
+title = c_shulu
+
+# Settlements
+max_settlements = 4
+
+b_shulu = castle
+b_tongxiang = city
+#b_kouke = temple
+#b_chenfu = castle
+
+# Misc
+culture = shanyue
+religion = animist
+
+#History

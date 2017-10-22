@@ -1,0 +1,19 @@
+# c_fangzi
+
+# County Title
+title = c_fangzi
+
+# Settlements
+max_settlements = 5
+
+b_fangzi = castle
+b_gaoyi = city
+b_qianquting = city
+b_wuchengmo = city
+#b_gaoning = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

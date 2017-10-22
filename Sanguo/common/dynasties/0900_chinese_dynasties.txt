@@ -1,0 +1,400 @@
+900 = {
+	name="Chen" #Chen Bao
+	culture = han
+}
+901 = {
+	name="Bu" #Bu Yi - YT
+	culture = han
+}
+902 = {
+	name="Bian" #Bian Zhang - LR
+	culture = han
+}
+903 = {
+	name="Bian" #Bian Xi - YT
+	culture = han
+}
+904 = {
+	name="He" #He Yi - YT
+	culture = han
+}
+905 = {
+	name="Guo" #Guo Si - DZ
+	culture = han
+}
+906 = {
+	name="Li" #Li Ru - DZ
+	culture = han
+}
+907 = {
+	name="Han" #Han Yan - HAN
+	culture = han
+}
+908 = {
+	name="Zhao" #Zhao Zhong, Bao
+	culture = han
+}
+909 = {
+	name="Huang" #Huang Yan
+	culture = han
+}
+910 = {
+	name="Li" #Li Wenhou
+	culture = han
+}
+911 = {
+	name="Wang" #Wang Guo
+	culture = han
+}
+912 = {
+	name="Zhu" #Zhu Gui - HAN
+	culture = han
+}
+913 = {
+	name="Yan" #Yan Zhong
+	culture = han
+}
+914 = {
+	name="Han" #Han Sui - LR
+	culture = han
+}
+915 = {
+	name="Zhang" #Zhang Xiu
+	culture = han
+}
+916 = {
+	name="Wang" #Wang Rui
+	culture = han
+}
+917 = {
+	name="Wang" #Wang Zhi
+	culture = han
+}
+918 = {
+	name="Guo" #Guo Da
+	culture = han
+}
+919 = {
+	name="Zhang" #Zhang Yang
+	culture = han
+}
+920 = {
+	name="Kong" #Kong Xin
+	culture = han
+}
+921 = {
+	name="Wang" #Wang Lang
+	culture = han
+}
+922 = {
+	name="Yan" #Yan Zheng
+	culture = han
+}
+923 = {
+	name="Zhao" #Zhao Hong
+	culture = han
+}
+924 = {
+	name="Sun" #Sun Zhong
+	culture = han
+}
+925 = {
+	name="Wang" #Wang Kuang
+	culture = han
+}
+926 = {
+	name="Chen" #Chen Yan
+	culture = han
+}
+927 = {
+	name="Qu" #Qu Yi
+	culture = han
+}
+928 = {
+	name="Zhang" #Zhang Wen
+	culture = han
+}
+929 = {
+	name="Sun" #Sun Xia
+	culture = han
+}
+930 = {
+	name="Zhang" #Zhang Ji
+	culture = han
+}
+931 = {
+	name="Yang" #Yang Zhong
+	culture = han
+}
+932 = {
+	name="Zhang" #Zhang Chun
+	culture = han
+}
+933 = {
+	name="Zhang" #Zhang Ju
+	culture = han
+}
+934 = {
+	name="Huang" #Huang Shao
+	culture = han
+}
+935 = {
+	name="Zhou" #Zhou Cang
+	culture = han
+}
+936 = {
+	name="Hu" #Hu Zhen
+	culture = han
+}
+937 = {
+	name="Chong" #Chong Fu
+	culture = han
+}
+938 = {
+	name="Bao" #Bao Hong
+	culture = han
+}
+939 = {
+	name="Huang" #Huang Wan
+	culture = han
+}
+940 = {
+	name="Chu" #Special
+	culture = han
+}
+941 = {
+	name="Liu" #Liu Chong in Zangke
+	culture = han
+}
+942 = {
+	name="Li" #Li Yong
+	culture = han
+}
+943 = {
+	name="He" #He Xun
+	culture = han
+}
+944 = {
+	name="Li" #Li Jue
+	culture = han
+}
+945 = {
+	name="Han" #Han Xian
+	culture = han
+}
+946 = {
+	name="Yang" #Yang Feng
+	culture = han
+}
+947 = {
+	name="Zhu" #Zhu Zhi
+	culture = han
+}
+948 = {
+	name="Xu" #Xu Qiu
+	culture = han
+}
+949 = {
+	name="Gongsun" #Gongsun Zhao
+	culture = han
+}
+950 = {
+	name="Zhang" #Zhang Qi
+	culture = han
+}
+951 = {
+	name="Ying" #Ying Shao
+	culture = han
+}
+952 = {
+	name="Zhang" #Zhang Yan, Fan, Cheng, Zhao, Ling, Jian
+	culture = han
+}
+953 = {
+	name="Yang" #Yang Jin, Ru, Xu, Dao
+	culture = han
+}
+954 = {
+	name="Di" #Di Du
+	culture = han
+}
+955 = {
+	name="Guo" #Guo Quan, Wen
+	culture = han
+}
+956 = {
+	name="Song" #Song Hong, Du
+	culture = han
+}
+957 = {
+	name="Du" #Du Taiji
+	culture = han
+}
+958 = {
+	name="Zhang" #Zhang Huan, Zhi, Chang, Meng
+	culture = han
+}
+959 = {
+	name="Xing" #Xing Ji
+	culture = han
+}
+960 = {
+	name="Luan" #Luan Ba
+	culture = han
+}
+961 = {
+	name="Guo" #Guo Xi, Guo Hong
+	culture = han
+}
+962 = {
+	name="Qu" #Qu Yan
+	culture = han
+}
+963 = {
+	name="Jiang" #Jiang Shi
+	culture = han
+}
+964 = {
+	name="Zhao" #Zhao Song
+	culture = han
+}
+965 = {
+	name="Chen" #Chen Tiao
+	culture = han
+}
+966 = {
+	name="Zou" #Zou Dan
+	culture = han
+}
+967 = {
+	name="Rui" #Rui Zhi
+	culture = han
+}
+968 = {
+	name="Ting" #Fan Ting
+	culture = han
+}
+969 = {
+	name="Jing" #Jing Shao
+	culture = han
+}
+970 = {
+	name="Yang" #Yang Mao, Fu, Xuan
+	culture = han
+}
+971 = {
+	name="Yang" #Yang Bao, Zhen, Mu, Tong, Qi, Liang
+	culture = han
+}
+972 = {
+	name="Lu" #Lu Nushang
+	culture = han
+}
+973 = {
+	name="Wu" #Wu Qiong
+	culture = han
+}
+974 = {
+	name="Li" #Li Shou
+	culture = han
+}
+975 = {
+	name="Zhang" #Zhang Zi
+	culture = han
+}
+976 = {
+	name="Xu" #Xu Yi
+	culture = han
+}
+977 = {
+	name="Wang" #Wang Hong
+	culture = han
+}
+978 = {
+	name="Cheng" #Cheng Yu
+	culture = han
+}
+979 = {
+	name="Wang" #Wang Du
+	culture = han
+}
+980 = {
+	name="Wang" #Wang Min
+	culture = han
+}
+981 = {
+	name="Chang" #Chang Xi
+	culture = han
+}
+982 = {
+	name="Sun" #Sun Guan, Kang
+	culture = han
+}
+983 = {
+	name="Wu" #Wu Dun
+	culture = han
+}
+984 = {
+	name="Yin" #Yin Li
+	culture = han
+}
+985 = {
+	name="Zhang" #Zhang Yang
+	culture = han
+}
+986 = {
+	name="Zhao" #Zhao Weisun
+	culture = han
+}
+987 = {
+	name="Fan" #Fan Jin
+	culture = han
+}
+988 = {
+	name="Huang" #Huang Jiu
+	culture = han
+}
+989 = {
+	name="Zhang" #Zhang Ji Bandit in Anping
+	culture = han
+}
+990 = {
+	name="Dong" #Dong Zhao, Fang
+	culture = han
+}
+991 = {
+	name="Sun" #Sun Kang
+	culture = han
+}
+992 = {
+	name="Xiong" #Xiong Bai
+	culture = han
+}
+993 = {
+	name="Guanqiu" #Guanqiu Yi
+	culture = han
+}
+994 = {
+	name="Gao" #Gao Shun
+	culture = han
+}
+995 = {
+	name="Sun" #Sun Song
+	culture = han
+}
+996 = {
+	name="Yi" #Yi Pou
+	culture = han
+}
+997 = {
+	name="Fu" #Fu Qian
+	culture = han
+}
+998 = {
+	name="Gao" #Gao Gan
+	culture = han
+}
+999 = {
+	name="Chen" #Chen Wen
+	culture = han
+}

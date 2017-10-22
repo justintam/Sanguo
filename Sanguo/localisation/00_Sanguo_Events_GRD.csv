@@ -1,0 +1,10 @@
+#GRD
+EVTDESC_GRD.1;The Imperial Tiger Guard is short handed. It is time to select more candidates from amongst the gentry.;;;;;;;;;;;;;x;
+EVTTITLE_GRD.1;Imperial Tiger Guards;;;;;;;;;;;;;x;
+EVTDESC_GRD.5;The Emperor has identified one of your men as an ideal candidate for the Imperial Tiger Guards. Do you approve of letting your man go?;;;;;;;;;;;;;x;
+EVTTITLE_GRD.5;Imperial Summons;;;;;;;;;;;;;x;
+EVTDESC_GRD.7A;A provincial candidate has come seeking position in our Tiger Guard. Should we make him an Imperial Tiger Guardsman?;;;;;;;;;;;;;x;
+EVTDESC_GRD.7B;A provincial candidate has come before us to serve the Emperor. Should we make him an Imperial Tiger Guardsman?;;;;;;;;;;;;;x;
+EVTTITLE_GRD.7;Guard Candidate;;;;;;;;;;;;;x;
+EVTDESC_GRD.8;It is time to designate a new Captain of your Imperial Guard. Will you accept this man?;;;;;;;;;;;;;x;
+EVTTITLE_GRD.8;Guard Captain;;;;;;;;;;;;;x;

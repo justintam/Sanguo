@@ -1,0 +1,19 @@
+# c_jiangyuan
+
+# County Title
+title = c_jiangyuan
+
+# Settlements
+max_settlements = 5
+
+b_jiangyuan = castle
+#b_buzhen = city
+#b_wenjiang = temple
+#b_wanchun = castle
+#b_jinma = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

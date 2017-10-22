@@ -1,0 +1,12 @@
+# 1-99 Han Dynasty*
+# 100-199 Han Court*
+# 200-299 Yellow Turban
+# 300-399 Dong Zhuo
+# 400-499 Wei Dynasty
+# 500-599 Wu Dynasty
+# 600-699 Shu Dynasty
+# 700-799 Yuan Dynasty
+# 800-899 Liang Dynasty (Ma Teng)
+# 900-999 Gongsun Dynasty
+# 1000-1099 Independent
+# 1300-1399 Reserved

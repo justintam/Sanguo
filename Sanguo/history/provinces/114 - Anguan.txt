@@ -1,0 +1,17 @@
+# c_anguan
+
+# County Title
+title = c_anguan
+
+# Settlements
+max_settlements = 3
+
+b_anguan = castle
+#b_xinko = city
+#b_taiping = temple
+
+# Misc
+culture = nanyue
+religion = animist
+
+#History

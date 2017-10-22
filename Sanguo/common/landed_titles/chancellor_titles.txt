@@ -1,0 +1,513 @@
+#Formables
+
+e_k_chen = {
+	color={ 190 110 240 }
+	capital = 234 #Jianye
+	
+	graphical_culture = holygfx
+	
+	capital = 1 # c_henan
+	
+	creation_requires_capital = no
+	
+	culture = han
+	
+	title = "PREMIER"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "PREMIER_FOA"
+	short_name = yes
+	
+	creation_requires_capital = no
+	
+	dignity = 25
+	
+	allow = {
+		always = no
+	}
+}
+
+e_k_chu = {
+	color={ 200 30 120 }
+	capital = 125 #Changsha
+	
+	title = "PREMIER"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "PREMIER_FOA"
+	short_name = yes
+	
+	creation_requires_capital = no
+	
+	dignity = 25
+	
+	allow = {
+		always = no
+	}
+}
+
+e_k_dai = {
+	color={ 125 135 155 }
+	capital = 313 #Dai
+	
+	title = "PREMIER"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "PREMIER_FOA"
+	short_name = yes
+	
+	creation_requires_capital = no
+	
+	dignity = 25
+	
+	allow = {
+		always = no
+	}
+}
+
+e_k_han = {
+	color={ 135 205 235 }
+	capital = 1 #Henan
+	
+	title = "PREMIER"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "PREMIER_FOA"
+	short_name = yes
+	
+	creation_requires_capital = no
+	
+	dignity = 25
+	
+	allow = {
+		always = no
+	}
+}
+
+e_k_jin = {
+	color={ 150 230 120 }
+	capital = 1 #Henan
+	
+	title = "PREMIER"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "PREMIER_FOA"
+	short_name = yes
+	
+	creation_requires_capital = no
+	
+	dignity = 25
+	
+	allow = {
+		always = no
+	}
+}
+
+e_k_liang = {
+	color={ 220 120 120 }
+	capital = 167 #Wuwei
+	
+	title = "PREMIER"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "PREMIER_FOA"
+	short_name = yes
+	
+	creation_requires_capital = no
+	
+	dignity = 25
+	
+	allow = {
+		always = no
+	}
+}
+
+e_k_liao = {
+	color={ 250 200 220 }
+	capital = 367 #Dongbei
+	
+	title = "PREMIER"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "PREMIER_FOA"
+	short_name = yes
+	
+	creation_requires_capital = no
+	
+	dignity = 25
+	
+	allow = {
+		always = no
+	}
+}
+
+e_k_min = {
+	color={ 220 150 160 }
+	capital = 246 #Kuaiji
+	
+	title = "PREMIER"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "PREMIER_FOA"
+	short_name = yes
+	
+	creation_requires_capital = no
+	
+	dignity = 25
+	
+	allow = {
+		always = no
+	}
+}
+
+e_k_qi = {
+	color={ 80 70 20 }
+	capital = 154 #Anding
+	
+	title = "PREMIER"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "PREMIER_FOA"
+	short_name = yes
+	
+	creation_requires_capital = no
+	
+	dignity = 25
+	
+	allow = {
+		always = no
+	}
+}
+
+e_k_qin = {
+	color={ 230 180 120 }
+	capital = 20 #Changan
+	
+	title = "PREMIER"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "PREMIER_FOA"
+	short_name = yes
+	
+	creation_requires_capital = no
+	
+	dignity = 25
+	
+	allow = {
+		always = no
+	}
+}
+
+e_k_qing = {
+	color={ 50 50 200 }
+	capital = 305 #Ji
+	
+	title = "PREMIER"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "PREMIER_FOA"
+	short_name = yes
+	
+	creation_requires_capital = no
+	
+	dignity = 25
+	
+	allow = {
+		always = no
+	}
+}
+
+e_k_shu = {
+	color={ 50 150 60 }
+	capital = 257 #Chengdu
+	
+	title = "PREMIER"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "PREMIER_FOA"
+	short_name = yes
+	
+	creation_requires_capital = no
+	
+	dignity = 25
+	
+	allow = {
+		always = no
+	}
+}
+
+e_k_song = {
+	color={ 250 110 90 }
+	capital = 234 #Jianye
+	
+	title = "PREMIER"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "PREMIER_FOA"
+	short_name = yes
+	
+	creation_requires_capital = no
+	
+	dignity = 25
+	
+	allow = {
+		always = no
+	}
+}
+
+e_k_sui = {
+	color={ 210 210 90 }
+	capital = 20 #Changan
+	
+	title = "PREMIER"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "PREMIER_FOA"
+	short_name = yes
+	
+	creation_requires_capital = no
+	
+	dignity = 25
+	
+	allow = {
+		always = no
+	}
+}
+
+e_k_tan = {
+	color={ 205 37 80 }
+	capital = 182 #Dongpingling
+	
+	title = "PREMIER"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "PREMIER_FOA"
+	short_name = yes
+	
+	creation_requires_capital = no
+	
+	dignity = 25
+	
+	allow = {
+		always = no
+	}
+}
+
+e_k_tang = {
+	color={ 120 120 220 }
+	capital = 20 #Changan
+	
+	title = "PREMIER"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "PREMIER_FOA"
+	short_name = yes
+	
+	creation_requires_capital = no
+	
+	dignity = 25
+	
+	allow = {
+		always = no
+	}
+}
+
+e_k_wei = {
+	color={ 50 60 150 }
+	capital = 1 #Henan
+	
+	title = "PREMIER"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "PREMIER_FOA"
+	short_name = yes
+	
+	creation_requires_capital = no
+	
+	dignity = 25
+	
+	allow = {
+		always = no
+	}
+}
+
+e_k_wu = {
+	color={ 150 60 50 }
+	capital = 234 #Jianye
+	
+	title = "PREMIER"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "PREMIER_FOA"
+	short_name = yes
+	
+	creation_requires_capital = no
+	
+	dignity = 25
+	
+	allow = {
+		always = no
+	}
+}
+
+e_k_wuyue = {
+	color={ 150 235 80 }
+	capital = 238 #Wu
+	
+	title = "PREMIER"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "PREMIER_FOA"
+	short_name = yes
+	
+	creation_requires_capital = no
+	
+	dignity = 25
+	
+	allow = {
+		always = no
+	}
+}
+
+e_k_xia = {
+	color={ 175 25 155 }
+	capital = 43 #Shuofang
+	
+	title = "PREMIER"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "PREMIER_FOA"
+	short_name = yes
+	
+	creation_requires_capital = no
+	
+	dignity = 25
+	
+	allow = {
+		always = no
+	}
+}
+
+e_k_yan = {
+	color={ 67 120 67 }
+	capital = 321 #Lingzhi
+	
+	title = "PREMIER"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "PREMIER_FOA"
+	short_name = yes
+	
+	creation_requires_capital = no
+	
+	dignity = 25
+	
+	allow = {
+		always = no
+	}
+}
+
+e_k_zhao = {
+	color={ 120 120 190 }
+	capital = 97 #Ye
+	
+	title = "PREMIER"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "PREMIER_FOA"
+	short_name = yes
+	
+	creation_requires_capital = no
+	
+	dignity = 25
+	
+	allow = {
+		always = no
+	}
+}
+
+e_k_zhong = {
+	color={ 230 190 190 }
+	capital = 243 #Shouchun
+	
+	title = "PREMIER"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "PREMIER_FOA"
+	short_name = yes
+	
+	creation_requires_capital = no
+	
+	dignity = 25
+	
+	allow = {
+		always = no
+	}
+}
+
+e_k_zhou = {
+	color={ 60 60 160 }
+	capital = 202 #Xiapi
+	
+	title = "PREMIER"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "PREMIER_FOA"
+	short_name = yes
+	
+	creation_requires_capital = no
+	
+	dignity = 25
+	
+	allow = {
+		always = no
+	}
+}

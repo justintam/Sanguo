@@ -1,0 +1,12 @@
+2000 = {
+	name="Chenggong" #Chenggong Ying - IND
+	culture = han
+}
+2001 = {
+	name="Huang" #Huang Gai - WU
+	culture = han
+}
+2002 = {
+	name="Pang" #Pang Tong - SHU
+	culture = han
+}

@@ -1,0 +1,207 @@
+korean = {
+		graphical_cultures = { koreangfx easterngfx }
+
+	joseon = {
+		graphical_cultures = { koreangfx easterngfx }
+		
+		color = { 0.45 0.55 0.15 }
+		
+		male_names = {
+			Aeru Ahan Amul An Anjang Anwon Aranbul
+			Asin Asul
+			Baeguk Baekgo Baekgu Balgi Bangnu Baqi
+			Beop Beoreum Biryu Biyu Bo Bobang Bogo
+			Bojang Bojeong Boksin Bongsang
+			Buliji Bunno Bunseo Buru Butae
+			Chadae Chaekgye Changbalga Cheonil Chimnyu Choe
+			Chogo Chumil Chumo Chungsang Churo Chwijin
+			Daemusin Daesung Daeso Daewon Dalmun
+			Damdeok Damul Dangun Dapbu Daru Deungol Dochim
+			Dodu Dohae Dojeol Dojin Dongcheon Dongeom Dongmyeong
+			Dongmyeongseong Dongseong Dorihaeng Dotori
+			Dumak Dumil Duro Durumi
+			Eojiji Eosu Eul Eulbul Eulpaso Eum
+			Eumu
+			Faqi
+			Gaero Gaeru Gaesomun Galsa Gammul Gan Gang
+			Ganwigeo Gareuk Geonhwang Geonmu Georyeon
+			Geum Geumwa Gija Giru Go Gobul Goengrim Gogugwon
+			Gogugyang Gogukcheon Gohol Goi Goyeolga Gu Gubu
+			Gueul Guisin Gukjo Gumoso Gumul Gung Gusu Gwanggaeto
+			Gwanghyeon Gye Gyebaek Gyeong
+			Gyeonhwang Gyesu Gyoche
+			Habaek Hae Haemo Haemyeong Haesa Hanyul Heuldal Heummu Heung
+			Heungan Hoa Hobang Hodong Hui Hwanin
+			Hwanung Hwayeo Hye Hyeon Hyeonmyeong
+			Hyeonseok Hyeopbo Hyezin Hyubo
+			Ijin Ik Inseon Insu Iseul
+			Jaesa Jan Jang Jangsu Jasin Jeong
+			Jeonggi Jeongin Jeongu Jeongui Jeonji
+			Jinsa Jipsa Jipshin Jong Jori Joyeong Juda
+			Jumong Jun Jungcheon Jungsang
+			Maereuk Maeseuk Mahyu Mamul Man Manchun
+			Mangnae Mangniji Manhwa Mari Maryeo Mayeo
+			Micheon Minjung Mobon Mojeom Mosu Mosuri
+			Mu Muhyul Mun Mundeok Munhyu Munja Munju
+			Munye Muryeong Museo Muye
+			Nahyu Namgeon Nammu Namsaeng Namsan Nanga
+			Nanwu Naun Noeul Noja Nuri
+			O Oi Onjo Orumun Osa
+			Pung Pyeongseong Pyeongwon
+			Ri Rim
+			Saban Sabeol Saekbullu Saekju Sagi Salgu
+			Samgeun San Sanak Sang Sangbu Sangga
+			Sanghae Sangnu Sangyeong Sansang Sapsiru
+			Saseong Sayu Seocheon Seohan Seon Seong
+			Shamen Sindae Sinmun So Soe Sogo Solgae
+			Solla Songyang Sotae Sowon Su Surilyu
+			Suseong
+			Tabal Taejo Tang
+			U Ubul Ugeo Uija Uiryeo Uira Uisin
+			Un Ung Uru Uwigeo
+			Wanggeom Wideok Wigung Wigutae Wihae
+			Wijang Wiman Wina Wiyeom Won Wonui Wutae
+			Yabal Yagu Yang Yangno Yangseong
+			Yangwon Yanyou Yeochan Yeoeul Yeogu Yeojin
+			Yeojun Yeon Yeonbul Yeong Yeongnyu Yeongsuk
+			Yeongyang Yeonna Yeonsu Yeoul Yiryeon Yonu
+			Yu Yung Yuri Yuryu Yusa
+			Zenko
+		}
+		female_names = {
+			Baek Baekjo Binna Bitna Bora Boram Buyong
+			Chamsae Chi Chihui
+			Habaek Hana Haneul Hwa Hwahui He Hui Hweonhwa Hye Hyo
+			Iseul
+			Jayeon Jeonghye Jeonghyo
+			Mari Miyu
+			Nakrang Nari Noeul Norae Nuri
+			Rang Ryu
+			Se Seodong Seono Seryu So Sora Soseono Sowon Soya
+			Talgi
+			U Ulsae Ung Ungnyeo
+			Wui Wuihwa
+			Ye Yeo Yeorang Yeoreum Yu Yuhwa Yul
+		}
+		
+		founder_named_dynasties = no
+		
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+		pat_grf_name_chance = 0
+		mat_grf_name_chance = 0
+		father_name_chance = 0
+		
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+		pat_grm_name_chance = 0
+		mat_grm_name_chance = 0
+		mother_name_chance = 0
+
+		modifier = default_culture_modifier
+	}
+	
+	samhan = {
+		graphical_cultures = { koreangfx easterngfx }
+		
+		color = { 0.65 0.35 0.8 }
+		
+		male_names = {
+			Adalla Ado Aejang Agung Ajagae
+			Alcheon Alji Alpyeong An Anpyeong Asin
+			Bae Baek Baekban Baekjeong Bak Bam Bangul
+			Beolhyu Beop Beopheung Bi Bidam Biryu
+			Biyu Bogo Bojong Bokho Bokseung
+			Boksin Bom Bu Bunjil Bunseo Busik Byeol Byol
+			Chachaung Chaekgye Chang Cheol Cheomhae
+			Chim Chimnyu Chiwon Choe Chogo Chong
+			Chulchung Chun Chunchu Chungsang
+			Chwihang Chwihui
+			Dae Daemun Daeseoji Dal Damyang Damyuk Dan
+			Dang Daru Do Dochim Dongnyeon Dongryun
+			Dongseong Donyeong Doseolji
+			Eo Eum Eumu
+			Gaejimun Gaero Gaeru Gaewon Gang Gasil
+			Geo Geodeok Geodeung Geojilmi Geon
+			Geoseogan Geumnim Geumsang Geumseong
+			Geunchogo Geungusu Gilseon Girim Giru
+			Goi Gong Gu Gubu Gudo Guhyeong Guisin
+			Gukban Gusu Gwanchang Gwang Gwangpyeong
+			Gwisan Gye Gyebaek Gyeomji Gyeong
+			Gyeongsa Gyeongsun Gyeyang
+			Hae Haji Hajong Heon Heonchang Heulhae
+			Heumsun Him Hogong Holang Horim Hwaui Hwon Hyang
+			Hye Hyecho Hyeokgeose Hyeon Hyeonin Hyo Hyojong
+			Hyosun
+			Ichadon Ikhyeon Iljinasi Ilseong Im
+			Imgeol Imyeong Ingyeom Inmun Inoe
+			Intae Ip Ipjong Isageum Isipum
+			Ja Jabi Jae Jaegi Jang Jasin Jayu Jeon Jeong
+			Jeongin Jeonji Jesang Jeung Jigyeong
+			Jijeung Jilji Jima Jimyeong Jin
+			Jinheung Jinji Jinpyeong Jinpyo Jinsa
+			Jipsa Jipshin Jobun Jwaji
+			Kot Kul Kum Kyung Kyungjik Kyupo
+			Madeok Mae Mamo Mapum Michu Mijinbu
+			Milseong Misaeng Misaheun Modae Modo
+			Mojam Mu Mudo Muduk Mugang Mugwang Mul
+			Munjong Munju Munmu Munwang Muryeok
+			Muryeong Muyeol Myeong Myeongdeuk
+			Myeongjang
+			Naehae Naemul Naero Namhae Nocha
+			Noribu Nulji Nun
+			Okjong Onjo
+			Parang Pasa Pasang Pumil Pung Pyeongwon
+			Reepjong
+			Saban Sabu Sada Sadaham Sae Sama Samgeol
+			Samgeun Sangyeong Sejin Sejo Sejong
+			Seo Seodong Seohyun Seol Seolwon Seon
+			Seong Seonghan Seongmyeong Seupbo
+			Silseong Sinmun Sobeolgong Soji Sogo
+			Sosurim Suchun Sujong Sung Suro Suryu
+			Taejong Taesung Talhae
+			Uichang Uija Uisang Ukbo Uro
+			Wideok Wihong Wolgwang Won Woncheuk
+			Wongwang Wonhyo Wonsul Wonto Woo
+			Yang Yanyou Yeo Yeom Yeon Yeong
+			Yeongeung Yeonghae Yeongpung Yo Yong
+			Yongchun Yongsu Yongshu Yu Yung Yuri
+			Yurye Yushin
+		}
+		female_names = {
+			Aerye Aesong Aji Ahyo Alyeong Ani Areum
+			Bangwon Banya Boban Bohwa Bokhilgu Boksu
+			Cheonmyeong Cheonsa
+			Deokman
+			Frarang
+			Gidae Gwi Gwiin Gwiyomi Gyea Gyehwa
+			Halmi Hogu Horin Hwangok Hye Hyo
+			Indeok Inu Inyoung
+			Jaeui Jangmi Jeongan Jeonghyeon Jeongsin
+			Jeongso Jeongui Jido Jindeok Jinseong Jiso
+			Johwa
+			Manmyeong Mano Maya Mishil Mojeong
+			Munjeong Munmyeong Munui Myodo
+			Nabi Naerye Naeya Nangnang Nanya
+			Okjin Ongmo
+			Sa Sado Sagi Samyeop Sang Sangchim Sarang
+			Saseong Saso Seondeok Seonhwa Seonmul Seungman
+			Shinae Shinu Sikdo Sin Sinae Soheon Soyong Suk Sukui Sukwon
+			Uiseong Unje
+			Wolmyeong Wongyeong
+			Yeong Yeonin
+		}
+		
+		founder_named_dynasties = no
+		
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+		pat_grf_name_chance = 0
+		mat_grf_name_chance = 0
+		father_name_chance = 0
+		
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+		pat_grm_name_chance = 0
+		mat_grm_name_chance = 0
+		mother_name_chance = 0
+
+		modifier = default_culture_modifier
+	}
+}

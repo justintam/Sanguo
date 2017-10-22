@@ -1,0 +1,19 @@
+# c_gaoyang
+
+# County Title
+title = c_gaoyang
+
+# Settlements
+max_settlements = 5
+
+b_gaoyang = castle
+#b_tingzhou = city
+#b_zhoujia = temple
+#b_zhouxian = castle
+#b_liugu = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

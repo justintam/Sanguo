@@ -1,0 +1,16 @@
+# e_northern
+1.1.1={
+	historical_nomad = yes
+}
+1.1.1={
+	liege=d_nanbei
+}
+184.1.1={
+	holder=1603 #Hu
+}
+185.1.1={
+	holder=1604 #Tadun
+}
+207.10.1={
+	holder=1610 #Nanlou
+}

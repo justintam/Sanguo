@@ -1,0 +1,18 @@
+# c_wusui
+
+# County Title
+title = c_wusui
+
+# Settlements
+max_settlements = 4
+
+b_wusui = castle
+b_wuyi = city
+#b_anwei = temple
+#b_chenteng = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

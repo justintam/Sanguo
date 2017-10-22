@@ -1,0 +1,18 @@
+# c_shuyong
+
+# County Title
+title = c_shuyong
+
+# Settlements
+max_settlements = 4
+
+b_shu = castle
+b_jialing = city
+#b_shumaifu = temple
+#b_wenducheng = castle
+
+# Misc
+culture = bandunman
+religion = baihu
+
+#History

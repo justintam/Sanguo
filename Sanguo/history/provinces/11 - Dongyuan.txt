@@ -1,0 +1,19 @@
+# c_dongyuan
+
+# County Title
+title = c_dongyuan
+
+# Settlements
+max_settlements = 5
+
+b_dongyuan = castle
+b_huqiuting = city
+#b_xihu = city
+#b_donghu = city
+#b_dongyuanji = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

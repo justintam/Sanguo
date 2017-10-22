@@ -1,0 +1,26 @@
+# c_hanzhong
+
+# County Title
+title = c_hanzhong
+
+# Settlements
+max_settlements = 6
+
+b_hanzhong = castle
+b_baocheng = city
+b_mianyang = temple
+b_nanxiang = city
+b_nanzheng = city
+#b_yangduo = temple
+
+# Misc
+culture = han
+religion = tianshi
+
+#History
+214.1.1={
+	remove_settlement = b_nanzheng
+}
+219.1.1={
+	remove_settlement = b_nanxiang
+}

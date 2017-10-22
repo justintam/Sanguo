@@ -1,0 +1,15 @@
+4000 = {
+	name="Sheng"
+	dynasty=1570
+	religion="tianshi"
+	culture="han"
+	trait="locked"
+	disallow_random_traits=yes
+	160.1.1={
+		birth=yes
+		health = 100
+	}
+	1000.1.1={
+		death = yes
+	}
+}

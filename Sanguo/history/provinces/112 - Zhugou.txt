@@ -1,0 +1,17 @@
+# c_zhugou
+
+# County Title
+title = c_zhugou
+
+# Settlements
+max_settlements = 3
+
+b_zhugou = tribal
+#b_jupu = city
+#b_bucjiu = temple
+
+# Misc
+culture = nanyue
+religion = animist
+
+#History

@@ -1,0 +1,25 @@
+# c_zuopingyi
+
+# County Title
+title = c_zuopingyi
+
+# Settlements
+max_settlements = 5
+
+b_chiyang = castle
+b_zhouzhi = city
+#b_beilin = city
+#b_yanta = castle
+#b_qiyantai = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History
+194.1.1={
+	b_beilin = city
+}
+210.1.1={
+	b_yanta = castle
+}

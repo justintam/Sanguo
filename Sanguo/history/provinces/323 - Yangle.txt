@@ -1,0 +1,18 @@
+# c_yangle
+
+# County Title
+title = c_yangle
+
+# Settlements
+max_settlements = 4
+
+b_yangle = tribal
+b_liuchengxi = city
+#b_jianting = temple
+#b_wenti = castle
+
+# Misc
+culture = wuhuan
+religion = tengri_pagan
+
+#History

@@ -1,0 +1,18 @@
+# c_pi
+
+# County Title
+title = c_pi
+
+# Settlements
+max_settlements = 4
+
+b_pi = castle
+#b_picheng = city
+#b_huayan = temple
+#b_mimu = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

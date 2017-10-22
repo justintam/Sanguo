@@ -1,0 +1,19 @@
+# c_xiangping
+
+# County Title
+title = c_xiangping
+
+# Settlements
+max_settlements = 5
+
+b_xiangping = castle
+#b_xiangpingfu = city
+#b_xiangding = temple
+#b_wafangdian = castle
+#b_pulandian = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

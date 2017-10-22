@@ -1,0 +1,19 @@
+# c_qiguan
+
+# County Title
+title = c_qiguan
+
+# Settlements
+max_settlements = 5
+
+b_qiguan = castle
+b_qicheng = city
+#b_qidu = city
+#b_mengjin = city
+#b_tiemenzhen = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

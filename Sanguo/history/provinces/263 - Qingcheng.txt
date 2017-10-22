@@ -1,0 +1,18 @@
+# c_qingcheng
+
+# County Title
+title = c_qingcheng
+
+# Settlements
+max_settlements = 4
+
+b_qingcheng = castle
+#b_qingmai = city
+#b_mengyan = temple
+#b_xinmin = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

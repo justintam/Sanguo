@@ -1,0 +1,18 @@
+# c_chidi
+
+# County Title
+title = c_chidi
+
+# Settlements
+max_settlements = 4
+
+b_chidi = castle
+b_midang = tribal
+#b_tuanjie = temple
+#b_xiangquan = castle
+
+# Misc
+culture = di
+religion = baima
+
+#History

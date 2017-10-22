@@ -1,0 +1,18 @@
+# c_puwu
+
+# County Title
+title = c_puwu
+
+# Settlements
+max_settlements = 4
+
+b_puwu = castle
+#b_jiangu = city
+#b_duhao = temple
+#b_fudai = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

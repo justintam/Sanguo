@@ -1,0 +1,19 @@
+# c_yanjing
+
+# County Title
+title = c_yanjing
+
+# Settlements
+max_settlements = 5
+
+b_yanjing = castle
+b_pingqiuhe = city
+#b_xinmi = city
+#b_erqi = city
+#b_yanjinghu = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

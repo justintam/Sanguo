@@ -1,0 +1,245 @@
+#2300 - UNUSED
+2301 = {
+	name="Duro"
+	religion="shamanist"
+	culture="joseon"
+	25.1.1={
+		birth=yes
+	}
+	82.1.1={
+		death=yes
+	}
+}
+2302 = {
+	name="Dapbu"
+	dynasty=2202
+	religion="shamanist"
+	culture="joseon"
+	67.1.1={
+		birth=yes
+	}
+	179.1.1={
+		death=yes
+	}
+}
+2303 = {
+	name="Eulpaso"
+	religion="shamanist"
+	culture="joseon"
+	trait="chivalrous"
+	trait="genius"
+	trait="humble"
+	trait="honest"
+	trait="brave"
+	150.1.1={
+		birth=yes
+	}
+	194.1.1={
+		employer=2213
+	}
+	203.1.1={
+		death=yes
+	}
+}
+2304 = {
+	name="So"
+	dynasty=2203
+	religion="shamanist"
+	culture="joseon"
+	130.1.1={
+		birth=yes
+	}
+	179.1.1={
+		employer=2213
+	}
+	200.1.1={
+		death=yes
+	}
+}
+2305 = {
+	name="Hyo"
+	female=yes
+	dynasty=2203
+	religion="shamanist"
+	culture="joseon"
+	father=2304
+	165.1.1={
+		birth=yes
+	}
+	180.1.1={
+		add_spouse=2215
+	}
+	203.1.1={
+		add_spouse=2216
+	}
+	230.1.1={
+		death=yes
+	}
+}
+2306 = {
+	name="Habaek"
+	religion="shamanist"
+	culture="joseon"
+	1.1.1={
+		birth=yes
+	}
+	20.1.1={
+		death=yes
+	}
+}
+2307 = {
+	name="Yuhwa"
+	female=yes
+	religion="shamanist"
+	culture="joseon"
+	father=2306
+	1.1.2={
+		birth=yes
+	}
+	1.1.3={
+		add_spouse=2514
+	}
+	1.1.5={
+		add_spouse=2512
+	}
+	15.1.1={
+		death=yes
+	}
+}
+2308 = {
+	name="Hweonhwa"
+	female=yes
+	religion="shamanist"
+	culture="joseon"
+	father=2306
+	2.1.1={
+		birth=yes
+	}
+	20.1.1={
+		death=yes
+	}
+}
+2309 = {
+	name="Wuihwa"
+	female=yes
+	religion="shamanist"
+	culture="joseon"
+	father=2306
+	3.1.1={
+		birth=yes
+	}
+	20.1.1={
+		death=yes
+	}
+}
+2310 = {
+	name="Ye"
+	female=yes
+	dynasty=2201
+	religion="shamanist"
+	culture="joseon"
+	father=2311
+	1.1.4={
+		birth=yes
+	}
+	1.1.5={
+		add_spouse=2200
+	}
+	20.1.1={
+		death=yes
+	}
+}
+2311 = {
+	name="Jin"
+	dynasty=2201
+	religion="shamanist"
+	culture="joseon"
+	father=2515
+	1.1.3={
+		birth=yes
+	}
+	60.1.1={
+		death=yes
+	}
+}
+2312 = {
+	name="Unni"
+	female=yes
+	dynasty=2201
+	religion="shamanist"
+	culture="joseon"
+	father=2313
+	mother=2536
+	1.1.6={
+		birth=yes
+	}
+	1.1.7={
+		add_spouse=2201
+	}
+	1.1.9={
+		dynasty=2200
+		add_trait=adopted
+		father=2200
+	}
+	100.1.1={
+		death=yes
+	}
+}
+2313 = {
+	name="Wutae"
+	dynasty=2201
+	religion="shamanist"
+	culture="joseon"
+	father=2514
+	1.1.5={
+		birth=yes
+	}
+	1.1.6={
+		add_spouse=2536
+	}
+	1.1.9={
+		remove_spouse=2536
+	}
+	20.1.1={
+		death=yes
+	}
+}
+2314 = {
+	name="Eosu"
+	dynasty=2202
+	religion="shamanist"
+	culture="joseon"
+	father=2302
+	171.1.1={
+		birth=yes
+	}
+	254.1.1={
+		death=yes
+	}
+}
+2315 = {
+	name="Eum-u"
+	dynasty=2212
+	religion="shamanist"
+	culture="joseon"
+	200.1.1={
+		birth=yes
+	}
+	271.1.1={
+		death=yes
+	}
+}
+2316 = {
+	name="Sangnu"
+	dynasty=2212
+	religion="shamanist"
+	culture="joseon"
+	father=2318
+	225.1.1={
+		birth=yes
+
+	}
+	294.1.1={
+		death=yes
+	}
+}

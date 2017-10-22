@@ -1,0 +1,18 @@
+# c_miling
+
+# County Title
+title = c_miling
+
+# Settlements
+max_settlements = 4
+
+b_miling = tribal
+b_milingjiao = temple
+#b_zhengai = temple
+#b_haiduong = castle
+
+# Misc
+culture = nanyue
+religion = animist
+
+#History

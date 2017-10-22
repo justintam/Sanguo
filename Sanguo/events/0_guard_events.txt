@@ -1,0 +1,1012 @@
+namespace = GRD
+
+character_event = {
+	id = GRD.1
+	title = "EVTTITLE_GRD.1"
+	desc = "EVTDESC_GRD.1"
+	picture = "GFX_evt_bodyguard"
+	
+	is_triggered_only = yes
+	
+	only_rulers = yes
+	
+	trigger = {
+		has_landed_title = k_confucian
+		NOT = {
+			any_courtier = {
+				has_character_flag = guard_chosen
+				count = 8
+			}
+		}
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				has_landed_title = e_han
+				e_china = { has_holder = yes }
+			}
+			e_china = {
+				holder_scope = {
+					save_event_target_as = target_emperor
+				}
+			}
+			break = yes
+		}
+		if = {
+			limit = {
+				has_landed_title = e_chen
+				e_k_chen = { has_holder = yes }
+			}
+			e_k_chen = {
+				holder_scope = {
+					save_event_target_as = target_emperor
+				}
+			}
+			break = yes
+		}
+		if = {
+			limit = {
+				has_landed_title = e_chu
+				e_k_chu = { has_holder = yes }
+			}
+			e_k_chu = {
+				holder_scope = {
+					save_event_target_as = target_emperor
+				}
+			}
+			break = yes
+		}
+		if = {
+			limit = {
+				has_landed_title = e_dai
+				e_k_dai = { has_holder = yes }
+			}
+			e_k_dai = {
+				holder_scope = {
+					save_event_target_as = target_emperor
+				}
+			}
+			break = yes
+		}
+		if = {
+			limit = {
+				has_landed_title = e_han
+				e_k_han = { has_holder = yes }
+			}
+			e_k_han = {
+				holder_scope = {
+					save_event_target_as = target_emperor
+				}
+			}
+			break = yes
+		}
+		if = {
+			limit = {
+				has_landed_title = e_jin
+				e_k_jin = { has_holder = yes }
+			}
+			e_k_jin = {
+				holder_scope = {
+					save_event_target_as = target_emperor
+				}
+			}
+			break = yes
+		}
+		if = {
+			limit = {
+				has_landed_title = e_liang
+				e_k_liang = { has_holder = yes }
+			}
+			e_k_liang = {
+				holder_scope = {
+					save_event_target_as = target_emperor
+				}
+			}
+			break = yes
+		}
+		if = {
+			limit = {
+				has_landed_title = e_liao
+				e_k_liao = { has_holder = yes }
+			}
+			e_k_liao = {
+				holder_scope = {
+					save_event_target_as = target_emperor
+				}
+			}
+			break = yes
+		}
+		if = {
+			limit = {
+				has_landed_title = e_min
+				e_k_min = { has_holder = yes }
+			}
+			e_k_min = {
+				holder_scope = {
+					save_event_target_as = target_emperor
+				}
+			}
+			break = yes
+		}
+		if = {
+			limit = {
+				has_landed_title = e_qi
+				e_k_qi = { has_holder = yes }
+			}
+			e_k_qi = {
+				holder_scope = {
+					save_event_target_as = target_emperor
+				}
+			}
+			break = yes
+		}
+		if = {
+			limit = {
+				has_landed_title = e_qin
+				e_k_qin = { has_holder = yes }
+			}
+			e_k_qin = {
+				holder_scope = {
+					save_event_target_as = target_emperor
+				}
+			}
+			break = yes
+		}
+		if = {
+			limit = {
+				has_landed_title = e_qing
+				e_k_qing = { has_holder = yes }
+			}
+			e_k_qing = {
+				holder_scope = {
+					save_event_target_as = target_emperor
+				}
+			}
+			break = yes
+		}
+		if = {
+			limit = {
+				has_landed_title = e_shu
+				e_k_shu = { has_holder = yes }
+			}
+			e_k_shu = {
+				holder_scope = {
+					save_event_target_as = target_emperor
+				}
+			}
+			break = yes
+		}
+		if = {
+			limit = {
+				has_landed_title = e_song
+				e_k_song = { has_holder = yes }
+			}
+			e_k_song = {
+				holder_scope = {
+					save_event_target_as = target_emperor
+				}
+			}
+			break = yes
+		}
+		if = {
+			limit = {
+				has_landed_title = e_sui
+				e_k_sui = { has_holder = yes }
+			}
+			e_k_sui = {
+				holder_scope = {
+					save_event_target_as = target_emperor
+				}
+			}
+			break = yes
+		}
+		if = {
+			limit = {
+				has_landed_title = e_tan
+				e_k_tan = { has_holder = yes }
+			}
+			e_k_tan = {
+				holder_scope = {
+					save_event_target_as = target_emperor
+				}
+			}
+			break = yes
+		}
+		if = {
+			limit = {
+				has_landed_title = e_tang
+				e_k_tang = { has_holder = yes }
+			}
+			e_k_tang = {
+				holder_scope = {
+					save_event_target_as = target_emperor
+				}
+			}
+			break = yes
+		}
+		if = {
+			limit = {
+				has_landed_title = e_wei
+				e_k_wei = { has_holder = yes }
+			}
+			e_k_wei = {
+				holder_scope = {
+					save_event_target_as = target_emperor
+				}
+			}
+			break = yes
+		}
+		if = {
+			limit = {
+				has_landed_title = e_wu
+				e_k_wu = { has_holder = yes }
+			}
+			e_k_wu = {
+				holder_scope = {
+					save_event_target_as = target_emperor
+				}
+			}
+			break = yes
+		}
+		if = {
+			limit = {
+				has_landed_title = e_wuyue
+				e_k_wuyue = { has_holder = yes }
+			}
+			e_k_wuyue = {
+				holder_scope = {
+					save_event_target_as = target_emperor
+				}
+			}
+			break = yes
+		}
+		if = {
+			limit = {
+				has_landed_title = e_xia
+				e_k_xia = { has_holder = yes }
+			}
+			e_k_xia = {
+				holder_scope = {
+					save_event_target_as = target_emperor
+				}
+			}
+			break = yes
+		}
+		if = {
+			limit = {
+				has_landed_title = e_yan
+				e_k_yan = { has_holder = yes }
+			}
+			e_k_yan = {
+				holder_scope = {
+					save_event_target_as = target_emperor
+				}
+			}
+			break = yes
+		}
+		if = {
+			limit = {
+				has_landed_title = e_zhao
+				e_k_zhao = { has_holder = yes }
+			}
+			e_k_zhao = {
+				holder_scope = {
+					save_event_target_as = target_emperor
+				}
+			}
+			break = yes
+		}
+		if = {
+			limit = {
+				has_landed_title = e_zhong
+				e_k_zhong = { has_holder = yes }
+			}
+			e_k_zhong = {
+				holder_scope = {
+					save_event_target_as = target_emperor
+				}
+			}
+			break = yes
+		}
+		if = {
+			limit = {
+				has_landed_title = e_zhou
+				e_k_zhou = { has_holder = yes }
+			}
+			e_k_zhou = {
+				holder_scope = {
+					save_event_target_as = target_emperor
+				}
+			}
+			break = yes
+		}
+		save_event_target_as = target_emperor
+	}
+	
+	option = {
+		name = OK
+		
+		hidden_tooltip = {
+			character_event = { id = GRD.2 }
+		}
+	}
+}
+
+#Choose a new guard.
+character_event = {
+	id = GRD.2
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	immediate = {
+		if = { #Check if Regent Chooses
+			limit = {
+				has_regent = yes
+				OR = {
+					NOT = { age = 16 }
+					prisoner = yes
+					trait = incapable
+				}
+			}
+			regent = { character_event = { id = GRD.3 } }
+			break = yes
+		}
+		#Else Emperor chooses
+		character_event = { id = GRD.3 }
+	}
+}
+
+character_event = { #Regent or Emperor chooses
+	id = GRD.3
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	immediate = {
+		event_target:target_emperor = {
+			any_realm_character = {
+				limit = {
+					age = 14
+					OR = {
+						is_female = no
+						AND = {
+							OR = {
+								culture_group = yue
+								culture_group = tibetan
+								culture_group = man
+							}
+							liege = { religion = ROOT }
+						}
+						liege = {
+							primary_title = {
+								has_law = status_of_women_4
+							}
+						}
+					}
+					is_married = no
+					prisoner = no
+					is_ruler = no
+					is_primary_heir = no
+					NOT = { character = ROOT }
+					religion = FROM
+					combat_rating = 4
+					OR = {
+						trait = duelist
+						trait = duel_master_warrior
+						trait = duel_skilled_warrior
+						trait = duel_trained_warrior
+					}
+					OR = {
+						trait = robust
+						trait = shrewd
+						trait = strong
+						trait = tall
+						trait = fair
+						trait = quick
+						trait = genius
+						trait = just
+						trait = brave
+						trait = patient
+						trait = zealous
+						trait = diligent
+						trait = ambitious
+						trait = honorable
+						trait = passionate
+					}
+					NOR = {
+						trait = dishonorable
+						trait = kinslayer
+						trait = destined
+					}
+				}
+				set_character_flag = guard_elect
+				character_event = { id = GRD.4 }
+			}
+		}
+	}
+}
+
+character_event = { #Character Trace
+	id = GRD.4
+	
+	is_triggered_only = yes
+	
+	immediate = { clr_character_flag = guard_elect }
+	
+	option = {
+		name = ACCEPT
+		
+		liege = {
+			character_event = { id = GRD.5 }
+		}
+		
+		ai_chance = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.05
+				trait = zealous
+			}
+		}
+	}
+	
+	option = {
+		name = DECLINE
+		
+		ai_chance = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.05
+				is_councillor = yes
+			}
+			modifier = {
+				factor = 1.05
+				has_minor_title = title_commander
+			}
+		}
+	}
+}
+
+character_event = { #Lord Decides
+	id = GRD.5
+	title = "EVTTITLE_GRD.5"
+	desc = "EVTDESC_GRD.5"
+	picture = "GFX_evt_bodyguard"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ACCEPT
+		
+		hidden_tooltip = { FROM = { character_event = { id = GRD.6 } } }
+		
+		ai_chance = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.05
+				trait = kind
+			}
+			modifier = {
+				factor = 1.05
+				trait = charitable
+			}
+			modifier = {
+				factor = 1.05
+				trait = honorable
+			}
+			modifier = {
+				factor = 1.05
+				trait = celibate
+			}
+			modifier = {
+				factor = 1.05
+				trait = chaste
+			}
+			modifier = {
+				factor = 1.05
+				trait = humble
+			}
+			modifier = {
+				factor = 1.05
+				trait = chivalrous
+			}
+			modifier = {
+				factor = 1.05
+				trait = just
+			}
+			modifier = {
+				factor = 1.05
+				trait = content
+			}
+			modifier = {
+				factor = 1.05
+				trait = patient
+			}
+			modifier = {
+				factor = 1.05
+				trait = proud
+			}
+			modifier = {
+				factor = 1.05
+				trait = scholar
+			}
+			modifier = {
+				factor = 1.05
+				trait = diligent
+			}
+			modifier = {
+				factor = 1.05
+				trait = temperate
+			}
+			modifier = {
+				factor = 1.05
+				trait = zealous
+			}
+			modifier = {
+				factor = 1.05
+				ROOT = { opinion = { who = FROMFROM value = 25 } }
+			}
+			modifier = {
+				factor = 1.05
+				ROOT = { opinion = { who = FROMFROM value = 50 } }
+			}
+			modifier = {
+				factor = 1.05
+				ROOT = { opinion = { who = FROMFROM value = 75 } }
+			}
+			modifier = {
+				factor = 1.05
+				ROOT = { opinion = { who = FROMFROM value = 100 } }
+			}
+			modifier = {
+				factor = 2
+				ROOT = {
+					is_close_relative = FROMFROM
+				}
+			}
+			modifier = {
+				factor = 2
+				ROOT = {
+					is_friend = FROMFROM
+				}
+			}
+			modifier = {
+				factor = 2
+				ROOT = {
+					is_lover = FROMFROM
+				}
+			}
+			modifier = {
+				factor = 0
+				ROOT = {
+					is_foe = FROMFROM
+				}
+			}
+			modifier = {
+				factor = 0.05
+				is_close_relative = FROM
+			}
+			modifier = {
+				factor = 0.05
+				is_friend = FROM
+			}
+			modifier = {
+				factor = 0
+				is_lover = FROM
+			}
+			modifier = {
+				factor = 0
+				is_foe = FROM
+			}
+			modifier = {
+				factor = 0.1
+				FROM = { is_councillor = yes }
+			}
+			modifier = {
+				factor = 0.1
+				FROM = { has_minor_title = title_commander }
+			}
+		}
+	}
+	
+	option = {
+		name = DECLINE
+		
+		ai_chance = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.05
+				trait = greedy
+			}
+			modifier = {
+				factor = 1.05
+				trait = envious
+			}
+			modifier = {
+				factor = 1.05
+				trait = lustful
+			}
+			modifier = {
+				factor = 1.05
+				trait = slothful
+			}
+			modifier = {
+				factor = 1.05
+				trait = ambitious
+			}
+			modifier = {
+				factor = 1.05
+				trait = dishonorable
+			}
+			modifier = {
+				factor = 1.05
+				trait = selfish
+			}
+			modifier = {
+				factor = 1.05
+				trait = hedonist
+			}
+			modifier = {
+				factor = 1.05
+				trait = gluttonous
+			}
+			modifier = {
+				factor = 1.05
+				trait = wroth
+			}
+			modifier = {
+				factor = 1.05
+				trait = cruel
+			}
+			modifier = {
+				factor = 1.05
+				trait = cynical
+			}
+			modifier = {
+				factor = 1.05
+				trait = ruthless
+			}
+			modifier = {
+				factor = 1.05
+				trait = arbitrary
+			}
+			modifier = {
+				factor = 2
+				trait = tyrant
+			}
+		}
+	}
+}
+
+character_event = { #Character Trace
+	id = GRD.6
+	
+	is_triggered_only = yes
+	
+	hide_window = yes
+	
+	immediate = {
+		FROMFROMFROM = { character_event = { id = GRD.7 } }
+	}
+}
+
+character_event = { #Guard Chosen
+	id = GRD.7
+	title = "EVTTITLE_GRD.7"
+	desc = {
+		text = EVTDESC_GRD.7A #EMPEROR
+		trigger = {
+			has_landed_title = k_confucian
+		}
+	}
+	desc = {
+		text = EVTDESC_GRD.7B #REGENT
+		trigger = { NOT = { has_landed_title = k_confucian } }
+	}
+	picture = "GFX_evt_bodyguard"
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ACCEPT
+		
+		hidden_tooltip = {
+			k_confucian = {
+				holder_scope = {
+					FROM = {
+						set_character_flag = guard_chosen
+						move_character = PREV
+						give_minor_title = title_bodyguard
+						prestige = 10
+					}
+					opinion = {
+						modifier = opinion_service_rendered
+						who = FROM
+						years = 3
+					}
+				}
+			}
+		}
+		FROMFROM = {
+			prestige = 25
+			piety = 15
+		}
+		
+		ai_chance = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.05
+				FROM = { trait = fair }
+			}
+			modifier = {
+				factor = 1.05
+				FROM = { trait = tall }
+			}
+			modifier = {
+				factor = 1.05
+				FROM = { trait = robust }
+			}
+			modifier = {
+				factor = 1.05
+				FROM = { trait = strong }
+			}
+			modifier = {
+				factor = 1.05
+				FROM = { trait = shrewd }
+			}
+			modifier = {
+				factor = 1.05
+				FROM = { trait = quick }
+			}
+			modifier = {
+				factor = 1.05
+				FROM = { trait = genius }
+			}
+			modifier = {
+				factor = 1.05
+				FROM = { trait = honorable }
+			}
+			modifier = {
+				factor = 1.05
+				FROM = { trait = celibate }
+			}
+			modifier = {
+				factor = 1.05
+				FROM = { trait = chaste }
+			}
+			modifier = {
+				factor = 1.05
+				FROM = { trait = humble }
+			}
+			modifier = {
+				factor = 1.05
+				FROM = { trait = chivalrous }
+			}
+			modifier = {
+				factor = 1.05
+				FROM = { trait = just }
+			}
+			modifier = {
+				factor = 1.05
+				FROM = { trait = content }
+			}
+			modifier = {
+				factor = 1.05
+				FROM = { trait = patient }
+			}
+			modifier = {
+				factor = 1.05
+				FROM = { trait = diligent }
+			}
+			modifier = {
+				factor = 1.05
+				FROM = { trait = temperate }
+			}
+			modifier = {
+				factor = 2
+				FROM = { prestige = 500 }
+			}
+			modifier = {
+				factor = 2
+				FROM = { piety = 1000 }
+			}
+			modifier = {
+				factor = 1.05
+				FROM = { NOT = { dynasty = none } }
+			}
+		}
+	}
+	
+	option = {
+		name = DECLINE
+		
+		hidden_tooltip = {
+			k_confucian = {
+				holder_scope = {
+					opinion = {
+						modifier = opinion_pleased
+						who = FROM
+						years = 3
+					}
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 1
+			
+			modifier = {
+				factor = 1.05
+				FROM = { trait = weak }
+			}
+			modifier = {
+				factor = 1.05
+				FROM = { trait = slow }
+			}
+			modifier = {
+				factor = 1.05
+				FROM = { trait = dwarf }
+			}
+			modifier = {
+				factor = 1.05
+				FROM = { trait = ugly }
+			}
+			modifier = {
+				factor = 1.05
+				FROM = { trait = dull }
+			}
+			modifier = {
+				factor = 1.05
+				FROM = { trait = feeble }
+			}
+			modifier = {
+				factor = 1.05
+				FROM = { trait = craven }
+			}
+			modifier = {
+				factor = 1.05
+				FROM = { trait = greedy }
+			}
+			modifier = {
+				factor = 1.05
+				FROM = { trait = envious }
+			}
+			modifier = {
+				factor = 1.05
+				FROM = { trait = lustful }
+			}
+			modifier = {
+				factor = 1.05
+				FROM = { trait = slothful }
+			}
+			modifier = {
+				factor = 1.05
+				FROM = { trait = ambitious }
+			}
+			modifier = {
+				factor = 1.05
+				FROM = { trait = deceitful }
+			}
+			modifier = {
+				factor = 1.05
+				FROM = { trait = dishonorable }
+			}
+			modifier = {
+				factor = 1.05
+				FROM = { trait = selfish }
+			}
+			modifier = {
+				factor = 1.05
+				FROM = { trait = hedonist }
+			}
+			modifier = {
+				factor = 1.05
+				FROM = { trait = gluttonous }
+			}
+			modifier = {
+				factor = 1.05
+				FROM = { trait = wroth }
+			}
+			modifier = {
+				factor = 1.05
+				FROM = { trait = cruel }
+			}
+			modifier = {
+				factor = 1.05
+				FROM = { trait = cynical }
+			}
+			modifier = {
+				factor = 1.05
+				FROM = { trait = ruthless }
+			}
+			modifier = {
+				factor = 1.05
+				FROM = { trait = arbitrary }
+			}
+		}
+	}
+}
+
+character_event = { #Guard Chosen
+	id = GRD.8
+	title = "EVTTITLE_GRD.8"
+	desc = "EVTDESC_GRD.8"
+	picture = "GFX_evt_bodyguard"
+	
+	trigger = {
+		capital_scope = { region = world_china }
+		has_landed_title = k_confucian
+		is_title_active = c_guard
+		c_guard = {
+			holder_scope = {
+				de_facto_liege = ROOT
+				NOT = { has_character_flag = guard_chosen }
+			}
+		}
+		any_courtier = {
+			has_character_flag = guard_chosen
+			NOT = { has_character_flag = guard_skip }
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	immediate = {
+		random_courtier = {
+			limit = {
+				has_character_flag = guard_chosen
+				NOT = { has_character_flag = guard_capt }
+				NOT = { has_character_flag = guard_skip }
+			}
+			set_character_flag = guard_capt
+		}
+	}
+	
+	option = {
+		name = ACCEPT
+		
+		hidden_tooltip = {
+			any_courtier = {
+				limit = { has_character_flag = guard_skip }
+				clr_character_flag = guard_skip
+			}
+		}
+		
+		random_courtier = {
+			limit = { has_character_flag = guard_capt }
+			hidden_tooltip = { clr_character_flag = guard_capt }
+			c_guard = {
+				holder_scope = {
+					abdicate_to = PREVPREV
+					remove_claim = c_guard
+				}
+			}
+			opinion = {
+				modifier = opinion_ennobled
+				who = ROOT
+			}
+		}
+	}
+	
+	option = {
+		name = DECLINE
+		
+		hidden_tooltip = {
+			random_courtier = {
+				limit = { has_character_flag = guard_capt }
+				clr_character_flag = guard_capt
+				set_character_flag = guard_skip
+			}
+		}
+	}
+}

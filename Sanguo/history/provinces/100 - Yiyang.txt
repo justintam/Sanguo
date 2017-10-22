@@ -1,0 +1,19 @@
+# c_yiyang
+
+# County Title
+title = c_yiyang
+
+# Settlements
+max_settlements = 5
+
+b_yiyang = castle
+b_tantai = city
+#b_jingre = temple
+#b_kaodi = castle
+#b_fengfeng = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

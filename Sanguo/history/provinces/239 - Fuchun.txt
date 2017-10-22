@@ -1,0 +1,21 @@
+# c_fuchun
+
+# County Title
+title = c_fuchun
+
+# Settlements
+max_settlements = 4
+
+b_fuchun = castle
+b_hutou = tribal
+#b_mudu = city
+#b_kunshan = city
+
+# Misc
+culture = shanyue
+religion = animist
+
+#History
+204.1.1={
+	b_mudu = city
+}

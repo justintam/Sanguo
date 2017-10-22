@@ -1,0 +1,18 @@
+# c_lianju
+
+# County Title
+title = c_lianju
+
+# Settlements
+max_settlements = 4
+
+b_lianju = castle
+#b_lianzhou = city
+#b_caizi = temple
+#b_dexing = city
+
+# Misc
+culture = qiang
+religion = baishi
+
+#History

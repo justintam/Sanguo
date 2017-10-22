@@ -1,0 +1,24 @@
+# c_xianyang
+
+# County Title
+title = c_xianyang
+
+# Settlements
+max_settlements = 4
+
+b_xianyang = tribal
+#b_sanyuan = city
+#b_xianwu = temple
+#b_xiangcai = castle
+
+# Misc
+culture = xiongnu
+religion = tengri_pagan
+
+#History
+194.1.1={
+	b_sanyuan = city
+}
+204.1.1={
+	b_xianwu = temple
+}

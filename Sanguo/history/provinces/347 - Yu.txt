@@ -1,0 +1,19 @@
+# c_yu
+
+# County Title
+title = c_yu
+
+# Settlements
+max_settlements = 5
+
+b_yu = castle
+b_luncheng = city
+b_tongting = city
+#b_yulixia = castle
+#b_yufudi = city
+
+# Misc
+culture = han
+religion = taiping
+
+#History

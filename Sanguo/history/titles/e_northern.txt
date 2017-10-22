@@ -1,0 +1,5 @@
+# e_northern
+1.1.1={
+#	historical_nomad = yes
+	active=no
+}

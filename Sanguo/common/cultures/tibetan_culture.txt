@@ -1,0 +1,142 @@
+tibetan = {
+		graphical_cultures = { tibetangfx easterngfx }
+	
+	di = {
+		graphical_cultures = { tibetangfx easterngfx }
+		
+		color = { 0.5 0.1 0.7 }
+		
+		male_names = {
+			Agui Ai Aiping An
+			Ba Ban Bao Baochi Baohe Baozong Bi Bie Bixie
+			Chang Chao Chi Chier Chong Chongzu Chu Chuan
+			Chun Cuan
+			Da Dan Dang De Deng Deshi Di Dianyu Dianwu
+			Diao Ding Doumao Du Duan Duo
+			Er
+			Fa Fan Fang Fei Feilong Feng Fu
+			Gao Gong Guang Guangxiang Gui Guili Guo
+			He Heng Hong Hou Houqi Houzhu Huang Huangmei
+			Hui
+			Ji Jia Jian Jiankang Jin Jing Jingming Jingwu
+			Jiong Jishi Ju Jun
+			Kun
+			Lao Lei Leng Li Lin Ling Liu Long Lou Luo
+			Mao Maosou Maren Meng Mengsun Midang Ming
+			Nan Nanda Nandang Nandi Ning
+			Pi Ping Po Polou
+			Qi Qian Qiang Qiangduan Qianwan Qing Qiu
+			Qizhongliu
+			Rong Rui Ruo Ruoer
+			Seng Sengsi Shang Shangshu Shao Shaoxian
+			Shen Sheng Shi Shiwen Shiyun Shou Shu Shuang
+			Shuanghu Shuo Si Siming Sou Sun
+			Te Teng Tong
+			Wan Wannian Wei Wen Wende Wendu Wenhong Wu
+			Xi Xia Xian Xiang Xie Xiong Xuan Xuanzhao
+			Yan Yangpu Yi Yin Yiwu Yong Yongji You
+			Yuan Yuanhe Yue
+			Zhang Zhaowen Zheng Zhi Zhihui Zhu Ziren
+			Zong Zu Zuan Zun
+		}
+		female_names = {
+			Ai
+			De Dong Dongping
+			Fu
+			Gou
+			Jiang
+			Li Liang Luo
+			Mao Ming Mingde
+			Ping
+			Qiang
+			Ran Ren
+			Shi Shu Shun Shunyang
+			Wei
+			Xun Xunying
+			Yan Yang Yin Ying
+			Zan Zhang
+		}
+		
+		from_dynasty_prefix = "of "
+		founder_named_dynasties = no
+		
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+		pat_grf_name_chance = 35
+		mat_grf_name_chance = 15
+		father_name_chance = 25
+		
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+		pat_grm_name_chance = 35
+		mat_grm_name_chance = 15
+		mother_name_chance = 25
+
+		modifier = default_culture_modifier
+	}
+	qiang = {
+		graphical_cultures = { tibetangfx easterngfx }
+		
+		horde = yes
+		
+		color = { 0.4 0.4 0.9 }
+		
+		male_names = {
+			Ang Anwei
+			Bi Bo Boduo Boyu Buqiao
+			Caotou Chang Chao Cheliji Chen Chong Cuan
+			Dai Damu Dang Danger Deng Dian Dianan Dianlian
+			Dianliang Dianwu Dianyu Diaohe Diaoku Dingxi
+			Dongan Donghao Dongyu Duo
+			Ehe Eheshoage Er Ezhesai
+			Feilong Feng Fenghe Fengjian Fengshi Fo Fonian
+			Fu
+			Geng Genger Guo Guoer
+			Haoduo Haofeng Haoliang Haowu Haoyu He Hong
+			Huang Huangdi Huangmei Hui
+			Jian Jiangong Jiechang Jiwu Jizhi
+			Kewu Ku Kui
+			Langfeng Langhe Langmo Leizu Lian Lianchang
+			Liang Loudeng Luhu Luo Luosheng
+			Ma Manu Mi Midang Midanger Mitang Miwang Miwu
+			Miyu Mobie
+			Nali Nian Nu
+			Pi Pu
+			Qianwang Quanrong
+			Ren Renliang Rong
+			Shao Sheng Shi Shuode Sui
+			Teng Tianwu Tianyu Tiaohe
+			Wang
+			Xi Xian Xiang Xigu Xiku Xing Xinian Xu Xuan
+			Yadan Yan Yangfeng Yanghe Yangyu Yi Yin Yizhong Yong Yu
+			Yuanjian Yueji Yugui
+			Zhi Zhouma
+		}
+		female_names = {
+			An
+			Bi Bique Bitong Bitongqian
+			Ji
+			Li
+			Nan Nanan
+			Ping
+			Qi Qian Que
+			She Sun
+			Tong
+			Xi Xiping
+			Zhang
+		}
+		
+		from_dynasty_prefix = "of "
+		founder_named_dynasties = no
+		
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+		pat_grf_name_chance = 35
+		mat_grf_name_chance = 15
+		father_name_chance = 25
+		
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+		pat_grm_name_chance = 35
+		mat_grm_name_chance = 15
+		mother_name_chance = 25
+
+		modifier = qiang_culture_modifier
+	}
+}

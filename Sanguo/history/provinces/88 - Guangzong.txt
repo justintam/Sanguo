@@ -1,0 +1,25 @@
+# c_guangzong
+
+# County Title
+title = c_guangzong
+
+# Settlements
+max_settlements = 5
+
+b_guangzong = castle
+#b_huzhong = city
+#b_yantuan = city
+#b_yanting = castle
+#b_tiankou = city
+
+# Misc
+culture = han
+religion = taiping
+
+#History
+194.1.1={
+	b_huzhong = city
+}
+210.1.1={
+	b_yantuan = city
+}

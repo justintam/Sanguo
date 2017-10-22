@@ -1,0 +1,18 @@
+# c_ruo
+
+# County Title
+title = c_ruo
+
+# Settlements
+max_settlements = 4
+
+b_ruo = castle
+b_lankojou = city
+#b_changbo = temple
+#b_nincheng = castle
+
+# Misc
+culture = bandunman
+religion = baihu
+
+#History

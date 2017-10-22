@@ -1,0 +1,493 @@
+province;red;green;blue;x;x
+1;245;253;100;Henan;x
+2;248;255;108;Fanshui;x
+3;233;255;111;Hulao;x
+4;247;237;111;Qiguan;x
+5;247;240;121;Shenchi;x
+6;225;223;121;Yongning;x
+7;215;204;0;Hongnong;x
+8;215;184;0;Hanguguan;x
+9;215;204;48;Lushi;x
+10;245;200;107;Anyi;x
+11;245;200;119;Dongyuan;x
+12;245;205;133;Pishi;x
+13;245;209;125;Wenxi;x
+14;245;215;107;Yang;x
+15;213;168;13;Huai;x
+16;213;180;22;Chaoge;x
+17;213;158;20;Liyang;x
+18;213;178;0;Shanyangyi;x
+19;200;162;18;Yanjing;x
+20;255;242;0;Changan;x
+21;255;242;41;Baling;x
+22;255;255;31;Duling;x
+23;255;255;22;Lantian;x
+24;255;248;15;Xinping;x
+25;255;248;98;Youfufeng;x
+26;255;255;144;Chencang;x
+27;255;255;128;Wuzhang;x
+28;242;196;66;Zuopingyi;x
+29;242;196;34;Wannian;x
+30;181;107;47;Jinyang;x
+31;121;97;27;Jiexu;x
+32;151;87;7;Yangyi;x
+33;151;97;47;Zhongdu;x
+34;241;214;88;Dingxiang;x
+35;211;194;88;Tongguo;x
+36;231;184;88;Zhongling;x
+37;199;134;95;Shang;x
+38;199;134;75;Fushi;x
+39;215;134;75;Zhenlin;x
+40;137;115;56;Shangdang;x
+41;137;115;86;Gaodou;x
+42;137;85;56;Zhan;x
+43;185;144;87;Shuofang;x
+44;175;112;87;Dacheng;x
+45;185;122;87;Sanfeng;x
+46;179;133;56;Wuyuan;x
+47;179;129;26;Jiuyuan;x
+48;190;111;36;Xianyang;x
+49;234;172;151;Xihe;x
+50;213;202;151;Gaolang;x
+51;213;172;151;Meiji;x
+52;167;105;31;Pingcheng;x
+53;167;97;36;Guangwu;x
+54;167;75;31;Mayi;x
+55;238;136;94;Yunzhong;x
+56;204;118;94;Dingxiangyun;x
+57;225;136;94;Shaling;x
+58;190;65;180;Anping;x
+59;144;45;180;Fucheng;x
+60;144;55;176;Nangong;x
+61;134;55;166;Tangyang;x
+62;175;57;170;Wusui;x
+63;167;50;180;Xindou;x
+64;163;67;155;Qinghe;x
+65;146;67;170;Beiqiu;x
+66;146;57;255;Dongwucheng;x
+67;146;57;210;Ganling;x
+68;163;73;164;Yimu;x
+69;183;70;238;Bohai;x
+70;167;67;242;Chonghe;x
+71;162;78;248;Fuyangsi;x
+72;144;78;248;Gaocheng;x
+73;156;94;248;Nanpi;x
+74;150;70;238;Yangxin;x
+75;103;57;104;Zhending;x
+76;103;49;109;Fangzi;x
+77;98;52;112;Jiumen;x
+78;109;42;109;Luancheng;x
+79;92;39;114;Puwu;x
+80;100;45;100;Yuanshi;x
+81;113;27;210;Hejian;x
+82;115;33;200;Gaoyang;x
+83;105;25;220;Mao;x
+84;118;33;180;Shuzhou;x
+85;111;19;210;Yi;x
+86;160;67;170;Julu;x
+87;186;101;186;Guangping;x
+88;192;73;186;Guangzong;x
+89;179;80;190;Nanhe;x
+90;182;97;178;Qiao;x
+91;186;90;210;Xiaquyang;x
+92;169;100;210;Yingtao;x
+93;115;49;115;Wei;x
+94;125;53;125;Chiqiu;x
+95;103;60;103;Qingyuan;x
+96;112;57;112;Sha;x
+97;121;44;125;Ye;x
+98;111;49;111;Yuancheng;x
+99;241;152;209;Handan;x
+100;232;152;222;Yiyang;x
+101;209;152;209;Zhongqiu;x
+102;121;53;122;Zhongshan;x
+103;144;44;144;Anxi;x
+104;119;51;150;Beiping;x
+105;181;53;122;Shangquyang;x
+106;139;41;150;Xinshi;x
+107;136;75;55;Cangwu;x
+108;136;55;55;Longbian;x
+109;136;67;55;Leilou;x
+110;136;67;72;Miling;x
+111;141;55;72;Quyang;x
+112;144;63;61;Zhugou;x
+113;136;44;15;Hepu;x
+114;136;57;25;Anguan;x
+115;136;25;55;Xupu;x
+116;136;0;21;Panyu;x
+117;136;55;35;Zhuwu;x
+118;136;21;35;Bushan;x
+119;231;131;104;Wan;x
+120;255;130;98;Xinye;x
+121;244;125;94;Shunyang;x
+122;251;132;96;Luyang;x
+123;232;132;98;Sui;x
+124;234;136;108;Fuyang;x
+125;255;183;132;Changsha;x
+126;255;185;122;Anfu;x
+127;255;191;110;Hanshou;x
+128;255;211;115;Baqiu;x
+129;255;184;112;Xiangtan;x
+130;255;203;132;Youxian;x
+131;255;121;39;Guiyang;x
+132;255;127;39;Leiyang;x
+133;251;171;38;Jingling;x
+134;251;184;42;Nanxinshi;x
+135;251;184;55;Shaxian;x
+136;251;174;56;Chibi;x
+137;251;181;31;Xiakou;x
+138;155;90;0;Lingling;x
+139;155;108;25;Guiling;x
+140;161;99;15;Hengyang;x
+141;142;82;22;Yingdao;x
+142;150;81;11;Zhaoling;x
+143;160;90;40;Zhenyang;x
+144;216;86;0;Jiangling;x
+145;185;75;5;Fanjing;x
+146;208;88;5;Ruo;x
+147;196;79;0;Xiangyang;x
+148;255;175;68;Wuling;x
+149;251;161;68;Gongan;x
+150;251;125;25;Wuxi;x
+151;136;201;29;Tianshui;x
+152;116;189;29;Shangfanggu;x
+153;116;211;29;Yicheng;x
+154;137;157;21;Anding;x
+155;161;161;29;Beidi;x
+156;161;141;33;Chidi;x
+157;159;152;19;Baidi;x
+158;109;200;9;Dunhuang;x
+159;198;237;133;Jincheng;x
+160;198;217;113;Linqiang;x
+161;198;217;133;Xiping;x
+162;227;244;19;Jiuquan;x
+163;156;201;22;Lintao;x
+164;126;201;22;Beiyuan;x
+165;121;155;17;Wudu;x
+166;121;125;13;Xiabian;x
+167;189;224;46;Wuwei;x
+168;157;224;46;Longyou;x
+169;189;234;66;Lianju;x
+170;182;196;55;Juyan;x
+171;137;244;19;Xihai;x
+172;106;188;23;Zhangye;x
+173;106;155;23;Xijun;x
+174;111;226;57;Beihai;x
+175;112;208;44;Chunyu;x
+176;105;220;60;Duchang;x
+177;118;232;52;Pingchang;x
+178;99;211;49;Pingshou;x
+179;111;221;68;Xiami;x
+180;21;51;9;Donglai;x
+181;166;244;124;Jinan;x
+182;167;222;124;Dongpingling;x
+183;157;233;124;Licheng;x
+184;75;180;43;Lean;x
+185;69;171;31;Bocheng;x
+186;82;194;33;Pingyuan;x
+187;82;214;33;Zhoua;x
+188;45;105;18;Qi;x
+189;255;83;225;Pengcheng;x
+190;255;93;206;Guangqi;x
+191;255;72;240;Peifeng;x
+192;191;0;57;Donghai;x
+193;191;51;57;Jiqiu;x
+194;191;20;57;Lanling;x
+195;180;30;57;Qu;x
+196;176;0;57;Yinping;x
+197;255;55;120;Jiangdu;x
+198;185;0;153;Langye;x
+199;210;0;144;Ju;x
+200;195;0;165;Yangdu;x
+201;180;0;123;Zeng;x
+202;255;194;191;Xiapi;x
+203;255;174;201;Xiaqiu;x
+204;219;118;51;Chenliu;x
+205;219;108;61;Changyuan;x
+206;219;98;71;Jiyu;x
+207;219;88;81;Pingqiu;x
+208;219;78;101;Xiangyi;x
+209;219;84;105;Yongqiu;x
+210;231;159;112;Dongwuyang;x
+211;231;171;110;Dunqiu;x
+212;231;173;100;Fanyan;x
+213;231;179;105;Puyang;x
+214;231;182;100;Weigong;x
+215;231;166;124;Yan;x
+216;193;128;38;Zhang;x
+217;193;148;38;Shouzhang;x
+218;194;98;27;Jibei;x
+219;194;118;27;Lu;x
+220;194;98;47;Sheqiu;x
+221;134;68;23;Chengwu;x
+222;134;82;23;Dingtao;x
+223;134;68;51;Juancheng;x
+224;134;77;33;Linqiu;x
+225;242;205;181;Rencheng;x
+226;227;189;115;Changyi;x
+227;227;167;115;Fangyu;x
+228;227;174;111;Gaoping;x
+229;227;180;115;Nanpingyang;x
+230;231;132;84;Bo;x
+231;231;161;84;Fei;x
+232;231;155;84;Liangfu;x
+233;231;147;84;Nanwuyang;x
+234;210;37;27;Jianye;x
+235;210;7;37;Danyang;x
+236;210;27;44;Jingxian;x
+237;210;17;27;Shicheng;x
+238;106;25;14;Wu;x
+239;106;9;25;Fuchun;x
+240;106;15;31;Jiaxing;x
+241;106;22;1;Qiantang;x
+242;106;9;14;Wucheng;x
+243;241;90;82;Shouchun;x
+244;241;73;82;Xiacai;x
+245;241;80;90;Yutai;x
+246;231;29;49;Kuaiji;x
+247;231;29;59;Wenzhou;x
+248;243;141;152;Lujiang;x
+249;243;161;152;Hefei;x
+250;243;161;141;Juchao;x
+251;243;155;148;Shulu;x
+252;242;100;111;Nanchang;x
+253;242;115;91;Poyang;x
+254;242;108;101;Luling;x
+255;242;94;101;Linchuang;x
+256;242;111;101;Nankang;x
+257;80;190;80;Chengdu;x
+258;91;190;80;Deyang;x
+259;100;190;80;Fanshu;x
+260;91;190;90;Jiangyuan;x
+261;100;190;100;Linqiong;x
+262;77;190;91;Pi;x
+263;85;190;89;Qingcheng;x
+264;90;150;66;Jiangzhou;x
+265;80;150;80;Dianjiang;x
+266;70;150;66;Linjiang;x
+267;75;150;78;Langzhong;x
+268;92;150;71;Yongan;x
+269;80;150;66;Zhi;x
+270;56;190;25;Guanghan;x
+271;45;190;15;Mianzhu;x
+272;66;190;33;Xindu;x
+273;66;190;15;Yangquan;x
+274;122;212;107;Zitong;x
+275;122;192;107;Baishui;x
+276;65;145;53;Hanzhong;x
+277;65;121;53;Chenggu;x
+278;45;170;15;Wuyang;x
+279;35;167;15;Bodao;x
+280;35;195;15;Nanan;x
+281;66;167;15;Shuyong;x
+282;151;225;139;Dianchi;x
+283;151;180;139;Cun;x
+284;151;195;139;Jianning;x
+285;151;205;139;Yuyuan;x
+286;80;115;19;Buwei;x
+287;72;115;22;Ailao;x
+288;75;115;33;Bisu;x
+289;68;115;8;Bonan;x
+290;80;115;35;Nanfu;x
+291;80;115;5;Suitang;x
+292;65;115;19;Yongshou;x
+293;15;115;5;Anshang;x
+294;15;115;25;Beishui;x
+295;5;115;33;Huiwu;x
+296;25;115;15;Qiongdu;x
+297;35;167;45;Tanzhi;x
+298;35;140;61;Qielan;x
+299;35;155;61;Wulian;x
+300;35;140;45;Yelang;x
+301;35;240;45;Zhuti;x
+302;1;250;25;Nanchangzhu;x
+303;28;79;144;Guangyang;x
+304;28;88;133;Changping;x
+305;28;85;111;Ji;x
+306;28;79;121;Jundu;x
+307;111;126;217;Zhuo;x
+308;125;126;217;Beixincheng;x
+309;111;144;217;Fanyang;x
+310;133;133;217;Guan;x
+311;100;130;217;Qiu;x
+312;111;105;217;Wanchengzhuo;x
+313;67;88;205;Dai;x
+314;67;88;215;Beipingyi;x
+315;67;105;215;Pingshu;x
+316;67;85;225;Sanggan;x
+317;194;146;254;Daifang;x
+318;186;20;194;Lelang;x
+319;247;80;237;Xiangping;x
+320;230;80;237;Liaosui;x
+321;230;60;237;Liaoyong;x
+322;111;70;187;Lingzhi;x
+323;125;70;187;Yangle;x
+324;105;82;187;Haiyang;x
+325;100;74;187;Linyu;x
+326;31;44;118;Shanggu;x
+327;238;139;243;Xuantu;x
+328;200;191;231;Youbeiping;x
+329;211;191;231;Tuyin;x
+330;141;144;205;Fanyangji;x
+331;141;122;205;Wuzhong;x
+332;141;102;205;Yuyuang;x
+333;209;192;238;Pingyu;x
+334;209;192;200;Anyang;x
+335;209;192;220;Chengfu;x
+336;195;192;238;Shansang;x
+337;220;192;238;Xincai;x
+338;200;192;240;Xipingru;x
+339;189;192;238;Yangan;x
+340;23;27;99;Chenguo;x
+341;23;50;99;Ku;x
+342;23;27;89;Xinpingchen;x
+343;70;86;204;Liangguo;x
+344;55;86;204;Ningling;x
+345;60;80;204;Gexiang;x
+346;75;70;204;Suiyang;x
+347;64;74;204;Yu;x
+348;62;138;160;Luguo;x
+349;48;155;160;Bian;x
+350;48;138;160;Feng;x
+351;37;66;146;Peiguo;x
+352;66;50;146;Qipei;x
+353;37;43;146;Xiao;x
+354;155;160;224;Xuchang;x
+355;122;160;224;Dingling;x
+356;122;122;224;Changshe;x
+357;171;143;224;Lunshi;x
+358;155;143;224;Yangcheng;x
+359;171;120;224;Yangdi;x
+360;137;143;224;Yingyang;x
+361;162;16;169;Qinghaixi;x
+362;162;46;169;Qinghaidong;x
+363;138;96;196;Turpan;x
+364;129;129;18;Murong;x
+365;129;165;18;Kezui;x
+366;129;189;18;Queju;x
+367;172;172;72;Luoluo;x
+368;172;129;72;Tuiyan;x
+369;172;154;72;Yanliyou;x
+370;184;164;84;Mijia;x
+371;184;214;84;Queji;x
+372;184;184;84;Suli;x
+373;168;188;62;Xiongnudong;x
+374;129;188;62;Xiongnuxi;x
+375;129;165;62;Wuhuandong;x
+376;144;188;62;Wuhuanxi;x
+377;134;98;161;Goguryeo;x
+378;97;2;213;Dongye;x
+379;58;129;227;Baekje;x
+380;28;56;227;Mahan;x
+381;124;43;193;Buyeo;x
+382;124;43;133;Dongbuyeo;x
+383;110;108;227;Byeonhan;x
+384;136;29;194;Okjeo;x
+385;185;38;130;Bukokjeo;x
+386;46;78;227;Jinhan;x
+387;72;27;227;Namye;x
+388;17;142;155;Yellow River;x
+389;17;167;155;Yellow River 2;x
+390;17;122;155;Yellow River 3;x
+391;17;166;155;Yellow River 4;x
+392;17;133;155;Yellow River 5;x
+393;17;161;155;Yellow River 6;x
+394;17;156;155;Yellow River 7;x
+395;17;115;155;Yellow River 8;x
+396;17;148;155;Yangtze River;x
+397;17;116;155;Yangtze River 2;x
+398;17;157;155;Yangtze River 3;x
+399;17;109;155;Yangtze River 4;x
+400;17;89;155;Dongting Lake;x
+401;17;87;155;Qinghai Lake;x
+402;17;85;155;Nansi Lake;x
+403;17;83;155;Luoma Lake;x
+404;17;81;155;Hongze Lake;x
+405;17;79;155;Chao Lake;x
+406;17;77;155;Shijiu Lake;x
+407;17;75;155;Nan Lake;x
+408;17;73;155;Changdang Lake;x
+409;17;71;155;Ge Lake;x
+410;17;69;155;Tai Lake;x
+411;17;67;155;Yangcheng Lake;x
+412;17;65;155;Dongping Lake;x
+413;17;63;155;Har Lake;x
+414;17;61;155;Hong Lake;x
+415;17;59;155;Dong Lake;x
+416;17;57;155;Zhangdu Lake;x
+417;17;55;155;Wu Lake;x
+418;17;53;155;Ulansu Lake;x
+419;17;51;155;Dalinur Lake;x
+420;17;49;155;Shenjin Lake;x
+421;17;47;155;Songhua Lake;x
+422;17;45;155;Qingcao Lake;x
+423;17;43;155;Xiliang Lake;x
+424;17;41;155;Liangzi Lake;x
+425;17;39;155;Lu Lake;x
+426;17;37;155;Baoan Lake;x
+427;17;35;155;Wusi Lake;x
+428;17;33;155;Huama Lake;x
+429;17;31;155;Daye Lake;x
+430;17;29;155;Wabu Lake;x
+431;17;27;155;Cheng Lake;x
+432;17;25;155;Gyaring Lake;x
+433;17;23;155;Ngoring Lake;x
+434;17;21;155;Donggei Lake;x
+435;17;121;121;Liaodong Bay;x
+436;79;185;236;Bohai Bay;x
+437;17;141;141;Northern Bohai;x
+438;17;145;145;Western Bohai;x
+439;17;151;151;Southern Bohai;x
+440;17;155;155;Eastern Bohai;x
+441;17;161;161;Taozi Bay;x
+442;17;165;165;Zhuanghe Bay;x
+443;17;149;149;Xiaoyao Bay;x
+444;17;159;159;Haiyang Bay;x
+445;17;139;139;Rongcheng Bay;x
+446;17;171;171;Sanggou Bay;x
+447;17;181;181;Xiaodou Bay;x
+448;17;185;185;Shenshan Bay;x
+449;17;129;129;Ondong Bay;x
+450;17;119;119;Ongjingun Bay;x
+451;17;125;125;Sindun Bay;x
+452;156;134;235;Manchurian Bay;x
+453;156;156;235;East Sea;x
+454;156;125;235;Tsushima Strait;x
+455;135;141;227;Korean Strait;x
+456;135;147;191;Jeju Coast;x
+457;17;191;191;Hangzhou Bay;x
+458;17;199;199;Moupan Sea;x
+459;17;205;205;Dinghai Bay;x
+460;17;211;211;Zhenhai Bay;x
+461;104;107;207;Bashi Channel;x
+462;104;207;177;Daoyu Channel;x
+463;17;122;192;Haimen Bay;x
+464;17;142;202;Daya Bay;x
+465;17;117;217;Shenzhen Bay;x
+466;17;215;215;Jinxing Bay;x
+467;17;197;197;Bohe Bay;x
+468;17;167;167;Qiongzhou Bay;x
+469;17;147;167;Beibu Gulf;x
+470;17;167;147;Qinzhou Bay;x
+471;17;177;197;Ha Long Bay;x
+472;17;197;157;Jiuzhen Coast;x
+473;17;157;197;Rinan Coast;x
+474;135;147;227;Tonkin Gulf;x
+475;135;166;248;East China Sea;x
+476;95;175;224;Northern Bay;x
+477;117;116;213;South China Sea;x
+478;74;116;213;Southeast China Sea;x
+479;104;225;225;Taiwan Strait;x
+480;111;207;194;Northern Yellow Sea;x
+481;156;207;194;Yellow Sea;x
+482;156;207;222;Southern Yellow Sea;x
+483;45;61;61;Northern Steppes;x
+484;44;58;58;Gobi Desert;x
+485;34;58;58;Tibetan Plateau;x
+486;15;25;40;Southern Jungles;x
+487;54;78;78;Jeju Island;x
+488;67;42;42;Tsushima Island;x
+489;69;35;35;Taiwan;x
+490;17;35;35;Penghu Island;x
+491;15;55;41;Hainan Island;x
+492;44;52;52;Huangtu Plateau;x

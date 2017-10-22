@@ -1,0 +1,25 @@
+name = "Battle of Chibi"
+
+casus_belli={
+	actor=400
+	recipient=509
+	casus_belli=seize
+	landed_title=d_danyang
+	date=208.10.1
+}
+
+208.10.1 = {
+	add_defender = 509 #Sun Quan
+	add_defender = 52 #Liu Qi
+	add_defender = 600 #Liu Bei
+	add_attacker = 400 #Cao Cao
+}
+
+209.1.1={
+	rem_defender = 600 #Liu Bei
+	rem_defender = 52 #Liu Qi
+	rem_defender = 509 #Sun Quan
+	rem_attacker = 400 #Cao Cao
+}
+
+   

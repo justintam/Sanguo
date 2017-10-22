@@ -1,0 +1,18 @@
+name = "Lu Bu retakes Yu"
+
+casus_belli={
+	actor=309
+	recipient=600
+	casus_belli=seize
+	landed_title=k_yu
+	date=197.1.1
+}
+
+197.1.1 = {
+	add_defender = 600 #Liu Bei
+	add_attacker = 309 #Lu Bu
+}
+197.3.1={
+	rem_defender = 600 #Liu Bei
+	rem_attacker = 309 #Lu Bu
+}

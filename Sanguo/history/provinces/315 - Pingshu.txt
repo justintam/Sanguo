@@ -1,0 +1,18 @@
+# c_pingshu
+
+# County Title
+title = c_pingshu
+
+# Settlements
+max_settlements = 4
+
+b_pingshu = castle
+b_liuqiuxian = tribal
+#b_pingshufu = temple
+#b_wuqiuxian = castle
+
+# Misc
+culture = xiongnu
+religion = tengri_pagan
+
+#History

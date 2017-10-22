@@ -1,0 +1,39 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_shu
+}
+90.1.1={
+	holder=702 #Yuan Jing
+}
+100.1.1={
+	holder=3754 #Cao Shu
+}
+170.1.1={
+	holder=3750 #Gao Gong
+}
+184.1.1={
+	holder=3359 #Gao Shun
+}
+189.1.1={
+	holder=3747 #Gao Jing
+}
+195.1.1={
+	holder=1279 #Zhao Yao
+}
+#200 Wang Shang
+211.1.1={
+	holder=3615 #Xu Jing
+}
+214.1.1={
+	holder=3621 #Fa Zheng
+}
+#Xue Yong, son of Xue Lan
+#Yang Hong?
+#220 Wang Lian
+220.10.1={
+	holder=4113 #Random
+}

@@ -1,0 +1,19 @@
+name = "Yuan Civil War"
+
+casus_belli={
+	actor=48
+	recipient=705
+	casus_belli=invasion
+	landed_title=d_nanyang
+	date=192.8.1
+}
+
+192.8.1 = {
+	add_defender = 705 #Yuan Shu
+	add_attacker = 48 #Liu Biao
+}
+
+193.3.1={
+	rem_defender = 705 #Yuan Shu
+	rem_attacker = 48 #Liu Biao
+}

@@ -1,0 +1,637 @@
+800 = {
+	name="Boyu"
+	dynasty=147
+	religion="confucian"
+	culture="qiang"
+    trait="brilliant_strategist"
+    trait="duel_trained_warrior"
+    trait="brave"
+	160.1.1={
+		birth=yes
+	}
+	184.10.1={
+		religion="folk"
+	}
+	186.8.1={
+		death=yes
+	}
+}
+801 = {
+	name="Wenhou"
+	dynasty=910
+	religion="confucian"
+	culture="han"
+    trait="tough_soldier"
+    trait="duel_trained_warrior"
+    trait="brave"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=800
+	}
+	184.10.1={
+		religion="folk"
+	}
+	186.8.1={
+		death=yes
+	}
+}
+802 = {
+	name="Yan"
+	dynasty=909
+	religion="confucian"
+	culture="han"
+	father=3877
+    trait="tough_soldier"
+    trait="duel_trained_warrior"
+    trait="brave"
+	151.1.1={
+		birth=yes
+	}
+	184.10.1={
+		religion="folk"
+	}
+	189.1.1={
+		death=yes
+	}
+}
+803 = {
+	name="Zhang"
+	dynasty=902
+    diplomacy=6
+    martial=6
+    stewardship=6
+    intrigue=3
+	learning=6
+	religion="confucian"
+	culture="han"
+    trait="skilled_tactician"
+    trait="brave"
+    trait="honest"
+    trait="honorable"
+    trait="content"
+    trait="charitable"
+    trait="kind"
+    trait="depressed"
+	133.1.1={
+		birth=yes
+	}
+	184.11.1={
+		religion="folk"
+	}
+	187.1.1={
+		death=yes
+	}
+}
+804 = {
+	name="Dianyu"
+	dynasty=205
+    diplomacy=6
+    martial=7
+    stewardship=4
+    intrigue=3
+	learning=5
+	religion="baishi"
+	culture="qiang"
+    trait="skilled_tactician"
+    trait="strategist"
+    trait="duel_trained_warrior"
+    trait="brave"
+    trait="honest"
+	trait="charitable"
+    trait="ambitious"
+    trait="zealous"
+	160.1.1={
+		birth=yes
+	}
+	215.1.1={
+		death=yes
+	}
+}
+805 = {
+	name="Guo"
+	dynasty=911
+    diplomacy=8
+    martial=7
+    stewardship=7
+    intrigue=5
+	learning=3
+	religion="confucian"
+	culture="han"
+    trait="brilliant_strategist"
+    trait="strategist"
+    trait="brave"
+    trait="honest"
+	trait="gregarious"
+    trait="ambitious"
+    trait="zealous"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=808
+	}
+	187.1.1={
+		religion="folk"
+	}
+	220.1.1={
+		death=yes
+	}
+}
+806 = {
+	name="Xiangru"
+	dynasty=1661
+	religion="confucian"
+	culture="han"
+    trait="administrator"
+	155.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=114
+	}
+	184.11.1={
+		religion="folk"
+	}
+	215.1.1={
+		death=yes
+	}
+}
+807 = {
+	name="Zhong"
+	dynasty=913
+	religion="confucian"
+	culture="han"
+    trait="administrator"
+	160.1.1={
+		birth=yes
+	}
+	186.1.1={
+		religion="folk"
+		employer=800
+	}
+	189.9.1={
+		death=yes
+	}
+}
+808 = {
+	name="Sui"
+	dynasty=914
+    diplomacy=8
+    martial=8
+    stewardship=8
+    intrigue=7
+	learning=8
+	religion="confucian"
+	culture="han"
+    trait="skilled_tactician"
+    trait="fate_lead"
+    trait="destined"
+    trait="duel_skilled_warrior"
+    trait="strong"
+    trait="ambitious"
+    trait="deceitful"
+    trait="brave"
+    trait="diligent"
+    trait="patient"
+    trait="organizer"
+    trait="cavalry_leader"
+	144.1.1={
+		birth=yes
+	}
+	184.1.1={
+		effect={
+			add_friend=822
+			
+			any_realm_character = {
+				limit = {
+					OR = {
+						character = 822
+					}
+				}
+				opinion = {
+					modifier = opinion_loyalty
+					who = ROOT
+				}
+				reverse_opinion = {
+					modifier = opinion_loyalty
+					who = ROOT
+				}
+			}
+		}
+	}
+	186.5.1={
+		religion="folk"
+	}
+	215.1.1={
+		death=yes
+	}
+}
+809 = {
+	name="Teng"
+	dynasty=10
+    diplomacy=9
+    martial=8
+    stewardship=5
+    intrigue=6
+	learning=7
+	religion="confucian"
+	culture="qiang"
+	father=813
+	mother=814
+    trait="brilliant_strategist"
+    trait="fate_lead"
+    trait="destined"
+    trait="duel_master_warrior"
+    trait="strong"
+    trait="genius"
+    trait="tall"
+    trait="ambitious"
+    trait="kind"
+    trait="brave"
+    trait="diligent"
+    trait="temperate"
+    trait="organizer"
+    trait="cavalry_leader"
+    trait="unyielding_leader"
+	156.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=114 #Zuo Chang
+	}
+	184.12.1={
+		employer=1230 #Song Nie
+	}
+	185.1.1={
+		employer=1231 #Yang Yong
+	}
+	186.1.1={
+		employer=1229 #Geng Bi
+	}
+	187.4.1={
+		religion="folk"
+		employer=806 #Li Xiangru
+	}
+	208.1.1={
+		employer=400 #Cao Cao
+	}
+	212.6.1={
+		death={death_reason=death_execution killer=400}
+	}
+}
+810 = {
+	name="Jian"
+	dynasty=1008
+    diplomacy=9
+    martial=8
+    stewardship=5
+    intrigue=6
+	learning=7
+	religion="confucian"
+	culture="han"
+    trait="brilliant_strategist"
+    trait="strategist"
+    trait="duel_trained_warrior"
+    trait="strong"
+    trait="tall"
+    trait="ambitious"
+    trait="brave"
+    trait="diligent"
+    trait="temperate"
+    trait="organizer"
+    trait="cavalry_leader"
+    trait="unyielding_leader"
+	165.1.1={
+		birth=yes
+	}
+	184.11.1={
+		religion="folk"
+	}
+	214.1.1={
+		death=yes
+	}
+}
+811 = {
+	name="Yan"
+	dynasty=962
+	religion="confucian"
+	culture="han"
+	160.1.1={
+		birth=yes
+	}
+	220.1.1={
+		death=yes
+	}
+}
+812 = {
+	name="Shi"
+	dynasty=963
+	religion="confucian"
+	culture="han"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=811
+	}
+	220.1.1={
+		death=yes
+	}
+}
+813 = {
+	name="Ping"
+	dynasty=10
+	religion="confucian"
+	culture="han"
+    trait="brilliant_strategist"
+    trait="duel_trained_warrior"
+    trait="strong"
+    trait="tall"
+    trait="ambitious"
+    trait="wroth"
+    trait="brave"
+    trait="diligent"
+    trait="temperate"
+    trait="organizer"
+    trait="cavalry_leader"
+    trait="unyielding_leader"
+	125.1.1={
+		birth=yes
+	}
+	150.1.1={
+		add_spouse=814
+	}
+	180.1.1={
+		death=yes
+	}
+}
+814 = {
+	name="Zi"
+	female=yes
+	religion="confucian"
+	culture="qiang"
+	trait="humble"
+	trait="kind"
+	135.1.1={
+		birth=yes
+	}
+	150.1.1={
+		add_spouse=813
+	}
+	180.1.1={
+		death=yes
+	}
+}
+815 = {
+	name="Chao"
+	dynasty=10
+    diplomacy=8
+    martial=10
+    stewardship=4
+    intrigue=2
+	learning=5
+	religion="confucian"
+	culture="han"
+	father=809
+    trait="skilled_tactician"
+    trait="fate_duel"
+    trait="destined"
+    trait="duel_master_warrior"
+    trait="strong"
+    trait="tall"
+    trait="ambitious"
+    trait="brave"
+    trait="proud"
+    trait="wroth"
+    trait="diligent"
+    trait="cynical"
+    trait="organizer"
+    trait="unyielding_leader"
+	176.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=809
+	}
+	187.4.1={
+		religion="folk"
+	}
+	213.9.1={
+		employer=1009
+	}
+	213.11.1={
+		employer=1706 #Agui
+	}
+	214.1.1={
+		employer=600
+		religion="confucian"
+	}
+	221.1.1={
+		add_claim=k_liang
+	}
+	222.6.1={
+		death=yes
+	}
+}
+816 = {
+	name="Shi"
+	dynasty=10
+    diplomacy=6
+    martial=5
+    stewardship=6
+    intrigue=7
+	learning=8
+	religion="confucian"
+	culture="qiang"
+	father=813
+	mother=814
+	158.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=809
+	}
+	187.4.1={
+		religion="folk"
+	}
+	212.6.1={
+		death={death_reason=death_execution killer=400}
+	}
+}
+817 = {
+	name="Dai"
+	dynasty=10
+    diplomacy=7
+    martial=8
+    stewardship=6
+    intrigue=5
+	learning=6
+	religion="confucian"
+	culture="han"
+	father=816
+    trait="skilled_tactician"
+    trait="duel_skilled_warrior"
+    trait="strong"
+    trait="quick"
+    trait="tall"
+    trait="ambitious"
+    trait="patient"
+    trait="brave"
+    trait="diligent"
+    trait="temperate"
+	trait="zealous"
+    trait="organizer"
+    trait="unyielding_leader"
+	180.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=809
+	}
+	187.4.1={
+		religion="folk"
+	}
+	213.9.1={
+		employer=1009
+	}
+	213.11.1={
+		employer=1706 #Agui
+	}
+	214.1.1={
+		employer=600
+		religion="confucian"
+	}
+	236.6.1={
+		death=yes
+	}
+}
+818 = {
+	name="Xiu"
+	dynasty=10
+	religion="confucian"
+	culture="han"
+	father=809
+	179.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=809
+	}
+	187.4.1={
+		religion="folk"
+	}
+	208.1.1={
+		employer=400 #Cao Cao
+	}
+	212.6.1={
+		death={death_reason=death_execution killer=400}
+	}
+}
+819 = {
+	name="Tie"
+	dynasty=10
+	religion="confucian"
+	culture="han"
+	father=809
+	182.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=809
+	}
+	187.4.1={
+		religion="folk"
+	}
+	208.1.1={
+		employer=400 #Cao Cao
+	}
+	212.6.1={
+		death={death_reason=death_execution killer=400}
+	}
+}
+820 = {
+	name="Cheng"
+	dynasty=10
+	religion="folk"
+	culture="han"
+	father=815
+	194.1.1={
+		birth=yes
+		employer=809
+	}
+	208.1.1={
+		employer=815
+	}
+	213.9.1={
+		employer=1009
+	}
+	213.11.1={
+		employer=1706 #Agui
+	}
+	214.1.1={
+		employer=600
+		religion="confucian"
+	}
+	250.1.1={
+		death=yes
+	}
+}
+821 = {
+	name="Qiu"
+	dynasty=10
+	religion="folk"
+	culture="han"
+	father=815
+	198.1.1={
+		birth=yes
+		employer=809
+	}
+	208.1.1={
+		employer=815
+	}
+	213.9.1={
+		employer=1009
+	}
+	215.11.5={
+		death={death_reason=death_murder killer=1009}
+	}
+}
+822 = {
+	name="Ying"
+	dynasty=2000 # Chenggong
+	religion="confucian"
+	culture="han"
+    trait="skilled_tactician"
+    trait="duel_skilled_warrior"
+    trait="quick"
+    trait="ambitious"
+    trait="honorable"
+	trait="honest"
+    trait="brave"
+    trait="diligent"
+    trait="patient"
+    trait="organizer"
+    trait="inspiring_leader"
+	172.1.1={
+		birth=yes
+		employer=808
+	}
+	186.5.1={
+		religion="folk"
+	}
+	215.12.1={
+		employer=400
+	}
+	220.3.15={
+		employer=10400
+	}
+	220.6.1={
+		employer=3872 # Su Ze
+	}
+	220.10.1={
+		add_trait = ill
+		death={death_reason=death_trait}
+	}
+}

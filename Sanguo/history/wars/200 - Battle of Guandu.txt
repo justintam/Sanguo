@@ -1,0 +1,23 @@
+name = "Battle of Guandu"
+
+casus_belli={
+	actor=700
+	recipient=400
+	casus_belli=claim_all
+	landed_title=e_china
+	date=200.1.1
+}
+
+200.1.1={
+	add_defender = 400 #Cao Cao
+	add_attacker = 700 #Yuan Shao
+	add_attacker = 709 #Yuan Tan
+	add_attacker = 725 #Gao Gan
+}
+
+201.6.18={
+	rem_defender = 400 #Cao Cao
+	rem_attacker = 725 #Gao Gan
+	rem_attacker = 709 #Yuan Tan
+	rem_attacker = 700 #Yuan Shao
+}

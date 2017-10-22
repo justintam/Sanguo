@@ -1,0 +1,18 @@
+# c_dunhuang
+
+# County Title
+title = c_dunhuang
+
+# Settlements
+max_settlements = 4
+
+b_dunhuang = castle
+#b_xiezhu = city
+#b_aksa = temple
+#b_subei = castle
+
+# Misc
+culture = yuezhi
+religion = buddhist
+
+#History

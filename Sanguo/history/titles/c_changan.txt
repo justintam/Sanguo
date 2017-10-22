@@ -1,0 +1,48 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_jingzhao
+}
+165.1.1={
+	holder=704 #Yuan Feng
+}
+170.1.1={
+	holder=737 #Yuan Yi
+}
+179.1.1={
+	holder=1298 #Yang Biao
+}
+182.1.1={
+	holder=5004 #Sima Fang
+}
+189.8.22={
+	holder=300 #Dong Zhuo
+}
+192.5.22={
+	holder=120 #Wang Yun
+}
+192.7.1={
+	holder=307 #Li Jue
+}
+198.6.1={
+	holder=10496 #Zhong Yao
+}
+211.1.1={
+	holder=20478 #Xu Yi
+}
+211.10.1={
+	holder=20418 #Zhang Ji
+}
+224.1.1={
+	holder=20498 #Cang Ci
+}
+230.1.1={
+	holder=0 #Someone Else
+}
+
+
+
+#Incomplete

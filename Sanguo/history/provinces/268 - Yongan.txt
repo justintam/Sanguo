@@ -1,0 +1,18 @@
+# c_yongan
+
+# County Title
+title = c_yongan
+
+# Settlements
+max_settlements = 4
+
+b_yongan = castle
+b_kuiguan = castle
+b_badong = city
+#b_bandundi = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

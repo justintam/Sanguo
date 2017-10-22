@@ -1,0 +1,19 @@
+# c_fanshui
+
+# County Title
+title = c_fanshui
+
+# Settlements
+max_settlements = 5
+
+b_fanshuiguan = castle
+b_fanshuicheng = city
+#b_fanshuidu = city
+#b_shanggezhen = city
+#b_sihexiang = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

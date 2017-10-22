@@ -1,0 +1,18 @@
+# c_anding
+
+# County Title
+title = c_anding
+
+# Settlements
+max_settlements = 4
+
+b_anding = castle
+b_shichengding = city
+#b_taigong = temple
+#b_puo = castle
+
+# Misc
+culture = qiang
+religion = confucian
+
+#History

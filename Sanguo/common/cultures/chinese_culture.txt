@@ -1,0 +1,230 @@
+chinese = {
+		graphical_cultures = { chinesegfx mongolgfx easterngfx }
+	
+	han = {
+		graphical_cultures = { chinesegfx easterngfx }
+		
+		color = { 0.2 0.6 1.00 }
+		
+		male_names = {
+			Ah Ai Aiguo Aihou Aixing Aman An
+			Anding Ang Anguo Anli Anle Anliang
+			Anmin Anyu Ao Asu Ayi Ayu
+			Ba Bai Baihu Ban Bang Bao Baochou
+			Baojian Bei Beidi Beigong Ben Benchu
+			Bi Bian Biao Biecheng Biming Bin
+			Binbo Bing Bingwen Binqing Binshi
+			Binshuo Bo Boan Boben Bobing Bochang
+			Bochu Bochun Boda Bodao Bodu Bodun
+			Bofang Bofu Bogao Bogong Bogui Boguo
+			Bohai Bohao Bohe Bohou Bohuai Bohuan
+			Boji Bojian Bojie Bojin Bojing Boju
+			Bokang Bokao Bokuang Bolang
+			Boli Boliang Bolin Boling Boliu
+			Boluan Bomi Bomiao Boming Bonan
+			Boneng Boning Bopi Boping Boqi
+			Boqian Boqiang Boqin Boqing Boqiu
+			Boque Boran Borang Borao Boren
+			Borong Boru Boshan Boshen Bosheng
+			Boshi Boshu Bosi Bosun Bota Botai
+			Botiao Botong Bowang Bowei Bowen
+			Bowu Boxi Boxia Boxian Boxiang
+			Boxiao Boxin Boxing Boxiu Boxu Boya
+			Boyan Boyang Boye Boyi Boyin Boying
+			Boyou Boyu Boyuan Boyue Bozai
+			Bozhang Bozhao Bozhen Bozhi Bozhong
+			Bozhou Bozhu Bozhuo Bozong Bozu Bu
+			Buwei Buyi
+			Cai Can Cang Cangshu Cao Ce Cen
+			Chai Chan Chanbo Chang Changbo
+			Changchong Changchun Changde
+			Changhua Changji Changjun
+			Changming Changping Changpu
+			Changqing Changquan Changsheng
+			Changsun Changwen Changxu Changyu
+			Chanruo Chanying Chao Chaoguang
+			Che Chen Cheng Chengbo Chengguo
+			Chenglei Chengli Chengming Chengpu
+			Chengyan Chengyuan Chi Chong Chongan
+			Chonghuan Chongkun Chonglin Chou
+			Chouhou Chu Chuan Chuanli Chun
+			Chunguang Chunqing Chunyu Chuo
+			Chuqi Churen Chushan Chuxu Ci Cibo
+			Ciming Ciqing Cisun Ciwen Ciweng
+			Ciyang Cong Cui Cuan Cun
+			Da Dachun Dafang Daguo Dai Daiping
+			Daming Damu Dan Dang Dao Daochu
+			Daohe Daozhen Daxun Dayi De Deang
+			Decao Dedu Degao Degong Deguang
+			Degui Deli Delian Delun Deming
+			Demou Deng Derang Derong Deru Derun
+			Deshan Deshi Deshu Deshun Desi Deta
+			Dewei Dewen Dexia Dexian Dexin
+			Dexing Dexu Deyan Deyao Deyi Deyu
+			Deyun Dezhong Dezhou Dezong Dezu
+			Di Dian Diao Digong Ding Dingan
+			Dinggong Dingguo Dingqing Dingzhu
+			Dingzu Disun Dong Dongli Dou Du Duan
+			Dun Duyi
+			E En Ending Enlai Erkang Ertai
+			Fa Fai Fan Fang Fanglan Fangzheng
+			Fei Feixin Fen Feng Fenggao Fengge
+			Fengqing Fengxian Fengxiao Fengxun
+			Fu Fucheng Fuguo Fuhua Fuling Fulu
+			Fuluan Fuxiang Fuxing Fuxiu Fuxuan
+			Gai Gan Gang Gao Gaoqing Gaotang Ge
+			Geming Gen Geng Genju Gong Gonga
+			Gongbi Gongchao Gongda Gongdu
+			Gongfang Gongfen Gongfeng Gongfu
+			Gonggan Gonggao Gongheng Gongji
+			Gongjie Gongjin Gongju Gongli
+			Gongliang Gonglu Gongmiao Gongming
+			Gongping Gongqi Gongqian Gongqing
+			Gongran Gongren Gongshan Gongshi
+			Gongshu Gongsi Gongsun Gongtai
+			Gongti Gongting Gongwei Gongwen
+			Gongxi Gongxian Gongxiang Gongxiao
+			Gongxin Gongxing Gongxiu Gongxu
+			Gongxuan Gongya Gongyan Gongye
+			Gongyi Gongying Gongyou Gongyuan
+			Gongzai Gongze Gongzhen Gongzhi
+			Gongzhong Gongzhu Gongzi Gongzu
+			Gou Gu Guan Guande Guang Guangli
+			Guangshi Guangyan Guangyuan
+			Guangxu Guanqiu Gui Guifen Guiren
+			Guilong Gun Guo Guofan Guofu
+			Guoliang Guoping Guorang Guoshan
+			Guotin Guowei Guoyi Guozhang Guozhi
+			Hai Han Hanbo Handa Handan Hanfeng
+			Hangong Hanhe Hannan Hanru Hansheng
+			Hanwen Hanyu Hanzong Hao He Hei
+			Heng Ho Hong Honghui Hongming Hongqi
+			Hou Howin Hu Huhai Hua Huai
+			Huan Huang Hui Huiyang Hulin Hun Hung Huo Huojin
+			Ji Jia Jian Jiang Jianguo Jianjun Jianyu Jiao
+			Jie Jiezi Jiguang Jin Jing Jingde Jingguo Jingsun
+			Jinhai Jinjing Jingke Jingquan Jingzong Jiong Jiu
+			Jizi Jong Ju Jue Jugong Jun Jung Junjie Junshi
+			Juzheng
+			Kai Kan Kang Ke Kong Kua Kuai Kuan Kuang Kui
+			Kuizi Kun
+			Lai Lan Lang Lao Laohu Lei Li Lian Liang
+			Liao Lie Lin Linfu Ling Linghu Liqing
+			Lishi Liu
+			Liwei Long Longlong Longwei Lou Lu Lue Lun
+			Luo Luxi
+			Ma Mai Man Mang Mao Mea Mei Meng Mi Miao
+			Min Ming Minghua Mingli Minsheng Minzhe Mo Mu
+			Nan Ne Ni Ning Niu
+			On Ou Ouyang
+			Pan Pang Pei Peng Pengju Pi Ping Pou Pu
+			Qi Qian Qianfan Qiang Qiao Qin Qiong Qing
+			Qingshan Qiqiang Qiu Qu Quan Qub Que Qun Quon
+			Ran Rang Rei Ren Rengui Renshu Rong Rou Ru Ruan
+			Rui Ruo
+			Shaiming Shan Shang Shanyuan Shao She Shen
+			Sheng Shengcheng Shi Shidai Shilang Shilin
+			Shing Shiren Shirong Shoiming Shou Shu Shuang
+			Shubao Shuihu Shuliao Shun Shunyuan Shuo Si Sima
+			Sitong Siyu
+			Song Songzhi Su Sui Sun Suo
+			Ta Tai Taishi Tan Tang Tao Taotu Taoyu Te
+			Teng Tengfei Ti Tian Tiankai Tianxi Tiao Tie
+			Tingzhe Tong Tu Tung Tuo Tuoren
+			Wai Wan Wang Wangzhuo Wannian Wansui Wei Weihao
+			Weihuang Weimin Weiping Weisheng Weiyuan Wen
+			Wencheng Wenshu Wenyan Wing Wu Wuji Wukong Wuzhen
+			Wuzhong Wuzhou
+			Xi Xia Xiahou Xian Xiande Xiang Xiangruo Xiao
+			Xiaochang Xiaode Xiaojian Xiaoping Xiaosheng Xiaotong
+			Xiasheng Xie Xin Xing Xingguo Xiong Xiongming
+			Xiu Xu Xuan Xuande Xuangui Xuanyang Xuanzong Xue
+			Xueqin Xueyou Xun Xunzi
+			Yan Yang Yanlin Yanshou Yanzuo Yao Yaochuan
+			Yaozu Ye Yi Yide Yilu Yin Ying Yingjie Yong
+			Yongrui Yongzuo You Youping Youwei Youzhi Yu Yuan Yuangui
+			Yuanjun Yuanyuan Yuanzhen Yue Yun Yunchang Yunlu
+			Yunxu Yusheng
+			Zan Zang Zao Ze Zedong Zeng Zengguang
+			Zenguang Zha Zhai Zhan Zhang Zhangke Zhao
+			Zhaoxun Zhen Zheng Zhengsheng Zhensheng
+			Zhenzhong Zhi Zhicai Zhichao Zhiguo Zhihan
+			Zhiqiang Zhiren Zhiyuan Zhiyue Zhong
+			Zhongchang Zhongdi Zhongjin Zhongli Zhongmou
+			Zhongwu Zhongzhen Zhou Zhousheng Zhu Zhuan
+			Zhuang Zhuanxu Zhuge Zhuo Zi Zian Zicai Zichu
+			Zidao  Zihao
+			Zijing Ziqin Zishang Zicheng Zixin Ziyi Ziying
+			Zizheng Zong Zongmeng Zou Zu Zuan Zun Zuo
+		}
+		female_names = {
+			Ai Aili Ailing Aimei An Anyang Awu
+			Bai Bao Baosi Baoyu Baozhai Biyu Bing Bo
+			Cai Caihua Cha Changchang Changying Chen
+			Chenguang Chi Chiying Chuhua Chunhua Chuntao
+			Daiyu Damei Dandan Daofei Daqiao Daya Dayi
+			Diaochan Dongmei
+			E Ehuang Erzhu
+			Fa Fahui Fan Fang Fani Feishan Feiyan Fenfang
+			Feng
+			Gaowei Gaozong Guang Guangji Guifei Guinu Guo
+			Hai Han Hang He Helian Hong Honghua Hongyu Hou
+			Hua Huali Hualing Huan Hui Huian Huidai Huifei
+			Huimin Huiqing Huizhong Huiyu
+			Ji Jia Jian Jiang Jiangnu Jiangqing Jiangui
+			Jianwen Jiao Jiayi Jiaying Jie Jieyou Jieyu
+			Jinfeng Jing Jingai Jinghua Jinghuai Jingshou
+			Jingying Jinhu Jiuchang Jun
+			Kaidi Ki Ko Kou
+			Lan Lanbi Lanying Li Lian Lianshi Lien
+			Lieying Lihua Lijuan Liling Lin Linfen Linfeng
+			Ling Lingfeng Lingji Lingnu Lingqi Lingqu
+			Lingyang Lingyuan Liqiu Liu Luban Luyin Luyu
+			Mai Maoying Maozhen Mei Meifeng Meihua Meihui
+			Meilin Meiling Meirong Meiting Meixing Meixiu
+			Meiying Meizi Min Ming Minghua Mingxia Mingyu
+			Mulan Muzhi
+			Na Nanfeng Ning Ninghong Nuo Nuwa Nuwang
+			Peizhi Ping Pinghua Pingling Piyang
+			Qiang Qianfei Qiao Qiaolian Qichang Qigui Qing
+			Qinger Qinghe Qingling Qingzhao Qiu
+			Rong Rou Ruogan Ruolan Ruomei
+			Sanniang Shangxiang Shan Shanshan
+			Shaoming Shenai Shengtong Shinan
+			Shou Shu Shuang Shun Shunhua Song
+			Su Suanzi Suyin Suying
+			Tai Taihua Taisi Taiying Taizhen Tao Ting Tiying
+			Tu
+			Wangmu Weici Weiwen Wen Wencheng Wenji Wenjun
+			Wenqian Wenzhao Wuyin
+			Xanghua Xian Xiang Xianrong Xianying Xianyuan
+			Xiao Xiaocha Xiaodong Xiaodan Xiaofan Xiaohua
+			Xiaohui Xiaojing Xiaolian Xiaoling Xiaomai
+			Xiaomei Xiaomin Xiaosheng Xiaotong Xiaowen
+			Xiaoya Xiaoyanzi Xiaozhao Xiaozhi Xijun
+			Xingcai Xinghua Xingmei Xingnu Xiu Xiulan
+			Xiurong Xiuying Xuanzong Xue
+			Yan Yanlin Yanyu Yanzi Yen Yenai Yi Yijiang
+			Yifu Ying Yinge Yingtai Yinping Yu Yuan
+			Yuanji Yue Yueying Yuhuan Yujiulu Yuming
+			Yunru Yuwen Yuying
+			Zetian Zhangde Zhangsun Zhaohui Zhaojun Zhen
+			Zhenfeng Zhenji Zhenzhen Zhenzong Zhi Zhide
+			Zhilan Zhongmei Zhu Zi Ziwei Zongying Zhurong
+		}
+		
+		founder_named_dynasties = no
+		
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+		pat_grf_name_chance = 0
+		mat_grf_name_chance = 0
+		father_name_chance = 0
+		
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+		pat_grm_name_chance = 0
+		mat_grm_name_chance = 0
+		mother_name_chance = 0
+
+		modifier = default_culture_modifier
+	}
+}

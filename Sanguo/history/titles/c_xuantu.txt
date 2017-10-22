@@ -1,0 +1,14 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_xuantu
+}
+169.1.1={
+	holder=185 #Geng Lin
+}
+189.9.1={
+	holder=1357 #Yi Myeongjang
+}

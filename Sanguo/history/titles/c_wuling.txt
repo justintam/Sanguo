@@ -1,0 +1,43 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_wuling
+}
+160.1.1={
+	holder=3436 #Yue Ren
+}
+180.1.1={
+	holder=151 #Lu Kang
+}
+184.1.1={
+	holder=169 #Cao Yin
+}
+200.1.1={
+	holder=3408 #Liu Rui
+}
+205.1.1={
+	holder=3413 #Liu Xian
+}
+208.9.1={
+	holder=155 #Jin Xuan
+}
+208.12.1={
+	holder=52 #Liu Qi
+}
+209.3.1={
+	holder=600 #Liu Bei
+}
+214.1.1={
+	holder=601 #Guan Yu
+}
+220.1.1={
+	holder=575 #Xie Cheng
+}
+#Wei Jing under Wu - Dismissed in 231
+
+
+
+#Incomplete

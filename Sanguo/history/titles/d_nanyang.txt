@@ -1,0 +1,72 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=k_jing
+	vice_royalty = yes
+}
+135.1.1={
+	holder=4404 #Zhao Jie
+}
+140.1.1={
+	holder=3749 #Gao Ci
+}
+150.1.1={
+	holder=720 #Yuan Peng
+}
+180.1.1={
+	holder=50 #Liu Yan
+}
+184.1.1={
+	holder=112 #Chu Gong
+}
+184.3.1={
+	holder=0 #Zhang Mancheng
+}
+184.10.1={
+	holder=113 #Qin Jie
+}
+186.1.1={
+	holder=1245 #Yang Xu
+}
+189.9.1={
+	holder=313 #Zhang Zi
+}
+190.1.1={
+	liege=k_yuan
+	holder=705 #Yuan Shu
+}
+191.1.1={
+	liege=e_yuan
+}
+192.5.1={
+	liege=k_yuan
+}
+193.3.1={
+	liege=k_jing
+	holder=48 #Liu Biao
+}
+196.1.1={
+	holder=325 #Zhang Xiu
+}
+207.4.1={
+	holder=48 #Liu Biao
+}
+208.8.1={
+	holder=53 #Liu Cong
+}
+208.9.1={
+	liege=k_sili
+	holder=4240 #Yang Jun
+}
+213.6.1={
+	liege=k_yu
+}
+#Dongli Gun by 218
+#Tian Yu 219
+
+
+
+#Incomplete

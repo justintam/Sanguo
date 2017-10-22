@@ -1,0 +1,21 @@
+# c_yingtao
+
+# County Title
+title = c_yingtao
+
+# Settlements
+max_settlements = 4
+
+b_yingtao = castle
+#b_yangzhi = city
+#b_xiaoluzhen = temple
+#b_tingan = castle
+
+# Misc
+culture = han
+religion = taiping
+
+#History
+194.1.1={
+	b_yangzhi = city
+}

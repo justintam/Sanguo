@@ -1,0 +1,17 @@
+# c_yanliyou
+
+# County Title
+title = c_yanliyou
+
+# Settlements
+max_settlements = 3
+
+b_yanliyou = tribal
+#b_banghai = city
+#b_xiuzi = temple
+
+# Misc
+culture = xianbei
+religion = tengri_pagan
+
+#History

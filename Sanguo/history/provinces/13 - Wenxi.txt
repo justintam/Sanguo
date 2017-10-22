@@ -1,0 +1,19 @@
+# c_wenxi
+
+# County Title
+title = c_wenxi
+
+# Settlements
+max_settlements = 5
+
+b_wenxi = castle
+b_jishanting = city
+#b_xinjiang = city
+#b_jiang = city
+#b_wenximin = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

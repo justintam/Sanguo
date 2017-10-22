@@ -1,0 +1,18 @@
+# c_wuyuan
+
+# County Title
+title = c_wuyuan
+
+# Settlements
+max_settlements = 4
+
+b_wuyuan = castle
+#b_tunliu = city
+#b_wuyuanji = temple
+#b_wuliu = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

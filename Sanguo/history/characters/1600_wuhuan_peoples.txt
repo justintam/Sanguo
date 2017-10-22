@@ -1,0 +1,283 @@
+# Wuhuan
+
+1600 = {
+	name="Qiuliju"
+	dynasty=600
+	religion="tengri_pagan"
+	culture="wuhuan"
+	father=1602
+	140.1.1={
+		birth=yes
+	}
+	188.4.1={
+		effect={
+			add_rival=900
+		}
+	}
+	193.2.1={
+		death=yes
+	}
+}
+1601 = {
+	name="Hedan"
+	dynasty=600
+	religion="tengri_pagan"
+	culture="wuhuan"
+	20.1.1={
+		birth=yes
+	}
+	85.1.1={
+		death=yes
+	}
+}
+1602 = {
+	name="Chu"
+	dynasty=600
+	religion="tengri_pagan"
+	culture="wuhuan"
+	father=1601
+	70.1.1={
+		birth=yes
+	}
+	140.1.1={
+		death=yes
+	}
+}
+1603 = {
+	name="Hu"
+	dynasty=600
+	religion="tengri_pagan"
+	culture="wuhuan"
+	father=1602
+	130.1.1={
+		birth=yes
+	}
+	185.1.1={
+		death=yes
+	}
+}
+1604 = {
+	name="Tadun"
+	dynasty=600
+	religion="tengri_pagan"
+	culture="wuhuan"
+	father=1603
+    trait="skilled_tactician"
+    trait="strategist"
+    trait="destined"
+    trait="duel_trained_warrior"
+    trait="ambitious"
+    trait="diligent"
+    trait="temperate"
+	trait="organizer"
+	trait="aggressive_leader"
+	160.1.1={
+		birth=yes
+	}
+	193.4.1={
+		effect={
+			add_rival=900
+			add_friend=700
+		}
+	}
+	207.10.1={
+		death={death_reason=death_battle killer=20425}
+	}
+}
+1605 = {
+	name="Louban"
+	dynasty=600
+	religion="tengri_pagan"
+	culture="wuhuan"
+	father=1600
+    trait="duel_poor_warrior"
+	180.1.1={
+		birth=yes
+	}
+	207.11.1={
+		death={death_reason=death_execution killer=972}
+	}
+}
+1606 = {
+	name="Wuyan"
+	dynasty=604
+	religion="tengri_pagan"
+	culture="wuhuan"
+    trait="tough_soldier"
+    trait="duel_poor_warrior"
+    trait="brave"
+    trait="zealous"
+	140.1.1={
+		birth=yes
+	}
+	207.11.1={
+		death={death_reason=death_execution killer=972}
+	}
+}
+1607 = {
+	name="Nengchendi"
+	dynasty=601
+	religion="tengri_pagan"
+	culture="wuhuan"
+	father=1617
+    trait="duel_poor_warrior"
+	160.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1608 = {
+	name="Pufulu"
+	dynasty=601
+	religion="tengri_pagan"
+	culture="wuhuan"
+	father=1617
+    trait="duel_poor_warrior"
+	160.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1609 = {
+	name="Tanzhi"
+	dynasty=605
+	religion="tengri_pagan"
+	culture="wuhuan"
+    trait="duel_poor_warrior"
+	160.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1610 = {
+	name="Nanlou"
+	dynasty=602
+	religion="tengri_pagan"
+	culture="wuhuan"
+	father=1618
+    trait="duel_trained_warrior"
+	150.1.1={
+		birth=yes
+	}
+	230.1.1={
+		death=yes
+	}
+}
+1611 = {
+	name="Supuyan"
+	dynasty=603
+	religion="tengri_pagan"
+	culture="wuhuan"
+    trait="duel_poor_warrior"
+	150.1.1={
+		birth=yes
+	}
+	207.11.1={
+		death={death_reason=death_execution killer=972}
+	}
+}
+1612 = {
+	name="Luxi"
+	dynasty=602
+	religion="tengri_pagan"
+	culture="wuhuan"
+	father=1618
+    trait="duel_skilled_warrior"
+	trait="brave"
+	trait="wroth"
+	trait="hunter"
+	trait="fair"
+	160.1.1={
+		birth=yes
+	}
+	215.1.1={
+		death=yes
+	}
+}
+1613 = {
+	name="Fu" #Random
+	dynasty=606
+	religion="tengri_pagan"
+	culture="wuhuan"
+	father=1616
+	trait="twin"
+    160.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1614 = {
+	name="Huliu" #Random
+	dynasty=606
+	religion="tengri_pagan"
+	culture="wuhuan"
+	father=1616
+	trait="twin"
+    160.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1615 = {
+	name="Juge" #Random
+	dynasty=606
+	religion="tengri_pagan"
+	culture="wuhuan"
+	father=1616
+	trait="twin"
+    160.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1616 = {
+	name="Bu" #Random
+	dynasty=606
+	religion="tengri_pagan"
+	culture="wuhuan"
+    140.1.1={
+		birth=yes
+	}
+	230.1.1={
+		death=yes
+	}
+}
+1617 = {
+	name="Quyan"
+	dynasty=601
+	religion="tengri_pagan"
+	culture="wuhuan"
+	140.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=1607
+	}
+	230.1.1={
+		death=yes
+	}
+}
+1618 = {
+	name="Rong"
+	dynasty=602
+	religion="tengri_pagan"
+	culture="wuhuan"
+	130.1.1={
+		birth=yes
+	}
+	180.1.1={
+		death=yes
+	}
+}

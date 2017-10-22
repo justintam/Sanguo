@@ -1,0 +1,17 @@
+# c_xijun
+
+# County Title
+title = c_xijun
+
+# Settlements
+max_settlements = 3
+
+b_xijun = castle
+b_dongjun = tribal
+#b_ganjun = temple
+
+# Misc
+culture = qiang
+religion = baishi
+
+#History

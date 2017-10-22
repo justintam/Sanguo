@@ -1,0 +1,16 @@
+# e_shu
+1.1.1={
+	active = no
+	law = agnatic_succession
+	law = succ_primogeniture
+}
+221.5.30={
+	active = yes
+	holder = 600 #Liu Bei
+}
+223.6.10={
+	holder = 610 #Liu Shan
+}
+263.11.11={
+	active = no
+}

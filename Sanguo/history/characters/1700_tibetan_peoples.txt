@@ -1,0 +1,215 @@
+# Qiang
+
+#1700-1705
+
+1700 = {
+	name="Cheliji"
+	dynasty=214
+	religion="baishi"
+	culture="qiang"
+	trait="destined"
+    trait="duel_skilled_warrior"
+	165.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1701 = {
+	name="Yadan"
+	dynasty=214
+	religion="baishi"
+	culture="qiang"
+	trait="fortune_builder"
+	trait="quick"
+	168.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=1700
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1702 = {
+	name="Yueji"
+	dynasty=214
+	religion="baishi"
+	culture="qiang"
+	trait="skilled_tactician"
+    trait="duel_poor_warrior"
+	trait="brave"
+	168.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=1700
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1703 = {
+	name="Yuanjian"
+	dynasty=213
+	religion="baishi"
+	culture="qiang"
+	168.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1704 = {
+	name="Chen"
+	dynasty=201
+	religion="baishi"
+	culture="qiang"
+	168.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1705 = {
+	name="Pu"
+	dynasty=202
+	religion="baishi"
+	culture="qiang"
+	168.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1706 = {
+	name="Agui"
+	dynasty=406
+	religion="baima"
+	culture="di"
+	160.1.1={
+		birth=yes
+	}
+	214.11.1={
+		death={death_reason=death_battle killer=406}
+	}
+}
+1707 = {
+	name="Qianwan"
+	dynasty=408
+	religion="baima"
+	culture="di"
+	160.1.1={
+		birth=yes
+	}
+	230.1.1={
+		death=yes
+	}
+}
+1708 = {
+	name="Donghao"
+	religion="baishi"
+	culture="qiang"
+	168.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1709 = {
+	name="Guoer"
+	religion="baishi"
+	culture="qiang"
+	168.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1710 = {
+	name="Nian"
+	religion="baishi"
+	culture="qiang"
+	168.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1711 = {
+	name="Guoer"
+	religion="baishi"
+	culture="qiang"
+	168.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1712 = {
+	name="Sengsi"
+	religion="baima"
+	culture="di"
+	168.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1713 = {
+	name="Qiang"
+	religion="baima"
+	culture="di"
+	168.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1714 = {
+	name="Xie"
+	religion="baima"
+	culture="di"
+	168.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1715 = {
+	name="Hui"
+	religion="baima"
+	culture="di"
+	168.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1716 = {
+	name="Feilong" #Unused
+	religion="baima"
+	culture="di"
+	168.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+
+#Qiangduan
+#Yangpu

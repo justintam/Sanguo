@@ -1,0 +1,46 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_primogeniture
+	effect = {
+		set_title_flag = noble_king
+	}
+}
+1.1.1={
+	liege=k_qing
+}
+52.1.1={
+	active = yes
+	holder=4244 #Liu Xing
+}
+64.1.1={
+	holder=4245 #Liu Mu
+}
+74.1.1={
+	holder=4247 #Liu Ji
+}
+87.1.1={
+	holder=0 #None
+}
+90.1.1={
+	holder=4248 #Liu Wei
+}
+96.1.1={
+	holder=4251 #Liu Pu
+}
+123.1.1={
+	holder=4252 #Liu Yi
+}
+137.1.1={
+	holder=4253 #Liu Fan
+}
+180.1.1={
+	holder=0 #None
+}
+212.1.1={
+	holder=4255 #Liu Dun
+}
+220.12.10={
+	holder=0 #None
+	active = no
+}

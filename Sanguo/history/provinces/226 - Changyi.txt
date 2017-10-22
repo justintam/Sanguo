@@ -1,0 +1,19 @@
+# c_changyi
+
+# County Title
+title = c_changyi
+
+# Settlements
+max_settlements = 5
+
+b_changyi = castle
+b_liangqiu = city
+#b_hongji = temple
+#b_dingwei = castle
+#b_tangkou = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

@@ -1,0 +1,27 @@
+# c_beiping
+
+# County Title
+title = c_beiping
+
+# Settlements
+max_settlements = 7
+
+b_beiping = castle
+b_shiping = city
+#b_dongcheng = city
+#b_beiwei = temple
+#b_gulou = city
+#b_baiyun = city
+#b_tongzhou = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History
+210.1.1={
+	b_dongcheng = city
+}
+214.1.1={
+	b_beiwei = temple
+}

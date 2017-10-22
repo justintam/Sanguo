@@ -1,0 +1,59 @@
+# k_kushan
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=k_kushan
+}
+84.1.1={
+	holder=6 #Han Emperor
+}
+88.1.1={
+	holder=8 #Han Emperor
+}
+105.1.1={
+	holder=10 #Han Emperor
+}
+107.1.1={
+	holder=0 #Independent Revolt
+}
+123.1.1={
+	holder=14 #Han Emperor
+}
+125.1.1={
+	holder=16 #Han Emperor
+}
+127.1.1={
+	holder=2404 #Kushan Emperor
+}
+151.1.1={
+	holder=2405 #Kushan Emperor
+}
+160.1.1={
+	holder=2406 #Kushan Emperor
+}
+189.9.1={
+	holder=2407 #Kushan Emperor
+}
+230.1.1={
+	holder=2408 #Kushan Emperor
+}
+240.1.1={
+	holder=2409 #Kushan Emperor
+}
+250.1.1={
+	holder=2410 #Kushan Emperor
+}
+275.1.1={
+	holder=2411 #Kushan Emperor
+}
+310.1.1={
+	holder=2415 #Kushan Emperor
+}
+325.1.1={
+	holder=2416 #Kushan Emperor
+}
+345.1.1={
+	holder=2417 #Kushan Emperor
+}

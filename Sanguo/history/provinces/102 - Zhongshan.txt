@@ -1,0 +1,18 @@
+# c_zhongshan
+
+# County Title
+title = c_zhongshan
+
+# Settlements
+max_settlements = 4
+
+b_zhongshan = castle
+b_yishan = city
+#b_yinpang = temple
+#b_caowu = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

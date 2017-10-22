@@ -1,0 +1,302 @@
+###########################################
+#                                         #
+# Dynasty Events						  #
+#                                         #
+# ID DYN.11-DYN.100		             	  #
+#                                         #
+#                                         #
+#                                         #
+#                                         #
+#                                         #
+#                                         #
+#                                         #
+###########################################
+
+namespace = DYN
+
+### NEW DYNASTY ###
+character_event = {
+	id = DYN.11
+	desc = EVTDESC_DYN.11
+	title = EVTTITLE_DYN.11
+	picture = GFX_evt_throne_room_byzantine
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EXCELLENT
+		
+		hidden_tooltip = {
+			create_title = {
+				tier = COUNT
+				landless = yes
+				temporary = no
+				custom_created = yes
+				culture = ROOT
+				holder = ROOT
+				base_title = THIS
+				ruler = "MARK"
+				foa = "PREMIER_FOA"
+			}
+			new_title = {
+				set_title_flag = noble_mark
+				make_primary_title = yes
+			}
+		}
+		
+		add_character_modifier = {
+			name = nobility_accepted
+			duration = 365
+		}
+		
+		tooltip = {
+			add_favor = FROMFROM
+		}
+		
+		custom_tooltip = { text = TOOLTIPmake_mark }
+		chronicle = {
+			entry = CHRONICLE_MADE_MARK
+			portrait = [Root.GetID]
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = OHNO
+		
+		hidden_tooltip = {
+			if = {
+				limit = { NOT = { trait = humble } }
+				random_list = {
+					50 = { }
+					50 = {
+						add_trait = humble
+						character_event = { id = 38260 }
+					}
+				}
+			}
+		}
+		
+		add_character_modifier = {
+			name = nobility_refused
+			duration = 365
+		}
+		
+		prestige = -50
+		piety = 150
+		
+		ai_chance = {
+			factor = 1
+			
+			modifier = {
+				factor = 0.5 # Less likely to do it
+			}
+			modifier = {
+				factor = 2.0
+				trait = humble
+			}
+		}
+	}
+}
+
+character_event = {
+	id = DYN.12
+	desc = EVTDESC_DYN.12
+	title = EVTTITLE_DYN.12
+	picture = GFX_evt_throne_room_byzantine
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EXCELLENT
+		
+		hidden_tooltip = {
+			create_title = {
+				tier = DUKE
+				landless = yes
+				temporary = no
+				custom_created = yes
+				culture = ROOT
+				holder = ROOT
+				base_title = THIS
+				ruler = "DUKE"
+				foa = "PREMIER_FOA"
+			}
+			new_title = {
+				set_title_flag = noble_duke
+				make_primary_title = yes
+			}
+		
+			any_demesne_title = {
+				limit = {
+					has_title_flag = noble_mark
+				}
+				activate_title = { title = THIS status = no }
+				unsafe_destroy_landed_title = THIS
+			}
+		}
+		
+		add_character_modifier = {
+			name = nobility_accepted
+			duration = 365
+		}
+		
+		tooltip = {
+			add_favor = FROMFROM
+		}
+		
+		custom_tooltip = { text = TOOLTIPmake_duke }
+		chronicle = {
+			entry = CHRONICLE_MADE_DUKE
+			portrait = [Root.GetID]
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = OHNO
+		
+		hidden_tooltip = {
+			random_list = {
+				40 = { }
+				30 = {
+					if = {
+						limit = { NOT = { trait = content } }
+						add_trait = content
+						character_event = { id = 38279 }
+					}
+				}
+				30 = {
+					if = {
+						limit = { NOT = { trait = humble } }
+						add_trait = humble
+						character_event = { id = 38260 }
+					}
+				}
+			}
+		}
+		
+		add_character_modifier = {
+			name = nobility_refused
+			duration = 365
+		}
+		
+		prestige = -150
+		piety = 450
+		
+		ai_chance = {
+			factor = 1
+			
+			modifier = {
+				factor = 0.5 # Less likely to do it
+			}
+			modifier = {
+				factor = 2.0
+				trait = humble
+			}
+		}
+	}
+}
+
+character_event = {
+	id = DYN.13
+	desc = EVTDESC_DYN.13
+	title = EVTTITLE_DYN.13
+	picture = GFX_evt_throne_room_byzantine
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = EXCELLENT
+		
+		hidden_tooltip = {
+			create_title = {
+				tier = KING
+				landless = yes
+				temporary = no
+				custom_created = yes
+				culture = ROOT
+				holder = ROOT
+				base_title = THIS
+				ruler = "KING"
+				foa = "PREMIER_FOA"
+			}
+			new_title = {
+				set_title_flag = noble_king
+				make_primary_title = yes
+			}
+		
+			any_demesne_title = {
+				limit = {
+					has_title_flag = noble_duke
+				}
+				activate_title = { title = THIS status = no }
+				unsafe_destroy_landed_title = THIS
+			}
+			
+			set_defacto_liege = FROMFROM
+		}
+		
+		add_character_modifier = {
+			name = nobility_accepted
+			duration = 365
+		}
+		
+		tooltip = {
+			add_favor = FROMFROM
+		}
+		
+		custom_tooltip = { text = TOOLTIPmake_king }
+		chronicle = {
+			entry = CHRONICLE_MADE_KING
+			portrait = [Root.GetID]
+		}
+		
+		ai_chance = {
+			factor = 1
+		}
+	}
+	
+	option = {
+		name = OHNO
+		
+		hidden_tooltip = {
+			if = {
+				limit = { NOT = { trait = humble } }
+				random_list = {
+					50 = { }
+					50 = {
+						add_trait = humble
+						character_event = { id = 38260 }
+					}
+				}
+			}
+		}
+		
+		add_character_modifier = {
+			name = nobility_refused
+			duration = 365
+		}
+		
+		prestige = -300
+		piety = 900
+		
+		ai_chance = {
+			factor = 1
+			
+			modifier = {
+				factor = 0.5 # Less likely to do it
+			}
+			modifier = {
+				factor = 2.0
+				trait = humble
+			}
+		}
+	}
+}

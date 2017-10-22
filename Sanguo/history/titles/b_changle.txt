@@ -1,0 +1,16 @@
+# e_china
+1.1.1={
+	law = succ_primogeniture
+	law = agnatic_succession
+}
+1.1.1={
+	liege=c_changan
+}
+190.4.9={
+	liege=k_confucian
+	holder=34 #Xian
+}
+196.2.1={
+	liege=c_changan
+	holder=0 #None
+}

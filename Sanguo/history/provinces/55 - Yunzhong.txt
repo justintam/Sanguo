@@ -1,0 +1,18 @@
+# c_yunzhong
+
+# County Title
+title = c_yunzhong
+
+# Settlements
+max_settlements = 4
+
+b_yunzhong = castle
+#b_hanhao = city
+#b_yunwu = temple
+#b_haohan = castle
+
+# Misc
+culture = xiongnu
+religion = tengri_pagan
+
+#History

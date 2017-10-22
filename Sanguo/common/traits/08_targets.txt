@@ -1,0 +1,8 @@
+bodyguard_protection_target = {
+	cached = yes
+	customizer = no
+}
+dead_target = {
+	cached = yes #
+	customizer = no
+}

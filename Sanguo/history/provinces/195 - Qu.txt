@@ -1,0 +1,18 @@
+# c_qu
+
+# County Title
+title = c_qu
+
+# Settlements
+max_settlements = 4
+
+b_qu = castle
+b_yiluxiang = city
+#b_shilian = temple
+#b_xilang = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

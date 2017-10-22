@@ -1,0 +1,18 @@
+# c_fanyangji
+
+# County Title
+title = c_fanyangji
+
+# Settlements
+max_settlements = 4
+
+b_fanyangji = castle
+b_fanyangbing = castle
+#b_fanyangfu = temple
+#b_mahuang = castle
+
+# Misc
+culture = wuhuan
+religion = confucian
+
+#History

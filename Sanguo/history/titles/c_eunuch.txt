@@ -1,0 +1,22 @@
+# e_china
+1.1.1={
+	law = succ_open_elective
+}
+1.1.1={
+	liege=k_confucian
+}
+
+184.1.1={
+	holder=1100 #Jian Shuo
+}
+189.8.1={
+	holder=1101 #Zhang Rang
+}
+189.9.1={
+	holder=0 #None
+}
+190.4.9={
+	liege=0
+	holder=0 #Destroyed
+	active=no
+}

@@ -1,0 +1,18 @@
+# c_dongwucheng
+
+# County Title
+title = c_dongwucheng
+
+# Settlements
+max_settlements = 4
+
+b_dongwucheng = castle
+b_yangping = city
+#b_xiwu = temple
+#b_beiwu = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

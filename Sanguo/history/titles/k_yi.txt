@@ -1,0 +1,40 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=e_china
+	vice_royalty = yes
+}
+34.1.1={
+	holder=4269 #Cen Peng
+}
+35.1.1={
+	holder=0 #None
+}
+184.1.1={
+	holder=116 #Que Jian
+}
+188.8.1={
+	vice_royalty = no
+	holder=50 #Liu Yan
+}
+190.1.1={
+	liege=0
+}
+194.4.1={
+	holder=80 #Liu Zhang	
+}
+214.1.1={
+	liege=e_liu
+	holder=600 #Liu Bei
+}
+221.5.30={
+	liege=e_shu
+}
+223.6.10={
+	holder=610 #Liu Shan
+}
+
+#194 Hu Mao Claim

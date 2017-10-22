@@ -1,0 +1,17 @@
+# c_juyan
+
+# County Title
+title = c_juyan
+
+# Settlements
+max_settlements = 3
+
+b_juyan = castle
+b_xitang = tribal
+#b_jiayu = temple
+
+# Misc
+culture = yuezhi
+religion = tengri_pagan
+
+#History

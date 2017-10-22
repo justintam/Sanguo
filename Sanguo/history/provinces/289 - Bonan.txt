@@ -1,0 +1,17 @@
+# c_bonan
+
+# County Title
+title = c_bonan
+
+# Settlements
+max_settlements = 3
+
+b_bonan = tribal
+#b_shifu = city
+#b_dehong = temple
+
+# Misc
+culture = nanman
+religion = huojiao
+
+#History

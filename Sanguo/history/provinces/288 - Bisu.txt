@@ -1,0 +1,17 @@
+# c_bisu
+
+# County Title
+title = c_bisu
+
+# Settlements
+max_settlements = 3
+
+b_bisu = tribal
+#b_mozi = city
+#b_lincang = temple
+
+# Misc
+culture = nanman
+religion = huojiao
+
+#History

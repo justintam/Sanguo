@@ -1,0 +1,19 @@
+# c_yuancheng
+
+# County Title
+title = c_yuancheng
+
+# Settlements
+max_settlements = 5
+
+b_yuancheng = castle
+b_shating = city
+b_wulucheng = city
+#b_mingha = castle
+#b_wayin = city
+
+# Misc
+culture = han
+religion = taiping
+
+#History

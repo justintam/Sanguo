@@ -1,0 +1,18 @@
+# c_gexiang
+
+# County Title
+title = c_gexiang
+
+# Settlements
+max_settlements = 4
+
+b_gexiang = castle
+#b_gexiangcheng = city
+#b_fengxian = temple
+#b_zhouzhai = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

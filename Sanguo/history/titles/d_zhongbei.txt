@@ -1,0 +1,34 @@
+# e_northern
+1.1.1={
+	historical_nomad = yes
+}
+1.1.1={
+	liege=k_xianbei
+}
+49.1.1={
+	holder=1401 #Bianhe
+}
+54.1.1={
+	holder=1402 #Yuchoupen
+}
+121.1.1={
+	holder=1403 #Cizhiqian
+}
+132.1.1={
+	holder=0 #None
+}
+156.1.1={
+	holder=1405 #Tanshihuai
+}
+181.1.1={
+	holder=1407 #Helian
+}
+185.8.1={
+	holder=1408 #Kuitou
+}
+187.1.1={
+	holder=1400 #Budugen
+}
+233.1.1={
+	holder=1410 #Kebineng
+}

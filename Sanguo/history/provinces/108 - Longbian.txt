@@ -1,0 +1,28 @@
+# c_longbian
+
+# County Title
+title = c_longbian
+
+# Settlements
+max_settlements = 5
+
+b_longbian = castle
+#b_laxin = city
+#b_lachat = temple
+#b_kuning = castle
+#b_chudat = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History
+190.1.1={
+	b_laxin = city
+}
+200.1.1={
+	b_lachat = temple
+}
+208.1.1={
+	b_kuning = castle
+}

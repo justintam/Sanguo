@@ -1,0 +1,18 @@
+# c_yuanshi
+
+# County Title
+title = c_yuanshi
+
+# Settlements
+max_settlements = 4
+
+b_yuanshi = castle
+#b_fuji = city
+#b_buhui = temple
+#b_bubing = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

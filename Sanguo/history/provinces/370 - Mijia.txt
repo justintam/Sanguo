@@ -1,0 +1,17 @@
+# c_mijia
+
+# County Title
+title = c_mijia
+
+# Settlements
+max_settlements = 3
+
+b_mijia = tribal
+#b_miyou = city
+#b_manzu = temple
+
+# Misc
+culture = xianbei
+religion = tengri_pagan
+
+#History

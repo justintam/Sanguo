@@ -1,0 +1,500 @@
+targetted_decisions = {	
+	make_mark = {
+		ai_target_filter = sub_realm
+		filter = sub_realm
+		from_potential = {
+			is_landed = yes
+			real_tier = emperor
+			capital_scope = {
+				region = world_china
+			}
+			war = no
+		}
+		potential = {
+			is_female = no
+			is_landed = yes
+			NOT = { dynasty = none }
+			any_liege = { character = FROM }
+			NOT = {
+				any_demesne_title = {
+					OR = {
+						has_title_flag = noble_mark
+						has_title_flag = noble_duke
+						has_title_flag = noble_king
+					}
+				}
+			}
+			OR = {
+				AND = {
+					higher_tier_than = baron
+					prestige = 1000
+					piety = 500
+				}
+				AND = {
+					dynasty = FROM
+					prestige = 500
+					piety = 250
+				}
+			}
+			NOT = { trait = kinslayer }
+			NOT = { has_landed_title = k_confucian }
+		}
+		allow = {
+			FROM = {
+				has_regent = no
+				wealth = 250
+			}
+			NOR = {
+				has_character_modifier = nobility_accepted
+				has_character_modifier = nobility_refused
+			}
+		}
+		effect = {
+			FROM = {
+				wealth = -250
+			}
+			opinion = {
+				who = FROM
+				modifier = opinion_ennobled
+			}
+			hidden_tooltip = {
+				character_event = { id = DYN.11 }
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0.5 # Less likely to do it
+			}
+			modifier = {
+				factor = 1.5
+				prestige = 1500
+			}
+			modifier = {
+				factor = 1.5
+				piety = 750
+			}
+			modifier = {
+				factor = 1.25
+				is_councillor = yes
+			}
+			modifier = {
+				factor = 1.25
+				has_minor_title = title_commander
+			}
+			modifier = {
+				factor = 1.25
+				dynasty = FROM
+			}
+			modifier = {
+				factor = 1.25
+				is_child_of = FROM
+			}
+			modifier = {
+				factor = 1.25
+				trait = zealous
+			}
+			modifier = {
+				factor = 1.25
+				ROOT = {
+					is_friend = FROM
+				}
+			}
+			modifier = {
+				factor = 0.25
+				ROOT = {
+					is_foe = FROM
+				}
+			}
+			modifier = {
+				factor = 0.25
+				any_claim = { holder_scope = { character = FROM } }
+			}
+		}
+	}
+	
+	make_duke = {
+		ai_target_filter = sub_realm	
+		filter = sub_realm
+		from_potential = {
+			is_landed = yes
+			real_tier = emperor
+			capital_scope = {
+				region = world_china
+			}
+			war = no
+		}
+	
+		potential = {
+			is_female = no
+			is_landed = yes
+			NOT = { dynasty = none }
+			any_liege = { character = FROM }
+			NOT = {
+				any_demesne_title = {
+					OR = {
+						has_title_flag = noble_duke
+						has_title_flag = noble_king
+					}
+				}
+			}
+			OR = {
+				AND = {
+					any_demesne_title = {
+						has_title_flag = noble_mark
+					}
+					higher_tier_than = count
+					prestige = 2000
+					piety = 1000
+				}
+				AND = {
+					dynasty = FROM
+					prestige = 1000
+					piety = 500
+				}
+			}
+			NOT = { trait = kinslayer }
+			NOT = { has_landed_title = k_confucian }
+		}
+		allow = {
+			FROM = {
+				has_regent = no
+				wealth = 500
+			}
+			NOR = {
+				has_character_modifier = nobility_accepted
+				has_character_modifier = nobility_refused
+			}
+		}
+		effect = {
+			FROM = {
+				wealth = -500
+			}
+			opinion = {
+				who = FROM
+				modifier = opinion_ennobled
+			}
+			hidden_tooltip = {
+				character_event = { id = DYN.12 }
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0.5 # Less likely to do it
+			}
+			modifier = {
+				factor = 1.5
+				prestige = 2500
+			}
+			modifier = {
+				factor = 1.5
+				piety = 1250
+			}
+			modifier = {
+				factor = 1.25
+				is_councillor = yes
+			}
+			modifier = {
+				factor = 1.25
+				dynasty = FROM
+			}
+			modifier = {
+				factor = 1.25
+				is_child_of = FROM
+			}
+			modifier = {
+				factor = 1.25
+				trait = zealous
+			}
+			modifier = {
+				factor = 1.25
+				ROOT = {
+					is_friend = FROM
+				}
+			}
+			modifier = {
+				factor = 0.25
+				ROOT = {
+					is_foe = FROM
+				}
+			}
+			modifier = {
+				factor = 0.25
+				any_claim = { holder_scope = { character = FROM } }
+			}
+		}
+	}
+	
+	make_king = {
+		ai_target_filter = sub_realm	
+		filter = sub_realm
+		from_potential = {
+			is_landed = yes
+			real_tier = emperor
+			capital_scope = {
+				region = world_china
+			}
+			war = no
+		}
+	
+		potential = {
+			is_female = no
+			is_landed = yes
+			NOT = { dynasty = none }
+			any_liege = { character = FROM }
+			NOT = {
+				any_demesne_title = {
+					has_title_flag = noble_king
+				}
+			}
+			OR = {
+				AND = {
+					any_demesne_title = {
+						has_title_flag = noble_duke
+					}
+					higher_tier_than = duke
+					prestige = 4000
+					piety = 2000
+				}
+				AND = {
+					dynasty = FROM
+					prestige = 2000
+					piety = 1000
+				}
+			}
+			NOT = { trait = kinslayer }
+			NOT = { has_landed_title = k_confucian }
+		}
+		allow = {
+			FROM = {
+				has_regent = no
+				wealth = 1000
+			}
+			NOR = {
+				has_character_modifier = nobility_accepted
+				has_character_modifier = nobility_refused
+			}
+		}
+		effect = {
+			FROM = {
+				wealth = -1000
+			}
+			opinion = {
+				who = FROM
+				modifier = opinion_ennobled
+			}
+			hidden_tooltip = {
+				character_event = { id = DYN.13 }
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0.5 # Less likely to do it
+			}
+			modifier = {
+				factor = 1.5
+				prestige = 5000
+			}
+			modifier = {
+				factor = 1.5
+				piety = 2500
+			}
+			modifier = {
+				factor = 1.25
+				is_councillor = yes
+			}
+			modifier = {
+				factor = 1.25
+				dynasty = FROM
+			}
+			modifier = {
+				factor = 1.25
+				is_child_of = FROM
+			}
+			modifier = {
+				factor = 1.25
+				trait = zealous
+			}
+			modifier = {
+				factor = 1.25
+				ROOT = {
+					is_friend = FROM
+				}
+			}
+			modifier = {
+				factor = 0.25
+				ROOT = {
+					is_foe = FROM
+				}
+			}
+			modifier = {
+				factor = 0.25
+				any_claim = { holder_scope = { character = FROM } }
+			}
+		}
+	}
+	
+	make_emp = {
+		ai_target_filter = sub_realm	
+		filter = sub_realm
+		from_potential = {
+			is_ruler = yes
+			has_landed_title = k_confucian
+			capital_scope = {
+				region = world_china
+			}
+			war = no
+		}
+		potential = {
+			is_female = no
+			is_landed = yes
+			NOT = { dynasty = none }
+			any_liege = { character = FROM }
+			OR = {
+				AND = {
+					any_demesne_title = {
+						has_title_flag = noble_king
+					}
+					higher_tier_than = duke
+					prestige = 10000
+					piety = 5000
+				}
+				AND = {
+					dynasty = FROM
+					prestige = 5000
+					piety = 2500
+				}
+			}
+			NOT = { trait = kinslayer }
+			NOT = { has_landed_title = k_confucian }
+		}
+		allow = {
+			NOR = {
+				has_character_modifier = nobility_accepted
+				has_character_modifier = nobility_refused
+			}
+		}
+		effect = {
+			FROM = {
+				prestige = -1000
+			}
+			###
+			set_character_flag = founded_empire
+			primary_title = {
+				add_law = imperial_administration
+			}
+			k_confucian = {
+				holder_scope = {
+					abdicate_to = ROOT
+				}
+			}
+			if = {
+				limit = { is_married=yes }
+				spouse = {
+					c_empress = {
+						holder_scope = {
+							abdicate_to = PREVPREV
+						}
+					}
+				}
+			}
+			character_event = { id = DYN.1 }
+			if = {
+				limit = { NOT = { religion = confucian } }
+				any_realm_lord = {
+					limit = { religion = confucian }
+					ROOT = {
+						character_event = { id = EMP.9 }
+					}
+				}
+			}
+			
+			custom_tooltip = { text = TOOLTIPmake_emp }
+			chronicle = {
+				entry = CHRONICLE_MADE_EMP
+				portrait = [Root.GetID]
+			}
+			
+			any_demesne_title = {
+				limit = {
+					OR = {
+						has_title_flag = noble_mark
+						has_title_flag = noble_duke
+						has_title_flag = noble_king
+						has_title_flag = warlord_flag
+					}
+				}
+				activate_title = { title = THIS status = no }
+				unsafe_destroy_landed_title = THIS
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 0.05 # Less likely to do it
+			}
+			modifier = {
+				factor = 1.5
+				prestige = 15000
+			}
+			modifier = {
+				factor = 1.5
+				piety = 7500
+			}
+			modifier = {
+				factor = 1.25
+				is_councillor = yes
+			}
+			modifier = {
+				factor = 1.25
+				has_minor_title = title_commander
+			}
+			modifier = {
+				factor = 1.25
+				dynasty = FROM
+			}
+			modifier = {
+				factor = 1.25
+				is_child_of = FROM
+			}
+			modifier = {
+				factor = 1.25
+				trait = zealous
+			}
+			modifier = {
+				factor = 1.25
+				ROOT = {
+					is_friend = FROM
+				}
+			}
+			modifier = {
+				factor = 0.25
+				ROOT = {
+					is_foe = FROM
+				}
+			}
+			modifier = {
+				factor = 0.25
+				any_claim = { holder_scope = { character = FROM } }
+			}
+		}
+	}
+}

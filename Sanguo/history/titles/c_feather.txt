@@ -1,0 +1,26 @@
+1.1.1={
+	active=no
+}
+184.1.1={
+	active=yes
+	holder=580 #Gan Ning
+}
+190.1.1={
+	liege=k_yi
+}
+194.4.1={
+	liege=k_jing
+}
+195.1.1={
+	liege=d_jiangxia
+}
+207.4.1={
+	liege=k_sun
+}
+211.1.1={
+	liege=e_sun
+}
+215.1.1={
+	holder=0 #None
+	active=no
+}

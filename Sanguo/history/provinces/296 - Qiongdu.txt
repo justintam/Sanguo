@@ -1,0 +1,17 @@
+# c_qiongdu
+
+# County Title
+title = c_qiongdu
+
+# Settlements
+max_settlements = 3
+
+b_qiongdu = tribal
+#b_qiongdufu = city
+#b_tengchong = temple
+
+# Misc
+culture = nanman
+religion = huojiao
+
+#History

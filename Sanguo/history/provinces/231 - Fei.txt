@@ -1,0 +1,18 @@
+# c_fei
+
+# County Title
+title = c_fei
+
+# Settlements
+max_settlements = 4
+
+b_fei = castle
+b_bengting = city
+#b_fulian = temple
+#b_yinshou = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

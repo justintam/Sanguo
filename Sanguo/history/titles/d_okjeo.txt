@@ -1,0 +1,24 @@
+# e_korea
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=k_okjeo
+}
+56.1.1={
+	liege=k_goguryeo
+	holder=2211 #Taejo
+}
+146.1.1={
+	holder=2212 #Chadae
+}
+165.1.1={
+	holder=2213 #Sindae
+}
+179.1.1={
+	holder=2215 #Gogukcheon
+}
+197.1.1={
+	holder=2216 #Sansang
+}

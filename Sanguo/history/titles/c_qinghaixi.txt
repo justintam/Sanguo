@@ -1,0 +1,10 @@
+# k_qiang
+1.1.1={
+	historical_nomad = yes
+}
+1.1.1={
+	liege=d_qinghai
+}
+184.1.1={
+	holder=1700 # Cheliji
+}

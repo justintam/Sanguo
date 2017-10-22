@@ -1,0 +1,18 @@
+# c_wuzhang
+
+# County Title
+title = c_wuzhang
+
+# Settlements
+max_settlements = 4
+
+b_wuzhang = castle
+b_mei = city
+#b_shitou = temple
+#b_maili = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

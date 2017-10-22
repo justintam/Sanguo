@@ -1,0 +1,21 @@
+# c_kuaiji
+
+# County Title
+title = c_kuaiji
+
+# Settlements
+max_settlements = 4
+
+b_huiji = castle
+b_huijifu = tribal
+#b_chengmen = castle
+#b_lanting = city
+
+# Misc
+culture = minyue
+religion = animist
+
+#History
+204.1.1={
+	b_chengmen = castle
+}

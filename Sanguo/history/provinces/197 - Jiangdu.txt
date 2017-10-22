@@ -1,0 +1,18 @@
+# c_jiangdu
+
+# County Title
+title = c_jiangdu
+
+# Settlements
+max_settlements = 4
+
+b_jiangdu = castle
+b_donglingting = city
+#b_fosan = temple
+#b_taiyan = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

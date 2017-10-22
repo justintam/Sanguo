@@ -1,0 +1,17 @@
+# c_wulian
+
+# County Title
+title = c_wulian
+
+# Settlements
+max_settlements = 3
+
+b_wulian = tribal
+#b_wulianfu = city
+#b_nanjian = temple
+
+# Misc
+culture = nanman
+religion = huojiao
+
+#History

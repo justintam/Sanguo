@@ -1,0 +1,17 @@
+# c_fanjing
+
+# County Title
+title = c_fanjing
+
+# Settlements
+max_settlements = 3
+
+b_fancheng = castle
+#b_making = city
+#b_taibaizhen = temple
+
+# Misc
+culture = han
+religion = confucian
+
+#History

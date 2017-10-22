@@ -1,0 +1,33 @@
+name = "6th Liang Province Rebellion"
+
+casus_belli={
+	actor=805
+	recipient=100
+	casus_belli=invasion
+	landed_title=k_liang
+	date=188.12.1
+}
+
+188.12.1 = {
+	add_defender = 100 #He Jin
+	add_defender = 500 #Sun Jian
+	add_defender = 300 #Dong Zhuo
+	add_defender = 30 #Emperor Ling
+	add_defender = 105 #Huangfu Song
+	add_attacker = 805 #Wang Guo
+	add_attacker = 2420 #Shaka
+	add_attacker = 804 #Dianyu
+}
+
+189.5.1={
+	rem_defender = 500 #Sun Jian
+	rem_defender = 300 #Dong Zhuo
+	rem_defender = 30 #Emperor Ling
+	rem_defender = 105 #Huangfu Song
+	rem_defender = 100 #He Jin
+	rem_attacker = 2420 #Shaka
+	rem_attacker = 804 #Dianyu
+	rem_attacker = 805 #Wang Guo
+}
+
+   

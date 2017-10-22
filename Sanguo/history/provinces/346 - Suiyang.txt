@@ -1,0 +1,19 @@
+# c_suiyang
+
+# County Title
+title = c_suiyang
+
+# Settlements
+max_settlements = 5
+
+b_suiyang = castle
+b_xincheng = city
+b_yangliangju = city
+#b_suiyangfu = castle
+#b_suiyangdi = city
+
+# Misc
+culture = han
+religion = taiping
+
+#History

@@ -1,0 +1,121 @@
+man = {
+		graphical_cultures = { nanmangfx muslimgfx }
+	
+	nanman = {
+		graphical_cultures = { nanmangfx muslimgfx }
+		
+		color = { 0.1 0.8 0.3 }
+		
+		male_names = {
+			Ahuinan An
+			Che Chi Chiyou
+			Dalaidongzhu Damu Dong Dongcan Dongtuna Dulu Duosi
+			Ehuan
+			Feng Fengli
+			Ganzheng Geluofeng Gui
+			Hui Huli
+			Jie Jinhuansanjie
+			Lang Leiao Liulang Liumiao Liumo Long Longdan
+			Longyan Lucheng Lulei
+			Maisi Man Mang Mangyachang Miao Miu Mo Mulu
+			Nan Nang Ni
+			Piluo Piluoge
+			Ren Rengui Renmin
+			Sanjie Shamoke
+			Timieling
+			Wan Wentong Wutugu
+			Xi Xia Xian Xianli Xin Xinuluo
+			Yanchang Yan Yilang You
+		}
+		female_names = {
+			Ai
+			Be Besang Bi
+			Cua
+			Hua Huaman
+			Mai Maiv Man Mang Meng
+			Nkau Npaim Npau
+			Ran Ranman Rong
+			Sang Song Sua
+			Xia
+			Yi
+			Zhu Zhurong
+		}
+		
+		from_dynasty_prefix = "of "
+		founder_named_dynasties = yes
+		
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+		pat_grf_name_chance = 35
+		mat_grf_name_chance = 15
+		father_name_chance = 25
+		
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+		pat_grm_name_chance = 35
+		mat_grm_name_chance = 15
+		mother_name_chance = 25
+
+		modifier = nanman_culture_modifier
+	}
+	
+	bandunman = {
+		graphical_cultures = { nanmangfx muslimgfx }
+		
+		color = { 1.00 0.2 0.7 }
+		
+		male_names = {
+			Ai
+			Ba Baihu Ban Bao Bo
+			Che Chi Chiyou
+			Dang Du Duhu
+			Feng Fu Fuhu
+			Guang Gui Guiyihou
+			Hei Heihu Honghu Hou Hu Huo
+			Jin Jing Jiu Jun
+			Lei Leiqian Li Lin Linjun Liu
+			Man Mang Mangdang Miao Miu Mu
+			Nijian
+			Pan Pang Pangu Panhu Pugu
+			Qi Qian Qinnijian Quren Qu Quzhi
+			Ren
+			Sheru Shi Shiwen Shixin Shou Sun Suo
+			Tannijian Tao Te Tuan
+			Wen Wu Wutugu Wuxiang
+			Xiang Xini Xiong Xiu Xuan Xuanxiu
+			Yang Yangsun Yao Yei You Yougong Yuan Yuanyue Yue
+			Zai Zhan Zhanshan Zhao Zhaowen Zhong Zhongyao
+		}
+		female_names = {
+			Chan
+			Da Dawa De Dechan
+			Er Erma
+			Jiu Jiutian
+			Kalden
+			Li Luo
+			Ming Mingna
+			Na Ni Nu
+			Pema
+			Ran Ren Rin Rinzan
+			Shan
+			Tian
+			Wa
+			Xuan Xuannu
+			Yan
+			Zan
+		}
+		
+		from_dynasty_prefix = "of "
+		founder_named_dynasties = yes
+		
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+		pat_grf_name_chance = 35
+		mat_grf_name_chance = 15
+		father_name_chance = 25
+		
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+		pat_grm_name_chance = 35
+		mat_grm_name_chance = 15
+		mother_name_chance = 25
+
+		modifier = bandunman_culture_modifier
+	}
+}

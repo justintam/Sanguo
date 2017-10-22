@@ -1,0 +1,21 @@
+# c_jincheng
+
+# County Title
+title = c_jincheng
+
+# Settlements
+max_settlements = 4
+
+b_yuanya = castle
+b_baohan = temple
+#b_naxi = city
+#b_gaodu = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History
+194.1.1={
+	b_naxi = city
+}

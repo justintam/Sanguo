@@ -1,0 +1,21 @@
+# c_sha
+
+# County Title
+title = c_sha
+
+# Settlements
+max_settlements = 4
+
+b_sha = castle
+#b_shacheng = city
+#b_fangjiu = temple
+#b_shexing = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History
+194.1.1={
+	b_shacheng = city
+}

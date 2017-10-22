@@ -1,0 +1,20 @@
+name = "4th Yellow Turban Battle for Wan"
+
+casus_belli={
+	actor=219
+	recipient=100
+	casus_belli=invasion
+	landed_title=c_wan
+	date=184.10.1
+}
+
+184.10.1={
+	add_defender = 100 #He Jin
+	add_defender = 117 #Xu Qiu
+	add_attacker = 219 #Sun Zhong
+}
+184.12.1={
+	rem_defender = 117 #Xu Qiu
+	rem_defender = 100 #He Jin
+	rem_attacker = 219 #Sun Zhong
+}

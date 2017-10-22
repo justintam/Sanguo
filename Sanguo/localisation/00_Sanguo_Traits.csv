@@ -1,0 +1,166 @@
+#Duel
+duel_poor_warrior;Poor Fighter;Mauvais combattant;;;Luchador malo;;;;;;;;;x,,
+duel_trained_warrior;Trained Fighter;Combattant entraîné;;;Luchador competente;;;;;;;;;x,,
+duel_skilled_warrior;Skilled Fighter;Combattant talentueux;;;Luchador habilidoso;;;;;;;;;x,,
+duel_master_warrior;Formidable Fighter;Combattant formidable;;;Luchador legendario;;;;;;;;;x,,
+duel_poor_warrior_desc;This character understands the basics of combat, but is sloppy, overconfident, and inexperienced.;Ce personnage comprend les bases du combat, mais il est négligent, présomptueux et inexpérimenté.;;;Este personaje entiende las bases de un combate pero es descuidado, muestra exceso de confianza y es inexperto.;;;;;;;;;x
+duel_trained_warrior_desc;This character has received training in the art of combat. While no master, they can hold their own in a fight.;Ce personnage a suivit un entrainement aux arts de la guerre. S'il n'est pas un maître, il peut se débrouiller dans un combat.;;;Este personaje ha recibido entrenamiento en el arte del combate. No es un maestro, pero puede mantenerse en una pelea.;;;;;;;;;x
+duel_skilled_warrior_desc;This character possesses a certain talent for battle and swordplay.;Ce personnage possède un certain talent pour les batailles et les duels à l'épée.;;;Este personaje posee un cierto talento para la batalla y en el manejo de la espada.;;;;;;;;;x,,
+duel_master_warrior_desc;This character is one of the greatest warriors in the known world, favored by heaven and dreaded on the battlefield.;;;;;;;;;;;;;x,
+#
+tea_master;Tea Master;Maître du thé;Teemeister;;Maestro del té;;;;;;;;;x
+tea_master_desc;This character has mastered the ceremonial art of tea brewing.;Ce personnage a maîtrisé l'art du brassage de cérémonie du thé.;Dieser Charakter hat die zeremonielle Kunst der Tee brauen gemeistert.;;A este personaje ha dominado el arte de preparar el té ceremonial.;;;;;;;;;x
+painter;Painter;Peintre;Maler;;Pintor;;;;;;;;;x
+painter_desc;This character has a creative soul that seeks to capture the essence of creation on parchment and canvas.;Ce personnage a une âme créatrice qui cherche à capturer l'essence de la création sur parchemin et toile.;Dieser Charakter hat eine kreative Seele, das Wesen der Schöpfung auf Pergament und Leinwand zu bannen sucht.;;A este personaje tiene un alma creativa que intenta captar la esencia de la creación en pergamino y lona.;;;;;;;;;x
+musician;Musician;Musicien;Musiker;;Músico;;;;;;;;;x
+musician_desc;This character is known as an expert among minstrels.;Ce personnage est connu comme un spécialiste parmi les ménestrels.;Dieser Charakter wird als Spezialist unter Spielleute bekannt.;;A este personaje es conocido como un especialista entre juglares.;;;;;;;;;x
+calligraphist;Calligraphist;Calligraphiste;Kalligraph;;Caligrafista;;;;;;;;;x
+calligraphist_desc;This character has spent long hours practising the art of writing.;Ce personnage a passé de longues heures à pratiquer l'art de l'écriture.;Dieser Charakter hat lange Stunden damit verbracht, praktizieren die Kunst des Schreibens.;;A este personaje ha pasado largas horas practicando el arte de la escritura.;;;;;;;;;x
+go_player;Go Player;Joueur de go;Go-Spieler;;Jugador de Go;;;;;;;;;x
+go_player_japanese;Igo Player;Joueur de Igo;Igo-Spieler;;Jugador de Igo;;;;;;;;;x
+go_player_chinese;Yì Player;Joueur de Yì;Yì-Spieler;;Jugador de Yì;;;;;;;;;x
+go_player_korean_group;Baduk Player;Joueur de Baduk;Baduk-Spieler;;Jugador de Baduk;;;;;;;;;x
+go_player_desc;This character has become an expert strategist through mastering the game Go.;Ce personnage est devenu un stratège à travers la maîtrise du jeu de go.;Dieser Charakter hat sich zu einem Experten-Stratege über die Beherrschung der Go-Spiel.;;A este personaje se ha convertido en un estratega experto a través de dominar el juego de Go.;;;;;;;;;x
+ruthless;Ruthless;Impitoyable;Skrupellos;;Implacable;;;;;;;;;x
+ruthless_desc;This character is not bound by honour.;Ce personnage n'est pas lié par l'honneur.;Dieses Charakter wird nicht durch Ehre gebunden.;;A este personaje no está obligado por honor.;;;;;;;;;x
+chivalrous;Chivalrous;Chevaleresque;Ritterlich;;Caballeroso;;;;;;;;;x
+chivalrous_desc;This character is the embodiment of chivalry.;Ce personnage est l'incarnation de la chevalerie.;Dieses Charakter ist die Verkörperung des Rittertums.;;A este personaje es la encarnación de la caballería.;;;;;;;;;x
+tall;Tall;Tall;Tall;;Tall;;;;;;;;;x
+tall_desc;This character is of considerable stature, taller than most.; This character is of considerable stature, taller than most.; This character is of considerable stature, taller than most.;; This character is of considerable stature, taller than most.;;;;;;;;;x
+deaf;Deaf;Deaf;Deaf;;Deaf;;;;;;;;;x
+deaf_desc;This character is hard of hearing, or, worse, cannot hear at all. Such a disability limits their ability to function.;x;x;;x;;;;;;;;;x,
+fertile;Fertile;Fertile;Fertile;;Fertile;;;;;;;;;x
+fertile_desc;This character is unusually fertile, and seems to be made for producing healthy heirs.;;;;;;;;;;;;;x
+fashionable;Fashionable;Chic;;;;;;;;;;;;;x
+fashionable_desc;This character is vain about their appearance, and spends much time on their appearance.;;;;;;;;;;;;;;x
+rude;Rude;Grossier;;;;;;;;;;;;;x
+rude_desc;This character is known to say mean things about people, and is known for their unruly behavior.;;;;;;;;;;;;;;x
+stubborn;Stubborn;Obstiné;;;;;;;;;;;;;x
+stubborn_desc;This person is as stubborn and unmovable as a mule.;;;;;;;;;;;;;;x
+honorable;Honorable;Honorable;;;;;;;;;;;;;x
+honorable_desc;This character has a reputation of being true to his word.;;;;;;;;;;;;;;x
+passionate;Passionate;Egoiste;;;;;;;;;;;;;x
+passionate_desc;This person has found something truly worth dedicating their life towards.;;;;;;;;;;;;;;x
+selfish;Selfish;Egoiste;;;;;;;;;;;;;x
+selfish_desc;This person only has concern for their own needs and desires.;;;;;;;;;;;;;;x
+martial_artist;Martial Artist;;;;;;;;;;;;;;x
+martial_artist_desc;This person has for a long time studied the fighting arts and has now mastered many forms of fighting.;;;;;;;;;;;;;;x
+inner_court;Inner Court;;;;;;;;;;;;;;x
+inner_court_desc;This person dwells within the sanctuaries of the Inner Palace, far away from the realities of the outer world.;;;;;;;;;;;;;;x
+sympathy_confucian;Sympathy for Confucians;;;;;;;;;;;;;;x
+sympathy_confucian_desc;This character has sympathies towards Confucians and their like.;;;;;;;;;;;;;;x
+sympathy_tao;Sympathy for Taoists;;;;;;;;;;;;;;x
+sympathy_tao_desc;This character has sympathies towards Taoists and their like.;;;;;;;;;;;;;;x
+excommunicated;Censored;;;;;;;;;;;;;;x
+excommunicated_desc;This character has been censored - excluded from the bureaucracy - a terrible stain on honor and respectability.;;;;;;;;;;;;;;x
+dishonorable;Dishonorable;Déshonorable;Unehrenhaft;Dishonorable;Dishonorable;;;;;;;;;x
+dishonorable_desc;This character likes to solve problems through assassinations and is rather poorly regarded because of it.;La tendance de ce personnage à user d’assassinats pour résoudre ses problèmes lui vaut une réputation exécrable;Dieser Charakter behebt gern Probleme durch Morde und wird wegen dieser eher schlecht angesehen.;This character likes to solve problems through assassinations and is rather poorly regarded because of it.;This character likes to solve problems through assassinations and is rather poorly regarded because of it.;;;;;;;;;x
+dyn_dishonorable;Dynastic Stain;Souillure dynastique;Dynastischer Fleck;Dynastic Stain;Dynastic Stain;;;;;;;;;x
+dyn_dishonorable_desc;This character's dynasty has been branded by the Emperor as traitors and criminals.;;;;;;;;;x
+destined;Destined;;;;;;;;;;;;;;x
+destined_desc;This character is destined for greatness.;;;;;;;;;;;;;;x
+familyperson;Family Person;Attaché(e) à la famille;;;;;;;;;;;;x
+familyperson_desc;This character will do more than most for their kinsmen.;Ce personnage fera tout ce qu'il peut pour sa parenté.;;;;;;;;;;;;x
+#Fate
+fate_admin;Famed Administrator;;;;;;;;;;;;;;x
+fate_admin_desc;This character is famous for their administrative abilities.;;;;;;;;;;;;;;x
+fate_duel;Famed Duelist;;;;;;;;;;;;;;x
+fate_duel_desc;This character is famous for their single combat abilities.;;;;;;;;;;;;;;x
+fate_lead;Famed Warlord;;;;;;;;;;;;;;x
+fate_lead_desc;This character is famous for their military leadership and tactics.;;;;;;;;;;;;;;x
+fate_strat;Famed Strategist;;;;;;;;;;;;;;x
+fate_strat_desc;This character is famous for their military strategy and governance.;;;;;;;;;;;;;;x
+fate_war;Famed General;;;;;;;;;;;;;;x
+fate_war_desc;This character is famous for their military tactics and ambition.;;;;;;;;;;;;;;x
+fate_loved;Famed Hero;;;;;;;;;;;;;;x
+fate_loved_desc;This character is famous for being a representative of the people.;;;;;;;;;;;;;;x
+fate_sex;Famed Rake;;;;;;;;;;;;;;x
+fate_sex_desc;This character is famous for chasing tail and sexual conquests. This person is sure to have many admirers...;;;;;;;;;;;;;;x
+fate_plot;Famed Plotter;;;;;;;;;;;;;;x
+fate_plot_desc;This character is famous their espionage and plotting capabilities.;;;;;;;;;;;;;;x
+fate_teach;Famed Scholar;;;;;;;;;;;;;;x
+fate_teach_desc;This character is famous their learning and philosophical abilities.;;;;;;;;;;;;;;x
+stillborn;Stillborn;Mort-né;;;;;;;;;;;;x;,,,,
+stillborn_desc;This child was dead at birth.;Cet enfant est mort à la naissance.;;;;;;;;;;;;x;,,,,
+stillborn_death;stillborn;mort-né.;;;;;;;;;;;;x;,,,,
+crippled;Crippled;Estropié;;;;;;;;;;;;x
+crippled_desc;This character has suffered a serious injury in the past, leaving them partially disabled. Movement requires considerable willpower.;;;;;;;;;;;;;x
+blinded_age;Blind from Age;Aveugle;;;;;;;;;;;;x
+blinded_age_desc;This character is old and their eyes no longer have the ability to see;Ce personnage est âgé et a perdu la vue;;;;;;;;;;;;x
+disfigured;Disfigured;Défiguré;;;;;;;;;;;;x
+disfigured_desc;Either through illness, accident or battle, this character has suffered an injury which has healed, leaving an ugly disfigurement.;;;;;;;;;;;;;x,
+disfigured_death;from a grievous disfigurement;d'une grave défiguration;;;;;;;;;;;;x
+eunuch;Eunuch;Eunuque;Eunuch;;Eunuco;;;;;;;;;x
+eunuch_desc;This character has been castrated and is a eunuch.;Ce personnage a été castré et est un eunuque.;Dieser Charakter wurde kastriert und ist ein Eunuch.;;Este personaje ha sido castrado y es un eunuco.;;;;;;;;;x
+blinded;Blinded;Aveuglé;Geblendet;;Cegado;;;;;;;;;x
+blinded_desc;This character has been permanently blinded and cannot see.;Ce personnage est devenu aveugle et ne peut pas voir.;Dieser Charakter wurde seines Augenlichts beraubt und kann nicht sehen.;;Este personaje ha sido permanentemente cegado y no puede ver.;;;;;;;;;x
+born_in_the_purple;Born in the Yellow;;;;;;;;;;;;;x
+born_in_the_purple_desc;This character is born of the Emperor. They stand higher in the eyes of the court.;;;;;;;;;;;;;x
+crusader;Upright;;;;;;;;;;;;;x
+crusader_desc;This character is held in high esteem as a veteran of an Imperial campaign.;;;;;;;;;;;;;x
+eagle_warrior;Eagle Knight;Guerrier aigle;Adlerritter;;Caballero del águila;;;;;;;;;x
+eagle_warrior_desc;The life of Eagle warriors is one of constant battle	 and the Eagle Knights are the bravest and most fearsome. Their primary purpose is to capture prisoners to be sacrificed to their Gods.;;;;;;;;;;;;;x
+mujahid;Heavenly Knight;;;;;;;;;;;;;x
+mujahid_desc;This character is a veteran of a Divine War.;;;;;;;;;;;;;x
+sun_warrior;Warrior of the Sun;Guerrier du Soleil;Krieger der Sonne;;Guerrero del sol;;;;;;;;;x
+sun_warrior_desc;The Warriors of the Sun strike with all the fiery power of the Sun God Himself.;;;;;;;;;;;;;x
+tengri_warrior;Skylord;Seigneur du Ciel;Himmelsfürst;;Señor del cielo;;;;;;;;;x
+tengri_warrior_desc;The epitome of a Steppe Warrior	 this character has fought for the glory of Tengrism.;La quintessence pour tout guerrier des steppes	 ce personnage a combattu pour la gloire du tengrisme.;Der Inbegriff des Steppenkriegers. Dieser Charakter hat für den Ruhm des Tengrismus gekämpft.;;Este personaje	 paradigma de un Guerrero de la estepa	 ha luchado por la gloria del tengrismo.;;;;;;;;;x																																																										
+tyrant;Tyrant;;;;;;;;;;;;;x
+tyrant_desc;This character is viewed as a tyrant. Ambitious and dangerous.;;;;;;;;;;;;;x
+locked;Immortal Wizard;;;;;;;;;;;;;x
+locked_desc;This character is immortal. You cannot interact with him.;;;;;;;;;;;;;x
+refuge;Refugee;;;;;;;;;;;;;x
+refuge_desc;This character is currently hiding away from the land's chaos.;;;;;;;;;;;;;x
+detached_priest;Distinguished Talent;;;;;;;;;;;;;x
+detached_priest_desc;This character has achieved the basic requirement to perform civil tasks, but he's probably not the best scholar.;;;;;;;;;;;;;x
+martial_cleric;Recommended Scholar;;;;;;;;;;;;;x
+martial_cleric_desc;This character has been recommened at the county level and is suitable for local office.;;;;;;;;;;;;;x
+scholarly_theologian;Advanced Scholar;;;;;;;;;;;;;x
+scholarly_theologian_desc;This character has achieved a high grading within the civil service.;;;;;;;;;;;;;x
+mastermind_theologian;Distinguished Scholar;;;;;;;;;;;;;x
+mastermind_theologian_desc;This character managed to achieve the highest scores possible. They shall serve the Empire well.;;;;;;;;;;;;;x
+gentleman_0;Filial and Incorrupt;;;;;;;;;;;;;x
+gentleman_0_desc;This individual has been selected as filial and incorrupt within his district and is able to take the Imperial examinations.;;;;;;;;;;;;;x
+gentleman_1;Gentleman Cadet;;;;;;;;;;;;;x
+gentleman_1_desc;This individual has passed the basic court exams and now serves as a cadet to the court.;;;;;;;;;;;;;x
+gentleman_2;Gentleman;;;;;;;;;;;;;x
+gentleman_2_desc;This individual is a full gentleman capable of carrying out independent tasks and holding office.;;;;;;;;;;;;;x
+gentleman_3;Court Gentleman;;;;;;;;;;;;;x
+gentleman_3_desc;This individual has reached the highest levels of service within the Imperial capital and is given priority for high office.;;;;;;;;;;;;;x
+drunkard;Drunkard;Ivrogne;Säufer;;Borracho;;;;;;;;;x
+drunkard_desc;This character has a tendency to overdo it with alcohol.;Ce personnage est un véritable poivrot.;Dieser Charakter ist völlig versoffen.;;Este personaje es un borrachín.;;;;;;;;;x
+temperate;Temperate;Tempéré;Gemäßigt;;Moderado;;;;;;;;;x
+temperate_desc;This character practices moderation - a valuable trait in rulers and Stewards.;;;;;;;;;;;;;x
+greedy;Greedy;Avare;Gierig;;Avaricioso;;;;;;;;;x
+greedy_desc;The character is infamously greedy. Although not a respectable virtue, it does help squeeze out some extra tax income.;;;;;;;;;;;;;x
+charitable;Charitable;Charitable;Wohltätig;;Generoso;;;;;;;;;x
+charitable_desc;This character is famously charitable. They are often generous and sometimes even self-sacrificing.;;;;;;;;;;;;;x
+slothful;Slothful;Paresseux;Faul;;Perezoso;;;;;;;;;x
+slothful_desc;This character is shockingly lazy. Beyond ignoring duties, this character may even fail to take of themselves.;;;;;;;;;;;;;x
+diligent;Diligent;Travailleur;Fleißig;;Aplicado;;;;;;;;;x
+diligent_desc;This character is dutiful and diligent.;;;;;;;;;;;;;x
+envious;Envious;Envieux;Neidisch;;Envidioso;;;;;;;;;x
+envious_desc;This character is envious and will be jealous of any gain not their own.;;;;;;;;;;;;;x
+kind;Kind;Aimable;Gütig;;Amable;;;;;;;;;x
+kind_desc;This character is kind and full of empathy, popular with vassals, but a rather poor Spymaster.;;;;;;;;;;;;;x,,
+wroth;Wroth;Coléreux;Zornig;;Iracundo;;;;;;;;;x
+wroth_desc;This character has a hot temper and tends to lash out at those around them.;;;;;;;;;;;;;x
+patient;Patient;Patient;Geduldig;;Paciente;;;;;;;;;x
+patient_desc;Patient characters are just a little bit better at almost everything.;;;;;;;;;;;;;x
+cynical;Cynical;Cynique;Zynisch;;Cínico;;;;;;;;;x
+cynical_desc;This character is cynical of the professed wisdoms of learned people. Cynical characters tend to annoy zealous individuals.;;;;;;;;;;;;;x
+zealous;Zealous;Zélé;Eifrig;;Fanático;Fanatismo;;;;;;;;x
+zealous_desc;This character burns with passion and loyalty for whichever philosophy or faith guides them.;;;;;;;;;;;;;x
+gluttonous;Gluttonous;Glouton;Gefräßig;;Glotón;Avidità;;;;;;;;x
+gluttonous_desc;Gluttony has several negative effects, including the enmity of the officialdom as well as members of the opposite sex.;;;;;;;;;;;;;x
+lustful;Lustful;Concupiscent;Lüsternd;;Lujurioso;Lussuria;;;;;;;;x
+lustful_desc;Lust drives this character and may cause problems out of the marital bed...;;;;;;;;;;;;;x
+chaste;Chaste;Chaste;Keusch;;Casto;Castità;;;;;;;;x
+chaste_desc;Chaste characters are admired for their virtue and are unlikely to have extramarital affairs.;;;;;;;;;;;;;x
+proud;Proud;Orgueilleux;Stolz;;Orgulloso;Orgoglio;;;;;;;;x
+proud_desc;Proud characters tend to be ambitious and work hard to increase their Prestige.;;;;;;;;;;;;;x
+humble;Humble;Humble;Bescheiden;;Humilde;Umiltà;;;;;;;;x
+humble_desc;Humble characters gain [Player.Religion.GetPietyName] whereas the proud gain Prestige. Humble characters tend to dislike prideful ones.;;;;;;;;;;;;;x
+back_seat_leader;Leads from the Rear;Meneur depuis l'arrière;;;;;;;;;;;;x
+back_seat_leader_desc;This character prefers to lead from the back, so they can get a better overall picture of the battlefield and not risk harm to themself.;Ce personnage préfère commander depuis l'arrière, il peut ainsi avoir une vision plus générale du champ de bataille… et ne pas risquer sa vie;;;;;;;;;;;;x,,

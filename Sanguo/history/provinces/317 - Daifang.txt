@@ -1,0 +1,19 @@
+# c_daifang
+
+# County Title
+title = c_daifang
+
+# Settlements
+max_settlements = 5
+
+b_taebang = tribal
+#b_daeguan = city
+#b_anak = temple
+#b_sariwon = castle
+#b_pyoksong = city
+
+# Misc
+culture = samhan
+religion = confucian
+
+#History

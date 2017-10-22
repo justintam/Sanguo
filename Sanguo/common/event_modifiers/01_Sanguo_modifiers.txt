@@ -1,0 +1,190 @@
+#Faction
+faction_install_chancellor_ultimatum_timer = { icon = 1 }
+
+battlefield_fight = {
+	monthly_character_prestige = 0.01
+	icon = 1
+}
+force_trained = {
+	icon = 1
+}
+training_son = {
+	icon = 1
+}
+
+#Clan
+sacrifice_ancestor = {
+	monthly_character_piety = 0.5
+	monthly_character_prestige = 0.1
+	icon = 8
+}
+clan_patriarch = {
+	monthly_character_prestige = 0.5
+	icon = 8
+}
+clan_voter = {
+	monthly_character_prestige = 0.25
+	icon = 8
+}
+
+#Nobility
+nobility_accepted = {
+	town_opinion = -50
+	vassal_opinion = 50
+	general_opinion = -25
+	icon = 9
+}
+
+nobility_refused = {
+	town_opinion = 25
+	vassal_opinion = -50
+	general_opinion = 10
+	icon = 27
+}
+
+#Province
+
+land_reform = {
+	supply_limit = 5
+	garrison_size = 0.15
+	levy_size = 0.15
+	local_revolt_risk = -0.05
+	local_tax_modifier = 0.5
+	icon = 7
+}
+local_famine = {
+	supply_limit = -5
+	garrison_size = -0.25
+	levy_size = -0.25
+	local_revolt_risk = 0.15
+	local_tax_modifier = -0.5
+	disease_defence = -0.25
+	icon = 42
+}
+natural_disaster = {
+	supply_limit = -5
+	local_tax_modifier = -0.75
+	disease_defence = -0.5
+	icon = 42
+}
+petition_1 = {
+	local_revolt_risk = 0.05
+	icon = 24
+}
+petition_2 = {
+	local_revolt_risk = 0.05
+	icon = 24
+}
+petition_3 = {
+	local_revolt_risk = 0.1
+	icon = 24
+}
+petition_4 = {
+	local_revolt_risk = 0.1
+	icon = 24
+}
+petition_5 = {
+	local_revolt_risk = 0.15
+	icon = 24
+}
+petition_6 = {
+	local_revolt_risk = 0.15
+	icon = 24
+}
+petition_7 = {
+	local_revolt_risk = 0.2
+	icon = 24
+}
+petition_8 = {
+	local_revolt_risk = 0.2
+	icon = 24
+}
+petition_9 = {
+	local_revolt_risk = 0.25
+	icon = 24
+}
+petition_10 = {
+	local_revolt_risk = 0.25
+	icon = 24
+}
+petition_11 = {
+	local_revolt_risk = 0.3
+	icon = 24
+}
+petition_12 = {
+	local_revolt_risk = 0.35
+	icon = 24
+}
+petition_13 = {
+	local_revolt_risk = 0.4
+	icon = 24
+}
+petition_14 = {
+	local_revolt_risk = 0.45
+	icon = 24
+}
+petition_15 = {
+	local_revolt_risk = 0.5
+	icon = 24
+}
+petition_16 = {
+	local_revolt_risk = 0.55
+	icon = 24
+}
+petition_17 = {
+	local_revolt_risk = 0.6
+	icon = 24
+}
+petition_18 = {
+	local_revolt_risk = 0.65
+	icon = 24
+}
+petition_19 = {
+	local_revolt_risk = 0.7
+	icon = 24
+}
+petition_20 = {
+	local_revolt_risk = 0.75
+	icon = 24
+}
+petition_21 = {
+	local_revolt_risk = 0.8
+	icon = 24
+}
+petition_22 = {
+	local_revolt_risk = 0.85
+	icon = 24
+}
+petition_23 = {
+	local_revolt_risk = 0.9
+	icon = 24
+}
+petition_24 = {
+	local_revolt_risk = 0.95
+	icon = 24
+}
+petition_25 = {
+	local_revolt_risk = 1
+	icon = 24
+}
+
+#Vanilla Override
+
+expelled_buddhist = {
+	icon = 64
+	diplomacy = -2
+	global_tax_modifier = -0.1
+}
+
+expelled_buddhist_timer = { icon = 1 }
+
+borrowed_from_buddhist = {
+	icon = 24
+	church_opinion = -10
+}
+
+buddhist_settlement_province = {
+	city_tax_modifier = 0.25
+	# -hospital cost?
+	icon = 63
+}

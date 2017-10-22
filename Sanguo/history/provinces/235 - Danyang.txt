@@ -1,0 +1,24 @@
+# c_danyang
+
+# County Title
+title = c_danyang
+
+# Settlements
+max_settlements = 4
+
+b_danyang = castle
+#b_danting = city
+#b_danyu = temple
+#b_dancheng = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History
+200.1.1={
+	b_danting = city
+}
+205.1.1={
+	b_danyu = temple
+}

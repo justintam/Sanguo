@@ -1,0 +1,17 @@
+# c_kezui
+
+# County Title
+title = c_kezui
+
+# Settlements
+max_settlements = 3
+
+b_kezui = tribal
+#b_budan = city
+#b_sahalin = temple
+
+# Misc
+culture = xianbei
+religion = tengri_pagan
+
+#History

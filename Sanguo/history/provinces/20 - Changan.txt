@@ -1,0 +1,39 @@
+# c_changan
+
+# County Title
+title = c_changan
+
+# Settlements
+max_settlements = 7
+
+b_changan = castle
+b_changle = temple
+b_weiyang = temple
+b_duyou = city
+b_fengan = city
+b_xiliu = city
+#b_meiwu = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History
+191.1.1={
+	b_meiwu = castle
+}
+192.7.1={
+	remove_settlement = b_meiwu
+}
+193.1.1={
+	remove_settlement = b_xiliu
+}
+195.1.1={
+	remove_settlement = b_fengan
+}
+195.6.1={
+	remove_settlement = b_duyou
+}
+200.1.1={
+	b_duyou = city
+}

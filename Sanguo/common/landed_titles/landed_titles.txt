@@ -1,0 +1,624 @@
+e_rebels = {
+	rebel = yes
+	landless = yes
+	primary = yes
+
+	culture = han
+	tribe = yes
+
+	color={ 0 0 0 }
+	color2={ 0 0 0 }
+}
+
+e_pirates = {
+	pirate = yes
+	landless = yes
+	primary = yes
+
+	culture = han
+	tribe = yes
+
+	color={ 255 255 255 }
+	color2={ 255 255 255 }
+}
+
+# Religion
+
+k_confucian = {
+	color={ 255 215 0 }
+	color2={ 255 255 255 }
+	graphical_culture = holygfx
+	
+	capital = 1
+	
+	creation_requires_capital = no
+	
+	culture = han
+	religion = confucian
+	
+	purple_born_heirs=yes
+	
+	dignity = 100
+	
+	landless = yes
+	
+	controls_religion = confucian
+	dynasty_title_names = yes
+	
+	allow = {
+		religion = confucian
+		real_tier = emperor
+		independent = yes
+	}
+	
+	title = "EMPEROR"
+	title_female = "EMPRESS"
+	title_queen_mother_female = "DOWAGER"
+	title_prince = "PRINCE"
+	title_prince_female = "PRINCESS"
+	name_tier = EMPEROR
+	foa = "EMPEROR_FOA"
+	short_name = yes
+	
+	caliphate = yes
+	
+	#Regnal Names
+	male_names = {
+		Ai An
+		Bang Bian Bing
+		Cheng Chong Chu
+		Da
+		Fei
+		Gao Gong Guang
+		He Huai Huan Huang Hui Huo
+		Jia Jing
+		Kang
+		Li Liang Lie Ling Lu
+		Min Ming Mu
+		Ping
+		Qi Qiao Qing
+		Shang Shao Shi Shun Shuo Si
+		Tian
+		Wei Wen Wu
+		Xi Xian Xiang Xiao Xiaowu Xuan
+		Yan Yang Yao Yi Yin Ying Yu Yuan
+		Zhang Zhao Zhi Zhuang
+
+#		#Temple/Era names/Barbarian/Post han
+#		Baoding
+#		Chenping Chongzhen
+#		Daowu Dihuang
+#		Fenghuang
+#		Ganlu Gengshi Guanghe Guangwen Guangwu
+#		Hanxing Heilong Hongguang Hongshi
+#		Hongwu Hongxi Hongzhi Houfei Houyuan
+#		Huangchu Huanghuo Huanglong Huangshi
+#		Huangwu Huimin
+#		Jiajing Jianguang Jiankang Jianmin
+#		Jianwen Jianwu Jianyuan Jianzhao
+#		Jiaping Jiaqing Jingtai
+#		Longli Longqing Longwu
+#		Mingyuan
+#		Pingwen
+#		Qianfei Qinglong
+#		Shaowu Shuzhi
+#		Taichang Taiping Taishang Taiwu
+#		Taiyuan Tianfeng
+#		Wanli Wencheng Wenhuan Wenming
+#		Wenxuan Wenzhao Wucheng Wulie Wuyuan
+#		Xiantong Xianwen Xianwu Xianxi
+#		Xiaojing Xiaomin Xiaoming Xiaowen
+#		Xiaowu Xiaozhao Xiaozhuang Xiping
+#		Xuande Xuanwu Xuaozhao
+#		Yangjia Yanguang Yankang Yanxi
+#		Yongchu Yongkang Yongle Yongxi
+#		Youzhu Yuanding Yuanfeng Yuanguang
+#		Yuanhe Yuanping Yuanshuo
+#		Zhangwu Zhaocheng Zhaoning Zhaowen
+#		Zhaowu Zhenghe Zhengyuan Zhongyuan
+#		Zhuangdi
+	}
+}
+
+c_empress = {
+	color={ 255 215 0 }
+	color2={ 255 255 255 }
+	graphical_culture = holygfx
+	
+	culture = han
+	religion = confucian
+	
+	dignity = 20
+	
+	landless = yes
+	
+	allow = {
+		is_female = yes
+		trait = inner_court
+	}
+	
+	title = "EMPEROR"
+	title_female = "EMPRESS"
+	name_tier = EMPEROR
+	foa = "EMPEROR_FOA"
+	short_name = yes
+}
+
+c_eunuch = {
+	color={ 210 120 120 }
+	color2={ 255 255 255 }
+	
+	culture = han
+	religion = confucian
+	
+	dignity = 10
+
+	landless = yes
+	
+	primary = yes
+	
+	allow = {
+		trait = eunuch
+	}
+
+	title = "EUNUCH"
+	short_name = yes
+}
+
+c_penglai = {
+	color={ 180 90 90 }
+	color2={ 255 255 255 }
+	
+	culture = han
+	religion = tianshi
+
+	landless = yes
+	
+	primary = yes
+	
+	allow = {
+		character = 4000
+	}
+	
+	title = "MAGIC"
+	short_name = yes
+}
+
+# Nobility
+
+d_k_anping = {
+	color={ 180 75 175 }
+	
+	capital = 58 # c_anping
+	
+	dignity = 15
+
+	landless = yes
+	
+	primary = yes
+	
+	title = "KING"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "KING_FOA"
+}
+
+d_k_beihai = {
+	color={ 101 236 52 }
+
+	capital = 174 # c_beihai
+	
+	dignity = 15
+
+	landless = yes
+	
+	primary = yes
+	
+	title = "KING"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "KING_FOA"
+}
+
+d_k_changshan = {
+	color={ 113 47 109 }
+	
+	capital = 75 # c_zhending
+	
+	dignity = 15
+
+	landless = yes
+	
+	primary = yes
+	
+	title = "KING"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "KING_FOA"
+}
+
+d_k_chen = {
+	color={ 33 17 104 }
+	
+	capital = 340 # c_chenguo
+	
+	dignity = 15
+
+	landless = yes
+	
+	primary = yes
+	
+	title = "KING"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "KING_FOA"
+}
+	
+d_k_donghai = {
+	color={ 201 246 62 }
+	
+	capital = 192 # c_donghai
+	
+	dignity = 15
+
+	landless = yes
+	
+	primary = yes
+	
+	title = "KING"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "KING_FOA"
+}
+
+d_k_dongping = {
+	color={ 203 118 43 }
+	
+	capital = 216 # c_zhang
+	
+	dignity = 15
+
+	landless = yes
+	
+	primary = yes
+	
+	title = "KING"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "KING_FOA"
+}
+
+d_k_hejian = {
+	color={ 123 17 215 }
+	
+	capital = 81 # c_hejian
+	
+	dignity = 15
+
+	landless = yes
+	
+	primary = yes
+	
+	title = "KING"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "KING_FOA"
+}
+
+d_k_jibei = {
+	color={ 204 88 32 }
+	
+	capital = 218 # c_jibei
+	
+	dignity = 15
+
+	landless = yes
+	
+	primary = yes
+	
+	title = "KING"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "KING_FOA"
+}
+
+d_k_jinan = {
+	color={ 156 254 119 }
+	
+	capital = 181 # c_jinan
+	
+	dignity = 15
+
+	landless = yes
+	
+	primary = yes
+	
+	title = "KING"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "KING_FOA"
+}
+
+d_k_langye = {
+	color={ 195 246 158 }
+	
+	capital = 198 # c_langye
+	
+	dignity = 15
+
+	landless = yes
+	
+	primary = yes
+	
+	title = "KING"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "KING_FOA"
+}
+
+d_k_liang = {
+	color={ 80 76 209 }
+	
+	capital = 343 # c_liangguo
+	
+	dignity = 15
+
+	landless = yes
+	
+	primary = yes
+	
+	title = "KING"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "KING_FOA"
+}
+
+d_k_lu = {
+	color={ 72 128 165 }
+	
+	capital = 348 # c_luguo
+	
+	dignity = 15
+
+	landless = yes
+	
+	primary = yes
+	
+	title = "KING"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "KING_FOA"
+}
+
+d_k_pei = {
+	color={ 47 56 151 }
+	
+	capital = 351 # c_peiguo
+	
+	dignity = 15
+
+	landless = yes
+	
+	primary = yes
+	
+	title = "KING"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "KING_FOA"
+}
+
+d_k_pengcheng = {
+	color={ 245 93 220 }
+	
+	capital = 189 # c_pengcheng
+	
+	dignity = 15
+
+	landless = yes
+	
+	primary = yes
+	
+	title = "KING"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "KING_FOA"
+}
+
+d_k_pingyuan = {
+	color={ 92 184 38 }
+
+	capital = 186 # c_pingyuan
+	
+	dignity = 15
+
+	landless = yes
+	
+	primary = yes
+	
+	title = "KING"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "KING_FOA"
+}
+
+d_k_qi = {
+	color={ 55 95 23 }
+	
+	capital = 188 # c_qi
+	
+	dignity = 15
+
+	landless = yes
+	
+	primary = yes
+	
+	title = "KING"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "KING_FOA"
+}
+
+d_k_qinghe = {
+	color={ 153 77 150 }
+	
+	capital = 64 # c_qinghe
+	
+	dignity = 15
+
+	landless = yes
+	
+	primary = yes
+	
+	title = "KING"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "KING_FOA"
+}
+
+d_k_rencheng = {
+	color={ 232 215 176 }
+	
+	capital = 225 # c_rencheng
+	
+	dignity = 15
+
+	landless = yes
+	
+	primary = yes
+	
+	title = "KING"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "KING_FOA"
+}
+
+d_k_shanyang = {
+	color={ 217 199 110 }
+	
+	capital = 226 # c_changyi
+	
+	dignity = 15
+
+	landless = yes
+	
+	primary = yes
+	
+	title = "KING"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "KING_FOA"
+}
+
+d_k_taiyuan = {
+	color={ 191 97 52 }
+	
+	capital = 30 # c_jinyang
+	
+	dignity = 15
+
+	landless = yes
+	
+	primary = yes
+	
+	title = "KING"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "KING_FOA"
+}
+
+d_k_xiapi = {
+	color={ 245 204 186 }
+	
+	capital = 202 # c_xiapi
+	
+	dignity = 15
+
+	landless = yes
+	
+	primary = yes
+	
+	title = "KING"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "KING_FOA"
+}
+
+d_k_zhao = {
+	color={ 231 162 204 }
+	
+	capital = 99 # c_handan
+	
+	dignity = 15
+
+	landless = yes
+	
+	primary = yes
+	
+	title = "KING"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "KING_FOA"
+}
+
+d_k_zhongshan = {
+	color={ 131 43 127 }
+	
+	capital = 102 # c_zhongshan
+	
+	dignity = 15
+
+	landless = yes
+	
+	primary = yes
+	
+	title = "KING"
+	title_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	name_tier = KING
+	foa = "KING_FOA"
+}

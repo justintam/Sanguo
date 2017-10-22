@@ -1,0 +1,37 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_jiangxia
+}
+184.1.1={
+	liege=0 #Independent
+	holder=2016 #Random
+}
+190.1.1={
+	liege=d_jiangxia
+	holder=148 #Huang Zu
+}
+208.1.1={
+	holder=48 #Liu Biao
+}
+208.8.1={
+	liege=d_liu
+	holder=600 #Liu Bei
+}
+209.3.1={
+	liege=d_jiangxia
+	holder=515 #Cheng Pu
+}
+210.2.1={
+	holder=570 #Lu Meng
+}
+213.1.1={
+	holder=528 #Sun Jiao
+}
+219.12.1={
+	holder=529 #Sun Huan
+}
+#Cai Yi

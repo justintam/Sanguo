@@ -1,0 +1,57 @@
+name = "2nd Yellow Turban Rebellion"
+
+casus_belli={
+	actor=202
+	recipient=100 #He Jin
+	casus_belli=invasion
+	landed_title=e_china
+	date=184.8.1
+}
+
+184.9.1 = {
+	add_defender = 100 #He Jin
+	add_defender = 30 #Ling
+	add_defender = 134 #Qiao Mao
+	add_defender = 1276 #Jing Shao
+	add_defender = 1278 #Zhao Yan
+	add_defender = 115 #Ding Yuan
+	add_defender = 117 #Xu Qiu
+	add_defender = 3326 #Li Shou
+	add_defender = 120 #Wang Yun
+	add_defender = 138 #Ba Zhi
+	add_defender = 105 #Huangfu Song
+	add_defender = 106 #Zhu Jun
+	add_defender = 107 #Lu Zhi
+	add_defender = 300 #Dong Zhuo
+	add_defender = 400 #Cao Cao
+	add_defender = 500 #Sun Jian
+	add_defender = 600 #Liu Bei
+	add_defender = 1500 #Qiangqui
+	add_attacker = 202 #Zhang Liang
+	add_attacker = 2600 #Guo Da
+	add_attacker = 2610 #Zhang Niujiao
+}
+
+184.10.1={
+	rem_defender = 1500 #Qiangqui
+	rem_defender = 600 #Liu Bei
+	rem_defender = 500 #Sun Jian
+	rem_defender = 400 #Cao Cao
+	rem_defender = 300 #Dong Zhuo
+	rem_defender = 107 #Lu Zhi
+	rem_defender = 106 #Zhu Jun
+	rem_defender = 105 #Huangfu Song
+	rem_defender = 138 #Ba Zhi
+	rem_defender = 120 #Wang Yun
+	rem_defender = 3326 #Li Shou
+	rem_defender = 117 #Xu Qiu
+	rem_defender = 115 #Ding Yuan
+	rem_defender = 1278 #Zhao Yan
+	rem_defender = 30 #Ling
+	rem_defender = 1276 #Jing Shao
+	rem_defender = 134 #Qiao Mao
+	rem_defender = 100 #He Jin
+	rem_attacker = 2610 #Zhang Niujiao
+	rem_attacker = 2600 #Guo Da
+	rem_attacker = 202 #Zhang Liang
+}

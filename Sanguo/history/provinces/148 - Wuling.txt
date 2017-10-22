@@ -1,0 +1,24 @@
+# c_wuling
+
+# County Title
+title = c_wuling
+
+# Settlements
+max_settlements = 4
+
+b_wuling = castle
+#b_jinling = city
+#b_kuankuo = castle
+#b_mazong = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History
+194.1.1={
+	b_jinling = city
+}
+204.1.1={
+	b_kuankuo = castle
+}

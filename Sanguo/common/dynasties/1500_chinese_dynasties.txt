@@ -1,0 +1,400 @@
+1500 = {
+	name="Guo" #Guo Gong
+	culture = han
+}
+1501 = {
+	name="Hu" #Hu Hao
+	culture = han
+}
+1502 = {
+	name="Wu" #Wu Ba
+	culture = han
+}
+1503 = {
+	name="Liang" #Liang Boning, Zhongning
+	culture = han
+}
+1504 = {
+	name="Zhao" #Zhao Bo, Zhi
+	culture = han
+}
+1505 = {
+	name="Wang" #Wang Rao
+	culture = han
+}
+1506 = {
+	name="Chen" #Chen Gong ie Lu Bu
+	culture = han
+}
+1507 = {
+	name="Chen" #Chen He, Jing, Ying
+	culture = han
+}
+1508 = {
+	name="Li" #Li Tong
+	culture = han
+}
+1509 = {
+	name="Li" #Li Qian
+	culture = han
+}
+1510 = {
+	name="Shen" #Shen Cheng
+	culture = han
+}
+1511 = {
+	name="Sili" #Sili Yuancheng - BAN
+	culture = han
+}
+1512 = {
+	name="Guan" #Guan Gu
+	culture = han
+}
+1513 = {
+	name="Guo" #Guo Shi
+	culture = han
+}
+1514 = {
+	name="Zhou" #Zhou Chao
+	culture = han
+}
+1515 = {
+	name="Li" #Li Kan
+	culture = han
+}
+1516 = {
+	name="Sui" #Sui Gu
+	culture = han
+}
+1517 = {
+	name="Ding" #Ding Gong
+	culture = han
+}
+1518 = {
+	name="Lai" #Lai Da
+	culture = han
+}
+1519 = {
+	name="Wang" #Wang Sheng
+	culture = han
+}
+1520 = {
+	name="Ni" #Ni Xiaode
+	culture = han
+}
+1521 = {
+	name="Dan" #Dan Meng
+	culture = han
+}
+1522 = {
+	name="Wang" #Special Wang
+	culture = han
+}
+1523 = {
+	name="Li" #Li Le
+	culture = han
+}
+1524 = {
+	name="Sun" #Sun Qian
+	culture = han
+}
+1525 = {
+	name="Huang" #Huang Zhong
+	culture = han
+}
+1526 = {
+	name="Zhang" #Zhang Shiping
+	culture = han
+}
+1527 = {
+	name="Hao" #Hao Pu
+	culture = han
+}
+1528 = {
+	name="Su" #Su Shuang
+	culture = han
+}
+1529 = {
+	name="Shang" #Shang Sheng
+	culture = han
+}
+1530 = {
+	name="Zhou" #Zhuo Shu
+	culture = han
+}
+1531 = {
+	name="Zhao" #Zhao Yu
+	culture = han
+}
+1532 = {
+	name="Hua" #Hua Xin
+	culture = han
+}
+1533 = {
+	name="Chen" #Chen Gong the bandit
+	culture = han
+}
+1534 = {
+	name="Chen" #Chen Fan, Yi
+	culture = han
+}
+1535 = {
+	name="Li" #Li Can
+	culture = han
+}
+1536 = {
+	name="Jian" #Jian Shuo
+	culture = han
+}
+1537 = {
+	name="Zhang" #Zhang Rang
+	culture = han
+}
+1538 = {
+	name="Li" #Li Song
+	culture = han
+}
+1539 = {
+	name="Duan" #Duan Gui
+	culture = han
+}
+1540 = {
+	name="Gao" #Gao Wang
+	culture = han
+}
+1541 = {
+	name="Guo" #Guo Sheng
+	culture = han
+}
+1542 = {
+	name="Zhang" #Zhang Gong
+	culture = han
+}
+1543 = {
+	name="Han" #Han Li
+	culture = han
+}
+1544 = {
+	name="Song" #Song Dian
+	culture = han
+}
+1545 = {
+	name="Xia" #Xia Yun
+	culture = han
+}
+1546 = {
+	name="Sun" #Sun Zhang
+	culture = han
+}
+1547 = {
+	name="Bi" #Bi Lan
+	culture = han
+}
+1548 = {
+	name="Yue" #Yue Ping
+	culture = han
+}
+1549 = {
+	name="Zhang" #Zhang Ji
+	culture = han
+}
+1550 = {
+	name="Su" #Su Dai
+	culture = han
+}
+1551 = {
+	name="Yin" #Yin Xiu
+	culture = han
+}
+1552 = {
+	name="Li" #Li Min
+	culture = han
+}
+1553 = {
+	name="Guo" #Guo Zu
+	culture = han
+}
+1554 = {
+	name="Gongsun" #Gongsun Du
+	culture = han
+}
+1555 = {
+	name="Guo" #Guo Zu
+	culture = han
+}
+1556 = {
+	name="Wang" #Wang Fen
+	culture = han
+}
+1557 = {
+	name="Xianyu" #Xianyu Fu
+	culture = han
+}
+1558 = {
+	name="Yan" #Yan Rou
+	culture = han
+}
+1559 = {
+	name="Miao" #Miao Shang
+	culture = han
+}
+1560 = {
+	name="Xue" #Xue Hong
+	culture = han
+}
+1561 = {
+	name="Huang" #Huang Wan
+	culture = han
+}
+1562 = {
+	name="Zheng" #Zheng Tai
+	culture = han
+}
+1563 = {
+	name="Yang" #Yang Zan
+	culture = han
+}
+1564 = {
+	name="Shisun" #Shisun Rui
+	culture = han
+}
+1565 = {
+	name="Wu" #Wu Qiong
+	culture = han
+}
+1566 = {
+	name="He" #He Yong
+	culture = han
+}
+1567 = {
+	name="Zhou" #Zhou Shen, Bi
+	culture = han
+}
+1568 = {
+	name="Min" #Min Gong
+	culture = han
+}
+1569 = {
+	name="Xuan" #Xuan Fan
+	culture = han
+}
+1570 = {
+	name="Anqi" #Anqi Sheng Penglai
+	culture = han
+}
+1571 = {
+	name="Wang" #Wang Bi
+	culture = han
+}
+1572 = {
+	name="Wu" #Wu Zi
+	culture = han
+}
+1573 = {
+	name="Wei" #Wei Duan, Kang, Dan
+	culture = han
+}
+1574 = {
+	name="Bi" #Bi Chen
+	culture = han
+}
+1575 = {
+	name="Bi" #Bi Yu
+	culture = han
+}
+1576 = {
+	name="Bian" #Bian Rang
+	culture = han
+}
+1577 = {
+	name="Song" #Song Yi
+	culture = han
+}
+1578 = {
+	name="Wei" #Wei Ji
+	culture = han
+}
+1579 = {
+	name="Liang" #Liang Qi
+	culture = han
+}
+1580 = {
+	name="Pang" #Pang Ji
+	culture = han
+}
+1581 = {
+	name="Yan" #Yan Liang
+	culture = han
+}
+1582 = {
+	name="Wen" #Wen Chou
+	culture = han
+}
+1583 = {
+	name="Yan" #Yan Pu
+	culture = han
+}
+1584 = {
+	name="Lü" #Lü Weihuang
+	culture = han
+}
+1585 = {
+	name="Chunyu" #Chunyu Qiong
+	culture = han
+}
+1586 = {
+	name="Jiang" #Jiang Qi
+	culture = han
+}
+1587 = {
+	name="Han" #Han Xun
+	culture = han
+}
+1588 = {
+	name="Sui" #Sui Yuanjin
+	culture = han
+}
+1589 = {
+	name="Zhao" #Zhao Rui
+	culture = han
+}
+1590 = {
+	name="Fu" #Fu Clan, long chain
+	culture = han
+}
+1591 = {
+	name="Chen" #Chen Lin
+	culture = han
+}
+1592 = {
+	name="Liu" #Liu Zhen
+	culture = han
+}
+1593 = {
+	name="Wang" #Wang Can
+	culture = han
+}
+1594 = {
+	name="Wu" #Wu Xi
+	culture = han
+}
+1595 = {
+	name="Duan" #Duan Wei
+	culture = han
+}
+1596 = {
+	name="Zou" #Zou Qi
+	culture = han
+}
+1597 = {
+	name="Guan" #Guan Tong
+	culture = han
+}
+1598 = {
+	name="Zhang" #Zhang Ji
+	culture = han
+}
+1599 = {
+	name="He" #He Luan
+	culture = han
+}

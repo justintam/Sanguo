@@ -1,0 +1,74 @@
+bactrian = {
+		graphical_cultures = { turkishgfx easterngfx }
+	
+	yuezhi = {
+		graphical_cultures = { turkishgfx easterngfx }
+		
+		color = { 0.1 0.5 0.5 }
+		
+		male_names = {
+			Aeolus Agesiles Ahuramazda Akhshunwar Aluoduo
+			Anahita Ande Anemoi Apaosha Aredvi Asha Atar
+			Avalokitesvara
+			Bahram Bahua Bakarna Beijun Bochun Boddo Boyu
+			Brahmi Buddhatala
+			Chenpan Chhu
+			Deos Deus Deva Devaputra Dharmaraksa
+			Fotudeng
+			Ganesha Goboziko Gokarna Grumbat
+			Hephaestus Heracles Heraios Huvishka Hyperion
+			Jian Jiatenu Junjiu
+			Kadphises Kandik Kanishka Kartikeya Khingila
+			Khushnavaz Khvarenah Kidara Kipunada Kujula
+			Kumara Kumarajiva Kumaran Kungas
+			Lakhana Lokaksema
+			Mahasena Mana Manah Manaobago Mani Manu
+			Mihirakula Mithra Mitian Murugan
+			Nandi Nongqi
+			Oesho Oisho
+			Pan Pashupati Pharro Pravarasena Pushan
+			Rahula Rishti Rudra
+			Salanavira Sapadbizes Sehaul Serapis Shaka
+			Shiva Skanda Subramaniya Swami
+			Takto Toramana Tunjina
+			Varhran Vashishka Vasishka Vasudeva Vata
+			Vayu Vayuvata Verethragna Vima Vinayaditya
+			Wanruo Warahran Welnos
+			Xiumiduo
+			Yabgu Yama Yifu Yudhishthira
+			Zeus
+		}
+		female_names = {
+			Ahura Anahita Ardochsho Arta Ashi Ausera
+			Ausra Ausrina Austaras Austra Avestan
+			Danu Dea Devi Devis Devas Dia Drvaspa Durga
+			Eos
+			Hera Heusos Heustero
+			Judith
+			Kidara Kushana
+			Mah Maonghah Maya Mithra
+			Nana
+			Paurwa Pleto Plethwih Pria Psyche
+			Saule Selene Shakti Shama Shiva Sol Soltse Sulis
+			Theia Tishtrya
+			Vata Vayu Vayuvata
+			Yanrong Yasodhara
+			Zabbai Zenon
+		}
+		
+		founder_named_dynasties = no
+		prefix = yes
+		
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+		pat_grf_name_chance = 35
+		mat_grf_name_chance = 15
+		father_name_chance = 25
+		
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+		pat_grm_name_chance = 35
+		mat_grm_name_chance = 15
+		mother_name_chance = 25
+
+		modifier = yuezhi_culture_modifier
+	}
+}

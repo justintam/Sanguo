@@ -1,0 +1,299 @@
+### Titles for landless heroes ###
+
+#Cao
+k_cao = {
+	color={ 41 27 244 }
+	color2={ 255 255 255 }
+	
+	allow = { always = no }
+	
+	title = "LORD"
+	title_female = "LADY"
+	title_queen_mother_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	
+	dignity = 25
+	
+	primary = yes
+	short_name = yes
+	
+	religion = confucian
+	culture = han
+}
+d_cao = {
+	color={ 41 27 244 }
+	color2={ 255 255 255 }
+	
+	allow = { always = no }
+	
+	title = "COLONEL"
+	title_female = "LADY"
+	title_queen_mother_female = "LADY"
+	
+	dignity = 15
+
+	landless = yes
+	
+	primary = yes
+	short_name = yes
+	
+	religion = confucian
+	culture = han
+}
+
+#Gongsun Zan
+e_gongsun = {
+	color={ 255 255 255 }
+	color2={ 255 255 255 }
+	
+	allow = { always = no }
+	
+	title = "LORD"
+	title_female = "LADY"
+	title_queen_mother_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	
+	dignity = 50
+	
+	primary = yes
+	short_name = yes
+	
+	religion = confucian
+	culture = han
+}
+d_gongsun = {
+	color={ 255 255 255 }
+	color2={ 255 255 255 }
+	
+	allow = { always = no }
+	
+	title = "COLONEL"
+	title_female = "LADY"
+	title_queen_mother_female = "LADY"
+	
+	dignity = 15
+
+	landless = yes
+	
+	primary = yes
+	short_name = yes
+	
+	religion = confucian
+	culture = han
+}
+
+#Liu Bei
+e_liu = {
+	color={ 19 125 42 }
+	color2={ 255 255 255 }
+	
+	allow = { always = no }
+	
+	title = "LORD"
+	title_female = "LADY"
+	title_queen_mother_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	
+	dignity = 50
+	
+	primary = yes
+	short_name = yes
+	
+	religion = confucian
+	culture = han
+}
+k_liu = {
+	color={ 19 125 42 }
+	color2={ 255 255 255 }
+	
+	allow = { always = no }
+	
+	title = "LORD"
+	title_female = "LADY"
+	title_queen_mother_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	
+	dignity = 25
+	
+	primary = yes
+	short_name = yes
+	
+	religion = confucian
+	culture = han
+}
+d_liu = {
+	color={ 19 125 42 }
+	color2={ 255 255 255 }
+	
+	allow = { always = no }
+	
+	title = "COLONEL"
+	title_female = "LADY"
+	title_queen_mother_female = "LADY"
+	
+	dignity = 15
+
+	landless = yes
+	
+	primary = yes
+	short_name = yes
+	
+	religion = confucian
+	culture = han
+}
+
+#Shi Xie
+k_shi = {
+	color={ 166 45 170 }
+	color2={ 255 255 255 }
+	
+	allow = { always = no }
+	
+	title = "LORD"
+	title_female = "LADY"
+	title_queen_mother_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	
+	dignity = 25
+	
+	primary = yes
+	short_name = yes
+	
+	religion = confucian
+	culture = han
+}
+
+#Sun Ce
+e_sun = {
+	color={ 220 0 0 }
+	color2={ 255 255 255 }
+	
+	allow = { always = no }
+	
+	title = "LORD"
+	title_female = "LADY"
+	title_queen_mother_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	
+	dignity = 50
+	
+	primary = yes
+	short_name = yes
+	
+	religion = confucian
+	culture = han
+}
+k_sun = {
+	color={ 220 0 0 }
+	color2={ 255 255 255 }
+	
+	allow = { always = no }
+	
+	title = "LORD"
+	title_female = "LADY"
+	title_queen_mother_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	
+	dignity = 25
+	
+	primary = yes
+	short_name = yes
+	
+	religion = confucian
+	culture = han
+}
+d_sun = {
+	color={ 220 0 0 }
+	color2={ 255 255 255 }
+	
+	allow = { always = no }
+	
+	title = "COLONEL"
+	title_female = "LADY"
+	title_queen_mother_female = "LADY"
+	
+	dignity = 15
+
+	landless = yes
+	
+	primary = yes
+	short_name = yes
+	
+	religion = confucian
+	culture = han
+}
+
+#Tao Qian
+e_xu = {
+	color={ 225 113 210 }
+	color2={ 255 255 255 }
+	
+	capital = 189 # c_pengcheng
+
+	allow = { always = no }
+	
+	title_female = "LADY"
+	title_queen_mother_female = "LADY"
+	name_tier = KING
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	
+	dignity = 50
+	
+	primary = yes
+	short_name = yes
+	
+	religion = confucian
+	culture = han
+}
+
+#Yuan Shao
+e_yuan = {
+	color={ 222 199 14 }
+	color2={ 255 255 255 }
+	
+	allow = { always = no }
+	
+	title = "LORD"
+	title_female = "LADY"
+	title_queen_mother_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	
+	dignity = 50
+	
+	primary = yes
+	short_name = yes
+	
+	religion = confucian
+	culture = han
+}
+
+#Yuan Shu
+k_yuan = {
+	color={ 230 190 190 }
+	color2={ 255 255 255 }
+	
+	allow = { always = no }
+	
+	title = "LORD"
+	title_female = "LADY"
+	title_queen_mother_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	
+	dignity = 25
+	
+	primary = yes
+	short_name = yes
+	
+	religion = confucian
+	culture = han
+}

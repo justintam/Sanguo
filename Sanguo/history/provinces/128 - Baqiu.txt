@@ -1,0 +1,18 @@
+# c_baqiu
+
+# County Title
+title = c_baqiu
+
+# Settlements
+max_settlements = 4
+
+b_baqiu = castle
+b_lemai = tribal
+#b_tianxin = city
+#b_wangcheng = city
+
+# Misc
+culture = minyue
+religion = animist
+
+#History

@@ -1,0 +1,19 @@
+# c_zhongdu
+
+# County Title
+title = c_zhongdu
+
+# Settlements
+max_settlements = 5
+
+b_zhongdu = castle
+b_zishi = city
+#b_wanbailin = temple
+#b_jinyuan = castle
+#b_zhongti = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

@@ -1,0 +1,18 @@
+# c_guangqi
+
+# County Title
+title = c_guangqi
+
+# Settlements
+max_settlements = 4
+
+b_guangqi = castle
+b_sishuiting = city
+#b_hangxi = temple
+#b_wangzhou = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

@@ -1,0 +1,18 @@
+# c_dingxiang
+
+# County Title
+title = c_dingxiang
+
+# Settlements
+max_settlements = 4
+
+b_wuchengding = castle
+#b_wutai = city
+#b_wuchengdu = temple
+#b_minxu = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

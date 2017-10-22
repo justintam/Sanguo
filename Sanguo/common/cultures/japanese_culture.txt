@@ -1,0 +1,59 @@
+japanese = {
+		graphical_cultures = { koreangfx easterngfx }
+
+	wa = {
+		graphical_cultures = { koreangfx easterngfx }
+		
+		color = { 0.15 0.15 0.15 }
+		
+		male_names = {
+			Akio Akira Aoi Anaho Anko Annei Arata Asazuma Ayumu
+			Chuai
+			Daichi Daiki Daisuke
+			Futoni
+			Genma
+			Hanzei Hito
+			Ikume Ingyo Inie Irihiko Isachi Isaho
+			Itoku Iwarebiko
+			Jimmu
+			Kaeshine Kaika Keiko Koan Kogen Korei
+			Kosho Kuni Kunioshi Kuru
+			Nakatsuhiko Nekohiko Nintoku Nobu
+			O Ojin Oshi Oyama
+			Richu
+			Sazaki Seimu Shino Suinin Suizei Sujin
+			Sukitomo
+			Takagi Takashi Tamademi Tarasi Tarasihiko
+			Tatsu
+			Toyotomi
+			Waka Wake Wakugo
+		}
+		female_names = {
+			Ai Aiko Aimi Aina Airi Akane Akemi Aki Akiko Akira Ami Aoi Asuka Atsuko Aya Ayaka Ayako Ayame Ayane
+			Chihiro Chika Chikako Chinatsu Chiyo Chiyoko Chouko
+			Emi
+			Genmei Genmyo Gensho
+			Himiko
+			Jingu
+			Michiko Mimiko
+			Okinaga
+			Suki
+			Tamayori Tarashihime Toyotama
+			Yoko Yorozu
+		}
+		
+		founder_named_dynasties = yes
+		
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+		pat_grf_name_chance = 0
+		mat_grf_name_chance = 0
+		father_name_chance = 0
+		
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+		pat_grm_name_chance = 0
+		mat_grm_name_chance = 0
+		mother_name_chance = 0
+
+		modifier = default_culture_modifier
+	}
+}

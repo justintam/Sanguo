@@ -1,0 +1,21 @@
+# c_yi
+
+# County Title
+title = c_yi
+
+# Settlements
+max_settlements = 4
+
+b_yi = castle
+b_gecheng = city
+#b_bowi = castle
+#b_dangyi = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History
+194.1.1={
+	b_bowi = castle
+}

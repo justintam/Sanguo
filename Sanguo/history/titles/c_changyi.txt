@@ -1,0 +1,38 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_shanyang
+}
+140.1.1={
+	holder=1287 #Yang Bing
+}
+144.1.1={
+	holder=0 #None
+}
+180.1.1={
+	holder=134 #Qiao Mao
+}
+189.9.1={
+	holder=59 #Liu Dai
+}
+192.6.1={
+	holder=400 #Cao Cao
+}
+194.1.1={
+	holder=3509 #Random
+}
+213.6.1={
+	holder=5005 #Sima Lang
+}
+217.4.1 = {
+	holder=10400 #Cao Pi
+}
+219.1.1 = {
+	holder=20443 #Pei Qian
+}
+#Linghu Yan - 249
+#Huang Hua - 251
+#Deng Ai - 255

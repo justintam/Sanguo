@@ -1,0 +1,19 @@
+# c_nangong
+
+# County Title
+title = c_nangong
+
+# Settlements
+max_settlements = 5
+
+b_nangong = castle
+b_nansheze = city
+#b_weiwen = temple
+#b_dawei = castle
+#b_binwei = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

@@ -1,0 +1,27 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_wu
+}
+184.1.1={
+	liege=0 #Independent
+	holder=2011 #Baotun
+}
+195.1.1={
+	holder=2003 #Huang Longluo
+}
+196.6.1={
+	liege=d_wu
+	holder=10520 #Dong Xi
+}
+204.1.1={
+	liege=0 #Independent
+	holder=2002 #Pan Lin
+}
+206.1.1={
+	liege=d_wu
+	holder=10520 #Dong Xi
+}

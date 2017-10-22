@@ -1,0 +1,17 @@
+# c_zhenlin
+
+# County Title
+title = c_zhenlin
+
+# Settlements
+max_settlements = 3
+
+b_zhenlin = tribal
+#b_ningwu = city
+#b_zhenlinding = temple
+
+# Misc
+culture = xiongnu
+religion = tengri_pagan
+
+#History

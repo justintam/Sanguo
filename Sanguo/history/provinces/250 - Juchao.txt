@@ -1,0 +1,18 @@
+# c_juchao
+
+# County Title
+title = c_juchao
+
+# Settlements
+max_settlements = 4
+
+b_juchao = castle
+b_congyang = city
+#b_zhukou = temple
+#b_wanke = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

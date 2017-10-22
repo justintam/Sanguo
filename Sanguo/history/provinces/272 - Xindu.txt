@@ -1,0 +1,17 @@
+# c_xindu
+
+# County Title
+title = c_xindu
+
+# Settlements
+max_settlements = 3
+
+b_xindu = castle
+#b_michun = city
+#b_nanfeng = temple
+
+# Misc
+culture = han
+religion = confucian
+
+#History

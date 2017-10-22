@@ -1,0 +1,18 @@
+# c_wuwei
+
+# County Title
+title = c_wuwei
+
+# Settlements
+max_settlements = 4
+
+b_wuwei = castle
+#b_pangde = city
+#b_jinsha = temple
+#b_jintaxian = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

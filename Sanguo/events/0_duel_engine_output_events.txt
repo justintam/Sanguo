@@ -1,0 +1,309 @@
+namespace = duel_output
+######################
+# Duel Engine Output #
+######################
+# Galle (Gregory Hayes)
+######################
+# duel_output.1	Collect your output from the duel engine.
+
+character_event = {
+	id = duel_output.1
+	desc = "EVTDESCDUELOUTPUT1"
+#	picture = GFX_evt_the_trident
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTADUELOUTPUT1"
+		
+		########################
+		# Example Output Block #
+		########################
+		if = {
+			##########################
+			# Find your context flags
+			limit = {
+				has_character_flag = flag_battlefield_duel
+				has_character_flag = flag_killed_opponent
+			}
+			##########################
+			# Call the next event in your event chain
+			# FROM will be Winner scope
+			# FROMFROM will be Loser scope
+			character_event = { id = battle.11 tooltip = "EVTTOOLTIPbattle.11" }
+			##########################
+			# CLEAR YOUR CONTEXT FLAGS
+			clr_character_flag = flag_battlefield_duel
+			FROM = { clr_character_flag = flag_battlefield_duel }
+			###########################
+		}
+		
+		hidden_tooltip = {
+			if = {
+				limit = {
+					has_focus = focus_war
+					has_dlc = "Way of Life"
+				}
+				character_event = { id = WoL.11200 days = 3 } # fire focus success
+			}
+		}
+		
+		if = {
+			###########################
+			# If a kill versus a yield would be important,
+			# handle them in seperate blocks.
+			limit = {
+				has_character_flag = flag_battlefield_duel
+				has_character_flag = flag_spared_opponent
+			}
+			if = {
+				limit = { is_ruler = yes }
+				FROM = { imprison = ROOT }
+			}
+			if = {
+				limit = { is_ruler = no }
+				liege = { 
+					FROM = { imprison = PREV } 
+					hidden_tooltip = { character_event = { id = duel.10700 } }
+				}
+			}
+			hidden_tooltip = { FROM = { character_event = { id = battle.13 } } } 
+			#character_event = { id = battle.12 tooltip = "EVTTOOLTIPbattle.12" }
+			clr_character_flag = flag_battlefield_duel
+			FROM = { clr_character_flag = flag_battlefield_duel }
+			############################
+		}
+		if = {
+			limit = { has_character_flag = flag_battlefield_duel_vs_bodyguard }
+			bodyguard_protection_target = {
+				limit = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_bodyguard_protection } }
+				character_event = { id = battle.14 tooltip = "EVTTOOLTIPbattle.14" }
+			}
+			clr_character_flag = flag_battlefield_duel_vs_bodyguard
+			FROM = { clr_character_flag = flag_battlefield_duel_bodyguard }
+		}
+		if = {
+			limit = {
+				has_character_flag = flag_battlefield_duel_bodyguard
+				has_character_flag = flag_killed_opponent
+			}
+			bodyguard_protection_target = {
+				limit = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_bodyguard_protection } }
+				character_event = { id = battle.16 tooltip = "EVTTOOLTIPbattle.16" }
+			}
+			clr_character_flag = flag_battlefield_duel_vs_bodyguard
+			FROM = { clr_character_flag = flag_battlefield_duel_bodyguard }
+		}
+		if = {
+			limit = {
+				has_character_flag = flag_battlefield_duel_bodyguard
+				has_character_flag = flag_spared_opponent
+			}
+			bodyguard_protection_target = {
+				limit = { reverse_has_opinion_modifier = { who = ROOT modifier = opinion_bodyguard_protection } }
+				character_event = { id = battle.17 tooltip = "EVTTOOLTIPbattle.17" }
+			}
+			clr_character_flag = flag_battlefield_duel_vs_bodyguard
+			FROM = { clr_character_flag = flag_battlefield_duel_bodyguard }
+		}
+		# End of Example Block
+		#############################
+		
+		###Regency Duel
+		if = {
+			limit = { has_character_flag = duelist_regent }
+			if = {
+				limit = { FROM = { is_alive = no } }
+				character_event = { id = 61225 days = 1 }
+			}
+			if = {
+				limit = { FROM = { is_alive = yes } }
+				character_event = { id = 61226 days = 1 }
+			}
+			clr_character_flag = duelist_regent
+		}
+		if = {
+			limit = { has_character_flag = duelist_courtier }
+			if = {
+				limit = { FROM = { is_alive = no } }
+				character_event = { id = 61228 days = 1 }
+			}
+			if = {
+				limit = { FROM = { is_alive = yes } }
+				character_event = { id = 61229 days = 1 }
+			}
+			clr_character_flag = duelist_courtier
+		}
+		
+		###Tourney rival drama duel
+		if = {
+			limit = { has_character_flag = tourney_duel_challenger }
+			character_event = { id = 70065 days = 1 }
+			clr_character_flag = tourney_duel_challenger 
+			FROM = { 
+				clr_character_flag = tourney_duel_target
+				character_event = { id = 70068 days = 1 }
+			}
+			hidden_tooltip = {
+				top_liege = {
+					if = {
+						limit = {
+							reverse_has_opinion_modifier = { who = ROOT modifier = opinion_attending_tournament }
+						}
+						character_event = { id = 70071 } 
+					}
+					any_realm_lord = {
+						limit = {
+							reverse_has_opinion_modifier = { who = ROOT modifier = opinion_attending_tournament }
+						}	
+						character_event = { id = 70071 } 
+					}	
+				}
+			}
+		}
+		if = {
+			limit = { has_character_flag = tourney_duel_target }
+			character_event = { id = 70070 days = 1 }
+			clr_character_flag = tourney_duel_target
+			FROM = { 
+				clr_character_flag = tourney_duel_challenger
+				character_event = { id = 70067 days = 1 }
+			}
+			hidden_tooltip = {
+				top_liege = {
+					if = {
+						limit = {
+							reverse_has_opinion_modifier = { who = ROOT modifier = opinion_attending_tournament }
+						}
+						character_event = { id = 70073 } 
+					}
+					any_realm_lord = {
+						limit = {
+							reverse_has_opinion_modifier = { who = ROOT modifier = opinion_attending_tournament }
+						}	
+						character_event = { id = 70073 } 
+					}	
+				}
+			}
+		}
+		
+		###Way of Life Focus Duel
+		if = {
+			limit = { 
+				has_character_flag = WOL_focus_duel
+			}
+			long_character_event = { id = WoL.11006 days = 1 }
+			clr_character_flag = WOL_focus_duel
+			FROM = { 
+				long_character_event = { id = WoL.11007 days = 1 }
+				clr_character_flag = WOL_focus_duel
+			}
+		}
+		
+		###Way of Life lover Duel
+		if = {
+			limit = { 
+				has_character_flag = wol_lover_duel_accuser
+			}
+			character_event = { id = WoL.1036 }
+			clr_character_flag = wol_lover_duel_accuser			
+		}
+		if = {
+			limit = {
+				has_character_flag = wol_lover_duel_lover
+			}
+			character_event = { id = WoL.1039 }
+			clr_character_flag = wol_lover_duel_lover		
+		}
+		
+		###Friends Rivals event duel
+		if = {
+			limit = { 
+				has_character_flag = friends_rivals_duel
+			}
+			if = {
+				limit = {
+					FROM = {
+						OR = {
+							tier = EMPEROR
+							trait = duel_master_warrior				
+						}
+					}
+				}
+				prestige = 200
+			}
+			if = {
+				limit = {
+					FROM = {
+						NOT = { tier = EMPEROR }
+						NOT = { trait = duel_master_warrior }
+						OR = {
+							tier = KING
+							trait = duel_skilled_warrior
+							has_minor_title = title_bodyguard
+						}
+					}
+				}
+				prestige = 100
+			}
+			if = {
+				limit = {
+					FROM = {
+						NOT = { has_minor_title = title_bodyguard }
+						NOT = { higher_tier_than = DUKE }
+						NOT = { trait = duel_master_warrior }
+						NOT = { trait = duel_skilled_warrior }
+						OR = {
+							tier = DUKE
+							trait = duel_trained_warrior
+						}
+					}
+				}
+				prestige = 50
+			}	
+			if = {
+				limit = {
+					FROM = {
+						NOT = { has_minor_title = title_bodyguard }
+						NOT = { higher_tier_than = COUNT }
+						NOT = { trait = duel_master_warrior }
+						NOT = { trait = duel_skilled_warrior }
+						NOT = { trait = duel_trained_warrior }
+						OR = {
+							tier = COUNT
+							trait = duel_poor_warrior
+						}
+					}
+				}
+				prestige = 25
+			}	
+			if = {
+				limit = {
+					FROM = {
+						NOT = { has_minor_title = title_bodyguard }
+						NOT = { higher_tier_than = BARON }
+						NOT = { trait = duel_master_warrior }
+						NOT = { trait = duel_skilled_warrior }
+						NOT = { trait = duel_trained_warrior }
+						NOT = { trait = duel_poor_warrior }
+					}
+				}
+				prestige = 10
+			}	
+			clr_character_flag = friends_rivals_duel		
+			FROM = { clr_character_flag = friends_rivals_duel }
+		}
+		
+		#############################
+		# Special Context Flag Cleanup
+		#############################
+		clr_character_flag = flag_duel_friendly
+		FROM = { clr_character_flag = flag_duel_friendly }
+		clr_character_flag = flag_duel_to_the_death
+		FROM = { clr_character_flag = flag_duel_to_the_death }
+		#############################
+		# Clear kill/mercy flags
+		clr_character_flag = flag_killed_opponent
+		clr_character_flag = flag_spared_opponent
+	}
+}

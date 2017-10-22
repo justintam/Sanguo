@@ -1,0 +1,89 @@
+# kinsmen
+opinion_defected_to_me;Defected to My Cause;A rejoint ma cause;;;;;;;;;;;;x
+opinion_adopted_me;Adopted Me;M'a adopté;;;;;;;;;;;;x
+opinion_adopted_a_son;Adopted Another Son;A adopté un autre fils;;;;;;;;;;;;x
+opinion_kidnapped;Kidnapped;Enlèvement;;;;;;;;;;;;x
+opinion_attempted_kidnapped;Attempted Kidnap;Tentative d'enlèvement;;;;;;;;;;;;x
+kidnapped_me;Kidnapped Me;M'a kidnappé;;;;;;;;;;;;x
+opinion_slayed_kinsman;Slew Kinsman in battle;;;;;;;;;;;;;x
+executed_kin;Executed Kinsman;A exécuté un parent;;;;;;;;;;;;x
+attempted_murder_of_close_kin;Attempted Murder of Kinsman;A tenté de tué un parent;;;;;;;;;;;;x
+attempted_murder_of_spouse;Attempted Murder of Spouse;A tenté de tué ma(on) épouse(oux);;;;;;;;;;;;x
+# Restore
+opinion_restored_to_luoyang;Restored to Luoyang;;;;;;;;;;;;;x
+# Pope
+pope_heretic_removal_approve;Removed Heretic Advisor;Conseiller hérétique retiré;Ketzerischer Berater beseitigt;;Ha despedido al consejero hereje;;;;;;;;;x
+pope_heretic_removal_disapprove;Refused to Remove Heretic Advisor;Refus de retirer le conseiller hérétique;Ketzerischer Berater nicht beseitigt;;Ha rechazado despedir al consejero hereje;;;;;;;;;x
+opinion_pope_vs_antipope;Imperial Pretender;;;;;;;;;;;;;x
+opinion_pope_vs_antipope_controller;Controller of Pretender;;;;;;;;;;;;;x
+opinion_priest_vs_crusader;Executing Decree;;;;;;;;;;;;;x
+opinion_priest_vs_non_crusader;Ignoring Decree;;;;;;;;;;;;;x
+pope_invest_approve;Approve of Obedience;Approuve l’obéissance;Billigt Gehorsam;;Aprueba la obediencia;;;;;;;;;x
+pope_invest_dislike;Dislike our Independence;N’apprécie pas notre indépendance;Verachtet unsere Unabhängigkeit;;No le gusta nuestra independencia;;;;;;;;;x
+bishop_bribed_by_pope;Follows Imperial Instructions;;;;;;;;;;;;;x
+my_vassal_bribed_by_pope;Bribed by a false emperor;;;;;;;;;;;;;x
+loyal_vassal_against_pope;Loyal to you ahead of the emperor;;;;;;;;;;;;;x
+opinion_not_participating_in_crusade_emperor;Not Participating in Imperial Decree;;;;;;;;;;;;;x
+opinion_not_participating_in_crusade_king;Not Participating in Imperial Decree;;;;;;;;;;;;;x
+opinion_not_participating_in_crusade_duke;Not Participating in Imperial Decree;;;;;;;;;;;;;x
+opinion_not_participating_in_crusade_count;Not Participating in Imperial Decree;;;;;;;;;;;;;x
+MAKE_ANTIPOPE;Make Imperial Pretender;;;;;;;;;;;;;x
+LOW_OPINION;Low Opinion;Mauvaise opinion;Niedrige Meinung;;Baja opinión;;;;;;;;;x
+PROV_RAISE_FLEET;Raise Fleet;Lever une flotte;Flotte ausheben;;Reclutar flota;;;;;;;;;x
+MONTHLY_CHANGE;Monthly Change;Changement mensuel;Monatliche Änderungen;;Cambio mensual;;;;;;;;;x
+NR_OF_ANTIPOPES;Imperial Pretenders;;;;;;;;;;;;;x
+ANTIPOPE_CHURCH_INVESTITURE;§RThe Kingdom must have the Free Investiture Law§!;§RLe Royaume doit disposer d’une loi d’investiture libre§!;§RDas Königreich muss das Freie Investiturgesetz haben§!;;§REl reino debe funcionar bajo la ley de libre investidura.§!;;;;;;;;;x
+ANTIPOPE_TOO_LOW_OPINION;§RHe likes the Emperor (§Y$POPE$§R) more than us (§Y$US$§!§!);;;;;;;;;;;;;x
+ANTIPOPE_ALREADY_HAVE_ONE;§RWe already control an Imperial Pretender§!;;;;;;;;;;;;;x
+ANTIPOPE_NOT_ENOUGH_PRESTIGE;§RWe need at least §Y$NEED$§R Prestige§!;§RIl nous faut au moins §Y$NEED$§R de prestige§!;§RWir brauchen mindestens §Y$NEED$§R Prestige§!;;§RNecesitamos al menos §Y$NEED$§R de Prestigio.§!;;;;;;;;;x
+ANTI_POPE_CREATION_DESC;Creating an Imperial Pretender will allow us to censor any character in our realm at will.;;;;;;;;;;;;;x
+ignores_local_saints;Ignores Imperial Wishes;;;;;;;;;;;;;x
+REL_OPINION_OF_POPE;Imperial Opinion;;;;;;;;;;;;;x
+REL_OPINION_OF_US;Crown Opinion;Opinion de la Couronne;Meinung der Krone;;Opinión de la Corona;;;;;;;;;x
+TRAIT_OPINION_CHURCH;Temple Opinion: $VALUE$;;;;;;;;;;;;;x
+TRAIT_OPINION_CHRISTIAN_CHURCH;Confucian Imperial Opinion: $VALUE$;;;;;;;;;;;;;x
+TRAIT_OPINION_SPOUSE;Spouse Opinion: $VALUE$;Opinion du conjoint $VALUE$;Meinung des Ehepartners: $VALUE$;;Opinión de cónyuge: $VALUE$;;;;;;;;;x
+TRAIT_OPINION_SEX_APPEAL;Attraction Opinion: $VALUE$;Opinion sur le charisme $VALUE$;Attraktionsmeinung: $VALUE$;;Opinión de atracción: $VALUE$;;;;;;;;;x
+TRAIT_OPINION_DYNASTY;Dynasty Opinion: $VALUE$;Opinion de la dynastie $VALUE$;Meinung der Dynastie: $VALUE$;;Opinión de dinastía: $VALUE$;;;;;;;;;x
+TRAIT_OPINION_VASSAL;Vassal Opinion: $VALUE$;Opinion des vassaux $VALUE$;Meinung der Vasallen: $VALUE$;;Opinión de vasallo: $VALUE$;;;;;;;;;x
+TRAIT_OPINION_LIEGE;Liege Opinion: $VALUE$;Opinion du seigneur $VALUE$;Meinung des Lehnsherren: $VALUE$;;Opinión de señor feudal: $VALUE$;;;;;;;;;x
+TRAIT_OPINION_INFIDEL;Other Faith Opinion: $VALUE$;Opinion de l'autre religion $VALUE$;Meinung anderer Glaubensanhänger: $VALUE$;;Opinión de otra creencia: $VALUE$;;;;;;;;;x
+TRAIT_OPINION_SAME_TRAIT;Same Trait Opinion: $VALUE$;Opinion d'une personnalité similaire $VALUE$;Meinung durch gleiche Merkmale: $VALUE$;;Opinión de la misma característica: $VALUE$;;;;;;;;;x
+TRAIT_OPINION_SAME_TRAIT_SAME_REL;Religious Same Trait Opinion: $VALUE$;Opinion de la même religion $VALUE$;Meinung durch gleiche religiöse Merkmale: $VALUE$;;Opinión de la misma característica religiosa: $VALUE$;;;;;;;;;x
+TRAIT_OPINION_OPPOSITE_TRAIT;Opposite Trait Opinion: $VALUE$;Opinion d'une personnalité opposée $VALUE$;Meinung durch entgegengesetzte Merkmale: $VALUE$;;Opinión de característica opuesta: $VALUE$;;;;;;;;;x
+TRAIT_OPINION_SAME_RELIGION;Same Faith Opinion: $VALUE$;Opinion de la même religion $VALUE$;Meinung von Glaubensgenossen: $VALUE$;;Opinión de la Misma Creencia: $VALUE$;;;;;;;;;x
+TRAIT_OPINION_MUSLIM;Taoist Opinion: $VALUE$;;;;;;;;;;;;;x
+TRAIT_OPINION_CHRISTIAN;Confucian Opinion: $VALUE$;;;;;;;;;;;;;x
+TRAIT_OPINION_AMBITION;Ambition Opinion: $VALUE$;Opinion sur l'ambition $VALUE$;Meinung durch Ambition: $VALUE$;;Opinión de ambición: $VALUE$;;;;;;;;;x
+church_appreciates;The Court Approves;;;;;;;;;;;;;x
+OPINION_OF_POPE;Opinion of Emperor;;;;;;;;;;;;;x
+OPINION_OF_SEC_LIEGE;Opinion of Liege;;;;;;;;;;;;;x
+# Neg
+opinion_castrated_me;Castrated Me;M'a castré;Hat Mich Kastriert;;Yo como Castrado;;;;;;;;;x
+opinion_blinded_me;Blinded Me;M'a aveuglé;Hat Mich Geblendet;;Yo como Ciego;;;;;;;;;x
+opinion_castrated_family;Castrated Kin;A castré un proche;Kastrierte Sippschaft;;Parientes Castrados;;;;;;;;;x
+opinion_blinded_family;Blinded Kin;A aveuglé un proche;Geblendete Sippschaft;;Parientes Ciegos;;;;;;;;;x
+opinion_loyal_servant;Loyal Servant;Serviteur loyal;Loyaler Diener;;Criado Leal;;;;;;;;;x
+opinion_forced_marriage;Forced Me to Marry;;;;;;;;;;;;;x
+opinion_forced_marriage_kin;Forced Kin to Marry;;;;;;;;;;;;;x
+# Taxes
+opinion_ask_tax;Imposed Taxes;;;;;;;;;;;;;x
+opinion_ask_trib;Requested Tribute;;;;;;;;;;;;;x
+opinion_ask_none;Waived Taxes;;;;;;;;;;;;;x
+opinion_tax_full;Taxes Paid in Full;;;;;;;;;;;;;x
+opinion_tax_part;Taxes Paid in Part;;;;;;;;;;;;;x
+opinion_tax_none;Taxes Unpaid;;;;;;;;;;;;;x
+opinion_tax_refused;Refused Taxes;;;;;;;;;;;;;x
+# Exam
+opinion_sponsored_exam;Sponsored Candidacy;;;;;;;;;;;;;x
+# Noble
+opinion_raised_to_nobility;Made Me Noble;;;;;;;;;;;;;x
+opinion_ennobled;Enfeoffed Me;;;;;;;;;;;;;x
+nobility_accepted;Accepted Nobility;;;;;;;;;;;;;x
+nobility_refused;Refused Nobility;;;;;;;;;;;;;x
+# Border
+opinion_border_tensions;Border Tensions;;;;;;;;;;;;;x
+# Service
+opinion_service_rendered;Service Rendered;;;;;;;;;;;;;x
+opinion_loyalty;Loyalty;;;;;;;;;;;;;x
+opinion_unfilial;Unfilial;;;;;;;;;;;;;x

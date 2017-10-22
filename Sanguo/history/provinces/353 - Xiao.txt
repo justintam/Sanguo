@@ -1,0 +1,18 @@
+# c_xiao
+
+# County Title
+title = c_xiao
+
+# Settlements
+max_settlements = 4
+
+b_xiao = castle
+b_gaixiaju = city
+#b_xiaocheng = city
+#b_xiaofu = temple
+
+# Misc
+culture = han
+religion = taiping
+
+#History

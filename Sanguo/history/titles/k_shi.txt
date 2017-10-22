@@ -1,0 +1,17 @@
+1.1.1={
+	active=no
+	effect = {
+		set_title_flag = warlord_flag
+	}
+}
+190.3.1={
+	active=yes
+	holder=1000 #Shi Xie
+}
+211.1.1={
+	liege=e_sun
+}
+226.1.1={
+	holder=0
+	active=no
+}

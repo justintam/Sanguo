@@ -1,0 +1,25 @@
+# c_wei
+
+# County Title
+title = c_wei
+
+# Settlements
+max_settlements = 5
+
+b_wei = castle
+#b_weilo = city
+#b_houguanzhen = castle
+#b_weizhai = castle
+#b_weili = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History
+200.1.1={
+	b_weilo = city
+}
+210.1.1={
+	b_houguanzhen = castle
+}

@@ -1,0 +1,17 @@
+# c_yangquan
+
+# County Title
+title = c_yangquan
+
+# Settlements
+max_settlements = 3
+
+b_yangquan = tribal
+#b_funquan = city
+#b_xiwai = temple
+
+# Misc
+culture = bandunman
+religion = tianshi
+
+#History

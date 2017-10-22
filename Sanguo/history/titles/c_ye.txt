@@ -1,0 +1,56 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_wei
+}
+170.1.1={
+	holder=3471 #Wang Hong
+}
+173.1.1={
+	holder=971 #Gongsun Du
+}
+175.1.1={
+	holder=50 #Liu Yan
+}
+180.1.1={
+	holder=0 #None
+}
+184.1.1={
+	holder=3326 #Li Shao
+}
+185.1.1={
+	holder=105 #Huangfu Song
+}
+187.1.1={
+	holder=123 #Jia Cong
+}
+188.1.1={
+	holder=3442 #Wang Fen - Coup
+}
+189.1.1={
+	holder=123 #Jia Cong
+}
+189.9.1={
+	holder=118 #Han Fu
+}
+191.1.1={
+	holder=700 #Yuan Shao
+}
+193.1.1={
+	#Hu Shou
+}
+202.6.28={
+	holder=707 #Yuan Shang
+}
+204.9.13={
+	holder=400 #Cao Cao
+}
+220.3.15={
+	holder=10400 #Cao Pi
+}
+225.1.1={
+	holder=20444 #Pei Hui
+}

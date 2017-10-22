@@ -1,0 +1,18 @@
+# c_ningling
+
+# County Title
+title = c_ningling
+
+# Settlements
+max_settlements = 4
+
+b_ningling = castle
+b_liucheng = city
+#b_ninglingfu = temple
+#b_liukou = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

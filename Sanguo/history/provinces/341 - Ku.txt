@@ -1,0 +1,18 @@
+# c_ku
+
+# County Title
+title = c_ku
+
+# Settlements
+max_settlements = 4
+
+b_ku = castle
+b_laixiang = city
+#b_kufu = temple
+#b_kucheng = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

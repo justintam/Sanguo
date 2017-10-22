@@ -1,0 +1,18 @@
+# c_hanshou
+
+# County Title
+title = c_hanshou
+
+# Settlements
+max_settlements = 4
+
+b_hanshou = castle
+b_bixi = city
+#b_danshou = temple
+#b_yuhua = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

@@ -1,0 +1,20 @@
+# c_beiyuan
+
+# County Title
+title = c_beiyuan
+
+# Settlements
+max_settlements = 6
+
+b_beiyuan = castle
+b_yangfeng = tribal
+#b_louzi = temple
+#b_dongba = castle
+#b_zhantan = city
+#b_yangsi = temple
+
+# Misc
+culture = qiang
+religion = baishi
+
+#History

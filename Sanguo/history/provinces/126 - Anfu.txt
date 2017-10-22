@@ -1,0 +1,22 @@
+# c_anfu
+
+# County Title
+title = c_anfu
+
+# Settlements
+max_settlements = 5
+
+b_anfu = castle
+b_balingqiu = city
+#b_handing = castle
+#b_mantou = castle
+#b_kaifu = city
+
+# Misc
+culture = minyue
+religion = animist
+
+#History
+214.1.1={
+	b_handing = castle
+}

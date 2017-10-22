@@ -1,0 +1,19 @@
+name = "Qingzhou Suppression"
+
+casus_belli={
+	actor=400
+	recipient=217
+	casus_belli=religious
+	landed_title=d_pingyuan
+	date=192.9.1
+}
+
+192.9.1 = {
+	add_attacker = 400 #Cao Cao
+	add_defender = 217 #Xu He
+}
+
+192.11.1={
+	rem_defender = 217 #Xu He
+	rem_attacker = 400 #Cao Cao
+}

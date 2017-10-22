@@ -1,0 +1,18 @@
+# c_okjeo
+
+# County Title
+title = c_okjeo
+
+# Settlements
+max_settlements = 4
+
+b_okjeo = tribal
+b_gaema = tribal
+b_guda = temple
+#b_gilim = castle
+
+# Misc
+culture = joseon
+religion = shamanist
+
+#History

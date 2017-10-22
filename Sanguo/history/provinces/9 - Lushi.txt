@@ -1,0 +1,17 @@
+# c_lushi
+
+# County Title
+title = c_lushi
+
+# Settlements
+max_settlements = 3
+
+b_lushi = castle
+#b_yima = city
+#b_lushicheng = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

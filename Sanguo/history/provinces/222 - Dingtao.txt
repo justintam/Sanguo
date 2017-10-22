@@ -1,0 +1,18 @@
+# c_dingtao
+
+# County Title
+title = c_dingtao
+
+# Settlements
+max_settlements = 4
+
+b_dingtao = castle
+b_taoqiu = city
+#b_banding = temple
+#b_jingan = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

@@ -1,0 +1,28 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_jibei
+}
+184.1.1={
+	liege=d_donghuang
+	holder=210 #Chen Bao
+}
+184.10.1={
+	liege=d_jibei
+	holder=3531 #Random
+}
+194.1.1={
+	liege=k_yan
+}
+196.1.1={
+	liege=d_jibei
+}
+206.1.1={
+	liege=k_yan
+}
+212.1.1={
+	liege=d_jibei
+}

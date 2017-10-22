@@ -1,0 +1,19 @@
+# c_gaocheng
+
+# County Title
+title = c_gaocheng
+
+# Settlements
+max_settlements = 5
+
+b_gaocheng = castle
+b_gaogui = city
+#b_guanzhuang = temple
+#b_yangsan = castle
+#b_xuzhuang = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

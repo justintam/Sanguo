@@ -1,0 +1,38 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_pingyuan
+}
+113.1.1={
+	holder=3821 #Liu De
+}
+119.1.1={
+	holder=24 #Liu Yi
+}
+143.1.1={
+	holder=4219 #He Lin
+}
+148.1.1={
+	holder=4209 #Liu Shi
+}
+184.1.1={
+	liege=d_donghuang
+	holder=240 #Sima Ju
+}
+191.5.1={
+	liege=d_pingyuan
+	holder=600 #Liu Bei
+}
+192.5.1={
+	holder=709 #Yuan Tan
+}
+204.1.1={
+	holder=4118 #Random
+}
+
+
+
+#Incomplete

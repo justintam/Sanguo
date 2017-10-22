@@ -1,0 +1,17 @@
+# c_nanchangzhu
+
+# County Title
+title = c_nanchangzhu
+
+# Settlements
+max_settlements = 3
+
+b_nanchangzhu = tribal
+#b_nanchangfu = city
+#b_zhenyuan = temple
+
+# Misc
+culture = nanman
+religion = huojiao
+
+#History

@@ -1,0 +1,51 @@
+animist;Animist;;;;;;;;;;;;;x
+animist_DESC;The Way of Nature;;;;;;;;;;;;;x
+baihu;Baihu;;;;;;;;;;;;;x
+baihu_DESC;The White Tiger;;;;;;;;;;;;;x
+baima;Baima;;;;;;;;;;;;;x
+baima_DESC;The White Horse;;;;;;;;;;;;;x
+baishi;Baishi;;;;;;;;;;;;;x
+baishi_DESC;The White Stone;;;;;;;;;;;;;x
+huojiao;Huojiao;;;;;;;;;;;;;x
+huojiao_DESC;The Way of Fire;;;;;;;;;;;;;x
+shamanist;Muist;;;;;;;;;;;;;x
+shamanist_DESC;The Way of Spirits;;;;;;;;;;;;;x
+buddhist_religion;Buddhism;;;;;;;;;;;;;x
+buddhist;Buddhist;;;;;;;;;;;;;x
+buddhist_DESC;The Way of Buddha;;;;;;;;;;;;;x
+chinese_religion;Confucianism;;;;;;;;;;;;;x
+confucian;Confucian;;;;;;;;;;;;;x
+confucian_DESC;The Way of Morality;;;;;;;;;;;;;x
+folk;Folk;;;;;;;;;;;;;x
+folk_DESC;Native Chinese Folk Traditions;;;;;;;;;;;;;x
+legal;Legalist;;;;;;;;;;;;;x
+legal_DESC;The Way of Law;;;;;;;;;;;;;x
+tao;Taoism;;;;;;;;;;;;;x
+taiping;Taipingdao;;;;;;;;;;;;;x
+taiping_DESC;The Way of Peace;;;;;;;;;;;;x
+tianshi;Tianshidao;;;;;;;;;;;;;x
+tianshi_DESC;The Way of Celestial Masters;;;;;;;;;;;;x
+#
+realm_bishop;Renowned Scholar;;;;;;;;;;;;;x
+vassal_bishop;Grandee;;;;;;;;;;;;;x
+#
+won_crusade;Victorious in Campaign;;;;;;;;;;;;;x
+lost_crusade;Defeated in Campaign;;;;;;;;;;;;;x
+won_holy_war;Won Holy Wars;A gagné des guerres saintes;Gewonnene heilige Kriege;;Guerras Santas Ganadas;;;;;;;;;x
+lost_holy_war;Lost Holy Wars;A perdu des guerres saintes;Verlorene heilige Kriege;;Guerras Santas Perdidas;;;;;;;;;x
+#
+ruler_bowed_to_emperor;Imperial Demands Accepted;;;;;;;;;;;;;x
+ruler_defied_emperor;Imperial Demands Refused;;;;;;;;;;;;;x
+#Scripture
+HEAVEN_MANDATE;Heaven's Mandate;;;;;;;;;;;;;x
+TAIPINGJING;Taipingjing;;;;;;;;;;;;;x
+#Priest
+LAMA;Lama;;;;;;;;;;;;;x
+SCHOLAR;Scholar;;;;;;;;;;;;;x
+#Gods
+HANEULLIM;Haneullim;;;;;;;;;;;;;x
+HEAVEN;Heaven;;;;;;;;;;;;;x
+HUANGLAO;Huang Lao;;;;;;;;;;;;;x
+ZHONGHUANG;Zhonghuang Taiyi;;;;;;;;;;;;;x
+#TITLE
+MU;Mu;;;;;;;;;;;;;x

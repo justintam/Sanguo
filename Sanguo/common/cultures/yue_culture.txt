@@ -1,0 +1,179 @@
+yue = {
+		graphical_cultures = { koreangfx turkishgfx easterngfx }
+	
+	minyue = {
+		graphical_cultures = { koreangfx turkishgfx easterngfx }
+		
+		color = { 0.5 0.2 0.5 }
+		
+		male_names = {
+			Bo Bopi Bushou
+			Chai Chuwuyu Cou
+			Fa Fan Fanli Fu Fuchai Futan
+			Goujian
+			Hong Hui
+			Ji
+			Li Liao Luying
+			Meng Mingdi
+			Peng Pengtong Pi
+			Qiang
+			Rui
+			She Shi Shou Shoumeng
+			Ta Taibo Tong
+			Wei Wen Weng Wenzhong Wu Wuqiang Wurei Wuren
+			Wushen Wuyu Wuzixi Wuzhu Wuzhuan
+			Yan Yao Ye Yi Ying Yiwei You Yu Yuenu
+			Yuji Yumei Yunchang Yushan Yuyi
+			Zhe Zheji Zhen Zhizhou Zhong Zhongyong
+			Zhougou Zhouyu Zhu Zhuan Zhuanzhu Zhufan
+			Zixi
+		}
+		female_names = {
+			Ailiao
+			Dongshi
+			Guang
+			Helu
+			Li
+			Ji Jiguang
+			Shi
+			Xishi
+			Yiguang Yuenu
+			Zhen
+		}
+		
+		founder_named_dynasties = yes
+		
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+		pat_grf_name_chance = 35
+		mat_grf_name_chance = 15
+		father_name_chance = 25
+		
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+		pat_grm_name_chance = 35
+		mat_grm_name_chance = 15
+		mother_name_chance = 25
+
+		modifier = default_culture_modifier
+	}
+	nanyue = {
+		graphical_cultures = { nanmangfx turkishgfx easterngfx }
+		
+		color = { 0.3 0.2 0.6 }
+		
+		male_names = {
+			Ai An Anh
+			Ba Bach Banh Bao Bi Bian Bo Bon
+			Cai Cao Cha Chau Chi Chia Chu Chuong Cong
+			Da Dai Dam Dao Dat De Diep Dinh Doan Du
+			Duc Due Duong Duyang
+			Fudu
+			Gia Giang Giap
+			Ha Han Hien Hoa Hung
+			Khanh Kien Kieu Kim
+			La Lac Lang Lian Liang Lien Lin Ling
+			Loan Long Lu Luong
+			Ma Mach Mai Mat Minh Mo
+			Nam Nghiem Ngoc Nguyen Nhan Nhuong
+			Ouda Oulian Oulin Ouling
+			Phat Phi Pho Phuc Phung Pian
+			Quach Quang Quy Quyen
+			Sach Shihui Shuhui
+			Ta Tao Te Thach Thai Thanh Thao Thi
+			Thien Thieu Thua Thuc Thuy Tiao
+			Tiaobian Tiaopian Tiaowang Tien Tieu
+			Tinh To Ton Tong Trang Trieu Trinh
+			Truc Truong Tu Tuc
+			Van Viet Vinh Vu Vuong
+			Xuong
+			Yingqi
+		}
+		female_names = {
+			Ai An Anh Au
+			Be Bian Bich Binh
+			Cam Canh Cao Chau Chi Cong Cuc
+			Dao Diep Dinh Diu Doan Dong Duong
+			Gan Giang
+			Ha Hai Han Hang Hanh Hien Hoa Hong
+			Hue Hung Huong Huyen Hyunh
+			Ket Khanh Kieu Kim
+			Lam Lan Lang Lanh Le Lien Lieu
+			Linh Loan Long Ly
+			Mai Minh My
+			Nam Ngoc Ngon Ngu Nguyet Nhi Nhu
+			Nhung Nien Nu
+			Oulian
+			Phuc Phuong
+			Quy Quyen
+			Sang Suong
+			Tam Tan Tham Thanh Thao Thi Thien
+			Thom Thu Thuy Tien Trac Trinh Truc
+			Tu Tuyen Tuyet
+			Uoc
+			Van Viet
+			Xuan
+			Yen
+		}
+		
+		founder_named_dynasties = yes
+		
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+		pat_grf_name_chance = 35
+		mat_grf_name_chance = 15
+		father_name_chance = 25
+		
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+		pat_grm_name_chance = 35
+		mat_grm_name_chance = 15
+		mother_name_chance = 25
+
+		modifier = default_culture_modifier
+	}
+	shanyue = {
+		graphical_cultures = { koreangfx turkishgfx easterngfx }
+		
+		color = { 0.8 0.8 0.8 }
+		
+		male_names = {
+			Baihu Bao Bo Bopo
+			Cha Chao Chia
+			Dahu Dawu
+			En
+			Fuwu
+			Gu Guan Guo
+			Lang Lin Longluo Lu
+			Ma
+			Pu
+			Rang Rao
+			Shan Shang She Shi
+			Tun
+			Yan Ye Yi Yu
+			Zhan Zhen Zhou
+		}
+		female_names = {
+			Ailiao
+			Dongshi
+			Guang
+			Helu
+			Li
+			Ji Jiguang
+			Shi
+			Xishi
+			Yiguang Yuenu
+			Zhen
+		}
+		
+		founder_named_dynasties = yes
+		
+		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
+		pat_grf_name_chance = 35
+		mat_grf_name_chance = 15
+		father_name_chance = 25
+		
+		# Chance of female children being named after their paternal or maternal grandmother, or their mother. Sum must not exceed 100.
+		pat_grm_name_chance = 35
+		mat_grm_name_chance = 15
+		mother_name_chance = 25
+
+		modifier = default_culture_modifier
+	}
+}

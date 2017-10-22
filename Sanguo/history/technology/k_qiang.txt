@@ -1,0 +1,16 @@
+#QIANG
+technology = {
+	titles = {
+		d_qinghai
+	}
+	184 = {
+		military = 1.0
+		economy = 1.0
+		culture = 1.0
+	}
+	300 = {
+		military = 3.0
+		economy = 3.0
+		culture = 3.0
+	}
+}

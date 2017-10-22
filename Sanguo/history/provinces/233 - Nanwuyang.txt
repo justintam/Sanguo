@@ -1,0 +1,18 @@
+# c_nanwuyang
+
+# County Title
+title = c_nanwuyang
+
+# Settlements
+max_settlements = 4
+
+b_nanwuyang = castle
+b_zhuanyucheng = city
+#b_qingnan = temple
+#b_zhuancheng = castle
+
+# Misc
+culture = han
+religion = taiping
+
+#History

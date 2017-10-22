@@ -1,0 +1,19 @@
+# c_changyuan
+
+# County Title
+title = c_changyuan
+
+# Settlements
+max_settlements = 5
+
+b_changyuan = castle
+b_pucheng = city
+b_quqiutingyan = temple
+#b_duozhi = castle
+#b_liangmo = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

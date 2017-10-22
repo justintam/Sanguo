@@ -1,0 +1,59 @@
+###########################################
+#                                         #
+# Sanguo Events		  	            	  #
+#                                         #
+# ID CRV.1		              		  	  #
+#                                         #
+# #Head Patriarch                         #
+# #Start Rivalry?                         #
+# #Set Rivalry                            #
+# #End Rivalry                            #
+#                                         #
+#                                         #
+###########################################
+
+namespace = CRV
+
+character_event = { # Set Clan Rivalry
+	id = CRV.1
+	desc = EVTDESC_CRV.1
+	title = EVTTITLE_CRV.1
+	picture = GFX_evt_riots_byzantine
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ACCEPT
+		
+		remove_character_modifier = clan_patriarch
+		FROM = { 
+			add_character_modifier = {
+				name = clan_patriarch
+				duration = -1
+			}
+		}
+	}
+	
+	option = {
+		name = DECLINE
+		
+		add_rival = FROM
+	}
+}
+
+character_event = { # Clan Choice
+	id = CRV.2
+	desc = EVTDESC_CRV.2
+	title = EVTTITLE_CRV.2
+	picture = GFX_evt_family_feud_republic
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ACCEPT
+	}
+	
+	option = {
+		name = DECLINE
+	}
+}

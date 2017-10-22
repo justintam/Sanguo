@@ -1,0 +1,17 @@
+# c_tuiyan
+
+# County Title
+title = c_tuiyan
+
+# Settlements
+max_settlements = 3
+
+b_tuiyan = tribal
+#b_tugu = city
+#b_luyue = temple
+
+# Misc
+culture = xianbei
+religion = tengri_pagan
+
+#History

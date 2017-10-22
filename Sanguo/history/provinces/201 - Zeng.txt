@@ -1,0 +1,18 @@
+# c_zeng
+
+# County Title
+title = c_zeng
+
+# Settlements
+max_settlements = 4
+
+b_zeng = castle
+b_gaiteng = city
+#b_fengding = temple
+#b_luxi = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

@@ -1,0 +1,19 @@
+name = "Cao Cao's Invasion of Xu"
+
+casus_belli={
+	actor=400
+	recipient=119
+	casus_belli=invasion
+	landed_title=k_xu
+	date=193.8.1
+}
+
+193.8.1 = {
+	add_defender = 400 #Cao Cao
+	add_attacker = 119 #Tao Qian
+}
+
+194.1.1={
+	rem_defender = 400 #Cao Cao
+	rem_attacker = 119 #Tao Qian
+}

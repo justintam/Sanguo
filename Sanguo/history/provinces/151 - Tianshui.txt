@@ -1,0 +1,19 @@
+# c_tianshui
+
+# County Title
+title = c_tianshui
+
+# Settlements
+max_settlements = 5
+
+b_jicheng = castle
+b_shangbang = city
+b_mumen = castle
+#b_women = castle
+#b_yuquan = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

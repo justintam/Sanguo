@@ -1,0 +1,16 @@
+# k_northern
+1.1.1={
+	historical_nomad = yes
+}
+1.1.1={
+	liege=d_xiongnunan
+}
+2.1.1={
+	holder=4258 #Xianxianshan
+}
+3.1.1={
+	holder=0 #None
+}
+184.1.1={
+	holder=1503 #Yilo
+}

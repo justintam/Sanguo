@@ -1,0 +1,15 @@
+1.1.1={
+	active=no
+	effect = {
+		set_title_flag = warlord_flag
+	}
+}
+184.1.1={
+	active=yes
+	liege=k_you
+	holder=900 #Gongsun Zan
+}
+191.7.1={
+	holder=0
+	active=no
+}

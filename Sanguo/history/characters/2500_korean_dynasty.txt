@@ -1,0 +1,619 @@
+# Buyeo
+
+2500 = {
+	name="Wigutae"
+	dynasty=2201
+	religion="shamanist"
+	culture="joseon"
+	father=2508
+	120.1.1={
+		birth=yes
+	}
+	205.1.1={
+		death=yes
+	}
+}
+2501 = {
+	name="Ganwigeo"
+	dynasty=2201
+	religion="shamanist"
+	culture="joseon"
+	father=2500
+	150.1.1={
+		birth=yes
+	}
+	220.1.1={
+		death=yes
+	}
+}
+2502 = {
+	name="Maryeo"
+	dynasty=2201
+	religion="shamanist"
+	culture="joseon"
+	father=2501
+	180.1.1={
+		birth=yes
+	}
+	270.1.1={
+		death=yes
+	}
+}
+2503 = {
+	name="Uiryeo"
+	dynasty=2201
+	religion="shamanist"
+	culture="joseon"
+	father=2502
+	210.1.1={
+		birth=yes
+	}
+	285.1.1={
+		death={death_reason=death_suicide}
+	}
+}
+2504 = {
+	name="Uira"
+	dynasty=2201
+	religion="shamanist"
+	culture="joseon"
+	father=2503
+	240.1.1={
+		birth=yes
+	}
+	300.1.1={
+		death=yes
+	}
+}
+2505 = {
+	name="Hyeon"
+	dynasty=2201
+	religion="shamanist"
+	culture="joseon"
+	father=2504
+	280.1.1={
+		birth=yes
+	}
+	346.1.1={
+		death={death_reason=death_battle}
+	}
+}
+2506 = {
+	name="Yeoul"
+	dynasty=2201
+	religion="shamanist"
+	culture="joseon"
+	father=2505
+	320.1.1={
+		birth=yes
+	}
+	384.1.1={
+		death=yes
+	}
+}
+2507 = {
+	name="Jan"
+	dynasty=2201
+	religion="shamanist"
+	culture="joseon"
+	father=2506
+	380.1.1={
+		birth=yes
+	}
+	494.1.1={
+		death=yes
+	}
+}
+2508 = {
+	name="Butae"
+	dynasty=2201
+	religion="shamanist"
+	culture="joseon"
+	father=2509
+	60.1.1={
+		birth=yes
+	}
+	140.1.1={
+		death=yes
+	}
+}
+2509 = {
+	name="Dodu"
+	dynasty=2201
+	religion="shamanist"
+	culture="joseon"
+	father=2510
+	34.1.1={
+		birth=yes
+	}
+	68.1.1={
+		death=yes
+	}
+}
+2510 = {
+	name="Galsa"
+	dynasty=2201
+	religion="shamanist"
+	culture="joseon"
+	father=2511
+	17.1.1={
+		birth=yes
+	}
+	50.1.1={
+		death=yes
+	}
+}
+2511 = {
+	name="Daeso"
+	dynasty=2201
+	religion="shamanist"
+	culture="joseon"
+	father=2512
+	1.1.5={
+		birth=yes
+	}
+	22.1.1={
+		death={
+			death_reason=death_battle
+			killer=2204
+		}
+	}
+}
+2512 = {
+	name="Geumwa"
+	dynasty=2201
+	religion="shamanist"
+	culture="joseon"
+	father=2513
+	1.1.4={
+		birth=yes
+	}
+	1.1.5={
+		add_spouse=2307
+	}
+	20.1.1={
+		death=yes
+	}
+}
+2513 = {
+	name="Buru"
+	dynasty=2201
+	religion="shamanist"
+	culture="joseon"
+	father=2514
+	1.1.3={
+		birth=yes
+	}
+	20.1.1={
+		death=yes
+	}
+}
+2514 = {
+	name="Mosu"
+	dynasty=2201
+	religion="shamanist"
+	culture="joseon"
+	father=2515
+	1.1.2={
+		birth=yes
+	}
+	1.1.3={
+		add_spouse=2307
+	}
+	20.1.1={
+		death=yes
+	}
+}
+2515 = {
+	name="Dongmyeong"
+	dynasty=2201
+	religion="shamanist"
+	culture="joseon"
+	1.1.1={
+		birth=yes
+	}
+	20.1.1={
+		death=yes
+	}
+}
+
+
+#
+# Gaya
+#
+
+2520 = {
+	name="Suro"
+	dynasty=2261
+	religion="shamanist"
+	culture="samhan"
+	trait="destined"
+	30.1.1={
+		birth=yes
+	}
+	48.1.1={
+		add_spouse=2521
+	}
+	199.1.1={
+		death=yes
+	}
+}
+2521 = {
+	name="Hwangok"
+	female=yes
+	dynasty=2254
+	religion="shamanist"
+	culture="samhan"
+	trait="destined"
+	32.1.1={
+		birth=yes
+	}
+	48.1.1={
+		add_spouse=2520
+	}
+	189.1.1={
+		death=yes
+	}
+}
+2522 = {
+	name="Geodeung"
+	dynasty=2261
+	religion="shamanist"
+	culture="samhan"
+	father=2520
+	mother=2521
+	trait="destined"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		add_spouse=2523
+	}
+	259.1.1={
+		death=yes
+	}
+}
+2523 = {
+	name="Mojeong"
+	dynasty=2269
+	female=yes
+	religion="shamanist"
+	culture="samhan"
+	father=2534
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		add_spouse=2522
+	}
+	230.1.1={
+		death=yes
+	}
+}
+2524 = {
+	name="Mapum"
+	dynasty=2261
+	religion="shamanist"
+	culture="samhan"
+	father=2522
+	mother=2523
+	200.1.1={
+		birth=yes
+	}
+	248.1.1={
+		add_spouse=2525
+	}
+	291.1.1={
+		death=yes
+	}
+}
+2525 = {
+	name="Hogu"
+	female=yes
+	religion="shamanist"
+	culture="samhan"
+	230.1.1={
+		birth=yes
+	}
+	248.1.1={
+		add_spouse=2524
+	}
+	290.1.1={
+		death=yes
+	}
+}
+2526 = {
+	name="Geojilmi"
+	dynasty=2261
+	religion="shamanist"
+	culture="samhan"
+	father=2524
+	mother=2525
+	260.1.1={
+		birth=yes
+	}
+	318.1.1={
+		add_spouse=2527
+	}
+	346.1.1={
+		death=yes
+	}
+}
+2527 = {
+	name="Aji"
+	female=yes
+	religion="shamanist"
+	culture="samhan"
+	300.1.1={
+		birth=yes
+	}
+	318.1.1={
+		add_spouse=2526
+	}
+	350.1.1={
+		death=yes
+	}
+}
+2528 = {
+	name="Isipum"
+	dynasty=2261
+	religion="shamanist"
+	culture="samhan"
+	father=2526
+	mother=2527
+	320.1.1={
+		birth=yes
+	}
+	338.1.1={
+		add_spouse=2529
+	}
+	407.1.1={
+		death=yes
+	}
+}
+2529 = {
+	name="Jeongsin"
+	female=yes
+	religion="shamanist"
+	culture="samhan"
+	320.1.1={
+		birth=yes
+	}
+	338.1.1={
+		add_spouse=2528
+	}
+	380.1.1={
+		death=yes
+	}
+}
+2530 = {
+	name="Jwaji"
+	dynasty=2261
+	religion="shamanist"
+	culture="samhan"
+	father=2528
+	mother=2529
+	340.1.1={
+		birth=yes
+	}
+	368.1.1={
+		add_spouse=2531
+	}
+	421.1.1={
+		death=yes
+	}
+}
+2531 = {
+	name="Boksu"
+	female=yes
+	religion="shamanist"
+	culture="samhan"
+	350.1.1={
+		birth=yes
+	}
+	368.1.1={
+		add_spouse=2530
+	}
+	420.1.1={
+		death=yes
+	}
+}
+2532 = {
+	name="Chwihui"
+	dynasty=2261
+	religion="shamanist"
+	culture="samhan"
+	father=2530
+	mother=2531
+	370.1.1={
+		birth=yes
+	}
+	398.1.1={
+		add_spouse=2533
+	}
+	451.1.1={
+		death=yes
+	}
+}
+2533 = {
+	name="Indeok"
+	female=yes
+	religion="shamanist"
+	culture="samhan"
+	380.1.1={
+		birth=yes
+	}
+	398.1.1={
+		add_spouse=2532
+	}
+	450.1.1={
+		death=yes
+	}
+}
+2534 = {
+	name="Bukyeong"
+	dynasty=2269
+	religion="shamanist"
+	culture="samhan"
+	125.1.1={
+		birth=yes
+	}
+	193.1.1={
+		death=yes
+	}
+}
+2535 = {
+	name="Tabal"
+	dynasty=2208
+	religion="shamanist"
+	culture="joseon"
+	1.1.1={
+		birth=yes
+	}
+	20.1.1={
+		death=yes
+	}
+}
+2536 = {
+	name="Soseono"
+	female=yes
+	dynasty=2208
+	religion="shamanist"
+	culture="joseon"
+	father=2535
+	1.1.5={
+		birth=yes
+	}
+	1.1.6={
+		add_spouse=2313
+	}
+	1.1.9={
+		add_spouse=2200
+	}
+	62.1.1={
+		death=yes
+	}
+}
+
+2591 = {
+	name="Daesung"
+	dynasty=2211
+	religion="shamanist"
+	culture="joseon"
+	1.1.1={
+		birth=yes
+	}
+	56.1.1={
+		death=yes
+	}
+}
+2592 = {
+	name="Dorihaeng"
+	dynasty=2211
+	religion="shamanist"
+	culture="joseon"
+	father=2591
+	40.1.1={
+		birth=yes
+	}
+	120.1.1={
+		death=yes
+	}
+}
+2593 = {
+	name="Bo"
+	dynasty=2211
+	religion="shamanist"
+	culture="joseon"
+	father=2592
+	70.1.1={
+		birth=yes
+	}
+	140.1.1={
+		death=yes
+	}
+}
+2594 = {
+	name="Mun"
+	dynasty=2211
+	religion="shamanist"
+	culture="joseon"
+	father=2593
+	120.1.1={
+		birth=yes
+	}
+	180.1.1={
+		death=yes
+	}
+}
+
+# Bukokjeo
+2595 = {
+	name="Guda"
+	dynasty=2211
+	religion="shamanist"
+	culture="joseon"
+	father=2594
+	165.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+
+# Dongbuyeo
+2596 = {
+	name="Juda"
+	dynasty=2209
+	religion="shamanist"
+	culture="joseon"
+	165.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+
+# Dongye
+2597 = {
+	name="Gijie"
+	dynasty=2264
+	religion="shamanist"
+	culture="joseon"
+	165.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+
+# Mahan
+2598 = {
+	name="Mokji"
+	dynasty=2262
+	religion="shamanist"
+	culture="samhan"
+	165.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+
+# Namye
+2599 = {
+	name="Yeomhae"
+	dynasty=2263
+	religion="shamanist"
+	culture="samhan"
+	165.1.1={
+		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}

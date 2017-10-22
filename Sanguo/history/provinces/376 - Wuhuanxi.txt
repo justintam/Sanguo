@@ -1,0 +1,17 @@
+# c_wuhuanxi
+
+# County Title
+title = c_wuhuanxi
+
+# Settlements
+max_settlements = 3
+
+b_wuhuanxi = tribal
+b_wuhuanjiao = temple
+#b_wuhuanfu = temple
+
+# Misc
+culture = wuhuan
+religion = tengri_pagan
+
+#History

@@ -1,0 +1,20 @@
+# c_pingqiu
+
+# County Title
+title = c_pingqiu
+
+# Settlements
+max_settlements = 6
+
+b_pingqiu = castle
+b_linjiting = city
+b_kuangcheng = city
+b_tonglaoting = city
+#b_ducheng = city
+#b_minzhou = temple
+
+# Misc
+culture = han
+religion = confucian
+
+#History

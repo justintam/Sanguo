@@ -1,0 +1,704 @@
+###################################
+######Combat Trait Events##########
+namespace = combat_trait
+###################################
+
+###Credits to Galla (Greg) for coming up with 99% of these;
+#combat_trait.1 - Learning the sword from your guardian. (lvl-1)
+#5550114 - Maintenance, Dealing with multiple combat skill traits. [Disabled]
+###Oga Stuff###
+#combat_trait.2 - Guardian Notification. (For all lvl's)
+###Descision stuff
+#5550106 - Notify Father - Maimed
+#5550107 - Notify Son - Maimed
+#combat_trait.3 - Notify Father - Wounded
+#combat_trait.4 - Notify Son - Wounded
+#combat_trait.5 - Notify Father - Trained
+#combat_trait.6 - Notify Son - Trained
+###Demotions
+#combat_trait.7 - Getting old.
+#5550113 - Guardian Notification - Trained by Marshal - (For all lvls)
+#combat_trait.8 - Combat Improvement
+
+##################################
+
+#combat_trait.1 - Learning the sword from your guardian
+character_event = {
+	id = combat_trait.1
+	desc = "EVTDESCcombat_trait.1"
+	picture = GFX_evt_child_sword
+	
+	min_age = 6
+	max_age = 16
+	capable_only = yes
+	prisoner = no
+
+	trigger = {
+		guardian = {
+			OR = {
+				trait = fate_duel
+				
+				trait = duel_poor_warrior
+				trait = duel_trained_warrior
+				trait = duel_skilled_warrior
+				trait = duel_master_warrior
+			}
+		}
+		NOT = { trait = duel_master_warrior }
+		is_ill = no
+		
+		NOT = { trait = crippled }
+	}
+
+	mean_time_to_happen = {
+		months = 30
+		
+		modifier = {
+			factor = 2.5
+			trait = duel_poor_warrior
+		}
+		modifier = {
+			factor = 6.5
+			trait = duel_trained_warrior
+		}
+		modifier = {
+			factor = 10
+			trait = duel_skilled_warrior
+		}
+		
+		modifier = { #must be at least 9 to become trained
+			factor = 1000
+			NOT = { age = 9 }
+			trait = duel_poor_warrior
+		}
+		modifier = { #must be at least 11 to become skilled
+			factor = 1000
+			NOT = { age = 11 }
+			trait = duel_trained_warrior
+		}
+		modifier = { #must be at least 13 to become formidable
+			factor = 1000
+			NOT = { age = 13 }
+			trait = duel_skilled_warrior
+		}
+
+		# Mentor Effects
+		modifier = {
+			factor = 0.85
+			NOT = {
+				OR = {
+					trait = duel_poor_warrior
+					trait = duel_trained_warrior
+					trait = duel_skilled_warrior
+					trait = duel_master_warrior
+				}
+			}	
+			guardian = {
+				OR = {
+					trait = duel_poor_warrior
+					trait = duel_trained_warrior
+					trait = duel_skilled_warrior
+					trait = duel_master_warrior
+				}
+			}	
+		}
+		modifier = {
+			factor = 0.85
+			trait = duel_poor_warrior
+			guardian = {
+				OR = {
+					trait = duel_trained_warrior
+					trait = duel_skilled_warrior
+					trait = duel_master_warrior
+				}
+			}	
+		}
+		modifier = {
+			factor = 0.85
+			trait = duel_trained_warrior
+			guardian = {
+				OR = {
+					trait = duel_skilled_warrior
+					trait = duel_master_warrior
+				}
+			}	
+		}
+		modifier = {
+			factor = 0.85
+			trait = duel_skilled_warrior
+			guardian = { trait = duel_master_warrior }	
+		}
+		modifier = {
+			factor = 0.9
+			guardian = {
+				OR = {
+					trait = diligent
+					trait = ambitious
+				}
+			}	
+		}
+		modifier = {
+			factor = 1.1
+			guardian = {
+				OR = {
+					trait = slothful
+					trait = content
+				}
+			}	
+		}
+		modifier = {
+			factor = 0.9
+			guardian = { trait = duelist }
+		}
+		modifier = {
+			factor = 0.9
+			guardian = { trait = martial_artist }
+		}
+
+		# Personality Effects
+		#Good
+		modifier = {
+			factor = 0.85
+			OR = {
+				trait = diligent
+				trait = brave
+				trait = ambitious
+			}
+		}
+		#Bad
+		modifier = {
+			factor = 1.35
+			OR = {
+				trait = slothful
+				trait = craven
+				trait = content
+			}
+		}		
+		
+		# Intelligence Effects
+		#Good
+		modifier = {
+			factor = 0.85
+			trait = genius
+		}
+		modifier = {
+			factor = 0.9
+			trait = quick
+		}
+		modifier = {
+			factor = 0.9
+			trait = duelist
+		}
+		modifier = {
+			factor = 0.9
+			trait = martial_artist
+		}
+		
+		#Bad
+		modifier = {
+			factor = 1.2
+			trait = slow
+		}
+		modifier = {
+			factor = 1.35
+			trait = imbecile
+		}
+		
+		# Physical Effects
+		#Good
+		modifier = {
+			factor = 0.85
+			trait = strong
+		}
+		modifier = {
+			factor = 0.9
+			trait = tall
+		}
+		#Bad
+		modifier = {
+			factor = 1.35
+			trait = weak
+		}
+		modifier = {
+			factor = 2.5
+			OR = {
+				trait = clubfooted
+				trait = hunchback
+				trait = dwarf
+			}	
+		}
+		modifier = {
+			factor = 4
+			trait = inbred
+		}
+		modifier = {
+			factor = 5
+			trait = blinded
+		}
+		modifier = {
+			factor = 5
+			trait = crippled
+		}
+		modifier = {
+			factor = 4
+			trait = maimed
+		}
+		modifier = {
+			factor = 2.5
+			trait = disfigured
+		}
+		modifier = {
+			factor = 2
+			trait = wounded
+		}
+		modifier = {
+			factor = 2
+			trait = stressed
+		}
+		modifier = {
+			factor = 2
+			trait = depressed
+		}
+		
+		#Sexism
+		modifier = {
+			factor = 1.4
+			is_female = yes
+			guardian = {
+				NOR = {
+					culture = nanyue
+					culture = shanyue
+					culture = minyue
+					culture = nanman
+					culture = bandunman
+					culture = qiang
+					culture = di
+				}	
+			}	
+		}
+		modifier = {
+			factor = 1.4
+			is_female = no
+			guardian = {
+				OR = {
+					culture = nanyue
+					culture = shanyue
+					culture = minyue
+					culture = nanman
+					culture = bandunman
+					culture = qiang
+					culture = di
+				}
+			}	
+		}			
+	}
+
+	option = {
+		name = "EVTOPTAcombat_trait.1" # Stick 'em with the pointy end!
+		hidden_tooltip = { guardian = { character_event = {id = combat_trait.2} } } #Guardian Notification.
+		if = {
+			limit = { trait = duel_skilled_warrior }
+			hidden_tooltip = { remove_trait = duel_skilled_warrior }
+			add_trait = duel_master_warrior
+		}	
+		if = {
+			limit = { trait = duel_trained_warrior }
+			hidden_tooltip = { remove_trait = duel_trained_warrior }
+			add_trait = duel_skilled_warrior
+		}
+		if = {
+			limit = { trait = duel_poor_warrior }
+			hidden_tooltip = { remove_trait = duel_poor_warrior }
+			add_trait = duel_trained_warrior
+		}
+		if = {
+			limit = { 
+				NOR = {
+					trait = duel_poor_warrior
+					trait = duel_trained_warrior
+					trait = duel_skilled_warrior
+					trait = duel_master_warrior
+				}
+			}
+			add_trait = duel_poor_warrior
+		}
+	}
+}
+
+#combat_trait.2 - Guardian Notification. (For all lvls)
+character_event = {
+	id = combat_trait.2
+	desc = "EVTDESCcombat_trait.2" #I have increased my wards fighting skills.
+	picture = "GFX_knights"
+	
+	is_triggered_only = yes
+	
+	option = { name = "OK" }
+}
+
+#combat_trait.3 - Notify Father - Failed
+character_event = {
+	id = combat_trait.3
+	desc = "EVTDESCcombat_trait.3"
+	picture = "GFX_injured_knight"
+	is_triggered_only = yes
+	
+	option = {
+		name = EVT_OPT_combat_trait.3_ambitious
+		trigger = {  has_character_flag = training_ambitious }
+		FROM = { add_trait = ambitious }
+		clr_character_flag = training_ambitious
+		prestige = -20
+		#clr_character_flag = training_son
+	}
+	option = {
+		name = EVT_OPT_combat_trait.3_slothful
+		trigger = { has_character_flag = training_slothful }
+		FROM = { add_trait = slothful }
+		clr_character_flag = training_slothful
+		prestige = -20
+		#clr_character_flag = training_son
+	}
+	option = {
+		name = EVT_OPT_combat_trait.3_brave
+		trigger = { has_character_flag = training_brave }
+		FROM = { add_trait = brave }
+		clr_character_flag = training_brave
+		prestige = -20
+		#clr_character_flag = training_son
+	}
+	option = {
+		name = EVT_OPT_combat_trait.3_ruthless
+		trigger = { has_character_flag = training_ruthless }
+		FROM = { add_trait = ruthless }
+		clr_character_flag = training_ruthless
+		prestige = -20
+		#clr_character_flag = training_son
+	}
+	option = {
+		name = EVT_OPT_combat_trait.3_intrigue
+		trigger = { has_character_flag = training_intrigue }
+		FROM = { change_intrigue = 1 }
+		clr_character_flag = training_intrigue
+		prestige = -20
+		#clr_character_flag = training_son
+	}
+	option = {
+		name = EVT_OPT_combat_trait.3_maimed
+		trigger = { has_character_flag = training_maimed }
+		FROM = { 
+			hidden_tooltip = { remove_trait = wounded }
+			add_trait = maimed 
+		}
+		clr_character_flag = training_maimed
+		prestige = -20
+		#clr_character_flag = training_son
+	}
+	option = {
+		name = EVT_OPT_combat_trait.3_wounded
+		trigger = { has_character_flag = training_wounded }
+		FROM = { add_trait = wounded }
+		clr_character_flag = training_wounded
+		prestige = -20
+		#clr_character_flag = training_son
+	}
+	option = {
+		name = EVT_OPT_combat_trait.3_diligent
+		trigger = { has_character_flag = training_diligent }
+		FROM = { add_trait = diligent }
+		clr_character_flag = training_diligent
+		prestige = -20
+		#clr_character_flag = training_son
+	}
+	option = {
+		name = EVT_OPT_combat_trait.3_no_progress
+		trigger = { has_character_flag = training_no_progress }
+		clr_character_flag = training_no_progress
+		prestige = -20
+		#clr_character_flag = training_son
+	}
+	option = {
+		name = EVT_OPT_combat_trait.3_homosexual
+		trigger = { has_character_flag = training_homosexual }
+		FROM = { add_trait = homosexual }
+		clr_character_flag = training_homosexual
+		prestige = -20
+		#clr_character_flag = training_son
+	}
+	option = {
+		name = EVT_OPT_combat_trait.3_stewardship
+		trigger = { has_character_flag = training_stewardship }
+		FROM = { change_stewardship = 1 }
+		clr_character_flag = training_stewardship
+		prestige = -20
+		#clr_character_flag = training_son
+	}
+}
+
+#combat_trait.4 - Notify Son - Failed
+character_event = {
+	id = combat_trait.4
+	desc = "EVTDESCcombat_trait.4"
+	picture = "GFX_injured_knight"
+	is_triggered_only = yes
+	
+	option = {
+		name = EVT_OPT_combat_trait.4
+		prestige = -40
+	}
+}
+
+#combat_trait.5 - Notify Father - Trained
+character_event = {
+	id = combat_trait.5
+	desc = "EVTDESCcombat_trait.5"
+	picture = "GFX_knight"
+	is_triggered_only = yes
+	
+	option = {
+		name = EVT_OPT_combat_trait.5_ruthless
+		trigger = { has_character_flag = training_ruthless }
+		FROM = { add_trait = ruthless }
+		clr_character_flag = training_ruthless
+		#clr_character_flag = training_son
+	}
+	option = {
+		name = EVT_OPT_combat_trait.5_brave
+		trigger = { has_character_flag = training_brave }
+		FROM = { add_trait = brave }
+		clr_character_flag = training_brave
+		#clr_character_flag = training_son
+	}
+	option = {
+		name = EVT_OPT_combat_trait.5_wroth
+		trigger = { has_character_flag = training_wroth }
+		FROM = { add_trait = wroth }
+		clr_character_flag = training_wroth
+		#clr_character_flag = training_son
+	}
+	option = {
+		name = EVT_OPT_combat_trait.5_martial
+		trigger = { has_character_flag = training_martial }
+		FROM = { change_martial = 1 }
+		clr_character_flag = training_martial
+		#clr_character_flag = training_son
+	}
+	option = {
+		name = EVT_OPT_combat_trait.5_cruel
+		trigger = { has_character_flag = training_cruel }
+		FROM = { add_trait = cruel }
+		clr_character_flag = training_cruel
+		#clr_character_flag = training_son
+	}
+	option = {
+		name = EVT_OPT_combat_trait.5_nothing
+		trigger = { has_character_flag = training_nothing }
+		FROM = { tooltip = { } }
+		clr_character_flag = training_nothing
+		#clr_character_flag = training_son
+	}
+	option = {
+		name = EVT_OPT_combat_trait.5_lustful_man
+		trigger = {
+			has_character_flag = training_lustful
+			FROM = { is_female = no }
+		}
+		FROM = { add_trait = lustful }
+		clr_character_flag = training_lustful
+		#clr_character_flag = training_son
+	}
+	option = {
+		name = EVT_OPT_combat_trait.5_lustful_woman
+		trigger = {
+			has_character_flag = training_lustful
+			FROM = { is_female = yes }
+		}
+		FROM = { add_trait = lustful }
+		clr_character_flag = training_lustful
+		#clr_character_flag = training_son
+	}
+}
+
+#combat_trait.6 - Notify Son - Trained
+character_event = {
+	id = combat_trait.6
+	desc = "EVTDESCcombat_trait.6"
+	picture = "GFX_knight"
+	is_triggered_only = yes
+	
+	option = {
+		name = "EVTOPTAcombat_trait.6"	
+		if = {
+			limit = { trait = duel_trained_warrior }
+			hidden_tooltip = { remove_trait = duel_trained_warrior }
+			add_trait = duel_skilled_warrior
+		}
+		if = {
+			limit = { trait = duel_poor_warrior }
+			hidden_tooltip = { remove_trait = duel_poor_warrior }
+			add_trait = duel_trained_warrior
+		}
+		if = {
+			limit = { 
+				NOT = {
+					OR = {
+						trait = duel_poor_warrior
+						trait = duel_trained_warrior
+						trait = duel_skilled_warrior
+						trait = duel_master_warrior
+					}
+				}
+			}
+			add_trait = duel_poor_warrior
+		}
+	}
+}
+
+###Demotions###
+#combat_trait.7 - Getting old.
+character_event = {
+	id = combat_trait.7
+	desc = "EVTDESCcombat_trait.7"
+	picture = GFX_old_squire
+	
+	min_age = 45
+
+	trigger = {
+		OR= {
+			trait = duel_poor_warrior
+			trait = duel_trained_warrior
+			trait = duel_skilled_warrior
+			trait = duel_master_warrior
+		}
+		NOT = { has_character_flag = demoted }
+	}
+
+	mean_time_to_happen = {
+		months = 240
+		
+		modifier = {
+			factor = 0.5
+			age = 55
+		}
+		
+		# Personality Effects
+		#Good
+		modifier = {
+			factor = 1.5
+			OR = {
+				trait = diligent
+				trait = brave
+			}
+		}
+		#Bad
+		modifier = {
+			factor = 0.66
+			trait = slothful
+		}
+		
+		# Physical Effects
+		#Good
+		modifier = {
+			factor = 1.5
+			health = 10
+		}
+		modifier = {
+			factor = 1.5
+			health = 9
+		}
+		modifier = {
+			factor = 1.5
+			health = 8
+		}
+		modifier = {
+			factor = 1.5
+			health = 7
+		}
+		modifier = {
+			factor = 1.5
+			health = 6
+		}
+		#Bad
+		modifier = {
+			factor = 0.75
+			NOT = { health = 4 }
+		}
+		modifier = {
+			factor = 0.66
+			NOT = { health = 3 }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { health = 2 }
+		}
+		modifier = {
+			factor = 0.5
+			NOT = { health = 1 }
+		}
+	}
+
+	option = {
+		name = "OHNO"
+		set_character_flag = demoted
+		if = {
+			limit = { trait = duel_poor_warrior }
+			remove_trait = duel_poor_warrior			
+		}
+		if = {
+			limit = { trait = duel_trained_warrior }
+			remove_trait = duel_trained_warrior
+			add_trait = duel_poor_warrior
+		}
+		if = {
+			limit = { trait = duel_skilled_warrior }
+			remove_trait = duel_skilled_warrior
+			add_trait = duel_trained_warrior
+		}
+		if = {
+			limit = { trait = duel_master_warrior }
+			remove_trait = duel_master_warrior
+			add_trait = duel_skilled_warrior
+		}		
+	}	
+}
+
+#combat_trait.8 - Combat Improvement
+character_event = {
+	id = combat_trait.8
+	desc = "EVTDESCcombat_trait.8"
+	picture = "GFX_knight"
+	is_triggered_only = yes
+
+	option = {
+		name = EXCELLENT
+		
+		if = {
+			limit = { trait = duel_skilled_warrior }
+			hidden_tooltip = { remove_trait = duel_skilled_warrior }
+			add_trait = duel_master_warrior
+		}	
+		if = {
+			limit = { trait = duel_trained_warrior }
+			hidden_tooltip = { remove_trait = duel_trained_warrior }
+			add_trait = duel_skilled_warrior
+		}
+		if = {
+			limit = { trait = duel_poor_warrior }
+			hidden_tooltip = { remove_trait = duel_poor_warrior }
+			add_trait = duel_trained_warrior
+		}
+		if = {
+			limit = { 
+				NOT = {
+					OR = {
+						trait = duel_poor_warrior
+						trait = duel_trained_warrior
+						trait = duel_skilled_warrior
+						trait = duel_master_warrior
+					}
+				}
+			}
+			add_trait = duel_poor_warrior
+		}
+	}
+}

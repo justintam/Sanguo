@@ -1,0 +1,19 @@
+# c_beiqiu
+
+# County Title
+title = c_beiqiu
+
+# Settlements
+max_settlements = 5
+
+b_beiqiu = castle
+b_nanqiu = city
+#b_xielu = temple
+#b_baying = castle
+#b_nanying = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

@@ -1,0 +1,18 @@
+# c_yutai
+
+# County Title
+title = c_yutai
+
+# Settlements
+max_settlements = 4
+
+b_linhuai = castle
+#b_lincheng = city
+#b_dehua = temple
+#b_fuquan = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

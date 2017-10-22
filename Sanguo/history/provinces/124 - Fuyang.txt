@@ -1,0 +1,19 @@
+# c_fuyang
+
+# County Title
+title = c_fuyang
+
+# Settlements
+max_settlements = 5
+
+b_fuyang = castle
+b_youju = city
+#b_fenting = temple
+#b_pingshi = castle
+#b_wuyin = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

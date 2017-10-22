@@ -1,0 +1,8 @@
+9000 = {
+	name="Zhang" #Zhang Xing - Zhen Wenzhao's Mother
+	culture = han
+}
+9001 = {
+	name="Chu" #Chu Yan - Later Zhang Yan
+	culture = han
+}

@@ -1,0 +1,22 @@
+# c_duling
+
+# County Title
+title = c_duling
+
+# Settlements
+max_settlements = 5
+
+b_duling = castle
+b_changmen = castle
+#b_xiaogan = city
+#b_duwen = castle
+#b_bowen = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History
+210.1.1={
+	b_xiaogan = city
+}

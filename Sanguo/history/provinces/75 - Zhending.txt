@@ -1,0 +1,20 @@
+# c_zhending
+
+# County Title
+title = c_zhending
+
+# Settlements
+max_settlements = 6
+
+b_zhending = castle
+b_duxiang = city
+b_jingxing = city
+b_lingshou = city
+b_nanxingtang = city
+#b_pingji = temple
+
+# Misc
+culture = han
+religion = confucian
+
+#History

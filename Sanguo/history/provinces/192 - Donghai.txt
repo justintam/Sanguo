@@ -1,0 +1,18 @@
+# c_donghai
+
+# County Title
+title = c_donghai
+
+# Settlements
+max_settlements = 4
+
+b_donghai = castle
+b_feihai = city
+#b_tucheng = temple
+#b_puxi = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

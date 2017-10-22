@@ -1,0 +1,95 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=k_yu
+	vice_royalty = yes
+}
+20.1.1={
+	holder=3307 #Lu Hong
+}
+23.1.1={
+	holder=4269 #Cen Peng
+}
+34.1.1={
+	holder=0 #None
+}
+35.1.1={
+	holder=4270 #Cen Zun
+}
+80.1.1={
+	holder=4272 #Cen Kang
+}
+92.1.1={
+	holder=4281 #Zhou Rong
+}
+100.1.1={
+	holder=4273 #Cen Qi
+}
+116.1.1={
+	holder=0 #Removed
+}
+121.1.1={
+	holder=4273 #Cen Qi
+}
+140.1.1={
+	holder=4274 #Cen Xi
+}
+150.1.1={
+	holder=5003 #Sima Jun
+}
+170.1.1={
+	holder=4275 #Cen Fu
+}
+180.1.1={
+	holder=178 #Chong Fu
+}
+184.1.1={
+	holder=3440 #Yin Xiu
+}
+189.8.22={
+	holder=133 #Kong Zhou
+}
+190.8.1={
+	holder=3441 #Li Min
+}
+190.10.1={
+	liege=k_yuan
+	holder=500 #Sun Jian
+}
+191.1.1={
+	liege=k_yu
+}
+191.5.20={
+	holder=511 #Sun Ben
+}
+192.5.1={
+	liege=k_yuan
+}
+193.3.1={
+	liege=k_yan
+	holder=400 #Cao Cao
+}
+194.1.1={
+	liege=k_cao #Lost Yan
+}
+196.1.1={
+	liege=k_yan
+}
+199.6.1={
+	holder=406 #Xiahou Yuan
+}
+200.1.1={
+	liege=k_yu
+}
+215.1.1={
+	holder=3751 #Gao Rou
+}
+216.1.1={
+	holder=20489 #Wang Bi
+}
+218.2.5={
+	holder=1333 #Liu Zhizhong
+}

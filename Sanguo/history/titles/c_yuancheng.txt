@@ -1,0 +1,53 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_wei
+}
+150.1.1={
+	holder=1291 #Yang Fu
+}
+175.1.1={
+	holder=0 #None
+}
+184.1.1={
+	holder=745 #Li Cheng
+}
+193.1.1={
+	holder=746 #Li Pan
+}
+194.1.1={
+	holder=10491 #Dong Zhao
+}
+196.1.1={
+	holder=744 #Gao Fan
+}
+#203 Jia Xin - Cao
+204.1.1={
+	holder=743 #Yuan Chunqing
+}
+204.9.13={
+	holder=10491 #Dong Zhao
+}
+207.1.1={
+	holder=3863 #Wang Xiu
+}
+212.1.1={
+	holder=4229 #Xu Xuan
+}
+#212 Guo Yuan
+#213 Wang Lang
+216.1.1={
+	holder=20478 #Xu Yi
+}
+#Chen Jiao
+#Xue Ti
+220.3.15={
+	holder=20485 #Jia Kui
+}
+225.1.1={
+}
+#Wen Hui
+#	holder=20444 #Pei Hui

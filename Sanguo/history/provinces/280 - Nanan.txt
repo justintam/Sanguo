@@ -1,0 +1,18 @@
+# c_nanan
+
+# County Title
+title = c_nanan
+
+# Settlements
+max_settlements = 4
+
+b_nanan = castle
+b_yufujin = temple
+#b_beishichen = temple
+#b_zhandu = castle
+
+# Misc
+culture = nanman
+religion = huojiao
+
+#History

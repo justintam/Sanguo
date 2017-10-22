@@ -1,0 +1,18 @@
+# c_xihe
+
+# County Title
+title = c_xihe
+
+# Settlements
+max_settlements = 4
+
+b_xihe = tribal
+#b_xunyi = city
+#b_xicheng = temple
+#b_xiding = castle
+
+# Misc
+culture = xiongnu
+religion = tengri_pagan
+
+#History

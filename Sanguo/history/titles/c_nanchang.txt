@@ -1,0 +1,58 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_yuzhang
+}
+130.1.1={
+	holder=5002 #Sima Liang
+}
+156.1.1={
+	holder=3430 #Chen Fan
+}
+159.1.1={
+	holder=0 #None
+}
+184.1.1={
+	holder=3416	#Zhou Shu
+}
+194.1.1={
+	holder=3422 #Zhuge Xuan
+}
+195.1.1={
+	holder=3418 #Zhu Hao
+}
+195.10.1={
+	holder=1012 #Zuo Rong
+}
+195.11.1={
+	holder=3419 #Hua Xin
+}
+200.1.1={
+	holder=10528 #Zhou Yu
+}
+209.3.1={
+	liege=d_poyang
+	holder=10525 #He Qi
+}
+210.1.1={
+	holder=10510 #Bu Zhi
+}
+211.1.1={
+	holder=10521 #Cen Ke
+}
+213.1.1={
+	liege=d_yuzhang
+	holder=551 #Gu Shao
+}
+218.1.1={
+	holder=10526 #Cai Yi
+}
+223.1.1={
+	holder=10527 #Chen Rong
+}
+227.1.1={
+	holder=0 #None
+}

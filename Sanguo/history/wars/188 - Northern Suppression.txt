@@ -1,0 +1,23 @@
+name = "Northern Suppression"
+
+casus_belli={
+	actor=39
+	recipient=2680
+	casus_belli=dejure_county_claim
+	landed_title=d_youbeiping
+	date=188.1.1
+}
+
+188.1.1={
+	add_defender = 2680 #Zhang Chun
+	add_defender = 2681 #Zhang Ju
+	add_attacker = 900 #Gongsun Zan
+	add_attacker = 39 #Liu Yu
+}
+
+188.4.1={
+	rem_defender = 2681 #Zhang Ju
+	rem_defender = 2680 #Zhang Chun
+	rem_attacker = 900 #Gongsun Zan
+	rem_attacker = 39 #Liu Yu
+}

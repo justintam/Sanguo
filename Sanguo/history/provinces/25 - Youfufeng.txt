@@ -1,0 +1,22 @@
+# c_youfufeng
+
+# County Title
+title = c_youfufeng
+
+# Settlements
+max_settlements = 5
+
+b_kuili = castle
+b_wugong = city
+#b_weinan = city
+#b_linwei = castle
+#b_kuizhou = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History
+210.1.1={
+	b_weinan = city
+}

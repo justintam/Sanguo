@@ -1,0 +1,43 @@
+# Pets
+
+pet_boar = {
+	monthly_character_prestige = 0.1
+	same_opinion = 5
+	general_opinion = -5 #Jealousy
+	combat_rating = 1
+	customizer = no
+}
+pet_dog = {
+	monthly_character_prestige = 0.1
+	same_opinion = 5
+	combat_rating = 1
+	customizer = no
+}
+pet_eagle = {
+	monthly_character_prestige = 0.5
+	same_opinion = 5
+	general_opinion = -5 #Jealousy
+	combat_rating = 1
+	customizer = no
+}
+pet_elephant = {
+	monthly_character_prestige = 1
+	same_opinion = 5
+	general_opinion = -5 #Jealousy
+	combat_rating = 2
+	customizer = no
+}
+pet_tiger = {
+	monthly_character_prestige = 1
+	same_opinion = 5
+	general_opinion = -5 #Jealousy
+	combat_rating = 2
+	customizer = no
+}
+pet_wolf = {
+	monthly_character_prestige = 0.1
+	same_opinion = 5
+	general_opinion = -5 #Jealousy
+	combat_rating = 1
+	customizer = no
+}

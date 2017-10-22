@@ -1,0 +1,22 @@
+# c_wu
+
+# County Title
+title = c_wu
+
+# Settlements
+max_settlements = 5
+
+b_wu = castle
+b_wuting = city
+b_wuqing = temple
+#b_jiading = city
+#b_qingpu = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History
+200.1.1={
+	b_jiading = city
+}

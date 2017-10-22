@@ -1,0 +1,17 @@
+# c_mianzhu
+
+# County Title
+title = c_mianzhu
+
+# Settlements
+max_settlements = 3
+
+b_mianzhu = castle
+#b_bingzhu = city
+#b_xiaohan = temple
+
+# Misc
+culture = han
+religion = confucian
+
+#History

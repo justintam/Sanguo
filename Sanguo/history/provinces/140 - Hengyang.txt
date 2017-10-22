@@ -1,0 +1,18 @@
+# c_hengyang
+
+# County Title
+title = c_hengyang
+
+# Settlements
+max_settlements = 4
+
+b_hengyang = castle
+b_pingtu = city
+#b_yunfei = temple
+#b_dangdi = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

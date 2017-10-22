@@ -1,0 +1,258 @@
+#Dynasties for Randomly Generated Characters
+
+###  Joseon   ###
+### 2200-2249 ### 
+###			  ###
+
+2200 = {
+	name="Go" #Goguryeo
+	culture = joseon
+}
+2201 = {
+	name="Hae" #Goguryeo
+	culture = joseon
+}
+2202 = {
+	name="Myeongnim" #Goguryeo Court
+	culture = joseon
+}
+2203 = {
+	name="U" #Goguryeo Court
+	culture = joseon
+}
+2204 = {
+	name="So" #Goguryeo Court
+	culture = joseon
+}
+2205 = {
+	name="Buyeo" #Baekje
+	culture = joseon
+}
+2206 = {
+	name="Seo" #Baekje Court
+	culture = joseon
+}
+2207 = {
+	name="Gwisil" #Baekje Court
+	culture = joseon
+}
+2208 = {
+	name="Yeon" #Goguryeo Court
+	culture = joseon
+}
+2209 = {
+	name="Yang" #Goguryeo Court
+	culture = joseon
+}
+2210 = {
+	name="Bak" #Goguryeo Court
+	culture = joseon
+}
+2211 = {
+	name="Okjeo" #Goguryeo Court
+	culture = joseon
+}
+2212 = {
+	name="Biryu" #Goguryeo Court
+	culture = joseon
+}
+2213 = {
+	name="Eul" #Goguryeo Court
+	culture = joseon
+}
+2214 = {
+	name="Rye" #Goguryeo Court
+	culture = joseon
+}
+2215 = {
+	name="Song" #Goguryeo Court
+	culture = joseon
+}
+2216 = {
+	name="Mok" #Goguryeo Court
+	culture = joseon
+}
+2217 = {
+	name="Ju" #Goguryeo Court
+	culture = joseon
+}
+2218 = {
+	name="Ma" #Goguryeo Court
+	culture = joseon
+}
+2219 = {
+	name="Son" #Goguryeo Court
+	culture = joseon
+}
+2220 = {
+	name="Chang" #Goguryeo Court
+	culture = joseon
+}
+2221 = {
+	name="Dong" #Goguryeo Court
+	culture = joseon
+}
+2222 = {
+	name="Ye" #Goguryeo Court
+	culture = joseon
+}
+2223 = {
+	name="Eulji" #Goguryeo Court
+	culture = joseon
+}
+2224 = {
+	name="Jin" #Baekje Court
+	culture = joseon
+}
+2225 = {
+	name="Hae" #Baekje Court
+	culture = joseon
+}
+2226 = {
+	name="Sa" #Baekje Court
+	culture = joseon
+}
+2227 = {
+	name="Yeon" #Baekje Court
+	culture = joseon
+}
+2228 = {
+	name="Baek" #Baekje Court
+	culture = joseon
+}
+2229 = {
+	name="Guk" #Baekje Court
+	culture = joseon
+}
+2230 = {
+	name="Mok" #Baekje Court
+	culture = joseon
+}
+2231 = {
+	name="Hyeop" #Baekje Court
+	culture = joseon
+}
+2232 = {
+	name="Wang" #Baekje Court
+	culture = joseon
+}
+2233 = {
+	name="Jang" #Baekje Court
+	culture = joseon
+}
+2234 = {
+	name="Sumi" #Baekje Court
+	culture = joseon
+}
+2235 = {
+	name="Koi" #Baekje Court
+	culture = joseon
+}
+2236 = {
+	name="Sama" #Baekje Court
+	culture = joseon
+}
+2237 = {
+	name="Heukchi" #Baekje Court
+	culture = joseon
+}
+2238 = {
+	name="Wi" #Goguryeo Court
+	culture = joseon
+}
+2239 = {
+	name="Wu" #Goguryeo Court
+	culture = joseon
+}
+2240 = {
+	name="Nak" #Goguryeo Court
+	culture = joseon
+}
+2241 = {
+	name="Bujeong" #Goguryeo Court
+	culture = joseon
+}
+2242 = {
+	name="Daesil" #Goguryeo Court
+	culture = joseon
+}
+
+
+
+
+###   Samhan  ###
+### 2250-2299 ### 
+###			  ###
+
+2250 = {
+	name="Bak" #Silla
+	culture = samhan
+}
+2251 = {
+	name="Gim" #Silla Gimhae
+	culture = samhan
+}
+2252 = {
+	name="Yi" #Silla Court
+	culture = samhan
+}
+2253 = {
+	name="Cho" #Common
+	culture = samhan
+}
+2254 = {
+	name="Heo" #Gaya
+	culture = samhan
+}
+2255 = {
+	name="Bae" #Silla Court
+	culture = samhan
+}
+2256 = {
+	name="Choe" #Silla Court
+	culture = samhan
+}
+2257 = {
+	name="Jeong" #Silla Court
+	culture = samhan
+}
+2258 = {
+	name="Seol" #Silla Court
+	culture = samhan
+}
+2259 = {
+	name="Seok" #Silla Court
+	culture = samhan
+}
+2260 = {
+	name="Son" #Silla Court
+	culture = samhan
+}
+2261 = {
+	name="Gim" #Silla Gyeongju
+	culture = samhan
+}
+2262 = {
+	name="Mokji" #Mahan
+	culture = samhan
+}
+2263 = {
+	name="Yeomhae" #Namye
+	culture = samhan
+}
+2264 = {
+	name="Gijie" #Dongye
+	culture = samhan
+}
+2265 = {
+	name="Jang" #Silla Court
+	culture = samhan
+}
+2267 = {
+	name="Yo" #Silla Court
+	culture = samhan
+}
+2269 = {
+	name="Chun" #Gaya Court
+	culture = samhan
+}

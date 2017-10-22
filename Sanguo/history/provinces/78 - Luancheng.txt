@@ -1,0 +1,19 @@
+# c_luancheng
+
+# County Title
+title = c_luancheng
+
+# Settlements
+max_settlements = 5
+
+b_luancheng = castle
+#b_dujing = city
+#b_daqiao = temple
+#b_baqiao = castle
+#b_minjing = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

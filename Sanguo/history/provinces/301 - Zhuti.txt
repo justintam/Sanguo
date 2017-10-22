@@ -1,0 +1,17 @@
+# c_zhuti
+
+# County Title
+title = c_zhuti
+
+# Settlements
+max_settlements = 3
+
+b_zhuti = tribal
+#b_zhutifu = city
+#b_jingdong = temple
+
+# Misc
+culture = nanman
+religion = huojiao
+
+#History

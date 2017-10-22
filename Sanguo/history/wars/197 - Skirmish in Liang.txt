@@ -1,0 +1,18 @@
+name = "Skirmish in Liang"
+
+casus_belli={
+	actor=808
+	recipient=809
+	casus_belli=seize
+	landed_title=k_xiliang
+	date=197.4.1
+}
+
+197.4.1 = {
+	add_defender = 809 #Ma Teng
+	add_attacker = 808 #Han Sui
+}
+201.1.1={
+	rem_defender = 809 #Ma Teng
+	rem_attacker = 808 #Han Sui
+}

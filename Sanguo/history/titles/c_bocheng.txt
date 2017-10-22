@@ -1,0 +1,44 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_lean
+}
+120.1.1={
+	holder=3311 #Lu Feng
+}
+183.1.1={
+	holder=151 #Lu Kang
+}
+187.1.1={
+	holder=153 #Jiao He
+}
+190.1.1={
+	holder=3742 #Zang Hong
+}
+192.1.1={
+	holder=910 #Tian Kai
+}
+192.5.1={
+	holder=709 #Yuan Tan
+}
+199.6.1={
+	liege=0 #Independent
+	holder=2657 #Guo Zu
+}
+200.1.1={
+	liege=d_lean
+	holder=4225 #He Kui
+}
+203.1.1={
+	holder=754 #Guan Tong
+}
+205.2.1={
+	holder=4119 #Random
+}
+
+
+
+#Incomplete

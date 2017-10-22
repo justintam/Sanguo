@@ -1,0 +1,18 @@
+# c_dingxiangyun
+
+# County Title
+title = c_dingxiangyun
+
+# Settlements
+max_settlements = 4
+
+b_dingxiangyun = castle
+b_yaozu = tribal
+#b_dingxiangji = temple
+#b_yangjia = castle
+
+# Misc
+culture = xiongnu
+religion = confucian
+
+#History

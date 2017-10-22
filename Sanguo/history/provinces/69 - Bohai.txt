@@ -1,0 +1,21 @@
+# c_bohai
+
+# County Title
+title = c_bohai
+
+# Settlements
+max_settlements = 7
+
+b_bohai = castle
+b_dongguang = city
+b_xiu = city
+b_zhangwu = city
+#b_jingwei = city
+#b_jizhi = temple
+#b_binhai = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

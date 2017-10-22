@@ -1,0 +1,17 @@
+# c_bodao
+
+# County Title
+title = c_bodao
+
+# Settlements
+max_settlements = 3
+
+b_bodao = castle
+b_bodaojiao = temple
+#b_yangluo = temple
+
+# Misc
+culture = bandunman
+religion = baihu
+
+#History

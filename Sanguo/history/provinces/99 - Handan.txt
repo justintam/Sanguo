@@ -1,0 +1,24 @@
+# c_handan
+
+# County Title
+title = c_handan
+
+# Settlements
+max_settlements = 7
+
+b_handan = castle
+b_xiangguo = city
+b_bairen = temple
+#b_shapu = castle
+#b_diandin = city
+#b_chengan = temple
+#b_wuan = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History
+200.1.1={
+	b_shapu = castle
+}

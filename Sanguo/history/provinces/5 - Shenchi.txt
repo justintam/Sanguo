@@ -1,0 +1,22 @@
+# c_shenchi
+
+# County Title
+title = c_shenchi
+
+# Settlements
+max_settlements = 5
+
+b_shenchi = castle
+b_caoyang = city
+#b_wuzhai = city
+#b_pianguan = castle
+#b_wangji = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History
+204.1.1={
+	b_wuzhai = city
+}

@@ -1,0 +1,395 @@
+#
+#KEYS
+EMPEROR;Divine Emperor;;;;;;;;;;;;;x
+EMPRESS;Empress;;;;;;;;;;;;;x
+EMPEROR_FOA;Your Imperial Majesty;;;;;;;;;;;;;x
+DOWAGER;Empress Dowager;;;;;;;;;;;;;x
+MAGIC;Wizard;;;;;;;;;;;;;x
+GREAT_CHIEF;Great Chief;;;;;;;;;;;;;x
+COLONEL;Colonel;;;;;;;;;;;;;x
+MAJOR;Major;;;;;;;;;;;;;x
+LORD;Lord;;;;;;;;;;;;;x
+LADY;Lady;;;;;;;;;;;;;x
+LORD_HEAVEN;Lord of Heaven;;;;;;;;;;;;;x
+EUNUCH;Head Eunuch;;;;;;;;;;;;;x
+CELESTIAL_MASTER;Celestial Master;;;;;;;;;;;;;x
+MARK;Marquis;;;;;;;;;;;;;x
+DUKE;Duke;;;;;;;;;;;;;x
+KING;King;;;;;;;;;;;;;x
+KING_FOA;Your Highness;;;;;;;;;;;;;x
+INTENDANT;Intendant;;;;;;;;;;;;;x
+PREMIER;Chancellor;;;;;;;;;;;;;x
+PREMIER_FOA;Your Lordship;;;;;;;;;;;;;x
+#Plural
+empires;Empires;Empires;Reiche;;Imperios;;;;;;;;;x
+kingdoms;Provinces;;;;;;;;;;;;;x
+duchies;Commanderies;;;;;;;;;;;;;x
+counties;Counties;Comtés;Grafschaften;;Condados;;;;;;;;;x
+baronies;Districts;;;;;;;;;;;;;x
+#Special
+job_viceroy name;Protector;;;;;;;;;;;;;x
+title_regent;Regent;Régent;Regent;;Regente;;;;;;;;;x
+king_xiongnu;Shanyu;;;;;;;;;;;;;x
+king_tao;Master;;;;;;;;;;;;;x
+kingdom_of_tao;Kingdom of;;;;;;;;;;;;;x
+#Emperor
+emperor_title_queen_mother_female;Empress Dowager;Impératrice douairière;Kaiserinwitwe;;Emperatriz viuda;;;;;;;;;x
+empire_bactrian;Empire;;;;;;;;;;;;;x
+empire_of_bactrian;Empire of;;;;;;;;;;;;;x
+emperor_bactrian;Emperor;;;;;;;;;;;;;x
+emperor_female_bactrian;Empress;;;;;;;;;;;;;x
+emperor_foa_bactrian;My King of Kings;;;;;;;;;;;;;x
+emperor_foa_female_bactrian;My Queen of Queens;;;;;;;;;;;;;x
+empire_chinese;Empire;;;;;;;;;;;;;x
+empire_of_chinese;Empire of;;;;;;;;;;;;;x
+emperor_chinese;Emperor;;;;;;;;;;;;;x
+emperor_prince;Lord;;;;;;;;;;;;;x
+emperor_prince_female;Lady;;;;;;;;;;;;;x
+emperor_female_chinese;Empress;;;;;;;;;;;;;x
+emperor_foa_chinese;Your Imperial Majesty;;;;;;;;;;;;;x
+emperor_foa_female_chinese;Your Imperial Highness;;;;;;;;;;;;;x
+empire_korean;Empire;;;;;;;;;;;;;x
+empire_of_korean;Empire of;;;;;;;;;;;;;x
+emperor_korean;Emperor;;;;;;;;;;;;;x
+emperor_female_korean;Empress;;;;;;;;;;;;;x
+emperor_foa_korean;Your Highness;;;;;;;;;;;;;x
+emperor_foa_female_korean;Your Highness;;;;;;;;;;;;;x
+empire_man;Empire;;;;;;;;;;;;;x
+empire_of_man;Empire;;;;;;;;;;;;;x
+emperor_man;Emperor;;;;;;;;;;;;;x
+emperor_female_man;Empress;;;;;;;;;;;;;x
+emperor_foa_man;Your Highness;;;;;;;;;;;;;x
+emperor_foa_female_man;Your Highness;;;;;;;;;;;;;x
+empire_mongol;Khaganate;;;;;;;;;;;;;x
+empire_of_mongol;Khaganate of;;;;;;;;;;;;;x
+emperor_mongol;Khagan;;;;;;;;;;;;;x
+emperor_female_mongol;Khatun;;;;;;;;;;;;;x
+emperor_foa_mongol;Your Highness;;;;;;;;;;;;;x
+emperor_foa_female_mongol;Your Highness;;;;;;;;;;;;;x
+empire_tibetan;Empire;;;;;;;;;;;;;x
+empire_of_tibetan;Empire;;;;;;;;;;;;;x
+emperor_tibetan;Emperor;;;;;;;;;;;;;x
+emperor_female_tibetan;Empress;;;;;;;;;;;;;x
+emperor_foa_tibetan;Your Highness;;;;;;;;;;;;;x
+emperor_foa_female_tibetan;Your Highness;;;;;;;;;;;;;x
+empire_yue;Empire;;;;;;;;;;;;;x
+empire_of_yue;Empire;;;;;;;;;;;;;x
+emperor_yue;Emperor;;;;;;;;;;;;;x
+emperor_female_yue;Empress;;;;;;;;;;;;;x
+emperor_foa_yue;Your Highness;;;;;;;;;;;;;x
+emperor_foa_female_yue;Your Highness;;;;;;;;;;;;;x
+#King
+king_title_prince;Lord;;;;;;;;;;;;;x
+king_title_prince_female;Lady;;;;;;;;;;;;;x
+king_title_queen_mother_female;Lady;;;;;;;;;;;;;x
+king_title_queen_mother_female_chinese;Lady;;;;;;;;;;;;;x
+kingdom_bactrian;Empire;;;;;;;;;;;;;x
+kingdom_of_bactrian;Empire of;;;;;;;;;;;;;x
+king_bactrian;Emperor;;;;;;;;;;;;;x
+king_female_bactrian;Empress;;;;;;;;;;;;;x
+king_foa_bactrian;My King of Kings;;;;;;;;;;;;;x
+king_foa_female_bactrian;My Queen of Queens;;;;;;;;;;;;;x
+kingdom_chinese;Province;;;;;;;;;;;;;x
+kingdom_of_chinese;Province of;;;;;;;;;;;;;x
+king_chinese;Governor;;;;;;;;;;;;;x
+king_female_chinese;Lady;;;;;;;;;;;;;x
+king_foa_chinese;Your Lordship;;;;;;;;;;;;;x
+king_foa_female_chinese;Your Ladyship;;;;;;;;;;;;;x
+kingdom_korean;Kingdom;;;;;;;;;;;;;x
+kingdom_of_korean;Kingdom of;;;;;;;;;;;;;x
+king_korean;King;;;;;;;;;;;;;x
+king_female_korean;Queen;;;;;;;;;;;;;x
+king_foa_korean;Your Highness;;;;;;;;;;;;;x
+king_foa_female_korean;Your Highness;;;;;;;;;;;;;x
+kingdom_man;Kingdom;;;;;;;;;;;;;x
+kingdom_of_man;Kingdom;;;;;;;;;;;;;x
+king_man;King;;;;;;;;;;;;;x
+king_female_man;Queen;;;;;;;;;;;;;x
+king_foa_man;Your Highness;;;;;;;;;;;;;x
+king_foa_female_man;Your Highness;;;;;;;;;;;;;x
+kingdom_mongol;Khaganate;;;;;;;;;;;;;x
+kingdom_of_mongol;Khaganate of;;;;;;;;;;;;;x
+king_mongol;Khagan;;;;;;;;;;;;;x
+king_female_mongol;Khatun;;;;;;;;;;;;;x
+king_foa_mongol;Your Highness;;;;;;;;;;;;;x
+king_foa_female_mongol;Your Highness;;;;;;;;;;;;;x
+kingdom_tibetan;Kingdom;;;;;;;;;;;;;x
+kingdom_of_tibetan;Kingdom;;;;;;;;;;;;;x
+king_tibetan;King;;;;;;;;;;;;;x
+king_female_tibetan;Queen;;;;;;;;;;;;;x
+king_foa_tibetan;Your Highness;;;;;;;;;;;;;x
+king_foa_female_tibetan;Your Highness;;;;;;;;;;;;;x
+kingdom_yue;Kingdom;;;;;;;;;;;;;x
+kingdom_of_yue;Kingdom;;;;;;;;;;;;;x
+king_yue;King;;;;;;;;;;;;;x
+king_female_yue;Queen;;;;;;;;;;;;;x
+king_foa_yue;Your Highness;;;;;;;;;;;;;x
+king_foa_female_yue;Your Highness;;;;;;;;;;;;;x
+#Duke
+duke_title_queen_mother_female;Lady;Lady;Lady;Lady;Lady;;;;;;;;;x
+duke;Duke;;;;;;;;;;;;;x
+duke_female;Duchess;;;;;;;;;;;;;x
+duke_title_ruler_consort;Lord;;;;;;;;;;;;;x
+duke_title_ruler_consort_female;Lady;;;;;;;;;;;;;x
+duchy_of;Commandery of;;;;;;;;;;;;;x
+duke_foa;My Lord;;;;;;;;;;;;;x
+duke_foa_female;My Lady;;;;;;;;;;;;;x
+duchy_bactrian;Province;;;;;;;;;;;;;x
+duchy_of_bactrian;Province of;;;;;;;;;;;;;x
+duke_bactrian;Governor;;;;;;;;;;;;;x
+duke_female_bactrian;Governess;;;;;;;;;;;;;x
+duke_foa_bactrian;My Lord;;;;;;;;;;;;;x
+duke_foa_female_bactrian;My Lady;;;;;;;;;;;;;x
+duchy_chinese;Commandery;;;;;;;;;;;;;x
+duchy_of_chinese;Commandery of;;;;;;;;;;;;;x
+duke_chinese;Administrator;;;;;;;;;;;;;x
+duke_female_chinese;Lady;;;;;;;;;;;;;x
+duke_foa_chinese;Your Lordship;;;;;;;;;;;;;x
+duke_foa_female_chinese;Your Ladyship;;;;;;;;;;;;;x
+duchy_korean;High Chiefdom;;;;;;;;;;;;;x
+duchy_of_korean;High Chiefdom of;;;;;;;;;;;;;x
+duke_korean;High Chief;;;;;;;;;;;;;x
+duke_female_korean;High Chieftess;;;;;;;;;;;;;x
+duke_foa_korean;My Chieftain;;;;;;;;;;;;;x
+duke_foa_female_korean;My Chieftess;;;;;;;;;;;;;x
+duchy_man;High Chiefdom;;;;;;;;;;;;;x
+duchy_of_man;High Chiefdom;;;;;;;;;;;;;x
+duke_man;High Chief;;;;;;;;;;;;;x
+duke_female_man;High Chieftess;;;;;;;;;;;;;x
+duke_foa_man;My Chieftain;;;;;;;;;;;;;x
+duke_foa_female_man;My Chieftess;;;;;;;;;;;;;x
+duchy_mongol;High Chiefdom;;;;;;;;;;;;;x
+duchy_of_mongol;High Chiefdom of;;;;;;;;;;;;;x
+duke_mongol;Khagan;;;;;;;;;;;;;x
+duke_female_mongol;Khatun;;;;;;;;;;;;;x
+duke_foa_mongol;My Chieftain;;;;;;;;;;;;;x
+duke_foa_female_mongol;My Chieftain;;;;;;;;;;;;;x
+duchy_tibetan;High Chiefdom;;;;;;;;;;;;;x
+duchy_of_tibetan;High Chiefdom;;;;;;;;;;;;;x
+duke_tibetan;High Chief;;;;;;;;;;;;;x
+duke_female_tibetan;High Chieftess;;;;;;;;;;;;;x
+duke_foa_tibetan;My Chieftain;;;;;;;;;;;;;x
+duke_foa_female_tibetan;My Chieftess;;;;;;;;;;;;;x
+duchy_yue;High Chiefdom;;;;;;;;;;;;;x
+duchy_of_yue;High Chiefdom;;;;;;;;;;;;;x
+duke_yue;High Chief;;;;;;;;;;;;;x
+duke_female_yue;High Chieftess;;;;;;;;;;;;;x
+duke_foa_yue;My Chieftain;;;;;;;;;;;;;x
+duke_foa_female_yue;My Chieftess;;;;;;;;;;;;;x
+#Count
+count;Lord;Lord;Lord;Lord;Lord;;;;;;;;;x
+count_female;Lady;Lady;Lady;Lady;Lady;;;;;;;;;x
+count_title_ruler_consort;Lord;Lord;Lord;Lord;Lord;;;;;;;;;x
+count_title_ruler_consort_female;Consort;;;;;;;;;;;;;x
+county_of;Lordship of;Seigneurie de;Lordship of;Lordship of;Señor de;;;;;;;;;x
+count_foa;My Lord;Messire;My Lord;My Lord;Mi Señor;;;;;;;;;x
+count_foa_female;My Lady;Ma dame;My Lady;My Lady;Mi Señora;;;;;;;;;x
+county_of;County of;;;;;;;;;;;;;x
+county_bactrian;Region;;;;;;;;;;;;;x
+county_of_bactrian;Region of;;;;;;;;;;;;;x
+count_bactrian;Administrator;;;;;;;;;;;;;x
+count_female_bactrian;Administrator;;;;;;;;;;;;;x
+count_foa_bactrian;My Lord;;;;;;;;;;;;;x
+count_foa_female_bactrian;My Lady;;;;;;;;;;;;;x
+county_chinese;County;;;;;;;;;;;;;x
+county_of_chinese;County of;;;;;;;;;;;;;x
+count_chinese;Magistrate;;;;;;;;;;;;;x
+count_female_chinese;Lady;;;;;;;;;;;;;x
+count_foa_chinese;Your Lordship;;;;;;;;;;;;;x
+count_foa_female_chinese;Your Ladyship;;;;;;;;;;;;;x
+county_korean;Chiefdom;;;;;;;;;;;;;x
+county_of_korean;Chiefdom of;;;;;;;;;;;;;x
+count_korean;Chief;;;;;;;;;;;;;x
+count_female_korean;Chieftess;;;;;;;;;;;;;x
+count_foa_korean;My Chieftain;;;;;;;;;;;;;x
+count_foa_female_korean;My Chieftess;;;;;;;;;;;;;x
+county_man;Chiefdom;;;;;;;;;;;;;x
+county_of_man;Chiefdom of;;;;;;;;;;;;;x
+count_man;Chief;;;;;;;;;;;;;x
+count_female_man;Chieftess;;;;;;;;;;;;;x
+count_foa_man;My Chieftain;;;;;;;;;;;;;x
+count_foa_female_man;My Chieftess;;;;;;;;;;;;;x
+county_mongol;Chiefdom;;;;;;;;;;;;;x
+county_of_mongol;Chiefdom of;;;;;;;;;;;;;x
+count_mongol;Khagan;;;;;;;;;;;;;x
+count_female_mongol;Khatun;;;;;;;;;;;;;x
+count_foa_mongol;My Chieftain;;;;;;;;;;;;;x
+count_foa_female_mongol;My Chieftess;;;;;;;;;;;;;x
+county_tibetan;Chiefdom;;;;;;;;;;;;;x
+county_of_tibetan;Chiefdom of;;;;;;;;;;;;;x
+count_tibetan;Chief;;;;;;;;;;;;;x
+count_female_tibetan;Chieftess;;;;;;;;;;;;;x
+count_foa_tibetan;My Chieftain;;;;;;;;;;;;;x
+count_foa_female_tibetan;My Chieftess;;;;;;;;;;;;;x
+county_yue;Chiefdom;;;;;;;;;;;;;x
+county_of_yue;Chiefdom of;;;;;;;;;;;;;x
+count_yue;Chief;;;;;;;;;;;;;x
+count_female_yue;Chieftess;;;;;;;;;;;;;x
+count_foa_yue;My Chieftain;;;;;;;;;;;;;x
+count_foa_female_yue;My Chieftess;;;;;;;;;;;;;x
+#Baron
+baron;Baron;Baron;Baron;;Barón;;;;;;;;;x
+baron_female;Baroness;Baronne;Baroness;;Baronesa;;;;;;;;;x
+baron_title_ruler_consort;Lord;;;;;;;;;;;;;x
+baron_title_ruler_consort_female;Lady;;;;;;;;;;;;;x
+barony_of;District of;;;;;;;;;;;;;x
+baron_foa;My Lord;;;;;;;;;;;;;x
+baron_foa_female;My Lady;;;;;;;;;;;;;x
+barony_bactrian;District;;;;;;;;;;;;;x
+barony_of_bactrian;District of;;;;;;;;;;;;;x
+baron_bactrian;Magistrate;;;;;;;;;;;;;x
+baron_female_bactrian;Magistrate;;;;;;;;;;;;;x
+baron_foa_bactrian;My Lord;;;;;;;;;;;;;x
+baron_foa_female_bactrian;My Lady;;;;;;;;;;;;;x
+barony_chinese;District;;;;;;;;;;;;;x
+barony_of_chinese;District of;;;;;;;;;;;;;x
+baron_chinese;Sheriff;;;;;;;;;;;;;x
+baron_female_chinese;Lady;;;;;;;;;;;;;x
+baron_foa_chinese;Your Lordship;;;;;;;;;;;;;x
+baron_foa_female_chinese;Your Ladyship;;;;;;;;;;;;;x
+barony_korean;Tribe;;;;;;;;;;;;;x
+barony_of_korean;Tribe of;;;;;;;;;;;;;x
+baron_korean;Lesser Chief;;;;;;;;;;;;;x
+baron_female_korean;Lesser Chieftess;;;;;;;;;;;;;x
+baron_foa_korean;My Chieftain;;;;;;;;;;;;;x
+baron_foa_female_korean;My Chieftess;;;;;;;;;;;;;x
+barony_man;Tribe;;;;;;;;;;;;;x
+barony_of_man;Tribe of;;;;;;;;;;;;;x
+baron_man;Lesser Chief;;;;;;;;;;;;;x
+baron_female_man;Lesser Chieftess;;;;;;;;;;;;;x
+baron_foa_man;My Chieftain;;;;;;;;;;;;;x
+baron_foa_female_man;My Chieftess;;;;;;;;;;;;;x
+barony_mongol;Tribe;;;;;;;;;;;;;x
+barony_of_mongol;Tribe of;;;;;;;;;;;;;x
+baron_mongol;Khagan;;;;;;;;;;;;;x
+baron_female_mongol;Khatun;;;;;;;;;;;;;x
+baron_foa_mongol;My Chieftain;;;;;;;;;;;;;x
+baron_foa_female_mongol;My Chieftess;;;;;;;;;;;;;x
+barony_tibetan;Tribe;;;;;;;;;;;;;x
+barony_of_tibetan;Tribe of;;;;;;;;;;;;;x
+baron_tibetan;Lesser Chief;;;;;;;;;;;;;x
+baron_female_tibetan;Lesser Chieftess;;;;;;;;;;;;;x
+baron_foa_tibetan;My Chieftain;;;;;;;;;;;;;x
+baron_foa_female_tibetan;My Chieftess;;;;;;;;;;;;;x
+barony_yue;Tribe;;;;;;;;;;;;;x
+barony_of_yue;Tribe of;;;;;;;;;;;;;x
+baron_yue;Lesser Chief;;;;;;;;;;;;;x
+baron_female_yue;Lesser Chieftess;;;;;;;;;;;;;x
+baron_foa_yue;My Chieftain;;;;;;;;;;;;;x
+baron_foa_female_yue;My Chieftess;;;;;;;;;;;;;x
+#City
+city_baron;Mayor;;;;;;;;;;;;;x
+city_baron_female;Mayor;;;;;;;;;;;;;x
+city_baron_foa;My Lord;;;;;;;;;;;;;x
+city_barony;City;;;;;;;;;;;;;x
+city_barony_of;City of;;;;;;;;;;;;;x
+city_count;Prefect;;;;;;;;;;;;;x
+city_count_female;Prefect;;;;;;;;;;;;;x
+city_count_foa;My Lord;;;;;;;;;;;;;x
+city_county;County;;;;;;;;;;;;;x
+city_county_of;County of;;;;;;;;;;;;;x
+city_duke;Commandant;;;;;;;;;;;;;x
+city_duke_female;Commandant;;;;;;;;;;;;;x
+city_duke_foa;Your Excellency;;;;;;;;;;;;;x
+city_duchy;Commandery;;;;;;;;;;;;;x
+city_duchy_of;Commandery of;;;;;;;;;;;;;x
+city_king;Inspector;;;;;;;;;;;;;x
+city_king_female;Inspector;;;;;;;;;;;;;x
+city_king_foa;Your Excellency;;;;;;;;;;;;;x
+city_kingdom;Province;;;;;;;;;;;;;x
+city_kingdom_of;Province of;;;;;;;;;;;;;x
+city_emperor;Emperor;;;;;;;;;;;;;x
+city_emperor_female;Empress;;;;;;;;;;;;;x
+city_emperor_foa;Your Excellency;;;;;;;;;;;;;x
+city_empire;Empire;;;;;;;;;;;;;x
+city_empire_of;Empire of;;;;;;;;;;;;;x
+#Temple
+temple_emperor_buddhist_religion;Divine Sage;;;;;;;;;;;;;x
+temple_emperor_chinese_religion;Scholar Sage;;;;;;;;;;;;;x
+temple_emperor_tao;Heavenly Master;;;;;;;;;;;;;x
+temple_emperor_pagan_group;Grand Shaman;;;;;;;;;;;;;x
+temple_emperor_baima;Mountain God;;;;;;;;;;;;;x
+temple_king_buddhist_religion;Chief Lama;;;;;;;;;;;;;x
+temple_king_chinese_religion;Recognized Scholar;;;;;;;;;;;;;x
+temple_king_tao;Grand Master;;;;;;;;;;;;;x
+temple_king_pagan_group;Chief Shaman;;;;;;;;;;;;;x
+temple_king_baima;Grand Priest;;;;;;;;;;;;;x
+temple_duke_buddhist_religion;Senior Lama;;;;;;;;;;;;;x
+temple_duke_chinese_religion;Scholar Official;;;;;;;;;;;;;x
+temple_duke_tao;Chief Master;;;;;;;;;;;;;x
+temple_duke_pagan_group;High Shaman;;;;;;;;;;;;;x
+temple_duke_baima;High Priest;;;;;;;;;;;;;x
+temple_count_buddhist_religion;Lama;;;;;;;;;;;;;x
+temple_count_chinese_religion;Scholar;;;;;;;;;;;;;x
+temple_count_tao;Master;;;;;;;;;;;;;x
+temple_count_pagan_group;Shaman;;;;;;;;;;;;;x
+temple_count_baima;Priest;;;;;;;;;;;;;x
+temple_baron_buddhist_religion;Junior Lama;;;;;;;;;;;;;x
+temple_baron_chinese_religion;Junior Scholar;;;;;;;;;;;;;x
+temple_baron_tao;Lesser Master;;;;;;;;;;;;;x
+temple_baron_animist;Lesser Shaman;;;;;;;;;;;;;x
+temple_baron_baihu;Lesser Shaman;;;;;;;;;;;;;x
+temple_baron_baima;Minor Priest;;;;;;;;;;;;;x
+temple_baron_baishi;Lesser Shaman;;;;;;;;;;;;;x
+temple_baron_huojiao;Lesser Shaman;;;;;;;;;;;;;x
+temple_baron_shamanist;Lesser Shaman;;;;;;;;;;;;;x
+temple_barony_chinese_religion;Palace;;;;;;;;;;;;;x
+temple_barony_tao;Temple;;;;;;;;;;;;;x
+temple_barony_pagan_group;Shrine;;;;;;;;;;;;;x
+temple_barony_of_chinese_religion;Palace of;;;;;;;;;;;;;x
+temple_barony_of_tao;Temple of;;;;;;;;;;;;;x
+temple_barony_of_pagan_group;Shrine of;;;;;;;;;;;;;x
+#Chancellor
+emperor_job_chancellor_chinese_religion;Chancellor;;;;;;;;;;;;;x
+emperor_job_chancellor_shamanist;Chief Councilor;;;;;;;;;;;;;x
+king_job_chancellor_buddhist_religion;Minister of Diplomacy;;;;;;;;;;;;;x
+king_job_chancellor_chinese_religion;Assistant Administrator;;;;;;;;;;;;;x
+king_job_chancellor_shamanist;Chief of Diplomacy;;;;;;;;;;;;;x
+king_job_chancellor_tao;General of the People;;;;;;;;;;;;;x
+duke_job_chancellor_chinese_religion;Assistant Officer;;;;;;;;;;;;;x
+count_job_chancellor_chinese_religion;Aide;;;;;;;;;;;;;x
+job_chancellor;Councilor;;;;;;;;;;;;;x
+#Marshal
+emperor_job_marshal_chinese_religion;Grand Commandant;;;;;;;;;;;;;x
+emperor_job_marshal_shamanist;Minister of War;;;;;;;;;;;;;x
+king_job_marshal;Chief of War;;;;;;;;;;;;;x
+king_job_marshal_buddhist_religion;Minister of War;;;;;;;;;;;;;x
+king_job_marshal_chinese_religion;Commandant;;;;;;;;;;;;;x
+king_job_marshal_shamanist;Chief of War;;;;;;;;;;;;;x
+king_job_marshal_tao;General of Land;;;;;;;;;;;;;x
+duke_job_marshal_chinese_religion;Lieutenant;;;;;;;;;;;;;x
+count_job_marshal_chinese_religion;Sergeant;;;;;;;;;;;;;x
+job_marshal;Warchief;;;;;;;;;;;;;x
+#Treasurer
+emperor_job_treasurer_chinese_religion;Excellency of Works;;;;;;;;;;;;;x
+emperor_job_treasurer_shamanist;Minister of Finance;;;;;;;;;;;;;x
+king_job_treasurer_buddhist_religion;Minister of Finance;;;;;;;;;;;;;x
+king_job_treasurer_chinese_religion;Chief Clerk;;;;;;;;;;;;;x
+king_job_treasurer_shamanist;Chief of Finance;;;;;;;;;;;;;x
+king_job_treasurer_tao;General of Prosperity;;;;;;;;;;;;;x
+duke_job_treasurer_chinese_religion;Accounts Officer;;;;;;;;;;;;;x
+count_job_treasurer_chinese_religion;Clerk;;;;;;;;;;;;;x
+job_treasurer;Steward;;;;;;;;;;;;;x
+#Spymaster
+emperor_job_spymaster_chinese_religion;Excellency of Masses;;;;;;;;;;;;;x
+emperor_job_spymaster_shamanist;Minister of Justice;;;;;;;;;;;;;x
+king_job_spymaster;Chief Spymaster;;;;;;;;;;;;;x
+king_job_spymaster_buddhist_religion;Imperial Censor;;;;;;;;;;;;;x
+king_job_spymaster_chinese_religion;Chief Censor;;;;;;;;;;;;;x
+king_job_spymaster_shamanist;Chief of Justice;;;;;;;;;;;;;x
+king_job_spymaster_tao;General of Justice;;;;;;;;;;;;;x
+duke_job_spymaster_chinese_religion;Investigator;;;;;;;;;;;;;x
+count_job_spymaster_chinese_religion;Detective;;;;;;;;;;;;;x
+job_spymaster;Spymaster;;;;;;;;;;;;;x
+#Spiritual
+emperor_job_spiritual_chinese_religion;Grand Tutor;;;;;;;;;;;;;x
+emperor_job_spiritual_shamanist;Minister of Rites;;;;;;;;;;;;;x
+king_job_spiritual_chinese_religion;Junior Tutor;;;;;;;;;;;;;x
+king_job_spiritual_shamanist;Chief of Rites;;;;;;;;;;;;;x
+king_job_spiritual_tao;General of Peace;;;;;;;;;;;;;x
+duke_job_spiritual_chinese_religion;Scholar Officer;;;;;;;;;;;;;x
+job_spiritual_buddhist_religion;Lama;;;;;;;;;;;;;x
+job_spiritual_tao;Master;;;;;;;;;;;;;x
+job_spiritual_chinese_religion;Scholar;;;;;;;;;;;;;x
+job_spiritual_pagan_group;Shaman;;;;;;;;;;;;;x
+job_spiritual;Spiritual;;;;;;;;;;;;;x

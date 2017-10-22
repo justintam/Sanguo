@@ -1,0 +1,17 @@
+# c_pingchang
+
+# County Title
+title = c_pingchang
+
+# Settlements
+max_settlements = 3
+
+b_pingchang = castle
+b_louxiang = temple
+#b_wendu = temple
+
+# Misc
+culture = han
+religion = confucian
+
+#History

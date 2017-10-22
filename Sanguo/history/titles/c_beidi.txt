@@ -1,0 +1,40 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=d_beidi
+}
+110.1.1={
+	holder=3755 #Cao Feng
+}
+170.1.1={
+	holder=3355 #Fan Jin
+}
+184.1.1={
+	holder=105 #Huangfu Song
+}
+184.10.1={
+	liege=k_liangzei #Liang Rebellion
+	holder=800 #Beigong Boyu
+}
+187.1.1={
+	holder=805 #Wang Guo
+}
+187.4.1={
+	liege=d_beidi
+	holder=175 #Zhang Wen
+}
+188.12.1={
+	holder=105 #Huangfu Song
+}
+191.1.1={
+	holder=4135 #Random
+}
+198.6.1={
+	holder=315 #Duan Wei
+}
+209.6.1={
+	holder=4135 #Random
+}

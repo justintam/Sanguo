@@ -1,0 +1,19 @@
+# c_qinghe
+
+# County Title
+title = c_qinghe
+
+# Settlements
+max_settlements = 5
+
+b_qinghe = castle
+b_guangchuan = city
+b_shuhe = city
+#b_qingshuai = castle
+#b_tonghui = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

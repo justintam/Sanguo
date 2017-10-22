@@ -1,0 +1,18 @@
+# c_shangfanggu
+
+# County Title
+title = c_shangfanggu
+
+# Settlements
+max_settlements = 4
+
+b_shangfanggu = castle
+#b_hanying = city
+#b_maiji = temple
+#b_jinjizhen = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

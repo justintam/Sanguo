@@ -1,0 +1,96 @@
+# Definitions for nanman culture holding graphics
+spriteTypes = {
+
+### Castle
+	spriteType = {
+		name = "GFX_settlement_castle_nanmangfx"
+		texturefile = "gfx\\interface\\placeholder_castle_norse.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_settlement_castle_nanmangfx_looted"
+		texturefile = "gfx\\interface\\placeholder_castle_norse_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+### City
+	spriteType = {
+		name = "GFX_settlement_city_nanmangfx"
+		texturefile = "gfx\\interface\\placeholder_city_norse.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_settlement_city_nanmangfx_looted"
+		texturefile = "gfx\\interface\\placeholder_city_norse_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+
+### Temple
+
+	# Christian temples
+	spriteType = {
+		name = "GFX_settlement_temple_nanmangfx_westerngfx"
+		texturefile = "gfx\\interface\\placeholder_temple_norse.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_settlement_temple_nanmangfx_westerngfx_looted"
+		texturefile = "gfx\\interface\\placeholder_temple_norse_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	# Muslim temples
+	spriteType = {
+		name = "GFX_settlement_temple_nanmangfx_muslimgfx"
+		texturefile = "gfx\\interface\\placeholder_temple_norse.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_settlement_temple_nanmangfx_muslimgfx_looted"
+		texturefile = "gfx\\interface\\placeholder_temple_norse_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	# Tengri temples
+	spriteType = {
+		name = "GFX_settlement_temple_nanmangfx_norsegfx"
+		texturefile = "gfx\\interface\\placeholder_temple_norse.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_settlement_temple_nanmangfx_norsegfx_looted"
+		texturefile = "gfx\\interface\\placeholder_temple_norse_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+
+	# New buildings
+	spriteType = {
+		name = "GFX_settlement_new_nanmangfx"
+		texturefile = "gfx\\interface\\province_new_settlement_west_african.tga"
+		noOfFrames = 1
+		norefcount = yes	
+	}
+
+	spriteType = {
+		name = "GFX_settlement_building_nanmangfx"
+		texturefile = "gfx\\interface\\placeholder_building_settlement_west_african.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+}

@@ -1,0 +1,25 @@
+# c_guangping
+
+# County Title
+title = c_guangping
+
+# Settlements
+max_settlements = 5
+
+b_guangping = castle
+#b_hangding = city
+#b_guanzhai = temple
+#b_hangxian = castle
+#b_lianzi = city
+
+# Misc
+culture = han
+religion = taiping
+
+#History
+194.1.1={
+	b_hangding = city
+}
+200.1.1={
+	b_guanzhai = temple
+}

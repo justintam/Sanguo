@@ -1,0 +1,9 @@
+RETTYPE_CUL_ALTAIC;Steppe Horse Archer;;;;;;;;;;;;;x
+RETTYPE_CUL_CHIN;Tiger Infantry;;;;;;;;;;;;;x
+RETTYPE_CUL_INDIAN;Elephant Warrior;;;;;;;;;;;;;x
+RETTYPE_CUL_KUSH;Camel Warrior;;;;;;;;;;;;;x
+RETTYPE_CUL_MAN;Rattan Infantry;;;;;;;;;;;;;x
+RETTYPE_CUL_TAO;Yellow Turban Zealot;;;;;;;;;;;;;x
+RETTYPE_CUL_TIB;Western Horse Raider;;;;;;;;;;;;;x
+CLAN_ARMY;[Root.GetOnlyDynastyName] Clan;;;;;;;;;;;;;x
+CLAN_ARMY_adj;[Root.GetOnlyDynastyName];;;;;;;;;;;;;x

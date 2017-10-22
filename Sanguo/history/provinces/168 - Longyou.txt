@@ -1,0 +1,18 @@
+# c_longyou
+
+# County Title
+title = c_longyou
+
+# Settlements
+max_settlements = 4
+
+b_longyou = castle
+b_langwu = tribal
+#b_fafangzhen = temple
+#b_daliuxiang = city
+
+# Misc
+culture = di
+religion = baima
+
+#History

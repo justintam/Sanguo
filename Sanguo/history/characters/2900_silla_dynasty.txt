@@ -1,0 +1,717 @@
+######### Baekje ########
+
+# 2900-2946
+
+###Bak
+
+2900 = {
+	name="Hyeokgeose"
+	dynasty=2250
+	religion="shamanist"
+	culture="samhan"
+	1.1.1={
+		birth=yes
+	}
+	17.1.1={
+		add_spouse=2901
+	}
+	74.1.1={
+		death=yes
+	}
+}
+2901 = {
+	name="Alyeong"
+	female=yes
+	religion="shamanist"
+	culture="samhan"
+	1.1.1={
+		birth=yes
+	}
+	17.1.1={
+		add_spouse=2900
+	}
+	76.1.1={
+		death=yes
+	}
+}
+2902 = {
+	name="Namhae"
+	dynasty=2250
+	religion="shamanist"
+	culture="samhan"
+	father=2900
+	mother=2901
+	17.1.1={
+		birth=yes
+	}
+	33.1.1={
+		add_spouse=2903
+	}
+	83.1.1={
+		death=yes
+	}
+}
+2903 = {
+	name="Unje"
+	female=yes
+	religion="shamanist"
+	culture="samhan"
+	17.1.1={
+		birth=yes
+	}
+	33.1.1={
+		add_spouse=2902
+	}
+	84.1.1={
+		death=yes
+	}
+}
+2904 = {
+	name="Yuri"
+	dynasty=2250
+	religion="shamanist"
+	culture="samhan"
+	father=2902
+	mother=2903
+	33.1.1={
+		birth=yes
+	}
+	60.1.1={
+		death=yes
+	}
+}
+2905 = {
+	name="Naero"
+	dynasty=2250
+	religion="shamanist"
+	culture="samhan"
+	father=2902
+	mother=2903
+	35.1.1={
+		birth=yes
+	}
+	100.1.1={
+		death=yes
+	}
+}
+2906 = {
+	name="Talhae"
+	dynasty=2259
+	religion="shamanist"
+	culture="samhan"
+	30.1.1={
+		birth=yes
+	}
+	50.1.1={
+		add_spouse=2907
+	}
+	80.1.1={
+		death=yes
+	}
+}
+2907 = {
+	name="Ani"
+	female=yes
+	dynasty=2250
+	religion="shamanist"
+	culture="samhan"
+	father=2900
+	mother=2901
+	33.5.1={
+		birth=yes
+	}
+	50.1.1={
+		add_spouse=2906
+	}
+	90.1.1={
+		death=yes
+	}
+}
+2908 = {
+	name="Pasa"
+	dynasty=2250
+	religion="shamanist"
+	culture="samhan"
+	father=2904
+	56.1.1={
+		birth=yes
+	}
+	85.1.1={
+		add_spouse=2909
+	}
+	112.1.1={
+		death=yes
+	}
+}
+2909 = {
+	name="Saseong"
+	female=yes
+	religion="shamanist"
+	culture="samhan"
+	68.1.1={
+		birth=yes
+	}
+	85.1.1={
+		add_spouse=2908
+	}
+	115.1.1={
+		death=yes
+	}
+}
+2910 = {
+	name="Jima"
+	dynasty=2250
+	religion="shamanist"
+	culture="samhan"
+	father=2908
+	mother=2909
+	85.1.1={
+		birth=yes
+	}
+	105.1.1={
+		add_spouse=2911
+	}
+	134.1.1={
+		death=yes
+	}
+}
+2911 = {
+	name="Aerye"
+	female=yes
+	dynasty=2251
+	religion="shamanist"
+	culture="samhan"
+	father=2943
+	86.1.1={
+		birth=yes
+	}
+	105.1.1={
+		add_spouse=2910
+	}
+	140.1.1={
+		death=yes
+	}
+}
+2912 = {
+	name="Ilseong"
+	dynasty=2250
+	religion="shamanist"
+	culture="samhan"
+	father=2904
+	54.1.1={
+		birth=yes
+	}
+	90.1.1={
+		add_spouse=2913
+	}
+	154.1.1={
+		death=yes
+	}
+}
+2913 = {
+	name="Inu"
+	female=yes
+	dynasty=2250
+	religion="shamanist"
+	culture="samhan"
+	father=2905
+	76.1.1={
+		birth=yes
+	}
+	90.1.1={
+		add_spouse=2912
+	}
+	155.1.1={
+		death=yes
+	}
+}
+2914 = {
+	name="Adalla"
+	dynasty=2250
+	religion="shamanist"
+	culture="samhan"
+	father=2912
+	100.1.1={
+		birth=yes
+	}
+	120.1.1={
+		add_spouse=2915
+	}
+	184.1.1={
+		death=yes
+	}
+}
+2915 = {
+	name="Aerye"
+	female=yes
+	dynasty=2250
+	religion="shamanist"
+	culture="samhan"
+	father=2910
+	mother=2911
+	105.1.1={
+		birth=yes
+	}
+	120.1.1={
+		add_spouse=2914
+	}
+	190.1.1={
+		death=yes
+	}
+}
+
+### Seok
+
+2916 = {
+	name="Sung"
+	dynasty=2259
+	religion="shamanist"
+	culture="samhan"
+	father=2906
+	mother=2907
+	60.1.1={
+		birth=yes
+	}
+	100.1.1={
+		add_spouse=2917
+	}
+	130.1.1={
+		death=yes
+	}
+}
+2917 = {
+	name="Ani"
+	female=yes
+	dynasty=2251
+	religion="shamanist"
+	culture="samhan"
+	father=2943
+	84.1.1={
+		birth=yes
+	}
+	100.1.1={
+		add_spouse=2916
+	}
+	140.1.1={
+		death=yes
+	}
+}
+2918 = {
+	name="Beolhyu"
+	dynasty=2259
+	religion="shamanist"
+	culture="samhan"
+	father=2916
+	mother=2917
+	trait="brave"
+	130.1.1={
+		birth=yes
+	}
+	196.1.1={
+		death=yes
+	}
+}
+2919 = {
+	name="Goljeong"
+	dynasty=2259
+	religion="shamanist"
+	culture="samhan"
+	father=2918
+	163.1.1={
+		birth=yes
+	}
+	220.1.1={
+		death=yes
+	}
+}
+2920 = {
+	name="Imae"
+	dynasty=2259
+	religion="shamanist"
+	culture="samhan"
+	father=2918
+	164.1.1={
+		birth=yes
+	}
+	180.1.1={
+		add_spouse=2921
+	}
+	220.1.1={
+		death=yes
+	}
+}
+2921 = {
+	name="Naerye"
+	female=yes
+	religion="shamanist"
+	culture="samhan"
+	165.1.1={
+		birth=yes
+	}
+	180.1.1={
+		add_spouse=2920
+	}
+	220.1.1={
+		death=yes
+	}
+}
+2922 = {
+	name="Naehae"
+	dynasty=2259
+	religion="shamanist"
+	culture="samhan"
+	father=2920
+	mother=2921
+	180.1.1={
+		birth=yes
+	}
+	196.1.1={
+		add_spouse=2923
+	}
+	230.1.1={
+		death=yes
+	}
+}
+2923 = {
+	name="Hyo"
+	female=yes
+	dynasty=2259
+	religion="shamanist"
+	culture="samhan"
+	father=2919
+	181.1.1={
+		birth=yes
+	}
+	196.1.1={
+		add_spouse=2922
+	}
+	230.1.1={
+		death=yes
+	}
+}
+2924 = {
+	name="Jobun"
+	dynasty=2259
+	religion="shamanist"
+	culture="samhan"
+	father=2919
+	183.1.1={
+		birth=yes
+	}
+	230.1.1={
+		add_spouse=2929
+	}
+	240.1.1={
+		add_spouse=2933
+	}
+	247.1.1={
+		death=yes
+	}
+}
+2925 = {
+	name="Uro"
+	dynasty=2259
+	religion="shamanist"
+	culture="samhan"
+	father=2922
+	mother=2923
+	200.1.1={
+		birth=yes
+	}
+	250.1.1={
+		death={
+			death_reason=death_battle
+		}
+	}
+}
+2926 = {
+	name="Cheomhae"
+	dynasty=2259
+	religion="shamanist"
+	culture="samhan"
+	father=2919
+	185.1.1={
+		birth=yes
+	}
+	261.1.1={
+		death=yes
+	}
+}
+
+### Gim
+2943 = {
+	name="Alji"
+	dynasty=2251
+	religion="shamanist"
+	culture="samhan"
+	65.1.1={
+		birth=yes
+	}
+	120.1.1={
+		death=yes
+	}
+}
+2944 = {
+	name="Ado"
+	dynasty=2251
+	religion="shamanist"
+	culture="samhan"
+	father=2943
+	81.1.1={
+		birth=yes
+	}
+	140.1.1={
+		death=yes
+	}
+}
+2945 = {
+	name="Suryu"
+	dynasty=2251
+	religion="shamanist"
+	culture="samhan"
+	father=2944
+	100.1.1={
+		birth=yes
+	}
+	170.1.1={
+		death=yes
+	}
+}
+2946 = {
+	name="Ukbo"
+	dynasty=2251
+	religion="shamanist"
+	culture="samhan"
+	father=2945
+	130.1.1={
+		birth=yes
+	}
+	205.1.1={
+		death=yes
+	}
+}
+2927 = {
+	name="Gudo"
+	dynasty=2251
+	religion="shamanist"
+	culture="samhan"
+	father=2946
+	199.1.1={
+		birth=yes
+	}
+	290.1.1={
+		death=yes
+	}
+}
+2928 = {
+	name="Michu"
+	dynasty=2251
+	religion="shamanist"
+	culture="samhan"
+	father=2927
+	220.1.1={
+		birth=yes
+	}
+	284.1.1={
+		death=yes
+	}
+}
+2929 = {
+	name="Ongmo"
+	female=yes
+	dynasty=2251
+	religion="shamanist"
+	culture="samhan"
+	father=2927
+	215.1.1={
+		birth=yes
+	}
+	230.1.1={
+		add_spouse=2924
+	}
+	280.1.1={
+		death=yes
+	}
+}
+2930 = {
+	name="Daeseoji"
+	dynasty=2251
+	religion="shamanist"
+	culture="samhan"
+	father=2927
+	285.1.1={
+		birth=yes
+	}
+	379.1.1={
+		death=yes
+	}
+}
+2931 = {
+	name="Beop"
+	dynasty=2250
+	religion="shamanist"
+	culture="samhan"
+	father=2912
+	mother=2913
+	150.1.1={
+		birth=yes
+	}
+	230.1.1={
+		death=yes
+	}
+}
+2932 = {
+	name="Yurye"
+	dynasty=2259
+	religion="shamanist"
+	culture="samhan"
+	father=2924
+	mother=2933
+	240.1.1={
+		birth=yes
+	}
+	298.1.1={
+		death=yes
+	}
+}
+2933 = {
+	name="Aerye"
+	female=yes
+	dynasty=2250
+	religion="shamanist"
+	culture="samhan"
+	father=2931
+	220.1.1={
+		birth=yes
+	}
+	240.1.1={
+		add_spouse=2924
+	}
+	270.1.1={
+		death=yes
+	}
+}
+2934 = {
+	name="Girim"
+	dynasty=2259
+	religion="shamanist"
+	culture="samhan"
+	father=2932
+	260.1.1={
+		birth=yes
+	}
+	310.1.1={
+		death=yes
+	}
+}
+2935 = {
+	name="Boban"
+	female=yes
+	dynasty=2251
+	religion="shamanist"
+	culture="samhan"
+	father=2928
+	283.1.1={
+		birth=yes
+	}
+	310.1.1={
+		add_spouse=2938
+	}
+	360.1.1={
+		death=yes
+	}
+}
+2936 = {
+	name="Heulhae"
+	dynasty=2259
+	religion="shamanist"
+	culture="samhan"
+	father=2925
+	250.1.1={
+		birth=yes
+	}
+	356.1.1={
+		death=yes
+	}
+}
+2937 = {
+	name="Misaheun"
+	dynasty=2251
+	religion="shamanist"
+	culture="samhan"
+	father=2938
+	370.1.1={
+		birth=yes
+	}
+	450.1.1={
+		death=yes
+	}
+}
+2938 = {
+	name="Naemul"
+	dynasty=2251
+	religion="shamanist"
+	culture="samhan"
+	father=2941
+	290.1.1={
+		birth=yes
+	}
+	310.1.1={
+		add_spouse=2935
+	}
+	402.1.1={
+		death=yes
+	}
+}
+2939 = {
+	name="Bokho"
+	dynasty=2251
+	religion="shamanist"
+	culture="samhan"
+	father=2938
+	373.1.1={
+		birth=yes
+	}
+	450.1.1={
+		death=yes
+	}
+}
+2940 = {
+	name="Silseong"
+	dynasty=2251
+	religion="shamanist"
+	culture="samhan"
+	father=2930
+	378.1.1={
+		birth=yes
+	}
+	417.1.1={
+		death=yes
+	}
+}
+2941 = {
+	name="Uro"
+	dynasty=2251
+	religion="shamanist"
+	culture="samhan"
+	father=2927
+	240.1.1={
+		birth=yes
+	}
+	300.1.1={
+		death=yes
+	}
+}
+2942 = {
+	name="Nulji"
+	dynasty=2251
+	religion="shamanist"
+	culture="samhan"
+	father=2938
+	375.1.1={
+		birth=yes
+	}
+	458.1.1={
+		death=yes
+	}
+}

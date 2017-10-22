@@ -1,0 +1,18 @@
+# c_duchang
+
+# County Title
+title = c_duchang
+
+# Settlements
+max_settlements = 4
+
+b_duchang = castle
+b_hantingdu = city
+#b_jizhu = temple
+#b_fangjian = castle
+
+# Misc
+culture = han
+religion = confucian
+
+#History

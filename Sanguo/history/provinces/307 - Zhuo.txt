@@ -1,0 +1,19 @@
+# c_zhuo
+
+# County Title
+title = c_zhuo
+
+# Settlements
+max_settlements = 5
+
+b_zhuo = castle
+b_yangxiang = city
+#b_zhuoling = temple
+#b_zhuotang = castle
+#b_shangban = city
+
+# Misc
+culture = han
+religion = confucian
+
+#History

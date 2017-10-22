@@ -1,0 +1,21 @@
+# e_china
+1.1.1={
+	law = agnatic_succession
+	law = succ_primogeniture
+	effect = {
+		set_title_flag = noble_king
+	}
+}
+1.1.1={
+	liege=k_yu
+}
+24.1.1={
+	holder=4261 #Liu Shaogong
+}
+26.1.1={
+	holder=4244 #Liu Xing
+}
+52.1.1={
+	holder=0 #Transferred
+	active = no
+}

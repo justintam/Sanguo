@@ -32,13 +32,6 @@ narrative_event = {
 				value = unrestricted
 			}
 		}
-		OR = {
-			ai = no
-			has_game_rule = {
-				name = supernatural_events
-				value = unrestricted
-			}
-		}
 		NOR = {
 			has_game_rule = {
 				name = supernatural_events
@@ -98,14 +91,16 @@ narrative_event = {
 			if = {
 				limit = { 
 					any_courtier = { 
-						sad_example_trigger = yes 
+						sad_example_trigger = yes
+						is_inaccessible_trigger = no
 						ai = yes
 					} 
 				}
 
 				random_courtier = {
 					limit = { 
-						sad_example_trigger = yes 
+						sad_example_trigger = yes
+						is_inaccessible_trigger = no
 						ai = yes
 					}
 					
@@ -823,30 +818,30 @@ narrative_event = {
 			}
 			new_character = {
 				set_character_flag = eternal_life_mystic
-				
+				will_not_marry_effect = yes
 				random_list = {
 					80 = {
 						set_character_flag = mystic_is_fraud
 					}
 					20 = {
 						modifier = {
-							factor = 1.5
+							factor = 1.4
 							FROM = { diplomacy = 10 }
 						}
 						modifier = {
-							factor = 1.5
+							factor = 1.4
 							FROM = { diplomacy = 13 }
 						}
 						modifier = {
-							factor = 1.5
+							factor = 1.4
 							FROM = { diplomacy = 16 }
 						}
 						modifier = {
-							factor = 1.5
+							factor = 1.4
 							FROM = { diplomacy = 19 }
 						}
 						modifier = {
-							factor = 1.5
+							factor = 1.4
 							FROM = { diplomacy = 22 }
 						}
 						
@@ -879,7 +874,7 @@ narrative_event = {
 			}
 			new_character = {
 				set_character_flag = eternal_life_mystic
-
+				will_not_marry_effect = yes
 				random_list = {
 					50 = { add_trait = scarred }
 					50 = { add_trait = disfigured }
@@ -891,23 +886,23 @@ narrative_event = {
 					}
 					20 = {
 						modifier = {
-							factor = 1.5
+							factor = 1.4
 							FROM = { martial = 10 }
 						}
 						modifier = {
-							factor = 1.5
+							factor = 1.4
 							FROM = { martial = 13 }
 						}
 						modifier = {
-							factor = 1.5
+							factor = 1.4
 							FROM = { martial = 16 }
 						}
 						modifier = {
-							factor = 1.5
+							factor = 1.4
 							FROM = { martial = 19 }
 						}
 						modifier = {
-							factor = 1.5
+							factor = 1.4
 							FROM = { martial = 22 }
 						}
 						
@@ -940,31 +935,31 @@ narrative_event = {
 		
 			}
 			new_character = {
-				set_character_flag = eternal_life_mystic 
-
+				set_character_flag = eternal_life_mystic
+				will_not_marry_effect = yes
 				random_list = {
 					80 = {
 						set_character_flag = mystic_is_fraud
 					}
 					20 = {
 						modifier = {
-							factor = 1.5
+							factor = 1.4
 							FROM = { intrigue = 10 }
 						}
 						modifier = {
-							factor = 1.5
+							factor = 1.4
 							FROM = { intrigue = 13 }
 						}
 						modifier = {
-							factor = 1.5
+							factor = 1.4
 							FROM = { intrigue = 16 }
 						}
 						modifier = {
-							factor = 1.5
+							factor = 1.4
 							FROM = { intrigue = 19 }
 						}
 						modifier = {
-							factor = 1.5
+							factor = 1.4
 							FROM = { intrigue = 22 }
 						}
 						
@@ -991,7 +986,7 @@ narrative_event = {
 			}
 			new_character = {
 				set_character_flag = eternal_life_mystic
-
+				will_not_marry_effect = yes
 				change_diplomacy = 2
 				change_stewardship = 2
 				change_intrigue = -1
@@ -1003,24 +998,24 @@ narrative_event = {
 					}
 					20 = {
 						modifier = {
-							factor = 1.5
-							ROOT = { learning = 10 }
+							factor = 1.4
+							FROM = { learning = 10 }
 						}
 						modifier = {
-							factor = 1.5
-							ROOT = { learning = 13 }
+							factor = 1.4
+							FROM = { learning = 13 }
 						}
 						modifier = {
-							factor = 1.5
-							ROOT = { learning = 16 }
+							factor = 1.4
+							FROM = { learning = 16 }
 						}
 						modifier = {
-							factor = 1.5
-							ROOT = { learning = 19 }
+							factor = 1.4
+							FROM = { learning = 19 }
 						}
 						modifier = {
-							factor = 1.5
-							ROOT = { learning = 22 }
+							factor = 1.4
+							FROM = { learning = 22 }
 						}
 						
 						change_learning = 15
@@ -1128,31 +1123,31 @@ narrative_event = {
 			}
 			new_character = {
 				set_character_flag = eternal_life_mystic
-
+				will_not_marry_effect = yes
 				random_list = {
 					80 = {
 						set_character_flag = mystic_is_fraud
 					}
 					20 = {
 						modifier = {
-							factor = 1.5
-							ROOT = { diplomacy = 10 }
+							factor = 1.4
+							FROM = { diplomacy = 10 }
 						}
 						modifier = {
-							factor = 1.5
-							ROOT = { diplomacy = 13 }
+							factor = 1.4
+							FROM = { diplomacy = 13 }
 						}
 						modifier = {
-							factor = 1.5
-							ROOT = { diplomacy = 16 }
+							factor = 1.4
+							FROM = { diplomacy = 16 }
 						}
 						modifier = {
-							factor = 1.5
-							ROOT = { diplomacy = 19 }
+							factor = 1.4
+							FROM = { diplomacy = 19 }
 						}
 						modifier = {
-							factor = 1.5
-							ROOT = { diplomacy = 22 }
+							factor = 1.4
+							FROM = { diplomacy = 22 }
 						}
 						
 					}
@@ -1185,7 +1180,7 @@ narrative_event = {
 			}
 			new_character = {
 				set_character_flag = eternal_life_mystic
-
+				will_not_marry_effect = yes
 				random_list = {
 					50 = { add_trait = scarred }
 					50 = { add_trait = disfigured }
@@ -1197,24 +1192,24 @@ narrative_event = {
 					}
 					20 = {
 						modifier = {
-							factor = 1.5
-							ROOT = { martial = 10 }
+							factor = 1.4
+							FROM = { martial = 10 }
 						}
 						modifier = {
-							factor = 1.5
-							ROOT = { martial = 13 }
+							factor = 1.4
+							FROM = { martial = 13 }
 						}
 						modifier = {
-							factor = 1.5
-							ROOT = { martial = 16 }
+							factor = 1.4
+							FROM = { martial = 16 }
 						}
 						modifier = {
-							factor = 1.5
-							ROOT = { martial = 19 }
+							factor = 1.4
+							FROM = { martial = 19 }
 						}
 						modifier = {
-							factor = 1.5
-							ROOT = { martial = 22 }
+							factor = 1.4
+							FROM = { martial = 22 }
 						}
 						
 						change_martial = 6
@@ -1246,31 +1241,31 @@ narrative_event = {
 			}
 			new_character = {
 				set_character_flag = eternal_life_mystic
-
+				will_not_marry_effect = yes
 				random_list = {
 					80 = {
 						set_character_flag = mystic_is_fraud
 					}
 					20 = {
 						modifier = {
-							factor = 1.5
-							ROOT = { intrigue = 10 }
+							factor = 1.4
+							FROM = { intrigue = 10 }
 						}
 						modifier = {
-							factor = 1.5
-							ROOT = { intrigue = 13 }
+							factor = 1.4
+							FROM = { intrigue = 13 }
 						}
 						modifier = {
-							factor = 1.5
-							ROOT = { intrigue = 16 }
+							factor = 1.4
+							FROM = { intrigue = 16 }
 						}
 						modifier = {
-							factor = 1.5
-							ROOT = { intrigue = 19 }
+							factor = 1.4
+							FROM = { intrigue = 19 }
 						}
 						modifier = {
-							factor = 1.5
-							ROOT = { intrigue = 22 }
+							factor = 1.4
+							FROM = { intrigue = 22 }
 						}
 						
 						change_intrigue = 6
@@ -1299,7 +1294,7 @@ narrative_event = {
 			}
 			new_character = {
 				set_character_flag = eternal_life_mystic
-				
+				will_not_marry_effect = yes
 				change_diplomacy = 2
 				change_stewardship = 2
 				change_intrigue = -1
@@ -1311,24 +1306,24 @@ narrative_event = {
 					}
 					20 = {
 						modifier = {
-							factor = 1.5
-							ROOT = { learning = 10 }
+							factor = 1.4
+							FROM = { learning = 10 }
 						}
 						modifier = {
-							factor = 1.5
-							ROOT = { learning = 13 }
+							factor = 1.4
+							FROM = { learning = 13 }
 						}
 						modifier = {
-							factor = 1.5
-							ROOT = { learning = 16 }
+							factor = 1.4
+							FROM = { learning = 16 }
 						}
 						modifier = {
-							factor = 1.5
-							ROOT = { learning = 19 }
+							factor = 1.4
+							FROM = { learning = 19 }
 						}
 						modifier = {
-							factor = 1.5
-							ROOT = { learning = 22 }
+							factor = 1.4
+							FROM = { learning = 22 }
 						}
 						
 						change_learning = 15
@@ -1388,7 +1383,6 @@ narrative_event = {
 
 #Mystic is prompted to introduce themselves
 narrative_event = {
-	title = EVTNAME_RIP_21018
 	id = RIP.21018
 
 	is_triggered_only = yes
@@ -1622,12 +1616,8 @@ narrative_event = {
 
 #Mystic is prompted to start quest
 narrative_event = {
-	title = EVTNAME_RIP_21020
 	id = RIP.21020
-	desc = EVTDSC_RIP_21020
-
 	is_triggered_only = yes
-
 	hide_window = yes
 
 	option = {
@@ -1759,8 +1749,6 @@ narrative_event = {
 
 #Diplomatic quest step 1 fail ping
 narrative_event = {
-	title = EVTNAME_RIP_211001
-	desc = EVTDSC_RIP_21100
 	id = RIP.21101
 
 	is_triggered_only = yes
@@ -1804,10 +1792,7 @@ narrative_event = {
 
 #Diplomatic quest step 1 success ping
 narrative_event = {
-	title = EVTNAME_RIP_211003
-	desc = EVTDSC_RIP_21100
 	id = RIP.21103
-
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -1852,10 +1837,7 @@ narrative_event = {
 
 #Diplomatic quest step 1 -> 2 ping
 narrative_event = {
-	title = EVTNAME_RIP_211005
-	desc = EVTDSC_RIP_21105
 	id = RIP.21105
-
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -1868,6 +1850,17 @@ narrative_event = {
 	id = RIP.21110
 	desc = EVTDSC_RIP_21110
 	border = GFX_event_narrative_frame_diplomacy
+
+	desc = {
+		trigger = { has_dlc = "Way of Life" }
+		text = EVTDSC_RIP_21110
+		picture = GFX_evt_rider_adventure
+	}
+	desc = {
+		trigger = { NOT = { has_dlc = "Way of Life" } }
+		text = EVTDSC_RIP_21110
+		picture = GFX_evt_pagan
+	}
 	
 	is_triggered_only = yes
 
@@ -1965,10 +1958,7 @@ narrative_event = {
 
 #Diplomatic quest step 2 fail ping
 narrative_event = {
-	title = EVTNAME_RIP_211001
-	desc = EVTDSC_RIP_21100
 	id = RIP.21111
-
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -2037,10 +2027,7 @@ narrative_event = {
 
 #Diplomatic quest step 2 success ping
 narrative_event = {
-	title = EVTNAME_RIP_211003
-	desc = EVTDSC_RIP_21100
 	id = RIP.21113
-
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -2094,10 +2081,7 @@ narrative_event = {
 
 #Diplomatic quest step 2 -> 3 ping
 narrative_event = {
-	title = EVTNAME_RIP_211005
-	desc = EVTDSC_RIP_21105
 	id = RIP.21115
-
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -2203,12 +2187,8 @@ narrative_event = {
 
 #Diplomatic quest step 3 bribe success ping
 narrative_event = {
-	title = EVTNAME_RIP_211001
-	desc = EVTDSC_RIP_21100
 	id = RIP.21121
-
 	is_triggered_only = yes
-
 	hide_window = yes
 
 	option = {
@@ -2229,7 +2209,7 @@ narrative_event = {
 	option = {
 		name = EVTOPTA_RIP_21122
 		custom_tooltip = { text = EVTOPTA_RIP_21122_TOOLTIP } 
-
+		
 		add_trait = immortal
 
 		if = {
@@ -2258,10 +2238,7 @@ narrative_event = {
 
 #Diplomatic quest step 3 speech success ping
 narrative_event = {
-	title = EVTNAME_RIP_211003
-	desc = EVTDSC_RIP_21100
 	id = RIP.21123
-
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -2282,8 +2259,8 @@ narrative_event = {
 
 	option = {
 		name = EVTOPTA_RIP_21124
-		custom_tooltip = { text = EVTOPTA_RIP_21124_TOOLTIP }
-
+		custom_tooltip = { text = EVTOPTA_RIP_21124_TOOLTIP } 
+		
 		add_trait = immortal
 
 		if = {
@@ -2471,10 +2448,7 @@ narrative_event = {
 
 #Martial quest step 1 fail ping
 narrative_event = {
-	title = EVTNAME_RIP_212001
-	desc = EVTDSC_RIP_21200
 	id = RIP.21201
-
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -2528,10 +2502,7 @@ narrative_event = {
 
 #Martial quest step 1 success ping
 narrative_event = {
-	title = EVTNAME_RIP_212003
-	desc = EVTDSC_RIP_21200
 	id = RIP.21203
-
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -2586,9 +2557,7 @@ narrative_event = {
 
 #Martial quest step 1 -> 2 ping
 narrative_event = {
-	title = EVTNAME_RIP_21205
 	id = RIP.21205
-
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -2695,10 +2664,7 @@ narrative_event = {
 
 #Martial quest step 2 fail ping
 narrative_event = {
-	title = EVTNAME_RIP_212001
-	desc = EVTDSC_RIP_21200
 	id = RIP.21211
-
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -2753,10 +2719,7 @@ narrative_event = {
 
 #Martial quest step 2 success ping
 narrative_event = {
-	title = EVTNAME_RIP_212003
-	desc = EVTDSC_RIP_21200
 	id = RIP.21213
-
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -2829,9 +2792,7 @@ narrative_event = {
 
 #Martial quest step 2 -> 3 ping
 narrative_event = {
-	title = EVTNAME_RIP_21215
 	id = RIP.21215
-
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -2969,10 +2930,7 @@ narrative_event = {
 
 #Martial quest step 3 ghost success ping
 narrative_event = {
-	title = EVTNAME_RIP_212001
-	desc = EVTDSC_RIP_21200
 	id = RIP.21221
-
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -3023,10 +2981,7 @@ narrative_event = {
 
 #Martial quest step 3 search success ping
 narrative_event = {
-	title = EVTNAME_RIP_212003
-	desc = EVTDSC_RIP_21200
 	id = RIP.21223
-
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -3058,7 +3013,6 @@ narrative_event = {
 		
 		hidden_tooltip = {
 			event_target:eternal_life_mystic = { add_trait = immortal }
-
 			FROM =  {
 				remove_opinion = {
 					who = ROOT
@@ -3077,12 +3031,7 @@ narrative_event = {
 
 #Martial quest step 3 pinging the reincarnation character 
 narrative_event = {
-	title = EVTNAME_RIP_21225
 	id = RIP.21225
-	desc = EVTDSC_RIP_21225
-	border = GFX_event_narrative_frame_religion
-	picture = GFX_evt_lunatic
-
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -3239,10 +3188,7 @@ narrative_event = {
 
 #Intrigue quest step 1 fail ping
 narrative_event = {
-	title = EVTNAME_RIP_213001
-	desc = EVTDSC_RIP_21300
 	id = RIP.21301
-
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -3287,10 +3233,7 @@ narrative_event = {
 
 #Intrigue quest step 1 success ping
 narrative_event = {
-	title = EVTNAME_RIP_213003
-	desc = EVTDSC_RIP_21300
 	id = RIP.21303
-
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -3334,10 +3277,7 @@ narrative_event = {
 
 #Intrigue quest step 1 -> 2 ping
 narrative_event = {
-	title = EVTNAME_RIP_213005
-	desc = EVTDSC_RIP_21305
 	id = RIP.21305
-
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -3448,10 +3388,7 @@ narrative_event = {
 
 #Intrigue quest step 2 fail ping
 narrative_event = {
-	title = EVTNAME_RIP_213001
-	desc = EVTDSC_RIP_21300
 	id = RIP.21311
-
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -3512,10 +3449,7 @@ narrative_event = {
 
 #Intrigue quest step 2 success ping
 narrative_event = {
-	title = EVTNAME_RIP_213003
-	desc = EVTDSC_RIP_21300
 	id = RIP.21313
-
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -3574,9 +3508,7 @@ narrative_event = {
 
 #Intrigue quest step 2 -> 3 ping
 narrative_event = {
-	title = EVTNAME_RIP_213005
 	id = RIP.21315
-
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -3689,10 +3621,7 @@ narrative_event = {
 
 #Intrigue quest step 3 ghost success ping
 narrative_event = {
-	title = EVTNAME_RIP_213001
-	desc = EVTDSC_RIP_21300
 	id = RIP.21321
-
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -3720,6 +3649,7 @@ narrative_event = {
 			limit = { trait = incapable }
 			remove_trait = incapable
 		}
+
 		hidden_tooltip = {
 			event_target:eternal_life_mystic = { add_trait = immortal }
 			FROM =  {
@@ -3740,10 +3670,7 @@ narrative_event = {
 
 #Intrigue quest step 3 search success ping
 narrative_event = {
-	title = EVTNAME_RIP_213003
-	desc = EVTDSC_RIP_21300
 	id = RIP.21323
-
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -3771,7 +3698,7 @@ narrative_event = {
 			limit = { trait = incapable }
 			remove_trait = incapable
 		}
-		
+
 		hidden_tooltip = {
 			
 			event_target:eternal_life_mystic = { add_trait = immortal }
@@ -3940,10 +3867,7 @@ narrative_event = {
 
 #Learning quest step 1 fail ping
 narrative_event = {
-	title = EVTNAME_RIP_214001
-	desc = EVTDSC_RIP_21400
 	id = RIP.21401
-
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -3992,10 +3916,7 @@ narrative_event = {
 
 #Learning quest step 1 success ping
 narrative_event = {
-	title = EVTNAME_RIP_214003
-	desc = EVTDSC_RIP_21400
 	id = RIP.21403
-
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -4050,10 +3971,7 @@ narrative_event = {
 
 #Learning quest step 1 -> 2 ping
 narrative_event = {
-	title = EVTNAME_RIP_214005
-	desc = EVTDSC_RIP_21405
 	id = RIP.21405
-
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -4173,10 +4091,7 @@ narrative_event = {
 
 #Learning quest step 2 fail ping
 narrative_event = {
-	title = EVTNAME_RIP_214001
-	desc = EVTDSC_RIP_21400
 	id = RIP.21411
-
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -4257,10 +4172,7 @@ narrative_event = {
 
 #Learning quest step 2 success ping
 narrative_event = {
-	title = EVTNAME_RIP_214003
-	desc = EVTDSC_RIP_21400
 	id = RIP.21413
-
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -4321,10 +4233,7 @@ narrative_event = {
 
 #Learning quest step 2 -> 3 ping
 narrative_event = {
-	title = EVTNAME_RIP_214005
-	desc = EVTDSC_RIP_21405
 	id = RIP.21415
-
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -4463,10 +4372,7 @@ narrative_event = {
 
 #Learning quest step 3 success ping
 narrative_event = {
-	title = EVTNAME_RIP_214001
-	desc = EVTDSC_RIP_21400
 	id = RIP.21421
-
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -4497,6 +4403,7 @@ narrative_event = {
 
 		hidden_tooltip = {
 			event_target:eternal_life_mystic = { add_trait = immortal }
+			
 			FROM =  {
 				remove_opinion = {
 					who = ROOT
@@ -4515,10 +4422,7 @@ narrative_event = {
 
 #Learning quest step 3 pinging the reincarnated character 
 narrative_event = {
-	title = EVTNAME_RIP_21425
 	id = RIP.21425
-	desc = EVTDSC_RIP_21425
-
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -4612,7 +4516,8 @@ character_event = {
 		}
 		random_dynasty_member = {
 			if = {
-				limit = { 
+				limit = {
+					is_offmap_ruler = no 
 					is_adult = yes
 					prisoner = no
 					NOT = { trait = in_hiding }
@@ -4684,15 +4589,11 @@ character_event = {
 
 #Investigation starts
 narrative_event = {
-	title = EVTNAME_RIP_21500
 	id = RIP.21500
-	desc = EVTDSC_RIP_21500
-
 	is_triggered_only = yes
 	hide_window = yes
 
 	option = {
-		name = EVTOPTA_RIP_21500
 		FROM =  { narrative_event = { id = RIP.21501 } } 
 	}
 }
@@ -4872,10 +4773,7 @@ narrative_event = {
 
 #Heir/relative/advisor  finds out that mystic is fraud
 narrative_event = {
-	title = EVTNAME_RIP_21502
 	id = RIP.21502
-	desc = EVTDSC_RIP_21502
-
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -4950,10 +4848,7 @@ narrative_event = {
 
 #Investigator finds no proof
 narrative_event = {
-	title = EVTNAME_RIP_21504
 	id = RIP.21504
-	desc = EVTDSC_RIP_21504
-
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -4988,10 +4883,7 @@ narrative_event = {
 
 #Mystic discovers you
 narrative_event = {
-	title = EVTNAME_RIP_21506
 	id = RIP.21506
-	desc = EVTDSC_RIP_21506
-
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -5052,10 +4944,7 @@ narrative_event = {
 
 #Mystic escapes
 narrative_event = {
-	title = EVTNAME_RIP_21508
 	id = RIP.21508
-	desc = EVTDSC_RIP_21508
-
 	is_triggered_only = yes
 	hide_window = yes
 
@@ -5086,13 +4975,10 @@ narrative_event = {
 
 #reincarnation event
 narrative_event = {
-	title = EVTNAME_RIP_21509
 	id = RIP.21991
-	desc = EVTDSC_RIP_21509
-	border = GFX_event_narrative_frame_religion
-
 	is_triggered_only = yes
 	hide_from = yes
+
 	hide_window = yes
 
 	option = {

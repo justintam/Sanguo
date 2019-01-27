@@ -29,8 +29,5 @@
 }
 214.6.1={
 	liege=k_yang
-	holder=405 #Xiahou Dun
-}
-220.6.13={
 	holder=4178 #Random
 }

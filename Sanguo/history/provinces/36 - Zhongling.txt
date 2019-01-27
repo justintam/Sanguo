@@ -13,5 +13,6 @@ b_zhongling = tribal
 # Misc
 culture = xiongnu
 religion = tengri_pagan
+terrain = steppe
 
 #History

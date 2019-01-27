@@ -8,8 +8,18 @@
 }
 184.1.1={
 	liege=0 #Independent
-	holder=1824 #Pu Hu
+	holder=2014 #Zhou Yi
 }
 190.1.1={
+	liege=d_jiangxia
+	holder=662 #Xiang Lang
+}
+209.3.1={
+	holder=4302 #Random
+}
+215.1.1={
+	liege=d_xiling
+}
+219.5.1={
 	liege=d_jiangxia
 }

@@ -1,52 +1,9 @@
-#######Wei Dynasty range: 400-499###### 10487
+#######Wei Dynasty range: 400-499######
 
 ##################################
 ########### IMPERIAL #############
 ##################################
 
-401={
-	name="Teng"
-	dynasty=5
-	religion="confucian"
-	culture="han"
-	father=413
-    trait="eunuch"
-	113.1.1={
-		birth=yes
-	}
-	158.1.1={
-		death=yes
-	}
-}
-402={
-	name="Song"
-	dynasty=15
-    diplomacy=6
-    martial=2
-    stewardship=7
-    intrigue=6
-	learning=6
-	religion="confucian"
-	culture="han"
-	father=10409
-    trait="honest"
-    trait="just"
-    trait="humble"
-	130.1.1={
-		birth=yes
-	}
-	150.1.1={
-		dynasty=5
-		add_trait = adopted
-		father=401
-	}
-	184.1.1={
-		employer=400
-	}
-	193.8.1={
-		death={death_reason=death_murder killer=235}  #Killed by Zhang Kai
-	}
-}
 400={
 	name="Cao"
 	dynasty=5
@@ -71,19 +28,19 @@
     trait="diligent"
     trait="shrewd"
     trait="just"
-	trait="organizer"
-	trait="siege_leader"
+	trait="levy_coordinator"
+	trait="sapper"
 	trait="back_seat_leader"
-	trait="flat_terrain_leader"
-	trait="heavy_infantry_leader"
 	155.1.1={
 		birth=yes
 	}
-	180.1.1={
-		add_spouse=450
+	174.1.1={
+		add_spouse=3927
 	}
 	184.1.1={
+		add_spouse=450
 		effect={
+			health=2
 			add_artifact=horse_greylightning
 			add_artifact=weapon_swordheaven
 			add_friend=700
@@ -91,81 +48,140 @@
 			add_friend=406
 			add_friend=433
 			add_friend=435
-			
-			any_realm_character = {
-				limit = {
-					OR = {
-						character = 405
-						character = 406
-						character = 433
-						character = 435
-						character = 10488
-						character = 20400
-						character = 20401
-						character = 20470
+			any_realm_character={
+				limit={
+					OR={
+						character=405
+						character=406
+						character=433
+						character=435
+						character=10488
+						character=20400
+						character=20401
+						character=20470
 					}
 				}
-				opinion = {
-					modifier = opinion_loyalty
-					who = ROOT
+				opinion={
+					modifier=opinion_loyalty
+					who=ROOT
 				}
-				reverse_opinion = {
-					modifier = opinion_loyalty
-					who = ROOT
+				reverse_opinion={
+					modifier=opinion_loyalty
+					who=ROOT
 				}
 			}
 		}
 	}
 	189.11.1={
-		effect = {
+		effect={
 			add_artifact=weapon_sevenstar
 		}
 	}
 	189.12.1={
-		effect = {
-			remove_artifact=weapon_sevenstar
+		effect={
+			destroy_artifact=weapon_sevenstar
 		}
 	}
 	192.6.1={
 		capital=c_changyi
-	}
-	194.1.1={
-		add_claim=k_yan
+		effect={
+			set_character_flag=capital_flag
+		}
 	}
 	196.1.1={
 		capital=c_xuchang
-		
 		effect={
 			add_rival=700
 		}
 	}
 	199.2.7={
-		effect = {
+		effect={
 			add_artifact=horse_redhare
 			add_artifact=weapon_sevenstar
 		}
 	}
 	199.6.1={
-		effect = {
+		effect={
 			add_artifact=imperial_seal
 		}
 	}
+	200.1.1={
+		effect={
+			add_consort=3921
+			any_realm_character={
+				limit={
+					character=4451
+				}
+				opinion={
+					modifier=opinion_loyalty
+					who=ROOT
+				}
+				reverse_opinion={
+					modifier=opinion_loyalty
+					who=ROOT
+				}
+			}
+		}
+	}
 	200.3.1={
-		effect = {
-			remove_artifact=horse_redhare
+		effect={
+			destroy_artifact=horse_redhare
 		}
 	}
 	205.1.1={
 		capital=c_ye
 	}
 	220.3.15 ={
-		effect = {
-			remove_artifact=imperial_seal
-			remove_artifact=horse_greylightning
-			remove_artifact=weapon_swordheaven
-			remove_artifact=weapon_sevenstar
+		effect={
+			destroy_artifact=imperial_seal
+			destroy_artifact=horse_greylightning
+			destroy_artifact=weapon_swordheaven
+			destroy_artifact=weapon_sevenstar
 		}
 		death=yes
+	}
+}
+401={
+	name="Teng"
+	dynasty=5
+	religion="confucian"
+	culture="han"
+	father=413
+    trait="eunuch"
+	113.1.1={
+		birth=yes
+	}
+	158.1.1={
+		death=yes
+	}
+}
+402={
+	name="Song"
+	dynasty=15
+    diplomacy=6
+    martial=2
+    stewardship=7
+    intrigue=6
+	learning=6
+	religion="confucian"
+	culture="han"
+	father=30402
+    trait="honest"
+    trait="just"
+    trait="humble"
+	130.1.1={
+		birth=yes
+	}
+	150.1.1={
+		dynasty=5
+		add_trait=adopted
+		father=401
+	}
+	184.1.1={
+		employer=400
+	}
+	193.8.1={
+		death={death_reason=death_murder killer=235}  #Killed by Zhang Kai
 	}
 }
 403={
@@ -195,7 +211,8 @@
 	religion="confucian"
 	culture="han"
 	father=400
-	trait="misguided_warrior"
+	mother=3927
+	trait="tough_soldier"
 	trait="brave"
 	trait="just"
 	trait="duel_trained_warrior"
@@ -246,7 +263,9 @@
 	184.1.1={
 		employer=400
 		effect={
+			health=2
 			add_friend=400
+			give_minor_title=title_commander
 		}
 	}
 	195.1.1={
@@ -289,11 +308,13 @@
 	184.1.1={
 		employer=400
 		effect={
+			health=1
 			add_friend=400
+			give_minor_title=title_commander
 		}
 	}
 	219.5.1={
-		death=yes
+		death={death_reason=death_battle killer=609}
 	}
 }
 ###
@@ -423,33 +444,8 @@
 	dynasty=15
 	religion="confucian"
 	culture="han"
-	father=10408
+	father=30401
 	102.1.1={
-		birth=yes
-	}
-	170.1.1={
-		death=yes
-	}
-}
-10408={
-	name="Guan"
-	dynasty=15
-	religion="confucian"
-	culture="han"
-	80.1.1={
-		birth=yes
-	}
-	150.1.1={
-		death=yes
-	}
-}
-10409={
-	name="Ping"
-	dynasty=15
-	religion="confucian"
-	culture="han"
-	father=10408
-	101.1.1={
 		birth=yes
 	}
 	170.1.1={
@@ -461,7 +457,7 @@
 	dynasty=15
 	religion="confucian"
 	culture="han"
-	father=10409
+	father=30402
 	120.1.1={
 		birth=yes
 	}
@@ -474,7 +470,7 @@
 	dynasty=15
 	religion="confucian"
 	culture="han"
-	father=10409
+	father=30402
 	125.1.1={
 		birth=yes
 	}
@@ -819,7 +815,11 @@
 		employer=400
 		effect={
 			add_friend=400
+			give_minor_title=title_commander
 		}
+	}
+	220.3.15={
+		employer=10400
 	}
 	223.1.1={
 		death=yes
@@ -879,6 +879,9 @@
 	}
 	184.1.1={
 		employer=400
+		effect={
+			give_minor_title=title_commander
+		}
 	}
 	232.1.1={
 		death=yes
@@ -1052,7 +1055,9 @@
 		birth=yes
 	}
 	208.1.1={
-		add_friend=20499 #Xu Gan
+		effect={
+			add_friend=20499 #Xu Gan
+		}
 	}
 	231.12.1={
 		trait="depressed"
@@ -1098,15 +1103,25 @@
 	name="Shi"
 	female=yes
 	dynasty=65
+	dna="ybvsqluwfsh"
+	prp="od0edd000000000000"
 	religion="confucian"
 	culture="han"
 	father=449
+	trait="humble"
+	trait="fair"
+	trait="temperate"
+	trait="just"
+	trait="kind"
 	167.1.1={
 		birth=yes
 	}
-	180.1.1={
+	184.1.1={
 		add_spouse=400
 		employer=400
+	}
+	220.3.15={
+		employer=10400
 	}
 	230.1.1={
 		death=yes
@@ -1118,11 +1133,14 @@
 	religion="confucian"
 	culture="han"
 	father=449
-	167.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
 		employer=400
+	}
+	220.3.15={
+		employer=10400
 	}
 	230.1.1={
 		death=yes
@@ -1139,6 +1157,9 @@
 	}
 	184.1.1={
 		employer=400
+	}
+	220.3.15={
+		employer=10400
 	}
 	250.1.1={
 		death=yes
@@ -1165,6 +1186,10 @@
 	father=452
 	202.1.1={
 		birth=yes
+		employer=400
+	}
+	220.3.15={
+		employer=10400
 	}
 	270.1.1={
 		death=yes
@@ -1178,6 +1203,10 @@
 	father=452
 	207.1.1={
 		birth=yes
+		employer=400
+	}
+	220.3.15={
+		employer=10400
 	}
 	275.1.1={
 		death=yes
@@ -1195,6 +1224,7 @@
 	mother=450
 	195.1.1={
 		birth=yes
+		employer=400
 	}
 	220.1.1={
 		death=yes
@@ -1208,6 +1238,10 @@
 	father=456
 	217.1.1={
 		birth=yes
+		employer=400
+	}
+	220.3.15={
+		employer=10400
 	}
 	264.1.1={
 		death=yes
@@ -1219,8 +1253,12 @@
 	religion="confucian"
 	culture="han"
 	father=400
+	mother=3927
 	178.1.1={
 		birth=yes
+	}
+	184.1.1={
+		employer=400
 	}
 	200.1.1={
 		death=yes
@@ -1234,6 +1272,10 @@
 	father=458
 	198.1.1={
 		birth=yes
+		employer=400
+	}
+	220.3.15={
+		employer=10400
 	}
 	236.1.1={
 		death=yes
@@ -1248,6 +1290,7 @@
 	father=400
 	195.1.1={
 		birth=yes
+		employer=400
 	}
 	207.12.1={
 		add_trait="ill"
@@ -1266,6 +1309,10 @@
 	father=400
 	196.1.1={
 		birth=yes
+		employer=400
+	}
+	220.3.15={
+		employer=10400
 	}
 	241.1.1={
 		death=yes
@@ -1281,6 +1328,10 @@
 	trait="humble"
 	197.1.1={
 		birth=yes
+		employer=400
+	}
+	220.3.15={
+		employer=10400
 	}
 	249.1.1={
 		death=yes
@@ -1297,13 +1348,13 @@
 	}
 	260.3.1={
 		name="Huan"
-		effect = {
+		effect={
 			add_artifact=imperial_seal
 		}
 	}
 	265.2.8={
-		effect = {
-			remove_artifact=imperial_seal
+		effect={
+			destroy_artifact=imperial_seal
 		}
 	}
 	303.1.1={
@@ -1334,17 +1385,17 @@
 	trait="inspiring_leader"
 	188.1.1={
 		birth=yes
+		employer=400
 	}
 	198.1.1={
-		effect = {
+		effect={
 			add_betrothal=10543
 		}
 	}
 	204.1.1={
-		employer=400
-		effect = {
+		add_spouse=10543
+		effect={
 			break_betrothal=10543
-			add_spouse=10543
 		}
 	}
 	220.3.15={
@@ -1504,7 +1555,7 @@
 	}
 	215.1.1={
 		dynasty=5
-		add_trait = adopted
+		add_trait=adopted
 		father=473
 	}
 	223.1.1={
@@ -1522,7 +1573,7 @@
 	}
 	221.1.1={
 		dynasty=5
-		add_trait = adopted
+		add_trait=adopted
 		father=473
 	}
 	247.1.1={
@@ -1561,6 +1612,7 @@
 	religion="confucian"
 	culture="han"
 	father=400
+	mother=3921
 	200.1.1={
 		birth=yes
 	}
@@ -1671,7 +1723,7 @@
 		birth=yes
 	}
 	221.1.1={
-		add_trait = adopted
+		add_trait=adopted
 		father=485
 	}
 	236.1.1={
@@ -1688,7 +1740,7 @@
 		birth=yes
 	}
 	221.1.1={
-		add_trait = adopted
+		add_trait=adopted
 		father=485
 	}
 	275.1.1={
@@ -1757,7 +1809,7 @@
 		birth=yes
 	}
 	221.1.1={
-		add_trait = adopted
+		add_trait=adopted
 		father=404
 	}
 	265.1.1={
@@ -1830,33 +1882,44 @@
 	}
 }
 498={
-	name="Jie" #Wife of Emperor Xian
-	female=yes
-	dynasty=5
+	name="Zizang"
+	dynasty=15
 	religion="confucian"
 	culture="han"
-	father=400
-	197.1.1={
+	father=405
+	trait="twin"
+	trait="arbitrary"
+	trait="hedonist"
+	trait="slothful"
+	193.1.1={
 		birth=yes
+		employer=405
 	}
-	260.1.1={
+	194.1.1={
+		employer=400
+	}
+	254.1.1={
 		death=yes
 	}
 }
 499={
-	name="Qinghe"
-	female=yes
-	dynasty=5
+	name="Zijiang"
+	dynasty=15
 	religion="confucian"
 	culture="han"
-	father=400
-	196.1.1={
+	father=405
+	trait="twin"
+	trait="arbitrary"
+	trait="hedonist"
+	trait="slothful"
+	193.1.1={
 		birth=yes
+		employer=405
 	}
-	216.1.1={
-		add_spouse=10458
+	194.1.1={
+		employer=400
 	}
-	260.1.1={
+	254.1.1={
 		death=yes
 	}
 }
@@ -1888,10 +1951,15 @@
 		birth=yes
 	}
 	204.1.1={
-		add_spouse=1205
+		add_spouse=10409
+	}
+	208.1.1={
+		effect={
+			add_friend=3444 #Yan Rou
+		}
 	}
 	220.3.15={
-		effect = {
+		effect={
 			add_artifact=imperial_seal
 			add_artifact=horse_greylightning
 			add_artifact=weapon_swordheaven
@@ -1900,16 +1968,17 @@
 	}
 	220.12.10={
 		capital=c_henan
-		effect = {
-			set_character_flag = founded_empire
+		effect={
+			set_character_flag=founded_empire
 		}
+		add_trait="tyrant"
 	}
 	226.6.29={
-		effect = {
-			remove_artifact=imperial_seal
-			remove_artifact=horse_greylightning
-			remove_artifact=weapon_swordheaven
-			remove_artifact=weapon_sevenstar
+		effect={
+			destroy_artifact=imperial_seal
+			destroy_artifact=horse_greylightning
+			destroy_artifact=weapon_swordheaven
+			destroy_artifact=weapon_sevenstar
 		}
 		death=yes
 	}
@@ -1918,14 +1987,36 @@
 ###Zhen
 ###
 10401={
+	name="Yi"
+	dynasty=141
+	religion="confucian"
+	culture="han"
+	trait="infirm"
+	130.1.1={
+		birth=yes
+	}
+	165.1.1={
+		add_spouse=3932
+	}
+	184.1.1={
+		effect={ health=-3 fertility=-0.4 }
+	}
+	185.12.1={
+		death=yes
+	}
+}
+10402={
 	name="Yu"
 	dynasty=141
 	religion="confucian"
 	culture="han"
-	father=109
-	mother=1206
+	father=10401
+	mother=3932
 	168.1.1={
 		birth=yes
+	}
+	184.1.1={
+		employer=10401
 	}
 	185.12.1={
 		employer=700
@@ -1934,32 +2025,30 @@
 		death=yes
 	}
 }
-10402={
+10403={
 	name="Yan"
 	dynasty=141
 	religion="confucian"
 	culture="han"
-	father=109
-	mother=1206
+	father=10401
+	mother=3932
 	165.1.1={
 		birth=yes
-	}
-	185.12.1={
-		employer=700
 	}
 	196.6.1={
 		death=yes
 	}
 }
-10403={
+10404={
 	name="Yao"
 	dynasty=141
 	religion="confucian"
 	culture="han"
-	father=109
-	mother=1206
+	father=10401
+	mother=3932
 	184.1.1={
 		birth=yes
+		employer=10401
 	}
 	185.12.1={
 		employer=700
@@ -1967,20 +2056,29 @@
 	204.1.1={
 		employer=400
 	}
+	220.3.15={
+		employer=10400
+	}
+	226.6.29={
+		employer=10410
+	}
 	230.1.1={
 		death=yes
 	}
 }
-10404={
+10405={
 	name="Dao"
 	female=yes
 	dynasty=141
 	religion="confucian"
 	culture="han"
-	father=109
-	mother=1206
+	father=10401
+	mother=3932
 	180.1.1={
 		birth=yes
+	}
+	184.1.1={
+		employer=10401
 	}
 	185.12.1={
 		employer=700
@@ -1992,58 +2090,79 @@
 		death=yes
 	}
 }
-10405={
+10406={
 	name="Jiang"
 	female=yes
 	dynasty=141
 	religion="confucian"
 	culture="han"
-	father=109
-	mother=1206
+	father=10401
+	mother=3932
 	177.1.1={
 		birth=yes
+	}
+	184.1.1={
+		employer=10401
 	}
 	185.12.1={
 		employer=700
 	}
 	204.1.1={
 		employer=400
+	}
+	220.3.15={
+		employer=10400
+	}
+	226.6.29={
+		employer=10410
 	}
 	227.1.1={
 		death=yes
 	}
 }
-10406={
+10407={
 	name="Rong"
 	female=yes
 	dynasty=141
 	religion="confucian"
 	culture="han"
-	father=109
-	mother=1206
+	father=10401
+	mother=3932
 	182.1.1={
 		birth=yes
+	}
+	184.1.1={
+		employer=10401
 	}
 	185.12.1={
 		employer=700
 	}
 	204.1.1={
 		employer=400
+	}
+	220.3.15={
+		employer=10400
+	}
+	226.6.29={
+		employer=10410
 	}
 	229.1.1={
 		death=yes
 	}
 }
-10407={
+10408={
 	name="Tuo"
 	female=yes
 	dynasty=141
 	religion="confucian"
 	culture="han"
-	father=109
-	mother=1206
+	father=10401
+	mother=3932
 	178.1.1={
 		birth=yes
+	}
+	184.1.1={
+		employer=10401
 	}
 	185.12.1={
 		employer=700
@@ -2051,8 +2170,67 @@
 	204.1.1={
 		employer=400
 	}
+	220.3.15={
+		employer=10400
+	}
+	226.6.29={
+		employer=10410
+	}
 	230.1.1={
 		death=yes
+	}
+}
+10409={
+	name="Wenzhao"
+	female=yes
+	dynasty=141
+    diplomacy=10
+    martial=3
+    stewardship=8
+    intrigue=8
+	learning=9
+	religion="confucian"
+	culture="han"
+	father=10401
+	mother=3932
+    trait="grey_eminence"
+    trait="fair"
+    trait="gregarious"
+    trait="temperate"
+    trait="diligent"
+    trait="patient"
+    trait="humble"
+    trait="zealous"
+    trait="just"
+    trait="brave"
+    trait="ambitious"
+	183.1.26={
+		birth=yes
+	}
+	184.1.1={
+		employer=10401
+	}
+	185.12.1={
+		employer=700
+	}
+	195.1.1={
+		add_spouse=708
+	}
+	199.3.1={
+		employer=708
+	}
+	204.1.1={
+		remove_spouse=708
+		employer=400
+		add_spouse=10400
+	}
+	220.3.15={
+		employer=10400
+	}
+	221.8.4={
+		death={
+			death_reason=death_suicide
+		}
 	}
 }
 ###
@@ -2069,7 +2247,7 @@
 	religion="confucian"
 	culture="han"
 	father=10400
-	mother=1205
+	mother=10409
 	trait="charismatic_negotiator"
 	trait="architect"
 	trait="diligent"
@@ -2077,15 +2255,25 @@
 	trait="gluttonous"
 	205.1.1={
 		birth=yes
+		employer=400
+	}
+	217.4.1={
+		employer=10400
+	}
+	219.1.1={
+		employer=400
+	}
+	220.3.15={
+		employer=10400
 	}
 	226.6.29={
-		effect = {
+		effect={
 			add_artifact=imperial_seal
 		}
 	}
 	239.1.22={
-		effect = {
-			remove_artifact=imperial_seal
+		effect={
+			destroy_artifact=imperial_seal
 		}
 		death=yes
 	}
@@ -2097,9 +2285,16 @@
 	religion="confucian"
 	culture="han"
 	father=10400
-	mother=1205
+	mother=10409
 	219.1.1={
 		birth=yes
+		employer=400
+	}
+	220.3.15={
+		employer=10400
+	}
+	226.6.29={
+		employer=10410
 	}
 	245.1.1={
 		death=yes
@@ -2113,6 +2308,10 @@
 	father=10400
 	209.1.1={
 		birth=yes
+		employer=400
+	}
+	217.4.1={
+		employer=10400
 	}
 	217.10.1={
 		add_trait="has_small_pox"
@@ -2129,6 +2328,19 @@
 	father=10400
 	212.1.1={
 		birth=yes
+		employer=400
+	}
+	217.4.1={
+		employer=10400
+	}
+	219.1.1={
+		employer=400
+	}
+	220.3.15={
+		employer=10400
+	}
+	226.6.29={
+		employer=10410
 	}
 	233.1.1={
 		death=yes
@@ -2142,6 +2354,19 @@
 	father=10400
 	213.1.1={
 		birth=yes
+		employer=400
+	}
+	217.4.1={
+		employer=10400
+	}
+	219.1.1={
+		employer=400
+	}
+	220.3.15={
+		employer=10400
+	}
+	226.6.29={
+		employer=10410
 	}
 	235.1.1={
 		death=yes
@@ -2155,6 +2380,10 @@
 	father=10400
 	219.1.1={
 		birth=yes
+		employer=400
+	}
+	220.3.15={
+		employer=10400
 	}
 	225.12.1={
 		add_trait="ill"
@@ -2173,6 +2402,19 @@
 	father=10400
 	216.1.1={
 		birth=yes
+		employer=400
+	}
+	217.4.1={
+		employer=10400
+	}
+	219.1.1={
+		employer=400
+	}
+	220.3.15={
+		employer=10400
+	}
+	226.6.29={
+		employer=10410
 	}
 	247.1.1={
 		death=yes
@@ -2185,8 +2427,9 @@
 	culture="han"
 	trait="sickly"
 	father=10400
-	217.1.1={
+	217.4.1={
 		birth=yes
+		employer=10400
 	}
 	217.7.1={
 		death={
@@ -2202,6 +2445,10 @@
 	father=10400
 	223.1.1={
 		birth=yes
+		employer=10400
+	}
+	226.6.29={
+		employer=10410
 	}
 	227.12.1={
 		add_trait="ill"
@@ -2220,6 +2467,10 @@
 	father=10400
 	224.1.1={
 		birth=yes
+		employer=10400
+	}
+	226.6.29={
+		employer=10410
 	}
 	228.12.1={
 		add_trait="ill"
@@ -2239,15 +2490,16 @@
 	trait="adopted"
 	231.1.1={
 		birth=yes
+		employer=10410
 	}
 	239.1.22={
-		effect = {
+		effect={
 			add_artifact=imperial_seal
 		}
 	}
 	254.8.1={
-		effect = {
-			remove_artifact=imperial_seal
+		effect={
+			destroy_artifact=imperial_seal
 		}
 	}
 	274.1.1={
@@ -2263,6 +2515,7 @@
 	trait="adopted"
 	233.1.1={
 		birth=yes
+		employer=10410
 	}
 	244.9.1={
 		death=yes
@@ -2275,8 +2528,12 @@
 	culture="han"
 	father=10410
 	trait="sickly"
-	226.1.1={
+	226.6.1={
 		birth=yes
+		employer=10400
+	}
+	226.6.29={
+		employer=10410
 	}
 	226.7.1={
 		death={
@@ -2293,6 +2550,7 @@
 	father=10410
 	228.1.1={
 		birth=yes
+		employer=10410
 	}
 	230.1.1={
 		death={
@@ -2309,6 +2567,7 @@
 	trait="sickly"
 	231.1.1={
 		birth=yes
+		employer=10410
 	}
 	232.3.1={
 		death={
@@ -2326,6 +2585,7 @@
 	trait="sickly"
 	232.1.1={
 		birth=yes
+		employer=10410
 	}
 	232.6.1={
 		death={
@@ -2343,13 +2603,13 @@
 		birth=yes
 	}
 	254.8.1={
-		effect = {
+		effect={
 			add_artifact=imperial_seal
 		}
 	}
 	260.3.1={
-		effect = {
-			remove_artifact=imperial_seal
+		effect={
+			destroy_artifact=imperial_seal
 		}
 		death=yes #killed by Cheng Ji
 	}
@@ -2410,7 +2670,7 @@
 	}
 	194.1.1={
 		dynasty=5
-		add_trait = adopted
+		add_trait=adopted
 		father=400
 	}
 	231.1.1={
@@ -2435,20 +2695,14 @@
 	dynasty=84
 	religion="confucian"
 	culture="han"
-	real_father=10428
-	father=10429
+	father=10428
 	188.1.1={
 		birth=yes
 	}
 	194.1.1={
 		dynasty=5
-		add_trait = adopted
-		effect = {
-			random_realm_character = {
-				limit = { character = 10428 }
-				ROOT = { set_real_father = PREV }
-			}
-		}
+		father=10429
+		add_trait=adopted
 	}
 	227.1.1={
 		death={
@@ -2711,7 +2965,7 @@
 	}
 	208.1.1={
 		effect={
-			remove_artifact=weapon_swordlight
+			destroy_artifact=weapon_swordlight
 		}
 		death={
 			death_reason=death_battle 
@@ -2849,28 +3103,13 @@
 	religion="confucian"
 	culture="han"
 	father=405
-	195.1.1={
+	180.1.1={
 		birth=yes
+	}
+	184.1.1={
+		employer=400
 	}
 	254.1.1={
-		death=yes
-	}
-}
-10455={
-	name="Lingnu"
-	female=yes
-	dynasty=15
-	religion="confucian"
-	culture="han"
-	father=405
-	186.1.1={
-		birth=yes
-	}
-	200.1.1={
-		employer=600
-		add_spouse=602
-	}
-	227.1.1={
 		death=yes
 	}
 }
@@ -2915,13 +3154,23 @@
 	trait="gregarious"
 	trait="deceitful"
 	trait="lustful"
-	200.1.1={
+	184.1.1={
 		birth=yes
+		employer=400
 	}
-	216.1.1={
-		add_spouse=499
+	192.6.1={
+		employer=405
 	}
-	258.1.1={
+	198.1.1={
+		add_spouse=3928
+	}
+	220.3.15={
+		employer=10400
+	}
+	226.6.29={
+		employer=10410 #Cao Rui
+	}
+	238.1.1={
 		death=yes
 	}
 }
@@ -3255,10 +3504,8 @@
 		birth=yes
 		employer=400
 	}
-	219.7.1={
-		death={
-			death_reason=death_battle
-		}
+	219.5.1={
+		death={death_reason=death_battle killer=609}
 	}
 }
 10477={
@@ -3379,23 +3626,23 @@
 	}
 	190.1.1={
 		employer=4000
-		add_trait = "refuge"
-		effect = {
-			set_character_flag = refuge_jing
+		add_trait="refuge"
+		effect={
+			set_character_flag=refuge_jing
 		}
 	}
 	200.1.1={
 		employer=20460
-		remove_trait = "refuge"
-		effect = {
-			clr_character_flag = refuge_jing
+		remove_trait="refuge"
+		effect={
+			clr_character_flag=refuge_jing
 		}
 	}
 	224.1.1={
 		death=yes
 	}
 }
-10487 = {
+10487={
 	name="Du"
 	dynasty=144
 	religion="confucian"
@@ -3408,11 +3655,28 @@
 	168.1.1={
 		birth=yes
 	}
+	184.1.1={
+		employer=4000
+		add_trait="refuge"
+		effect={
+			set_character_flag=refuge_jing
+		}
+	}
+	200.1.1={
+		employer=48
+		remove_trait="refuge"
+		effect={
+			clr_character_flag=refuge_jing
+		}
+	}
+	209.3.1={
+		employer=600
+	}
 	220.1.1={
 		death=yes
 	}
 }
-10488 = {
+10488={
 	name="Yu"
 	dynasty=978 #Cheng
 	religion="confucian"
@@ -3422,16 +3686,26 @@
 	trait="diligent"
 	trait="temperate"
 	trait="quick"
+	trait="brave"
 	trait="humble"
 	trait="zealous"
+	trait="logistics_expert"
+	trait="levy_coordinator"
+	trait="defensive_leader"
 	142.1.1={
 		birth=yes
+	}
+	201.1.1={
+		employer=400
+		effect={
+			give_minor_title=title_commander
+		}
 	}
 	221.1.1={
 		death=yes
 	}
 }
-10489 = { #Father is Xun Kun, grandfather is Xun Shu who claimed descent from Xun Qing
+10489={ #Father is Xun Kun, grandfather is Xun Shu who claimed descent from Xun Qing
 	name="Yu"
 	dynasty=59
 	religion="confucian"
@@ -3445,6 +3719,9 @@
 	trait="humble"
 	trait="honest"
 	trait="zealous"
+	trait="logistics_expert"
+	trait="levy_coordinator"
+	trait="organizer"
 	142.1.1={
 		birth=yes
 	}
@@ -3455,7 +3732,7 @@
 		death=yes
 	}
 }
-10490 = { #Father is another Xun Yu who is the son of an elder brother of Xun Shu descended from Xun Qing
+10490={ #Father is another Xun Yu who is the son of an elder brother of Xun Shu descended from Xun Qing
 	name="You"
 	dynasty=59
 	religion="confucian"
@@ -3469,17 +3746,23 @@
 	trait="humble"
 	trait="patient"
 	trait="zealous"
+	trait="organizer"
+	trait="levy_coordinator"
+	trait="trickster"
 	142.1.1={
 		birth=yes
 	}
 	196.1.1={
 		employer=400
+		effect={
+			give_minor_title=title_commander
+		}
 	}
 	221.1.1={
 		death=yes
 	}
 }
-10491 = {
+10491={
 	name="Zhao"
 	dynasty=990 #Dong
 	religion="confucian"
@@ -3494,6 +3777,9 @@
 	trait="humble"
 	trait="patient"
 	trait="zealous"
+	trait="organizer"
+	trait="inspiring_leader"
+	trait="unyielding_leader"
 	156.1.1={
 		birth=yes
 	}
@@ -3501,7 +3787,7 @@
 		death=yes
 	}
 }
-10492 = {
+10492={
 	name="Fang"
 	dynasty=990 #Dong
 	religion="confucian"
@@ -3528,7 +3814,7 @@
 		death=yes
 	}
 }
-10493 = {
+10493={
 	name="Qian"
 	dynasty=1509 #Li
 	religion="confucian"
@@ -3541,28 +3827,16 @@
 	trait="humble"
 	trait="patient"
 	trait="zealous"
+	trait="aggressive_leader"
+	trait="light_foot_leader"
 	140.1.1={
 		birth=yes
-	}
-	184.1.1={
-		employer=4000
-		add_trait = "refuge"
-		effect = {
-			set_character_flag = refuge_yan
-		}
-	}
-	193.1.1={
-		employer=400
-		remove_trait = "refuge"
-		effect = {
-			clr_character_flag = refuge_yan
-		}
 	}
 	194.1.1={
 		death={death_reason=death_murder killer=326}
 	}
 }
-10494 = {
+10494={
 	name="Tong"
 	dynasty=1508 #Li Tong
 	religion="confucian"
@@ -3575,6 +3849,9 @@
 	trait="humble"
 	trait="patient"
 	trait="zealous"
+	trait="aggressive_leader"
+	trait="levy_coordinator"
+	trait="sapper"
 	168.1.1={
 		birth=yes
 	}
@@ -3587,7 +3864,7 @@
 		death=yes
 	}
 }
-10495 = {
+10495={
 	name="Bi"
 	dynasty=1571
 	religion="confucian"
@@ -3609,7 +3886,7 @@
 		death=yes
 	}
 }
-10496 = {
+10496={
 	name="Yao"
 	dynasty=62 #Zhong
 	religion="confucian"
@@ -3635,7 +3912,7 @@
 		death=yes
 	}
 }
-10497 = {
+10497={
 	name="Yan"
 	dynasty=62 #Zhong
 	religion="confucian"
@@ -3648,7 +3925,7 @@
 		death=yes
 	}
 }
-10498 = {
+10498={
 	name="Yu"
 	dynasty=62 #Zhong
 	religion="confucian"
@@ -3661,7 +3938,7 @@
 		death=yes
 	}
 }
-10499 = {
+10499={
 	name="Ji"
 	dynasty=1578 #Wei
 	religion="confucian"
@@ -3676,7 +3953,7 @@
 		death=yes
 	}
 }
-20400 = {
+20400={
 	name="Jin"
 	dynasty=61 #Yue
     diplomacy=7
@@ -3686,6 +3963,7 @@
 	learning=5
 	religion="confucian"
 	culture="han"
+	trait="dwarf"
 	trait="skilled_tactician"
 	trait="duel_skilled_warrior"
 	trait="duelist"
@@ -3696,17 +3974,22 @@
 	trait="humble"
 	trait="wroth"
 	trait="zealous"
+	trait="organizer"
+	trait="inspiring_leader"
 	160.1.1={
 		birth=yes
 	}
 	184.1.1={
 		employer=400
+		effect={
+			give_minor_title=title_commander
+		}
 	}
 	218.1.1={
 		death=yes
 	}
 }
-20401 = {
+20401={
 	name="Jin"
 	dynasty=42 #Yu
     diplomacy=5
@@ -3725,11 +4008,25 @@
 	trait="humble"
 	trait="honorable"
 	trait="zealous"
+	trait="siege_leader"
+	trait="holy_warrior"
 	160.1.1={
 		birth=yes
 	}
 	184.1.1={
+		employer=4000
+		add_trait="refuge"
+		effect={
+			set_character_flag=refuge_yan
+		}
+	}
+	190.1.1={
 		employer=136 #Bao Xin
+		remove_trait="refuge"
+		effect={
+			clr_character_flag=refuge_yan
+			give_minor_title=title_commander
+		}
 	}
 	192.6.1={
 		employer=407 #Wang Lang
@@ -3737,11 +4034,11 @@
 	192.8.1={
 		employer=400 #Cao Cao
 	}
-	221.1.1={
+	221.6.1={
 		death=yes
 	}
 }
-20402 = {
+20402={
 	name="Lin"
 	dynasty=1591 #Chen
     diplomacy=8
@@ -3771,7 +4068,7 @@
 		death={death_reason=death_trait}
 	}
 }
-20403 = {
+20403={
 	name="Rong"
 	dynasty=1866 #Zhu
 	religion="confucian"
@@ -3785,23 +4082,23 @@
 	}
 	184.1.1={
 		employer=4000
-		add_trait = "refuge"
-		effect = {
-			set_character_flag = refuge_yan
+		add_trait="refuge"
+		effect={
+			set_character_flag=refuge_yan
 		}
 	}
 	194.1.1={
 		employer=400
-		remove_trait = "refuge"
-		effect = {
-			clr_character_flag = refuge_yan
+		remove_trait="refuge"
+		effect={
+			clr_character_flag=refuge_yan
 		}
 	}
 	225.1.1={
 		death=yes
 	}
 }
-20404 = {
+20404={
 	name="Liang"
 	dynasty=1592 #Liu
 	religion="confucian"
@@ -3816,7 +4113,7 @@
 		death=yes
 	}
 }
-20405 = {
+20405={
 	name="Gong"
 	dynasty=1592 #Liu
 	religion="confucian"
@@ -3832,7 +4129,7 @@
 		death=yes
 	}
 }
-20406 = {
+20406={
 	name="Zhen"
 	dynasty=1592 #Liu
 	religion="confucian"
@@ -3854,7 +4151,7 @@
 		death={death_reason=death_trait}
 	}
 }
-20407 = {
+20407={
 	name="Gong"
 	dynasty=1593 #Wang
 	religion="confucian"
@@ -3869,7 +4166,7 @@
 		death=yes
 	}
 }
-20408 = {
+20408={
 	name="Chang"
 	dynasty=1593 #Wang
 	religion="confucian"
@@ -3885,7 +4182,7 @@
 		death=yes
 	}
 }
-20409 = {
+20409={
 	name="Qian"
 	dynasty=1593 #Wang
 	religion="confucian"
@@ -3904,7 +4201,7 @@
 		death=yes
 	}
 }
-20410 = {
+20410={
 	name="Can"
 	dynasty=1593 #Wang
 	religion="confucian"
@@ -3938,7 +4235,7 @@
 		death={death_reason=death_trait}
 	}
 }
-20411 = {
+20411={
 	name="Man"
 	dynasty=1593
 	religion="confucian"
@@ -3966,7 +4263,7 @@
 		death=yes
 	}
 }
-20412 = {
+20412={
 	name="Ban"
 	dynasty=1593
 	religion="confucian"
@@ -3979,7 +4276,7 @@
 		death=yes
 	}
 }
-20413 = {
+20413={
 	name="Kai"
 	dynasty=1593
 	religion="confucian"
@@ -4008,7 +4305,7 @@
 		death=yes
 	}
 }
-20414 = {
+20414={
 	name="Ye"
 	dynasty=1593
 	religion="confucian"
@@ -4029,11 +4326,17 @@
 	220.3.15={
 		employer=10400
 	}
+	226.6.29={
+		employer=10410 #Cao Rui
+	}
+	239.1.22={
+		employer=10420 #Cao Fang
+	}
 	240.1.1={
 		death=yes
 	}
 }
-20415 = {
+20415={
 	name="Hong"
 	dynasty=1593
 	religion="confucian"
@@ -4045,11 +4348,20 @@
 	223.1.1={
 		employer=10400
 	}
+	226.6.29={
+		employer=10410 #Cao Rui
+	}
+	239.1.22={
+		employer=10420 #Cao Fang
+	}
+	254.8.1={
+		employer=10426 #Cao Mao
+	}
 	260.1.1={
 		death=yes
 	}
 }
-20416 = {
+20416={
 	name="Bi"
 	dynasty=1593
 	religion="confucian"
@@ -4057,15 +4369,19 @@
 	father=20414
 	226.1.1={
 		birth=yes
-	}
-	226.1.1={
 		employer=10400
+	}
+	226.6.29={
+		employer=10410 #Cao Rui
+	}
+	239.1.22={
+		employer=10420 #Cao Fang
 	}
 	249.1.1={
 		death=yes
 	}
 }
-20417 = {
+20417={
 	name="Qi"
 	dynasty=1596
 	religion="confucian"
@@ -4076,11 +4392,23 @@
 	184.1.1={
 		employer=400
 	}
+	221.1.1={
+		employer=10400
+	}
+	226.6.29={
+		employer=10410 #Cao Rui
+	}
+	239.1.22={
+		employer=10420 #Cao Fang
+	}
+	254.8.1={
+		employer=10426 #Cao Mao
+	}
 	260.1.1={
 		death=yes
 	}
 }
-20418 = {
+20418={
 	name="Ji"
 	dynasty=1598
 	religion="confucian"
@@ -4094,11 +4422,14 @@
 	199.1.1={
 		employer=400
 	}
+	220.3.15={
+		employer=10400
+	}
 	223.1.1={
 		death=yes
 	}
 }
-20419 = {
+20419={
 	name="Xu"
 	dynasty=1593
 	religion="confucian"
@@ -4124,7 +4455,7 @@
 		death=yes
 	}
 }
-20420 = {
+20420={
 	name="Zan"
 	dynasty=1593
 	religion="confucian"
@@ -4236,6 +4567,9 @@
 	}
 	184.1.1={
 		employer=115
+		effect={
+			give_minor_title=title_commander
+		}
 	}
 	189.10.1={
 		employer=300
@@ -4245,6 +4579,9 @@
 	}
 	199.2.7={
 		employer=400
+	}
+	220.3.15={
+		employer=10400
 	}
 	222.1.1={
 		death=yes
@@ -4258,10 +4595,26 @@
 	father=489
 	217.1.1={
 		birth=yes
+		employer=400
+	}
+	220.3.15={
+		employer=10400
 	}
 	221.1.1={
-		add_trait = adopted
+		add_trait=adopted
 		father=478
+	}
+	226.6.29={
+		employer=10410 #Cao Rui
+	}
+	239.1.22={
+		employer=10420 #Cao Fang
+	}
+	254.8.1={
+		employer=10426 #Cao Mao
+	}
+	260.3.1={
+		employer=463 #Cao Huan
 	}
 	290.1.1={
 		death=yes
@@ -4275,6 +4628,16 @@
 	father=20426
 	236.1.1={
 		birth=yes
+		employer=10410 #Cao Rui
+	}
+	239.1.22={
+		employer=10420 #Cao Fang
+	}
+	254.8.1={
+		employer=10426 #Cao Mao
+	}
+	260.3.1={
+		employer=463 #Cao Huan
 	}
 	300.1.1={
 		death=yes
@@ -4288,10 +4651,15 @@
 	father=20426
 	240.1.1={
 		birth=yes
-	}
-	240.1.1={
-		add_trait = adopted
+		add_trait=adopted
 		father=10410
+		employer=10420 #Cao Fang
+	}
+	254.8.1={
+		employer=10426 #Cao Mao
+	}
+	260.3.1={
+		employer=463 #Cao Huan
 	}
 	310.1.1={
 		death=yes
@@ -4307,6 +4675,15 @@
 	}
 	184.1.1={
 		employer=400
+	}
+	220.3.15={
+		employer=10400
+	}
+	226.6.29={
+		employer=10410 #Cao Rui
+	}
+	239.1.22={
+		employer=10420 #Cao Fang
 	}
 	240.1.1={
 		death=yes
@@ -4363,25 +4740,33 @@
 		birth=yes
 	}
 	184.1.1={
+		employer=4000
+		add_trait="refuge"
+		effect={
+			set_character_flag=refuge_xu
+		}
+	}
+	187.1.1={
 		employer=20435
+		remove_trait="refuge"
+		effect={
+			clr_character_flag=refuge_xu
+		}
 	}
 	199.6.1={
 		employer=400
 	}
-	201.1.1={
-		employer=400
-	}
 	213.9.1={
 		employer=4000
-		add_trait = "refuge"
-		effect = {
-			set_character_flag = refuge_jing
+		add_trait="refuge"
+		effect={
+			set_character_flag=refuge_jing
 		}
 	}
 	230.1.1={
-		remove_trait = "refuge"
-		effect = {
-			clr_character_flag = refuge_jing
+		remove_trait="refuge"
+		effect={
+			clr_character_flag=refuge_jing
 		}
 		death=yes
 	}
@@ -4396,7 +4781,18 @@
 		birth=yes
 	}
 	184.1.1={
+		employer=4000
+		add_trait="refuge"
+		effect={
+			set_character_flag=refuge_xu
+		}
+	}
+	187.1.1={
 		employer=20435
+		remove_trait="refuge"
+		effect={
+			clr_character_flag=refuge_xu
+		}
 	}
 	203.1.1={
 		death=yes
@@ -4411,10 +4807,20 @@
 	153.1.1={
 		birth=yes
 	}
-	199.6.1={
-		employer=400
+	184.1.1={
+		employer=4000
+		add_trait="refuge"
+		effect={
+			set_character_flag=refuge_xu
+		}
 	}
-	201.1.1={
+	187.1.1={
+		remove_trait="refuge"
+		effect={
+			clr_character_flag=refuge_xu
+		}
+	}
+	199.8.1={
 		employer=400
 	}
 	213.9.1={
@@ -4431,25 +4837,33 @@
 		birth=yes
 	}
 	184.1.1={
+		employer=4000
+		add_trait="refuge"
+		effect={
+			set_character_flag=refuge_xu
+		}
+	}
+	187.1.1={
 		employer=20435
+		remove_trait="refuge"
+		effect={
+			clr_character_flag=refuge_xu
+		}
 	}
 	199.6.1={
 		employer=400
 	}
-	201.1.1={
-		employer=400
-	}
 	213.9.1={
 		employer=4000
-		add_trait = "refuge"
-		effect = {
-			set_character_flag = refuge_jing
+		add_trait="refuge"
+		effect={
+			set_character_flag=refuge_jing
 		}
 	}
 	250.1.1={
-		remove_trait = "refuge"
-		effect = {
-			clr_character_flag = refuge_jing
+		remove_trait="refuge"
+		effect={
+			clr_character_flag=refuge_jing
 		}
 		death=yes
 	}
@@ -4530,6 +4944,15 @@
 	150.1.1={
 		birth=yes
 	}
+	189.9.1={
+		employer=33 #Emperor Shao
+	}
+	189.9.28={
+		employer=34 #Emperor Xian
+	}
+	220.12.10={
+		employer=10400
+	}
 	230.1.1={
 		death=yes
 	}
@@ -4550,6 +4973,12 @@
 			add_friend=20453
 		}
 	}
+	189.9.1={
+		employer=33 #Emperor Shao
+	}
+	189.9.28={
+		employer=34 #Emperor Xian
+	}
 	244.1.1={
 		death=yes
 	}
@@ -4568,6 +4997,15 @@
 	}
 	184.1.1={
 		employer=20442
+	}
+	189.9.1={
+		employer=33 #Emperor Shao
+	}
+	189.9.28={
+		employer=34 #Emperor Xian
+	}
+	220.12.10={
+		employer=10400
 	}
 	250.1.1={
 		death=yes
@@ -4663,6 +5101,9 @@
 	184.1.1={
 		employer=400
 	}
+	228.1.1={
+		employer=10410 #Cao Rui
+	}
 	230.1.1={
 		death=yes
 	}
@@ -4682,7 +5123,7 @@
 		death={death_reason=death_murder killer=600}
 	}
 }
-20452 = {
+20452={
 	name="Ru"
 	dynasty=1497 #Wen
 	religion="confucian"
@@ -4697,7 +5138,7 @@
 		death=yes
 	}
 }
-20453 = {
+20453={
 	name="Hui"
 	dynasty=1497 #Wen
 	religion="confucian"
@@ -4727,7 +5168,7 @@
 		death=yes
 	}
 }
-20454 = {
+20454={
 	name="Pei"
 	dynasty=1614 #Yang
 	religion="confucian"
@@ -4754,7 +5195,7 @@
 		death=yes
 	}
 }
-20455 = {
+20455={
 	name="Ye"
 	dynasty=1615 #Luo
 	religion="confucian"
@@ -4765,11 +5206,20 @@
 	184.1.1={
 		employer=400
 	}
+	220.3.15={
+		employer=10400 #Cao Pi
+	}
+	226.6.29={
+		employer=10410 #Cao Rui
+	}
+	239.1.22={
+		employer=10420 #Cao Fang
+	}
 	240.1.1={
 		death=yes
 	}
 }
-20456 = {
+20456={
 	name="Zhi"
 	dynasty=1618 #Zao
 	religion="confucian"
@@ -4787,7 +5237,7 @@
 		death=yes
 	}
 }
-20457 = {
+20457={
 	name="Chuzhong"
 	dynasty=1618 #Zao
 	religion="confucian"
@@ -4799,11 +5249,23 @@
 	184.1.1={
 		employer=400
 	}
+	220.3.15={
+		employer=10400 #Cao Pi
+	}
+	226.6.29={
+		employer=10410 #Cao Rui
+	}
+	239.1.22={
+		employer=10420 #Cao Fang
+	}
+	254.8.1={
+		employer=10426 #Cao Mao
+	}
 	260.1.1={
 		death=yes
 	}
 }
-20458 = {
+20458={
 	name="Mao"
 	dynasty=1633 #Liang
 	religion="confucian"
@@ -4814,11 +5276,20 @@
 	184.1.1={
 		employer=400
 	}
+	220.3.15={
+		employer=10400 #Cao Pi
+	}
+	226.6.29={
+		employer=10410 #Cao Rui
+	}
+	239.1.22={
+		employer=10420 #Cao Fang
+	}
 	240.1.1={
 		death=yes
 	}
 }
-20459 = {
+20459={
 	name="Ti"
 	dynasty=1634 #Xue
 	religion="confucian"
@@ -4829,11 +5300,23 @@
 	184.1.1={
 		employer=400
 	}
+	220.3.15={
+		employer=10400 #Cao Pi
+	}
+	226.6.29={
+		employer=10410 #Cao Rui
+	}
+	239.1.22={
+		employer=10420 #Cao Fang
+	}
+	254.8.1={
+		employer=10426 #Cao Mao
+	}
 	260.1.1={
 		death=yes
 	}
 }
-20460 = {
+20460={
 	name="Shi"
 	dynasty=1635 #Zhang
 	religion="confucian"
@@ -4847,11 +5330,20 @@
 			add_friend=10486
 		}
 	}
+	220.3.15={
+		employer=10400 #Cao Pi
+	}
+	226.6.29={
+		employer=10410 #Cao Rui
+	}
+	239.1.22={
+		employer=10420 #Cao Fang
+	}
 	240.1.1={
 		death=yes
 	}
 }
-20461 = {
+20461={
 	name="Xiang"
 	dynasty=1685 #Yan
 	religion="confucian"
@@ -4878,7 +5370,7 @@
 		death=yes
 	}
 }
-20462 = {
+20462={
 	name="Fu"
 	dynasty=1686 #Liu
 	religion="confucian"
@@ -4888,23 +5380,23 @@
 	}
 	184.1.1={
 		employer=4000
-		add_trait = "refuge"
-		effect = {
-			set_character_flag = refuge_yang
+		add_trait="refuge"
+		effect={
+			set_character_flag=refuge_yang
 		}
 	}
 	196.1.1={
 		employer=400
-		remove_trait = "refuge"
-		effect = {
-			clr_character_flag = refuge_yang
+		remove_trait="refuge"
+		effect={
+			clr_character_flag=refuge_yang
 		}
 	}
 	208.5.1={
 		death=yes
 	}
 }
-20463 = {
+20463={
 	name="Guang"
 	dynasty=1694 #Zhu
 	religion="confucian"
@@ -4918,11 +5410,17 @@
 	220.3.15={
 		employer=10400
 	}
+	226.6.29={
+		employer=10410 #Cao Rui
+	}
+	239.1.22={
+		employer=10420 #Cao Fang
+	}
 	240.1.1={
 		death=yes
 	}
 }
-20464 = {
+20464={
 	name="Ji"
 	dynasty=1698 #Wei
 	religion="confucian"
@@ -4936,11 +5434,20 @@
 	220.3.15={
 		employer=10400
 	}
+	226.6.29={
+		employer=10410 #Cao Rui
+	}
+	239.1.22={
+		employer=10420 #Cao Fang
+	}
+	254.8.1={
+		employer=10426 #Cao Mao
+	}
 	260.1.1={
 		death=yes
 	}
 }
-20465 = {
+20465={
 	name="Zhou"
 	dynasty=1695 #Hao
 	religion="confucian"
@@ -4951,52 +5458,93 @@
 	184.1.1={
 		employer=400
 	}
+	220.3.15={
+		employer=10400 #Cao Pi
+	}
+	226.6.29={
+		employer=10410 #Cao Rui
+	}
+	239.1.22={
+		employer=10420 #Cao Fang
+	}
 	240.1.1={
 		death=yes
 	}
 }
-20466 = {
+20466={
 	name="Zhi"
 	dynasty=1864 #Zhang
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	170.1.1={
 		birth=yes
 	}
 	184.1.1={
+		employer=4000
+		add_trait="refuge"
+		effect={
+			set_character_flag=refuge_yu
+		}
+	}
+	194.1.1={
 		employer=400
+		remove_trait="refuge"
+		effect={
+			clr_character_flag=refuge_yu
+		}
+	}
+	220.3.15={
+		employer=10400 #Cao Pi
+	}
+	226.6.29={
+		employer=10410 #Cao Rui
+	}
+	239.1.22={
+		employer=10420 #Cao Fang
 	}
 	240.1.1={
 		death=yes
 	}
 }
-20467 = {
+20467={
 	name="Yan"
 	dynasty=1710 #Zhao
 	religion="confucian"
 	culture="han"
 	trait="skilled_tactician"
 	trait="zealous"
+	trait="inspiring_leader"
+	trait="unyielding_leader"
 	171.1.1={
 		birth=yes
 		employer=4000
-		add_trait = "refuge"
-		effect = {
-			set_character_flag = refuge_yu
+		add_trait="refuge"
+		effect={
+			set_character_flag=refuge_yu
 		}
 	}
 	197.1.1={
 		employer=400
-		remove_trait = "refuge"
-		effect = {
-			clr_character_flag = refuge_yu
+		remove_trait="refuge"
+		effect={
+			clr_character_flag=refuge_yu
+			give_minor_title=title_commander
 		}
+	}
+	220.3.15={
+		employer=10400 #Cao Pi
+	}
+	226.6.29={
+		employer=10410 #Cao Rui
+	}
+	239.1.22={
+		employer=10420 #Cao Fang
 	}
 	245.6.1={
 		death=yes
 	}
 }
-20468 = {
+20468={
 	name="Yan"
 	dynasty=1719 #Liu
 	religion="confucian"
@@ -5008,11 +5556,20 @@
 	184.1.1={
 		employer=400
 	}
+	220.3.15={
+		employer=10400 #Cao Pi
+	}
+	226.6.29={
+		employer=10410 #Cao Rui
+	}
+	239.1.22={
+		employer=10420 #Cao Fang
+	}
 	240.1.1={
 		death=yes
 	}
 }
-20469 = {
+20469={
 	name="Miao"
 	dynasty=1812 #Xu
 	religion="confucian"
@@ -5026,11 +5583,20 @@
 	184.1.1={
 		employer=400
 	}
+	220.3.15={
+		employer=10400 #Cao Pi
+	}
+	226.6.29={
+		employer=10410 #Cao Rui
+	}
+	239.1.22={
+		employer=10420 #Cao Fang
+	}
 	249.1.1={
 		death=yes
 	}
 }
-20470 = {
+20470={
 	name="Wei"
 	dynasty=1645 #Dian
 	religion="confucian"
@@ -5046,16 +5612,16 @@
 	}
 	184.1.1={
 		employer=4000
-		add_trait = "refuge"
-		effect = {
-			set_character_flag = refuge_yan
+		add_trait="refuge"
+		effect={
+			set_character_flag=refuge_yan
 		}
 	}
 	190.1.1={
 		employer=132
-		remove_trait = "refuge"
-		effect = {
-			clr_character_flag = refuge_yan
+		remove_trait="refuge"
+		effect={
+			clr_character_flag=refuge_yan
 		}
 	}
 	193.1.1={
@@ -5068,7 +5634,7 @@
 		death={death_reason=death_battle}
 	}
 }
-20471 = {
+20471={
 	name="Fei"
 	dynasty=1636 #Yan
 	religion="confucian"
@@ -5083,16 +5649,25 @@
 	trait="zealous"
 	187.1.1={
 		birth=yes
+		employer=400
+	}
+	217.4.1={
 		employer=10400
 	}
-	227.1.1={
-		employer=10410
+	226.6.29={
+		employer=10410 #Cao Rui
+	}
+	239.1.22={
+		employer=10420 #Cao Fang
+	}
+	254.8.1={
+		employer=10426 #Cao Mao
 	}
 	260.1.1={
 		death=yes
 	}
 }
-20472 = {
+20472={
 	name="Dun"
 	dynasty=990 #Dong
 	religion="confucian"
@@ -5104,7 +5679,7 @@
 		death=yes
 	}
 }
-20473 = {
+20473={
 	name="Cai"
 	dynasty=1509 #Li
 	religion="confucian"
@@ -5116,7 +5691,7 @@
 		death=yes
 	}
 }
-20474 = {
+20474={
 	name="Bin"
 	dynasty=1509 #Li
 	religion="confucian"
@@ -5129,7 +5704,7 @@
 		death=yes
 	}
 }
-20475 = {
+20475={
 	name="Dian"
 	dynasty=1509 #Li
     diplomacy=6
@@ -5154,16 +5729,17 @@
 	}
 	184.1.1={
 		employer=4000
-		add_trait = "refuge"
-		effect = {
-			set_character_flag = refuge_yan
+		add_trait="refuge"
+		effect={
+			set_character_flag=refuge_yan
 		}
 	}
 	193.1.1={
 		employer=400
-		remove_trait = "refuge"
-		effect = {
-			clr_character_flag = refuge_yan
+		remove_trait="refuge"
+		effect={
+			clr_character_flag=refuge_yan
+			give_minor_title=title_commander
 		}
 	}
 	217.10.1={
@@ -5173,7 +5749,7 @@
 		death={death_reason=death_trait}
 	}
 }
-20476 = {
+20476={
 	name="Zheng"
 	dynasty=1509 #Li
 	religion="confucian"
@@ -5211,6 +5787,12 @@
 	184.1.1={
 		employer=400
 	}
+	220.3.15={
+		employer=10400 #Cao Pi
+	}
+	226.6.29={
+		employer=10410 #Cao Rui
+	}
 	230.1.1={
 		death=yes
 	}
@@ -5225,16 +5807,16 @@
 	}
 	184.1.1={
 		employer=4000
-		add_trait = "refuge"
-		effect = {
-			set_character_flag = refuge_yang
+		add_trait="refuge"
+		effect={
+			set_character_flag=refuge_yang
 		}
 	}
 	208.10.1={
 		employer=400
-		remove_trait = "refuge"
-		effect = {
-			clr_character_flag = refuge_yang
+		remove_trait="refuge"
+		effect={
+			clr_character_flag=refuge_yang
 		}
 	}
 	213.9.1={
@@ -5296,7 +5878,18 @@
 	150.1.1={
 		birth=yes
 	}
+	184.1.1={
+		employer=4000
+		add_trait="refuge"
+		effect={
+			set_character_flag=refuge_sili
+		}
+	}
 	225.1.1={
+		remove_trait="refuge"
+		effect={
+			clr_character_flag=refuge_sili
+		}
 		death=yes
 	}
 }
@@ -5335,6 +5928,9 @@
 	220.3.15={
 		employer=10400
 	}
+	226.6.29={
+		employer=10410 #Cao Rui
+	}
 	230.1.1={
 		death=yes
 	}
@@ -5349,6 +5945,20 @@
 	174.1.1={
 		birth=yes
 	}
+	184.1.1={
+		employer=4000
+		add_trait="refuge"
+		effect={
+			set_character_flag=refuge_sili
+		}
+	}
+	213.9.1={
+		employer=400
+		remove_trait="refuge"
+		effect={
+			clr_character_flag=refuge_sili
+		}
+	}
 	228.12.1={
 		death=yes
 	}
@@ -5361,6 +5971,24 @@
 	father=20485
 	200.1.1={
 		birth=yes
+		employer=4000
+		add_trait="refuge"
+		effect={
+			set_character_flag=refuge_sili
+		}
+	}
+	211.1.1={
+		employer=20485
+		remove_trait="refuge"
+		effect={
+			clr_character_flag=refuge_sili
+		}
+	}
+	213.9.1={
+		employer=400
+	}
+	220.3.15={
+		employer=20485
 	}
 	275.1.1={
 		death=yes
@@ -5374,6 +6002,24 @@
 	father=20485
 	202.1.1={
 		birth=yes
+		employer=4000
+		add_trait="refuge"
+		effect={
+			set_character_flag=refuge_sili
+		}
+	}
+	211.1.1={
+		employer=20485
+		remove_trait="refuge"
+		effect={
+			clr_character_flag=refuge_sili
+		}
+	}
+	213.9.1={
+		employer=400
+	}
+	220.3.15={
+		employer=20485
 	}
 	275.1.1={
 		death=yes
@@ -5387,6 +6033,24 @@
 	father=20485
 	203.1.1={
 		birth=yes
+		employer=4000
+		add_trait="refuge"
+		effect={
+			set_character_flag=refuge_sili
+		}
+	}
+	211.1.1={
+		employer=20485
+		remove_trait="refuge"
+		effect={
+			clr_character_flag=refuge_sili
+		}
+	}
+	213.9.1={
+		employer=400
+	}
+	220.3.15={
+		employer=20485
 	}
 	275.1.1={
 		death=yes
@@ -5402,16 +6066,16 @@
 	}
 	184.1.1={
 		employer=4000
-		add_trait = "refuge"
-		effect = {
-			set_character_flag = refuge_yan
+		add_trait="refuge"
+		effect={
+			set_character_flag=refuge_yan
 		}
 	}
 	192.1.1={
 		employer=400
-		remove_trait = "refuge"
-		effect = {
-			clr_character_flag = refuge_yan
+		remove_trait="refuge"
+		effect={
+			clr_character_flag=refuge_yan
 		}
 	}
 	218.2.1={
@@ -5439,17 +6103,23 @@
 	}
 	184.1.1={
 		employer=4000
-		add_trait = "refuge"
-		effect = {
-			set_character_flag = refuge_yu
+		add_trait="refuge"
+		effect={
+			set_character_flag=refuge_yu
 		}
 	}
 	197.5.1={
 		employer=400
-		remove_trait = "refuge"
-		effect = {
-			clr_character_flag = refuge_yu
+		remove_trait="refuge"
+		effect={
+			clr_character_flag=refuge_yu
 		}
+	}
+	220.3.15={
+		employer=10400
+	}
+	226.6.29={
+		employer=10410 #Cao Rui
 	}
 	230.1.1={
 		death=yes
@@ -5467,17 +6137,29 @@
 	184.1.1={
 		birth=yes
 		employer=4000
-		add_trait = "refuge"
-		effect = {
-			set_character_flag = refuge_yu
+		add_trait="refuge"
+		effect={
+			set_character_flag=refuge_yu
 		}
 	}
 	200.1.1={
 		employer=400
-		remove_trait = "refuge"
-		effect = {
-			clr_character_flag = refuge_yu
+		remove_trait="refuge"
+		effect={
+			clr_character_flag=refuge_yu
 		}
+	}
+	225.1.1={
+		employer=10400
+	}
+	226.6.29={
+		employer=10410 #Cao Rui
+	}
+	239.1.22={
+		employer=10420 #Cao Fang
+	}
+	254.8.1={
+		employer=10426 #Cao Mao
 	}
 	260.1.1={
 		death=yes
@@ -5494,37 +6176,53 @@
 	trait="quick"
 	trait="brave"
 	trait="humble"
+	trait="robust"
 	trait="content"
 	trait="diligent"
 	trait="zealous"
-	168.1.1={
+	trait="trickster"
+	trait="defensive_leader"
+	trait="back_seat_leader"
+	173.1.1={
 		birth=yes
 	}
 	184.1.1={
 		employer=4000
-		add_trait = "refuge"
-		effect = {
-			add_friend = 20493
-			set_character_flag = refuge_yu
+		add_trait="refuge"
+		effect={
+			add_friend=20493
+			set_character_flag=refuge_yu
 		}
 	}
 	191.1.1={
-		effect = {
-			clr_character_flag = refuge_yu
-			set_character_flag = refuge_jing
+		effect={
+			clr_character_flag=refuge_yu
+			set_character_flag=refuge_jing
 		}
 	}
 	195.1.1={
-		effect = {
-			add_friend = 615
+		effect={
+			add_friend=615
+			add_friend=645
+			add_friend=662
+			add_friend=20494
 		}
 	}
-	208.9.1={
+	203.1.1={
 		employer=600
-		remove_trait = "refuge"
-		effect = {
-			clr_character_flag = refuge_jing
+		remove_trait="refuge"
+		effect={
+			clr_character_flag=refuge_jing
 		}
+	}
+	208.10.25={
+		employer=400
+	}
+	223.1.1={
+		employer=10400
+	}
+	226.6.29={
+		employer=10410 #Cao Rui
 	}
 	234.1.1={
 		death=yes
@@ -5543,36 +6241,39 @@
 	trait="diligent"
 	trait="temperate"
 	trait="zealous"
-	168.1.1={
+	173.1.1={
 		birth=yes
 	}
 	184.1.1={
 		employer=4000
-		add_trait = "refuge"
-		effect = {
-			add_friend = 20492
-			set_character_flag = refuge_yu
+		add_trait="refuge"
+		effect={
+			add_friend=20492
+			set_character_flag=refuge_yu
 		}
 	}
 	191.1.1={
-		effect = {
-			clr_character_flag = refuge_yu
-			set_character_flag = refuge_jing
+		effect={
+			clr_character_flag=refuge_yu
+			set_character_flag=refuge_jing
 		}
 	}
 	195.1.1={
-		effect = {
-			add_friend = 615
+		effect={
+			add_friend=615
 		}
 	}
-	208.9.1={
+	203.1.1={
 		employer=600
-		remove_trait = "refuge"
-		effect = {
-			clr_character_flag = refuge_jing
+		remove_trait="refuge"
+		effect={
+			clr_character_flag=refuge_jing
 		}
 	}
-	234.1.1={
+	208.10.25={
+		employer=400
+	}
+	236.1.1={
 		death=yes
 	}
 }
@@ -5581,33 +6282,45 @@
 	dynasty=1884 #Meng
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	trait="quick"
+	trait="scholar"
+	176.1.1={
 		birth=yes
 	}
 	184.1.1={
 		employer=4000
-		add_trait = "refuge"
-		effect = {
-			set_character_flag = refuge_jing
+		add_trait="refuge"
+		effect={
+			set_character_flag=refuge_jing
 		}
 	}
 	195.1.1={
-		effect = {
-			add_friend = 615
+		effect={
+			add_friend=615
+			add_friend=20492
 		}
 	}
 	208.10.1={
 		employer=400
-		remove_trait = "refuge"
-		effect = {
-			clr_character_flag = refuge_jing
+		remove_trait="refuge"
+		effect={
+			clr_character_flag=refuge_jing
 		}
+	}
+	220.3.15={
+		employer=10400
+	}
+	226.6.29={
+		employer=10410 #Cao Rui
+	}
+	239.1.22={
+		employer=10420 #Cao Fang
 	}
 	240.1.1={
 		death=yes
 	}
 }
-20495 = {
+20495={
 	name="He"
 	dynasty=1881 #Zhang
     diplomacy=7
@@ -5636,6 +6349,9 @@
 	}
 	184.1.1={
 		employer=3326 #Li Shao
+		effect={
+			give_minor_title=title_commander
+		}
 	}
 	185.1.1={
 		employer=105 #Huangfu Song
@@ -5658,6 +6374,12 @@
 	200.11.1={
 		employer=400 #Cao Cao
 	}
+	220.3.15={
+		employer=10400
+	}
+	226.6.29={
+		employer=10410 #Cao Rui
+	}
 	231.7.1={
 		death={death_reason=death_battle}
 	}
@@ -5676,17 +6398,17 @@
 	}
 	184.1.1={
 		employer=4000
-		add_trait = "refuge"
-		add_friend = 20497
-		effect = {
-			set_character_flag = refuge_yan
+		add_trait="refuge"
+		effect={
+			add_friend=20497
+			set_character_flag=refuge_yan
 		}
 	}
 	193.1.1={
 		employer=400
-		remove_trait = "refuge"
-		effect = {
-			clr_character_flag = refuge_yan
+		remove_trait="refuge"
+		effect={
+			clr_character_flag=refuge_yan
 		}
 	}
 	194.4.1={
@@ -5700,6 +6422,12 @@
 	}
 	220.3.15={
 		employer=10400
+	}
+	226.6.29={
+		employer=10410 #Cao Rui
+	}
+	239.1.22={
+		employer=10420 #Cao Fang
 	}
 	240.1.1={
 		death=yes
@@ -5719,17 +6447,17 @@
 	}
 	184.1.1={
 		employer=4000
-		add_trait = "refuge"
-		add_friend = 20496
-		effect = {
-			set_character_flag = refuge_yan
+		add_trait="refuge"
+		effect={
+			add_friend=20496
+			set_character_flag=refuge_yan
 		}
 	}
 	193.1.1={
 		employer=400
-		remove_trait = "refuge"
-		effect = {
-			clr_character_flag = refuge_yan
+		remove_trait="refuge"
+		effect={
+			clr_character_flag=refuge_yan
 		}
 	}
 	194.4.1={
@@ -5743,6 +6471,12 @@
 	}
 	220.3.15={
 		employer=10400
+	}
+	226.6.29={
+		employer=10410 #Cao Rui
+	}
+	239.1.22={
+		employer=10420 #Cao Fang
 	}
 	240.1.1={
 		death=yes
@@ -5766,17 +6500,17 @@
 	}
 	184.1.1={
 		employer=4000
-		add_trait = "refuge"
-		add_friend = 20496
-		effect = {
-			set_character_flag = refuge_yang
+		add_trait="refuge"
+		effect={
+			add_friend=20496
+			set_character_flag=refuge_yang
 		}
 	}
 	199.6.1={
 		employer=20454 #Yang Pei
-		remove_trait = "refuge"
-		effect = {
-			clr_character_flag = refuge_yang
+		remove_trait="refuge"
+		effect={
+			clr_character_flag=refuge_yang
 		}
 	}
 	200.1.1={
@@ -5786,7 +6520,7 @@
 		death=yes
 	}
 }
-20499 = {
+20499={
 	name="Gan"
 	dynasty=1899 #Xu
 	religion="confucian"
@@ -5802,9 +6536,11 @@
 		employer=400
 	}
 	208.1.1={
-		add_friend=447 #Cao Zhi
+		effect={
+			add_friend=447 #Cao Zhi
+		}
 	}
-	217.4.1 = {
+	217.4.1={
 		employer=10400 #Cao Pi
 	}
 	217.10.1={
@@ -5814,6 +6550,240 @@
 		death={death_reason=death_trait}
 	}
 }
+30400={
+	name="Li"
+	dynasty=2030 #Sun
+	religion="confucian"
+	culture="han"
+	trait="mastermind_theologian"
+	trait="administrator"
+	trait="erudite"
+	trait="humble"
+	trait="quick"
+	trait="just"
+	trait="diligent"
+	trait="temperate"
+	trait="charitable"
+	trait="zealous"
+	184.1.1={
+		birth=yes
+		employer=4000
+		add_trait="refuge"
+		effect={
+			health=2
+			set_character_flag=refuge_you
+		}
+	}
+	205.6.1={
+		employer=400
+		remove_trait="refuge"
+		effect={
+			clr_character_flag=refuge_you
+		}
+	}
+	220.3.15={
+		employer=10400
+	}
+	250.9.1={
+		death=yes
+	}
+}
+30401={
+	name="Guan"
+	dynasty=15
+	religion="confucian"
+	culture="han"
+	80.1.1={
+		birth=yes
+	}
+	150.1.1={
+		death=yes
+	}
+}
+30402={
+	name="Ping"
+	dynasty=15
+	religion="confucian"
+	culture="han"
+	father=30401
+	101.1.1={
+		birth=yes
+	}
+	170.1.1={
+		death=yes
+	}
+}
+30403={
+	name="Ren"
+	dynasty=2056 #Feng
+	religion="confucian"
+	culture="han"
+	190.1.1={
+		birth=yes
+		employer=4000
+		add_trait="refuge"
+		effect={
+			set_character_flag=refuge_xu
+		}
+	}
+	260.1.1={
+		remove_trait="refuge"
+		effect={
+			clr_character_flag=refuge_xu
+		}
+		death=yes
+	}
+}
+30404={
+	name="Shi"
+	dynasty=1493 #Liang
+	religion="confucian"
+	culture="han"
+	father=20450
+	184.1.1={
+		birth=yes
+		employer=400
+	}
+	206.6.1={
+		employer=20450
+	}
+	228.1.1={
+		employer=10410
+	}
+	239.1.22={
+		employer=10420
+	}
+	250.1.1={
+		death=yes
+	}
+}
+30405={
+	name="Nan"
+	dynasty=2061 #Zhu
+	religion="confucian"
+	culture="han"
+	184.1.1={
+		birth=yes
+		employer=4000
+		add_trait="refuge"
+		effect={
+			set_character_flag=refuge_sili
+		}
+	}
+	211.10.1={
+		remove_trait="refuge"
+		effect={
+			clr_character_flag=refuge_sili
+		}
+	}
+	250.1.1={
+		death=yes
+	}
+}
+30406={
+	name="Song"
+	dynasty=2065 #Han
+	religion="confucian"
+	culture="han"
+	trait="scholar"
+	trait="just"
+	trait="quick"
+	trait="honest"
+	trait="temperate"
+	154.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=4000
+		add_trait="refuge"
+		effect={
+			set_character_flag=refuge_jing
+		}
+	}
+	190.1.1={
+		employer=48
+		remove_trait="refuge"
+		effect={
+			clr_character_flag=refuge_jing
+		}
+	}
+	195.1.1={
+		effect={
+			add_friend=662
+		}
+	}
+	208.1.1={
+		employer=400
+	}
+	220.1.1={
+		death=yes
+	}
+}
+30407={
+	name="Gu"
+	dynasty=2067 #Shen
+	religion="confucian"
+	culture="han"
+	trait="tough_soldier"
+	trait="duel_skilled_warrior"
+	trait="humble"
+	trait="brave"
+	trait="robust"
+	trait="diligent"
+	168.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=400
+	}
+	245.1.1={
+		death=yes
+	}
+}
+#30408,30409 - unused
+30410={
+	name="Chong"
+	dynasty=2070 #Man
+	religion="confucian"
+	culture="han"
+	trait="brilliant_strategist"
+	trait="duel_skilled_warrior"
+	trait="humble"
+	trait="brave"
+	trait="cruel"
+	trait="honest"
+	trait="honorable"
+	trait="temperate"
+	trait="diligent"
+	trait="defensive_leader"
+	trait="inspiring_leader"
+	trait="unyielding_leader"
+	168.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=134
+	}
+	187.6.1={
+		employer=4000
+		add_trait="refuge"
+		effect={
+			set_character_flag=refuge_yan
+		}
+	}
+	192.6.1={
+		employer=400
+		remove_trait="refuge"
+		effect={
+			clr_character_flag=refuge_yan
+		}
+	}
+	242.5.1={
+		death=yes
+	}
+}
+
+#Ji Ben, Mao, Mu dynasty 2060
 
 #Li Yi - 3793
 ##Ying Chang

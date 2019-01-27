@@ -12,6 +12,9 @@
 150.1.1={
 	holder=0 #None
 }
+180.1.1={
+	holder=113 #Qin Jie
+}
 184.1.1={
 	holder=3412 #Liu Xiang
 }

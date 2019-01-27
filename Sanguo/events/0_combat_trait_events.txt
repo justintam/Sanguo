@@ -329,7 +329,7 @@ character_event = {
 character_event = {
 	id = combat_trait.2
 	desc = "EVTDESCcombat_trait.2" #I have increased my wards fighting skills.
-	picture = "GFX_knights"
+	picture = "GFX_evt_weapon"
 	
 	is_triggered_only = yes
 	
@@ -340,7 +340,7 @@ character_event = {
 character_event = {
 	id = combat_trait.3
 	desc = "EVTDESCcombat_trait.3"
-	picture = "GFX_injured_knight"
+	picture = "GFX_evt_melee"
 	is_triggered_only = yes
 	
 	option = {
@@ -439,7 +439,7 @@ character_event = {
 character_event = {
 	id = combat_trait.4
 	desc = "EVTDESCcombat_trait.4"
-	picture = "GFX_injured_knight"
+	picture = "GFX_evt_melee"
 	is_triggered_only = yes
 	
 	option = {
@@ -452,7 +452,7 @@ character_event = {
 character_event = {
 	id = combat_trait.5
 	desc = "EVTDESCcombat_trait.5"
-	picture = "GFX_knight"
+	picture = "GFX_evt_weapon"
 	is_triggered_only = yes
 	
 	option = {
@@ -523,7 +523,7 @@ character_event = {
 character_event = {
 	id = combat_trait.6
 	desc = "EVTDESCcombat_trait.6"
-	picture = "GFX_knight"
+	picture = "GFX_evt_weapon"
 	is_triggered_only = yes
 	
 	option = {
@@ -666,7 +666,7 @@ character_event = {
 character_event = {
 	id = combat_trait.8
 	desc = "EVTDESCcombat_trait.8"
-	picture = "GFX_knight"
+	picture = "GFX_evt_weapon"
 	is_triggered_only = yes
 
 	option = {

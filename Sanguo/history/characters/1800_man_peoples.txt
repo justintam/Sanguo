@@ -1,6 +1,6 @@
 ####### Man Peoples #######
 
-1800 = {
+1800={
 	name="Shamoke"
 	dynasty=700
     diplomacy=5
@@ -21,7 +21,7 @@
 		death=yes
 	}
 }
-1801 = {
+1801={
 	name="Huo"
 	dynasty=700
     diplomacy=8
@@ -48,16 +48,16 @@
 		death=yes
 	}
 }
-1802 = {
+1802={
 	name="Kai" #Yong
-	dynasty=134
+	dynasty=720
     diplomacy=7
     martial=8
     stewardship=5
     intrigue=6
 	learning=5
-	religion="confucian"
-	culture="han"
+	religion="huojiao"
+	culture="nanman"
 	father=1818
 	mother=1821
     trait="duel_trained_warrior"
@@ -68,28 +68,30 @@
 		birth=yes
 	}
 	225.8.1={
-		death=yes
+		death={death_reason=death_murder killer=1803}
 	}
 }
-1803 = {
+1803={
 	name="Ding" #Gao
-	dynasty=197
+	dynasty=722
     diplomacy=5
     martial=6
     stewardship=4
-    intrigue=4
+    intrigue=5
 	learning=4
-	religion="confucian"
-	culture="bandunman"
+	religion="huojiao"
+	culture="nanman"
     trait="duel_trained_warrior"
+	trait="deceitful"
+	trait="envious"
 	165.1.1={
 		birth=yes
 	}
-	225.8.1={
-		death=yes
+	225.9.1={
+		death={death_reason=death_battle killer=615}
 	}
 }
-1804 = {
+1804={
 	name="Huan"
 	dynasty=158
     diplomacy=5
@@ -106,34 +108,31 @@
 	165.1.1={
 		birth=yes
 	}
-	184.1.1={
-		employer=1803
-	}
-	225.8.1={
-		death=yes
+	225.9.1={
+		death={death_reason=death_battle killer=615}
 	}
 }
-1805 = {
+1805={
 	name="Bao"
-	dynasty=171
+	dynasty=723 #Zhu
     diplomacy=4
     martial=7
     stewardship=1
     intrigue=2
 	learning=1
-	religion="confucian"
-	culture="han"
+	religion="huojiao"
+	culture="nanman"
 	trait="tough_soldier"
     trait="duel_trained_warrior"
 	trait="wroth"
 	168.1.1={
 		birth=yes
 	}
-	225.8.1={
-		death=yes
+	225.9.1={
+		death={death_reason=death_battle killer=615}
 	}
 }
-1806 = {
+1806={
 	name="Ahuinan"
 	dynasty=701
     diplomacy=4
@@ -149,11 +148,11 @@
 	165.1.1={
 		birth=yes
 	}
-	225.8.1={
-		death=yes
+	225.9.1={
+		death={death_reason=death_battle killer=615}
 	}
 }
-1807 = {
+1807={
 	name="Jinhuansanjie"
 	dynasty=702
     diplomacy=4
@@ -168,13 +167,13 @@
 	165.1.1={
 		birth=yes
 	}
-	225.8.1={
-		death=yes
+	225.9.1={
+		death={death_reason=death_battle killer=615}
 	}
 }
-1808 = {
-	name="Dongtuna"
-	dynasty=703
+1808={
+	name="Tuna"
+	dynasty=717
     diplomacy=5
     martial=7
     stewardship=3
@@ -187,11 +186,11 @@
 	165.1.1={
 		birth=yes
 	}
-	225.8.1={
-		death=yes
+	225.9.1={
+		death={death_reason=death_battle killer=615}
 	}
 }
-1809 = {
+1809={
 	name="Duosi"
 	dynasty=713 #Tulong
     diplomacy=5
@@ -207,11 +206,16 @@
 	165.1.1={
 		birth=yes
 	}
-	225.8.1={
-		death=yes
+	184.1.1={
+		effect={
+			add_friend=1813
+		}
+	}
+	225.9.1={
+		death={death_reason=death_battle killer=615}
 	}
 }
-1810 = {
+1810={
 	name="Mulu"
 	dynasty=714 #Bana
     diplomacy=3
@@ -228,11 +232,11 @@
 	165.1.1={
 		birth=yes
 	}
-	225.8.1={
-		death=yes
+	225.9.1={
+		death={death_reason=death_battle killer=615}
 	}
 }
-1811 = {
+1811={
 	name="Wutugu"
 	dynasty=764 #Wuge
     diplomacy=2
@@ -254,11 +258,11 @@
 	165.1.1={
 		birth=yes
 	}
-	225.8.1={
-		death=yes
+	225.9.1={
+		death={death_reason=death_battle killer=615}
 	}
 }
-1812 = {
+1812={
 	name="Mangyachang"
 	dynasty=706 #Man
     diplomacy=1
@@ -276,14 +280,11 @@
 	165.1.1={
 		birth=yes
 	}
-	184.1.1={
-		employer=1801
-	}
-	225.8.1={
-		death=yes
+	225.9.1={
+		death={death_reason=death_battle killer=615}
 	}
 }
-1813 = {
+1813={
 	name="You"
 	dynasty=700
     diplomacy=4
@@ -298,11 +299,16 @@
 	167.1.1={
 		birth=yes
 	}
+	184.1.1={
+		effect={
+			add_friend=1809
+		}
+	}
 	240.1.1={
 		death=yes
 	}
 }
-1814 = {
+1814={
 	name="Fang"
 	dynasty=704 #Yang
     diplomacy=4
@@ -321,7 +327,7 @@
 		death=yes
 	}
 }
-1815 = {
+1815={
 	name="Zhurong"
 	female=yes
 	dynasty=705
@@ -347,18 +353,18 @@
 	}
 	184.1.1={
 		add_spouse=1801
-		effect = {
-			add_artifact = weapon_flyingsword
+		effect={
+			add_artifact=weapon_flyingsword
 		}
 	}
 	240.1.1={
-		effect = {
-			remove_artifact = weapon_flyingsword
+		effect={
+			destroy_artifact=weapon_flyingsword
 		}
 		death=yes
 	}
 }
-1816 = {
+1816={
 	name="Dailaidongzhu"
 	dynasty=705
     diplomacy=6
@@ -382,7 +388,7 @@
 		death=yes
 	}
 }
-1817 = {
+1817={
 	name="Mulu"
 	dynasty=705
 	religion="huojiao"
@@ -394,9 +400,9 @@
 		death=yes
 	}
 }
-1818 = {
+1818={
 	name="Ding"
-	dynasty=134
+	dynasty=134 #Yong
 	religion="confucian"
 	culture="han"
     trait="duel_trained_warrior"
@@ -407,11 +413,11 @@
 	160.1.1={
 		add_spouse=1821
 	}
-	225.1.1={
-		death=yes
+	225.9.1={
+		death={death_reason=death_battle killer=615}
 	}
 }
-1819 = {
+1819={
 	name="Ji"
 	dynasty=100
 	religion="confucian"
@@ -425,7 +431,7 @@
 		death=yes
 	}
 }
-1820 = {
+1820={
 	name="Xi"
 	dynasty=100
 	religion="confucian"
@@ -440,7 +446,7 @@
 		death=yes
 	}
 }
-1821 = {
+1821={
 	name="Peng"
 	female=yes
 	dynasty=100
@@ -459,10 +465,10 @@
 		death=yes
 	}
 }
-1822 = {
+1822={ #Unused
 	name="Hu"
 	dynasty=758
-	religion="tianshi"
+	religion="baihu"
 	culture="bandunman"
 	trait="deceitful"
 	trait="zealous"
@@ -470,14 +476,21 @@
 	160.1.1={
 		birth=yes
 	}
+	184.1.1={
+		employer=1825
+	}
+	190.1.1={
+		employer=1009
+		religion=tianshi
+	}
 	240.1.1={
 		death=yes
 	}
 }
-1823 = {
+1823={
 	name="Huo"
 	dynasty=765
-	religion="tianshi"
+	religion="baihu"
 	culture="bandunman"
 	trait="wroth"
 	trait="zealous"
@@ -485,11 +498,18 @@
 	160.1.1={
 		birth=yes
 	}
+	184.1.1={
+		employer=1825
+	}
+	190.1.1={
+		employer=1009
+		religion=tianshi
+	}
 	240.1.1={
 		death=yes
 	}
 }
-1824 = {
+1824={
 	name="Hu"
 	dynasty=754
 	religion="baihu"
@@ -500,11 +520,18 @@
 	160.1.1={
 		birth=yes
 	}
+	184.1.1={
+		employer=1825
+	}
+	190.1.1={
+		employer=1009
+		religion=tianshi
+	}
 	240.1.1={
 		death=yes
 	}
 }
-1825 = {
+1825={
 	name="Yue"
 	dynasty=769
 	religion="baihu"
@@ -519,7 +546,7 @@
 		death=yes
 	}
 }
-1826 = { #Unused
+1826={
 	name="Che"
 	dynasty=768
 	religion="baihu"
@@ -530,11 +557,18 @@
 	160.1.1={
 		birth=yes
 	}
+	188.1.1={
+		employer=1825
+	}
+	190.1.1={
+		employer=1009
+		religion=tianshi
+	}
 	240.1.1={
 		death=yes
 	}
 }
-1827 = { #Unused
+1827={ #Unused
 	name="Hei"
 	dynasty=758
 	religion="baihu"
@@ -545,14 +579,24 @@
 	160.1.1={
 		birth=yes
 	}
+	184.1.1={
+		employer=1826
+	}
+	188.1.1={
+		employer=1825
+	}
+	190.1.1={
+		employer=1009
+		religion=tianshi
+	}
 	240.1.1={
 		death=yes
 	}
 }
-1828 = {
+1828={
 	name="Muyu"
 	dynasty=755
-	religion="tianshi"
+	religion="baihu"
 	culture="bandunman"
 	trait="wroth"
 	trait="zealous"
@@ -560,11 +604,21 @@
 	160.1.1={
 		birth=yes
 	}
+	184.1.1={
+		employer=1826
+	}
+	188.1.1={
+		employer=1825
+	}
+	190.1.1={
+		employer=1009
+		religion=tianshi
+	}
 	240.1.1={
 		death=yes
 	}
 }
-1829 = {
+1829={
 	name="Renmin"
 	religion="huojiao"
 	culture="nanman"
@@ -575,12 +629,70 @@
 		death=yes
 	}
 }
-1830 = {
+1830={
 	name="Huli"
 	religion="huojiao"
 	culture="nanman"
 	160.1.1={
 		birth=yes
+	}
+	240.1.1={
+		death=yes
+	}
+}
+1831={
+	name="Ni"
+	dynasty=702
+	religion="huojiao"
+	culture="nanman"
+	trait="duel_trained_warrior"
+	trait="tough_soldier"
+	168.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=1811
+	}
+	225.9.1={
+		death={death_reason=death_battle killer=615}
+	}
+}
+1832={
+	name="An"
+	dynasty=703
+	religion="huojiao"
+	culture="nanman"
+	trait="duel_trained_warrior"
+	trait="tough_soldier"
+	168.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=1811
+	}
+	225.9.1={
+		death={death_reason=death_battle killer=615}
+	}
+}
+1833={
+	name="Huaman"
+	female=yes
+	dynasty=700
+    diplomacy=6
+    martial=8
+    stewardship=3
+    intrigue=6
+	learning=4
+	religion="huojiao"
+	culture="nanman"
+	father=1801
+	mother=1815
+    trait="duel_trained_warrior"
+	trait="strong"
+	trait="wroth"
+	200.1.1={
+		birth=yes
+		employer=1801
 	}
 	240.1.1={
 		death=yes

@@ -74,6 +74,8 @@ k_wu;Wu;;;;;;;;;;;;;x
 k_wu_adj;Wu Kingdom;;;;;;;;;;;;;x
 k_xiliang;Xiliang;;;;;;;;;;;;;x
 k_xiliang_adj;Xiliang Regional;;;;;;;;;;;;;x
+k_yamatai;Yamatai;;;;;;;;;;;;;x
+k_yamatai_adj;Yamatai Koku;;;;;;;;;;;;;x
 k_yellow;Way of Peace;;;;;;;;;;;;;x
 k_yellow_adj;Yellow Turban Rebels;;;;;;;;;;;;;x
 k_yong;Yong;;;;;;;;;;;;;x
@@ -133,22 +135,34 @@ k_yu_adj;Yu Provincial;;;;;;;;;;;;;x
 #
 #
 #Duchy
+d_badong;Badong;;;;;;;;;;;;;x
+d_badong_adj;Badong Commandery;;;;;;;;;;;;;x
+d_baxi;Baxi;;;;;;;;;;;;;x
+d_baxi_adj;Baxi Commandery;;;;;;;;;;;;;x
 d_dongan;Dongan;;;;;;;;;;;;;x
 d_dongan_adj;Dongan Commandery;;;;;;;;;;;;;x
 d_hanchang;Hanchang;;;;;;;;;;;;;x
 d_hanchang_adj;Hanchang Commandery;;;;;;;;;;;;;x
+d_hanning;Hanning;;;;;;;;;;;;;x
+d_hanning_adj;Hanning Commandery;;;;;;;;;;;;;x
 d_hanxing;Hanxing;;;;;;;;;;;;;x
+d_jiangyang;Jiangyang;;;;;;;;;;;;;x
+d_jiangyang_adj;Jiangyang Commandery;;;;;;;;;;;;;x
 d_hanxing_adj;Hanxing Commandery;;;;;;;;;;;;;x
 d_luling;Luling;;;;;;;;;;;;;x
 d_luling_adj;Luling Commandery;;;;;;;;;;;;;x
 d_poyang;Poyang;;;;;;;;;;;;;x
 d_poyang_adj;Poyang Commandery;;;;;;;;;;;;;x
+d_shangyong;Shangyong;;;;;;;;;;;;;x
+d_shangyong_adj;Shangyong Commandery;;;;;;;;;;;;;x
 d_xiling;Xiling;;;;;;;;;;;;;x
 d_xiling_adj;Xiling Commandery;;;;;;;;;;;;;x
 d_xinxing;Xinxing;;;;;;;;;;;;;x
 d_xinxing_adj;Xinxing Commandery;;;;;;;;;;;;;x
 d_xiping;Xiping;;;;;;;;;;;;;x
 d_xiping_adj;Xiping Commandery;;;;;;;;;;;;;x
+d_yangan;Yangan;;;;;;;;;;;;;x
+d_yangan_adj;Yangan Commandery;;;;;;;;;;;;;x
 d_zhangling;Zhangling;;;;;;;;;;;;;x
 d_zhangling_adj;Zhangling Commandery;;;;;;;;;;;;;x
 d_zuoneishi;Zuoneishi;;;;;;;;;;;;;x
@@ -363,6 +377,8 @@ d_taishan;Taishan;Taishan;Taishan;;Taishan;;;;;;;;;x
 d_taishan_adj;Taishanian;;taishaner;;;;;;;;;;;x
 d_taiyuan;Taiyuan;Taiyuan;Taiyuan;;Taiyuan;;;;;;;;;x
 d_taiyuan_adj;Taiyuanian;;taiyuaner;;;;;;;;;;;x
+d_tsushima;Tsushima;Tsushima;Tsushima;;Tsushima;;;;;;;;;x
+d_tsushima_adj;Tsushiman;;tsushiman;;;;;;;;;;;x
 d_turpan;Turpan;Turpan;Turpan;;Turpan;;;;;;;;;x
 d_turpan_adj;Turpanian;;turpaner;;;;;;;;;;;x
 d_wei;Wei;Wei;Wei;;Wei;;;;;;;;;x
@@ -427,9 +443,11 @@ d_zhuti;Zhuti;Zhuti;Zhuti;;Zhuti;;;;;;;;;x
 d_zhuti_adj;Zhutian;;zhuter;;;;;;;;;;;x
 d_zuopingyi;Zuopingyi;Zuopingyi;Zuopingyi;;Zuopingyi;;;;;;;;;x
 d_zuopingyi_adj;Zuopingian;;zuopinger;;;;;;;;;;;x
+d_zhuya;Zhuya;Zhuya;Zhuya;;Zhuya;;;;;;;;;x
+d_zhuya_adj;Zhuyan;;zhuyan;;;;;;;;;;;x
 ###
 #County
-c_guard;Yellow Guard;Yellow Guard;Yellow Guard;;Yellow Guard;;;;;;;;;x
+c_guard;Feathered Forest;;;;;;;;;;;;;x
 c_guard_adj;Imperial Bodyguard;;;;;;;;;;;;;x
 c_empress;Inner Court;Inner Court;Inner Court;;Inner Court;;;;;;;;;x
 c_empress_adj;The Inner Court;;;;;;;;;;;;;x
@@ -443,12 +461,16 @@ c_bashu;Bashu Infantry;;;;;;;;;;;;;x
 c_bashu_adj;Bashu Infantry;;;;;;;;;;;;;x
 c_feather;Feather Bandits;;;;;;;;;;;;;x
 c_feather_adj;Feather Bandits;;;;;;;;;;;;;x
+c_huo;Huo Army;;;;;;;;;;;;;x
+c_huo_adj;Huo Army;;;;;;;;;;;;;x
 c_lubu;Phoenix Army;;;;;;;;;;;;;x
 c_lubu_adj;Phoenix Army;;;;;;;;;;;;;x
 c_qingzhou;Qingzhou Infantry;;;;;;;;;;;;;x
 c_qingzhou_adj;Qingzhou Infantry;;;;;;;;;;;;;x
 c_qiang;Qiang Tribe;;;;;;;;;;;;;x
 c_qiang_adj;Qiang Tribe;;;;;;;;;;;;;x
+c_white;White Bandits;;;;;;;;;;;;;x
+c_white_adj;White Bandits;;;;;;;;;;;;;x
 c_wuxia;Wu Pirates;;;;;;;;;;;;;x
 c_wu_adj;Wu Pirates;;;;;;;;;;;;;x
 #Solo
@@ -462,6 +484,8 @@ d_sun;Sun Army;;;;;;;;;;;;;x
 d_sun_adj;Sun;;;;;;;;;;;;;x
 k_cao;Cao Clan;;;;;;;;;;;;;x
 k_cao_adj;Cao;;;;;;;;;;;;;x
+k_ping;Ping;;;;;;;;;;;;;x
+k_ping_adj;Gongsun;;;;;;;;;;;;;x
 k_liu;Liu Clan;;;;;;;;;;;;;x
 k_liu_adj;Liu;;;;;;;;;;;;;x
 k_shi;Shi Clan;;;;;;;;;;;;;x

@@ -22,6 +22,12 @@
 191.1.1={
 	holder=4228 #Wen Shuliang
 }
+204.10.1={
+	liege=k_qing
+}
+205.2.1={
+	liege=k_ji
+}
 214.1.1={
 	holder=5017 #Sima Zhi
 }

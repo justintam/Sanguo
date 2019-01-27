@@ -12,176 +12,178 @@
 #                                         #
 ###########################################
 
-namespace = EMP
+namespace=EMP
 
 ### IMPERIAL DELIGHT ###
 #Does the Emperor Want It?
-character_event = {
-	id = EMP.1
-	desc = EVTDESC_EMP.1
-	title = EVTTITLE_EMP
-	picture = GFX_evt_lovers
+character_event={
+	id=EMP.1
+	desc=EVTDESC_EMP.1
+	title=EVTTITLE_EMP
+	picture=GFX_evt_lovers
 	
-	trigger = {
-		is_adult = yes
-		has_landed_title = k_confucian
-		NOT = { has_landed_title = c_empress }
-		NOT = { has_character_modifier = stay_strong }
-		in_command = no
-		prisoner = no
-		has_epidemic = no
-		is_ill = no
-		wealth = 500
-		c_empress = {
-			holder_scope = {
-				prisoner = no
-				any_courtier = {
-					prisoner = no
-					has_epidemic = no
-					is_ill = no
-					is_pregnant = no
-					trait = inner_court
-					NOT = { has_character_flag = lady_retired }
+	trigger={
+		k_confucian={ has_holder=yes }
+		c_empress={ has_holder=yes }
+		is_adult=yes
+		has_landed_title=k_confucian
+		NOT={ has_landed_title=c_empress }
+		NOT={ has_character_modifier=stay_strong }
+		in_command=no
+		prisoner=no
+		has_epidemic=no
+		is_ill=no
+		wealth=500
+		c_empress={
+			holder_scope={
+				prisoner=no
+				any_courtier={
+					prisoner=no
+					has_epidemic=no
+					is_ill=no
+					is_pregnant=no
+					trait=inner_court
+					NOT={ has_character_flag=lady_retired }
 				}
 			}
 		}
 	}
 	
-	mean_time_to_happen = {
-		months = 1
+	mean_time_to_happen={
+		months=1
 		
-		modifier = {
-			factor = 5
-			num_of_children = 0
+		modifier={
+			factor=5
+			num_of_children=0
 		}
-		modifier = {
-			factor = 5
-			NOT = {
-				any_child = {
-					is_female = no
+		modifier={
+			factor=5
+			NOT={
+				any_child={
+					is_female=no
 				}
 			}
 		}
-		modifier = {
-			factor = 0.5
-			num_of_lovers = 3
+		modifier={
+			factor=0.5
+			num_of_lovers=3
 		}
 	}
 	
-	option = { #Visits a concubine
-		name = EXCELLENT
-		hidden_tooltip = {
-			wealth = -50
+	option={ #Visits a concubine
+		name=EXCELLENT
+		hidden_tooltip={
+			wealth=-50
 			
-			c_empress = {
-				holder_scope = {
-					wealth = 50
+			c_empress={
+				holder_scope={
+					wealth=50
 					
-					any_courtier = {
-						limit = {
-							prisoner = no
-							trait = inner_court
+					any_courtier={
+						limit={
+							prisoner=no
+							trait=inner_court
 						}
-						ROOT = { wealth = -5 }
-						wealth = 5
+						ROOT={ wealth=-5 }
+						wealth=5
 					}
 					
-					character_event = { id = EMP.2 }
+					character_event={ id=EMP.2 }
 				}
 			}
 		}
-		ai_chance = {
-			factor = 1
+		ai_chance={
+			factor=1
 			
-			modifier = {
-				factor = 1.05
-				trait = greedy
+			modifier={
+				factor=1.05
+				trait=greedy
 			}
-			modifier = {
-				factor = 1.05
-				trait = envious
+			modifier={
+				factor=1.05
+				trait=envious
 			}
-			modifier = {
-				factor = 1.05
-				trait = lustful
+			modifier={
+				factor=1.05
+				trait=lustful
 			}
-			modifier = {
-				factor = 1.05
-				trait = slothful
+			modifier={
+				factor=1.05
+				trait=slothful
 			}
-			modifier = {
-				factor = 1.05
-				trait = ambitious
+			modifier={
+				factor=1.05
+				trait=ambitious
 			}
-			modifier = {
-				factor = 1.05
-				trait = dishonorable
+			modifier={
+				factor=1.05
+				trait=dishonorable
 			}
-			modifier = {
-				factor = 1.05
-				trait = selfish
+			modifier={
+				factor=1.05
+				trait=selfish
 			}
-			modifier = {
-				factor = 1.05
-				trait = hedonist
+			modifier={
+				factor=1.05
+				trait=hedonist
 			}
-			modifier = {
-				factor = 1.05
-				trait = gluttonous
+			modifier={
+				factor=1.05
+				trait=gluttonous
 			}
 		}
 	}
 	
-	option = { #Too much work
-		name = NOTHX
+	option={ #Too much work
+		name=NOTHX
 		
-		hidden_tooltip = {
-			add_character_modifier = {
-				name = stay_strong
-				duration = 30
+		hidden_tooltip={
+			add_character_modifier={
+				name=stay_strong
+				duration=30
 			}
 		}
 		
-		piety = 10
+		piety=10
 		
-		ai_chance = {
-			factor = 1
+		ai_chance={
+			factor=1
 			
-			modifier = {
-				factor = 1.05
-				trait = celibate
+			modifier={
+				factor=1.05
+				trait=celibate
 			}
-			modifier = {
-				factor = 1.05
-				trait = charitable
+			modifier={
+				factor=1.05
+				trait=charitable
 			}
-			modifier = {
-				factor = 1.05
-				trait = chaste
+			modifier={
+				factor=1.05
+				trait=chaste
 			}
-			modifier = {
-				factor = 1.05
-				trait = chivalrous
+			modifier={
+				factor=1.05
+				trait=chivalrous
 			}
-			modifier = {
-				factor = 1.05
-				trait = honorable
+			modifier={
+				factor=1.05
+				trait=honorable
 			}
-			modifier = {
-				factor = 1.05
-				trait = humble
+			modifier={
+				factor=1.05
+				trait=humble
 			}
-			modifier = {
-				factor = 1.05
-				trait = kind
+			modifier={
+				factor=1.05
+				trait=kind
 			}
-			modifier = {
-				factor = 1.05
-				trait = temperate
+			modifier={
+				factor=1.05
+				trait=temperate
 			}
-			modifier = {
-				factor = 2
-				trait = homosexual
+			modifier={
+				factor=2
+				trait=homosexual
 			}
 		}
 	}
@@ -189,919 +191,924 @@ character_event = {
 
 ### IMPERIAL DELIGHT ###
 #Empress chooses a girl
-character_event = {
-	id = EMP.2
-	desc = EVTDESC_EMP.2
-	title = EVTTITLE_EMP
-	picture = GFX_evt_lovers
+character_event={
+	id=EMP.2
+	desc=EVTDESC_EMP.2
+	title=EVTTITLE_EMP
+	picture=GFX_evt_lovers
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	immediate = {
-		random_courtier = {
-			limit = {
-				prisoner = no
-				has_epidemic = no
-				is_ill = no
-				trait = inner_court
-				is_pregnant = no
-				NOT = { has_character_flag = lady_retired }
-				NOT = { has_character_flag = harem_ref }
+	immediate={
+		random_courtier={
+			limit={
+				prisoner=no
+				has_epidemic=no
+				is_ill=no
+				trait=inner_court
+				is_pregnant=no
+				NOT={ has_character_flag=lady_retired }
+				NOT={ has_character_flag=harem_ref }
 			}
-			save_event_target_as = target_lover
+			save_event_target_as=target_lover
 		}
 	}
 	
-	option = { #Accept Girl
-		name = OK
-		any_courtier = {
-			limit = {
-				trait = inner_court
-				has_character_flag = harem_ref
+	option={ #Accept Girl
+		name=OK
+		any_courtier={
+			limit={
+				trait=inner_court
+				has_character_flag=harem_ref
 			}
-			clr_character_flag = harem_ref
+			clr_character_flag=harem_ref
 		}
-		event_target:target_lover = {
-			character_event = { id = EMP.3 }
+		event_target:target_lover={
+			character_event={ id=EMP.3 }
 		}
 	}
 	
-	option = { #REFUSE Girl
-		name = NOTHX
-		event_target:target_lover = {
-			set_character_flag = harem_ref
+	option={ #REFUSE Girl
+		name=NOTHX
+		event_target:target_lover={
+			set_character_flag=harem_ref
 		}
-		character_event = { id = EMP.2 }
+		character_event={ id=EMP.2 }
 	}
 }
 
 ### IMPERIAL DELIGHT ###
 #Ping Concubine
-character_event = {
-	id = EMP.3
+character_event={
+	id=EMP.3
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	hide_window = yes
+	hide_window=yes
 	
-	immediate = {
-		wealth = 5
-		religion_head = {
-			wealth = -5
-			character_event = { id = EMP.4 }
+	immediate={
+		wealth=5
+		religion_head={
+			wealth=-5
+			character_event={ id=EMP.4 }
 		}
 	}
 }
 
 ### IMPERIAL DELIGHT ###
 #Empress chooses a girl
-character_event = {
-	id = EMP.4
-	desc = EVTDESC_EMP.4
-	title = EVTTITLE_EMP
-	picture = GFX_evt_lovers
+character_event={
+	id=EMP.4
+	desc=EVTDESC_EMP.4
+	title=EVTTITLE_EMP
+	picture=GFX_evt_lovers
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	option = { #Visits concubine
-		name = OK
-		FROM = { character_event = { id = WoL.98 } }
+	option={ #Visits concubine
+		name=OK
+		FROM={ character_event={ id=WoL.98 } }
 	}
 }
 
 
 #Ladies take test
-character_event = {
-	id = EMP.5
+character_event={
+	id=EMP.5
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	immediate = {
-		set_character_flag = tribute_lady
-	}
-	
-	option = {
-		name = EXCELLENT
+	option={
+		name=EXCELLENT
 		
-		random_list = {
-			40 = {
-				FROMFROM = {
-					character_event = { id = EMP.6 }
+		random_list={
+			40={
+				FROMFROM={
+					character_event={ id=EMP.6 }
 				}
 			}
-			60 = {
-				host = {
-					character_event = { id = EMP.7 }
+			60={
+				host={
+					character_event={ id=EMP.7 }
 				}
 			}
 		}
 		
-		ai_chance = {
-			factor = 1
-			modifier = {
-				factor = 4
-				trait = fair
+		ai_chance={
+			factor=1
+			modifier={
+				factor=4
+				trait=fair
 			}
-			modifier = {
-				factor = 2
-				trait = genius
+			modifier={
+				factor=2
+				trait=genius
 			}
-			modifier = {
-				factor = 2
-				trait = quick
+			modifier={
+				factor=2
+				trait=quick
 			}
-			modifier = {
-				factor = 2
-				trait = ambitious
+			modifier={
+				factor=2
+				trait=ambitious
 			}
-			modifier = {
-				factor = 2
-				trait = patient
+			modifier={
+				factor=2
+				trait=patient
 			}
-			modifier = {
-				factor = 2
-				trait = diligent
+			modifier={
+				factor=2
+				trait=diligent
 			}
-			modifier = {
-				factor = 2
-				trait = temperate
+			modifier={
+				factor=2
+				trait=temperate
 			}
-			modifier = {
-				factor = 2
-				trait = chaste
+			modifier={
+				factor=2
+				trait=chaste
 			}
-			modifier = {
-				factor = 2
-				trait = zealous
+			modifier={
+				factor=2
+				trait=zealous
 			}
-			modifier = {
-				factor = 2
-				trait = socializer
+			modifier={
+				factor=2
+				trait=socializer
 			}
-			modifier = {
-				factor = 2
-				trait = lustful
+			modifier={
+				factor=2
+				trait=lustful
 			}
-			modifier = {
-				factor = 2
-				trait = hedonist
+			modifier={
+				factor=2
+				trait=hedonist
 			}
-			modifier = {
-				factor = 2
-				trait = seducer
+			modifier={
+				factor=2
+				trait=seducer
 			}
-			modifier = {
-				factor = 2
-				trait = seductress
+			modifier={
+				factor=2
+				trait=seductress
 			}
-			modifier = {
-				factor = 0
-				is_ill = yes
+			modifier={
+				factor=0
+				is_ill=yes
 			}
-			modifier = {
-				factor = 0
-				trait = clubfooted
+			modifier={
+				factor=0
+				trait=clubfooted
 			}
-			modifier = {
-				factor = 0
-				trait = harelip
+			modifier={
+				factor=0
+				trait=harelip
 			}
-			modifier = {
-				factor = 0
-				trait = hunchback
+			modifier={
+				factor=0
+				trait=hunchback
 			}
-			modifier = {
-				factor = 0
-				trait = lisp
+			modifier={
+				factor=0
+				trait=lisp
 			}
-			modifier = {
-				factor = 0
-				trait = stutter
+			modifier={
+				factor=0
+				trait=stutter
 			}
-			modifier = {
-				factor = 0
-				trait = ugly
+			modifier={
+				factor=0
+				trait=ugly
 			}
-			modifier = {
-				factor = 0
-				trait = dwarf
+			modifier={
+				factor=0
+				trait=dwarf
 			}
-			modifier = {
-				factor = 0
-				trait = slow
+			modifier={
+				factor=0
+				trait=slow
 			}
-			modifier = {
-				factor = 0
-				trait = inbred
+			modifier={
+				factor=0
+				trait=inbred
 			}
-			modifier = {
-				factor = 0
-				trait = weak
+			modifier={
+				factor=0
+				trait=weak
 			}
-			modifier = {
-				factor = 0
-				trait = gluttonous
+			modifier={
+				factor=0
+				trait=gluttonous
 			}
-			modifier = {
-				factor = 0
-				trait = slothful
+			modifier={
+				factor=0
+				trait=slothful
 			}
-			modifier = {
-				factor = 0
-				trait = wroth
+			modifier={
+				factor=0
+				trait=wroth
 			}
-			modifier = {
-				factor = 0
-				trait = envious
+			modifier={
+				factor=0
+				trait=envious
 			}
-			modifier = {
-				factor = 0
-				trait = proud
+			modifier={
+				factor=0
+				trait=proud
 			}
-			modifier = {
-				factor = 0
-				trait = arbitrary
+			modifier={
+				factor=0
+				trait=arbitrary
 			}
-			modifier = {
-				factor = 0
-				trait = cruel
+			modifier={
+				factor=0
+				trait=cruel
 			}
 		}
 	}
-	option = {
-		name = OK
+	option={
+		name=OK
 		
-		random_list = {
-			20 = {
-				FROMFROM = {
-					character_event = { id = EMP.6 }
+		random_list={
+			20={
+				FROMFROM={
+					character_event={ id=EMP.6 }
 				}
 			}
-			80 = {
-				host = {
-					character_event = { id = EMP.7 }
-				}
-			}
-		}
-		
-		ai_chance = {
-			factor = 1
-			modifier = {
-				factor = 2
-				trait = fair
-			}
-			modifier = {
-				factor = 2
-				trait = honest
-			}
-			modifier = {
-				factor = 2
-				trait = wroth
-			}
-			modifier = {
-				factor = 2
-				trait = humble
-			}
-			modifier = {
-				factor = 2
-				trait = cynical
-			}
-			modifier = {
-				factor = 2
-				trait = socializer
-			}
-			modifier = {
-				factor = 2
-				trait = lustful
-			}
-			modifier = {
-				factor = 2
-				trait = hedonist
-			}
-			modifier = {
-				factor = 2
-				trait = seducer
-			}
-			modifier = {
-				factor = 2
-				trait = seductress
-			}
-			modifier = {
-				factor = 0
-				is_ill = yes
-			}
-			modifier = {
-				factor = 0
-				trait = clubfooted
-			}
-			modifier = {
-				factor = 0
-				trait = harelip
-			}
-			modifier = {
-				factor = 0
-				trait = hunchback
-			}
-			modifier = {
-				factor = 0
-				trait = lisp
-			}
-			modifier = {
-				factor = 0
-				trait = stutter
-			}
-			modifier = {
-				factor = 0
-				trait = ugly
-			}
-			modifier = {
-				factor = 0
-				trait = dwarf
-			}
-			modifier = {
-				factor = 0
-				trait = slow
-			}
-			modifier = {
-				factor = 0
-				trait = inbred
-			}
-			modifier = {
-				factor = 0
-				trait = weak
-			}
-			modifier = {
-				factor = 0
-				trait = gluttonous
-			}
-			modifier = {
-				factor = 0
-				trait = slothful
-			}
-			modifier = {
-				factor = 0
-				trait = wroth
-			}
-			modifier = {
-				factor = 0
-				trait = envious
-			}
-			modifier = {
-				factor = 0
-				trait = proud
-			}
-			modifier = {
-				factor = 0
-				trait = arbitrary
-			}
-			modifier = {
-				factor = 0
-				trait = cruel
-			}
-		}
-	}
-	option = {
-		name = OHNO
-		
-		random_list = {
-			10 = {
-				FROMFROM = {
-					character_event = { id = EMP.6 }
-				}
-			}
-			90 = {
-				host = {
-					character_event = { id = EMP.7 }
+			80={
+				host={
+					character_event={ id=EMP.7 }
 				}
 			}
 		}
 		
-		ai_chance = {
-			factor = 1
-			modifier = {
-				factor = 2
-				trait = fair
+		ai_chance={
+			factor=1
+			modifier={
+				factor=2
+				trait=fair
 			}
-			modifier = {
-				factor = 2
-				trait = content
+			modifier={
+				factor=2
+				trait=honest
 			}
-			modifier = {
-				factor = 2
-				trait = patient
+			modifier={
+				factor=2
+				trait=wroth
 			}
-			modifier = {
-				factor = 2
-				trait = deceitful
+			modifier={
+				factor=2
+				trait=humble
 			}
-			modifier = {
-				factor = 2
-				trait = proud
+			modifier={
+				factor=2
+				trait=cynical
 			}
-			modifier = {
-				factor = 2
-				trait = socializer
+			modifier={
+				factor=2
+				trait=socializer
 			}
-			modifier = {
-				factor = 2
-				trait = lustful
+			modifier={
+				factor=2
+				trait=lustful
 			}
-			modifier = {
-				factor = 2
-				trait = hedonist
+			modifier={
+				factor=2
+				trait=hedonist
 			}
-			modifier = {
-				factor = 2
-				trait = seducer
+			modifier={
+				factor=2
+				trait=seducer
 			}
-			modifier = {
-				factor = 2
-				trait = seductress
+			modifier={
+				factor=2
+				trait=seductress
 			}
-			modifier = {
-				factor = 0
-				is_ill = yes
+			modifier={
+				factor=0
+				is_ill=yes
 			}
-			modifier = {
-				factor = 0
-				trait = clubfooted
+			modifier={
+				factor=0
+				trait=clubfooted
 			}
-			modifier = {
-				factor = 0
-				trait = harelip
+			modifier={
+				factor=0
+				trait=harelip
 			}
-			modifier = {
-				factor = 0
-				trait = hunchback
+			modifier={
+				factor=0
+				trait=hunchback
 			}
-			modifier = {
-				factor = 0
-				trait = lisp
+			modifier={
+				factor=0
+				trait=lisp
 			}
-			modifier = {
-				factor = 0
-				trait = stutter
+			modifier={
+				factor=0
+				trait=stutter
 			}
-			modifier = {
-				factor = 0
-				trait = ugly
+			modifier={
+				factor=0
+				trait=ugly
 			}
-			modifier = {
-				factor = 0
-				trait = dwarf
+			modifier={
+				factor=0
+				trait=dwarf
 			}
-			modifier = {
-				factor = 0
-				trait = slow
+			modifier={
+				factor=0
+				trait=slow
 			}
-			modifier = {
-				factor = 0
-				trait = inbred
+			modifier={
+				factor=0
+				trait=inbred
 			}
-			modifier = {
-				factor = 0
-				trait = weak
+			modifier={
+				factor=0
+				trait=weak
 			}
-			modifier = {
-				factor = 0
-				trait = gluttonous
+			modifier={
+				factor=0
+				trait=gluttonous
 			}
-			modifier = {
-				factor = 0
-				trait = slothful
+			modifier={
+				factor=0
+				trait=slothful
 			}
-			modifier = {
-				factor = 0
-				trait = wroth
+			modifier={
+				factor=0
+				trait=wroth
 			}
-			modifier = {
-				factor = 0
-				trait = arbitrary
+			modifier={
+				factor=0
+				trait=envious
 			}
-			modifier = {
-				factor = 0
-				trait = cruel
+			modifier={
+				factor=0
+				trait=proud
+			}
+			modifier={
+				factor=0
+				trait=arbitrary
+			}
+			modifier={
+				factor=0
+				trait=cruel
 			}
 		}
 	}
-	option = {
-		name = CURSES
+	option={
+		name=OHNO
 		
-		random_list = {
-			5 = {
-				FROMFROM = {
-					character_event = { id = EMP.6 }
+		random_list={
+			10={
+				FROMFROM={
+					character_event={ id=EMP.6 }
 				}
 			}
-			95 = {
-				host = {
-					character_event = { id = EMP.7 }
+			90={
+				host={
+					character_event={ id=EMP.7 }
 				}
 			}
 		}
 		
-		ai_chance = {
-			factor = 1
-			modifier = {
-				factor = 2
-				is_ill = yes
+		ai_chance={
+			factor=1
+			modifier={
+				factor=2
+				trait=fair
 			}
-			modifier = {
-				factor = 2
-				trait = clubfooted
+			modifier={
+				factor=2
+				trait=content
 			}
-			modifier = {
-				factor = 2
-				trait = harelip
+			modifier={
+				factor=2
+				trait=patient
 			}
-			modifier = {
-				factor = 2
-				trait = hunchback
+			modifier={
+				factor=2
+				trait=deceitful
 			}
-			modifier = {
-				factor = 2
-				trait = lisp
+			modifier={
+				factor=2
+				trait=proud
 			}
-			modifier = {
-				factor = 2
-				trait = stutter
+			modifier={
+				factor=2
+				trait=socializer
 			}
-			modifier = {
-				factor = 2
-				trait = ugly
+			modifier={
+				factor=2
+				trait=lustful
 			}
-			modifier = {
-				factor = 2
-				trait = dwarf
+			modifier={
+				factor=2
+				trait=hedonist
 			}
-			modifier = {
-				factor = 2
-				trait = slow
+			modifier={
+				factor=2
+				trait=seducer
 			}
-			modifier = {
-				factor = 2
-				trait = inbred
+			modifier={
+				factor=2
+				trait=seductress
 			}
-			modifier = {
-				factor = 2
-				trait = weak
+			modifier={
+				factor=0
+				is_ill=yes
 			}
-			modifier = {
-				factor = 2
-				trait = gluttonous
+			modifier={
+				factor=0
+				trait=clubfooted
 			}
-			modifier = {
-				factor = 2
-				trait = slothful
+			modifier={
+				factor=0
+				trait=harelip
 			}
-			modifier = {
-				factor = 2
-				trait = wroth
+			modifier={
+				factor=0
+				trait=hunchback
 			}
-			modifier = {
-				factor = 2
-				trait = envious
+			modifier={
+				factor=0
+				trait=lisp
 			}
-			modifier = {
-				factor = 2
-				trait = proud
+			modifier={
+				factor=0
+				trait=stutter
 			}
-			modifier = {
-				factor = 2
-				trait = arbitrary
+			modifier={
+				factor=0
+				trait=ugly
+			}
+			modifier={
+				factor=0
+				trait=dwarf
+			}
+			modifier={
+				factor=0
+				trait=slow
+			}
+			modifier={
+				factor=0
+				trait=inbred
+			}
+			modifier={
+				factor=0
+				trait=weak
+			}
+			modifier={
+				factor=0
+				trait=gluttonous
+			}
+			modifier={
+				factor=0
+				trait=slothful
+			}
+			modifier={
+				factor=0
+				trait=wroth
+			}
+			modifier={
+				factor=0
+				trait=arbitrary
+			}
+			modifier={
+				factor=0
+				trait=cruel
+			}
+		}
+	}
+	option={
+		name=CURSES
+		
+		random_list={
+			5={
+				FROMFROM={
+					character_event={ id=EMP.6 }
+				}
+			}
+			95={
+				host={
+					character_event={ id=EMP.7 }
+				}
+			}
+		}
+		
+		ai_chance={
+			factor=1
+			modifier={
+				factor=2
+				is_ill=yes
+			}
+			modifier={
+				factor=2
+				trait=clubfooted
+			}
+			modifier={
+				factor=2
+				trait=harelip
+			}
+			modifier={
+				factor=2
+				trait=hunchback
+			}
+			modifier={
+				factor=2
+				trait=lisp
+			}
+			modifier={
+				factor=2
+				trait=stutter
+			}
+			modifier={
+				factor=2
+				trait=ugly
+			}
+			modifier={
+				factor=2
+				trait=dwarf
+			}
+			modifier={
+				factor=2
+				trait=slow
+			}
+			modifier={
+				factor=2
+				trait=inbred
+			}
+			modifier={
+				factor=2
+				trait=weak
+			}
+			modifier={
+				factor=2
+				trait=gluttonous
+			}
+			modifier={
+				factor=2
+				trait=slothful
+			}
+			modifier={
+				factor=2
+				trait=wroth
+			}
+			modifier={
+				factor=2
+				trait=envious
+			}
+			modifier={
+				factor=2
+				trait=proud
+			}
+			modifier={
+				factor=2
+				trait=arbitrary
 			}
 		}
 	}
 }
 
 #Sponsor receives good news
-character_event = {
-	id = EMP.6
-	desc = EVTDESC_EMP.6
-	title = EVTTITLE_EMP.6
-	picture = GFX_evt_courtiers_talking
+character_event={
+	id=EMP.6
+	desc=EVTDESC_EMP.6
+	title=EVTTITLE_EMP.6
+	picture=GFX_evt_courtiers_talking
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	immediate = {
-		FROM = { add_trait = inner_court }
+	immediate={
+		FROM={ add_trait=inner_court }
+		k_confucian={
+			holder_scope={
+				opinion={
+					modifier=opinion_generous_donation
+					who=ROOT
+					years=5
+				}
+			}
+		}
 	}
 	
-	option = {
-		name = EXCELLENT
-		piety = 20
-		if = { limit = { FROM = { dynasty = ROOT } } piety = 30 }
-		c_empress = {
-			holder_scope = {
-				FROM = { move_character = PREV }
+	option={
+		name=EXCELLENT
+		piety=20
+		if={ limit={ FROM={ dynasty=ROOT } } piety=30 }
+		c_empress={
+			holder_scope={
+				FROM={ move_character=PREV }
 			}
 		}
 	}
 }
 
 #Sponsor receives bad news
-character_event = {
-	id = EMP.7
-	desc = EVTDESC_EMP.7
-	title = EVTTITLE_EMP.7
-	picture = GFX_evt_courtiers_talking
+character_event={
+	id=EMP.7
+	desc=EVTDESC_EMP.7
+	title=EVTTITLE_EMP.7
+	picture=GFX_evt_courtiers_talking
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	option = {
-		name = OH
+	option={
+		name=OH
 	}
 }
 
 ###8
 	
 #Adopt Confucian?
-character_event = {
-	id = EMP.9
-	desc = EVTDESC_EMP.9
-	title = EVTTITLE_EMP.9
-	picture = GFX_evt_religious_exultation
+character_event={
+	id=EMP.9
+	desc=EVTDESC_EMP.9
+	title=EVTTITLE_EMP.9
+	picture=GFX_evt_religious_exultation
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	prisoner = no
+	prisoner=no
 	
-	trigger = {
-		has_landed_title = k_confucian
+	trigger={
+		has_landed_title=k_confucian
 	}
 	
-	option = {
-		name = ACCEPT
-		religion = confucian
-		any_playable_ruler = {
-			limit = { is_liege_or_above = ROOT }
-			character_event = { id = EMP.10 }
+	option={
+		name=ACCEPT
+		religion=confucian
+		any_playable_ruler={
+			limit={ is_liege_or_above=ROOT }
+			character_event={ id=EMP.10 }
 		}
 	}
-	option = {
-		name = NOTHX
-		any_playable_ruler = {
-			limit = { is_liege_or_above = ROOT }
-			character_event = { id = EMP.10 }
+	option={
+		name=NOTHX
+		any_playable_ruler={
+			limit={ is_liege_or_above=ROOT }
+			character_event={ id=EMP.10 }
 		}
 	}
 }		
 
 ### FORCE ABDICATION ###
-character_event = {
-	id = EMP.10
-	desc = EVTDESC_EMP.10
-	title = EVTTITLE_EMP.10
-	picture = GFX_evt_throne_room
+character_event={
+	id=EMP.10
+	desc=EVTDESC_EMP.10
+	title=EVTTITLE_EMP.10
+	picture=GFX_evt_throne_room
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
 	
-	option = { # Supports Abdication
-		name = EXCELLENT
+	option={ # Supports Abdication
+		name=EXCELLENT
 		
-		ai_chance = {
-			factor = 1
+		ai_chance={
+			factor=1
 			
 			# Premier
 			
-			modifier = {
-				factor = 2
-				religion = FROM
+			modifier={
+				factor=2
+				religion=FROM
 			}
-			modifier = {
-				factor = 1.05
-				ROOT = { opinion = { who = FROM value = 25 } }
+			modifier={
+				factor=1.05
+				ROOT={ opinion={ who=FROM value=25 } }
 			}
-			modifier = {
-				factor = 1.05
-				ROOT = { opinion = { who = FROM value = 50 } }
+			modifier={
+				factor=1.05
+				ROOT={ opinion={ who=FROM value=50 } }
 			}
-			modifier = {
-				factor = 1.05
-				ROOT = { opinion = { who = FROM value = 75 } }
+			modifier={
+				factor=1.05
+				ROOT={ opinion={ who=FROM value=75 } }
 			}
-			modifier = {
-				factor = 1.05
-				ROOT = { opinion = { who = FROM value = 100 } }
+			modifier={
+				factor=1.05
+				ROOT={ opinion={ who=FROM value=100 } }
 			}
-			modifier = {
-				factor = 2
-				ROOT = {
-					is_close_relative = FROM
+			modifier={
+				factor=2
+				ROOT={
+					is_close_relative=FROM
 				}
 			}
-			modifier = {
-				factor = 1.15
-				dynasty = FROM
+			modifier={
+				factor=1.15
+				dynasty=FROM
 			}
-			modifier = {
-				factor = 2
-				ROOT = {
-					is_child_of = FROM
+			modifier={
+				factor=2
+				ROOT={
+					is_child_of=FROM
 				}
 			}
-			modifier = {
-				factor = 2
-				ROOT = {
-					is_father = FROM
+			modifier={
+				factor=2
+				ROOT={
+					is_father=FROM
 				}
 			}
-			modifier = {
-				factor = 2
-				ROOT = {
-					is_friend = FROM
+			modifier={
+				factor=2
+				ROOT={
+					is_friend=FROM
 				}
 			}
-			modifier = {
-				factor = 2
-				ROOT = {
-					is_lover = FROM
+			modifier={
+				factor=2
+				ROOT={
+					is_lover=FROM
 				}
 			}
-			modifier = {
-				factor = 0
-				ROOT = {
-					is_foe = FROM
+			modifier={
+				factor=0
+				ROOT={
+					is_foe=FROM
 				}
 			}
 		}
 	}
 	
-	option = { # Against Abdication
-		name = TRAITORS
+	option={ # Against Abdication
+		name=TRAITORS
 		
-		opinion = {
-			who = FROM
-			modifier = opinion_traitor
+		opinion={
+			who=FROM
+			modifier=opinion_traitor
 		}
 		
-		ai_chance = {
-			factor = 1
+		ai_chance={
+			factor=1
 			
 			# PREMIER
 			
-			modifier = {
-				factor = 2
-				religion = confucian
+			modifier={
+				factor=2
+				religion=confucian
 			}
-			modifier = {
-				factor = 2
-				AND = {
-					culture = han
-					NOT = { culture = FROM }
+			modifier={
+				factor=2
+				AND={
+					culture=han
+					NOT={ culture=FROM }
 				}
 			}
-			modifier = {
-				factor = 2
-				FROM = {
-					is_foe = ROOT
+			modifier={
+				factor=2
+				FROM={
+					is_foe=ROOT
 				}
 			}
-			modifier = {
-				factor = 2
-				dynasty = 2
+			modifier={
+				factor=2
+				dynasty=2
 			}
-			modifier = {
-				factor = 2
-				trait = zealous
+			modifier={
+				factor=2
+				trait=zealous
 			}
-			modifier = {
-				factor = 1.05
-				trait = ambitious
+			modifier={
+				factor=1.05
+				trait=ambitious
 			}
-			modifier = {
-				factor = 1.05
-				trait = chivalrous
+			modifier={
+				factor=1.05
+				trait=chivalrous
 			}
-			modifier = {
-				factor = 1.05
-				trait = envious
+			modifier={
+				factor=1.05
+				trait=envious
 			}
-			modifier = {
-				factor = 1.05
-				trait = honest
+			modifier={
+				factor=1.05
+				trait=honest
 			}
-			modifier = {
-				factor = 1.05
-				trait = just
+			modifier={
+				factor=1.05
+				trait=just
 			}
 		}
 	}
 	
-	option = { # Ignore
-		name = OH
+	option={ # Ignore
+		name=OH
 		
-		set_character_flag = neutral
+		set_character_flag=neutral
 		
-		ai_chance = {
-			factor = 1
+		ai_chance={
+			factor=1
 			
-			modifier = {
-				factor = 10
-				NOT = { religion = FROM }
+			modifier={
+				factor=10
+				NOT={ religion=FROM }
 			}
-			modifier = {
-				factor = 10
-				NOT = { culture = FROM }
+			modifier={
+				factor=10
+				NOT={ culture=FROM }
 			}
-			modifier = {
-				factor = 1.15
-				trait = arbitrary
+			modifier={
+				factor=1.15
+				trait=arbitrary
 			}
-			modifier = {
-				factor = 1.15
-				trait = content
+			modifier={
+				factor=1.15
+				trait=content
 			}
-			modifier = {
-				factor = 1.15
-				trait = craven
+			modifier={
+				factor=1.15
+				trait=craven
 			}
-			modifier = {
-				factor = 1.15
-				trait = gluttonous
+			modifier={
+				factor=1.15
+				trait=gluttonous
 			}
-			modifier = {
-				factor = 1.5
-				trait = slothful
+			modifier={
+				factor=1.5
+				trait=slothful
 			}
 		}
 	}
 }
 
 #Emperor calls for Exam
-character_event = {
-	id = EMP.11
-	desc = EVTDESC_EMP.11
-	title = EVTTITLE_EMP.11
-	picture = GFX_evt_throne_room
+character_event={
+	id=EMP.11
+	desc=EVTDESC_EMP.11
+	title=EVTTITLE_EMP.11
+	picture=GFX_evt_throne_room
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	prisoner = no
+	prisoner=no
 	
-	option = {
-		name = OK
+	option={
+		name=OK
 	}
 }
 
 #Emperor holds Exam
-character_event = {
-	id = EMP.12
-	desc = EVTDESC_EMP.12
-	title = EVTTITLE_EMP.12
-	picture = GFX_evt_throne_room
+character_event={
+	id=EMP.12
+	desc=EVTDESC_EMP.12
+	title=EVTTITLE_EMP.12
+	picture=GFX_evt_throne_room
 	
-	prisoner = no
-	war = no
-	has_global_flag = exam_called
+	prisoner=no
+	war=no
+	has_global_flag=exam_called
 	
-	trigger = {
-		has_landed_title = k_confucian
-		in_command = no
+	trigger={
+		has_landed_title=k_confucian
+		in_command=no
 	}
 	
-	mean_time_to_happen = {
-		months = 3
+	mean_time_to_happen={
+		months=3
 	}
 	
-	immediate = {
-		clr_global_flag = exam_called
+	immediate={
+		clr_global_flag=exam_called
 	}
 	
-	option = {
-		name = OK
-		hidden_tooltip = {
-			any_playable_ruler = {
-				limit = {
-					religion_head = { has_landed_title = k_confucian }
-					NOT = { real_tier = emperor }
-					NOT = { character = ROOT }
-					top_liege = {
-						NAND = {
-							real_tier = emperor
-							OR = {
-								primary_title = {
-									has_title_flag = premier_title
+	option={
+		name=OK
+		hidden_tooltip={
+			any_playable_ruler={
+				limit={
+					religion_head={ has_landed_title=k_confucian }
+					NOT={ real_tier=emperor }
+					NOT={ character=ROOT }
+					top_liege={
+						NAND={
+							real_tier=emperor
+							OR={
+								primary_title={
+									has_title_flag=premier_title
 								}
-								has_landed_title = k_confucian
+								has_landed_title=k_confucian
 							}
 						}
 					}
 				}
-				any_realm_character = {
-					limit = {
-						is_ruler = no
-						prisoner = no
-						in_command = no
-						is_adult = yes
-						is_female = no
-						has_epidemic = no
-						NOT = { trait = kinslayer }
-						has_character_flag = exam_candidate
+				any_realm_character={
+					limit={
+						is_ruler=no
+						prisoner=no
+						in_command=no
+						is_adult=yes
+						is_female=no
+						has_epidemic=no
+						NOT={ trait=kinslayer }
+						has_character_flag=exam_candidate
 					}
-					clr_character_flag = exam_candidate						
-					character_event = { id = EMP.13 }
+					clr_character_flag=exam_candidate						
+					character_event={ id=EMP.13 }
 				}
 			}
 		}
@@ -1109,533 +1116,533 @@ character_event = {
 }
 
 #Candidates take test
-character_event = {
-	id = EMP.13
+character_event={
+	id=EMP.13
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	immediate = {
-		add_trait = gentleman_0
+	immediate={
+		add_trait=gentleman_0
 	}
 	
-	option = {
-		name = EXCELLENT
+	option={
+		name=EXCELLENT
 		
-		random_list = {
-			40 = {
-				host = {
-					character_event = { id = EMP.14 }
+		random_list={
+			40={
+				host={
+					character_event={ id=EMP.14 }
 				}
-				e_china = {
-					holder_scope = {
-						ROOT = { move_character = PREV }
+				e_china={
+					holder_scope={
+						ROOT={ move_character=PREV }
 					}
 				}
 			}
-			60 = {
-				host = {
-					character_event = { id = EMP.15 }
+			60={
+				host={
+					character_event={ id=EMP.15 }
 				}
 			}
 		}
 		
-		ai_chance = {
-			factor = 1
-			modifier = {
-				factor = 4
-				trait = genius
+		ai_chance={
+			factor=1
+			modifier={
+				factor=4
+				trait=genius
 			}
-			modifier = {
-				factor = 2
-				trait = quick
+			modifier={
+				factor=2
+				trait=quick
 			}
-			modifier = {
-				factor = 2
-				trait = ambitious
+			modifier={
+				factor=2
+				trait=ambitious
 			}
-			modifier = {
-				factor = 2
-				trait = patient
+			modifier={
+				factor=2
+				trait=patient
 			}
-			modifier = {
-				factor = 2
-				trait = diligent
+			modifier={
+				factor=2
+				trait=diligent
 			}
-			modifier = {
-				factor = 2
-				trait = temperate
+			modifier={
+				factor=2
+				trait=temperate
 			}
-			modifier = {
-				factor = 2
-				trait = chaste
+			modifier={
+				factor=2
+				trait=chaste
 			}
-			modifier = {
-				factor = 2
-				trait = zealous
+			modifier={
+				factor=2
+				trait=zealous
 			}
-			modifier = {
-				factor = 2
-				trait = ugly
+			modifier={
+				factor=2
+				trait=ugly
 			}
 		}
 	}
-	option = {
-		name = OK
+	option={
+		name=OK
 		
-		random_list = {
-			20 = {
-				host = {
-					character_event = { id = EMP.14 }
+		random_list={
+			20={
+				host={
+					character_event={ id=EMP.14 }
 				}
-				e_china = {
-					holder_scope = {
-						ROOT = { move_character = PREV }
+				e_china={
+					holder_scope={
+						ROOT={ move_character=PREV }
 					}
 				}
 			}
-			80 = {
-				host = {
-					character_event = { id = EMP.15 }
+			80={
+				host={
+					character_event={ id=EMP.15 }
 				}
 			}
 		}
 		
-		ai_chance = {
-			factor = 1
-			modifier = {
-				factor = 2
-				trait = honest
+		ai_chance={
+			factor=1
+			modifier={
+				factor=2
+				trait=honest
 			}
-			modifier = {
-				factor = 2
-				trait = ambitious
+			modifier={
+				factor=2
+				trait=ambitious
 			}
-			modifier = {
-				factor = 2
-				trait = patient
+			modifier={
+				factor=2
+				trait=patient
 			}
-			modifier = {
-				factor = 2
-				trait = humble
+			modifier={
+				factor=2
+				trait=humble
 			}
-			modifier = {
-				factor = 2
-				trait = cynical
+			modifier={
+				factor=2
+				trait=cynical
 			}
-			modifier = {
-				factor = 2
-				trait = ugly
+			modifier={
+				factor=2
+				trait=ugly
 			}
 		}
 	}
-	option = {
-		name = OHNO
+	option={
+		name=OHNO
 		
-		random_list = {
-			10 = {
-				host = {
-					character_event = { id = EMP.14 }
+		random_list={
+			10={
+				host={
+					character_event={ id=EMP.14 }
 				}
-				e_china = {
-					holder_scope = {
-						ROOT = { move_character = PREV }
+				e_china={
+					holder_scope={
+						ROOT={ move_character=PREV }
 					}
 				}
 			}
-			90 = {
-				host = {
-					character_event = { id = EMP.15 }
+			90={
+				host={
+					character_event={ id=EMP.15 }
 				}
 			}
 		}
 		
-		ai_chance = {
-			factor = 1
-			modifier = {
-				factor = 2
-				trait = content
+		ai_chance={
+			factor=1
+			modifier={
+				factor=2
+				trait=content
 			}
-			modifier = {
-				factor = 2
-				trait = patient
+			modifier={
+				factor=2
+				trait=patient
 			}
-			modifier = {
-				factor = 2
-				trait = deceitful
+			modifier={
+				factor=2
+				trait=deceitful
 			}
-			modifier = {
-				factor = 2
-				trait = proud
+			modifier={
+				factor=2
+				trait=proud
 			}
-			modifier = {
-				factor = 2
-				trait = fair
+			modifier={
+				factor=2
+				trait=fair
 			}
 		}
 	}
-	option = {
-		name = CURSES
+	option={
+		name=CURSES
 		
-		random_list = {
-			5 = {
-				host = {
-					character_event = { id = EMP.14 }
+		random_list={
+			5={
+				host={
+					character_event={ id=EMP.14 }
 				}
-				e_china = {
-					holder_scope = {
-						ROOT = { move_character = PREV }
+				e_china={
+					holder_scope={
+						ROOT={ move_character=PREV }
 					}
 				}
 			}
-			95 = {
-				host = {
-					character_event = { id = EMP.15 }
+			95={
+				host={
+					character_event={ id=EMP.15 }
 				}
 			}
 		}
 		
-		ai_chance = {
-			factor = 1
-			modifier = {
-				factor = 2
-				trait = envious
+		ai_chance={
+			factor=1
+			modifier={
+				factor=2
+				trait=envious
 			}
-			modifier = {
-				factor = 2
-				trait = wroth
+			modifier={
+				factor=2
+				trait=wroth
 			}
-			modifier = {
-				factor = 2
-				trait = slow
+			modifier={
+				factor=2
+				trait=slow
 			}
-			modifier = {
-				factor = 2
-				trait = content
+			modifier={
+				factor=2
+				trait=content
 			}
-			modifier = {
-				factor = 2
-				trait = slothful
+			modifier={
+				factor=2
+				trait=slothful
 			}
-			modifier = {
-				factor = 2
-				trait = gluttonous
+			modifier={
+				factor=2
+				trait=gluttonous
 			}
-			modifier = {
-				factor = 2
-				trait = arbitrary
+			modifier={
+				factor=2
+				trait=arbitrary
 			}
 		}
 	}
 }
 
 #Sponsor receives good news
-character_event = {
-	id = EMP.14
-	desc = EVTDESC_EMP.14
-	title = EVTTITLE_EMP.14
-	picture = GFX_evt_courtiers_talking
+character_event={
+	id=EMP.14
+	desc=EVTDESC_EMP.14
+	title=EVTTITLE_EMP.14
+	picture=GFX_evt_courtiers_talking
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	prisoner = no
+	prisoner=no
 	
-	option = {
-		name = EXCELLENT
+	option={
+		name=EXCELLENT
 		
-		hidden_tooltip = {
-			random_list = {
-				5 = {
-					prestige = 100
-					FROM = {
-						prestige = 100
-						remove_trait = gentleman_0
-						remove_trait = gentleman_1
-						remove_trait = gentleman_2
-						add_trait = gentleman_3
+		hidden_tooltip={
+			random_list={
+				5={
+					prestige=100
+					FROM={
+						prestige=100
+						remove_trait=gentleman_0
+						remove_trait=gentleman_1
+						remove_trait=gentleman_2
+						add_trait=gentleman_3
 					}
-					if = {
-						limit = {
-							OR = {
-								FROM = { trait = amateurish_plotter }
-								FROM = { trait = flamboyant_schemer }
-								FROM = { trait = intricate_webweaver }
+					if={
+						limit={
+							OR={
+								FROM={ trait=amateurish_plotter }
+								FROM={ trait=flamboyant_schemer }
+								FROM={ trait=intricate_webweaver }
 							}
 						}
-						FROM = {
-							remove_trait = amateurish_plotter
-							remove_trait = flamboyant_schemer
-							remove_trait = intricate_webweaver
-							add_trait = elusive_shadow
+						FROM={
+							remove_trait=amateurish_plotter
+							remove_trait=flamboyant_schemer
+							remove_trait=intricate_webweaver
+							add_trait=elusive_shadow
 						}
 						break=yes
 					}
-					if = {
-						limit = {
-							OR = {
-								FROM = { trait = naive_appeaser }
-								FROM = { trait = underhanded_rogue }
-								FROM = { trait = charismatic_negotiator }
+					if={
+						limit={
+							OR={
+								FROM={ trait=naive_appeaser }
+								FROM={ trait=underhanded_rogue }
+								FROM={ trait=charismatic_negotiator }
 							}
 						}
-						FROM = {
-							remove_trait = naive_appeaser
-							remove_trait = underhanded_rogue
-							remove_trait = charismatic_negotiator
-							add_trait = grey_eminence
+						FROM={
+							remove_trait=naive_appeaser
+							remove_trait=underhanded_rogue
+							remove_trait=charismatic_negotiator
+							add_trait=grey_eminence
 						}
 						break=yes
 					}
-					if = {
-						limit = {
-							OR = {
-								FROM = { trait = indulgent_wastrel }
-								FROM = { trait = thrifty_clerk }
-								FROM = { trait = fortune_builder }
+					if={
+						limit={
+							OR={
+								FROM={ trait=indulgent_wastrel }
+								FROM={ trait=thrifty_clerk }
+								FROM={ trait=fortune_builder }
 							}
 						}
-						FROM = {
-							remove_trait = indulgent_wastrel
-							remove_trait = thrifty_clerk
-							remove_trait = fortune_builder
-							add_trait = midas_touched
+						FROM={
+							remove_trait=indulgent_wastrel
+							remove_trait=thrifty_clerk
+							remove_trait=fortune_builder
+							add_trait=midas_touched
 						}
 						break=yes
 					}
-					if = {
-						limit = {
-							OR = {
-								FROM = { trait = misguided_warrior }
-								FROM = { trait = tough_soldier }
-								FROM = { trait = skilled_tactician }
+					if={
+						limit={
+							OR={
+								FROM={ trait=misguided_warrior }
+								FROM={ trait=tough_soldier }
+								FROM={ trait=skilled_tactician }
 							}
 						}
-						FROM = {
-							remove_trait = misguided_warrior
-							remove_trait = tough_soldier
-							remove_trait = skilled_tactician
-							add_trait = brilliant_strategist
+						FROM={
+							remove_trait=misguided_warrior
+							remove_trait=tough_soldier
+							remove_trait=skilled_tactician
+							add_trait=brilliant_strategist
 						}
 						break=yes
 					}
-					if = {
-						limit = {
-							OR = {
-								FROM = { trait = detached_priest }
-								FROM = { trait = martial_cleric }
-								FROM = { trait = scholarly_theologian }
+					if={
+						limit={
+							OR={
+								FROM={ trait=detached_priest }
+								FROM={ trait=martial_cleric }
+								FROM={ trait=scholarly_theologian }
 							}
 						}
-						FROM = {
-							remove_trait = detached_priest
-							remove_trait = martial_cleric
-							remove_trait = scholarly_theologian
-							add_trait = mastermind_theologian
+						FROM={
+							remove_trait=detached_priest
+							remove_trait=martial_cleric
+							remove_trait=scholarly_theologian
+							add_trait=mastermind_theologian
 						}
 						break=yes
 					}
 				}
-				10 = {
-					prestige = 40
-					FROM = {
-						prestige = 40
-						remove_trait = gentleman_0
-						remove_trait = gentleman_1
-						add_trait = gentleman_2
+				10={
+					prestige=40
+					FROM={
+						prestige=40
+						remove_trait=gentleman_0
+						remove_trait=gentleman_1
+						add_trait=gentleman_2
 					}
-					if = {
-						limit = {
-							OR = {
-								FROM = { trait = amateurish_plotter }
-								FROM = { trait = flamboyant_schemer }
+					if={
+						limit={
+							OR={
+								FROM={ trait=amateurish_plotter }
+								FROM={ trait=flamboyant_schemer }
 							}
 						}
-						FROM = {
-							remove_trait = amateurish_plotter
-							remove_trait = flamboyant_schemer
-							add_trait = intricate_webweaver
+						FROM={
+							remove_trait=amateurish_plotter
+							remove_trait=flamboyant_schemer
+							add_trait=intricate_webweaver
 						}
 						break=yes
 					}
-					if = {
-						limit = {
-							OR = {
-								FROM = { trait = naive_appeaser }
-								FROM = { trait = underhanded_rogue }
+					if={
+						limit={
+							OR={
+								FROM={ trait=naive_appeaser }
+								FROM={ trait=underhanded_rogue }
 							}
 						}
-						FROM = {
-							remove_trait = naive_appeaser
-							remove_trait = underhanded_rogue
-							add_trait = charismatic_negotiator
+						FROM={
+							remove_trait=naive_appeaser
+							remove_trait=underhanded_rogue
+							add_trait=charismatic_negotiator
 						}
 						break=yes
 					}
-					if = {
-						limit = {
-							OR = {
-								FROM = { trait = indulgent_wastrel }
-								FROM = { trait = thrifty_clerk }
+					if={
+						limit={
+							OR={
+								FROM={ trait=indulgent_wastrel }
+								FROM={ trait=thrifty_clerk }
 							}
 						}
-						FROM = {
-							remove_trait = indulgent_wastrel
-							remove_trait = thrifty_clerk
-							add_trait = fortune_builder
+						FROM={
+							remove_trait=indulgent_wastrel
+							remove_trait=thrifty_clerk
+							add_trait=fortune_builder
 						}
 						break=yes
 					}
-					if = {
-						limit = {
-							OR = {
-								FROM = { trait = misguided_warrior }
-								FROM = { trait = tough_soldier }
+					if={
+						limit={
+							OR={
+								FROM={ trait=misguided_warrior }
+								FROM={ trait=tough_soldier }
 							}
 						}
-						FROM = {
-							remove_trait = misguided_warrior
-							remove_trait = tough_soldier
-							add_trait = skilled_tactician
+						FROM={
+							remove_trait=misguided_warrior
+							remove_trait=tough_soldier
+							add_trait=skilled_tactician
 						}
 						break=yes
 					}
-					if = {
-						limit = {
-							OR = {
-								FROM = { trait = detached_priest }
-								FROM = { trait = martial_cleric }
+					if={
+						limit={
+							OR={
+								FROM={ trait=detached_priest }
+								FROM={ trait=martial_cleric }
 							}
 						}
-						FROM = {
-							remove_trait = detached_priest
-							remove_trait = martial_cleric
-							add_trait = scholarly_theologian
+						FROM={
+							remove_trait=detached_priest
+							remove_trait=martial_cleric
+							add_trait=scholarly_theologian
 						}
 						break=yes
 					}
 				}
-				15 = {
-					prestige = 20
-					FROM = {
-						prestige = 20
-						remove_trait = gentleman_0
-						remove_trait = gentleman_1
-						add_trait = gentleman_2
+				15={
+					prestige=20
+					FROM={
+						prestige=20
+						remove_trait=gentleman_0
+						remove_trait=gentleman_1
+						add_trait=gentleman_2
 					}
-					if = {
-						limit = {
-							FROM = { trait = amateurish_plotter }
+					if={
+						limit={
+							FROM={ trait=amateurish_plotter }
 						}
-						FROM = {
-							remove_trait = amateurish_plotter
-							add_trait = flamboyant_schemer
+						FROM={
+							remove_trait=amateurish_plotter
+							add_trait=flamboyant_schemer
 						}
 						break=yes
 					}
-					if = {
-						limit = {
-							FROM = { trait = naive_appeaser }
+					if={
+						limit={
+							FROM={ trait=naive_appeaser }
 						}
-						FROM = {
-							remove_trait = naive_appeaser
-							add_trait = underhanded_rogue
-						}
-						break=yes
-					}
-					if = {
-						limit = {
-							FROM = { trait = indulgent_wastrel }
-						}
-						FROM = {
-							remove_trait = indulgent_wastrel
-							add_trait = thrifty_clerk
+						FROM={
+							remove_trait=naive_appeaser
+							add_trait=underhanded_rogue
 						}
 						break=yes
 					}
-					if = {
-						limit = {
-							FROM = { trait = misguided_warrior }
+					if={
+						limit={
+							FROM={ trait=indulgent_wastrel }
 						}
-						FROM = {
-							remove_trait = misguided_warrior
-							add_trait = tough_soldier
-						}
-						break=yes
-					}
-					if = {
-						limit = {
-							FROM = { trait = detached_priest }
-						}
-						FROM = {
-							remove_trait = detached_priest
-							add_trait = martial_cleric
+						FROM={
+							remove_trait=indulgent_wastrel
+							add_trait=thrifty_clerk
 						}
 						break=yes
 					}
-				}
-				20 = {
-					prestige = 10
-					FROM = {
-						prestige = 10
-						remove_trait = gentleman_0
-						add_trait = gentleman_1
-					}
-					if = {
-						limit = {
-							FROM = { trait = amateurish_plotter }
+					if={
+						limit={
+							FROM={ trait=misguided_warrior }
 						}
-						FROM = {
-							remove_trait = amateurish_plotter
-							add_trait = flamboyant_schemer
+						FROM={
+							remove_trait=misguided_warrior
+							add_trait=tough_soldier
 						}
 						break=yes
 					}
-					if = {
-						limit = {
-							FROM = { trait = naive_appeaser }
+					if={
+						limit={
+							FROM={ trait=detached_priest }
 						}
-						FROM = {
-							remove_trait = naive_appeaser
-							add_trait = underhanded_rogue
-						}
-						break=yes
-					}
-					if = {
-						limit = {
-							FROM = { trait = indulgent_wastrel }
-						}
-						FROM = {
-							remove_trait = indulgent_wastrel
-							add_trait = thrifty_clerk
-						}
-						break=yes
-					}
-					if = {
-						limit = {
-							FROM = { trait = misguided_warrior }
-						}
-						FROM = {
-							remove_trait = misguided_warrior
-							add_trait = tough_soldier
-						}
-						break=yes
-					}
-					if = {
-						limit = {
-							FROM = { trait = detached_priest }
-						}
-						FROM = {
-							remove_trait = detached_priest
-							add_trait = martial_cleric
+						FROM={
+							remove_trait=detached_priest
+							add_trait=martial_cleric
 						}
 						break=yes
 					}
 				}
-				50 = {
-					prestige = 5
-					FROM = {
-						prestige = 5
-						remove_trait = gentleman_0
-						add_trait = gentleman_1
+				20={
+					prestige=10
+					FROM={
+						prestige=10
+						remove_trait=gentleman_0
+						add_trait=gentleman_1
+					}
+					if={
+						limit={
+							FROM={ trait=amateurish_plotter }
+						}
+						FROM={
+							remove_trait=amateurish_plotter
+							add_trait=flamboyant_schemer
+						}
+						break=yes
+					}
+					if={
+						limit={
+							FROM={ trait=naive_appeaser }
+						}
+						FROM={
+							remove_trait=naive_appeaser
+							add_trait=underhanded_rogue
+						}
+						break=yes
+					}
+					if={
+						limit={
+							FROM={ trait=indulgent_wastrel }
+						}
+						FROM={
+							remove_trait=indulgent_wastrel
+							add_trait=thrifty_clerk
+						}
+						break=yes
+					}
+					if={
+						limit={
+							FROM={ trait=misguided_warrior }
+						}
+						FROM={
+							remove_trait=misguided_warrior
+							add_trait=tough_soldier
+						}
+						break=yes
+					}
+					if={
+						limit={
+							FROM={ trait=detached_priest }
+						}
+						FROM={
+							remove_trait=detached_priest
+							add_trait=martial_cleric
+						}
+						break=yes
+					}
+				}
+				50={
+					prestige=5
+					FROM={
+						prestige=5
+						remove_trait=gentleman_0
+						add_trait=gentleman_1
 					}
 				}
 			}
@@ -1644,3368 +1651,3500 @@ character_event = {
 }
 
 #Sponsor receives bad news
-character_event = {
-	id = EMP.15
-	desc = EVTDESC_EMP.15
-	title = EVTTITLE_EMP.15
-	picture = GFX_evt_courtiers_talking
+character_event={
+	id=EMP.15
+	desc=EVTDESC_EMP.15
+	title=EVTTITLE_EMP.15
+	picture=GFX_evt_courtiers_talking
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	prisoner = no
+	prisoner=no
 	
-	option = {
-		name = OH
+	option={
+		name=OH
 	}
 }
 
 ### IMPERIAL TRIBUTE ###
 #Does the Emperor Want It?
-character_event = {
-	id = EMP.16
-	desc = EVTDESC_EMP.16
-	title = EVTTITLE_EMP.16
-	picture = GFX_evt_throne_room_byzantine
+character_event={
+	id=EMP.16
+	desc=EVTDESC_EMP.16
+	title=EVTTITLE_EMP.16
+	picture=GFX_evt_throne_room_byzantine
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	prisoner = no
+	prisoner=no
 	
-	trigger = {
-		OR = {
-			AND = {
-				has_landed_title = k_confucian
-				OR = {
-					AND = {
-						has_landed_title = e_han
-						e_china = { has_holder = yes }
+	trigger={
+		OR={
+			AND={
+				has_landed_title=k_confucian
+				OR={
+					AND={
+						has_landed_title=e_han
+						e_china={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_chen
-						e_k_chen = { has_holder = yes }
+					AND={
+						has_landed_title=e_chen
+						e_k_chen={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_chu
-						e_k_chu = { has_holder = yes }
+					AND={
+						has_landed_title=e_chu
+						e_k_chu={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_dai
-						e_k_dai = { has_holder = yes }
+					AND={
+						has_landed_title=e_dai
+						e_k_dai={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_han
-						e_k_han = { has_holder = yes }
+					AND={
+						has_landed_title=e_han
+						e_k_han={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_jin
-						e_k_jin = { has_holder = yes }
+					AND={
+						has_landed_title=e_jin
+						e_k_jin={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_liang
-						e_k_liang = { has_holder = yes }
+					AND={
+						has_landed_title=e_liang
+						e_k_liang={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_liao
-						e_k_liao = { has_holder = yes }
+					AND={
+						has_landed_title=e_liao
+						e_k_liao={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_min
-						e_k_min = { has_holder = yes }
+					AND={
+						has_landed_title=e_min
+						e_k_min={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_qi
-						e_k_qi = { has_holder = yes }
+					AND={
+						has_landed_title=e_qi
+						e_k_qi={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_qin
-						e_k_qin = { has_holder = yes }
+					AND={
+						has_landed_title=e_qin
+						e_k_qin={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_qing
-						e_k_qing = { has_holder = yes }
+					AND={
+						has_landed_title=e_qing
+						e_k_qing={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_shu
-						e_k_shu = { has_holder = yes }
+					AND={
+						has_landed_title=e_shu
+						e_k_shu={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_song
-						e_k_song = { has_holder = yes }
+					AND={
+						has_landed_title=e_song
+						e_k_song={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_sui
-						e_k_sui = { has_holder = yes }
+					AND={
+						has_landed_title=e_sui
+						e_k_sui={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_tan
-						e_k_tan = { has_holder = yes }
+					AND={
+						has_landed_title=e_tan
+						e_k_tan={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_tang
-						e_k_tang = { has_holder = yes }
+					AND={
+						has_landed_title=e_tang
+						e_k_tang={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_wei
-						e_k_wei = { has_holder = yes }
+					AND={
+						has_landed_title=e_wei
+						e_k_wei={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_wu
-						e_k_wu = { has_holder = yes }
+					AND={
+						has_landed_title=e_wu
+						e_k_wu={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_wuyue
-						e_k_wuyue = { has_holder = yes }
+					AND={
+						has_landed_title=e_wuyue
+						e_k_wuyue={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_xia
-						e_k_xia = { has_holder = yes }
+					AND={
+						has_landed_title=e_xia
+						e_k_xia={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_yan
-						e_k_yan = { has_holder = yes }
+					AND={
+						has_landed_title=e_yan
+						e_k_yan={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_zhao
-						e_k_zhao = { has_holder = yes }
+					AND={
+						has_landed_title=e_zhao
+						e_k_zhao={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_zhong
-						e_k_zhong = { has_holder = yes }
+					AND={
+						has_landed_title=e_zhong
+						e_k_zhong={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_zhou
-						e_k_zhou = { has_holder = yes }
+					AND={
+						has_landed_title=e_zhou
+						e_k_zhou={ has_holder=yes }
 					}
 				}
 			}
-			AND = {
-				real_tier = emperor
-				is_feudal = yes
-				capital_scope = { region = world_china }
-				primary_title = {
-					NOR = {
-						has_title_flag = premier_title
-						has_title_flag = warlord_title
+			AND={
+				real_tier=emperor
+				is_feudal=yes
+				capital_scope={ region=world_china }
+				primary_title={
+					NOR={
+						has_title_flag=premier_title
+						has_title_flag=warlord_title
 					}
 				}
 			}
 		}
-		in_command = no
+		in_command=no
 	}
 	
-	option = {
-		name = EVTOPTA_EMP.16 #Impose Taxes
-		hidden_tooltip = {
-			if = {
-				limit = {
-					has_landed_title = e_han
-					e_china = { has_holder = yes }
+	option={
+		name=EVTOPTA_EMP.16 #Impose Taxes
+		hidden_tooltip={
+			if={
+				limit={
+					has_landed_title=e_han
+					e_china={ has_holder=yes }
 				}
-				e_china = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_china={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.17
+							character_event={
+								id=EMP.17
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_chen
-					e_k_chen = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_chen
+					e_k_chen={ has_holder=yes }
 				}
-				e_k_chen = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_chen={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.17
+							character_event={
+								id=EMP.17
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_chu
-					e_k_chu = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_chu
+					e_k_chu={ has_holder=yes }
 				}
-				e_k_chu = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_chu={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.17
+							character_event={
+								id=EMP.17
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_dai
-					e_k_dai = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_dai
+					e_k_dai={ has_holder=yes }
 				}
-				e_k_dai = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_dai={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.17
+							character_event={
+								id=EMP.17
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_han
-					e_k_han = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_han
+					e_k_han={ has_holder=yes }
 				}
-				e_k_han = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_han={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.17
+							character_event={
+								id=EMP.17
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_jin
-					e_k_jin = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_jin
+					e_k_jin={ has_holder=yes }
 				}
-				e_k_jin = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_jin={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.17
+							character_event={
+								id=EMP.17
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_liang
-					e_k_liang = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_liang
+					e_k_liang={ has_holder=yes }
 				}
-				e_k_liang = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_liang={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.17
+							character_event={
+								id=EMP.17
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_liao
-					e_k_liao = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_liao
+					e_k_liao={ has_holder=yes }
 				}
-				e_k_liao = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_liao={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.17
+							character_event={
+								id=EMP.17
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_min
-					e_k_min = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_min
+					e_k_min={ has_holder=yes }
 				}
-				e_k_min = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_min={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.17
+							character_event={
+								id=EMP.17
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_qi
-					e_k_qi = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_qi
+					e_k_qi={ has_holder=yes }
 				}
-				e_k_qi = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_qi={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.17
+							character_event={
+								id=EMP.17
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_qin
-					e_k_qin = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_qin
+					e_k_qin={ has_holder=yes }
 				}
-				e_k_qin = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_qin={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.17
+							character_event={
+								id=EMP.17
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_qing
-					e_k_qing = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_qing
+					e_k_qing={ has_holder=yes }
 				}
-				e_k_qing = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_qing={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.17
+							character_event={
+								id=EMP.17
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_shu
-					e_k_shu = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_shu
+					e_k_shu={ has_holder=yes }
 				}
-				e_k_shu = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_shu={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.17
+							character_event={
+								id=EMP.17
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_song
-					e_k_song = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_song
+					e_k_song={ has_holder=yes }
 				}
-				e_k_song = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_song={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.17
+							character_event={
+								id=EMP.17
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_sui
-					e_k_sui = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_sui
+					e_k_sui={ has_holder=yes }
 				}
-				e_k_sui = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_sui={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.17
+							character_event={
+								id=EMP.17
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_tan
-					e_k_tan = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_tan
+					e_k_tan={ has_holder=yes }
 				}
-				e_k_tan = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_tan={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.17
+							character_event={
+								id=EMP.17
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_tang
-					e_k_tang = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_tang
+					e_k_tang={ has_holder=yes }
 				}
-				e_k_tang = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_tang={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.17
+							character_event={
+								id=EMP.17
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_wei
-					e_k_wei = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_wei
+					e_k_wei={ has_holder=yes }
 				}
-				e_k_wei = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_wei={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.17
+							character_event={
+								id=EMP.17
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_wu
-					e_k_wu = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_wu
+					e_k_wu={ has_holder=yes }
 				}
-				e_k_wu = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_wu={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.17
+							character_event={
+								id=EMP.17
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_wuyue
-					e_k_wuyue = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_wuyue
+					e_k_wuyue={ has_holder=yes }
 				}
-				e_k_wuyue = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_wuyue={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.17
+							character_event={
+								id=EMP.17
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_xia
-					e_k_xia = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_xia
+					e_k_xia={ has_holder=yes }
 				}
-				e_k_xia = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_xia={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.17
+							character_event={
+								id=EMP.17
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_yan
-					e_k_yan = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_yan
+					e_k_yan={ has_holder=yes }
 				}
-				e_k_yan = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_yan={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.17
+							character_event={
+								id=EMP.17
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_zhao
-					e_k_zhao = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_zhao
+					e_k_zhao={ has_holder=yes }
 				}
-				e_k_zhao = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_zhao={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.17
+							character_event={
+								id=EMP.17
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_zhong
-					e_k_zhong = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_zhong
+					e_k_zhong={ has_holder=yes }
 				}
-				e_k_zhong = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_zhong={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.17
+							character_event={
+								id=EMP.17
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_zhou
-					e_k_zhou = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_zhou
+					e_k_zhou={ has_holder=yes }
 				}
-				e_k_zhou = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_zhou={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.17
+							character_event={
+								id=EMP.17
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			any_realm_lord = {
-				limit = {
-					is_landed = yes
-					NOR = {
-						character = ROOT
-						tier = emperor
+			any_realm_lord={
+				limit={
+					is_landed=yes
+					NOR={
+						character=ROOT
+						tier=emperor
 					}
 				}
-				character_event = {
-					id = EMP.17
+				character_event={
+					id=EMP.17
 				}
 			}
 		}
-		ai_chance = {
-			factor = 1
+		ai_chance={
+			factor=1
 			
-			modifier = {
-				factor = 1.05
-				trait = greedy
+			modifier={
+				factor=1.05
+				trait=greedy
 			}
-			modifier = {
-				factor = 1.05
-				trait = envious
+			modifier={
+				factor=1.05
+				trait=envious
 			}
-			modifier = {
-				factor = 1.05
-				trait = lustful
+			modifier={
+				factor=1.05
+				trait=lustful
 			}
-			modifier = {
-				factor = 1.05
-				trait = slothful
+			modifier={
+				factor=1.05
+				trait=slothful
 			}
-			modifier = {
-				factor = 1.05
-				trait = ambitious
+			modifier={
+				factor=1.05
+				trait=ambitious
 			}
-			modifier = {
-				factor = 1.05
-				trait = dishonorable
+			modifier={
+				factor=1.05
+				trait=dishonorable
 			}
-			modifier = {
-				factor = 1.05
-				trait = selfish
+			modifier={
+				factor=1.05
+				trait=selfish
 			}
-			modifier = {
-				factor = 1.05
-				trait = tyrant
+			modifier={
+				factor=1.05
+				trait=tyrant
 			}
-			modifier = {
-				factor = 1.05
-				trait = hedonist
+			modifier={
+				factor=1.05
+				trait=hedonist
 			}
-			modifier = {
-				factor = 1.05
-				trait = gluttonous
+			modifier={
+				factor=1.05
+				trait=gluttonous
 			}
-			modifier = {
-				factor = 1.05
-				trait = wroth
+			modifier={
+				factor=1.05
+				trait=wroth
 			}
-			modifier = {
-				factor = 1.05
-				trait = cruel
+			modifier={
+				factor=1.05
+				trait=cruel
 			}
-			modifier = {
-				factor = 1.05
-				trait = cynical
+			modifier={
+				factor=1.05
+				trait=cynical
 			}
-			modifier = {
-				factor = 1.05
-				trait = ruthless
+			modifier={
+				factor=1.05
+				trait=ruthless
 			}
-			modifier = {
-				factor = 1.05
-				trait = arbitrary
+			modifier={
+				factor=1.05
+				trait=arbitrary
 			}
-			modifier = {
-				factor = 1.05
-				NOT = { wealth = 1000 }
-			}
-		}
-	}
-	option = {
-		name = EVTOPTB_EMP.16 #Request Tribute
-		hidden_tooltip = {
-			if = {
-				limit = {
-					has_landed_title = e_han
-					e_china = { has_holder = yes }
-				}
-				e_china = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
-								}
-							}
-							character_event = {
-								id = EMP.18
-							}
-						}
-					}
-				}
-				break = yes
-			}
-			if = {
-				limit = {
-					has_landed_title = e_chen
-					e_k_chen = { has_holder = yes }
-				}
-				e_k_chen = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
-								}
-							}
-							character_event = {
-								id = EMP.18
-							}
-						}
-					}
-				}
-				break = yes
-			}
-			if = {
-				limit = {
-					has_landed_title = e_chu
-					e_k_chu = { has_holder = yes }
-				}
-				e_k_chu = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
-								}
-							}
-							character_event = {
-								id = EMP.18
-							}
-						}
-					}
-				}
-				break = yes
-			}
-			if = {
-				limit = {
-					has_landed_title = e_dai
-					e_k_dai = { has_holder = yes }
-				}
-				e_k_dai = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
-								}
-							}
-							character_event = {
-								id = EMP.18
-							}
-						}
-					}
-				}
-				break = yes
-			}
-			if = {
-				limit = {
-					has_landed_title = e_han
-					e_k_han = { has_holder = yes }
-				}
-				e_k_han = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
-								}
-							}
-							character_event = {
-								id = EMP.18
-							}
-						}
-					}
-				}
-				break = yes
-			}
-			if = {
-				limit = {
-					has_landed_title = e_jin
-					e_k_jin = { has_holder = yes }
-				}
-				e_k_jin = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
-								}
-							}
-							character_event = {
-								id = EMP.18
-							}
-						}
-					}
-				}
-				break = yes
-			}
-			if = {
-				limit = {
-					has_landed_title = e_liang
-					e_k_liang = { has_holder = yes }
-				}
-				e_k_liang = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
-								}
-							}
-							character_event = {
-								id = EMP.18
-							}
-						}
-					}
-				}
-				break = yes
-			}
-			if = {
-				limit = {
-					has_landed_title = e_liao
-					e_k_liao = { has_holder = yes }
-				}
-				e_k_liao = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
-								}
-							}
-							character_event = {
-								id = EMP.18
-							}
-						}
-					}
-				}
-				break = yes
-			}
-			if = {
-				limit = {
-					has_landed_title = e_min
-					e_k_min = { has_holder = yes }
-				}
-				e_k_min = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
-								}
-							}
-							character_event = {
-								id = EMP.18
-							}
-						}
-					}
-				}
-				break = yes
-			}
-			if = {
-				limit = {
-					has_landed_title = e_qi
-					e_k_qi = { has_holder = yes }
-				}
-				e_k_qi = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
-								}
-							}
-							character_event = {
-								id = EMP.18
-							}
-						}
-					}
-				}
-				break = yes
-			}
-			if = {
-				limit = {
-					has_landed_title = e_qin
-					e_k_qin = { has_holder = yes }
-				}
-				e_k_qin = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
-								}
-							}
-							character_event = {
-								id = EMP.18
-							}
-						}
-					}
-				}
-				break = yes
-			}
-			if = {
-				limit = {
-					has_landed_title = e_qing
-					e_k_qing = { has_holder = yes }
-				}
-				e_k_qing = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
-								}
-							}
-							character_event = {
-								id = EMP.18
-							}
-						}
-					}
-				}
-				break = yes
-			}
-			if = {
-				limit = {
-					has_landed_title = e_shu
-					e_k_shu = { has_holder = yes }
-				}
-				e_k_shu = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
-								}
-							}
-							character_event = {
-								id = EMP.18
-							}
-						}
-					}
-				}
-				break = yes
-			}
-			if = {
-				limit = {
-					has_landed_title = e_song
-					e_k_song = { has_holder = yes }
-				}
-				e_k_song = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
-								}
-							}
-							character_event = {
-								id = EMP.18
-							}
-						}
-					}
-				}
-				break = yes
-			}
-			if = {
-				limit = {
-					has_landed_title = e_sui
-					e_k_sui = { has_holder = yes }
-				}
-				e_k_sui = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
-								}
-							}
-							character_event = {
-								id = EMP.18
-							}
-						}
-					}
-				}
-				break = yes
-			}
-			if = {
-				limit = {
-					has_landed_title = e_tan
-					e_k_tan = { has_holder = yes }
-				}
-				e_k_tan = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
-								}
-							}
-							character_event = {
-								id = EMP.18
-							}
-						}
-					}
-				}
-				break = yes
-			}
-			if = {
-				limit = {
-					has_landed_title = e_tang
-					e_k_tang = { has_holder = yes }
-				}
-				e_k_tang = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
-								}
-							}
-							character_event = {
-								id = EMP.18
-							}
-						}
-					}
-				}
-				break = yes
-			}
-			if = {
-				limit = {
-					has_landed_title = e_wei
-					e_k_wei = { has_holder = yes }
-				}
-				e_k_wei = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
-								}
-							}
-							character_event = {
-								id = EMP.18
-							}
-						}
-					}
-				}
-				break = yes
-			}
-			if = {
-				limit = {
-					has_landed_title = e_wu
-					e_k_wu = { has_holder = yes }
-				}
-				e_k_wu = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
-								}
-							}
-							character_event = {
-								id = EMP.18
-							}
-						}
-					}
-				}
-				break = yes
-			}
-			if = {
-				limit = {
-					has_landed_title = e_wuyue
-					e_k_wuyue = { has_holder = yes }
-				}
-				e_k_wuyue = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
-								}
-							}
-							character_event = {
-								id = EMP.18
-							}
-						}
-					}
-				}
-				break = yes
-			}
-			if = {
-				limit = {
-					has_landed_title = e_xia
-					e_k_xia = { has_holder = yes }
-				}
-				e_k_xia = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
-								}
-							}
-							character_event = {
-								id = EMP.18
-							}
-						}
-					}
-				}
-				break = yes
-			}
-			if = {
-				limit = {
-					has_landed_title = e_yan
-					e_k_yan = { has_holder = yes }
-				}
-				e_k_yan = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
-								}
-							}
-							character_event = {
-								id = EMP.18
-							}
-						}
-					}
-				}
-				break = yes
-			}
-			if = {
-				limit = {
-					has_landed_title = e_zhao
-					e_k_zhao = { has_holder = yes }
-				}
-				e_k_zhao = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
-								}
-							}
-							character_event = {
-								id = EMP.18
-							}
-						}
-					}
-				}
-				break = yes
-			}
-			if = {
-				limit = {
-					has_landed_title = e_zhong
-					e_k_zhong = { has_holder = yes }
-				}
-				e_k_zhong = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
-								}
-							}
-							character_event = {
-								id = EMP.18
-							}
-						}
-					}
-				}
-				break = yes
-			}
-			if = {
-				limit = {
-					has_landed_title = e_zhou
-					e_k_zhou = { has_holder = yes }
-				}
-				e_k_zhou = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
-								}
-							}
-							character_event = {
-								id = EMP.18
-							}
-						}
-					}
-				}
-				break = yes
-			}
-			any_realm_lord = {
-				limit = {
-					is_landed = yes
-					NOR = {
-						character = ROOT
-						tier = emperor
-					}
-				}
-				character_event = {
-					id = EMP.18
-				}
-			}
-		}
-		ai_chance = {
-			factor = 1
-			
-			modifier = {
-				factor = 1.05
-				trait = just
-			}
-			modifier = {
-				factor = 1.05
-				trait = honorable
-			}
-			modifier = {
-				factor = 1.05
-				trait = content
-			}
-			modifier = {
-				factor = 1.05
-				trait = patient
-			}
-			modifier = {
-				factor = 1.05
-				trait = proud
-			}
-			modifier = {
-				factor = 1.05
-				trait = scholar
-			}
-			modifier = {
-				factor = 1.05
-				trait = temperate
-			}
-			modifier = {
-				factor = 1.05
-				trait = zealous
-			}
-			modifier = {
-				factor = 1.05
-				NOT = { wealth = 1000 }
-			}
-			modifier = {
-				factor = 1.05
-				NOT = { prestige = 1000 }
+			modifier={
+				factor=1.05
+				NOT={ wealth=1000 }
 			}
 		}
 	}
-	option = {
-		name = EVTOPTC_EMP.16 #No Taxes
-		hidden_tooltip = {
-			if = {
-				limit = {
-					has_landed_title = e_han
-					e_china = { has_holder = yes }
+	option={
+		name=EVTOPTB_EMP.16 #Request Tribute
+		hidden_tooltip={
+			if={
+				limit={
+					has_landed_title=e_han
+					e_china={ has_holder=yes }
 				}
-				e_china = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_china={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.19
+							character_event={
+								id=EMP.18
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_chen
-					e_k_chen = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_chen
+					e_k_chen={ has_holder=yes }
 				}
-				e_k_chen = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_chen={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.19
+							character_event={
+								id=EMP.18
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_chu
-					e_k_chu = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_chu
+					e_k_chu={ has_holder=yes }
 				}
-				e_k_chu = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_chu={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.19
+							character_event={
+								id=EMP.18
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_dai
-					e_k_dai = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_dai
+					e_k_dai={ has_holder=yes }
 				}
-				e_k_dai = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_dai={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.19
+							character_event={
+								id=EMP.18
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_han
-					e_k_han = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_han
+					e_k_han={ has_holder=yes }
 				}
-				e_k_han = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_han={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.19
+							character_event={
+								id=EMP.18
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_jin
-					e_k_jin = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_jin
+					e_k_jin={ has_holder=yes }
 				}
-				e_k_jin = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_jin={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.19
+							character_event={
+								id=EMP.18
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_liang
-					e_k_liang = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_liang
+					e_k_liang={ has_holder=yes }
 				}
-				e_k_liang = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_liang={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.19
+							character_event={
+								id=EMP.18
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_liao
-					e_k_liao = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_liao
+					e_k_liao={ has_holder=yes }
 				}
-				e_k_liao = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_liao={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.19
+							character_event={
+								id=EMP.18
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_min
-					e_k_min = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_min
+					e_k_min={ has_holder=yes }
 				}
-				e_k_min = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_min={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.19
+							character_event={
+								id=EMP.18
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_qi
-					e_k_qi = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_qi
+					e_k_qi={ has_holder=yes }
 				}
-				e_k_qi = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_qi={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.19
+							character_event={
+								id=EMP.18
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_qin
-					e_k_qin = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_qin
+					e_k_qin={ has_holder=yes }
 				}
-				e_k_qin = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_qin={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.19
+							character_event={
+								id=EMP.18
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_qing
-					e_k_qing = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_qing
+					e_k_qing={ has_holder=yes }
 				}
-				e_k_qing = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_qing={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.19
+							character_event={
+								id=EMP.18
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_shu
-					e_k_shu = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_shu
+					e_k_shu={ has_holder=yes }
 				}
-				e_k_shu = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_shu={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.19
+							character_event={
+								id=EMP.18
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_song
-					e_k_song = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_song
+					e_k_song={ has_holder=yes }
 				}
-				e_k_song = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_song={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.19
+							character_event={
+								id=EMP.18
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_sui
-					e_k_sui = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_sui
+					e_k_sui={ has_holder=yes }
 				}
-				e_k_sui = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_sui={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.19
+							character_event={
+								id=EMP.18
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_tan
-					e_k_tan = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_tan
+					e_k_tan={ has_holder=yes }
 				}
-				e_k_tan = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_tan={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.19
+							character_event={
+								id=EMP.18
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_tang
-					e_k_tang = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_tang
+					e_k_tang={ has_holder=yes }
 				}
-				e_k_tang = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_tang={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.19
+							character_event={
+								id=EMP.18
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_wei
-					e_k_wei = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_wei
+					e_k_wei={ has_holder=yes }
 				}
-				e_k_wei = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_wei={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.19
+							character_event={
+								id=EMP.18
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_wu
-					e_k_wu = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_wu
+					e_k_wu={ has_holder=yes }
 				}
-				e_k_wu = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_wu={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.19
+							character_event={
+								id=EMP.18
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_wuyue
-					e_k_wuyue = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_wuyue
+					e_k_wuyue={ has_holder=yes }
 				}
-				e_k_wuyue = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_wuyue={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.19
+							character_event={
+								id=EMP.18
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_xia
-					e_k_xia = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_xia
+					e_k_xia={ has_holder=yes }
 				}
-				e_k_xia = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_xia={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.19
+							character_event={
+								id=EMP.18
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_yan
-					e_k_yan = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_yan
+					e_k_yan={ has_holder=yes }
 				}
-				e_k_yan = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_yan={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.19
+							character_event={
+								id=EMP.18
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_zhao
-					e_k_zhao = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_zhao
+					e_k_zhao={ has_holder=yes }
 				}
-				e_k_zhao = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_zhao={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.19
+							character_event={
+								id=EMP.18
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_zhong
-					e_k_zhong = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_zhong
+					e_k_zhong={ has_holder=yes }
 				}
-				e_k_zhong = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_zhong={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.19
+							character_event={
+								id=EMP.18
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			if = {
-				limit = {
-					has_landed_title = e_zhou
-					e_k_zhou = { has_holder = yes }
+			if={
+				limit={
+					has_landed_title=e_zhou
+					e_k_zhou={ has_holder=yes }
 				}
-				e_k_zhou = {
-					holder_scope = {
-						any_realm_lord = {
-							limit = {
-								is_landed = yes
-								NOR = {
-									character = ROOT
-									tier = emperor
+				e_k_zhou={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
 								}
 							}
-							character_event = {
-								id = EMP.19
+							character_event={
+								id=EMP.18
 							}
 						}
 					}
 				}
-				break = yes
+				break=yes
 			}
-			any_realm_lord = {
-				limit = {
-					is_landed = yes
-					NOR = {
-						character = ROOT
-						tier = emperor
+			any_realm_lord={
+				limit={
+					is_landed=yes
+					NOR={
+						character=ROOT
+						tier=emperor
 					}
 				}
-				character_event = {
-					id = EMP.19
+				character_event={
+					id=EMP.18
 				}
 			}
 		}
-		ai_chance = {
-			factor = 1
+		ai_chance={
+			factor=1
 			
-			modifier = {
-				factor = 1.05
-				trait = kind
+			modifier={
+				factor=1.05
+				trait=just
 			}
-			modifier = {
-				factor = 1.05
-				trait = charitable
+			modifier={
+				factor=1.05
+				trait=honorable
 			}
-			modifier = {
-				factor = 1.05
-				trait = honorable
+			modifier={
+				factor=1.05
+				trait=content
 			}
-			modifier = {
-				factor = 1.05
-				trait = celibate
+			modifier={
+				factor=1.05
+				trait=patient
 			}
-			modifier = {
-				factor = 1.05
-				trait = chaste
+			modifier={
+				factor=1.05
+				trait=proud
 			}
-			modifier = {
-				factor = 1.05
-				trait = humble
+			modifier={
+				factor=1.05
+				trait=scholar
 			}
-			modifier = {
-				factor = 1.05
-				trait = chivalrous
+			modifier={
+				factor=1.05
+				trait=temperate
 			}
-			modifier = {
-				factor = 1.05
-				wealth = 1000
+			modifier={
+				factor=1.05
+				trait=zealous
 			}
-			modifier = {
-				factor = 1.05
-				prestige = 1000
+			modifier={
+				factor=1.05
+				NOT={ wealth=1000 }
+			}
+			modifier={
+				factor=1.05
+				NOT={ prestige=1000 }
+			}
+		}
+	}
+	option={
+		name=EVTOPTC_EMP.16 #No Taxes
+		hidden_tooltip={
+			if={
+				limit={
+					has_landed_title=e_han
+					e_china={ has_holder=yes }
+				}
+				e_china={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
+								}
+							}
+							character_event={
+								id=EMP.19
+							}
+						}
+					}
+				}
+				break=yes
+			}
+			if={
+				limit={
+					has_landed_title=e_chen
+					e_k_chen={ has_holder=yes }
+				}
+				e_k_chen={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
+								}
+							}
+							character_event={
+								id=EMP.19
+							}
+						}
+					}
+				}
+				break=yes
+			}
+			if={
+				limit={
+					has_landed_title=e_chu
+					e_k_chu={ has_holder=yes }
+				}
+				e_k_chu={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
+								}
+							}
+							character_event={
+								id=EMP.19
+							}
+						}
+					}
+				}
+				break=yes
+			}
+			if={
+				limit={
+					has_landed_title=e_dai
+					e_k_dai={ has_holder=yes }
+				}
+				e_k_dai={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
+								}
+							}
+							character_event={
+								id=EMP.19
+							}
+						}
+					}
+				}
+				break=yes
+			}
+			if={
+				limit={
+					has_landed_title=e_han
+					e_k_han={ has_holder=yes }
+				}
+				e_k_han={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
+								}
+							}
+							character_event={
+								id=EMP.19
+							}
+						}
+					}
+				}
+				break=yes
+			}
+			if={
+				limit={
+					has_landed_title=e_jin
+					e_k_jin={ has_holder=yes }
+				}
+				e_k_jin={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
+								}
+							}
+							character_event={
+								id=EMP.19
+							}
+						}
+					}
+				}
+				break=yes
+			}
+			if={
+				limit={
+					has_landed_title=e_liang
+					e_k_liang={ has_holder=yes }
+				}
+				e_k_liang={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
+								}
+							}
+							character_event={
+								id=EMP.19
+							}
+						}
+					}
+				}
+				break=yes
+			}
+			if={
+				limit={
+					has_landed_title=e_liao
+					e_k_liao={ has_holder=yes }
+				}
+				e_k_liao={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
+								}
+							}
+							character_event={
+								id=EMP.19
+							}
+						}
+					}
+				}
+				break=yes
+			}
+			if={
+				limit={
+					has_landed_title=e_min
+					e_k_min={ has_holder=yes }
+				}
+				e_k_min={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
+								}
+							}
+							character_event={
+								id=EMP.19
+							}
+						}
+					}
+				}
+				break=yes
+			}
+			if={
+				limit={
+					has_landed_title=e_qi
+					e_k_qi={ has_holder=yes }
+				}
+				e_k_qi={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
+								}
+							}
+							character_event={
+								id=EMP.19
+							}
+						}
+					}
+				}
+				break=yes
+			}
+			if={
+				limit={
+					has_landed_title=e_qin
+					e_k_qin={ has_holder=yes }
+				}
+				e_k_qin={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
+								}
+							}
+							character_event={
+								id=EMP.19
+							}
+						}
+					}
+				}
+				break=yes
+			}
+			if={
+				limit={
+					has_landed_title=e_qing
+					e_k_qing={ has_holder=yes }
+				}
+				e_k_qing={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
+								}
+							}
+							character_event={
+								id=EMP.19
+							}
+						}
+					}
+				}
+				break=yes
+			}
+			if={
+				limit={
+					has_landed_title=e_shu
+					e_k_shu={ has_holder=yes }
+				}
+				e_k_shu={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
+								}
+							}
+							character_event={
+								id=EMP.19
+							}
+						}
+					}
+				}
+				break=yes
+			}
+			if={
+				limit={
+					has_landed_title=e_song
+					e_k_song={ has_holder=yes }
+				}
+				e_k_song={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
+								}
+							}
+							character_event={
+								id=EMP.19
+							}
+						}
+					}
+				}
+				break=yes
+			}
+			if={
+				limit={
+					has_landed_title=e_sui
+					e_k_sui={ has_holder=yes }
+				}
+				e_k_sui={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
+								}
+							}
+							character_event={
+								id=EMP.19
+							}
+						}
+					}
+				}
+				break=yes
+			}
+			if={
+				limit={
+					has_landed_title=e_tan
+					e_k_tan={ has_holder=yes }
+				}
+				e_k_tan={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
+								}
+							}
+							character_event={
+								id=EMP.19
+							}
+						}
+					}
+				}
+				break=yes
+			}
+			if={
+				limit={
+					has_landed_title=e_tang
+					e_k_tang={ has_holder=yes }
+				}
+				e_k_tang={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
+								}
+							}
+							character_event={
+								id=EMP.19
+							}
+						}
+					}
+				}
+				break=yes
+			}
+			if={
+				limit={
+					has_landed_title=e_wei
+					e_k_wei={ has_holder=yes }
+				}
+				e_k_wei={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
+								}
+							}
+							character_event={
+								id=EMP.19
+							}
+						}
+					}
+				}
+				break=yes
+			}
+			if={
+				limit={
+					has_landed_title=e_wu
+					e_k_wu={ has_holder=yes }
+				}
+				e_k_wu={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
+								}
+							}
+							character_event={
+								id=EMP.19
+							}
+						}
+					}
+				}
+				break=yes
+			}
+			if={
+				limit={
+					has_landed_title=e_wuyue
+					e_k_wuyue={ has_holder=yes }
+				}
+				e_k_wuyue={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
+								}
+							}
+							character_event={
+								id=EMP.19
+							}
+						}
+					}
+				}
+				break=yes
+			}
+			if={
+				limit={
+					has_landed_title=e_xia
+					e_k_xia={ has_holder=yes }
+				}
+				e_k_xia={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
+								}
+							}
+							character_event={
+								id=EMP.19
+							}
+						}
+					}
+				}
+				break=yes
+			}
+			if={
+				limit={
+					has_landed_title=e_yan
+					e_k_yan={ has_holder=yes }
+				}
+				e_k_yan={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
+								}
+							}
+							character_event={
+								id=EMP.19
+							}
+						}
+					}
+				}
+				break=yes
+			}
+			if={
+				limit={
+					has_landed_title=e_zhao
+					e_k_zhao={ has_holder=yes }
+				}
+				e_k_zhao={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
+								}
+							}
+							character_event={
+								id=EMP.19
+							}
+						}
+					}
+				}
+				break=yes
+			}
+			if={
+				limit={
+					has_landed_title=e_zhong
+					e_k_zhong={ has_holder=yes }
+				}
+				e_k_zhong={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
+								}
+							}
+							character_event={
+								id=EMP.19
+							}
+						}
+					}
+				}
+				break=yes
+			}
+			if={
+				limit={
+					has_landed_title=e_zhou
+					e_k_zhou={ has_holder=yes }
+				}
+				e_k_zhou={
+					holder_scope={
+						any_realm_lord={
+							limit={
+								is_landed=yes
+								NOR={
+									character=ROOT
+									tier=emperor
+								}
+							}
+							character_event={
+								id=EMP.19
+							}
+						}
+					}
+				}
+				break=yes
+			}
+			any_realm_lord={
+				limit={
+					is_landed=yes
+					NOR={
+						character=ROOT
+						tier=emperor
+					}
+				}
+				character_event={
+					id=EMP.19
+				}
+			}
+		}
+		ai_chance={
+			factor=1
+			
+			modifier={
+				factor=1.05
+				trait=kind
+			}
+			modifier={
+				factor=1.05
+				trait=charitable
+			}
+			modifier={
+				factor=1.05
+				trait=honorable
+			}
+			modifier={
+				factor=1.05
+				trait=celibate
+			}
+			modifier={
+				factor=1.05
+				trait=chaste
+			}
+			modifier={
+				factor=1.05
+				trait=humble
+			}
+			modifier={
+				factor=1.05
+				trait=chivalrous
+			}
+			modifier={
+				factor=1.05
+				wealth=1000
+			}
+			modifier={
+				factor=1.05
+				prestige=1000
 			}
 		}
 	}
 }
 
 #Taxes Imposed
-character_event = {
-	id = EMP.17
-	desc = EVTDESC_EMP.17
-	title = EVTTITLE_EMP.17
-	picture = GFX_evt_emissary
+character_event={
+	id=EMP.17
+	desc=EVTDESC_EMP.17
+	title=EVTTITLE_EMP.17
+	picture=GFX_evt_emissary
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	prisoner = no
+	prisoner=no
 	
-	immediate = {
-		opinion = {
-			who = FROM
-			modifier = opinion_ask_tax
+	immediate={
+		opinion={
+			who=FROM
+			modifier=opinion_ask_tax
 		}
 	}
 	
-	option = {
-		name = EVTOPTA_EMP.17 #Pay Full
-		trigger = {
-			OR = {
-				AND = {
-					real_tier = king
-					wealth = 150
+	option={
+		name=EVTOPTA_EMP.17 #Pay Full
+		trigger={
+			OR={
+				AND={
+					real_tier=king
+					wealth=150
 				}
-				AND = {
-					real_tier = duke
-					wealth = 100
+				AND={
+					real_tier=duke
+					wealth=100
 				}
-				AND = {
-					real_tier = count
-					wealth = 50
+				AND={
+					real_tier=count
+					wealth=50
 				}
-				AND = {
-					real_tier = baron
-					wealth = 30
-				}
-			}
-		}
-		hidden_tooltip = {
-			FROM = {
-				opinion = {
-					who = ROOT
-					modifier = opinion_tax_full
+				AND={
+					real_tier=baron
+					wealth=30
 				}
 			}
 		}
-		if = {
-			limit = {
-				real_tier = king
-				wealth = 150
-			}
-			ROOT = {
-				wealth = -150
-			}
-			hidden_tooltip = {
-				random_list = {
-					50 = {
-						FROM = {
-							wealth = 30
-						}
-					}
-					20 = {
-						FROM = {
-							wealth = 60
-						}
-					}
-					5 = {
-						FROM = {
-							wealth = 120
-						}
-					}
-					25 = {
-						character_event = {
-							id = EMP.20
-						}
-					}
+		hidden_tooltip={
+			FROM={
+				opinion={
+					who=ROOT
+					modifier=opinion_tax_full
 				}
 			}
 		}
-		if = {
-			limit = {
-				real_tier = duke
-				wealth = 100
+		if={
+			limit={
+				real_tier=king
+				wealth=150
 			}
-			ROOT = {
-				wealth = -100
+			ROOT={
+				wealth=-150
 			}
-			hidden_tooltip = {
-				random_list = {
-					50 = {
-						FROM = {
-							wealth = 20
+			hidden_tooltip={
+				random_list={
+					50={
+						FROM={
+							wealth=30
 						}
 					}
-					20 = {
-						FROM = {
-							wealth = 40
+					20={
+						FROM={
+							wealth=60
 						}
 					}
-					5 = {
-						FROM = {
-							wealth = 80
+					5={
+						FROM={
+							wealth=120
 						}
 					}
-					25 = {
-						character_event = {
-							id = EMP.20
+					25={
+						character_event={
+							id=EMP.20
 						}
 					}
 				}
 			}
 		}
-		if = {
-			limit = {
-				real_tier = count
-				wealth = 50
+		if={
+			limit={
+				real_tier=duke
+				wealth=100
 			}
-			ROOT = {
-				wealth = -50
+			ROOT={
+				wealth=-100
 			}
-			hidden_tooltip = {
-				random_list = {
-					50 = {
-						FROM = {
-							wealth = 10
+			hidden_tooltip={
+				random_list={
+					50={
+						FROM={
+							wealth=20
 						}
 					}
-					20 = {
-						FROM = {
-							wealth = 20
+					20={
+						FROM={
+							wealth=40
 						}
 					}
-					5 = {
-						FROM = {
-							wealth = 40
+					5={
+						FROM={
+							wealth=80
 						}
 					}
-					25 = {
-						character_event = {
-							id = EMP.20
+					25={
+						character_event={
+							id=EMP.20
 						}
 					}
 				}
 			}
 		}
-		if = {
-			limit = {
-				real_tier = baron
-				wealth = 30
+		if={
+			limit={
+				real_tier=count
+				wealth=50
 			}
-			ROOT = {
-				wealth = -30
+			ROOT={
+				wealth=-50
 			}
-			hidden_tooltip = {
-				random_list = {
-					50 = {
-						FROM = {
-							wealth = 5
+			hidden_tooltip={
+				random_list={
+					50={
+						FROM={
+							wealth=10
 						}
 					}
-					20 = {
-						FROM = {
-							wealth = 15
+					20={
+						FROM={
+							wealth=20
 						}
 					}
-					5 = {
-						FROM = {
-							wealth = 20
+					5={
+						FROM={
+							wealth=40
 						}
 					}
-					25 = {
-						character_event = {
-							id = EMP.20
+					25={
+						character_event={
+							id=EMP.20
 						}
 					}
 				}
 			}
 		}
-		ai_chance = {
-			factor = 1
+		if={
+			limit={
+				real_tier=baron
+				wealth=30
+			}
+			ROOT={
+				wealth=-30
+			}
+			hidden_tooltip={
+				random_list={
+					50={
+						FROM={
+							wealth=5
+						}
+					}
+					20={
+						FROM={
+							wealth=15
+						}
+					}
+					5={
+						FROM={
+							wealth=20
+						}
+					}
+					25={
+						character_event={
+							id=EMP.20
+						}
+					}
+				}
+			}
+		}
+		ai_chance={
+			factor=1
 			
-			modifier = {
-				factor = 1.05
-				trait = proud
+			modifier={
+				factor=1.05
+				trait=proud
 			}
-			modifier = {
-				factor = 1.25
-				trait = zealous
+			modifier={
+				factor=1.25
+				trait=zealous
 			}
-			modifier = {
-				factor = 1.05
-				trait = content
+			modifier={
+				factor=1.05
+				trait=content
 			}
-			modifier = {
-				factor = 1.05
-				trait = just
+			modifier={
+				factor=1.05
+				trait=just
 			}
-			modifier = {
-				factor = 1.05
-				trait = kind
+			modifier={
+				factor=1.05
+				trait=kind
 			}
-			modifier = {
-				factor = 1.05
-				trait = charitable
+			modifier={
+				factor=1.05
+				trait=charitable
 			}
-			modifier = {
-				factor = 1.05
-				trait = honorable
+			modifier={
+				factor=1.05
+				trait=honorable
 			}
-			modifier = {
-				factor = 1.05
-				trait = celibate
+			modifier={
+				factor=1.05
+				trait=celibate
 			}
-			modifier = {
-				factor = 1.05
-				trait = chaste
+			modifier={
+				factor=1.05
+				trait=chaste
 			}
-			modifier = {
-				factor = 1.05
-				trait = chivalrous
+			modifier={
+				factor=1.05
+				trait=chivalrous
 			}
-			modifier = {
-				factor = 1.05
-				wealth = 1000
+			modifier={
+				factor=1.05
+				wealth=1000
 			}
-			modifier = {
-				factor = 1.05
-				prestige = 1000
+			modifier={
+				factor=1.05
+				prestige=1000
 			}
-			modifier = {
-				factor = 1.05
-				dynasty = FROM
+			modifier={
+				factor=1.05
+				dynasty=FROM
 			}
 		}
 	}
-	option = {
-		name = EVTOPTB_EMP.17 #Pay Part
-		hidden_tooltip = {
-			FROM = {
-				opinion = {
-					who = ROOT
-					modifier = opinion_tax_part
+	option={
+		name=EVTOPTB_EMP.17 #Pay Part
+		hidden_tooltip={
+			FROM={
+				opinion={
+					who=ROOT
+					modifier=opinion_tax_part
 				}
 			}
 		}
-		trigger = {
-			OR = {
-				AND = {
-					real_tier = king
-					wealth = 60
+		trigger={
+			OR={
+				AND={
+					real_tier=king
+					wealth=60
 				}
-				AND = {
-					real_tier = duke
-					wealth = 40
+				AND={
+					real_tier=duke
+					wealth=40
 				}
-				AND = {
-					real_tier = count
-					wealth = 20
+				AND={
+					real_tier=count
+					wealth=20
 				}
-				AND = {
-					real_tier = baron
-					wealth = 15
-				}
-			}
-		}
-		if = {
-			limit = {
-				real_tier = king
-				wealth = 60
-			}
-			ROOT = {
-				wealth = -60
-			}
-			hidden_tooltip = {
-				random_list = {
-					50 = {
-						FROM = {
-							wealth = 12
-						}
-					}
-					20 = {
-						FROM = {
-							wealth = 24
-						}
-					}
-					5 = {
-						FROM = {
-							wealth = 48
-						}
-					}
-					25 = {
-						character_event = {
-							id = EMP.20
-						}
-					}
+				AND={
+					real_tier=baron
+					wealth=15
 				}
 			}
 		}
-		if = {
-			limit = {
-				real_tier = duke
-				wealth = 40
+		if={
+			limit={
+				real_tier=king
+				wealth=60
 			}
-			ROOT = {
-				wealth = -40
+			ROOT={
+				wealth=-60
 			}
-			hidden_tooltip = {
-				random_list = {
-					50 = {
-						FROM = {
-							wealth = 8
+			hidden_tooltip={
+				random_list={
+					50={
+						FROM={
+							wealth=12
 						}
 					}
-					20 = {
-						FROM = {
-							wealth = 16
+					20={
+						FROM={
+							wealth=24
 						}
 					}
-					5 = {
-						FROM = {
-							wealth = 32
+					5={
+						FROM={
+							wealth=48
 						}
 					}
-					25 = {
-						character_event = {
-							id = EMP.20
+					25={
+						character_event={
+							id=EMP.20
 						}
 					}
 				}
 			}
 		}
-		if = {
-			limit = {
-				real_tier = count
-				wealth = 20
+		if={
+			limit={
+				real_tier=duke
+				wealth=40
 			}
-			ROOT = {
-				wealth = -20
+			ROOT={
+				wealth=-40
 			}
-			hidden_tooltip = {
-				random_list = {
-					50 = {
-						FROM = {
-							wealth = 4
+			hidden_tooltip={
+				random_list={
+					50={
+						FROM={
+							wealth=8
 						}
 					}
-					10 = {
-						FROM = {
-							wealth = 8
+					20={
+						FROM={
+							wealth=16
 						}
 					}
-					5 = {
-						FROM = {
-							wealth = 16
+					5={
+						FROM={
+							wealth=32
 						}
 					}
-					25 = {
-						character_event = {
-							id = EMP.20
+					25={
+						character_event={
+							id=EMP.20
 						}
 					}
 				}
 			}
 		}
-		if = {
-			limit = {
-				real_tier = baron
-				wealth = 15
+		if={
+			limit={
+				real_tier=count
+				wealth=20
 			}
-			ROOT = {
-				wealth = -15
+			ROOT={
+				wealth=-20
 			}
-			hidden_tooltip = {
-				random_list = {
-					50 = {
-						FROM = {
-							wealth = 5
+			hidden_tooltip={
+				random_list={
+					50={
+						FROM={
+							wealth=4
 						}
 					}
-					25 = {
-						FROM = {
-							wealth = 10
+					10={
+						FROM={
+							wealth=8
 						}
 					}
-					25 = {
-						character_event = {
-							id = EMP.20
+					5={
+						FROM={
+							wealth=16
+						}
+					}
+					25={
+						character_event={
+							id=EMP.20
 						}
 					}
 				}
 			}
 		}
-		ai_chance = {
-			factor = 1
+		if={
+			limit={
+				real_tier=baron
+				wealth=15
+			}
+			ROOT={
+				wealth=-15
+			}
+			hidden_tooltip={
+				random_list={
+					50={
+						FROM={
+							wealth=5
+						}
+					}
+					25={
+						FROM={
+							wealth=10
+						}
+					}
+					25={
+						character_event={
+							id=EMP.20
+						}
+					}
+				}
+			}
+		}
+		ai_chance={
+			factor=1
 			
-			modifier = {
-				factor = 1.05
-				trait = humble
+			modifier={
+				factor=1.05
+				trait=humble
 			}
-			modifier = {
-				factor = 1.25
-				trait = zealous
+			modifier={
+				factor=1.25
+				trait=zealous
 			}
-			modifier = {
-				factor = 1.05
-				trait = ambitious
+			modifier={
+				factor=1.05
+				trait=ambitious
 			}
-			modifier = {
-				factor = 1.05
-				trait = greedy
+			modifier={
+				factor=1.05
+				trait=greedy
 			}
-			modifier = {
-				factor = 1.05
-				trait = envious
+			modifier={
+				factor=1.05
+				trait=envious
 			}
-			modifier = {
-				factor = 1.05
-				trait = kind
+			modifier={
+				factor=1.05
+				trait=kind
 			}
-			modifier = {
-				factor = 1.05
-				trait = charitable
+			modifier={
+				factor=1.05
+				trait=charitable
 			}
-			modifier = {
-				factor = 1.05
-				trait = honorable
+			modifier={
+				factor=1.05
+				trait=honorable
 			}
-			modifier = {
-				factor = 1.05
-				trait = celibate
+			modifier={
+				factor=1.05
+				trait=celibate
 			}
-			modifier = {
-				factor = 1.05
-				trait = chaste
+			modifier={
+				factor=1.05
+				trait=chaste
 			}
-			modifier = {
-				factor = 1.05
-				trait = chivalrous
+			modifier={
+				factor=1.05
+				trait=chivalrous
 			}
-			modifier = {
-				factor = 1.05
-				NOT = { wealth = 1000 }
+			modifier={
+				factor=1.05
+				NOT={ wealth=1000 }
 			}
-			modifier = {
-				factor = 1.05
-				NOT = { prestige = 1000 }
+			modifier={
+				factor=1.05
+				NOT={ prestige=1000 }
 			}
 		}
 	}
-	option = {
-		name = EVTOPTC_EMP.17 #No Money
-		trigger = {
-			OR = {
-				AND = {
-					real_tier = king
-					NOT = { wealth = 60 }
+	option={
+		name=EVTOPTC_EMP.17 #No Money
+		trigger={
+			OR={
+				AND={
+					real_tier=king
+					NOT={ wealth=60 }
 				}
-				AND = {
-					real_tier = duke
-					NOT = { wealth = 40 }
+				AND={
+					real_tier=duke
+					NOT={ wealth=40 }
 				}
-				AND = {
-					real_tier = count
-					NOT = { wealth = 20 }
+				AND={
+					real_tier=count
+					NOT={ wealth=20 }
 				}
-				AND = {
-					real_tier = baron
-					NOT = { wealth = 15 }
-				}
-			}
-		}
-		hidden_tooltip = {
-			FROM = {
-				opinion = {
-					who = ROOT
-					modifier = opinion_tax_none
+				AND={
+					real_tier=baron
+					NOT={ wealth=15 }
 				}
 			}
 		}
-		ai_chance = {
-			factor = 1
+		hidden_tooltip={
+			FROM={
+				opinion={
+					who=ROOT
+					modifier=opinion_tax_none
+				}
+			}
+		}
+		ai_chance={
+			factor=1
 			
-			modifier = {
-				factor = 1.05
-				trait = humble
+			modifier={
+				factor=1.05
+				trait=humble
 			}
-			modifier = {
-				factor = 1.25
-				trait = zealous
+			modifier={
+				factor=1.25
+				trait=zealous
 			}
-			modifier = {
-				factor = 1.05
-				trait = just
+			modifier={
+				factor=1.05
+				trait=just
 			}
-			modifier = {
-				factor = 1.05
-				trait = content
+			modifier={
+				factor=1.05
+				trait=content
 			}
-			modifier = {
-				factor = 1.05
-				trait = kind
+			modifier={
+				factor=1.05
+				trait=kind
 			}
-			modifier = {
-				factor = 1.05
-				trait = charitable
+			modifier={
+				factor=1.05
+				trait=charitable
 			}
-			modifier = {
-				factor = 1.05
-				trait = honorable
+			modifier={
+				factor=1.05
+				trait=honorable
 			}
-			modifier = {
-				factor = 1.05
-				trait = celibate
+			modifier={
+				factor=1.05
+				trait=celibate
 			}
-			modifier = {
-				factor = 1.05
-				trait = chaste
+			modifier={
+				factor=1.05
+				trait=chaste
 			}
-			modifier = {
-				factor = 1.05
-				trait = chivalrous
+			modifier={
+				factor=1.05
+				trait=chivalrous
 			}
 		}
 	}
-	option = {
-		name = "REFUSE" #Refuse
-		hidden_tooltip = {
-			FROM = {
-				opinion = {
-					who = ROOT
-					modifier = opinion_tax_refused
+	option={
+		name="REFUSE" #Refuse
+		hidden_tooltip={
+			FROM={
+				opinion={
+					who=ROOT
+					modifier=opinion_tax_refused
 				}
 			}
-			random = {
-				chance = 20
-				character_event = { id = EMP.21 }
+			random={
+				chance=20
+				character_event={ id=EMP.21 }
 			}
 		}
-		ai_chance = {
-			factor = 1
+		ai_chance={
+			factor=1
 			
-			modifier = {
-				factor = 10
-				NOT = { religion = FROM }
+			modifier={
+				factor=10
+				NOT={ religion=FROM }
 			}
-			modifier = {
-				factor = 10
-				NOT = { culture = FROM }
+			modifier={
+				factor=10
+				NOT={ culture=FROM }
 			}
-			modifier = {
-				factor = 2
-				independent = yes
+			modifier={
+				factor=2
+				independent=yes
 			}
-			modifier = {
-				factor = 5
-				top_liege = {
-					NOR = {
-						has_landed_title = k_confucian
-						OR = {
-							AND = {
-								has_landed_title = e_china
-								e_han = { has_holder = yes }
+			modifier={
+				factor=5
+				top_liege={
+					NOR={
+						has_landed_title=k_confucian
+						OR={
+							AND={
+								has_landed_title=e_china
+								e_han={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_chen
-								e_chen = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_chen
+								e_chen={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_chu
-								e_chu = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_chu
+								e_chu={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_dai
-								e_dai = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_dai
+								e_dai={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_han
-								e_han = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_han
+								e_han={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_jin
-								e_jin = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_jin
+								e_jin={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_liang
-								e_liang = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_liang
+								e_liang={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_liao
-								e_liao = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_liao
+								e_liao={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_min
-								e_min = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_min
+								e_min={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_qi
-								e_qi = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_qi
+								e_qi={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_qin
-								e_qin = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_qin
+								e_qin={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_qing
-								e_qing = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_qing
+								e_qing={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_shu
-								e_shu = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_shu
+								e_shu={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_song
-								e_song = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_song
+								e_song={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_sui
-								e_sui = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_sui
+								e_sui={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_tan
-								e_tan = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_tan
+								e_tan={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_tang
-								e_tang = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_tang
+								e_tang={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_wei
-								e_wei = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_wei
+								e_wei={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_wu
-								e_wu = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_wu
+								e_wu={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_wuyue
-								e_wuyue = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_wuyue
+								e_wuyue={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_xia
-								e_xia = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_xia
+								e_xia={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_yan
-								e_yan = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_yan
+								e_yan={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_zhao
-								e_zhao = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_zhao
+								e_zhao={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_zhong
-								e_zhong = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_zhong
+								e_zhong={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_zhou
-								e_zhou = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_zhou
+								e_zhou={ has_holder=yes }
 							}
 						}
 					}
 				}
 			}
-			modifier = {
-				factor = 1.05
-				trait = greedy
+			modifier={
+				factor=1.05
+				trait=greedy
 			}
-			modifier = {
-				factor = 1.05
-				trait = arbitrary
+			modifier={
+				factor=1.05
+				trait=arbitrary
 			}
-			modifier = {
-				factor = 1.05
-				trait = rude
+			modifier={
+				factor=1.05
+				trait=rude
 			}
-			modifier = {
-				factor = 1.05
-				trait = wroth
+			modifier={
+				factor=1.05
+				trait=wroth
 			}
-			modifier = {
-				factor = 1.05
-				trait = ambitious
+			modifier={
+				factor=1.05
+				trait=ambitious
 			}
-			modifier = {
-				factor = 1.05
-				trait = dishonorable
+			modifier={
+				factor=1.05
+				trait=dishonorable
 			}
-			modifier = {
-				factor = 1.05
-				trait = tyrant
+			modifier={
+				factor=1.05
+				trait=tyrant
 			}
-			modifier = {
-				factor = 1.05
-				trait = selfish
+			modifier={
+				factor=1.05
+				trait=selfish
 			}
-			modifier = {
-				factor = 1.05
-				trait = cynical
+			modifier={
+				factor=1.05
+				trait=cynical
 			}
-			modifier = {
-				factor = 1.05
-				trait = cruel
+			modifier={
+				factor=1.05
+				trait=cruel
 			}
 		}
 	}
 }
 
 #Tribute Requested
-character_event = {
-	id = EMP.18
-	desc = EVTDESC_EMP.18
-	title = EVTTITLE_EMP.18
-	picture = GFX_evt_emissary
+character_event={
+	id=EMP.18
+	desc=EVTDESC_EMP.18
+	title=EVTTITLE_EMP.18
+	picture=GFX_evt_emissary
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	prisoner = no
+	prisoner=no
 	
-	immediate = {
-		hidden_tooltip = {
-			opinion = {
-				who = FROM
-				modifier = opinion_ask_trib
+	immediate={
+		hidden_tooltip={
+			opinion={
+				who=FROM
+				modifier=opinion_ask_trib
 			}
 		}
 	}
 	
-	option = {
-		name = EVTOPTA_EMP.18 #Pay
-		trigger = { wealth = 10 }
-		ROOT = {
-			wealth = -10
+	option={
+		name=EVTOPTA_EMP.18 #Pay
+		trigger={ wealth=10 }
+		ROOT={
+			wealth=-10
 		}
-		hidden_tooltip = {
-			FROM = {
-				opinion = {
-					who = ROOT
-					modifier = opinion_tax_full
+		hidden_tooltip={
+			FROM={
+				opinion={
+					who=ROOT
+					modifier=opinion_tax_full
 				}
-				prestige = 5
+				prestige=5
 			}
-			random_list = {
-				70 = {
-					FROM = {
-						wealth = 10
+			random_list={
+				70={
+					FROM={
+						wealth=10
 					}
 				}
-				30 = {
-					character_event = {
-						id = EMP.20
+				30={
+					character_event={
+						id=EMP.20
 					}
 				}
 			}
 		}
-		ai_chance = {
-			factor = 1
+		ai_chance={
+			factor=1
 			
-			modifier = {
-				factor = 1.05
-				trait = proud
+			modifier={
+				factor=1.05
+				trait=proud
 			}
-			modifier = {
-				factor = 1.25
-				trait = zealous
+			modifier={
+				factor=1.25
+				trait=zealous
 			}
-			modifier = {
-				factor = 1.05
-				trait = content
+			modifier={
+				factor=1.05
+				trait=content
 			}
-			modifier = {
-				factor = 1.05
-				trait = kind
+			modifier={
+				factor=1.05
+				trait=kind
 			}
-			modifier = {
-				factor = 1.05
-				trait = charitable
+			modifier={
+				factor=1.05
+				trait=charitable
 			}
-			modifier = {
-				factor = 1.05
-				trait = honorable
+			modifier={
+				factor=1.05
+				trait=honorable
 			}
-			modifier = {
-				factor = 1.05
-				trait = celibate
+			modifier={
+				factor=1.05
+				trait=celibate
 			}
-			modifier = {
-				factor = 1.05
-				trait = chaste
+			modifier={
+				factor=1.05
+				trait=chaste
 			}
-			modifier = {
-				factor = 1.05
-				trait = chivalrous
+			modifier={
+				factor=1.05
+				trait=chivalrous
 			}
-			modifier = {
-				factor = 1.05
-				wealth = 1000
+			modifier={
+				factor=1.05
+				wealth=1000
 			}
-			modifier = {
-				factor = 1.05
-				prestige = 1000
+			modifier={
+				factor=1.05
+				prestige=1000
 			}
-			modifier = {
-				factor = 1.05
-				dynasty = FROM
+			modifier={
+				factor=1.05
+				dynasty=FROM
 			}
 		}
 	}
-	option = {
-		name = EVTOPTB_EMP.18 #Ignore
-		ai_chance = {
-			factor = 1
+	option={
+		name=EVTOPTB_EMP.18 #Ignore
+		ai_chance={
+			factor=1
 			
-			modifier = {
-				factor = 10
-				NOT = { religion = FROM }
+			modifier={
+				factor=10
+				NOT={ religion=FROM }
 			}
-			modifier = {
-				factor = 10
-				NOT = { culture = FROM }
+			modifier={
+				factor=10
+				NOT={ culture=FROM }
 			}
-			modifier = {
-				factor = 2
-				independent = yes
+			modifier={
+				factor=2
+				independent=yes
 			}
-			modifier = {
-				factor = 5
-				top_liege = {
-					NOR = {
-						has_landed_title = k_confucian
-						OR = {
-							AND = {
-								has_landed_title = e_china
-								e_han = { has_holder = yes }
+			modifier={
+				factor=5
+				top_liege={
+					NOR={
+						has_landed_title=k_confucian
+						OR={
+							AND={
+								has_landed_title=e_china
+								e_han={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_chen
-								e_chen = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_chen
+								e_chen={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_chu
-								e_chu = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_chu
+								e_chu={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_dai
-								e_dai = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_dai
+								e_dai={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_han
-								e_han = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_han
+								e_han={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_jin
-								e_jin = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_jin
+								e_jin={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_liang
-								e_liang = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_liang
+								e_liang={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_liao
-								e_liao = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_liao
+								e_liao={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_min
-								e_min = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_min
+								e_min={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_qi
-								e_qi = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_qi
+								e_qi={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_qin
-								e_qin = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_qin
+								e_qin={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_qing
-								e_qing = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_qing
+								e_qing={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_shu
-								e_shu = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_shu
+								e_shu={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_song
-								e_song = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_song
+								e_song={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_sui
-								e_sui = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_sui
+								e_sui={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_tan
-								e_tan = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_tan
+								e_tan={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_tang
-								e_tang = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_tang
+								e_tang={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_wei
-								e_wei = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_wei
+								e_wei={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_wu
-								e_wu = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_wu
+								e_wu={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_wuyue
-								e_wuyue = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_wuyue
+								e_wuyue={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_xia
-								e_xia = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_xia
+								e_xia={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_yan
-								e_yan = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_yan
+								e_yan={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_zhao
-								e_zhao = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_zhao
+								e_zhao={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_zhong
-								e_zhong = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_zhong
+								e_zhong={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_zhou
-								e_zhou = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_zhou
+								e_zhou={ has_holder=yes }
 							}
 						}
 					}
 				}
 			}
-			modifier = {
-				factor = 1.05
-				trait = greedy
+			modifier={
+				factor=1.05
+				trait=greedy
 			}
-			modifier = {
-				factor = 1.05
-				trait = arbitrary
+			modifier={
+				factor=1.05
+				trait=arbitrary
 			}
-			modifier = {
-				factor = 1.05
-				trait = rude
+			modifier={
+				factor=1.05
+				trait=rude
 			}
-			modifier = {
-				factor = 1.05
-				trait = wroth
+			modifier={
+				factor=1.05
+				trait=wroth
 			}
-			modifier = {
-				factor = 1.05
-				trait = ambitious
+			modifier={
+				factor=1.05
+				trait=ambitious
 			}
-			modifier = {
-				factor = 1.05
-				trait = dishonorable
+			modifier={
+				factor=1.05
+				trait=dishonorable
 			}
-			modifier = {
-				factor = 1.05
-				trait = tyrant
+			modifier={
+				factor=1.05
+				trait=tyrant
 			}
-			modifier = {
-				factor = 1.05
-				trait = selfish
+			modifier={
+				factor=1.05
+				trait=selfish
 			}
-			modifier = {
-				factor = 1.05
-				trait = cynical
+			modifier={
+				factor=1.05
+				trait=cynical
 			}
-			modifier = {
-				factor = 1.05
-				trait = cruel
+			modifier={
+				factor=1.05
+				trait=cruel
 			}
 		}
 	}
 }
 
 #No Taxes
-character_event = {
-	id = EMP.19
-	desc = EVTDESC_EMP.19
-	title = EVTTITLE_EMP.19
-	picture = GFX_evt_emissary
+character_event={
+	id=EMP.19
+	desc=EVTDESC_EMP.19
+	title=EVTTITLE_EMP.19
+	picture=GFX_evt_emissary
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	prisoner = no
+	prisoner=no
 	
-	immediate = {
-		hidden_tooltip = {
-			opinion = {
-				who = FROM
-				modifier = opinion_ask_none
+	immediate={
+		hidden_tooltip={
+			opinion={
+				who=FROM
+				modifier=opinion_ask_none
 			}
 		}
 	}
 	
-	option = {
-		name = EXCELLENT
+	option={
+		name=EXCELLENT
 	}
 }
 
 #Tax Stolen
-character_event = {
-	id = EMP.20
-	desc = EVTDESC_EMP.20
-	title = EVTTITLE_EMP.20
-	picture = GFX_evt_bandits
+character_event={
+	id=EMP.20
+	desc=EVTDESC_EMP.20
+	title=EVTTITLE_EMP.20
+	picture=GFX_evt_bandits
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	prisoner = no
+	prisoner=no
 	
-	option = {
-		name = THIEF
+	option={
+		name=THIEF
 	}
 }
 
 #No longer Confucian
-character_event = {
-	id = EMP.21
-	title = EVTTITLE_EMP.21
-	picture = GFX_evt_heretic
+character_event={
+	id=EMP.21
+	title=EVTTITLE_EMP.21
+	picture=GFX_evt_heretic
 	
-	desc = {
-		trigger = {
-			independent = no
+	desc={
+		trigger={
+			independent=no
 		}
-		text = EVTDESCA_EMP.21
+		text=EVTDESCA_EMP.21
 	}
-	desc = {
-		trigger = {
-			independent = yes
+	desc={
+		trigger={
+			independent=yes
 		}
-		text = EVTDESCB_EMP.21
-	}
-	
-	is_triggered_only = yes
-	
-	prisoner = no
-	
-	trigger = {
-		NOT = {
-			real_tier = baron
-		}
+		text=EVTDESCB_EMP.21
 	}
 	
-	immediate = {
-		if = {
-			limit = {
-				culture = han
-				capital_scope = { NOT = { region = world_china_yi } }
-			}
-			random_list = {
-				10 = { religion = taiping }
-				90 = { religion = folk }
-			}
-		}
-		if = {
-			limit = {
-				culture = han
-				capital_scope = { region = world_china_yi }
-			}
-			random_list = {
-				50 = { religion = tianshi }
-				50 = { religion = folk }
-			}
-		}
-		if = {
-			limit = { culture_group = korean }
-			religion = shamanist
-		}
-		if = {
-			limit = { culture_group = mongol }
-			religion = tengri_pagan
-		}
-		if = {
-			limit = { culture_group = yue }
-			religion = animist
-		}
-		if = {
-			limit = { culture = yuezhi }
-			religion = buddhist
-		}
-		if = {
-			limit = { culture = qiang }
-			religion = baishi
-		}
-		if = {
-			limit = { culture = di }
-			religion = baima
-		}
-		if = {
-			limit = { culture = bandunman }
-			religion = baihu
-		}
-		if = {
-			limit = { culture = nanman }
-			religion = huojiao
-		}
-		if = {
-			limit = {
-				top_liege = { NOT = { religion = ROOT } }
-			}
-			random = {
-				chance = 2
-				set_defacto_liege = THIS
-			}
+	is_triggered_only=yes
+	
+	prisoner=no
+	
+	trigger={
+		NOT={
+			real_tier=baron
 		}
 	}
 	
-	option = {
-		name = OH
+	immediate={
+		if={
+			limit={
+				culture=han
+				capital_scope={ NOT={ region=world_china_yi } }
+			}
+			random_list={
+				10={ religion=taiping }
+				90={ religion=folk }
+			}
+		}
+		if={
+			limit={
+				culture=han
+				capital_scope={ region=world_china_yi }
+			}
+			random_list={
+				50={ religion=tianshi }
+				50={ religion=folk }
+			}
+		}
+		if={
+			limit={ culture_group=japanese }
+			religion=shinto
+		}
+		if={
+			limit={ culture_group=korean }
+			religion=shamanist
+		}
+		if={
+			limit={ culture_group=mongol }
+			religion=tengri_pagan
+		}
+		if={
+			limit={ culture_group=yue }
+			religion=animist
+		}
+		if={
+			limit={ culture_group=bactrian }
+			religion=buddhist
+		}
+		if={
+			limit={ culture=qiang }
+			religion=baishi
+		}
+		if={
+			limit={ culture=di }
+			religion=baima
+		}
+		if={
+			limit={ culture=bandunman }
+			religion=baihu
+		}
+		if={
+			limit={ culture=nanman }
+			religion=huojiao
+		}
+		if={
+			limit={
+				top_liege={ NOT={ religion=ROOT } }
+			}
+			random={
+				chance=2
+				set_defacto_liege=THIS
+			}
+		}
+	}
+	
+	option={
+		name=OH
 	}
 }
 
 #Emperor Invited
-character_event = {
-	id = EMP.22
-	desc = EVTDESC_EMP.22
-	title = EVTTITLE_EMP.22
-	picture = GFX_evt_emissary
+character_event={
+	id=EMP.22
+	desc=EVTDESC_EMP.22
+	title=EVTTITLE_EMP.22
+	picture=GFX_evt_emissary
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	immediate = {
-		event_target:target_inviter = {
-			clr_character_flag = invited_emperor
+	immediate={
+		event_target:target_inviter={
+			clr_character_flag=invited_emperor
 		}
 	}
 	
-	option = {
-		name = ACCEPT
+	option={
+		name=ACCEPT
 		
-		hidden_tooltip = {
-			event_target:target_palace = {
-				grant_title = ROOT
+		hidden_tooltip={
+			event_target:target_palace={
+				grant_title=ROOT
 			}
-			event_target:target_inviter = {
-				character_event = { id = EMP.23 days = 10 random = 20 }
+			event_target:target_inviter={
+				character_event={ id=EMP.23 days=10 random=20 }
 			}
 		}
 		
-		ai_chance = {
-			factor = 1
-			modifier = {
-				factor = 1.05
-				event_target:target_inviter = {
-					real_tier = EMPEROR
+		ai_chance={
+			factor=1
+			modifier={
+				factor=1.05
+				event_target:target_inviter={
+					real_tier=EMPEROR
 				}
 			}
-			modifier = {
-				factor = 1.05
-				event_target:target_inviter = {
-					realm_size = 50
+			modifier={
+				factor=1.05
+				event_target:target_inviter={
+					realm_size=50
 				}
 			}
-			modifier = {
-				factor = 1.05
-				event_target:target_inviter = {
-					prestige = 2000
+			modifier={
+				factor=1.05
+				event_target:target_inviter={
+					prestige=2000
 				}
 			}
-			modifier = {
-				factor = 1.05
-				event_target:target_inviter = {
-					prestige = 5000
+			modifier={
+				factor=1.05
+				event_target:target_inviter={
+					prestige=5000
 				}
 			}
-			modifier = {
-				factor = 1.05
-				event_target:target_inviter = {
-					prestige = 8000
+			modifier={
+				factor=1.05
+				event_target:target_inviter={
+					prestige=8000
 				}
 			}
-			modifier = {
-				factor = 1.05
-				event_target:target_inviter = {
-					piety = 1000
+			modifier={
+				factor=1.05
+				event_target:target_inviter={
+					piety=1000
 				}
 			}
-			modifier = {
-				factor = 1.05
-				event_target:target_inviter = {
-					piety = 1500
+			modifier={
+				factor=1.05
+				event_target:target_inviter={
+					piety=1500
 				}
 			}
-			modifier = {
-				factor = 1.05
-				event_target:target_inviter = {
-					piety = 2000
+			modifier={
+				factor=1.05
+				event_target:target_inviter={
+					piety=2000
 				}
 			}
-			modifier = {
-				factor = 1.05
-				event_target:target_inviter = {
-					piety = 2500
+			modifier={
+				factor=1.05
+				event_target:target_inviter={
+					piety=2500
 				}
 			}
-			modifier = {
-				factor = 0
-				event_target:target_inviter = {
-					trait = tyrant
+			modifier={
+				factor=0
+				event_target:target_inviter={
+					trait=tyrant
 				}
 			}
-			modifier = {
-				factor = 0.9
-				event_target:target_inviter = {
-					trait = ambitious
+			modifier={
+				factor=0.9
+				event_target:target_inviter={
+					trait=ambitious
 				}
 			}
-			modifier = {
-				factor = 0.9
-				event_target:target_inviter = {
-					trait = dishonorable
+			modifier={
+				factor=0.9
+				event_target:target_inviter={
+					trait=dishonorable
 				}
 			}
-			modifier = {
-				factor = 1.05
-				event_target:target_inviter = {
-					trait = chivalrous
+			modifier={
+				factor=1.05
+				event_target:target_inviter={
+					trait=chivalrous
 				}
 			}
-			modifier = {
-				factor = 1.05
-				event_target:target_inviter = {
-					trait = honorable
+			modifier={
+				factor=1.05
+				event_target:target_inviter={
+					trait=honorable
 				}
 			}
-			modifier = {
-				factor = 1.05
-				event_target:target_inviter = {
-					trait = zealous
+			modifier={
+				factor=1.05
+				event_target:target_inviter={
+					trait=zealous
 				}
 			}
 		}
 	}
-	option = {
-		name = DECLINE
+	option={
+		name=DECLINE
 		
-		hidden_tooltip = {
-			event_target:target_inviter = {
-				opinion = {
-					modifier = opinion_refused_guardianship
-					who = ROOT
+		hidden_tooltip={
+			event_target:target_inviter={
+				opinion={
+					modifier=opinion_refused_guardianship
+					who=ROOT
 				}
-				character_event = { id = EMP.24 days = 10 random = 20 }
+				character_event={ id=EMP.24 days=10 random=20 }
 			}
 		}
 		
-		ai_chance = {
-			factor = 1
+		ai_chance={
+			factor=1
 		}
 	}
 }
 
 #Emperor Accepts
-character_event = {
-	id = EMP.23
-	desc = EVTDESC_EMP.23
-	title = EVTTITLE_EMP.23
-	picture = GFX_evt_emissary_byzantine
+character_event={
+	id=EMP.23
+	desc=EVTDESC_EMP.23
+	title=EVTTITLE_EMP.23
+	picture=GFX_evt_china_diplomatic_success
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	option = {
-		name = EXCELLENT
+	option={
+		name=EXCELLENT
+		
+		add_favor=FROM
 	}
 }
 
 #Emperor Declines
-character_event = {
-	id = EMP.24
-	desc = EVTDESC_EMP.24
-	title = EVTTITLE_EMP.24
-	picture = GFX_evt_emissary_byzantine
+character_event={
+	id=EMP.24
+	desc=EVTDESC_EMP.24
+	title=EVTTITLE_EMP.24
+	picture=GFX_evt_china_diplomatic_incident
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	option = {
-		name = OHNO
+	option={
+		name=OHNO
+	}
+}
+
+#Emperor Decides
+character_event={
+	id=EMP.25
+	title=EVTTITLE_EMP.25
+	picture=GFX_evt_emissary_byzantine
+	
+	desc={
+		text=EVTDESC_EMP.25A
+		trigger={
+			FROM={ has_landed_title=c_empress }
+		}
+	}
+	desc={
+		text=EVTDESC_EMP.25B
+		trigger={
+			FROM={ has_landed_title=c_eunuch }
+		}
+	}
+	
+	is_triggered_only=yes
+	
+	option={
+		name=OK
+		wealth=-300
+		FROM={
+			wealth=300
+			opinion={ modifier=opinion_tax_full who=ROOT }
+		}
+		
+		ai_chance={
+			factor=1
+			
+			modifier={
+				factor=1.5
+				opinion={
+					who=FROM
+					value=50
+				}
+			}
+			
+			modifier={
+				factor=1.5
+				trait=charitable
+			}
+			
+			modifier={
+				factor=1.5
+				trait=kind
+			}
+			
+			modifier={
+				factor=1.5
+				trait=just
+			}
+		}
+	}
+	
+	option={
+		name=NO
+		FROM={
+			opinion={ modifier=opinion_tax_refused who=ROOT }
+		}
+		
+		ai_chance={
+			factor=1
+			
+			modifier={
+				factor=0.9
+			}
+			
+			modifier={
+				factor=1.5
+				NOT={
+					opinion={
+						who=FROM
+						value=0
+					}
+				}
+			}
+			
+			modifier={
+				factor=1.5
+				trait=cruel
+			}
+			
+			modifier={
+				factor=1.5
+				trait=greedy
+			}
+			
+			modifier={
+				factor=1.5
+				trait=selfish
+			}
+		}
+	}
+}
+
+#Empress Accepts
+character_event={
+	id=EMP.26
+	desc=EVTDESC_EMP.26
+	title=EVTTITLE_EMP.26
+	picture=GFX_evt_china_diplomatic_success
+	
+	is_triggered_only=yes
+	
+	option={
+		name=EXCELLENT
+	}
+}
+
+#Empress Declines
+character_event={
+	id=EMP.27
+	desc=EVTDESC_EMP.27
+	title=EVTTITLE_EMP.27
+	picture=GFX_evt_china_diplomatic_incident
+	
+	is_triggered_only=yes
+	
+	option={
+		name=OHNO
 	}
 }

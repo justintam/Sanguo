@@ -19,6 +19,12 @@
 	liege=0 #Independent
 	holder=2636 #Shen Cheng
 }
+196.4.1={
+	liege=d_runan
+}
+197.8.1={
+	liege=0
+}
 200.6.1={
 	liege=d_runan
 	holder=4172 #Random

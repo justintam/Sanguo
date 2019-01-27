@@ -6,6 +6,12 @@
 1.1.1={
 	liege=d_jiyin
 }
+130.1.1={
+	holder=4488 #Du Gen
+}
+165.1.1={
+	holder=0 #None
+}
 184.1.1={
 	holder=3400 #Hu Hao
 }

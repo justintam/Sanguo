@@ -14,5 +14,6 @@ b_gaixiaju = city
 # Misc
 culture = han
 religion = taiping
+terrain = plains
 
 #History

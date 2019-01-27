@@ -15,6 +15,7 @@ b_guangping = castle
 # Misc
 culture = han
 religion = taiping
+terrain = plains
 
 #History
 194.1.1={

@@ -4,6 +4,8 @@ c_guard = {
 	color={ 210 120 120 }
 	color2={ 255 255 255 }
 	
+	capital=1 #Henan
+	
 	culture = han
 	religion = confucian
 	
@@ -19,12 +21,44 @@ c_guard = {
 	foa = "CAPTAIN_FOA"
 	short_name = yes
 	
+	strength_growth_per_century = 1.0
+	
 	mercenary_type = imperial_guard_composition
+}
+
+c_baima = {
+	color={ 0 0 0 }
+	color2={ 255 255 255 }
+	
+	capital = 307 #Zhuo
+	
+	culture = han
+	religion = confucian
+
+	landless = yes
+	
+	primary = yes
+	short_name = yes
+	
+	mercenary = yes
+
+	allow = {
+		any_realm_province = { region = world_china_you }
+	}
+	
+	title = "CAPTAIN"
+	foa = "CAPTAIN_FOA"
+	
+	strength_growth_per_century = 1.0
+	
+	mercenary_type = baima_composition
 }
 
 c_qingzhou = {
 	color={ 255 255 25 }
 	color2={ 255 255 255 }
+	
+	capital=187 #Zhoua
 	
 	culture = han
 	religion = taiping
@@ -37,7 +71,8 @@ c_qingzhou = {
 	mercenary = yes
 
 	allow = {
-		capital_scope = {
+		year = 193
+		any_realm_province = {
 			OR = {
 				region = world_china_ji
 				region = world_china_qing
@@ -49,12 +84,16 @@ c_qingzhou = {
 	title = "CAPTAIN"
 	foa = "CAPTAIN_FOA"
 	
+	strength_growth_per_century = 1.0
+	
 	mercenary_type = yellow_composition
 }
 
-c_baima = {
-	color={ 0 0 0 }
+c_white = {
+	color={ 255 255 25 }
 	color2={ 255 255 255 }
+	
+	capital = 14 # Yang
 	
 	culture = han
 	religion = confucian
@@ -65,23 +104,25 @@ c_baima = {
 	short_name = yes
 	
 	mercenary = yes
-	
-	independent = yes
 
 	allow = {
-		capital_scope = { region = world_china_you }
+		year = 195
 	}
 	
 	title = "CAPTAIN"
 	foa = "CAPTAIN_FOA"
 	
-	mercenary_type = baima_composition
+	strength_growth_per_century = 1.0
+	
+	mercenary_type = han_mid_composition
 }
 
 c_bashu = {
 	color={ 90 180 85 }
 	color2={ 255 255 255 }
 	
+	capital = 257 #Chengdu
+	
 	culture = han
 	religion = confucian
 
@@ -95,11 +136,13 @@ c_bashu = {
 	independent = yes
 	
 	allow = {
-		capital_scope = { region = world_china_yi }
+		any_realm_province = { region = world_china_yi }
 	}
 	
 	title = "CAPTAIN"
 	foa = "CAPTAIN_FOA"
+	
+	strength_growth_per_century = 1.0
 	
 	mercenary_type = bashu_composition
 }
@@ -107,6 +150,8 @@ c_bashu = {
 c_qiang = {
 	color={ 190 240 185 }
 	color2={ 255 255 255 }
+	
+	capital = 362 #Qinghaidong
 	
 	culture = qiang
 	religion = baishi
@@ -121,11 +166,19 @@ c_qiang = {
 	independent = yes
 	
 	allow = {
-		capital_scope = { region = world_china_liang }
+		any_realm_province = {
+			OR = {
+				region = world_central_asia
+				region = world_china_liang
+				region = world_tibet
+			}
+		}
 	}
 	
 	title = "CAPTAIN"
 	foa = "CAPTAIN_FOA"
+	
+	strength_growth_per_century = 1.0
 	
 	mercenary_type = qiang_composition
 }
@@ -133,6 +186,8 @@ c_qiang = {
 c_wuxia = {
 	color={ 125 25 15 }
 	color2={ 255 255 255 }
+	
+	capital = 248 #Lujiang
 	
 	culture = han
 	religion = confucian
@@ -147,7 +202,7 @@ c_wuxia = {
 	independent = yes
 
 	allow = {
-		capital_scope = {
+		any_realm_province = {
 			OR = {
 				region = world_china_jing
 				region = world_china_yang
@@ -160,12 +215,16 @@ c_wuxia = {
 	title = "CAPTAIN"
 	foa = "CAPTAIN_FOA"
 	
+	strength_growth_per_century = 1.0
+	
 	mercenary_type = wuxia_composition
 }
 
 c_feather = {
 	color={ 255 179 33 }
 	color2={ 255 255 255 }
+	
+	capital = 266 #Linjiang
 	
 	culture = bandunman
 	religion = baihu
@@ -182,7 +241,7 @@ c_feather = {
 	independent = yes
 
 	allow = {
-		capital_scope = {
+		any_realm_province = {
 			OR = {
 				region = world_china_jing
 				region = world_china_yi
@@ -193,13 +252,17 @@ c_feather = {
 	title = "CAPTAIN"
 	foa = "CAPTAIN_FOA"
 	
+	strength_growth_per_century = 1.0
+	
 	mercenary_type = feather_composition
 }
 
-#Lu Bu
-c_lubu = {
-	color={ 245 145 145 }
+#Huo
+c_huo = {
+	color={ 210 37 27 }
 	color2={ 255 255 255 }
+	
+	capital = 144 # c_jiangling
 	
 	culture = han
 	religion = confucian
@@ -216,12 +279,56 @@ c_lubu = {
 	independent = yes
 
 	allow = {
+		year = 194
+		any_realm_province = {
+			OR = {
+				region = world_china_jing
+				region = world_china_sili
+				region = world_china_yang
+				region = world_china_yi
+				region = world_china_yu
+			}
+		}
+	}
+	
+	title = "LORD"
+	title_female = "LADY"
+	title_queen_mother_female = "LADY"
+	
+	strength_growth_per_century = 1.0
+	
+	mercenary_type = han_low_composition
+}
+
+#Lu Bu
+c_lubu = {
+	color={ 245 145 145 }
+	color2={ 255 255 255 }
+	
+	capital = 213 #Puyang
+	
+	culture = han
+	religion = confucian
+	
+	dignity = 10
+
+	landless = yes
+	
+	primary = yes
+	short_name = yes
+	
+	mercenary = yes
+	
+	independent = yes
+
+	allow = {
+		year = 192
 		top_liege = {
 			primary_title = {
 				NOT = { has_title_flag = premier_title }
 			}
 		}
-		capital_scope = {
+		any_realm_province = {
 			OR = {
 				region = world_china_bing
 				region = world_china_ji
@@ -236,6 +343,8 @@ c_lubu = {
 	title = "LORD"
 	title_female = "LADY"
 	title_queen_mother_female = "LADY"
+	
+	strength_growth_per_century = 1.0
 	
 	mercenary_type = liang_composition
 }

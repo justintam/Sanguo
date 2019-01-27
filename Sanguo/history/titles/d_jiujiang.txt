@@ -48,4 +48,6 @@
 202.1.1={
 	holder=4106 #Random
 }
-#225 Quan Zong
+225.1.1={
+	holder=10574 #Quan Zong
+}

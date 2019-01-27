@@ -14,5 +14,6 @@ b_liuchengxi = city
 # Misc
 culture = wuhuan
 religion = tengri_pagan
+terrain = mountain
 
 #History

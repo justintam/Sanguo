@@ -17,6 +17,7 @@ b_shiping = city
 # Misc
 culture = han
 religion = confucian
+terrain = hills
 
 #History
 210.1.1={

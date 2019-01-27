@@ -46,6 +46,7 @@ targetted_decisions = {
 		only_playable = yes
 		
 		ai_target_filter = realm
+		ai_check_interval = 3
 	
 		from_potential = {
 			has_focus = focus_seduction
@@ -94,26 +95,14 @@ targetted_decisions = {
 			
 			NOT = { is_consort = FROM }
 			NOT = { any_spouse = { character = FROM } }
-			
-			OR = {
-				AND = {
-					NOT = { is_child_of = FROM }
-					NOT = { mother_even_if_dead = { is_child_of = FROM } }
-					NOT = { father_even_if_dead = { is_child_of = FROM } }
-					FROM = {
-						NOT = { is_child_of = ROOT }
-						NOT = { mother_even_if_dead = { is_child_of = ROOT } }
-						NOT = { father_even_if_dead = { is_child_of = ROOT } }
-					}
-				}
-				AND = {
-					religion_group = zoroastrian_group
-					FROM = { religion_group = zoroastrian_group }
-				}
-				AND = {
-					religion = messalian
-					FROM = { religion = messalian }
-				}
+	
+			NOT = { is_child_of = FROM }
+			NOT = { mother_even_if_dead = { is_child_of = FROM } }
+			NOT = { father_even_if_dead = { is_child_of = FROM } }
+			FROM = {
+				NOT = { is_child_of = ROOT }
+				NOT = { mother_even_if_dead = { is_child_of = ROOT } }
+				NOT = { father_even_if_dead = { is_child_of = ROOT } }
 			}
 			
 			OR = {
@@ -166,18 +155,6 @@ targetted_decisions = {
 							same_sex = ROOT
 						}
 						character_event = { id = WoL.104 days = 1 } # Warning - Homosexual scandal risk
-						break = yes
-					}
-					
-					if = {
-						limit = {
-							religion_group = christian
-							OR = {
-								is_priest = yes
-								ROOT = { is_priest = yes }
-							}
-						}
-						character_event = { id = WoL.103 days = 1 } # Warning - Priest scandal risk
 						break = yes
 					}
 					
@@ -463,9 +440,9 @@ targetted_decisions = {
 			}
 			modifier = {
 				factor = 0
-				NOT = { is_rival = FROM }
-				NOT = { is_married = FROM }
 				NOR = {
+					is_rival = FROM
+					is_married = FROM
 					AND = {
 						OR = {
 							is_ruler = yes
@@ -573,8 +550,7 @@ targetted_decisions = {
 	decision_break_free = {
 		only_playable = yes
 		is_high_prio = yes
-	
-		filter = sub_realm
+
 		ai_target_filter = dynasty
 		
 		from_potential = {
@@ -727,6 +703,9 @@ targetted_decisions = {
 		ai_will_do = {
 			factor = 1
 
+			modifier = {
+				factor = 0.5 #Slow it down
+			}
 			modifier = {
 				factor = 0
 				FROM = { has_character_modifier = organizing_party } # AI will only invite one person
@@ -984,7 +963,7 @@ targetted_decisions = {
 								}
 								opinion = {
 									modifier = opinion_dishonorable_duel
-									who = FROM
+									who = PREV
 									months = 36
 								}
 							}

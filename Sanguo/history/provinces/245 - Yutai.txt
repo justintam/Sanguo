@@ -14,5 +14,6 @@ b_linhuai = castle
 # Misc
 culture = han
 religion = confucian
+terrain = plains
 
 #History

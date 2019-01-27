@@ -1056,12 +1056,11 @@ character_event = {
 	option = {
 		name = EVTOPTA_ZE_22510
 		
+		piety = 100
+
 		tooltip = {
-			FROM = {
-				piety = 100
-				add_favor = ROOT 
-			}
-		}	
+			add_favor = FROM
+		}
 	}
 }
 
@@ -1669,6 +1668,7 @@ character_event = {
 				is_inaccessible_trigger = yes
 				trait = eunuch
 				trait = celibate
+				is_ascetic_trigger = yes
 				owes_favor_to = ROOT
 				trait = incapable
 				any_heir_title = {
@@ -1686,7 +1686,7 @@ character_event = {
 							AND = {
 								OR = {
 									culture_group = yue
-									culture_group = tibetan
+									culture_group = tibetan_group
 									culture_group = man
 								}
 								liege = { religion = ROOT }
@@ -1713,6 +1713,7 @@ character_event = {
 					is_inaccessible_trigger = yes
 					trait = eunuch
 					trait = celibate
+					is_ascetic_trigger = yes
 					owes_favor_to = ROOT
 					trait = incapable
 					any_heir_title = {
@@ -1730,7 +1731,7 @@ character_event = {
 								AND = {
 									OR = {
 										culture_group = yue
-										culture_group = tibetan
+										culture_group = tibetan_group
 										culture_group = man
 									}
 									liege = { religion = ROOT }
@@ -1821,6 +1822,17 @@ character_event = {
 				months = 1200
 			}
 			reverse_add_favor = ROOT
+			hidden_tooltip = {
+				if = {
+					limit = {
+						religion_group = chinese_religion
+					}
+					set_government_type = muslim_government
+				}
+				else = {
+					set_government_type = feudal_government
+				}
+			}
 			grant_title = event_target:target_friend_land
 		}
 		custom_tooltip = {

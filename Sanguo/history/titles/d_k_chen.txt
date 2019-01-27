@@ -1,9 +1,9 @@
 # e_china
 1.1.1={
-	law = agnatic_succession
-	law = succ_primogeniture
-	effect = {
-		set_title_flag = noble_king
+	law=agnatic_succession
+	law=succ_primogeniture
+	effect={
+		set_title_flag=noble_king
 	}
 }
 1.1.1={
@@ -35,5 +35,5 @@
 }
 197.1.1={
 	holder=0
-	active = no
+	active=no
 }

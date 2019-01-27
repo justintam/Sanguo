@@ -9,3 +9,9 @@
 184.1.1={
 	holder=2700 #Long Wugui
 }
+220.3.6={
+	holder=2701 #Long Li
+}
+260.3.6={
+	holder=0 #JINDYNASTY
+}

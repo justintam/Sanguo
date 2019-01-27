@@ -29,12 +29,12 @@
 193.4.1={
 	liege=k_you
 }
-199.1.1={
+199.3.1={
 	vice_royalty = yes
 	holder=708 #Yuan Xi
 }
 207.1.1={
-	holder=433 #Cao Ren
+	holder=1307 #Ding Zhiren
 }
 213.6.1={
 	liege=k_ji

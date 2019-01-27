@@ -20,246 +20,17 @@ castle = {
 	# + 0.15 bonus in either offensive, defensive or morale sometimes split over different units or stats same on all levels
 	
 	# Culture building names MUST start with ca_culture
-
-	#Welsh and English Longbow archery range
-	ca_culture_saxon_english_1 = {
-		desc = ca_culture_saxon_english_1_desc
-		potential = {
-			FROM = {
-				OR = {
-					culture = english
-					culture = welsh
-				}
-			}
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
-		prerequisites = { ca_wall_2 }
-		gold_cost = 200
-		build_time = 730
-		archers_offensive = 0.15
-		archers = 60
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_saxon_english_2 = {
-		desc = ca_culture_saxon_english_1_desc
-		potential = {
-			FROM = {
-				OR = {
-					culture = english
-					culture = welsh
-				}
-			}
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
-		upgrades_from = ca_culture_saxon_english_1
-		gold_cost = 300
-		build_time = 1095
-		archers_offensive = 0.15
-		archers = 80
-		ai_creation_factor = 100
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_saxon_english_3 = {
-		desc = ca_culture_saxon_english_1_desc
-		potential = {
-			FROM = {
-				OR = {
-					culture = english
-					culture = welsh
-				}
-			}
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
-		upgrades_from = ca_culture_saxon_english_2
-		gold_cost = 400
-		build_time = 2190
-		archers_offensive = 0.15
-		archers = 100
-		ai_creation_factor = 99
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_saxon_english_4 = {
-		desc = ca_culture_saxon_english_1_desc
-		potential = {
-			FROM = {
-				OR = {
-					culture = english
-					culture = welsh
-				}
-			}
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
-		upgrades_from = ca_culture_saxon_english_3
-		gold_cost = 500
-		build_time = 2190
-		archers_offensive = 0.15
-		archers = 120
-		ai_creation_factor = 98
-		
-		extra_tech_building_start = 0.8
-	}
-
-	#Scottish Schiltron
-	ca_culture_scottish_1 = {
-		desc = ca_culture_scottish_1_desc
-		potential = {
-			FROM = {
-				culture = scottish
-			}
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
-		prerequisites = { ca_wall_2 }
-		gold_cost = 200
-		build_time = 730
-		pikemen = 30
-		pikemen_defensive = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_scottish_2 = {
-		desc = ca_culture_scottish_1_desc
-		potential = {
-			FROM = {
-				culture = scottish
-			}
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
-		upgrades_from = ca_culture_scottish_1
-		gold_cost = 300
-		build_time = 1095
-		pikemen = 40
-		pikemen_defensive = 0.15
-		ai_creation_factor = 100
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_scottish_3 = {
-		desc = ca_culture_scottish_1_desc
-		potential = {
-			FROM = {
-				culture = scottish
-			}
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
-		upgrades_from = ca_culture_scottish_2
-		gold_cost = 400
-		build_time = 2190
-		pikemen = 60
-		pikemen_defensive = 0.15
-		ai_creation_factor = 99
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_scottish_4 = {
-		desc = ca_culture_scottish_1_desc
-		potential = {
-			FROM = {
-				culture = scottish
-			}
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
-		upgrades_from = ca_culture_scottish_3
-		gold_cost = 500
-		build_time = 2190
-		pikemen = 80
-		pikemen_defensive = 0.15
-		ai_creation_factor = 98
-		
-		extra_tech_building_start = 0.8
-	}	
-	
-	#Baltic tribes Heavy Infantry camps
-	ca_culture_group_baltic_1 = {
-		desc = ca_culture_group_baltic_1_desc
-		potential = {
-			FROM = {
-				OR = {
-					culture_group = baltic
-					culture_group = finno_ugric
-				}
-			}
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
-		prerequisites = { ca_wall_2 }
-		gold_cost = 200
-		build_time = 730
-		heavy_infantry = 30
-		heavy_infantry_defensive = 0.15
-		ai_creation_factor = 101
-
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_group_baltic_2 = {
-		desc = ca_culture_group_baltic_1_desc
-		potential = {
-			FROM = {
-				OR = {
-					culture_group = baltic
-					culture_group = finno_ugric
-				}
-			}
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
-		upgrades_from = ca_culture_group_baltic_1
-		gold_cost = 300
-		build_time = 1095
-		heavy_infantry = 40
-		heavy_infantry_defensive = 0.15
-		ai_creation_factor = 100
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_group_baltic_3 = {
-		desc = ca_culture_group_baltic_1_desc
-		potential = {
-			FROM = {
-				OR = {
-					culture_group = baltic
-					culture_group = finno_ugric
-				}
-			}
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
-		upgrades_from = ca_culture_group_baltic_2
-		gold_cost = 400
-		build_time = 2190
-		heavy_infantry = 50
-		heavy_infantry_defensive = 0.15
-		ai_creation_factor = 99
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_group_baltic_4 = {
-		desc = ca_culture_group_baltic_1_desc
-		potential = {
-			FROM = {
-				OR = {
-					culture_group = baltic
-					culture_group = finno_ugric
-				}
-			}
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
-		upgrades_from = ca_culture_group_baltic_3
-		gold_cost = 500
-		build_time = 2190
-		heavy_infantry = 60
-		heavy_infantry_defensive = 0.15
-		ai_creation_factor = 98
-		
-		extra_tech_building_start = 0.8
-	}
 	
 	#Altaic horse breeders (and Persian)
 	ca_culture_group_altaic_1 = {
 		desc = ca_culture_group_altaic_1_desc
 		potential = {
-			FROM = { 
+			FROM = {
+				culture_group = mongol
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
 				culture_group = mongol
 			}
 		}
@@ -279,7 +50,12 @@ castle = {
 	ca_culture_group_altaic_2 = {
 		desc = ca_culture_group_altaic_1_desc
 		potential = {
-			FROM = { 
+			FROM = {
+				culture_group = mongol
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
 				culture_group = mongol
 			}
 		}
@@ -303,6 +79,11 @@ castle = {
 				culture_group = mongol
 			}
 		}
+		is_active_trigger = {
+			ROOT = {
+				culture_group = mongol
+			}
+		}
 		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
 		upgrades_from = ca_culture_group_altaic_2
 		gold_cost = 400
@@ -323,6 +104,11 @@ castle = {
 				culture_group = mongol
 			}
 		}
+		is_active_trigger = {
+			ROOT = {
+				culture_group = mongol
+			}
+		}
 		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
 		upgrades_from = ca_culture_group_altaic_3
 		gold_cost = 500
@@ -337,464 +123,17 @@ castle = {
 		extra_tech_building_start = 0.8
 	}
 	
-	#Frankish, Occitan, Norman and German Lists (and Breton)
-	ca_culture_frank_norman_german_1 = {
-		desc = ca_culture_frank_norman_german_1_desc
-		potential = {
-			FROM = {
-				OR = {
-					culture = frankish
-					culture = occitan
-					culture = norman
-					culture = german
-					culture = breton
-				}
-			}
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
-		prerequisites = { ca_wall_2 }
-		gold_cost = 200
-		build_time = 730
-		knights = 15
-		knights_offensive = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_frank_norman_german_2 = {
-		desc = ca_culture_frank_norman_german_1_desc
-		potential = {
-			FROM = {
-				OR = {
-					culture = frankish
-					culture = occitan
-					culture = norman
-					culture = german
-					culture = breton
-				}
-			}
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
-		upgrades_from = ca_culture_frank_norman_german_1
-		gold_cost = 300
-		build_time = 1095
-		knights = 20
-		knights_offensive = 0.15
-		ai_creation_factor = 100
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_frank_norman_german_3 = {
-		desc = ca_culture_frank_norman_german_1_desc
-		potential = {
-			FROM = {
-				OR = {
-					culture = frankish
-					culture = occitan
-					culture = norman
-					culture = german
-					culture = breton
-				}
-			}
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
-		upgrades_from = ca_culture_frank_norman_german_2
-		gold_cost = 400
-		build_time = 2190
-		knights = 25
-		knights_offensive = 0.15
-		ai_creation_factor = 99
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_frank_norman_german_4 = {
-		desc = ca_culture_frank_norman_german_1_desc
-		potential = {
-			FROM = {
-				OR = {
-					culture = frankish
-					culture = occitan
-					culture = norman
-					culture = german
-					culture = breton
-				}
-			}
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
-		upgrades_from = ca_culture_frank_norman_german_3
-		gold_cost = 500
-		build_time = 2190
-		knights = 30
-		knights_offensive = 0.15
-		ai_creation_factor = 98
-		
-		extra_tech_building_start = 0.8
-	}	
-	
-	#Iberian Fast horse breeders
-	ca_culture_group_iberian_1 = {
-		desc = ca_culture_group_iberian_1_desc
-		potential = {
-			FROM = { culture_group = iberian }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
-		prerequisites = { ca_wall_2 }
-		gold_cost = 200
-		build_time = 730
-		light_cavalry = 30
-		light_cavalry_offensive = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_group_iberian_2 = {
-		desc = ca_culture_group_iberian_1_desc
-		potential = {
-			FROM = { culture_group = iberian }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
-		upgrades_from = ca_culture_group_iberian_1
-		gold_cost = 300
-		build_time = 1095
-		light_cavalry = 40
-		light_cavalry_offensive = 0.15
-		ai_creation_factor = 100
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_group_iberian_3 = {
-		desc = ca_culture_group_iberian_1_desc
-		potential = {
-			FROM = { culture_group = iberian }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
-		upgrades_from = ca_culture_group_iberian_2
-		gold_cost = 400
-		build_time = 2190
-		light_cavalry = 50
-		light_cavalry_offensive = 0.15
-		ai_creation_factor = 99
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_group_iberian_4 = {
-		desc = ca_culture_group_iberian_1_desc
-		potential = {
-			FROM = { culture_group = iberian }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
-		upgrades_from = ca_culture_group_iberian_3
-		gold_cost = 500
-		build_time = 2190
-		light_cavalry = 60
-		light_cavalry_offensive = 0.15
-		ai_creation_factor = 98
-		
-		extra_tech_building_start = 0.8
-	}
-	
-	#Italian Pike formations
-	ca_culture_italian_1 = {
-		desc = ca_culture_italian_1_desc
-		potential = {
-			FROM = { culture = italian }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
-		prerequisites = { ca_wall_2 }
-		gold_cost = 200
-		build_time = 730
-		pikemen = 30
-		pikemen_morale = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_italian_2 = {
-		desc = ca_culture_italian_1_desc
-		potential = {
-			FROM = { culture = italian }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
-		upgrades_from = ca_culture_italian_1
-		gold_cost = 300
-		build_time = 1095
-		pikemen = 40
-		pikemen_morale = 0.15
-		ai_creation_factor = 100
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_italian_3 = {
-		desc = ca_culture_italian_1_desc
-		potential = {
-			FROM = { culture = italian }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
-		upgrades_from = ca_culture_italian_2
-		gold_cost = 400
-		build_time = 2190
-		pikemen = 50
-		pikemen_morale = 0.15
-		ai_creation_factor = 99
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_italian_4 = {
-		desc = ca_culture_italian_1_desc
-		potential = {
-			FROM = { culture = italian }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
-		upgrades_from = ca_culture_italian_3
-		gold_cost = 500
-		build_time = 2190
-		pikemen = 60
-		pikemen_morale = 0.15
-		ai_creation_factor = 98
-		
-		extra_tech_building_start = 0.8
-	}
-	
-	#Russian Armories
-	ca_culture_russian_1 = {
-		desc = ca_culture_russian_1_desc
-		potential = {
-			FROM = { culture_group = east_slavic }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
-		prerequisites = { ca_wall_2 }
-		gold_cost = 200
-		build_time = 730
-		heavy_infantry = 30
-		heavy_infantry_defensive = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_russian_2 = {
-		desc = ca_culture_russian_1_desc
-		potential = {
-			FROM = { culture_group = east_slavic }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
-		upgrades_from = ca_culture_russian_1
-		gold_cost = 300
-		build_time = 1095
-		heavy_infantry = 40
-		heavy_infantry_defensive = 0.15
-		ai_creation_factor = 100
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_russian_3 = {
-		desc = ca_culture_russian_1_desc
-		potential = {
-			FROM = { culture_group = east_slavic }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
-		upgrades_from = ca_culture_russian_2
-		gold_cost = 400
-		build_time = 2190
-		heavy_infantry = 50
-		heavy_infantry_defensive = 0.15
-		ai_creation_factor = 99
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_russian_4 = {
-		desc = ca_culture_russian_1_desc
-		potential = {
-			FROM = { culture_group = east_slavic }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
-		upgrades_from = ca_culture_russian_3
-		gold_cost = 500
-		build_time = 2190
-		heavy_infantry = 60
-		heavy_infantry_defensive = 0.15
-		ai_creation_factor = 98
-		
-		extra_tech_building_start = 0.8
-	}
-	
-	# Scandinavian Housecarls (and Saxon)
-	ca_culture_group_north_germanic_1 = {
-		desc = ca_culture_group_north_germanic_1_desc
-		potential = {
-			FROM = {
-				OR = {
-					culture_group = north_germanic
-					culture = saxon
-					culture = old_saxon
-					culture = frisian
-				}
-			}
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
-		prerequisites = { ca_wall_2 }
-		gold_cost = 200
-		build_time = 730
-		heavy_infantry = 30
-		heavy_infantry_offensive = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_group_north_germanic_2 = {
-		desc = ca_culture_group_north_germanic_1_desc
-		potential = {
-			FROM = {
-				OR = {
-					culture_group = north_germanic
-					culture = saxon
-					culture = old_saxon
-					culture = frisian
-				}
-			}
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
-		upgrades_from = ca_culture_group_north_germanic_1
-		gold_cost = 300
-		build_time = 1095
-		heavy_infantry = 40
-		heavy_infantry_offensive = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_group_north_germanic_3 = {
-		desc = ca_culture_group_north_germanic_1_desc
-		potential = {
-			FROM = {
-				OR = {
-					culture_group = north_germanic
-					culture = saxon
-					culture = old_saxon
-					culture = frisian
-				}
-			}
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
-		upgrades_from = ca_culture_group_north_germanic_2
-		gold_cost = 400
-		build_time = 2190
-		heavy_infantry = 50
-		heavy_infantry_offensive = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_group_north_germanic_4 = {
-		desc = ca_culture_group_north_germanic_1_desc
-		potential = {
-			FROM = {
-				OR = {
-					culture_group = north_germanic
-					culture = saxon
-					culture = old_saxon
-					culture = frisian
-				}
-			}
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
-		upgrades_from = ca_culture_group_north_germanic_3
-		gold_cost = 500
-		build_time = 2190
-		heavy_infantry = 60
-		heavy_infantry_offensive = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	
-	# Hungarian Hussars (and West Slavic)
-	ca_culture_hungarian_1 = {
-		desc = ca_culture_hungarian_1_desc
-		potential = {
-			FROM = { 
-				OR = {
-					culture = hungarian
-					culture_group = west_slavic
-				}
-			}
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
-		prerequisites = { ca_wall_2 }
-		gold_cost = 200
-		build_time = 730
-		light_cavalry = 30
-		light_cavalry_defensive = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_hungarian_2 = {
-		desc = ca_culture_hungarian_1_desc
-		potential = {
-			FROM = { 
-				OR = {
-					culture = hungarian
-					culture_group = west_slavic
-				}
-			}
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
-		upgrades_from = ca_culture_hungarian_1
-		gold_cost = 300
-		build_time = 1095
-		light_cavalry = 40
-		light_cavalry_defensive = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_hungarian_3 = {
-		desc = ca_culture_hungarian_1_desc
-		potential = {
-			FROM = { 
-				OR = {
-					culture = hungarian
-					culture_group = west_slavic
-				}
-			}
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
-		upgrades_from = ca_culture_hungarian_2
-		gold_cost = 400
-		build_time = 2190
-		light_cavalry = 50
-		light_cavalry_defensive = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_hungarian_4 = {
-		desc = ca_culture_hungarian_1_desc
-		potential = {
-			FROM = { 
-				OR = {
-					culture = hungarian
-					culture_group = west_slavic
-				}
-			}
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
-		upgrades_from = ca_culture_hungarian_3
-		gold_cost = 500
-		build_time = 2190
-		light_cavalry = 60
-		light_cavalry_defensive = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	
 	# Arabian Camel Cavalry
 	ca_culture_group_arabic_1 = {
 		desc = ca_culture_group_arabic_1_desc
 		potential = {
 			FROM = {
-				culture_group = bactrian
+				culture = yuezhi
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = yuezhi
 			}
 		}
 		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
@@ -811,7 +150,12 @@ castle = {
 		desc = ca_culture_group_arabic_1_desc
 		potential = {
 			FROM = {
-				culture_group = bactrian
+				culture = yuezhi
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = yuezhi
 			}
 		}
 		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
@@ -828,7 +172,12 @@ castle = {
 		desc = ca_culture_group_arabic_1_desc
 		potential = {
 			FROM = {
-				culture_group = bactrian
+				culture = yuezhi
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = yuezhi
 			}
 		}
 		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
@@ -845,7 +194,12 @@ castle = {
 		desc = ca_culture_group_arabic_1_desc
 		potential = {
 			FROM = {
-				culture_group = bactrian
+				culture = yuezhi
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = yuezhi
 			}
 		}
 		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
@@ -859,604 +213,17 @@ castle = {
 		extra_tech_building_start = 0.8
 	}
 	
-	# Byzantine Cataphracts
-	ca_culture_group_byzantine_1 = {
-		desc = ca_culture_group_byzantine_1_desc
-		potential = {
-			FROM = { culture_group = byzantine }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
-		prerequisites = { ca_wall_2 }
-		gold_cost = 200
-		build_time = 730
-		knights = 10
-		horse_archers = 10
-		knights_offensive = 0.075
-		horse_archers_offensive = 0.075
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_group_byzantine_2 = {
-		desc = ca_culture_group_byzantine_1_desc
-		potential = {
-			FROM = { culture_group = byzantine }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
-		upgrades_from = ca_culture_group_byzantine_1
-		gold_cost = 300
-		build_time = 1095
-		knights = 15
-		horse_archers = 10
-		knights_offensive = 0.075
-		horse_archers_offensive = 0.075
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_group_byzantine_3 = {
-		desc = ca_culture_group_byzantine_1_desc
-		potential = {
-			FROM = { culture_group = byzantine }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
-		upgrades_from = ca_culture_group_byzantine_2
-		gold_cost = 400
-		build_time = 2190
-		knights = 15
-		horse_archers = 20
-		knights_offensive = 0.075
-		horse_archers_offensive = 0.075
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_group_byzantine_4 = {
-		desc = ca_culture_group_byzantine_1_desc
-		potential = {
-			FROM = { culture_group = byzantine }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
-		upgrades_from = ca_culture_group_byzantine_3
-		gold_cost = 500
-		build_time = 2190
-		knights = 20
-		horse_archers = 20
-		knights_offensive = 0.075
-		horse_archers_offensive = 0.075
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	
-	# Irish Gallowglass
-	ca_culture_irish_1 = {
-		desc = ca_culture_irish_1_desc
-		potential = {
-			FROM = { culture = irish }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
-		prerequisites = { ca_wall_2 }
-		gold_cost = 200
-		build_time = 730
-		heavy_infantry = 30
-		heavy_infantry_defensive = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_irish_2 = {
-		desc = ca_culture_irish_1_desc
-		potential = {
-			FROM = { culture = irish }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
-		upgrades_from = ca_culture_irish_1
-		gold_cost = 300
-		build_time = 1095
-		heavy_infantry = 40
-		heavy_infantry_defensive = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_irish_3 = {
-		desc = ca_culture_irish_1_desc
-		potential = {
-			FROM = { culture = irish }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
-		upgrades_from = ca_culture_irish_2
-		gold_cost = 400
-		build_time = 2190
-		heavy_infantry = 50
-		heavy_infantry_defensive = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_irish_4 = {
-		desc = ca_culture_irish_1_desc
-		potential = {
-			FROM = { culture = irish }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
-		upgrades_from = ca_culture_irish_3
-		gold_cost = 500
-		build_time = 2190
-		heavy_infantry = 60
-		heavy_infantry_defensive = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	
-	# Ethiopian Light Infantry Drilling Ground
-	ca_culture_ethiopian_1 = {
-		desc = ca_culture_ethiopian_1_desc
-		potential = {
-			FROM = { culture = ethiopian }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
-		prerequisites = { ca_wall_2 }
-		gold_cost = 200
-		build_time = 730
-		light_infantry = 60
-		light_infantry_offensive = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_ethiopian_2 = {
-		desc = ca_culture_ethiopian_1_desc
-		potential = {
-			FROM = { culture = ethiopian }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
-		upgrades_from = ca_culture_ethiopian_1
-		gold_cost = 300
-		build_time = 1095
-		light_infantry = 80
-		light_infantry_offensive = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_ethiopian_3 = {
-		desc = ca_culture_ethiopian_1_desc
-		potential = {
-			FROM = { culture = ethiopian }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
-		upgrades_from = ca_culture_ethiopian_2
-		gold_cost = 400
-		build_time = 2190
-		light_infantry = 100
-		light_infantry_offensive = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_ethiopian_4 = {
-		desc = ca_culture_ethiopian_1_desc
-		potential = {
-			FROM = { culture = ethiopian }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
-		upgrades_from = ca_culture_ethiopian_3
-		gold_cost = 500
-		build_time = 2190
-		light_infantry = 120
-		light_infantry_offensive = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-
-	# Somali Light Infantry Barracks
-	ca_culture_somali_1 = {
-		desc = ca_culture_somali_1_desc
-		potential = {
-			FROM = { culture = somali }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
-		prerequisites = { ca_wall_2 }
-		gold_cost = 200
-		build_time = 730
-		light_infantry = 60
-		light_infantry_defensive = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_somali_2 = {
-		desc = ca_culture_somali_1_desc
-		potential = {
-			FROM = { culture = somali }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
-		upgrades_from = ca_culture_somali_1
-		gold_cost = 300
-		build_time = 1095
-		light_infantry = 80
-		light_infantry_defensive = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_somali_3 = {
-		desc = ca_culture_somali_1_desc
-		potential = {
-			FROM = { culture = somali }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
-		upgrades_from = ca_culture_somali_2
-		gold_cost = 400
-		build_time = 2190
-		light_infantry = 100
-		light_infantry_defensive = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_somali_4 = {
-		desc = ca_culture_somali_1_desc
-		potential = {
-			FROM = { culture = somali }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
-		upgrades_from = ca_culture_somali_3
-		gold_cost = 500
-		build_time = 2190
-		light_infantry = 120
-		light_infantry_defensive = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	
-	# West African Free Warrior Lodge
-	ca_culture_west_african_1 = {
-		desc = ca_culture_west_african_1_desc
-		potential = {
-			FROM = { culture_group = west_african }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
-		prerequisites = { ca_wall_2 }
-		gold_cost = 200
-		build_time = 730
-		light_infantry = 30
-		archers = 30
-		light_infantry_offensive = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_west_african_2 = {
-		desc = ca_culture_west_african_1_desc
-		potential = {
-			FROM = { culture_group = west_african }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
-		upgrades_from = ca_culture_west_african_1
-		gold_cost = 300
-		build_time = 1095
-		light_infantry = 40
-		archers = 40
-		light_infantry_offensive = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_west_african_3 = {
-		desc = ca_culture_west_african_1_desc
-		potential = {
-			FROM = { culture_group = west_african }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
-		upgrades_from = ca_culture_west_african_2
-		gold_cost = 400
-		build_time = 2190
-		light_infantry = 50
-		archers = 50
-		light_infantry_offensive = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_west_african_4 = {
-		desc = ca_culture_west_african_1_desc
-		potential = {
-			FROM = { culture_group = west_african }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
-		upgrades_from = ca_culture_west_african_3
-		gold_cost = 500
-		build_time = 2190
-		light_infantry = 60
-		archers = 60
-		light_infantry_offensive = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	
-	# South Slavic Cavalry
-	ca_culture_group_south_slavic_1 = {
-		desc = ca_culture_group_south_slavic_1_desc
-		potential = {
-			FROM = { culture_group = south_slavic }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
-		prerequisites = { ca_wall_2 }
-		gold_cost = 200
-		build_time = 730
-		knights = 5
-		light_cavalry = 20
-		knights_defensive = 0.075
-		light_cavalry_defensive = 0.075
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_group_south_slavic_2 = {
-		desc = ca_culture_group_south_slavic_1_desc
-		potential = {
-			FROM = { culture_group = south_slavic }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
-		upgrades_from = ca_culture_group_south_slavic_1
-		gold_cost = 300
-		build_time = 1095
-		knights = 10
-		light_cavalry = 20
-		knights_defensive = 0.075
-		light_cavalry_defensive = 0.075
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_group_south_slavic_3 = {
-		desc = ca_culture_group_south_slavic_1_desc
-		potential = {
-			FROM = { culture_group = south_slavic }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
-		upgrades_from = ca_culture_group_south_slavic_2
-		gold_cost = 400
-		build_time = 2190
-		knights = 15
-		light_cavalry = 20
-		knights_defensive = 0.075
-		light_cavalry_defensive = 0.075
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_group_south_slavic_4 = {
-		desc = ca_culture_group_south_slavic_1_desc
-		potential = {
-			FROM = { culture_group = south_slavic }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
-		upgrades_from = ca_culture_group_south_slavic_3
-		gold_cost = 500
-		build_time = 2190
-		knights = 15
-		light_cavalry = 30
-		knights_defensive = 0.075
-		light_cavalry_defensive = 0.075
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	
-	# Dutch Urban Militia
-	ca_culture_dutch_1 = {
-		desc = ca_culture_dutch_1_desc
-		potential = {
-			FROM = { culture = dutch }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
-		prerequisites = { ca_wall_2 }
-		gold_cost = 200
-		build_time = 730
-		pikemen = 15
-		light_infantry = 30
-		light_infantry_offensive = 0.075
-		pikemen_offensive = 0.075
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_dutch_2 = {
-		desc = ca_culture_dutch_1_desc
-		potential = {
-			FROM = { culture = dutch }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
-		upgrades_from = ca_culture_dutch_1
-		gold_cost = 300
-		build_time = 1095
-		pikemen = 20
-		light_infantry = 40
-		light_infantry_offensive = 0.075
-		pikemen_offensive = 0.075
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_dutch_3 = {
-		desc = ca_culture_dutch_1_desc
-		potential = {
-			FROM = { culture = dutch }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
-		upgrades_from = ca_culture_dutch_2
-		gold_cost = 400
-		build_time = 2190
-		pikemen = 25
-		light_infantry = 50
-		light_infantry_offensive = 0.075
-		pikemen_offensive = 0.075
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_dutch_4 = {
-		desc = ca_culture_dutch_1_desc
-		potential = {
-			FROM = { culture = dutch }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
-		upgrades_from = ca_culture_dutch_3
-		gold_cost = 500
-		build_time = 2190
-		pikemen = 30
-		light_infantry = 60
-		light_infantry_offensive = 0.075
-		pikemen_offensive = 0.075
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	
-	# Aztec Jaguar Warriors
-	ca_culture_nahuatl_1 = {
-		desc = ca_culture_nahuatl_1_desc
-		potential = {
-			FROM = { culture = nahuatl }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
-		prerequisites = { ca_wall_2 }
-		gold_cost = 200
-		build_time = 730
-		heavy_infantry = 30
-		heavy_infantry_morale = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_nahuatl_2 = {
-		desc = ca_culture_nahuatl_1_desc
-		potential = {
-			FROM = { culture = nahuatl }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
-		upgrades_from = ca_culture_nahuatl_1
-		gold_cost = 300
-		build_time = 1095
-		heavy_infantry = 40
-		heavy_infantry_morale = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_nahuatl_3 = {
-		desc = ca_culture_nahuatl_1_desc
-		potential = {
-			FROM = { culture = nahuatl }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
-		upgrades_from = ca_culture_nahuatl_2
-		gold_cost = 400
-		build_time = 2190
-		heavy_infantry = 50
-		heavy_infantry_morale = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_nahuatl_4 = {
-		desc = ca_culture_nahuatl_1_desc
-		potential = {
-			FROM = { culture = nahuatl }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
-		upgrades_from = ca_culture_nahuatl_3
-		gold_cost = 500
-		build_time = 2190
-		heavy_infantry = 60
-		heavy_infantry_morale = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	# Jewish Heavy Infantry
-	ca_culture_jewish_1 = {
-		desc = ca_culture_jewish_1_desc
-		potential = {
-			FROM = {
-				culture_group = israelite
-			}
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
-		prerequisites = { ca_wall_2 }
-		gold_cost = 200
-		build_time = 730
-		heavy_infantry = 30
-		heavy_infantry_morale = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_jewish_2 = {
-		desc = ca_culture_jewish_1_desc
-		potential = {
-			FROM = {
-				culture_group = israelite
-			}
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
-		upgrades_from = ca_culture_jewish_1
-		gold_cost = 300
-		build_time = 1095
-		heavy_infantry = 40
-		heavy_infantry_morale = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_jewish_3 = {
-		desc = ca_culture_jewish_1_desc
-		potential = {
-			FROM = {
-				culture_group = israelite
-			}
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
-		upgrades_from = ca_culture_jewish_2
-		gold_cost = 400
-		build_time = 2190
-		heavy_infantry = 50
-		heavy_infantry_morale = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_jewish_4 = {
-		desc = ca_culture_jewish_1_desc
-		potential = {
-			FROM = {
-				culture_group = israelite
-			}
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
-		upgrades_from = ca_culture_jewish_3
-		gold_cost = 500
-		build_time = 2190
-		heavy_infantry = 60
-		heavy_infantry_morale = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
 	# Indian war elephant pens
 	ca_culture_indian_1 = {
 		desc = ca_culture_indian_1_desc
 		potential = {
 			FROM = {
-				culture_group = bactrian
+				culture = yuezhi
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = yuezhi
 			}
 		}
 		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
@@ -1473,7 +240,12 @@ castle = {
 		desc = ca_culture_indian_2_desc
 		potential = {
 			FROM = {
-				culture_group = bactrian
+				culture = yuezhi
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = yuezhi
 			}
 		}
 		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
@@ -1491,7 +263,12 @@ castle = {
 		desc = ca_culture_indian_3_desc
 		potential = {
 			FROM = {
-				culture_group = bactrian
+				culture = yuezhi
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = yuezhi
 			}
 		}
 		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
@@ -1509,7 +286,12 @@ castle = {
 		desc = ca_culture_indian_4_desc
 		potential = {
 			FROM = {
-				culture_group = bactrian
+				culture = yuezhi
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = yuezhi
 			}
 		}
 		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
@@ -1524,303 +306,107 @@ castle = {
 		extra_tech_building_start = 0.8
 	}
 
-	# Nubian warrior barracks
-	ca_culture_nubian_1 = {
-		desc = ca_culture_nubian_1_desc
+	#Han Crossbow Range
+	ca_culture_chinese_han_1 = {
+		desc = ca_culture_chinese_han_1_desc
 		potential = {
-			FROM = { culture = nubian }
+			FROM = {
+				culture = han
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = han
+			}
 		}
 		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
 		prerequisites = { ca_wall_2 }
 		gold_cost = 200
 		build_time = 730
-		heavy_infantry = 10
-		light_infantry = 20
-		archers = 20
-		archers_defensive = 0.15
+		archers_offensive = 0.15
+		archers = 80
 		ai_creation_factor = 101
 		
 		extra_tech_building_start = 0.8
 	}
-	ca_culture_nubian_2 = {
-		desc = ca_culture_nubian_1_desc
+	ca_culture_chinese_han_2 = {
+		desc = ca_culture_chinese_han_1_desc
 		potential = {
-			FROM = { culture = nubian }
+			FROM = {
+				culture = han
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = han
+			}
 		}
 		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
-		upgrades_from = ca_culture_nubian_1
+		upgrades_from = ca_culture_chinese_han_1
 		gold_cost = 300
 		build_time = 1095
-		heavy_infantry = 15
-		light_infantry = 25
-		archers = 25
-		archers_defensive = 0.15
-		ai_creation_factor = 101
+		archers_offensive = 0.15
+		archers = 100
+		ai_creation_factor = 100
 		
 		extra_tech_building_start = 0.8
 	}
-	ca_culture_nubian_3 = {
-		desc = ca_culture_nubian_1_desc
+	ca_culture_chinese_han_3 = {
+		desc = ca_culture_chinese_han_1_desc
 		potential = {
-			FROM = { culture = nubian }
+			FROM = {
+				culture = han
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = han
+			}
 		}
 		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
-		upgrades_from = ca_culture_nubian_2
+		upgrades_from = ca_culture_chinese_han_2
 		gold_cost = 400
 		build_time = 2190
-		heavy_infantry = 15
-		light_infantry = 30
-		archers = 30
-		archers_defensive = 0.15
-		ai_creation_factor = 101
+		archers_offensive = 0.15
+		archers = 120
+		ai_creation_factor = 99
 		
 		extra_tech_building_start = 0.8
 	}
-	ca_culture_nubian_4 = {
-		desc = ca_culture_nubian_1_desc
+	ca_culture_chinese_han_4 = {
+		desc = ca_culture_chinese_han_1_desc
 		potential = {
-			FROM = { culture = nubian }
+			FROM = {
+				culture = han
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = han
+			}
 		}
 		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
-		upgrades_from = ca_culture_nubian_3
+		upgrades_from = ca_culture_chinese_han_3
 		gold_cost = 500
 		build_time = 2190
-		heavy_infantry = 20
-		light_infantry = 40
-		archers = 40
-		archers_defensive = 0.15
-		ai_creation_factor = 101
+		archers_offensive = 0.15
+		archers = 150
+		ai_creation_factor = 98
 		
 		extra_tech_building_start = 0.8
 	}
 
-	# Germanic Heavy Infantry Barracks
-	ca_culture_germanic_1 = {
-		desc = ca_culture_germanic_1_desc
-		potential = {
-			FROM = {
-				OR = {
-					culture = lombard
-					culture = old_frankish
-				}
-			}
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
-		prerequisites = { ca_wall_2 }
-		gold_cost = 200
-		build_time = 730
-		heavy_infantry = 30
-		heavy_infantry_offensive = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_germanic_2 = {
-		desc = ca_culture_germanic_1_desc
-		potential = {
-			FROM = {
-				OR = {
-					culture = lombard
-					culture = old_frankish
-				}
-			}
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
-		upgrades_from = ca_culture_germanic_1
-		gold_cost = 300
-		build_time = 1095
-		heavy_infantry = 40
-		heavy_infantry_offensive = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_germanic_3 = {
-		desc = ca_culture_germanic_1_desc
-		potential = {
-			FROM = {
-				OR = {
-					culture = lombard
-					culture = old_frankish
-				}
-			}
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
-		upgrades_from = ca_culture_germanic_2
-		gold_cost = 400
-		build_time = 2190
-		heavy_infantry = 50
-		heavy_infantry_offensive = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_germanic_4 = {
-		desc = ca_culture_germanic_1_desc
-		potential = {
-			FROM = {
-				OR = {
-					culture = lombard
-					culture = old_frankish
-				}
-			}
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
-		upgrades_from = ca_culture_germanic_3
-		gold_cost = 500
-		build_time = 2190
-		heavy_infantry = 60
-		heavy_infantry_offensive = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-
-	# Pictish Hall of War
-	ca_culture_pictish_1 = {
-		desc = ca_culture_pictish_1_desc
-		potential = {
-			FROM = { culture = pictish }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
-		prerequisites = { ca_wall_2 }
-		gold_cost = 200
-		build_time = 730
-		light_infantry = 30
-		heavy_infantry = 15
-		light_infantry_morale = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_pictish_2 = {
-		desc = ca_culture_pictish_1_desc
-		potential = {
-			FROM = { culture = pictish }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
-		upgrades_from = ca_culture_pictish_1
-		gold_cost = 300
-		build_time = 1095
-		light_infantry = 40
-		heavy_infantry = 20
-		light_infantry_morale = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_pictish_3 = {
-		desc = ca_culture_pictish_1_desc
-		potential = {
-			FROM = { culture = pictish }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
-		upgrades_from = ca_culture_pictish_2
-		gold_cost = 400
-		build_time = 2190
-		light_infantry = 50
-		heavy_infantry = 25
-		light_infantry_morale = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_pictish_4 = {
-		desc = ca_culture_pictish_1_desc
-		potential = {
-			FROM = { culture = pictish }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
-		upgrades_from = ca_culture_pictish_3
-		gold_cost = 500
-		build_time = 2190
-		light_infantry = 60
-		heavy_infantry = 30
-		light_infantry_morale = 0.15
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	
-	# Suebi free warriors
-	ca_culture_suebi_1 = {
-		desc = ca_culture_suebi_1_desc
-		potential = {
-			FROM = { culture = suebi }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
-		prerequisites = { ca_wall_2 }
-		gold_cost = 200
-		build_time = 730
-		pikemen = 15
-		light_infantry = 30
-		light_infantry_morale = 0.075
-		pikemen_morale = 0.075
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_suebi_2 = {
-		desc = ca_culture_suebi_1_desc
-		potential = {
-			FROM = { culture = suebi }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
-		upgrades_from = ca_culture_suebi_1
-		gold_cost = 300
-		build_time = 1095
-		pikemen = 20
-		light_infantry = 40
-		light_infantry_morale = 0.075
-		pikemen_morale = 0.075
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_suebi_3 = {
-		desc = ca_culture_suebi_1_desc
-		potential = {
-			FROM = { culture = suebi }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
-		upgrades_from = ca_culture_suebi_2
-		gold_cost = 400
-		build_time = 2190
-		pikemen = 25
-		light_infantry = 50
-		light_infantry_morale = 0.075
-		pikemen_morale = 0.075
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-	ca_culture_suebi_4 = {
-		desc = ca_culture_suebi_1_desc
-		potential = {
-			FROM = { culture = suebi }
-		}
-		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
-		upgrades_from = ca_culture_suebi_3
-		gold_cost = 500
-		build_time = 2190
-		pikemen = 30
-		light_infantry = 60
-		light_infantry_morale = 0.075
-		pikemen_morale = 0.075
-		ai_creation_factor = 101
-		
-		extra_tech_building_start = 0.8
-	}
-
-	# Moorish Cavalry Barracks
-	ca_culture_moors_1 = {
-		desc = ca_culture_moors_1_desc
+	#Jurchen Cavalry Barracks
+	ca_culture_altaic_jurchen_1 = {
+		desc = ca_culture_altaic_jurchen_1_desc
 		potential = {
 			FROM = { 
-				OR = {
-					culture = andalusian_arabic
-					culture = maghreb_arabic
-				}
+				culture = jie
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = jie
 			}
 		}
 		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
@@ -1828,82 +414,530 @@ castle = {
 		gold_cost = 200
 		build_time = 730
 		light_cavalry = 15
-		horse_archers = 15
-		light_cavalry_offensive = 0.1
-		light_cavalry_defensive = 0.1
-		light_cavalry_morale = 0.1
+		knights = 5
+		light_cavalry_offensive = 0.05
+		light_cavalry_defensive = 0.05
+		light_cavalry_morale = 0.05
 		ai_creation_factor = 101
 		
 		extra_tech_building_start = 0.8
 	}
-	ca_culture_moors_2 = {
-		desc = ca_culture_moors_1_desc
+	ca_culture_altaic_jurchen_2 = {
+		desc = ca_culture_altaic_jurchen_1_desc
 		potential = {
 			FROM = { 
-				OR = {
-					culture = andalusian_arabic
-					culture = maghreb_arabic
-				}
+				culture = jie
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = jie
 			}
 		}
 		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
-		upgrades_from = ca_culture_moors_1
+		upgrades_from = ca_culture_altaic_jurchen_1
 		gold_cost = 300
 		build_time = 1095
 		light_cavalry = 20
-		horse_archers = 20
-		light_cavalry_offensive = 0.1
-		light_cavalry_defensive = 0.1
-		light_cavalry_morale = 0.1
+		knights = 5
+		light_cavalry_offensive = 0.05
+		light_cavalry_defensive = 0.05
+		light_cavalry_morale = 0.05
 		ai_creation_factor = 100
 		
 		extra_tech_building_start = 0.8
 	}
-	ca_culture_moors_3 = {
-		desc = ca_culture_moors_1_desc
+	ca_culture_altaic_jurchen_3 = {
+		desc = ca_culture_altaic_jurchen_1_desc
 		potential = {
 			FROM = { 
-				OR = {
-					culture = andalusian_arabic
-					culture = maghreb_arabic
-				}
+				culture = jie
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = jie
 			}
 		}
 		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
-		upgrades_from = ca_culture_moors_2
+		upgrades_from = ca_culture_altaic_jurchen_2
 		gold_cost = 400
 		build_time = 2190
 		light_cavalry = 25
-		horse_archers = 25
-		light_cavalry_offensive = 0.1
-		light_cavalry_defensive = 0.1
-		light_cavalry_morale = 0.1
+		knights = 5
+		light_cavalry_offensive = 0.05
+		light_cavalry_defensive = 0.05
+		light_cavalry_morale = 0.05
 		ai_creation_factor = 99
 		
 		extra_tech_building_start = 0.8
 	}
-	ca_culture_moors_4 = {
-		desc = ca_culture_moors_1_desc
+	ca_culture_altaic_jurchen_4 = {
+		desc = ca_culture_altaic_jurchen_1_desc
 		potential = {
 			FROM = { 
-				OR = {
-					culture = andalusian_arabic
-					culture = maghreb_arabic
-				}
+				culture = jie
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture = jie
 			}
 		}
 		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
-		upgrades_from = ca_culture_moors_3
+		upgrades_from = ca_culture_altaic_jurchen_3
 		gold_cost = 500
 		build_time = 2190
 		light_cavalry = 30
-		horse_archers = 30
-		light_cavalry_offensive = 0.1
-		light_cavalry_defensive = 0.1
-		light_cavalry_morale = 0.1
+		knights = 5
+		light_cavalry_offensive = 0.05
+		light_cavalry_defensive = 0.05
+		light_cavalry_morale = 0.05
 		ai_creation_factor = 98
 		
 		extra_tech_building_start = 0.8
 	}
-}
+	
+	#Tibetan Culture Group
+	ca_culture_tibetan_1 = {
+		desc = ca_culture_tibetan_desc
+		potential = {
+			FROM = { 
+				culture_group = tibetan_group
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture_group = tibetan_group
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 0 }
+		#prerequisites = { ca_wall_2 }
+		gold_cost = 200
+		build_time = 730
+		
+		light_cavalry = 10
+		light_infantry = 50
+		light_cavalry_offensive = 0.05
+		light_cavalry_defensive = 0.05
+		light_cavalry_morale = 0.05
+		
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	ca_culture_tibetan_2 = {
+		desc = ca_culture_tibetan_desc
+		potential = {
+			FROM = { 
+				culture_group = tibetan_group
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture_group = tibetan_group
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 1 }
+		upgrades_from = ca_culture_tibetan_1
+		gold_cost = 300
+		build_time = 1095
+		
+		light_cavalry = 15
+		light_infantry = 65
+		light_cavalry_offensive = 0.05
+		light_cavalry_defensive = 0.05
+		light_cavalry_morale = 0.05
+		
+		ai_creation_factor = 100
+		
+		extra_tech_building_start = 0.8
+	}
+	ca_culture_tibetan_3 = {
+		desc = ca_culture_tibetan_desc
+		potential = {
+			FROM = { 
+				culture_group = tibetan_group
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture_group = tibetan_group
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 2 }
+		upgrades_from = ca_culture_tibetan_2
+		gold_cost = 400
+		build_time = 2190
+		
+		light_cavalry = 20
+		light_infantry = 80
+		light_cavalry_offensive = 0.05
+		light_cavalry_defensive = 0.05
+		light_cavalry_morale = 0.05
+		
+		ai_creation_factor = 99
+		
+		extra_tech_building_start = 0.8
+	}
+	ca_culture_tibetan_4 = {
+		desc = ca_culture_tibetan_desc
+		potential = {
+			FROM = { 
+				culture_group = tibetan_group
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture_group = tibetan_group
+			}
+		}
+		trigger = { TECH_CASTLE_CONSTRUCTION = 4 }
+		upgrades_from = ca_culture_tibetan_3
+		gold_cost = 500
+		build_time = 2190
+		
+		light_cavalry = 25
+		light_infantry = 95
+		light_cavalry_offensive = 0.05
+		light_cavalry_defensive = 0.05
+		light_cavalry_morale = 0.05
+		
+		ai_creation_factor = 98
+		
+		extra_tech_building_start = 0.8
+	}
+	
+	ca_government_monastery_1 = {
+		desc = ca_government_monastery_1_desc
+		potential = {
+			FROM = { 
+				religion = buddhist
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture_group = tibetan_group
+			}
+		}
+		trigger = {
+			TECH_TEMPLE_CONSTRUCTION = 0
+		}
+		gold_cost = 150
+		build_time = 547
+		levy_size = 0.05
+		garrison_size = 0.05
+		tech_growth_modifier = 0.025
+		culture_techpoints = 0.01
+		ai_creation_factor = 96
+		add_number_to_name = no
+		liege_piety = 0.05
 
+		extra_tech_building_start = 0.2
+	}
+	ca_government_monastery_2 = {
+		desc = ca_government_monastery_1_desc
+		potential = {
+			FROM = { 
+				religion = buddhist
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture_group = tibetan_group
+			}
+		}
+		trigger = {
+			TECH_TEMPLE_CONSTRUCTION = 0
+		}
+		prerequisites = { ca_wall_1 }
+		upgrades_from = ca_government_monastery_1
+		gold_cost = 200
+		build_time = 730
+		levy_size = 0.05
+		garrison_size = 0.05
+		tech_growth_modifier = 0.05
+		culture_techpoints = 0.02
+		ai_creation_factor = 95
+		add_number_to_name = no
+		liege_piety = 0.05
+		
+		extra_tech_building_start = 0.2
+	} 
+	ca_government_monastery_3 = {
+		desc = ca_government_monastery_1_desc
+		potential = {
+			FROM = { 
+				religion = buddhist
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture_group = tibetan_group
+			}
+		}
+		trigger = {
+			TECH_TEMPLE_CONSTRUCTION = 2
+		}
+		upgrades_from = ca_government_monastery_2
+		gold_cost = 300
+		build_time = 1095
+		levy_size = 0.05
+		garrison_size = 0.05
+		tech_growth_modifier = 0.075
+		culture_techpoints = 0.03
+		ai_creation_factor = 94
+		add_number_to_name = no
+		liege_piety = 0.05
+
+		extra_tech_building_start = 0.2
+	} 
+	ca_government_monastery_4 = {
+		desc = ca_government_monastery_1_desc
+		potential = {
+			FROM = { 
+				religion = buddhist
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				culture_group = tibetan_group
+			}
+		}
+		trigger = {
+			TECH_TEMPLE_CONSTRUCTION = 4
+		}
+		upgrades_from = ca_government_monastery_3
+		gold_cost = 400
+		build_time = 1460
+		levy_size = 0.05
+		garrison_size = 0.05
+		tech_growth_modifier = 0.1
+		culture_techpoints = 0.04
+		ai_creation_factor = 93
+		add_number_to_name = no
+		liege_piety = 0.05
+
+		extra_tech_building_start = 0.2
+	}
+	
+	# Animal Farm
+	ca_culture_animal_1 = {
+		desc = ca_culture_animal_desc
+		potential = {
+			OR = { 
+				culture_group = horse_group 
+				culture_group = cat_group 
+				culture_group = bear_group 
+				culture_group = hedgehog_group 
+				culture_group = duck_group 
+				culture_group = dog_group 
+				culture_group = elephant_group 
+				culture_group = dragon_group 
+				has_building = ca_culture_animal_1
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = { 
+					culture_group = horse_group 
+					culture_group = cat_group 
+					culture_group = bear_group 
+					culture_group = hedgehog_group 
+					culture_group = duck_group 
+					culture_group = dog_group 
+					culture_group = elephant_group 
+					culture_group = dragon_group 
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 0 
+			ROOT = {
+				OR = { 
+					culture_group = horse_group 
+					culture_group = cat_group 
+					culture_group = bear_group 
+					culture_group = hedgehog_group 
+					culture_group = duck_group 
+					culture_group = dog_group 
+					culture_group = elephant_group 
+					culture_group = dragon_group 
+				}
+			}
+		}
+		prerequisites = { ca_wall_2 }
+		gold_cost = 200
+		build_time = 730
+		heavy_infantry = 30
+		heavy_infantry_defensive = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	ca_culture_animal_2 = {
+		desc = ca_culture_animal_desc
+		potential = {
+			OR = { 
+				culture_group = horse_group 
+				culture_group = cat_group 
+				culture_group = bear_group 
+				culture_group = hedgehog_group 
+				culture_group = duck_group 
+				culture_group = dog_group 
+				culture_group = elephant_group 
+				culture_group = dragon_group 
+				has_building = ca_culture_animal_1
+				has_building = ca_culture_animal_2
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = { 
+					culture_group = horse_group 
+					culture_group = cat_group 
+					culture_group = bear_group 
+					culture_group = hedgehog_group 
+					culture_group = duck_group 
+					culture_group = dog_group 
+					culture_group = elephant_group 
+					culture_group = dragon_group 
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 1
+			ROOT = {
+				OR = { 
+					culture_group = horse_group 
+					culture_group = cat_group 
+					culture_group = bear_group 
+					culture_group = hedgehog_group 
+					culture_group = duck_group 
+					culture_group = dog_group 
+					culture_group = elephant_group 
+					culture_group = dragon_group 
+				}
+			}
+		}
+		upgrades_from = ca_culture_animal_1
+		gold_cost = 300
+		build_time = 1095
+		heavy_infantry = 40
+		heavy_infantry_defensive = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	ca_culture_animal_3 = {
+		desc = ca_culture_animal_desc
+		potential = {
+			OR = { 
+				culture_group = horse_group 
+				culture_group = cat_group 
+				culture_group = bear_group 
+				culture_group = hedgehog_group 
+				culture_group = duck_group 
+				culture_group = dog_group 
+				culture_group = elephant_group 
+				culture_group = dragon_group 
+				has_building = ca_culture_animal_1
+				has_building = ca_culture_animal_2
+				has_building = ca_culture_animal_3
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = { 
+					culture_group = horse_group 
+					culture_group = cat_group 
+					culture_group = bear_group 
+					culture_group = hedgehog_group 
+					culture_group = duck_group 
+					culture_group = dog_group 
+					culture_group = elephant_group 
+					culture_group = dragon_group 
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 2
+			ROOT = {
+				OR = { 
+					culture_group = horse_group 
+					culture_group = cat_group 
+					culture_group = bear_group 
+					culture_group = hedgehog_group 
+					culture_group = duck_group 
+					culture_group = dog_group 
+					culture_group = elephant_group 
+					culture_group = dragon_group 
+				}
+			}
+		}
+		upgrades_from = ca_culture_animal_2
+		gold_cost = 400
+		build_time = 2190
+		heavy_infantry = 50
+		heavy_infantry_defensive = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+	ca_culture_animal_4 = {
+		desc = ca_culture_animal_desc
+		potential = {
+			OR = { 
+				culture_group = horse_group 
+				culture_group = cat_group 
+				culture_group = bear_group 
+				culture_group = hedgehog_group 
+				culture_group = duck_group 
+				culture_group = dog_group 
+				culture_group = elephant_group 
+				culture_group = dragon_group 
+				has_building = ca_culture_animal_1
+				has_building = ca_culture_animal_2
+				has_building = ca_culture_animal_3
+				has_building = ca_culture_animal_4
+			}
+		}
+		is_active_trigger = {
+			ROOT = {
+				OR = { 
+					culture_group = horse_group 
+					culture_group = cat_group 
+					culture_group = bear_group 
+					culture_group = hedgehog_group 
+					culture_group = duck_group 
+					culture_group = dog_group 
+					culture_group = elephant_group 
+					culture_group = dragon_group 
+				}
+			}
+		}
+		trigger = { 
+			TECH_CASTLE_CONSTRUCTION = 4
+			ROOT = {
+				OR = { 
+					culture_group = horse_group 
+					culture_group = cat_group 
+					culture_group = bear_group 
+					culture_group = hedgehog_group 
+					culture_group = duck_group 
+					culture_group = dog_group 
+					culture_group = elephant_group 
+					culture_group = dragon_group 
+				}
+			}
+		}
+		upgrades_from = ca_culture_animal_3
+		gold_cost = 500
+		build_time = 2190
+		heavy_infantry = 60
+		heavy_infantry_defensive = 0.15
+		ai_creation_factor = 101
+		
+		extra_tech_building_start = 0.8
+	}
+}

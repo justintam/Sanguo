@@ -7,8 +7,15 @@
 	liege=d_shu
 }
 184.1.1={
+	holder=3637 #Gao Yi
+}
+188.1.1={
 	holder=1018 #Jia Long
 }
-194.1.1={
+190.1.1={
+	liege=0
+}
+191.6.1={
+	liege=d_shu
 	holder=4122 #Random
 }

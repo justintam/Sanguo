@@ -16,6 +16,7 @@ b_yunxiang = city
 # Misc
 culture = han
 religion = confucian
+terrain = hills
 
 #History
 214.1.1={

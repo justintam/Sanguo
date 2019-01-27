@@ -63,12 +63,6 @@ berserker = {
 	child_insult_adj = INSULT_CRAZY
 }
 
-
-
-
-
-
-
 child_of_consort = {
 	diplomacy = -1
 
@@ -106,6 +100,7 @@ heresiarch = {
 }
 
 
+
 # Babies can be born sickly
 sickly = {
 	is_health = yes
@@ -127,6 +122,7 @@ reincarnation = {
 	random = no
 }
 
+
 in_hiding = {
 	potential = {
 		prisoner = no
@@ -140,6 +136,11 @@ in_hiding = {
 
 	customizer = no
 	random = no
+
+	male_insult = INSULT_COWARD
+	female_insult = INSULT_COWARD
+	male_insult_adj = INSULT_SNEAKING
+	female_insult_adj = INSULT_SNEAKING
 }
 
 seducer = {
@@ -1154,7 +1155,6 @@ ravager = {
 		always = no
 	}
 	opposites =  {
-		viking
 		seaking
 		sea_queen
 	}
@@ -1169,9 +1169,9 @@ ravager = {
 	male_insult = COMPL_PIRATE
 	female_insult = COMPL_PIRATE
 	male_compliment = COMPL_VIKING
-	male_compliment_adj = COMPL_VIKING
+	male_compliment_adj = COMPL_VIKING_adj
 	female_compliment = COMPL_VALKYRIE
-	female_compliment_adj = COMPL_VIKING
+	female_compliment_adj = COMPL_VIKING_adj
 }
 
 seaking = {
@@ -1179,7 +1179,6 @@ seaking = {
 		always = no
 	}
 	opposites =  {
-		viking
 		ravager
 		sea_queen
 	}
@@ -1193,9 +1192,9 @@ seaking = {
 	male_insult = COMPL_PIRATE
 	female_insult = COMPL_PIRATE
 	male_compliment = COMPL_VIKING
-	male_compliment_adj = COMPL_VIKING
+	male_compliment_adj = COMPL_VIKING_adj
 	female_compliment = COMPL_VALKYRIE
-	female_compliment_adj = COMPL_VIKING
+	female_compliment_adj = COMPL_VIKING_adj
 }
 
 dancing_plague = {
@@ -1229,7 +1228,7 @@ shieldmaiden  = {
 	customizer = no
 	
 	female_compliment = COMPL_VALKYRIE
-	female_compliment_adj = COMPL_VIKING
+	female_compliment_adj = COMPL_VIKING_adj
 }
 
 physician = {
@@ -1305,7 +1304,6 @@ sea_queen = {
 		always = no
 	}
 	opposites =  {
-		viking
 		ravager
 		seaking
 	}
@@ -1320,9 +1318,9 @@ sea_queen = {
 	male_insult = COMPL_PIRATE
 	female_insult = COMPL_PIRATE
 	male_compliment = COMPL_VIKING
-	male_compliment_adj = COMPL_VIKING
+	male_compliment_adj = COMPL_VIKING_adj
 	female_compliment = COMPL_VALKYRIE
-	female_compliment_adj = COMPL_VIKING
+	female_compliment_adj = COMPL_VIKING_adj
 }
 
 eagle_warrior = {
@@ -1377,6 +1375,9 @@ sun_warrior = {
 
 
 
+
+
+
 tengri_warrior = {
 	opposites = {
 		mujahid
@@ -1421,7 +1422,6 @@ cannibal_trait = {
 lovers_pox = {
 	sex_appeal_opinion = -5
 	
-	customizer = no
 	customizer = no
 	
 	male_insult_adj = INSULT_POX_RIDDEN
@@ -1473,6 +1473,9 @@ secretly_buddhism = {
 #Pagan
 secretly_tengri_pagan = {
 	potential = {
+		NOT = {
+			religion = tengri_pagan
+		}
 		OR = {
 			ai = yes
 			has_dlc = "The Old Gods"
@@ -1543,4 +1546,94 @@ otter = {
 	customizer = no
 	random = no
 	religious = yes
+}
+
+cat = {
+	sex_appeal_opinion = -20
+	fertility = -50.0
+	health = -2
+
+	diplomacy = -10
+	intrigue = -10
+	stewardship = -10
+	martial = -10
+	learning = -10
+
+	inherit_chance = 100
+
+	customizer = no
+	random = no
+	
+	cannot_marry = yes
+	cannot_inherit = yes
+	can_hold_titles = no # Hopefully this will block Glitterhoof from becoming pope again
+
+	potential = {
+		race = cat
+	}
+}
+
+# Tiered kinslaying traits
+# Kinslayer in 00_traits = Parents, Grandparents and above, Siblings, Children, Grandchildren and below
+# Familial Kinslayer = Aunts/Uncles (blood only), cousins, nieces/nephews
+# Dynastic Kinslayer = Any other dynasty member
+familial_kinslayer = {
+	opposites = {
+		kinslayer
+		dynastic_kinslayer
+	}
+
+	diplomacy = -4
+	
+	dynasty_opinion = -20
+	general_opinion = -5
+	
+	random = no
+	
+	male_insult = INSULT_KINSLAYER
+	female_insult = INSULT_KINSLAYER
+}
+dynastic_kinslayer = {
+	opposites = {
+		kinslayer
+		familial_kinslayer
+	}
+
+	diplomacy = -3
+	
+	dynasty_opinion = -15
+	
+	random = no
+	
+	male_insult = INSULT_KINSLAYER
+	female_insult = INSULT_KINSLAYER
+}
+kow_tow_travels = {
+	pilgrimage = yes
+	monthly_character_wealth = -0.2
+	health = -0.5
+	
+	customizer = no
+	random = no
+}
+kow_tow_completed_tier_1 = {
+	monthly_grace = 1
+	monthly_character_prestige = -0.1
+	
+	customizer = no
+	random = no
+}
+kow_tow_completed_tier_2 = {
+	monthly_grace = 2
+	monthly_character_prestige = -0.1
+	
+	customizer = no
+	random = no
+}
+kow_tow_completed_tier_3 = {
+	monthly_grace = 4
+	monthly_character_prestige = -0.1
+	
+	customizer = no
+	random = no
 }

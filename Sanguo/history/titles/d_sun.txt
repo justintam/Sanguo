@@ -1,7 +1,7 @@
 1.1.1={
 	active=no
-	effect = {
-		set_title_flag = warlord_flag
+	effect={
+		set_title_flag=warlord_flag
 	}
 }
 184.1.1={
@@ -27,7 +27,7 @@
 194.1.1={
 	holder=508 #Sun Ce
 }
-195.6.1={
+197.1.1={
 	holder=0
 	active=no
 }

@@ -15,6 +15,7 @@ b_pengcheng = city
 # Misc
 culture = han
 religion = confucian
+terrain = plains
 
 #History
 65.1.1={

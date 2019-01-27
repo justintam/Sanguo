@@ -16,6 +16,7 @@ b_chaifu = temple
 # Misc
 culture = shanyue
 religion = animist
+terrain = hills
 
 #History
 204.1.1={

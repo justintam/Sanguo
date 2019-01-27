@@ -13,5 +13,6 @@ b_kezui = tribal
 # Misc
 culture = xianbei
 religion = tengri_pagan
+terrain = steppe
 
 #History

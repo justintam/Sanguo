@@ -14,3 +14,6 @@
 184.1.1={
 	holder=1503 #Yilo
 }
+210.1.1={
+	holder=1525 #Kyuibi
+}

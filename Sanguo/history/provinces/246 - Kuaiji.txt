@@ -14,6 +14,7 @@ b_huijifu = tribal
 # Misc
 culture = minyue
 religion = animist
+terrain = mountain
 
 #History
 204.1.1={

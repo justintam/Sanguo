@@ -12,1216 +12,1216 @@
 #                                         #
 ###########################################
 
-namespace = CHA
+namespace=CHA
 
 ### NEW PREMIER ###
-character_event = {
-	id = CHA.1
-	desc = EVTDESC_CHA.1
-	title = EVTTITLE_CHA.1
-	picture = GFX_evt_throne_room_byzantine
+character_event={
+	id=CHA.1
+	desc=EVTDESC_CHA.1
+	title=EVTTITLE_CHA.1
+	picture=GFX_evt_throne_room_byzantine
 	
-	only_playable = yes
-	only_independent = yes
-	min_age = 20
-	war = no
+	only_playable=yes
+	only_independent=yes
+	min_age=20
+	war=no
 	
-	trigger = {
-		primary_title = {
-			NOT = { has_title_flag = premier_title }
+	trigger={
+		primary_title={
+			NOT={ has_title_flag=premier_title }
 		}
-		OR = {
-			NOT = { tier = EMPEROR }
-			primary_title = { has_title_flag = warlord_flag }
+		OR={
+			NOT={ tier=EMPEROR }
+			primary_title={ has_title_flag=warlord_flag }
 		}
-		k_confucian = {
-			holder_scope = {
-				is_landed = yes
-				NOT = { character = ROOT }
-				capital_holding = {
-					dejure_liege_title = {
-						holder_scope = {
-							top_liege = { character = ROOT }
+		k_confucian={
+			holder_scope={
+				is_landed=yes
+				NOT={ character=ROOT }
+				capital_holding={
+					dejure_liege_title={
+						holder_scope={
+							top_liege={ character=ROOT }
 						}
 					}
 				}
-				OR = {
-					AND = {
-						has_landed_title = e_han
-						e_china = { has_holder = yes }
+				OR={
+					AND={
+						has_landed_title=e_han
+						e_china={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_chen
-						e_k_chen = { has_holder = yes }
+					AND={
+						has_landed_title=e_chen
+						e_k_chen={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_chu
-						e_k_chu = { has_holder = yes }
+					AND={
+						has_landed_title=e_chu
+						e_k_chu={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_dai
-						e_k_dai = { has_holder = yes }
+					AND={
+						has_landed_title=e_dai
+						e_k_dai={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_han
-						e_k_han = { has_holder = yes }
+					AND={
+						has_landed_title=e_han
+						e_k_han={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_jin
-						e_k_jin = { has_holder = yes }
+					AND={
+						has_landed_title=e_jin
+						e_k_jin={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_liang
-						e_k_liang = { has_holder = yes }
+					AND={
+						has_landed_title=e_liang
+						e_k_liang={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_liao
-						e_k_liao = { has_holder = yes }
+					AND={
+						has_landed_title=e_liao
+						e_k_liao={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_min
-						e_k_min = { has_holder = yes }
+					AND={
+						has_landed_title=e_min
+						e_k_min={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_qi
-						e_k_qi = { has_holder = yes }
+					AND={
+						has_landed_title=e_qi
+						e_k_qi={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_qin
-						e_k_qin = { has_holder = yes }
+					AND={
+						has_landed_title=e_qin
+						e_k_qin={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_qing
-						e_k_qing = { has_holder = yes }
+					AND={
+						has_landed_title=e_qing
+						e_k_qing={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_shu
-						e_k_shu = { has_holder = yes }
+					AND={
+						has_landed_title=e_shu
+						e_k_shu={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_song
-						e_k_song = { has_holder = yes }
+					AND={
+						has_landed_title=e_song
+						e_k_song={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_sui
-						e_k_sui = { has_holder = yes }
+					AND={
+						has_landed_title=e_sui
+						e_k_sui={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_tan
-						e_k_tan = { has_holder = yes }
+					AND={
+						has_landed_title=e_tan
+						e_k_tan={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_tang
-						e_k_tang = { has_holder = yes }
+					AND={
+						has_landed_title=e_tang
+						e_k_tang={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_wei
-						e_k_wei = { has_holder = yes }
+					AND={
+						has_landed_title=e_wei
+						e_k_wei={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_wu
-						e_k_wu = { has_holder = yes }
+					AND={
+						has_landed_title=e_wu
+						e_k_wu={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_wuyue
-						e_k_wuyue = { has_holder = yes }
+					AND={
+						has_landed_title=e_wuyue
+						e_k_wuyue={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_xia
-						e_k_xia = { has_holder = yes }
+					AND={
+						has_landed_title=e_xia
+						e_k_xia={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_yan
-						e_k_yan = { has_holder = yes }
+					AND={
+						has_landed_title=e_yan
+						e_k_yan={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_zhao
-						e_k_zhao = { has_holder = yes }
+					AND={
+						has_landed_title=e_zhao
+						e_k_zhao={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_zhong
-						e_k_zhong = { has_holder = yes }
+					AND={
+						has_landed_title=e_zhong
+						e_k_zhong={ has_holder=yes }
 					}
-					AND = {
-						has_landed_title = e_zhou
-						e_k_zhou = { has_holder = yes }
+					AND={
+						has_landed_title=e_zhou
+						e_k_zhou={ has_holder=yes }
 					}
 				}
 			}
 		}
 	}
 	
-	mean_time_to_happen = {
-		days = 1
+	mean_time_to_happen={
+		days=1
 	}
 	
-	immediate = {
-		if = {
-			limit = {
-				k_confucian = {
-					holder_scope = {
-						has_landed_title = e_han
+	immediate={
+		if={
+			limit={
+				k_confucian={
+					holder_scope={
+						has_landed_title=e_han
 					}
 				}
-				e_china = { has_holder = yes }
+				e_china={ has_holder=yes }
 			}
-			e_china = {
-				grant_title_no_opinion = ROOT
+			e_china={
+				grant_title_no_opinion=ROOT
 			}
 		}
-		if = {
-			limit = {
-				k_confucian = {
-					holder_scope = {
-						has_landed_title = e_chen
+		if={
+			limit={
+				k_confucian={
+					holder_scope={
+						has_landed_title=e_chen
 					}
 				}
-				e_k_chen = { has_holder = yes }
+				e_k_chen={ has_holder=yes }
 			}
-			e_k_chen = {
-				grant_title_no_opinion = ROOT
+			e_k_chen={
+				grant_title_no_opinion=ROOT
 			}
 		}
-		if = {
-			limit = {
-				k_confucian = {
-					holder_scope = {
-						has_landed_title = e_chu
+		if={
+			limit={
+				k_confucian={
+					holder_scope={
+						has_landed_title=e_chu
 					}
 				}
-				e_k_chu = { has_holder = yes }
+				e_k_chu={ has_holder=yes }
 			}
-			e_k_chu = {
-				grant_title_no_opinion = ROOT
+			e_k_chu={
+				grant_title_no_opinion=ROOT
 			}
 		}
-		if = {
-			limit = {
-				k_confucian = {
-					holder_scope = {
-						has_landed_title = e_dai
+		if={
+			limit={
+				k_confucian={
+					holder_scope={
+						has_landed_title=e_dai
 					}
 				}
-				e_k_dai = { has_holder = yes }
+				e_k_dai={ has_holder=yes }
 			}
-			e_k_dai = {
-				grant_title_no_opinion = ROOT
+			e_k_dai={
+				grant_title_no_opinion=ROOT
 			}
 		}
-		if = {
-			limit = {
-				k_confucian = {
-					holder_scope = {
-						has_landed_title = e_han
+		if={
+			limit={
+				k_confucian={
+					holder_scope={
+						has_landed_title=e_han
 					}
 				}
-				e_k_han = { has_holder = yes }
+				e_k_han={ has_holder=yes }
 			}
-			e_k_han = {
-				grant_title_no_opinion = ROOT
+			e_k_han={
+				grant_title_no_opinion=ROOT
 			}
 		}
-		if = {
-			limit = {
-				k_confucian = {
-					holder_scope = {
-						has_landed_title = e_jin
+		if={
+			limit={
+				k_confucian={
+					holder_scope={
+						has_landed_title=e_jin
 					}
 				}
-				e_k_jin = { has_holder = yes }
+				e_k_jin={ has_holder=yes }
 			}
-			e_k_jin = {
-				grant_title_no_opinion = ROOT
+			e_k_jin={
+				grant_title_no_opinion=ROOT
 			}
 		}
-		if = {
-			limit = {
-				k_confucian = {
-					holder_scope = {
-						has_landed_title = e_liang
+		if={
+			limit={
+				k_confucian={
+					holder_scope={
+						has_landed_title=e_liang
 					}
 				}
-				e_k_liang = { has_holder = yes }
+				e_k_liang={ has_holder=yes }
 			}
-			e_k_liang = {
-				grant_title_no_opinion = ROOT
+			e_k_liang={
+				grant_title_no_opinion=ROOT
 			}
 		}
-		if = {
-			limit = {
-				k_confucian = {
-					holder_scope = {
-						has_landed_title = e_liao
+		if={
+			limit={
+				k_confucian={
+					holder_scope={
+						has_landed_title=e_liao
 					}
 				}
-				e_k_liao = { has_holder = yes }
+				e_k_liao={ has_holder=yes }
 			}
-			e_k_liao = {
-				grant_title_no_opinion = ROOT
+			e_k_liao={
+				grant_title_no_opinion=ROOT
 			}
 		}
-		if = {
-			limit = {
-				k_confucian = {
-					holder_scope = {
-						has_landed_title = e_min
+		if={
+			limit={
+				k_confucian={
+					holder_scope={
+						has_landed_title=e_min
 					}
 				}
-				e_k_min = { has_holder = yes }
+				e_k_min={ has_holder=yes }
 			}
-			e_k_min = {
-				grant_title_no_opinion = ROOT
+			e_k_min={
+				grant_title_no_opinion=ROOT
 			}
 		}
-		if = {
-			limit = {
-				k_confucian = {
-					holder_scope = {
-						has_landed_title = e_qi
+		if={
+			limit={
+				k_confucian={
+					holder_scope={
+						has_landed_title=e_qi
 					}
 				}
-				e_k_qi = { has_holder = yes }
+				e_k_qi={ has_holder=yes }
 			}
-			e_k_qi = {
-				grant_title_no_opinion = ROOT
+			e_k_qi={
+				grant_title_no_opinion=ROOT
 			}
 		}
-		if = {
-			limit = {
-				k_confucian = {
-					holder_scope = {
-						has_landed_title = e_qin
+		if={
+			limit={
+				k_confucian={
+					holder_scope={
+						has_landed_title=e_qin
 					}
 				}
-				e_k_qin = { has_holder = yes }
+				e_k_qin={ has_holder=yes }
 			}
-			e_k_qin = {
-				grant_title_no_opinion = ROOT
+			e_k_qin={
+				grant_title_no_opinion=ROOT
 			}
 		}
-		if = {
-			limit = {
-				k_confucian = {
-					holder_scope = {
-						has_landed_title = e_qing
+		if={
+			limit={
+				k_confucian={
+					holder_scope={
+						has_landed_title=e_qing
 					}
 				}
-				e_k_qing = { has_holder = yes }
+				e_k_qing={ has_holder=yes }
 			}
-			e_k_qing = {
-				grant_title_no_opinion = ROOT
+			e_k_qing={
+				grant_title_no_opinion=ROOT
 			}
 		}
-		if = {
-			limit = {
-				k_confucian = {
-					holder_scope = {
-						has_landed_title = e_shu
+		if={
+			limit={
+				k_confucian={
+					holder_scope={
+						has_landed_title=e_shu
 					}
 				}
-				e_k_shu = { has_holder = yes }
+				e_k_shu={ has_holder=yes }
 			}
-			e_k_shu = {
-				grant_title_no_opinion = ROOT
+			e_k_shu={
+				grant_title_no_opinion=ROOT
 			}
 		}
-		if = {
-			limit = {
-				k_confucian = {
-					holder_scope = {
-						has_landed_title = e_song
+		if={
+			limit={
+				k_confucian={
+					holder_scope={
+						has_landed_title=e_song
 					}
 				}
-				e_k_song = { has_holder = yes }
+				e_k_song={ has_holder=yes }
 			}
-			e_k_song = {
-				grant_title_no_opinion = ROOT
+			e_k_song={
+				grant_title_no_opinion=ROOT
 			}
 		}
-		if = {
-			limit = {
-				k_confucian = {
-					holder_scope = {
-						has_landed_title = e_sui
+		if={
+			limit={
+				k_confucian={
+					holder_scope={
+						has_landed_title=e_sui
 					}
 				}
-				e_k_sui = { has_holder = yes }
+				e_k_sui={ has_holder=yes }
 			}
-			e_k_sui = {
-				grant_title_no_opinion = ROOT
+			e_k_sui={
+				grant_title_no_opinion=ROOT
 			}
 		}
-		if = {
-			limit = {
-				k_confucian = {
-					holder_scope = {
-						has_landed_title = e_tan
+		if={
+			limit={
+				k_confucian={
+					holder_scope={
+						has_landed_title=e_tan
 					}
 				}
-				e_k_tan = { has_holder = yes }
+				e_k_tan={ has_holder=yes }
 			}
-			e_k_tan = {
-				grant_title_no_opinion = ROOT
+			e_k_tan={
+				grant_title_no_opinion=ROOT
 			}
 		}
-		if = {
-			limit = {
-				k_confucian = {
-					holder_scope = {
-						has_landed_title = e_tang
+		if={
+			limit={
+				k_confucian={
+					holder_scope={
+						has_landed_title=e_tang
 					}
 				}
-				e_k_tang = { has_holder = yes }
+				e_k_tang={ has_holder=yes }
 			}
-			e_k_tang = {
-				grant_title_no_opinion = ROOT
+			e_k_tang={
+				grant_title_no_opinion=ROOT
 			}
 		}
-		if = {
-			limit = {
-				k_confucian = {
-					holder_scope = {
-						has_landed_title = e_wei
+		if={
+			limit={
+				k_confucian={
+					holder_scope={
+						has_landed_title=e_wei
 					}
 				}
-				e_k_wei = { has_holder = yes }
+				e_k_wei={ has_holder=yes }
 			}
-			e_k_wei = {
-				grant_title_no_opinion = ROOT
+			e_k_wei={
+				grant_title_no_opinion=ROOT
 			}
 		}
-		if = {
-			limit = {
-				k_confucian = {
-					holder_scope = {
-						has_landed_title = e_wu
+		if={
+			limit={
+				k_confucian={
+					holder_scope={
+						has_landed_title=e_wu
 					}
 				}
-				e_k_wu = { has_holder = yes }
+				e_k_wu={ has_holder=yes }
 			}
-			e_k_wu = {
-				grant_title_no_opinion = ROOT
+			e_k_wu={
+				grant_title_no_opinion=ROOT
 			}
 		}
-		if = {
-			limit = {
-				k_confucian = {
-					holder_scope = {
-						has_landed_title = e_wuyue
+		if={
+			limit={
+				k_confucian={
+					holder_scope={
+						has_landed_title=e_wuyue
 					}
 				}
-				e_k_wuyue = { has_holder = yes }
+				e_k_wuyue={ has_holder=yes }
 			}
-			e_k_wuyue = {
-				grant_title_no_opinion = ROOT
+			e_k_wuyue={
+				grant_title_no_opinion=ROOT
 			}
 		}
-		if = {
-			limit = {
-				k_confucian = {
-					holder_scope = {
-						has_landed_title = e_xia
+		if={
+			limit={
+				k_confucian={
+					holder_scope={
+						has_landed_title=e_xia
 					}
 				}
-				e_k_xia = { has_holder = yes }
+				e_k_xia={ has_holder=yes }
 			}
-			e_k_xia = {
-				grant_title_no_opinion = ROOT
+			e_k_xia={
+				grant_title_no_opinion=ROOT
 			}
 		}
-		if = {
-			limit = {
-				k_confucian = {
-					holder_scope = {
-						has_landed_title = e_yan
+		if={
+			limit={
+				k_confucian={
+					holder_scope={
+						has_landed_title=e_yan
 					}
 				}
-				e_k_yan = { has_holder = yes }
+				e_k_yan={ has_holder=yes }
 			}
-			e_k_yan = {
-				grant_title_no_opinion = ROOT
+			e_k_yan={
+				grant_title_no_opinion=ROOT
 			}
 		}
-		if = {
-			limit = {
-				k_confucian = {
-					holder_scope = {
-						has_landed_title = e_zhao
+		if={
+			limit={
+				k_confucian={
+					holder_scope={
+						has_landed_title=e_zhao
 					}
 				}
-				e_k_zhao = { has_holder = yes }
+				e_k_zhao={ has_holder=yes }
 			}
-			e_k_zhao = {
-				grant_title_no_opinion = ROOT
+			e_k_zhao={
+				grant_title_no_opinion=ROOT
 			}
 		}
-		if = {
-			limit = {
-				k_confucian = {
-					holder_scope = {
-						has_landed_title = e_zhong
+		if={
+			limit={
+				k_confucian={
+					holder_scope={
+						has_landed_title=e_zhong
 					}
 				}
-				e_k_zhong = { has_holder = yes }
+				e_k_zhong={ has_holder=yes }
 			}
-			e_k_zhong = {
-				grant_title_no_opinion = ROOT
+			e_k_zhong={
+				grant_title_no_opinion=ROOT
 			}
 		}
-		if = {
-			limit = {
-				k_confucian = {
-					holder_scope = {
-						has_landed_title = e_zhou
+		if={
+			limit={
+				k_confucian={
+					holder_scope={
+						has_landed_title=e_zhou
 					}
 				}
-				e_k_zhou = { has_holder = yes }
+				e_k_zhou={ has_holder=yes }
 			}
-			e_k_zhou = {
-				grant_title_no_opinion = ROOT
-			}
-		}
-	}
-	
-	option = {
-		name = OK
-	}
-}
-
-character_event = { # Chancellorship
-	id = CHA.2
-	
-	hide_window = yes
-	
-	only_playable = yes
-	only_independent = yes
-	min_age = 20
-	
-	trigger = {
-		real_tier = emperor
-		k_confucian = {
-			holder_scope = {
-				is_landed = yes
-				NOT = { character = ROOT }
-				capital_holding = {
-					dejure_liege_title = {
-						holder_scope = {
-							top_liege = { character = ROOT }
-						}
-					}
-				}
-			}
-		}
-		primary_title = {
-			NOT = { has_title_flag = premier_title }
-			OR = {
-				title = e_chen
-				title = e_chu
-				title = e_dai
-				title = e_han
-				title = e_jin
-				title = e_liang
-				title = e_liao
-				title = e_min
-				title = e_qi
-				title = e_qin
-				title = e_qing
-				title = e_shu
-				title = e_song
-				title = e_sui
-				title = e_tan
-				title = e_tang
-				title = e_wei
-				title = e_wu
-				title = e_wuyue
-				title = e_xia
-				title = e_yan
-				title = e_zhao
-				title = e_zhong
-				title = e_zhou
+			e_k_zhou={
+				grant_title_no_opinion=ROOT
 			}
 		}
 	}
 	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	immediate = {
-		k_confucian = {
-			holder_scope = {
-				save_event_target_as = target_emperor
-				primary_title = {
-					save_event_target_as = target_empire
-				}
-				if = {
-					limit = {
-						has_landed_title = e_han
-						e_china = { has_holder = yes }
-					}
-					e_china = {
-						holder_scope = {
-							character_event = { id = CHA.3 }
-						}
-					}
-					break = yes
-				}
-				#
-				if = {
-					limit = {
-						has_landed_title = e_chen
-						e_k_chen = { has_holder = yes }
-					}
-					e_k_chen = {
-						holder_scope = {
-							character_event = { id = CHA.3 }
-						}
-					}
-					break = yes
-				}
-				#
-				if = {
-					limit = {
-						has_landed_title = e_chu
-						e_k_chu = { has_holder = yes }
-					}
-					e_k_chu = {
-						holder_scope = {
-							character_event = { id = CHA.3 }
-						}
-					}
-					break = yes
-				}
-				#
-				if = {
-					limit = {
-						has_landed_title = e_dai
-						e_k_dai = { has_holder = yes }
-					}
-					e_k_dai = {
-						holder_scope = {
-							character_event = { id = CHA.3 }
-						}
-					}
-					break = yes
-				}
-				#
-				if = {
-					limit = {
-						has_landed_title = e_han
-						e_k_han = { has_holder = yes }
-					}
-					e_k_han = {
-						holder_scope = {
-							character_event = { id = CHA.3 }
-						}
-					}
-					break = yes
-				}
-				#
-				if = {
-					limit = {
-						has_landed_title = e_jin
-						e_k_jin = { has_holder = yes }
-					}
-					e_k_jin = {
-						holder_scope = {
-							character_event = { id = CHA.3 }
-						}
-					}
-					break = yes
-				}
-				#
-				if = {
-					limit = {
-						has_landed_title = e_liang
-						e_k_liang = { has_holder = yes }
-					}
-					e_k_liang = {
-						holder_scope = {
-							character_event = { id = CHA.3 }
-						}
-					}
-					break = yes
-				}
-				#
-				if = {
-					limit = {
-						has_landed_title = e_liao
-						e_k_liao = { has_holder = yes }
-					}
-					e_k_liao = {
-						holder_scope = {
-							character_event = { id = CHA.3 }
-						}
-					}
-					break = yes
-				}
-				#
-				if = {
-					limit = {
-						has_landed_title = e_min
-						e_k_min = { has_holder = yes }
-					}
-					e_k_min = {
-						holder_scope = {
-							character_event = { id = CHA.3 }
-						}
-					}
-					break = yes
-				}
-				#
-				if = {
-					limit = {
-						has_landed_title = e_qi
-						e_k_qi = { has_holder = yes }
-					}
-					e_k_qi = {
-						holder_scope = {
-							character_event = { id = CHA.3 }
-						}
-					}
-					break = yes
-				}
-				#
-				if = {
-					limit = {
-						has_landed_title = e_qin
-						e_k_qin = { has_holder = yes }
-					}
-					e_k_qin = {
-						holder_scope = {
-							character_event = { id = CHA.3 }
-						}
-					}
-					break = yes
-				}
-				#
-				if = {
-					limit = {
-						has_landed_title = e_qing
-						e_k_qing = { has_holder = yes }
-					}
-					e_k_qing = {
-						holder_scope = {
-							character_event = { id = CHA.3 }
-						}
-					}
-					break = yes
-				}
-				#
-				if = {
-					limit = {
-						has_landed_title = e_shu
-						e_k_shu = { has_holder = yes }
-					}
-					e_k_shu = {
-						holder_scope = {
-							character_event = { id = CHA.3 }
-						}
-					}
-					break = yes
-				}
-				#
-				if = {
-					limit = {
-						has_landed_title = e_song
-						e_k_song = { has_holder = yes }
-					}
-					e_k_song = {
-						holder_scope = {
-							character_event = { id = CHA.3 }
-						}
-					}
-					break = yes
-				}
-				#
-				if = {
-					limit = {
-						has_landed_title = e_sui
-						e_k_sui = { has_holder = yes }
-					}
-					e_k_sui = {
-						holder_scope = {
-							character_event = { id = CHA.3 }
-						}
-					}
-					break = yes
-				}
-				#
-				if = {
-					limit = {
-						has_landed_title = e_tan
-						e_k_tan = { has_holder = yes }
-					}
-					e_k_tan = {
-						holder_scope = {
-							character_event = { id = CHA.3 }
-						}
-					}
-					break = yes
-				}
-				#
-				if = {
-					limit = {
-						has_landed_title = e_tang
-						e_k_tang = { has_holder = yes }
-					}
-					e_k_tang = {
-						holder_scope = {
-							character_event = { id = CHA.3 }
-						}
-					}
-					break = yes
-				}
-				#
-				if = {
-					limit = {
-						has_landed_title = e_wei
-						e_k_wei = { has_holder = yes }
-					}
-					e_k_wei = {
-						holder_scope = {
-							character_event = { id = CHA.3 }
-						}
-					}
-					break = yes
-				}
-				#
-				if = {
-					limit = {
-						has_landed_title = e_wu
-						e_k_wu = { has_holder = yes }
-					}
-					e_k_wu = {
-						holder_scope = {
-							character_event = { id = CHA.3 }
-						}
-					}
-					break = yes
-				}
-				#
-				if = {
-					limit = {
-						has_landed_title = e_wuyue
-						e_k_wuyue = { has_holder = yes }
-					}
-					e_k_wuyue = {
-						holder_scope = {
-							character_event = { id = CHA.3 }
-						}
-					}
-					break = yes
-				}
-				#
-				if = {
-					limit = {
-						has_landed_title = e_xia
-						e_k_xia = { has_holder = yes }
-					}
-					e_k_xia = {
-						holder_scope = {
-							character_event = { id = CHA.3 }
-						}
-					}
-					break = yes
-				}
-				#
-				if = {
-					limit = {
-						has_landed_title = e_yan
-						e_k_yan = { has_holder = yes }
-					}
-					e_k_yan = {
-						holder_scope = {
-							character_event = { id = CHA.3 }
-						}
-					}
-					break = yes
-				}
-				#
-				if = {
-					limit = {
-						has_landed_title = e_zhao
-						e_k_zhao = { has_holder = yes }
-					}
-					e_k_zhao = {
-						holder_scope = {
-							character_event = { id = CHA.3 }
-						}
-					}
-					break = yes
-				}
-				#
-				if = {
-					limit = {
-						has_landed_title = e_zhong
-						e_k_zhong = { has_holder = yes }
-					}
-					e_k_zhong = {
-						holder_scope = {
-							character_event = { id = CHA.3 }
-						}
-					}
-					break = yes
-				}
-				#
-				if = {
-					limit = {
-						has_landed_title = e_zhou
-						e_k_zhou = { has_holder = yes }
-					}
-					e_k_zhou = {
-						holder_scope = {
-							character_event = { id = CHA.3 }
-						}
-					}
-					break = yes
-				}
-			}
-		}
+	option={
+		name=OK
 	}
 }
 
-character_event = {
-	id = CHA.3
-	desc = EVTDESC_CHA.3
-	title = EVTTITLE_CHA.3
-	picture = GFX_evt_throne_room_byzantine
+character_event={ # Chancellorship
+	id=CHA.2
 	
-	is_triggered_only = yes
+	hide_window=yes
 	
-	immediate = {
-		event_target:target_emperor = {
-			abdicate_to = FROM
-			add_claim = event_target:target_empire
-			move_character = ROOT
+	only_playable=yes
+	only_independent=yes
+	min_age=20
+	
+	trigger={
+		real_tier=emperor
+		k_confucian={
+			holder_scope={
+				is_landed=yes
+				NOT={ character=ROOT }
+				capital_holding={
+					dejure_liege_title={
+						holder_scope={
+							top_liege={ character=ROOT }
+						}
+					}
+				}
+			}
+		}
+		primary_title={
+			NOT={ has_title_flag=premier_title }
+			OR={
+				title=e_chen
+				title=e_chu
+				title=e_dai
+				title=e_han
+				title=e_jin
+				title=e_liang
+				title=e_liao
+				title=e_min
+				title=e_qi
+				title=e_qin
+				title=e_qing
+				title=e_shu
+				title=e_song
+				title=e_sui
+				title=e_tan
+				title=e_tang
+				title=e_wei
+				title=e_wu
+				title=e_wuyue
+				title=e_xia
+				title=e_yan
+				title=e_zhao
+				title=e_zhong
+				title=e_zhou
+			}
 		}
 	}
 	
-	option = {
-		name = ACCEPT
+	mean_time_to_happen={
+		days=1
+	}
+	
+	immediate={
+		k_confucian={
+			holder_scope={
+				save_event_target_as=target_emperor
+				primary_title={
+					save_event_target_as=target_empire
+				}
+				if={
+					limit={
+						has_landed_title=e_han
+						e_china={ has_holder=yes }
+					}
+					e_china={
+						holder_scope={
+							character_event={ id=CHA.3 }
+						}
+					}
+					break=yes
+				}
+				#
+				if={
+					limit={
+						has_landed_title=e_chen
+						e_k_chen={ has_holder=yes }
+					}
+					e_k_chen={
+						holder_scope={
+							character_event={ id=CHA.3 }
+						}
+					}
+					break=yes
+				}
+				#
+				if={
+					limit={
+						has_landed_title=e_chu
+						e_k_chu={ has_holder=yes }
+					}
+					e_k_chu={
+						holder_scope={
+							character_event={ id=CHA.3 }
+						}
+					}
+					break=yes
+				}
+				#
+				if={
+					limit={
+						has_landed_title=e_dai
+						e_k_dai={ has_holder=yes }
+					}
+					e_k_dai={
+						holder_scope={
+							character_event={ id=CHA.3 }
+						}
+					}
+					break=yes
+				}
+				#
+				if={
+					limit={
+						has_landed_title=e_han
+						e_k_han={ has_holder=yes }
+					}
+					e_k_han={
+						holder_scope={
+							character_event={ id=CHA.3 }
+						}
+					}
+					break=yes
+				}
+				#
+				if={
+					limit={
+						has_landed_title=e_jin
+						e_k_jin={ has_holder=yes }
+					}
+					e_k_jin={
+						holder_scope={
+							character_event={ id=CHA.3 }
+						}
+					}
+					break=yes
+				}
+				#
+				if={
+					limit={
+						has_landed_title=e_liang
+						e_k_liang={ has_holder=yes }
+					}
+					e_k_liang={
+						holder_scope={
+							character_event={ id=CHA.3 }
+						}
+					}
+					break=yes
+				}
+				#
+				if={
+					limit={
+						has_landed_title=e_liao
+						e_k_liao={ has_holder=yes }
+					}
+					e_k_liao={
+						holder_scope={
+							character_event={ id=CHA.3 }
+						}
+					}
+					break=yes
+				}
+				#
+				if={
+					limit={
+						has_landed_title=e_min
+						e_k_min={ has_holder=yes }
+					}
+					e_k_min={
+						holder_scope={
+							character_event={ id=CHA.3 }
+						}
+					}
+					break=yes
+				}
+				#
+				if={
+					limit={
+						has_landed_title=e_qi
+						e_k_qi={ has_holder=yes }
+					}
+					e_k_qi={
+						holder_scope={
+							character_event={ id=CHA.3 }
+						}
+					}
+					break=yes
+				}
+				#
+				if={
+					limit={
+						has_landed_title=e_qin
+						e_k_qin={ has_holder=yes }
+					}
+					e_k_qin={
+						holder_scope={
+							character_event={ id=CHA.3 }
+						}
+					}
+					break=yes
+				}
+				#
+				if={
+					limit={
+						has_landed_title=e_qing
+						e_k_qing={ has_holder=yes }
+					}
+					e_k_qing={
+						holder_scope={
+							character_event={ id=CHA.3 }
+						}
+					}
+					break=yes
+				}
+				#
+				if={
+					limit={
+						has_landed_title=e_shu
+						e_k_shu={ has_holder=yes }
+					}
+					e_k_shu={
+						holder_scope={
+							character_event={ id=CHA.3 }
+						}
+					}
+					break=yes
+				}
+				#
+				if={
+					limit={
+						has_landed_title=e_song
+						e_k_song={ has_holder=yes }
+					}
+					e_k_song={
+						holder_scope={
+							character_event={ id=CHA.3 }
+						}
+					}
+					break=yes
+				}
+				#
+				if={
+					limit={
+						has_landed_title=e_sui
+						e_k_sui={ has_holder=yes }
+					}
+					e_k_sui={
+						holder_scope={
+							character_event={ id=CHA.3 }
+						}
+					}
+					break=yes
+				}
+				#
+				if={
+					limit={
+						has_landed_title=e_tan
+						e_k_tan={ has_holder=yes }
+					}
+					e_k_tan={
+						holder_scope={
+							character_event={ id=CHA.3 }
+						}
+					}
+					break=yes
+				}
+				#
+				if={
+					limit={
+						has_landed_title=e_tang
+						e_k_tang={ has_holder=yes }
+					}
+					e_k_tang={
+						holder_scope={
+							character_event={ id=CHA.3 }
+						}
+					}
+					break=yes
+				}
+				#
+				if={
+					limit={
+						has_landed_title=e_wei
+						e_k_wei={ has_holder=yes }
+					}
+					e_k_wei={
+						holder_scope={
+							character_event={ id=CHA.3 }
+						}
+					}
+					break=yes
+				}
+				#
+				if={
+					limit={
+						has_landed_title=e_wu
+						e_k_wu={ has_holder=yes }
+					}
+					e_k_wu={
+						holder_scope={
+							character_event={ id=CHA.3 }
+						}
+					}
+					break=yes
+				}
+				#
+				if={
+					limit={
+						has_landed_title=e_wuyue
+						e_k_wuyue={ has_holder=yes }
+					}
+					e_k_wuyue={
+						holder_scope={
+							character_event={ id=CHA.3 }
+						}
+					}
+					break=yes
+				}
+				#
+				if={
+					limit={
+						has_landed_title=e_xia
+						e_k_xia={ has_holder=yes }
+					}
+					e_k_xia={
+						holder_scope={
+							character_event={ id=CHA.3 }
+						}
+					}
+					break=yes
+				}
+				#
+				if={
+					limit={
+						has_landed_title=e_yan
+						e_k_yan={ has_holder=yes }
+					}
+					e_k_yan={
+						holder_scope={
+							character_event={ id=CHA.3 }
+						}
+					}
+					break=yes
+				}
+				#
+				if={
+					limit={
+						has_landed_title=e_zhao
+						e_k_zhao={ has_holder=yes }
+					}
+					e_k_zhao={
+						holder_scope={
+							character_event={ id=CHA.3 }
+						}
+					}
+					break=yes
+				}
+				#
+				if={
+					limit={
+						has_landed_title=e_zhong
+						e_k_zhong={ has_holder=yes }
+					}
+					e_k_zhong={
+						holder_scope={
+							character_event={ id=CHA.3 }
+						}
+					}
+					break=yes
+				}
+				#
+				if={
+					limit={
+						has_landed_title=e_zhou
+						e_k_zhou={ has_holder=yes }
+					}
+					e_k_zhou={
+						holder_scope={
+							character_event={ id=CHA.3 }
+						}
+					}
+					break=yes
+				}
+			}
+		}
+	}
+}
+
+character_event={
+	id=CHA.3
+	desc=EVTDESC_CHA.3
+	title=EVTTITLE_CHA.3
+	picture=GFX_evt_throne_room_byzantine
+	
+	is_triggered_only=yes
+	
+	immediate={
+		event_target:target_emperor={
+			abdicate_to=FROM
+			add_claim=event_target:target_empire
+			move_character=ROOT
+		}
+	}
+	
+	option={
+		name=ACCEPT
 		
-		prestige = -1000
-		piety = -1000
+		prestige=-1000
+		piety=-1000
 		
-		hidden_tooltip = {
-			primary_title = {
-				unsafe_destroy_landed_title = THIS
+		hidden_tooltip={
+			primary_title={
+				unsafe_destroy_landed_title=THIS
 			}
 		}
 		
-		ai_chance = {
-			factor = 0
+		ai_chance={
+			factor=0
 		}
 	}
 	
-	option = {
-		name = REFUSE
+	option={
+		name=REFUSE
 		
-		event_target:target_emperor = {
-			event_target:target_empire = {
-				reverse_war = {
-					target = event_target:target_emperor
-					casus_belli = restoration
-					thirdparty = ROOT
+		event_target:target_emperor={
+			event_target:target_empire={
+				reverse_war={
+					target=event_target:target_emperor
+					casus_belli=restoration
+					thirdparty=ROOT
 				}
 			}
 		}
 		
-		ai_chance = {
-			factor = 1
+		ai_chance={
+			factor=1
 		}
 	}
 }
 
 # Ultimatum - Install Chancellor
-letter_event = {
-	id = CHA.4
-	desc = EVTDESC_CHA.4
+letter_event={
+	id=CHA.4
+	desc=EVTDESC_CHA.4
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	trigger = {
-		FROM = { in_faction = faction_install_chancellor }
+	trigger={
+		FROM={ in_faction=faction_install_chancellor }
 	}
 	
-	immediate = {
-		FROM = {
-			diplomatic_immunity = yes 
-			any_faction_backer = {
-				faction = faction_install_chancellor
-				diplomatic_immunity = yes
+	immediate={
+		FROM={
+			diplomatic_immunity=yes 
+			any_faction_backer={
+				faction=faction_install_chancellor
+				diplomatic_immunity=yes
 			}
-			set_character_flag = new_title_holder
-			save_event_target_as = new_title_holder
+			set_character_flag=new_title_holder
+			save_event_target_as=new_title_holder
 		}
 	}
 	
-	option = {
-		name = EVTOPTA8000
-		ai_chance = {
-			factor = 10
-			modifier = {
-				factor = 0	
-				NOT = {
-					FROM = {
-						faction_power = 
+	option={
+		name=EVTOPTA8000
+		ai_chance={
+			factor=10
+			modifier={
+				factor=0	
+				NOT={
+					FROM={
+						faction_power=
 						{
-							faction = faction_install_chancellor
-							power = 1.0
+							faction=faction_install_chancellor
+							power=1.0
 						}
 					}
 				}
 			}		
-			modifier = {
-				factor = 1.25
-				is_weak_trigger = yes
+			modifier={
+				factor=1.25
+				is_weak_trigger=yes
 			}
-			modifier = {
-				factor = 1.25
-				trait = craven
+			modifier={
+				factor=1.25
+				trait=craven
 			}
-			modifier = {
-				factor = 1.25
-				trait = humble
+			modifier={
+				factor=1.25
+				trait=humble
 			}
-			modifier = {
-				factor = 1.25
-				trait = kind
+			modifier={
+				factor=1.25
+				trait=kind
 			}
-			modifier = {
-				factor = 1.25
-				trait = charitable
+			modifier={
+				factor=1.25
+				trait=charitable
 			}
-			modifier = {
-				factor = 1.25
-				trait = patient
+			modifier={
+				factor=1.25
+				trait=patient
 			}
-			modifier = {
-				factor = 1.25
-				trait = content
+			modifier={
+				factor=1.25
+				trait=content
 			}
 		}
 		
-		hidden_tooltip = {
-			any_vassal = {
-				limit = {
-					ai = no
-					NOT = { in_faction = faction_install_chancellor }
+		hidden_tooltip={
+			any_vassal={
+				limit={
+					ai=no
+					NOT={ in_faction=faction_install_chancellor }
 				}
-				character_event = { id = CHA.6 }
+				character_event={ id=CHA.6 }
 			}
-			FROM = {
-				letter_event = { id = CHA.7 }
-				any_faction_backer = {
-					faction = faction_install_chancellor
-					letter_event = { id = CHA.5 }
-					diplomatic_immunity = no
+			FROM={
+				letter_event={ id=CHA.7 }
+				any_faction_backer={
+					faction=faction_install_chancellor
+					letter_event={ id=CHA.5 }
+					diplomatic_immunity=no
 				}
-				diplomatic_immunity = no
+				diplomatic_immunity=no
 			}
 		}
-		FROM = {
-			opinion = {
-				modifier = opinion_abdicated
-				who = ROOT
-				months = 12
+		FROM={
+			opinion={
+				modifier=opinion_abdicated
+				who=ROOT
+				months=12
 			}
 		}
-		FROM = {
-			custom_tooltip = {
-				text = overthrow_text
-				hidden_tooltip = {
-					faction_install_chancellor = { # The target (title) of the faction
-						holder_scope = {
-							any_vassal = {
-								limit = { has_character_flag = new_title_holder }
-								character_event = { id = CHA.10 }
-								clr_character_flag = new_title_holder
-								job_chancellor = { remove_title = job_chancellor }
-								job_marshal = { remove_title = job_marshal }
-								job_treasurer = { remove_title = job_treasurer }
-								job_spymaster = { remove_title = job_spymaster }
-								job_spiritual = { remove_title = job_spiritual }
+		FROM={
+			custom_tooltip={
+				text=overthrow_text
+				hidden_tooltip={
+					faction_install_chancellor={ # The target (title) of the faction
+						holder_scope={
+							any_vassal={
+								limit={ has_character_flag=new_title_holder }
+								character_event={ id=CHA.10 }
+								clr_character_flag=new_title_holder
+								job_chancellor={ remove_title=job_chancellor }
+								job_marshal={ remove_title=job_marshal }
+								job_treasurer={ remove_title=job_treasurer }
+								job_spymaster={ remove_title=job_spymaster }
+								job_spiritual={ remove_title=job_spiritual }
 							}
 						}
-						increase_council_power_effect = yes
-						increase_vassal_freedom_effect = yes
-						increase_vassal_freedom_effect = yes
-						if = {
-							limit = { has_law = succession_voting_power_0 }
-							add_law_w_cooldown = succession_voting_power_1
+						increase_council_power_effect=yes
+						increase_vassal_freedom_effect=yes
+						increase_vassal_freedom_effect=yes
+						if={
+							limit={ has_law=succession_voting_power_0 }
+							add_law_w_cooldown=succession_voting_power_1
 						}
-						if = {
-							limit = { 
-								NOT = { has_law = succ_feudal_elective }
-								has_law = law_voting_power_1
-								has_law = banish_voting_power_1
-								has_law = execution_voting_power_1
-								has_law = revoke_title_voting_power_1
-								has_law = grant_title_voting_power_1
-								has_law = imprison_voting_power_1
-								has_law = war_voting_power_1						
+						if={
+							limit={ 
+								NOT={ has_law=succ_feudal_elective }
+								has_law=law_voting_power_1
+								has_law=banish_voting_power_1
+								has_law=execution_voting_power_1
+								has_law=revoke_title_voting_power_1
+								has_law=grant_title_voting_power_1
+								has_law=imprison_voting_power_1
+								has_law=war_voting_power_1						
 							}
-							add_law_w_cooldown = succ_feudal_elective
+							add_law_w_cooldown=succ_feudal_elective
 						}
-						if = {
-							limit = {
-								NOT = { has_law = succ_gavelkind }
-								NOT = { has_law = succ_feudal_elective }
-								NAND = {
-									has_law = succ_feudal_elective
-									has_law = law_voting_power_1
-									has_law = banish_voting_power_1
-									has_law = execution_voting_power_1
-									has_law = revoke_title_voting_power_1
-									has_law = grant_title_voting_power_1
-									has_law = imprison_voting_power_1
-									has_law = war_voting_power_1						
+						if={
+							limit={
+								NOT={ has_law=succ_gavelkind }
+								NOT={ has_law=succ_feudal_elective }
+								NAND={
+									has_law=succ_feudal_elective
+									has_law=law_voting_power_1
+									has_law=banish_voting_power_1
+									has_law=execution_voting_power_1
+									has_law=revoke_title_voting_power_1
+									has_law=grant_title_voting_power_1
+									has_law=imprison_voting_power_1
+									has_law=war_voting_power_1						
 								}
 							}
-							add_law_w_cooldown = succ_gavelkind
+							add_law_w_cooldown=succ_gavelkind
 						}
 					}
 				}
 			}
 		}
 	}
-	option = {
-		name = "EVTOPTB8000"
-		ai_chance = {
-			factor = 90
-			modifier = {
-				factor = 1.25
-				is_strong_trigger = yes
+	option={
+		name="EVTOPTB8000"
+		ai_chance={
+			factor=90
+			modifier={
+				factor=1.25
+				is_strong_trigger=yes
 			}
-			modifier = {
-				factor = 1.25
-				trait = brave
+			modifier={
+				factor=1.25
+				trait=brave
 			}
-			modifier = {
-				factor = 1.25
-				trait = proud
+			modifier={
+				factor=1.25
+				trait=proud
 			}
-			modifier = {
-				factor = 1.25
-				trait = envious
+			modifier={
+				factor=1.25
+				trait=envious
 			}
-			modifier = {
-				factor = 1.25
-				trait = greedy
+			modifier={
+				factor=1.25
+				trait=greedy
 			}
-			modifier = {
-				factor = 1.25
-				trait = wroth
+			modifier={
+				factor=1.25
+				trait=wroth
 			}
-			modifier = {
-				factor = 1.25
-				trait = ambitious
+			modifier={
+				factor=1.25
+				trait=ambitious
 			}
-			modifier = {
-				factor = 1.25
-				trait = stubborn
+			modifier={
+				factor=1.25
+				trait=stubborn
 			}
-			modifier = {
-				factor = 0.75
-				FROM = {
-					faction_power = 
+			modifier={
+				factor=0.75
+				FROM={
+					faction_power=
 					{
-						faction = faction_install_chancellor
-						power = 1.5
+						faction=faction_install_chancellor
+						power=1.5
 					}
 				}
 			}
-			modifier = {
-				factor = 0.5
-				FROM = {
-					faction_power = 
+			modifier={
+				factor=0.5
+				FROM={
+					faction_power=
 					{
-						faction = faction_install_chancellor
-						power = 1.0
+						faction=faction_install_chancellor
+						power=1.0
 					}
 				}
 			}
-			modifier = {
-				factor = 0.5
-				FROM = {
-					faction_power = 
+			modifier={
+				factor=0.5
+				FROM={
+					faction_power=
 					{
-						faction = faction_install_chancellor
-						power = 2.0
+						faction=faction_install_chancellor
+						power=2.0
 					}
 				}
 			}
-			modifier = {
-				factor = 0.5
-				FROM = {
-					faction_power = 
+			modifier={
+				factor=0.5
+				FROM={
+					faction_power=
 					{
-						faction = faction_install_chancellor
-						power = 3.0
+						faction=faction_install_chancellor
+						power=3.0
 					}
 				}
 			}
-			modifier = {
-				factor = 0.5
-				FROM = {
-					faction_power = 
+			modifier={
+				factor=0.5
+				FROM={
+					faction_power=
 					{
-						faction = faction_install_chancellor
-						power = 4.0
+						faction=faction_install_chancellor
+						power=4.0
 					}
 				}
 			}
 		}
-		hidden_tooltip = {
-			if = {
-				limit = {
-					FROM = { faction_power = { faction = faction_install_chancellor power = 1.0 } }
+		hidden_tooltip={
+			if={
+				limit={
+					FROM={ faction_power={ faction=faction_install_chancellor power=1.0 } }
 				}
-				random = {
-					chance = 25
-					character_event = { id = 45002 days = 120 } # Loyalists flock to the liege's banner
+				random={
+					chance=25
+					character_event={ id=45002 days=120 } # Loyalists flock to the liege's banner
 				}
 			}
 		}
-		FROM = {
-			letter_event = { id = CHA.8 days = 3 tooltip = "EVTTOOLTIP8100" }
-			tooltip = {
-				any_faction_backer = {
-					faction = faction_install_chancellor
+		FROM={
+			letter_event={ id=CHA.8 days=3 tooltip="EVTTOOLTIP8100" }
+			tooltip={
+				any_faction_backer={
+					faction=faction_install_chancellor
 				}
 			}
-			hidden_tooltip = {
-				if = {
-					limit = {
-						NOT = { faction_power = { faction = faction_install_chancellor power = 0.75 } }
+			hidden_tooltip={
+				if={
+					limit={
+						NOT={ faction_power={ faction=faction_install_chancellor power=0.75 } }
 					}
-					random_list = {
-						50 = {
+					random_list={
+						50={
 						}
-						30 = {
-							character_event = { id = 45000 days = 17 } # A great number of rebels flock to the revolter's banner
+						30={
+							character_event={ id=45000 days=17 } # A great number of rebels flock to the revolter's banner
 						}
-						20 = {
-							character_event = { id = 45004 days = 17 } # Rebels flock to the revolter's banner
+						20={
+							character_event={ id=45004 days=17 } # Rebels flock to the revolter's banner
 						}
 					}
 				}
-				if = {
-					limit = {
-						faction_power = { faction = faction_install_chancellor power = 0.75 }
-						NOT = { faction_power = { faction = faction_install_chancellor power = 1.5 } }
+				if={
+					limit={
+						faction_power={ faction=faction_install_chancellor power=0.75 }
+						NOT={ faction_power={ faction=faction_install_chancellor power=1.5 } }
 					}
-					random_list = {
-						75 = {
+					random_list={
+						75={
 						}
-						5 = {
-							character_event = { id = 45000 days = 17 } # A great number of rebels flock to the revolter's banner
+						5={
+							character_event={ id=45000 days=17 } # A great number of rebels flock to the revolter's banner
 						}
-						20 = {
-							character_event = { id = 45004 days = 17 } # Rebels flock to the revolter's banner
+						20={
+							character_event={ id=45004 days=17 } # Rebels flock to the revolter's banner
 						}
 					}
 				}
@@ -1231,601 +1231,999 @@ letter_event = {
 }
 
 # Inform faction backer - Install Chancellor
-letter_event = {
-	id = CHA.5
-	desc = EVTDESC_CHA.5
+letter_event={
+	id=CHA.5
+	desc=EVTDESC_CHA.5
 	
-	show_from_from = yes
+	show_from_from=yes
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	option = {
-		name = "GOOD"
-		reverse_opinion = {
-			modifier = opinion_grateful
-			who = FROMFROM
-			years = 5
+	option={
+		name="GOOD"
+		reverse_opinion={
+			modifier=opinion_grateful
+			who=FROMFROM
+			years=5
 		}
 
-		if = {
-			limit = { event_target:new_title_holder = { NOT = { character = ROOT } } }
-			add_favor = event_target:new_title_holder
-			opinion = {
-				who = event_target:new_title_holder
-				modifier = opinion_favorite
-				years = 5
+		if={
+			limit={ event_target:new_title_holder={ NOT={ character=ROOT } } }
+			add_favor=event_target:new_title_holder
+			opinion={
+				who=event_target:new_title_holder
+				modifier=opinion_favorite
+				years=5
 			}
 		}
 
-		add_character_modifier = {
-			name = faction_install_chancellor_ultimatum_timer
-			hidden = yes
-			duration = 3650
+		add_character_modifier={
+			name=faction_install_chancellor_ultimatum_timer
+			hidden=yes
+			duration=3650
 		}
 	}
 }
 
 # Inform other vassals - Install Chancellor
-character_event = {
-	id = CHA.6
-	desc = EVTDESC_CHA.6
+character_event={
+	id=CHA.6
+	desc=EVTDESC_CHA.6
 	
-	notification = yes
+	notification=yes
 	
-	picture = GFX_evt_council
-	border = GFX_event_normal_frame_intrigue
+	picture=GFX_evt_council
+	border=GFX_event_normal_frame_intrigue
 	
-	show_from_from = yes
+	show_from_from=yes
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	option = {
-		name = "I_SEE"
+	option={
+		name="I_SEE"
 	}
 }
 
 # Demand accepted - Install Chancellor
-letter_event = {
-	id = CHA.7
-	desc = EVTDESC_CHA.7
+letter_event={
+	id=CHA.7
+	desc=EVTDESC_CHA.7
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	option = {
-		name = "EXCELLENT"
-		clr_character_flag = faction_install_chancellor_ultimatum_taken
+	option={
+		name="EXCELLENT"
+		clr_character_flag=faction_install_chancellor_ultimatum_taken
 		
-		if = {
-			limit = { event_target:new_title_holder = { NOT = { character = ROOT } } }
-			add_favor = event_target:new_title_holder
-			opinion = {
-				who = event_target:new_title_holder
-				modifier = opinion_favorite
-				years = 5
+		if={
+			limit={ event_target:new_title_holder={ NOT={ character=ROOT } } }
+			add_favor=event_target:new_title_holder
+			opinion={
+				who=event_target:new_title_holder
+				modifier=opinion_favorite
+				years=5
 			}
 		}
 		
-		add_character_modifier = {
-			name = faction_install_chancellor_ultimatum_timer
-			hidden = yes
-			duration = 3650
+		add_character_modifier={
+			name=faction_install_chancellor_ultimatum_timer
+			hidden=yes
+			duration=3650
 		}
 	}
 }
 
 # Demand rejected - Install Chancellor
-letter_event = {
-	id = CHA.8
-	desc = "EVTDESC8100"
+letter_event={
+	id=CHA.8
+	desc="EVTDESC8100"
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	option = {
-		name = "EVTOPTA8100"
+	option={
+		name="EVTOPTA8100"
 		
-		clr_character_flag = faction_install_chancellor_ultimatum_taken
-		FROM = { set_character_flag = install_chancellor_target }
-		faction_install_chancellor = { # The target (title) of the faction
-			reverse_war = {
-				target = ROOT
-				casus_belli = install_chancellor_war
-				faction = faction_install_chancellor
+		clr_character_flag=faction_install_chancellor_ultimatum_taken
+		FROM={ set_character_flag=install_chancellor_target }
+		faction_install_chancellor={ # The target (title) of the faction
+			reverse_war={
+				target=ROOT
+				casus_belli=install_chancellor_war
+				faction=faction_install_chancellor
 			}
 		}
 	}
 }
 
 # Winning war notification - Install Chancellor
-letter_event = {
-	id = CHA.9
-	desc = "EVTDESC8225"
+letter_event={
+	id=CHA.9
+	desc="EVTDESC8225"
 
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	immediate = {
-		clr_character_flag = helped_win_war
+	immediate={
+		clr_character_flag=helped_win_war
 	}
 	
-	option = {
-		name = "EVTOPTA8225"
-		opinion = {
-			who = FROM
-			modifier = opinion_favorite
-			years = 5
+	option={
+		name="EVTOPTA8225"
+		opinion={
+			who=FROM
+			modifier=opinion_favorite
+			years=5
 		}
-		add_favor = FROM
+		add_favor=FROM
 	}
 }
 
-character_event = { # Set Chancellorship
-	id = CHA.10
+character_event={ # Set Chancellorship
+	id=CHA.10
 	
-	hide_window = yes
+	hide_window=yes
 	
-	only_playable = yes
+	only_playable=yes
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	trigger = {
-		k_confucian = {
-			holder_scope = {
-				is_landed = yes
-				NOT = { character = ROOT }
-				primary_title = {
-					NOT = { has_title_flag = premier_title }
-					OR = {
-						title = e_chen
-						title = e_chu
-						title = e_dai
-						title = e_han
-						title = e_jin
-						title = e_liang
-						title = e_liao
-						title = e_min
-						title = e_qi
-						title = e_qin
-						title = e_qing
-						title = e_shu
-						title = e_song
-						title = e_sui
-						title = e_tan
-						title = e_tang
-						title = e_wei
-						title = e_wu
-						title = e_wuyue
-						title = e_xia
-						title = e_yan
-						title = e_zhao
-						title = e_zhong
-						title = e_zhou
+	trigger={
+		k_confucian={
+			holder_scope={
+				is_landed=yes
+				NOT={ character=ROOT }
+				primary_title={
+					NOT={ has_title_flag=premier_title }
+					OR={
+						title=e_chen
+						title=e_chu
+						title=e_dai
+						title=e_han
+						title=e_jin
+						title=e_liang
+						title=e_liao
+						title=e_min
+						title=e_qi
+						title=e_qin
+						title=e_qing
+						title=e_shu
+						title=e_song
+						title=e_sui
+						title=e_tan
+						title=e_tang
+						title=e_wei
+						title=e_wu
+						title=e_wuyue
+						title=e_xia
+						title=e_yan
+						title=e_zhao
+						title=e_zhong
+						title=e_zhou
 					}
 				}
 			}
 		}
 	}
 	
-	immediate = {
-		k_confucian = {
-			holder_scope = {
-				save_event_target_as = target_emperor
-				if = {
-					limit = {
-						has_landed_title = e_han
-						e_china = { has_holder = no }
-						e_k_han = { has_holder = no }
+	immediate={
+		if={
+			limit={ is_tributary=yes }
+			suzerain={ remove_tributary=ROOT }
+		}
+		k_confucian={
+			holder_scope={
+				save_event_target_as=target_emperor
+				if={
+					limit={
+						has_landed_title=e_han
+						e_china={ has_holder=no }
+						e_k_han={ has_holder=no }
 					}
-					e_k_han = {
-						grant_title_no_opinion = ROOT
-						set_title_flag = premier_title
-						make_primary_title = yes
+					e_han={
+						any_claimant={
+							limit={ NOT={ dynasty=PREVPREV } }
+							remove_claim=e_han
+						}
 					}
-					character_event = { id = CHA.11 }
-					break = yes
+					e_k_han={
+						grant_title_no_opinion=ROOT
+						set_title_flag=premier_title
+						make_primary_title=yes
+						add_law=imperial_administration
+						add_law=ze_administration_laws_2
+						add_law=succ_feudal_elective
+					}
+					character_event={ id=CHA.11 }
+					break=yes
 				}
 				#
-				if = {
-					limit = {
-						has_landed_title = e_chen
-						e_k_chen = { has_holder = no }
+				if={
+					limit={
+						has_landed_title=e_chen
+						e_k_chen={ has_holder=no }
 					}
-					e_k_chen = {
-						grant_title_no_opinion = ROOT
-						set_title_flag = premier_title
-						make_primary_title = yes
+					e_chen={
+						any_claimant={
+							limit={ NOT={ dynasty=PREVPREV } }
+							remove_claim=e_chen
+						}
 					}
-					character_event = { id = CHA.11 }
-					break = yes
+					e_k_chen={
+						grant_title_no_opinion=ROOT
+						set_title_flag=premier_title
+						make_primary_title=yes
+						add_law=imperial_administration
+						add_law=ze_administration_laws_2
+						add_law=succ_feudal_elective
+					}
+					character_event={ id=CHA.11 }
+					break=yes
 				}
 				#
-				if = {
-					limit = {
-						has_landed_title = e_chu
-						e_k_chu = { has_holder = no }
+				if={
+					limit={
+						has_landed_title=e_chu
+						e_k_chu={ has_holder=no }
 					}
-					e_k_chu = {
-						grant_title_no_opinion = ROOT
-						set_title_flag = premier_title
-						make_primary_title = yes
+					e_chu={
+						any_claimant={
+							limit={ NOT={ dynasty=PREVPREV } }
+							remove_claim=e_chu
+						}
 					}
-					character_event = { id = CHA.11 }
-					break = yes
+					e_k_chu={
+						grant_title_no_opinion=ROOT
+						set_title_flag=premier_title
+						make_primary_title=yes
+						add_law=imperial_administration
+						add_law=ze_administration_laws_2
+						add_law=succ_feudal_elective
+					}
+					character_event={ id=CHA.11 }
+					break=yes
 				}
 				#
-				if = {
-					limit = {
-						has_landed_title = e_dai
-						e_k_dai = { has_holder = no }
+				if={
+					limit={
+						has_landed_title=e_dai
+						e_k_dai={ has_holder=no }
 					}
-					e_k_dai = {
-						grant_title_no_opinion = ROOT
-						set_title_flag = premier_title
-						make_primary_title = yes
+					e_dai={
+						any_claimant={
+							limit={ NOT={ dynasty=PREVPREV } }
+							remove_claim=e_dai
+						}
 					}
-					character_event = { id = CHA.11 }
-					break = yes
+					e_k_dai={
+						grant_title_no_opinion=ROOT
+						set_title_flag=premier_title
+						make_primary_title=yes
+						add_law=imperial_administration
+						add_law=ze_administration_laws_2
+						add_law=succ_feudal_elective
+					}
+					character_event={ id=CHA.11 }
+					break=yes
 				}
 				#
-				if = {
-					limit = {
-						has_landed_title = e_han
-						e_k_han = { has_holder = no }
+				if={
+					limit={
+						has_landed_title=e_jin
+						e_k_jin={ has_holder=no }
 					}
-					e_k_han = {
-						grant_title_no_opinion = ROOT
-						set_title_flag = premier_title
-						make_primary_title = yes
+					e_jin={
+						any_claimant={
+							limit={ NOT={ dynasty=PREVPREV } }
+							remove_claim=e_jin
+						}
 					}
-					character_event = { id = CHA.11 }
-					break = yes
+					e_k_jin={
+						grant_title_no_opinion=ROOT
+						set_title_flag=premier_title
+						make_primary_title=yes
+						add_law=imperial_administration
+						add_law=ze_administration_laws_2
+						add_law=succ_feudal_elective
+					}
+					character_event={ id=CHA.11 }
+					break=yes
 				}
 				#
-				if = {
-					limit = {
-						has_landed_title = e_jin
-						e_k_jin = { has_holder = no }
+				if={
+					limit={
+						has_landed_title=e_liang
+						e_k_liang={ has_holder=no }
 					}
-					e_k_jin = {
-						grant_title_no_opinion = ROOT
-						set_title_flag = premier_title
-						make_primary_title = yes
+					e_liang={
+						any_claimant={
+							limit={ NOT={ dynasty=PREVPREV } }
+							remove_claim=e_liang
+						}
 					}
-					character_event = { id = CHA.11 }
-					break = yes
+					e_k_liang={
+						grant_title_no_opinion=ROOT
+						set_title_flag=premier_title
+						make_primary_title=yes
+						add_law=imperial_administration
+						add_law=ze_administration_laws_2
+						add_law=succ_feudal_elective
+					}
+					character_event={ id=CHA.11 }
+					break=yes
 				}
 				#
-				if = {
-					limit = {
-						has_landed_title = e_liang
-						e_k_liang = { has_holder = no }
+				if={
+					limit={
+						has_landed_title=e_liao
+						e_k_liao={ has_holder=no }
 					}
-					e_k_liang = {
-						grant_title_no_opinion = ROOT
-						set_title_flag = premier_title
-						make_primary_title = yes
+					e_liao={
+						any_claimant={
+							limit={ NOT={ dynasty=PREVPREV } }
+							remove_claim=e_liao
+						}
 					}
-					character_event = { id = CHA.11 }
-					break = yes
+					e_k_liao={
+						grant_title_no_opinion=ROOT
+						set_title_flag=premier_title
+						make_primary_title=yes
+						add_law=imperial_administration
+						add_law=ze_administration_laws_2
+						add_law=succ_feudal_elective
+					}
+					character_event={ id=CHA.11 }
+					break=yes
 				}
 				#
-				if = {
-					limit = {
-						has_landed_title = e_liao
-						e_k_liao = { has_holder = no }
+				if={
+					limit={
+						has_landed_title=e_min
+						e_k_min={ has_holder=no }
 					}
-					e_k_liao = {
-						grant_title_no_opinion = ROOT
-						set_title_flag = premier_title
-						make_primary_title = yes
+					e_min={
+						any_claimant={
+							limit={ NOT={ dynasty=PREVPREV } }
+							remove_claim=e_min
+						}
 					}
-					character_event = { id = CHA.11 }
-					break = yes
+					e_k_min={
+						grant_title_no_opinion=ROOT
+						set_title_flag=premier_title
+						make_primary_title=yes
+						add_law=imperial_administration
+						add_law=ze_administration_laws_2
+						add_law=succ_feudal_elective
+					}
+					character_event={ id=CHA.11 }
+					break=yes
 				}
 				#
-				if = {
-					limit = {
-						has_landed_title = e_min
-						e_k_min = { has_holder = no }
+				if={
+					limit={
+						has_landed_title=e_qi
+						e_k_qi={ has_holder=no }
 					}
-					e_k_min = {
-						grant_title_no_opinion = ROOT
-						set_title_flag = premier_title
-						make_primary_title = yes
+					e_qi={
+						any_claimant={
+							limit={ NOT={ dynasty=PREVPREV } }
+							remove_claim=e_qi
+						}
 					}
-					character_event = { id = CHA.11 }
-					break = yes
+					e_k_qi={
+						grant_title_no_opinion=ROOT
+						set_title_flag=premier_title
+						make_primary_title=yes
+						add_law=imperial_administration
+						add_law=ze_administration_laws_2
+						add_law=succ_feudal_elective
+					}
+					character_event={ id=CHA.11 }
+					break=yes
 				}
 				#
-				if = {
-					limit = {
-						has_landed_title = e_qi
-						e_k_qi = { has_holder = no }
+				if={
+					limit={
+						has_landed_title=e_qin
+						e_k_qin={ has_holder=no }
 					}
-					e_k_qi = {
-						grant_title_no_opinion = ROOT
-						set_title_flag = premier_title
-						make_primary_title = yes
+					e_qin={
+						any_claimant={
+							limit={ NOT={ dynasty=PREVPREV } }
+							remove_claim=e_qin
+						}
 					}
-					character_event = { id = CHA.11 }
-					break = yes
+					e_k_qin={
+						grant_title_no_opinion=ROOT
+						set_title_flag=premier_title
+						make_primary_title=yes
+						add_law=imperial_administration
+						add_law=ze_administration_laws_2
+						add_law=succ_feudal_elective
+					}
+					character_event={ id=CHA.11 }
+					break=yes
 				}
 				#
-				if = {
-					limit = {
-						has_landed_title = e_qin
-						e_k_qin = { has_holder = no }
+				if={
+					limit={
+						has_landed_title=e_qing
+						e_k_qing={ has_holder=no }
 					}
-					e_k_qin = {
-						grant_title_no_opinion = ROOT
-						set_title_flag = premier_title
-						make_primary_title = yes
+					e_qing={
+						any_claimant={
+							limit={ NOT={ dynasty=PREVPREV } }
+							remove_claim=e_qing
+						}
 					}
-					character_event = { id = CHA.11 }
-					break = yes
+					e_k_qing={
+						grant_title_no_opinion=ROOT
+						set_title_flag=premier_title
+						make_primary_title=yes
+						add_law=imperial_administration
+						add_law=ze_administration_laws_2
+						add_law=succ_feudal_elective
+					}
+					character_event={ id=CHA.11 }
+					break=yes
 				}
 				#
-				if = {
-					limit = {
-						has_landed_title = e_qing
-						e_k_qing = { has_holder = no }
+				if={
+					limit={
+						has_landed_title=e_shu
+						e_k_shu={ has_holder=no }
 					}
-					e_k_qing = {
-						grant_title_no_opinion = ROOT
-						set_title_flag = premier_title
-						make_primary_title = yes
+					e_shu={
+						any_claimant={
+							limit={ NOT={ dynasty=PREVPREV } }
+							remove_claim=e_shu
+						}
 					}
-					character_event = { id = CHA.11 }
-					break = yes
+					e_k_shu={
+						grant_title_no_opinion=ROOT
+						set_title_flag=premier_title
+						make_primary_title=yes
+						add_law=imperial_administration
+						add_law=ze_administration_laws_2
+						add_law=succ_feudal_elective
+					}
+					character_event={ id=CHA.11 }
+					break=yes
 				}
 				#
-				if = {
-					limit = {
-						has_landed_title = e_shu
-						e_k_shu = { has_holder = no }
+				if={
+					limit={
+						has_landed_title=e_song
+						e_k_song={ has_holder=no }
 					}
-					e_k_shu = {
-						grant_title_no_opinion = ROOT
-						set_title_flag = premier_title
-						make_primary_title = yes
+					e_song={
+						any_claimant={
+							limit={ NOT={ dynasty=PREVPREV } }
+							remove_claim=e_song
+						}
 					}
-					character_event = { id = CHA.11 }
-					break = yes
+					e_k_song={
+						grant_title_no_opinion=ROOT
+						set_title_flag=premier_title
+						make_primary_title=yes
+						add_law=imperial_administration
+						add_law=ze_administration_laws_2
+						add_law=succ_feudal_elective
+					}
+					character_event={ id=CHA.11 }
+					break=yes
 				}
 				#
-				if = {
-					limit = {
-						has_landed_title = e_song
-						e_k_song = { has_holder = no }
+				if={
+					limit={
+						has_landed_title=e_sui
+						e_k_sui={ has_holder=no }
 					}
-					e_k_song = {
-						grant_title_no_opinion = ROOT
-						set_title_flag = premier_title
-						make_primary_title = yes
+					e_sui={
+						any_claimant={
+							limit={ NOT={ dynasty=PREVPREV } }
+							remove_claim=e_sui
+						}
 					}
-					character_event = { id = CHA.11 }
-					break = yes
+					e_k_sui={
+						grant_title_no_opinion=ROOT
+						set_title_flag=premier_title
+						make_primary_title=yes
+						add_law=imperial_administration
+						add_law=ze_administration_laws_2
+						add_law=succ_feudal_elective
+					}
+					character_event={ id=CHA.11 }
+					break=yes
 				}
 				#
-				if = {
-					limit = {
-						has_landed_title = e_sui
-						e_k_sui = { has_holder = no }
+				if={
+					limit={
+						has_landed_title=e_tan
+						e_k_tan={ has_holder=no }
 					}
-					e_k_sui = {
-						grant_title_no_opinion = ROOT
-						set_title_flag = premier_title
-						make_primary_title = yes
+					e_tan={
+						any_claimant={
+							limit={ NOT={ dynasty=PREVPREV } }
+							remove_claim=e_tan
+						}
 					}
-					character_event = { id = CHA.11 }
-					break = yes
+					e_k_tan={
+						grant_title_no_opinion=ROOT
+						set_title_flag=premier_title
+						make_primary_title=yes
+						add_law=imperial_administration
+						add_law=ze_administration_laws_2
+						add_law=succ_feudal_elective
+					}
+					character_event={ id=CHA.11 }
+					break=yes
 				}
 				#
-				if = {
-					limit = {
-						has_landed_title = e_tan
-						e_k_tan = { has_holder = no }
+				if={
+					limit={
+						has_landed_title=e_tang
+						e_k_tang={ has_holder=no }
 					}
-					e_k_tan = {
-						grant_title_no_opinion = ROOT
-						set_title_flag = premier_title
-						make_primary_title = yes
+					e_tang={
+						any_claimant={
+							limit={ NOT={ dynasty=PREVPREV } }
+							remove_claim=e_tang
+						}
 					}
-					character_event = { id = CHA.11 }
-					break = yes
+					e_k_tang={
+						grant_title_no_opinion=ROOT
+						set_title_flag=premier_title
+						make_primary_title=yes
+						add_law=imperial_administration
+						add_law=ze_administration_laws_2
+						add_law=succ_feudal_elective
+					}
+					character_event={ id=CHA.11 }
+					break=yes
 				}
 				#
-				if = {
-					limit = {
-						has_landed_title = e_tang
-						e_k_tang = { has_holder = no }
+				if={
+					limit={
+						has_landed_title=e_wei
+						e_k_wei={ has_holder=no }
 					}
-					e_k_tang = {
-						grant_title_no_opinion = ROOT
-						set_title_flag = premier_title
-						make_primary_title = yes
+					e_wei={
+						any_claimant={
+							limit={ NOT={ dynasty=PREVPREV } }
+							remove_claim=e_wei
+						}
 					}
-					character_event = { id = CHA.11 }
-					break = yes
+					e_k_wei={
+						grant_title_no_opinion=ROOT
+						set_title_flag=premier_title
+						make_primary_title=yes
+						add_law=imperial_administration
+						add_law=ze_administration_laws_2
+						add_law=succ_feudal_elective
+					}
+					character_event={ id=CHA.11 }
+					break=yes
 				}
 				#
-				if = {
-					limit = {
-						has_landed_title = e_wei
-						e_k_wei = { has_holder = no }
+				if={
+					limit={
+						has_landed_title=e_wu
+						e_k_wu={ has_holder=no }
 					}
-					e_k_wei = {
-						grant_title_no_opinion = ROOT
-						set_title_flag = premier_title
-						make_primary_title = yes
+					e_wu={
+						any_claimant={
+							limit={ NOT={ dynasty=PREVPREV } }
+							remove_claim=e_wu
+						}
 					}
-					character_event = { id = CHA.11 }
-					break = yes
+					e_k_wu={
+						grant_title_no_opinion=ROOT
+						set_title_flag=premier_title
+						make_primary_title=yes
+						add_law=imperial_administration
+						add_law=ze_administration_laws_2
+						add_law=succ_feudal_elective
+					}
+					character_event={ id=CHA.11 }
+					break=yes
 				}
 				#
-				if = {
-					limit = {
-						has_landed_title = e_wu
-						e_k_wu = { has_holder = no }
+				if={
+					limit={
+						has_landed_title=e_wuyue
+						e_k_wuyue={ has_holder=no }
 					}
-					e_k_wu = {
-						grant_title_no_opinion = ROOT
-						set_title_flag = premier_title
-						make_primary_title = yes
+					e_wuyue={
+						any_claimant={
+							limit={ NOT={ dynasty=PREVPREV } }
+							remove_claim=e_wuyue
+						}
 					}
-					character_event = { id = CHA.11 }
-					break = yes
+					e_k_wuyue={
+						grant_title_no_opinion=ROOT
+						set_title_flag=premier_title
+						make_primary_title=yes
+						add_law=imperial_administration
+						add_law=ze_administration_laws_2
+						add_law=succ_feudal_elective
+					}
+					character_event={ id=CHA.11 }
+					break=yes
 				}
 				#
-				if = {
-					limit = {
-						has_landed_title = e_wuyue
-						e_k_wuyue = { has_holder = no }
+				if={
+					limit={
+						has_landed_title=e_xia
+						e_k_xia={ has_holder=no }
 					}
-					e_k_wuyue = {
-						grant_title_no_opinion = ROOT
-						set_title_flag = premier_title
-						make_primary_title = yes
+					e_xia={
+						any_claimant={
+							limit={ NOT={ dynasty=PREVPREV } }
+							remove_claim=e_xia
+						}
 					}
-					character_event = { id = CHA.11 }
-					break = yes
+					e_k_xia={
+						grant_title_no_opinion=ROOT
+						set_title_flag=premier_title
+						make_primary_title=yes
+						add_law=imperial_administration
+						add_law=ze_administration_laws_2
+						add_law=succ_feudal_elective
+					}
+					character_event={ id=CHA.11 }
+					break=yes
 				}
 				#
-				if = {
-					limit = {
-						has_landed_title = e_xia
-						e_k_xia = { has_holder = no }
+				if={
+					limit={
+						has_landed_title=e_yan
+						e_k_yan={ has_holder=no }
 					}
-					e_k_xia = {
-						grant_title_no_opinion = ROOT
-						set_title_flag = premier_title
-						make_primary_title = yes
+					e_yan={
+						any_claimant={
+							limit={ NOT={ dynasty=PREVPREV } }
+							remove_claim=e_yan
+						}
 					}
-					character_event = { id = CHA.11 }
-					break = yes
+					e_k_yan={
+						grant_title_no_opinion=ROOT
+						set_title_flag=premier_title
+						make_primary_title=yes
+						add_law=imperial_administration
+						add_law=ze_administration_laws_2
+						add_law=succ_feudal_elective
+					}
+					character_event={ id=CHA.11 }
+					break=yes
 				}
 				#
-				if = {
-					limit = {
-						has_landed_title = e_yan
-						e_k_yan = { has_holder = no }
+				if={
+					limit={
+						has_landed_title=e_zhao
+						e_k_zhao={ has_holder=no }
 					}
-					e_k_yan = {
-						grant_title_no_opinion = ROOT
-						set_title_flag = premier_title
-						make_primary_title = yes
+					e_zhao={
+						any_claimant={
+							limit={ NOT={ dynasty=PREVPREV } }
+							remove_claim=e_zhao
+						}
 					}
-					character_event = { id = CHA.11 }
-					break = yes
+					e_k_zhao={
+						grant_title_no_opinion=ROOT
+						set_title_flag=premier_title
+						make_primary_title=yes
+						add_law=imperial_administration
+						add_law=ze_administration_laws_2
+						add_law=succ_feudal_elective
+					}
+					character_event={ id=CHA.11 }
+					break=yes
 				}
 				#
-				if = {
-					limit = {
-						has_landed_title = e_zhao
-						e_k_zhao = { has_holder = no }
+				if={
+					limit={
+						has_landed_title=e_zhong
+						e_k_zhong={ has_holder=no }
 					}
-					e_k_zhao = {
-						grant_title_no_opinion = ROOT
-						set_title_flag = premier_title
-						make_primary_title = yes
+					e_zhong={
+						any_claimant={
+							limit={ NOT={ dynasty=PREVPREV } }
+							remove_claim=e_zhong
+						}
 					}
-					character_event = { id = CHA.11 }
-					break = yes
+					e_k_zhong={
+						grant_title_no_opinion=ROOT
+						set_title_flag=premier_title
+						make_primary_title=yes
+						add_law=imperial_administration
+						add_law=ze_administration_laws_2
+						add_law=succ_feudal_elective
+					}
+					character_event={ id=CHA.11 }
+					break=yes
 				}
 				#
-				if = {
-					limit = {
-						has_landed_title = e_zhong
-						e_k_zhong = { has_holder = no }
+				if={
+					limit={
+						has_landed_title=e_zhou
+						e_k_zhou={ has_holder=no }
 					}
-					e_k_zhong = {
-						grant_title_no_opinion = ROOT
-						set_title_flag = premier_title
-						make_primary_title = yes
+					e_zhou={
+						any_claimant={
+							limit={ NOT={ dynasty=PREVPREV } }
+							remove_claim=e_zhou
+						}
 					}
-					character_event = { id = CHA.11 }
-					break = yes
-				}
-				#
-				if = {
-					limit = {
-						has_landed_title = e_zhou
-						e_k_zhou = { has_holder = no }
+					e_k_zhou={
+						grant_title_no_opinion=ROOT
+						set_title_flag=premier_title
+						make_primary_title=yes
+						add_law=imperial_administration
+						add_law=ze_administration_laws_2
+						add_law=succ_feudal_elective
 					}
-					e_k_zhou = {
-						grant_title_no_opinion = ROOT
-						set_title_flag = premier_title
-						make_primary_title = yes
-					}
-					character_event = { id = CHA.11 }
-					break = yes
+					character_event={ id=CHA.11 }
+					break=yes
 				}
 			}
 		}
 	}
 }
 
-character_event = { # Set Vassals
-	id = CHA.11
+character_event={ # Set Vassals
+	id=CHA.11
 	
-	hide_window = yes
+	hide_window=yes
 	
-	only_playable = yes
+	only_playable=yes
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	trigger = {
-		has_landed_title = k_confucian
+	trigger={
+		has_landed_title=k_confucian
 	}
 	
-	immediate = {
-		any_war = {
-			end_war = invalid
+	immediate={
+		random_demesne_title={
+			limit={
+				holding_type=temple
+			}
+			set_title_flag=keep_title_flag
 		}
-		any_vassal = {
-			limit = {
-				NOR = {
-					has_landed_title = c_guard
-					has_landed_title = c_eunuch
-					has_landed_title = c_empress
-					tier = BARON
+		any_demesne_title={
+			limit={
+				OR={
+					tier=EMPEROR
+					title=k_confucian
+					title=c_guard
+					title=c_eunuch
+					title=c_empress
 				}
 			}
-			set_defacto_liege = FROM
+			set_title_flag=keep_title_flag
 		}
-		random_vassal = {
-			limit = {
-				ROOT = {
-					NOT = {
-						any_demesne_title = {
-							holding_type = temple
+		random_vassal={
+			limit={
+				ROOT={
+					NOT={
+						any_demesne_title={
+							holding_type=temple
+							has_title_flag=keep_title_flag
 						}
 					}
 				}
-				tier = BARON
-				is_theocracy = yes
+				tier=BARON
+				is_theocracy=yes
 			}
-			primary_title = {
-				grant_title_no_opinion = ROOT
+			primary_title={
+				set_title_flag=keep_title_flag
+				grant_title_no_opinion=ROOT
 			}
 		}
-		any_demesne_title = {
-			limit = {
-				NOR = {
-					tier = EMPEROR
-					tier = BARON
-					title = k_confucian
-					title = c_guard
-					title = c_eunuch
-					title = c_empress
+		any_demesne_title={
+			limit={
+				NOT={
+					has_title_flag=keep_title_flag
 				}
 			}
-			set_title_flag = lost_title_flag
+			grant_title_no_opinion=FROM
 		}
-		any_demesne_title = {
-			limit = {
-				has_title_flag = lost_title_flag
+		any_vassal={
+			limit={
+				NOR={
+					has_landed_title=c_guard
+					has_landed_title=c_eunuch
+					has_landed_title=c_empress
+				}
 			}
-			grant_title_no_opinion = FROM
-			clr_title_flag = lost_title_flag
+			set_defacto_liege=FROM
 		}
+		any_demesne_title={
+			limit={
+				has_title_flag=keep_title_flag
+			}
+			clr_title_flag=keep_title_flag
+		}
+	}
+}
+
+### NEW PREMIER ###
+character_event={
+	id=CHA.12
+	desc=EVTDESC_CHA.12
+	title=EVTTITLE_CHA.12
+	picture=GFX_evt_throne_room_byzantine
+	
+	only_playable=yes
+	only_independent=yes
+	war=no
+	
+	trigger={
+		has_landed_title=k_confucian
+		is_landed=yes
+		OR={
+			NOT={ age=16 }
+			is_incapable=yes
+		}
+		OR={
+			AND={
+				has_landed_title=e_han
+				e_china={ has_holder=no }
+				e_k_han={ has_holder=no }
+			}
+			AND={
+				has_landed_title=e_chen
+				e_k_chen={ has_holder=no }
+			}
+			AND={
+				has_landed_title=e_chu
+				e_k_chu={ has_holder=no }
+			}
+			AND={
+				has_landed_title=e_dai
+				e_k_dai={ has_holder=no }
+			}
+			AND={
+				has_landed_title=e_jin
+				e_k_jin={ has_holder=no }
+			}
+			AND={
+				has_landed_title=e_liang
+				e_k_liang={ has_holder=no }
+			}
+			AND={
+				has_landed_title=e_liao
+				e_k_liao={ has_holder=no }
+			}
+			AND={
+				has_landed_title=e_min
+				e_k_min={ has_holder=no }
+			}
+			AND={
+				has_landed_title=e_qi
+				e_k_qi={ has_holder=no }
+			}
+			AND={
+				has_landed_title=e_qin
+				e_k_qin={ has_holder=no }
+			}
+			AND={
+				has_landed_title=e_qing
+				e_k_qing={ has_holder=no }
+			}
+			AND={
+				has_landed_title=e_shu
+				e_k_shu={ has_holder=no }
+			}
+			AND={
+				has_landed_title=e_song
+				e_k_song={ has_holder=no }
+			}
+			AND={
+				has_landed_title=e_sui
+				e_k_sui={ has_holder=no }
+			}
+			AND={
+				has_landed_title=e_tan
+				e_k_tan={ has_holder=no }
+			}
+			AND={
+				has_landed_title=e_tang
+				e_k_tang={ has_holder=no }
+			}
+			AND={
+				has_landed_title=e_wei
+				e_k_wei={ has_holder=no }
+			}
+			AND={
+				has_landed_title=e_wu
+				e_k_wu={ has_holder=no }
+			}
+			AND={
+				has_landed_title=e_wuyue
+				e_k_wuyue={ has_holder=no }
+			}
+			AND={
+				has_landed_title=e_xia
+				e_k_xia={ has_holder=no }
+			}
+			AND={
+				has_landed_title=e_yan
+				e_k_yan={ has_holder=no }
+			}
+			AND={
+				has_landed_title=e_zhao
+				e_k_zhao={ has_holder=no }
+			}
+			AND={
+				has_landed_title=e_zhong
+				e_k_zhong={ has_holder=no }
+			}
+			AND={
+				has_landed_title=e_zhou
+				e_k_zhou={ has_holder=no }
+			}
+		}
+	}
+	
+	mean_time_to_happen={
+		days=1
+	}
+	
+	immediate={
+		if={
+			limit={
+				has_assigned_minor_title=title_appointed_regent
+			}
+			any_courtier_or_vassal={
+				limit={
+					liege={ character=ROOT }
+					has_minor_title=title_appointed_regent
+				}
+				character_event={ id=CHA.13 }
+				break=yes
+			}
+		}
+		if={
+			limit={
+				has_regent=yes
+			}
+			regent={
+				character_event={ id=CHA.13 }
+				break=yes
+			}
+		}
+		if={
+			limit={
+				NOT={
+					has_assigned_minor_title=title_appointed_regent
+				}
+			}
+			most_popular_vassal={
+				character_event={ id=CHA.13 }
+				break=yes
+			}
+		}
+	}
+	
+	option={
+		name=DAMN
+	}
+}
+
+### NEW PREMIER ###
+character_event={
+	id=CHA.13
+	desc=EVTDESC_CHA.13
+	title=EVTTITLE_CHA.13
+	picture=GFX_evt_throne_room_byzantine
+	
+	is_triggered_only=yes
+	
+	immediate={
+		character_event={ id=CHA.10 }
+	}
+	
+	option={
+		name=EXCELLENT
 	}
 }

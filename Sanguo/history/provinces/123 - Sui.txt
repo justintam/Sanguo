@@ -15,5 +15,6 @@ b_pinglin = city
 # Misc
 culture = han
 religion = confucian
+terrain = hills
 
 #History

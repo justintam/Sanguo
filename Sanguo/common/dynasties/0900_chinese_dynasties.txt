@@ -1,6 +1,13 @@
 900 = {
 	name="Chen" #Chen Bao
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 10 0 0 0 			}
+		religion="confucian"
+	}
 }
 901 = {
 	name="Bu" #Bu Yi - YT
@@ -17,6 +24,14 @@
 904 = {
 	name="He" #He Yi - YT
 	culture = han
+	used_for_random=no
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 14 0 0 0 			}
+		religion="confucian"
+	}
 }
 905 = {
 	name="Guo" #Guo Si - DZ
@@ -25,6 +40,13 @@
 906 = {
 	name="Li" #Li Ru - DZ
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="confucian"
+	}
 }
 907 = {
 	name="Han" #Han Yan - HAN
@@ -41,10 +63,24 @@
 910 = {
 	name="Li" #Li Wenhou
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="confucian"
+	}
 }
 911 = {
 	name="Wang" #Wang Guo
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 2 0 0 0 			}
+		religion="confucian"
+	}
 }
 912 = {
 	name="Zhu" #Zhu Gui - HAN
@@ -61,14 +97,35 @@
 915 = {
 	name="Zhang" #Zhang Xiu
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 916 = {
 	name="Wang" #Wang Rui
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 2 0 0 0 			}
+		religion="confucian"
+	}
 }
 917 = {
 	name="Wang" #Wang Zhi
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 2 0 0 0 			}
+		religion="confucian"
+	}
 }
 918 = {
 	name="Guo" #Guo Da
@@ -77,6 +134,13 @@
 919 = {
 	name="Zhang" #Zhang Yang
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 920 = {
 	name="Kong" #Kong Xin
@@ -85,6 +149,13 @@
 921 = {
 	name="Wang" #Wang Lang
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 2 0 0 0 			}
+		religion="confucian"
+	}
 }
 922 = {
 	name="Yan" #Yan Zheng
@@ -97,14 +168,35 @@
 924 = {
 	name="Sun" #Sun Zhong
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 3 0 0 0 			}
+		religion="confucian"
+	}
 }
 925 = {
 	name="Wang" #Wang Kuang
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 2 0 0 0 			}
+		religion="confucian"
+	}
 }
 926 = {
 	name="Chen" #Chen Yan
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 10 0 0 0 			}
+		religion="confucian"
+	}
 }
 927 = {
 	name="Qu" #Qu Yi
@@ -113,26 +205,68 @@
 928 = {
 	name="Zhang" #Zhang Wen
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 929 = {
 	name="Sun" #Sun Xia
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 3 0 0 0 			}
+		religion="confucian"
+	}
 }
 930 = {
 	name="Zhang" #Zhang Ji
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 931 = {
 	name="Yang" #Yang Zhong
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 11 0 0 0 			}
+		religion="confucian"
+	}
 }
 932 = {
 	name="Zhang" #Zhang Chun
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 933 = {
 	name="Zhang" #Zhang Ju
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 934 = {
 	name="Huang" #Huang Shao
@@ -165,10 +299,24 @@
 941 = {
 	name="Liu" #Liu Chong in Zangke
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 1 0 0 0 			}
+		religion="confucian"
+	}
 }
 942 = {
 	name="Li" #Li Yong
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="confucian"
+	}
 }
 943 = {
 	name="He" #He Xun
@@ -177,6 +325,13 @@
 944 = {
 	name="Li" #Li Jue
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="confucian"
+	}
 }
 945 = {
 	name="Han" #Han Xian
@@ -185,6 +340,13 @@
 946 = {
 	name="Yang" #Yang Feng
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 11 0 0 0 			}
+		religion="confucian"
+	}
 }
 947 = {
 	name="Zhu" #Zhu Zhi
@@ -193,6 +355,13 @@
 948 = {
 	name="Xu" #Xu Qiu
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 12 0 0 0 			}
+		religion="confucian"
+	}
 }
 949 = {
 	name="Gongsun" #Gongsun Zhao
@@ -201,6 +370,13 @@
 950 = {
 	name="Zhang" #Zhang Qi
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 951 = {
 	name="Ying" #Ying Shao
@@ -209,10 +385,24 @@
 952 = {
 	name="Zhang" #Zhang Yan, Fan, Cheng, Zhao, Ling, Jian
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 953 = {
 	name="Yang" #Yang Jin, Ru, Xu, Dao
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 11 0 0 0 			}
+		religion="confucian"
+	}
 }
 954 = {
 	name="Di" #Di Du
@@ -233,6 +423,13 @@
 958 = {
 	name="Zhang" #Zhang Huan, Zhi, Chang, Meng
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 959 = {
 	name="Xing" #Xing Ji
@@ -261,6 +458,13 @@
 965 = {
 	name="Chen" #Chen Tiao
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 10 0 0 0 			}
+		religion="confucian"
+	}
 }
 966 = {
 	name="Zou" #Zou Dan
@@ -281,10 +485,24 @@
 970 = {
 	name="Yang" #Yang Mao, Fu, Xuan
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 11 0 0 0 			}
+		religion="confucian"
+	}
 }
 971 = {
 	name="Yang" #Yang Bao, Zhen, Mu, Tong, Qi, Liang
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 11 0 0 0 			}
+		religion="confucian"
+	}
 }
 972 = {
 	name="Lu" #Lu Nushang
@@ -293,22 +511,57 @@
 973 = {
 	name="Wu" #Wu Qiong
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 12 0 0 0 			}
+		religion="confucian"
+	}
 }
 974 = {
 	name="Li" #Li Shou
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="confucian"
+	}
 }
 975 = {
 	name="Zhang" #Zhang Zi
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 976 = {
 	name="Xu" #Xu Yi
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 12 0 0 0 			}
+		religion="confucian"
+	}
 }
 977 = {
 	name="Wang" #Wang Hong
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 2 0 0 0 			}
+		religion="confucian"
+	}
 }
 978 = {
 	name="Cheng" #Cheng Yu
@@ -317,10 +570,24 @@
 979 = {
 	name="Wang" #Wang Du
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 2 0 0 0 			}
+		religion="confucian"
+	}
 }
 980 = {
 	name="Wang" #Wang Min
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 2 0 0 0 			}
+		religion="confucian"
+	}
 }
 981 = {
 	name="Chang" #Chang Xi
@@ -329,10 +596,24 @@
 982 = {
 	name="Sun" #Sun Guan, Kang
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 3 0 0 0 			}
+		religion="confucian"
+	}
 }
 983 = {
 	name="Wu" #Wu Dun
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 12 0 0 0 			}
+		religion="confucian"
+	}
 }
 984 = {
 	name="Yin" #Yin Li
@@ -341,6 +622,13 @@
 985 = {
 	name="Zhang" #Zhang Yang
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 986 = {
 	name="Zhao" #Zhao Weisun
@@ -357,6 +645,13 @@
 989 = {
 	name="Zhang" #Zhang Ji Bandit in Anping
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 990 = {
 	name="Dong" #Dong Zhao, Fang
@@ -365,6 +660,13 @@
 991 = {
 	name="Sun" #Sun Kang
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 3 0 0 0 			}
+		religion="confucian"
+	}
 }
 992 = {
 	name="Xiong" #Xiong Bai
@@ -381,6 +683,13 @@
 995 = {
 	name="Sun" #Sun Song
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 3 0 0 0 			}
+		religion="confucian"
+	}
 }
 996 = {
 	name="Yi" #Yi Pou
@@ -397,4 +706,11 @@
 999 = {
 	name="Chen" #Chen Wen
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 10 0 0 0 			}
+		religion="confucian"
+	}
 }

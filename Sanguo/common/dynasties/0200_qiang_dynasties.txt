@@ -59,11 +59,11 @@
 	culture = qiang
 }
 215 = {
-	name="Dangxiang"
+	name="Binan"
 	culture = qiang
 }
 216 = {
-	name="Binan"
+	name="Dangdian"
 	culture = qiang
 }
 217 = {
@@ -71,34 +71,42 @@
 	culture = qiang
 }
 218 = {
-	name="Jiaogong"
+	name="Dangxiang"
 	culture = qiang
 }
 219 = {
-	name="Lejie"
+	name="Dazangyi"
 	culture = qiang
 }
 220 = {
-	name="Yan"
-	culture = qiang
-}
-221 = {
-	name="Zhong"
-	culture = qiang
-}
-222 = {
 	name="Dianna"
 	culture = qiang
 }
+221 = {
+	name="Jiaogong"
+	culture = qiang
+}
+222 = {
+	name="Lejie"
+	culture = qiang
+}
 223 = {
-	name="Shaohe"
+	name="Qibi"
 	culture = qiang
 }
 224 = {
-	name="Shendi"
+	name="Shaohe"
 	culture = qiang
 }
 225 = {
-	name="Qibi"
+	name="Shendi"
+	culture = qiang
+}
+226 = {
+	name="Yan"
+	culture = qiang
+}
+227 = {
+	name="Zhong"
 	culture = qiang
 }

@@ -1,4 +1,12 @@
-EVTDESC_FIN.1;Barbarians from the north are swarming south! They're jealousy of our wealth and majesty shall bring chaos to the land.;;;;;;;;;;;;;x;
-EVTTITLE_FIN.1;Rising in the North;;;;;;;;;;;;;x;
-EVTDESC_FIN.2;The northern threat is over. We may finally be able to rebuild and reform.;;;;;;;;;;;;;x;
+EVTDESC_FIN.1;Barbarians from the north are swarming south! Their jealousy of our wealth and majesty shall bring chaos to the land.;;;;;;;;;;;;;x;
+EVTTITLE_FIN.1;Uprising of the Five Barbarians;;;;;;;;;;;;;x;
+EVTDESC_FIN.2;Although the northern threat is far from over, they seemed to have settled for the lands they've acquired for now. We may finally be able to rebuild and reform.;;;;;;;;;;;;;x;
 EVTTITLE_FIN.2;Peace in the North;;;;;;;;;;;;;x;
+EVTDESC_FIN.5;Barbarians from the south are expanding north! Their greed, ambition, and violence are a threat to all. They must be stopped!;;;;;;;;;;;;;x;
+EVTTITLE_FIN.5;Southern Incursion;;;;;;;;;;;;;x;
+EVTDESC_FIN.6;Although the southern threat has been eliminated, we must remain vigilant, lest other barbarians repeat such insolence.;;;;;;;;;;;;;x;
+EVTTITLE_FIN.6;Peace in the South;;;;;;;;;;;;;x;
+EVTDESC_FIN.8;Barbarians from the east are expanding west! Their ambition and cruelty are a threat to all. We must put them in their place!;;;;;;;;;;;;;x;
+EVTTITLE_FIN.8;Eastern Disturbance;;;;;;;;;;;;;x;
+EVTDESC_FIN.9;Although the eastern threat has been subdued, we must continue to secure our borders against any and all future foes.;;;;;;;;;;;;;x;
+EVTTITLE_FIN.9;Peace in the East;;;;;;;;;;;;;x;

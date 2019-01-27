@@ -448,6 +448,7 @@ character_event = {
 	desc = EVTDESC69005
 	picture = GFX_evt_brothel
 	
+	only_rulers = yes
 	only_men = yes
 	min_age = 16
 	capable_only = yes
@@ -499,6 +500,7 @@ character_event = {
 	desc = EVTDESC69006
 	picture = GFX_evt_whispers
 	
+	only_rulers = yes
 	only_men = yes
 	min_age = 16
 	capable_only = yes
@@ -544,6 +546,7 @@ character_event = {
 	desc = EVTDESC69007
 	picture = GFX_evt_whispers
 	
+	only_rulers = yes
 	only_men = yes
 	min_age = 16
 	capable_only = yes
@@ -3121,6 +3124,7 @@ character_event = {
 	trigger = {
 		intrigue = 10
 		job_marshal = {
+			is_alive = yes
 			NOT = {
 				martial = 12
 			}
@@ -3682,6 +3686,7 @@ character_event = {
 			factor = 50
 		}
 		event_target:69060_target_courtier = {
+			set_character_flag = flag_unfilial
 			character_event = {
 				id = 69090
 				days = 3
@@ -4519,10 +4524,10 @@ character_event = {
 	
 	capable_only = yes
 	prisoner = no
+	has_character_flag = flag_suspected_coward
 	
 	trigger = {
 		has_character_modifier = suspected_coward
-		has_character_flag = flag_suspected_coward
 		NOT = {
 			trait = craven
 		}

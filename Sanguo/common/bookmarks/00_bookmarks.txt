@@ -1,213 +1,245 @@
 bm_yellow =
 {
-	name = "BM_YELLOW"
-	desc = "BM_YELLOW_DESC"
-	date = 184.2.1
+	name="BM_YELLOW"
+	desc="BM_YELLOW_DESC"
+	date=184.2.1
 	
-	era = yes						## Will be shown on Era screen.
-	picture = GFX_pick_era_image_1
-	custom_start = yes				## Choosing "Custom Start" will open this bookmark
+	era=yes						## Will be shown on Era screen.
+	picture=GFX_pick_era_image_1
+	custom_start=yes				## Choosing "Custom Start" will open this bookmark
 	
-	selectable_character = {
-		id = 200 # Zhang Jiao
-		age = 44
-		name = ERA_CHAR_NAME_200
-		title = k_yellow
-		title_name = YELLOW_TURBAN
+	selectable_character={
+		id=200 # Zhang Jiao
+		age=44
+		name=ERA_CHAR_NAME_200
+		title=k_yellow
+		title_name=YELLOW_TURBAN
 		
-		character = {
-			dna = fzgqrculerw
-			properties = ag00i0000000
+		character={
+			dna=fzgqrculerw
+			prp=ae0nbd000000000000
 			religion="taiping"
 			culture="han"
-			government = feudal_government
+			government=feudal_government
 			dynasty=148
 		}
 	}
-	selectable_character = {
-		id = 100 # He Jin
-		age = 49
-		name = ERA_CHAR_NAME_100
-		title = e_china
-		title_name = PRIME_MINISTER
+	selectable_character={
+		id=100 # He Jin
+		age=49
+		name=ERA_CHAR_NAME_100
+		title=e_china
+		title_name=PRIME_MINISTER
 		
-		character = {
-			dna = fzgqrculerw
-			properties = aj00bc00000
+		character={
+			dna=fzgqrculerw
+			prp=aj00bc000000000000
 			religion="confucian"
 			culture="han"
-			government = muslim_government
+			government=muslim_government
 			dynasty=33
 		}
 	}
-	selectable_character = {
-		id = 105 # Huangfu Song
-		age = 32
-		name = ERA_CHAR_NAME_105
-		title = d_beidi
-		title_name = d_beidi
+	selectable_character={
+		id=105 # Huangfu Song
+		age=32
+		name=ERA_CHAR_NAME_105
+		title=d_beidi
+		title_name=d_beidi
 		
-		character = {
-			dna = jodqbjysuag
-			properties = cb0edd000000
+		character={
+			dna=jodqbjysuag
+			prp=cb0edd000000
 			religion="confucian"
 			culture="han"
-			government = muslim_government
+			government=muslim_government
 			dynasty=108
 		}
 	}
-	selectable_character = {
-		id = 106 # Zhu Jun
-		age = 34
-		name = ERA_CHAR_NAME_106
-		title = d_henei
-		title_name = d_henei
+	selectable_character={
+		id=106 # Zhu Jun
+		age=34
+		name=ERA_CHAR_NAME_106
+		title=d_henei
+		title_name=d_henei
 		
-		character = {
-			dna = cistltfsadf
-			properties = ci0edd000000
+		character={
+			dna=cistltfsadf
+			prp=ci0edd000000
 			religion="confucian"
 			culture="han"
-			government = muslim_government
+			government=muslim_government
 			dynasty=23
 		}
 	}
-	selectable_character = {
-		id = 300 # Dong Zhuo
-		age = 46
-		name = ERA_CHAR_NAME_300
-		title = d_hedong
-		title_name = d_hedong
+	selectable_character={
+		id=300 # Dong Zhuo
+		age=46
+		name=ERA_CHAR_NAME_300
+		title=d_hedong
+		title_name=d_hedong
 		
-		character = {
-			dna = qrpaxrjipsl
-			properties = cehhcf000000
+		character={
+			dna=qrpaxrjipsl
+			prp=cehhcf000000
 			religion="confucian"
 			culture="han"
-			government = muslim_government
+			government=muslim_government
 			dynasty=155
 		}
 	}
-	selectable_character = {
-		id = 500 # Sun Jian
-		age = 29
-		name = ERA_CHAR_NAME_500
-		title = d_sun
-		title_name = d_sun
+	selectable_character={
+		id=500 # Sun Jian
+		age=29
+		name=ERA_CHAR_NAME_500
+		title=d_sun
+		title_name=d_sun
 		
-		character = {
-			dna = cfccceoabbc
-			properties = fe0ced000000
+		character={
+			dna=cfccceoabbc
+			prp=fe0ced000000
 			religion="confucian"
 			culture="han"
-			government = muslim_government
+			government=muslim_government
 			dynasty=4
+		}
+	}
+	selectable_character={
+		id=400 # Cao Cao
+		age=29
+		name=ERA_CHAR_NAME_400
+		title=d_cao
+		title_name=d_cao
+		
+		character={
+			dna=medjejoencc
+			prp=ce0jej000000
+			religion="confucian"
+			culture="han"
+			government=muslim_government
+			dynasty=5
+		}
+	}
+	selectable_character={
+		id=600 # Liu Bei
+		age=29
+		name=ERA_CHAR_NAME_600
+		title=d_liu
+		title_name=d_liu
+		
+		character={
+			dna=medjejoencc
+			prp=ce0jej000000
+			religion="confucian"
+			culture="han"
+			government=muslim_government
+			dynasty=5
 		}
 	}
 }
 
 bm_dong =
 {
-	name = "BM_DONG"
-	desc = "BM_DONG_DESC"
-	date = 190.2.1
+	name="BM_DONG"
+	desc="BM_DONG_DESC"
+	date=190.2.1
 	
-	era = yes						## Will be shown on Era screen.
-	picture = GFX_pick_era_image_2
+	era=yes						## Will be shown on Era screen.
+	picture=GFX_pick_era_image_2
 	
-	selectable_character = {
-		id = 300 # Dong Zhuo
-		age = 52
-		name = ERA_CHAR_NAME_300
-		title = e_china
-		title_name = PRIME_MINISTER
+	selectable_character={
+		id=300 # Dong Zhuo
+		age=52
+		name=ERA_CHAR_NAME_300
+		title=e_china
+		title_name=PRIME_MINISTER
 		
-		character = {
-			dna = qrpaxrjipsl
-			properties = cehhcf000000
+		character={
+			dna=qrpaxrjipsl
+			prp=cehhcf000000
 			religion="confucian"
 			culture="han"
-			government = muslim_government
+			government=muslim_government
 			dynasty=155
 		}
 	}
-	selectable_character = {
-		id = 400 # Cao Cao
-		age = 35
-		name = ERA_CHAR_NAME_400
-		title = d_cao
-		title_name = d_cao
+	selectable_character={
+		id=400 # Cao Cao
+		age=35
+		name=ERA_CHAR_NAME_400
+		title=d_cao
+		title_name=d_cao
 		
-		character = {
-			dna = medjejoencc
-			properties = ce0jej000000
+		character={
+			dna=medjejoencc
+			prp=ce0jej000000
 			religion="confucian"
 			culture="han"
-			government = muslim_government
+			government=muslim_government
 			dynasty=5
 		}
 	}
-	selectable_character = {
-		id = 600 # Liu Bei
-		age = 29
-		name = ERA_CHAR_NAME_600
-		title = d_liu
-		title_name = d_liu
+	selectable_character={
+		id=600 # Liu Bei
+		age=29
+		name=ERA_CHAR_NAME_600
+		title=d_liu
+		title_name=d_liu
 		
-		character = {
-			dna = dddcddmebbd
-			properties = ce0eek000000
+		character={
+			dna=dddcddmebbd
+			prp=ce0eek000000
 			religion="confucian"
 			culture="han"
-			government = muslim_government
+			government=muslim_government
 			dynasty=2
 		}
 	}
-	selectable_character = {
-		id = 500 # Sun Jian
-		age = 35
-		name = ERA_CHAR_NAME_500
-		title = d_sun
-		title_name = d_sun
+	selectable_character={
+		id=500 # Sun Jian
+		age=35
+		name=ERA_CHAR_NAME_500
+		title=d_sun
+		title_name=d_sun
 		
-		character = {
-			dna = cfccceoabbc
-			properties = fe0ced000000
+		character={
+			dna=cfccceoabbc
+			prp=fe0ced000000
 			religion="confucian"
 			culture="han"
-			government = muslim_government
+			government=muslim_government
 			dynasty=4
 		}
 	}
-	selectable_character = {
-		id = 700 # Yuan Shao
-		age = 48
-		name = ERA_CHAR_NAME_700
-		title = d_bohai
-		title_name = d_bohai
+	selectable_character={
+		id=700 # Yuan Shao
+		age=48
+		name=ERA_CHAR_NAME_700
+		title=d_bohai
+		title_name=d_bohai
 		
-		character = {
-			dna = ivtpchczicw
-			properties = cdiecd000000
+		character={
+			dna=ivtpchczicw
+			prp=cdiecd000000
 			religion="confucian"
 			culture="han"
-			government = muslim_government
+			government=muslim_government
 			dynasty=29
 		}
 	}
-	selectable_character = {
-		id = 705 # Yuan Shu
-		age = 35
-		name = ERA_CHAR_NAME_705
-		title = k_yuan
-		title_name = k_yuan
+	selectable_character={
+		id=705 # Yuan Shu
+		age=35
+		name=ERA_CHAR_NAME_705
+		title=k_yuan
+		title_name=k_yuan
 		
-		character = {
-			dna = uftpchuqmaz
-			properties = cl0cak000000
+		character={
+			dna=uftpchuqmaz
+			prp=cl0cak000000
 			religion="confucian"
 			culture="han"
-			government = muslim_government
+			government=muslim_government
 			dynasty=29
 		}
 	}
@@ -215,106 +247,106 @@ bm_dong =
 
 bm_warlord =
 {
-	name = "BM_WARLORD"
-	desc = "BM_WARLORD_DESC"
-	date = 194.4.1
+	name="BM_WARLORD"
+	desc="BM_WARLORD_DESC"
+	date=194.4.1
 	
-	era = yes						## Will be shown on Era screen.
-	picture = GFX_pick_era_image_3
+	era=yes						## Will be shown on Era screen.
+	picture=GFX_pick_era_image_3
 	
-	selectable_character = {
-		id = 400 # Cao Cao
-		age = 39
-		name = ERA_CHAR_NAME_400
-		title = k_cao
-		title_name = k_cao
+	selectable_character={
+		id=400 # Cao Cao
+		age=39
+		name=ERA_CHAR_NAME_400
+		title=k_cao
+		title_name=k_cao
 		
-		character = {
-			dna = medjejoencc
-			properties = ce0jej000000
+		character={
+			dna=medjejoencc
+			prp=ce0jej000000
 			religion="confucian"
 			culture="han"
-			government = muslim_government
+			government=muslim_government
 			dynasty=5
 		}
 	}
-	selectable_character = {
-		id = 600 # Liu Bei
-		age = 33
-		name = ERA_CHAR_NAME_600
-		title = k_xu
-		title_name = k_xu
+	selectable_character={
+		id=600 # Liu Bei
+		age=33
+		name=ERA_CHAR_NAME_600
+		title=k_xu
+		title_name=k_xu
 		
-		character = {
-			dna = dddcddmebbd
-			properties = ce0eek000000
+		character={
+			dna=dddcddmebbd
+			prp=ce0eek000000
 			religion="confucian"
 			culture="han"
-			government = muslim_government
+			government=muslim_government
 			dynasty=2
 		}
 	}
-	selectable_character = {
-		id = 309 # Lv Bu
-		age = 34
-		name = ERA_CHAR_NAME_309
-		title = k_yan
-		title_name = k_yan
+	selectable_character={
+		id=309 # Lv Bu
+		age=34
+		name=ERA_CHAR_NAME_309
+		title=k_yan
+		title_name=k_yan
 		
-		character = {
-			dna = hbmchqhtqdr
-			properties = cllghk000000
+		character={
+			dna=hbmchqhtqdr
+			prp=cllghk000000
 			religion="confucian"
 			culture="han"
-			government = muslim_government
+			government=muslim_government
 			dynasty=9
 		}
 	}
-	selectable_character = {
-		id = 700 # Yuan Shao
-		age = 52
-		name = ERA_CHAR_NAME_700
-		title = e_yuan
-		title_name = e_yuan
+	selectable_character={
+		id=700 # Yuan Shao
+		age=52
+		name=ERA_CHAR_NAME_700
+		title=e_yuan
+		title_name=e_yuan
 		
-		character = {
-			dna = ivtpchczicw
-			properties = cdiecd000000
+		character={
+			dna=ivtpchczicw
+			prp=cdiecd000000
 			religion="confucian"
 			culture="han"
-			government = muslim_government
+			government=muslim_government
 			dynasty=29
 		}
 	}
-	selectable_character = {
-		id = 705 # Yuan Shu
-		age = 39
-		name = ERA_CHAR_NAME_705
-		title = k_yuan
-		title_name = k_yuan
+	selectable_character={
+		id=705 # Yuan Shu
+		age=39
+		name=ERA_CHAR_NAME_705
+		title=k_yuan
+		title_name=k_yuan
 		
-		character = {
-			dna = uftpchuqmaz
-			properties = cl0cak000000
+		character={
+			dna=uftpchuqmaz
+			prp=cl0cak000000
 			religion="confucian"
 			culture="han"
-			government = muslim_government
+			government=muslim_government
 			dynasty=29
 		}
 	}
-	selectable_character = {
-		id = 900 # Gongsun Zan
-		age = 34
-		name = ERA_CHAR_NAME_900
-		title = e_gongsun
-		title_name = e_gongsun
+	selectable_character={
+		id=900 # Gongsun Zan
+		age=34
+		name=ERA_CHAR_NAME_900
+		title=e_gongsun
+		title_name=e_gongsun
 		
-		character = {
-			dna = hyqfjiwbkse
-			properties = ceyeck000000
+		character={
+			dna=hyqfjiwbkse
+			prp=ceyeck000000
 			religion="confucian"
 			culture="han"
-			government = muslim_government
+			government=muslim_government
 			dynasty=26
 		}
 	}
@@ -322,58 +354,58 @@ bm_warlord =
 
 bm_red =
 {
-	name = "BM_RED"
-	desc = "BM_RED_DESC"
-	date = 208.10.1
+	name="BM_RED"
+	desc="BM_RED_DESC"
+	date=208.10.1
 	
-	era = yes						## Will be shown on Era screen.
-	picture = GFX_pick_era_image_4
+	era=yes						## Will be shown on Era screen.
+	picture=GFX_pick_era_image_4
 	
-	selectable_character = {
-		id = 400 # Cao Cao
-		age = 53
-		name = ERA_CHAR_NAME_400
-		title = e_china
-		title_name = PRIME_MINISTER
+	selectable_character={
+		id=400 # Cao Cao
+		age=53
+		name=ERA_CHAR_NAME_400
+		title=e_china
+		title_name=PRIME_MINISTER
 		
-		character = {
-			dna = medjejoencc
-			properties = ce0jej000000
+		character={
+			dna=medjejoencc
+			prp=ce0jej000000
 			religion="confucian"
 			culture="han"
-			government = muslim_government
+			government=muslim_government
 			dynasty=5
 		}
 	}
-	selectable_character = {
-		id = 600 # Liu Bei
-		age = 47
-		name = ERA_CHAR_NAME_600
-		title = d_liu
-		title_name = d_liu
+	selectable_character={
+		id=600 # Liu Bei
+		age=47
+		name=ERA_CHAR_NAME_600
+		title=d_liu
+		title_name=d_liu
 		
-		character = {
-			dna = dddcddmebbd
-			properties = ce0eek000000
+		character={
+			dna=dddcddmebbd
+			prp=ce0eek000000
 			religion="confucian"
 			culture="han"
-			government = muslim_government
+			government=muslim_government
 			dynasty=2
 		}
 	}
-	selectable_character = {
-		id = 509 # Sun Quan
-		age = 26
-		name = ERA_CHAR_NAME_509
-		title = k_sun
-		title_name = k_sun
+	selectable_character={
+		id=509 # Sun Quan
+		age=26
+		name=ERA_CHAR_NAME_509
+		title=k_sun
+		title_name=k_sun
 		
-		character = {
-			dna = cfcifeoxjkc
-			properties = ccaghk000000
+		character={
+			dna=cfcifeoxjkc
+			prp=ccaghk000000
 			religion="confucian"
 			culture="han"
-			government = muslim_government
+			government=muslim_government
 			dynasty=4
 		}
 	}
@@ -381,58 +413,58 @@ bm_red =
 
 bm_three =
 {
-	name = "BM_THREE"
-	desc = "BM_THREE_DESC"
-	date = 220.12.10
+	name="BM_THREE"
+	desc="BM_THREE_DESC"
+	date=220.12.10
 	
-	era = yes						## Will be shown on Era screen.
-	picture = GFX_pick_era_image_5
+	era=yes						## Will be shown on Era screen.
+	picture=GFX_pick_era_image_5
 	
-	selectable_character = {
-		id = 10400 # Cao Pi
-		age = 33
-		name = ERA_CHAR_NAME_10400
-		title = e_wei
-		title_name = e_wei
+	selectable_character={
+		id=10400 # Cao Pi
+		age=33
+		name=ERA_CHAR_NAME_10400
+		title=e_wei
+		title_name=e_wei
 		
-		character = {
-			dna = eedsehuwfuc
-			properties = ac00e0000000
+		character={
+			dna=eedsehuwfuc
+			prp=ac00e0000000
 			religion="confucian"
 			culture="han"
-			government = muslim_government
+			government=muslim_government
 			dynasty=5
 		}
 	}
-	selectable_character = {
-		id = 600 # Liu Bei
-		age = 59
-		name = ERA_CHAR_NAME_600
-		title = e_liu
-		title_name = e_liu
+	selectable_character={
+		id=600 # Liu Bei
+		age=59
+		name=ERA_CHAR_NAME_600
+		title=e_liu
+		title_name=e_liu
 		
-		character = {
-			dna = dddcddmebbd
-			properties = ae00e0000000
+		character={
+			dna=dddcddmebbd
+			prp=ae00e0000000
 			religion="confucian"
 			culture="han"
-			government = muslim_government
+			government=muslim_government
 			dynasty=2
 		}
 	}
-	selectable_character = {
-		id = 509 # Sun Quan
-		age = 38
-		name = ERA_CHAR_NAME_509
-		title = e_sun
-		title_name = e_sun
+	selectable_character={
+		id=509 # Sun Quan
+		age=38
+		name=ERA_CHAR_NAME_509
+		title=e_sun
+		title_name=e_sun
 		
-		character = {
-			dna = cfcifeoxjkc
-			properties = ccaghk000000
+		character={
+			dna=cfcifeoxjkc
+			prp=ccaghk000000
 			religion="confucian"
 			culture="han"
-			government = muslim_government
+			government=muslim_government
 			dynasty=4
 		}
 	}

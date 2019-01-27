@@ -27,6 +27,9 @@
 	liege=d_guiyang
 	holder=156 #Zhao Fan
 }
-209.3.1={
-	holder=603 #Zhao Yun
+194.1.1={
+	holder=4452 #Xiong Zhi
+}
+215.1.1={
+	holder=4105 #Random
 }

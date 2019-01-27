@@ -40,7 +40,7 @@
 217.6.1={
 	holder=570 #Lu Meng
 }
-220.1.1={
+220.2.1={
 	holder=577 #Puyang Yi
 }
 #Wei Jing under Wu - Dismissed in 231

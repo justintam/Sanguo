@@ -32,7 +32,7 @@
 	holder=153 #Jiao He
 }
 190.1.1={
-	holder=3472 #Zang Hong
+	holder=3742 #Zang Hong
 }
 192.1.1={
 	holder=910 #Tian Kai
@@ -45,6 +45,7 @@
 }
 196.1.1={
 	liege=k_qing
+	holder=4120 #Random
 }
 200.1.1={
 	liege=k_yan
@@ -55,5 +56,5 @@
 	holder=754 #Guan Tong
 }
 205.2.1={
-	holder=4120 #Random
+	holder=1395 #Zhang Fucheng
 }

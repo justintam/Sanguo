@@ -714,6 +714,10 @@ excommunicated = {
 
 	religious = yes
 	customizer = no
+
+	potential = {
+		NOT = { controls_religion = yes }
+	}
 	
 	male_insult = INSULT_RENEGADE
 	female_insult = INSULT_RENEGADE
@@ -723,10 +727,17 @@ excommunicated = {
 	child_insult_adj = INSULT_EVIL
 }
 kinslayer = {
+	opposites = {
+		familial_kinslayer
+		dynastic_kinslayer
+	}
 
-	diplomacy = -3
+	diplomacy = -5
 	
-	dynasty_opinion = -15
+	dynasty_opinion = -25
+	general_opinion = -10
+	
+	random = no
 	
 	male_insult = INSULT_KINSLAYER
 	female_insult = INSULT_KINSLAYER
@@ -1076,11 +1087,11 @@ celibate = {
 	
 	ai_zeal = 30
 	
-	male_compliment = COMPL_VIRTUOUS
-	female_compliment = COMPL_VIRTUOUS
+	male_compliment_adj = COMPL_VIRTUOUS
+	female_compliment_adj = COMPL_VIRTUOUS
 	child_compliment_adj = COMPL_NICE
-	male_insult = INSULT_UNMANLY
-	female_insult = INSULT_FRIGID
+	male_insult_adj = INSULT_UNMANLY
+	female_insult_adj = INSULT_FRIGID
 	child_insult_adj = INSULT_STUPID
 }
 
@@ -1724,6 +1735,7 @@ arbitrary = {
 	
 	stewardship = -2
 	learning = -1
+	intrigue = 1
 	
 	vassal_opinion = -5
 	

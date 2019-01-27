@@ -6,6 +6,12 @@
 1.1.1={
 	liege=d_youfufeng
 }
+120.1.1={
+	holder=4473 #Wang Tang
+}
+130.1.1={
+	holder=0 #None
+}
 155.1.1={
 	holder=1287 #Yang Bing
 }

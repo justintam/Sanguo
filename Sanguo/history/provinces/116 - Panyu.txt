@@ -13,5 +13,6 @@ b_panyu = castle
 # Misc
 culture = nanyue
 religion = animist
+terrain = hills
 
 #History

@@ -31,11 +31,5 @@
 	holder=69 #Liu Chong
 }
 197.1.1={
-	holder=705 #Yuan Shu
-}
-197.6.1={
-	holder=1352 #De Min
-}
-220.1.1={
-	holder=1353 #De Laohu
+	holder=1378 #Tan Quan
 }

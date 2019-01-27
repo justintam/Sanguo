@@ -112,6 +112,11 @@
 		death=yes
 	}
 }
+
+###
+# Lu Kang Clan
+###
+
 3307 = {
 	name="Hong"
 	dynasty=13
@@ -338,6 +343,9 @@
 	trait="just"
 	trait="shrewd"
 	trait="patient"
+	trait="master_of_flame"
+	trait="logistics_expert"
+	trait="back_seat_leader"
 	183.1.1={
 		birth=yes
 	}
@@ -371,7 +379,7 @@
 }
 3324 = {
 	name="Shang"
-	dynasty=13
+	dynasty=13 #Lu Shang
 	religion="confucian"
 	culture="han"
 	father=3320
@@ -847,6 +855,7 @@
 	dynasty=994
 	religion="confucian"
 	culture="han"
+	father=3639
 	trait="scholarly_theologian"
 	trait="temperate"
 	trait="scholar"

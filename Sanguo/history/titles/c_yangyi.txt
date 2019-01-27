@@ -6,14 +6,12 @@
 1.1.1={
 	liege=d_taiyuan
 }
-184.1.1={
-	liege=d_white #White Wave Bandits
-	holder=2600 #Guo Da
+180.1.1={
+	holder=3741 #Zang Min
 }
-189.1.1={
-	holder=2601 #Han Xian
+185.12.1={
+	holder=20442 #Pei Mao
 }
-197.1.1={
-	liege=d_taiyuan
-	holder=3570 #Random
+189.9.1={
+	holder=1340 #Shih Dongjie
 }

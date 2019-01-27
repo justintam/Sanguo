@@ -1,160 +1,176 @@
 
 song = {
 	name = "rotdarmy.ogg"
+	song_name = "The Army"
 	
 	chance = {
 		modifier = {
 			factor = 1
-		}		
+		}
 	}
 }
 
 song = {
 	name = "rotddust.ogg"
+	song_name = "Into the Dust"
 	
 	chance = {
 		modifier = {
 			factor = 1
-		}		
+		}
 	}
 }
 
 song = {
 	name = "crusaderkings2_maintitle.ogg"
+	song_name = "Phoenix Rising"
 	
 	chance = {
 		modifier = {
 			factor = 1
-		}		
+		}
 	}
 }
 
 song = {
 	name = "rotdshu.ogg"
+	song_name = "Shu Kingdom"
 	
 	chance = {
 		modifier = {
 			factor = 1
-		}		
+		}
 	}
 }
 
 song = {
 	name = "rotdthree.ogg"
+	song_name = "Three Kingdoms"
 	
 	chance = {
 		modifier = {
 			factor = 1
-		}		
+		}
 	}
 }
 
 song = {
 	name = "rotdzhao.ogg"
+	song_name = "Zhao Zhilong"
 	
 	chance = {
 		modifier = {
 			factor = 1
-		}		
+		}
 	}
 }
 
 song = {
 	name = "rotkixopen.ogg"
+	song_name = "Three Kingdoms Opening"
 	
 	chance = {
 		modifier = {
 			factor = 1
-		}		
+		}
 	}
 }
 
 song = {
 	name = "rotkixpromo.ogg"
+	song_name = "Three Kingdoms Promotion"
 	
 	chance = {
 		modifier = {
 			factor = 1
-		}		
+		}
 	}
 }
 
 song = {
 	name = "rotkxbegun.ogg"
+	song_name = "Three Kingdoms Beginnings"
 	
 	chance = {
 		modifier = {
 			factor = 1
-		}		
+		}
 	}
 }
 
 song = {
 	name = "rotkxend.ogg"
+	song_name = "Three Kingdoms Endings"
 	
 	chance = {
 		modifier = {
 			factor = 1
-		}		
+		}
 	}
 }
 
 song = {
 	name = "rotkxharvest.ogg"
+	song_name = "Three Kingdoms Harvest"
 	
 	chance = {
 		modifier = {
 			factor = 1
-		}		
+		}
 	}
 }
 
 song = {
 	name = "rotkxhistory.ogg"
+	song_name = "Three Kingdoms History"
 	
 	chance = {
 		modifier = {
 			factor = 1
-		}		
+		}
 	}
 }
 
 song = {
 	name = "rotkxhome.ogg"
+	song_name = "Three Kingdoms Home"
 	
 	chance = {
 		modifier = {
 			factor = 1
-		}		
+		}
 	}
 }
 
 song = {
 	name = "rotkxtrap.ogg"
+	song_name = "It's a Trap"
 	
 	chance = {
 		modifier = {
 			factor = 1
-		}		
+		}
 	}
 }
 
 song = {
 	name = "rotkxtravel.ogg"
+	song_name = "Three Kingdoms Travel"
 	
 	chance = {
 		modifier = {
 			factor = 1
-		}		
+		}
 	}
 }
 
 song = {
 	name = "rotkxwuyue.ogg"
+	song_name = "Three Kingdoms Barbarians"
 	
 	chance = {
 		modifier = {
 			factor = 1
-		}		
+		}
 	}
 }

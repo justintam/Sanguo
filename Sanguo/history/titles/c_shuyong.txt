@@ -7,8 +7,11 @@
 	liege=d_shuyong
 }
 184.1.1={
-	holder=1811 #Wutugu
+	holder=4196 #Random - TBD not this obv
 }
 214.1.1={
+	holder=650 #Huo Jun
+}
+217.8.1={
 	holder=4196 #Random
 }

@@ -1,505 +1,547 @@
-1 = {
+1={
 	name="Zhang" #Zhang Fei
-	culture = han
+	culture=han
 	used_for_random=no
 	coat_of_arms=
 	{
 		data=
 		{
-0 3 0 0 0 0 0 			}
+0 2 0 0 0 0 0 			}
 		religion="confucian"
 	}
 }
-2 = {
+2={
 	name="Liu" #Imperial family only
-	culture = han
+	culture=han
 	used_for_random=no
 	coat_of_arms=
 	{
 		data=
 		{
-0 3 0 1 0 0 0 			}
+0 2 0 1 0 0 0 			}
 		religion="confucian"
 	}
 }
-3 = {
+3={
 	name="Wang" #Wang Yun
-	culture = han
+	culture=han
 	used_for_random=no
 	coat_of_arms=
 	{
 		data=
 		{
-0 3 0 2 0 0 0 			}
+0 2 0 2 0 0 0 			}
 		religion="confucian"
 	}
 }
-4 = {
+4={
 	name="Sun" #Sun Jian
-	culture = han
+	culture=han
 	used_for_random=no
 	coat_of_arms=
 	{
 		data=
 		{
-0 3 0 3 0 0 0 			}
+0 2 0 3 0 0 0 			}
 		religion="confucian"
 	}
 }
-5 = {
+5={
 	name="Cao" #Cao Cao
-	culture = han
+	culture=han
 	used_for_random=no
 	coat_of_arms=
 	{
 		data=
 		{
-0 3 0 4 0 0 0 			}
+0 2 0 4 0 0 0 			}
 		religion="confucian"
 	}
 }
-6 = {
+6={
 	name="Chen" #Chen Gui
-	culture = han
+	culture=han
 	used_for_random=no
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 10 0 0 0 			}
+		religion="confucian"
+	}
 }
-7 = {
+7={
 	name="Yang" #Yang Yong
-	culture = han
+	culture=han
 	used_for_random=no
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 11 0 0 0 			}
+		religion="confucian"
+	}
 }
-8 = {
+8={
 	name="Li" #Li Ying
-	culture = han
+	culture=han
 	used_for_random=no
 	coat_of_arms=
 	{
 		data=
 		{
-0 3 0 5 0 0 0 			}
+0 2 0 5 0 0 0 			}
 		religion="confucian"
 	}
 }
-9 = {
+9={
 	name="Lü" #Lü Bu
-	culture = han
+	culture=han
 	used_for_random=no
 	coat_of_arms=
 	{
 		data=
 		{
-0 3 0 6 0 0 0 			}
+0 2 0 6 0 0 0 			}
 		religion="confucian"
 	}
 }
-10 = {
+10={
 	name="Ma" #Ma Teng Family
-	culture = han
+	culture=han
 	used_for_random=no
 	coat_of_arms=
 	{
 		data=
 		{
-0 3 0 7 0 0 0 			}
+0 2 0 7 0 0 0 			}
 		religion="confucian"
 	}
 }
-11 = {
+11={
 	name="Wu" #Wu Ding
-	culture = han
-	used_for_random=no
-}
-12 = {
-	name="Xu" #Xu Huang
-	culture = han
-	used_for_random=no
-}
-13 = {
-	name="Lu" #Lu Kang
-	culture = han
-	used_for_random=no
-}
-14 = {
-	name="Guan" #Guan Yu
-	culture = han
+	culture=han
 	used_for_random=no
 	coat_of_arms=
 	{
 		data=
 		{
-0 3 0 8 0 0 0 			}
+0 2 0 12 0 0 0 			}
 		religion="confucian"
 	}
 }
-15 = {
+12={
+	name="Xu" #Xu Huang
+	culture=han
+	used_for_random=no
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 13 0 0 0 			}
+		religion="confucian"
+	}
+}
+13={
+	name="Lu" #Lu Kang
+	culture=han
+	used_for_random=no
+}
+14={
+	name="Guan" #Guan Yu
+	culture=han
+	used_for_random=no
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 8 0 0 0 			}
+		religion="confucian"
+	}
+}
+15={
 	name="Xiahou" #Xiahou Clan
-	culture = han
+	culture=han
 	used_for_random=no
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 9 0 0 0 			}
+		religion="confucian"
+	}
 }
-16 = {
+16={
 	name="Yan"
-	culture = han
+	culture=han
 	used_for_random=no
 }
-17 = {
+17={
 	name="Dong" #Imperial Dong
-	culture = han
+	culture=han
 	used_for_random=no
 }
-18 = {
+18={
 	name="Han"
-	culture = han
+	culture=han
 	used_for_random=no
 }
-19 = {
+19={
 	name="Guo" #Guo Xun
-	culture = han
+	culture=han
 	used_for_random=no
 }
-20 = {
+20={
 	name="Huang" #Huang She
-	culture = han
+	culture=han
 	used_for_random=no
 }
-21 = {
+21={
 	name="Jiang" #Jiang Gong
-	culture = han
+	culture=han
 	used_for_random=no
 }
-22 = {
+22={
 	name="Sima" #Sima Yi
-	culture = han
+	culture=han
 	used_for_random=no
 }
-23 = {
+23={
 	name="Zhu" #Zhu Jun
-	culture = han
+	culture=han
 	used_for_random=no
 }
-24 = {
+24={
 	name="Zhuge" #Zhuge Liang
-	culture = han
+	culture=han
 	used_for_random=no
 }
-25 = {
+25={
 	name="Cheng" #Cheng Pu
-	culture = han
+	culture=han
 	used_for_random=no
 }
-26 = {
+26={
 	name="Gongsun" #Gongsun Zan
-	culture = han
+	culture=han
 	used_for_random=no
 }
-27 = {
+27={
 	name="Hu" #Hu Cai
-	culture = han
+	culture=han
 	used_for_random=no
 }
-28 = {
+28={
 	name="Shi"
-	culture = han
+	culture=han
 	used_for_random=no
 }
-29 = {
+29={
 	name="Yuan" #Yuan Shao
-	culture = han
+	culture=han
 	used_for_random=no
 }
-30 = {
+30={
 	name="Zhou" #Zhou Yu
-	culture = han
+	culture=han
 	used_for_random=no
 }
-31 = {
+31={
 	name="Gao"
-	culture = han
+	culture=han
 	used_for_random=no
 }
-32 = {
+32={
 	name="Zhao" #Zhao Yun
-	culture = han
+	culture=han
 	used_for_random=no
 }
-33 = {
+33={
 	name="He" #He Jin Family
-	culture = han
+	culture=han
 	used_for_random=no
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 14 0 0 0 			}
+		religion="confucian"
+	}
 }
-34 = {
+34={
 	name="Liang"
-	culture = han
+	culture=han
 	used_for_random=no
 }
-35 = {
+35={
 	name="Quan"
-	culture = han
+	culture=han
 	used_for_random=no
 }
-36 = {
+36={
 	name="Wei"
-	culture = han
+	culture=han
 	used_for_random=no
 }
-37 = {
+37={
 	name="Wen"
-	culture = han
+	culture=han
 	used_for_random=no
 }
-38 = {
-	name="Deng"
-	culture = han
+38={
+	name="Deng" #Deng Zhi Imperial Family
+	culture=han
 	used_for_random=no
 }
-39 = {
+39={
 	name="Fu" #Fu Xie
-	culture = han
+	culture=han
 	used_for_random=no
 }
-40 = {
+40={
 	name="Jia" #Jia Cong
-	culture = han
+	culture=han
 	used_for_random=no
 }
-41 = {
+41={
 	name="Tian"
-	culture = han
+	culture=han
 	used_for_random=no
 }
-42 = {
+42={
 	name="Yu" #Yu Jin
-	culture = han
+	culture=han
 	used_for_random=no
 }
-43 = {
+43={
 	name="Cai" #Cai Mao Clan - HAN
-	culture = han
+	culture=han
 	used_for_random=no
 }
-44 = {
+44={
 	name="Bu" #Bu Zhi - WU
-	culture = han
+	culture=han
 	used_for_random=no
 }
-45 = {
+45={
 	name="Ding" #Ding Yuan
-	culture = han
+	culture=han
 	used_for_random=no
 }
-46 = {
+46={
 	name="Du"
-	culture = han
+	culture=han
 	used_for_random=no
 }
-47 = {
+47={
 	name="Fan" #Fan Min
-	culture = han
+	culture=han
 }
-48 = {
+48={
 	name="Meng"
-	culture = han
+	culture=han
 }
-49 = {
+49={
 	name="Pan"
-	culture = han
+	culture=han
 }
-50 = {
+50={
 	name="Pang" #Pang Xi
-	culture = han
+	culture=han
 }
-51 = {
+51={
 	name="Shen" #Shen Pei
-	culture = han
+	culture=han
 }
-52 = {
+52={
 	name="Fei"
-	culture = han
+	culture=han
 }
-53 = {
+53={
 	name="Feng"
-	culture = han
+	culture=han
 }
-54 = {
+54={
 	name="Hua" #Hua Tuo
-	culture = han
+	culture=han
 }
-55 = {
+55={
 	name="Qiao" #Qiao Mao
-	culture = han
+	culture=han
 }
-56 = {
+56={
 	name="Song" #Song Nie
-	culture = han
+	culture=han
 }
-57 = {
+57={
 	name="Tang" #Tang Mao
-	culture = han
+	culture=han
 }
-58 = {
+58={
 	name="Xin"
-	culture = han
+	culture=han
 }
-59 = {
+59={
 	name="Xun" #Xun You, Yu clan
-	culture = han
+	culture=han
 }
-60 = {
+60={
 	name="Yin" #Yin Kai
-	culture = han
+	culture=han
 }
-61 = {
+61={
 	name="Yue" #Yue Jin
-	culture = han
+	culture=han
 }
-62 = {
+62={
 	name="Zhong" #Zhong Yao
-	culture = han
+	culture=han
 }
-63 = {
+63={
 	name="Luo" #Luo Tong - WU
-	culture = han
+	culture=han
 }
-64 = {
+64={
 	name="Bao"
-	culture = han
+	culture=han
 }
-65 = {
+65={
 	name="Bian" #Lady Bian Shi
-	culture = han
+	culture=han
 }
-66 = {
+66={
 	name="Dian"
-	culture = han
+	culture=han
 }
-67 = {
+67={
 	name="Kong" #Kong Zhou
-	culture = han
+	culture=han
 }
-68 = {
+68={
 	name="Gu"
-	culture = han
+	culture=han
 }
-69 = {
+69={
 	name="Hao"
-	culture = han
+	culture=han
 }
-70 = {
+70={
 	name="Hou" #Hou Jie
-	culture = han
+	culture=han
 }
-71 = {
+71={
 	name="Huan"
-	culture = han
+	culture=han
 }
-72 = {
-	name="Huo"
-	culture = han
+72={
+	name="Huo" #Huo Jun
+	culture=han
 }
-73 = {
+73={
 	name="Jin"
-	culture = han
+	culture=han
 }
-74 = {
+74={
 	name="Ju"
-	culture = han
+	culture=han
 }
-75 = {
+75={
 	name="Kong" #Kong Rong
-	culture = han
+	culture=han
 }
-76 = {
+76={
 	name="Kuai" #Kuai Yue
-	culture = han
+	culture=han
 }
-77 = {
+77={
 	name="Lei"
-	culture = han
+	culture=han
 }
-78 = {
+78={
 	name="Liao" #Liao Hua
-	culture = han
+	culture=han
 }
-79 = {
+79={
 	name="Ling"
-	culture = han
+	culture=han
 }
-80 = {
+80={
 	name="Lou"
-	culture = han
+	culture=han
 }
-81 = {
+81={
 	name="Mi" #Mi Fang
-	culture = han
+	culture=han
 }
-82 = {
+82={
 	name="Niu" #Niu Fu
-	culture = han
+	culture=han
 }
-83 = {
+83={
 	name="Pei" #Pei Yuanshao
-	culture = han
+	culture=han
 }
-84 = {
+84={
 	name="Qin" #Qin Shao
-	culture = han
+	culture=han
 }
-85 = {
+85={
 	name="Qiu" #Qiu Shang
-	culture = han
+	culture=han
 }
-86 = {
+86={
 	name="Su" #Su Gu
-	culture = han
+	culture=han
 }
-87 = {
+87={
 	name="Sui"
-	culture = han
+	culture=han
 }
-88 = {
+88={
 	name="Taishi" #Taishi Ci
-	culture = han
+	culture=han
 }
-89 = {
+89={
 	name="Tao" #Tao Qian
-	culture = han
+	culture=han
 }
-90 = {
+90={
 	name="Teng"
-	culture = han
+	culture=han
 }
-91 = {
+91={
 	name="Que"
-	culture = han
+	culture=han
 }
-92 = {
-	name="Xiang"
-	culture = han
+92={
+	name="Xiang" #Xiang Lang
+	culture=han
 }
-93 = {
+93={
 	name="Xue"
-	culture = han
+	culture=han
 }
-94 = {
+94={
 	name="Zou" #Zou Jing
-	culture = han
+	culture=han
 }
-95 = {
+95={
 	name="Bei"
-	culture = han
+	culture=han
 }
-96 = {
+96={
 	name="Bo"
-	culture = han
+	culture=han
 }
-97 = {
+97={
 	name="Cen"
-	culture = han
+	culture=han
 }
-98 = {
+98={
 	name="Che" #Che Zhou - WEI
-	culture = han
+	culture=han
 }
-99 = {
+99={
 	name="Chunyu"
-	culture = han
+	culture=han
 }

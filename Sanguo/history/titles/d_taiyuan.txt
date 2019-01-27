@@ -13,26 +13,14 @@
 35.1.1={
 	holder=0 #Transferred
 }
-150.1.1={
-	holder=20441 #Pei Ye
+180.1.1={
+	holder=3741 #Zang Min
 }
-166.1.1={
-	holder=173 #Zhao Qi
+185.12.1={
+	holder=20442 #Pei Mao
 }
-169.1.1={
-	holder=0 #Proscriptions
-}
-184.1.1={
-	holder=115 #Ding Yuan
-}
-189.10.1={
-	holder=300 #Dong Zhuo
-}
-192.5.22={
-	holder=725 #Gao Gan
-}
-206.6.1={
-	holder=20450 #Liang Xi
+189.9.1={
+	holder=1340 #Shih Dongjie
 }
 213.6.1={
 	liege=k_ji

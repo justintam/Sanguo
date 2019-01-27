@@ -9,5 +9,6 @@
 	holder=2611 #Zhang Yan
 }
 206.1.1={
+	holder=0
 	active=no
 }

@@ -4,7 +4,7 @@ namespace = challenge
 character_event = {
 	id = challenge.1
 	desc = "EVTDESC_challenge.1"
-	picture = "GFX_duel"
+	picture = "GFX_evt_duel"
 	border = "GFX_event_normal_frame_war"
 	
 	is_triggered_only = yes
@@ -315,7 +315,7 @@ character_event = {
 character_event = {
 	id = challenge.2
 	desc = "EVTDESC_challenge.2"
-	picture = "GFX_duel"
+	picture = "GFX_evt_duel"
 	border = "GFX_event_normal_frame_war"
 	
 	is_triggered_only = yes
@@ -494,7 +494,7 @@ character_event = {
 					NOR = {
 						culture_group = mongol
 						culture_group = yue
-						culture_group = tibetan
+						culture_group = tibetan_group
 						culture_group = man
 					}
 				}
@@ -528,7 +528,7 @@ character_event = {
 			trait = fate_duel
 		}
 	}
-	picture = "GFX_duel"
+	picture = "GFX_evt_duel"
 	border = "GFX_event_normal_frame_war"
 	
 	is_triggered_only = yes
@@ -561,7 +561,7 @@ character_event = {
 character_event = {
 	id = challenge.4
 	desc = "EVTDESC_challenge.4"
-	picture = "GFX_duel"
+	picture = "GFX_evt_duel"
 	border = "GFX_event_normal_frame_war"
 	
 	is_triggered_only = yes
@@ -585,7 +585,7 @@ character_event = {
 character_event = {
 	id = challenge.5
 	desc = "EVTDESC_challenge.5"
-	picture = "GFX_duel"
+	picture = "GFX_evt_duel"
 	border = "GFX_event_normal_frame_war"
 	
 	is_triggered_only = yes

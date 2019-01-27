@@ -1,11 +1,16 @@
 # k_man
 1.1.1={
-	active = no
-	law = agnatic_succession
-	law = succ_gavelkind
+	active=no
+	law=agnatic_succession
+	law=succ_gavelkind
 }
+#215.4.1={
+#	active=yes
+#	liege=0 #Independent
+#	holder=1802 #Yong Kai
+#}
 222.1.1={
 	active=yes
 	liege=0 #Independent
-	holder=1801 #Meng Huo
+	holder=1802 #Meng Huo
 }

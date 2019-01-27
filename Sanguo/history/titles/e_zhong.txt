@@ -1,13 +1,14 @@
 # e_zhong
 1.1.1={
-	active = no
-	law = agnatic_succession
-	law = succ_primogeniture
+	active=no
+	law=agnatic_succession
+	law=succ_primogeniture
 }
 197.1.1={
-	active = yes
-	holder = 705 #Yuan Shu
+	active=yes
+	holder=705 #Yuan Shu
 }
 199.6.1={
-	active = no
+	holder=0
+	active=no
 }

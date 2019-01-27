@@ -7,6 +7,15 @@
 	liege=k_yi
 	vice_royalty = yes
 }
+85.1.1={
+	holder=4487 #Du An
+}
+116.1.1={
+	holder=4473 #Wang Tang
+}
+120.1.1={
+	holder=0 #None
+}
 160.1.1={
 	holder=4407 #Zhao Wen
 }
@@ -22,21 +31,24 @@
 190.1.1={
 	holder=163 #Fan Min
 }
-#Zhang Na
-198.1.1={
-	holder=161 #Pang Xi
+203.1.1={
+	holder=4481 #Zhang Na
 }
 208.1.1={
 	holder=3615 #Xu Jing
 }
 210.1.1={
-	holder=3609 #Gong Yang
+	holder=3644 #Zhao Ze
 }
 214.1.1={
+	holder=3630 #Zhang Yi
+}
+217.1.1={
+	holder=620 #Liao Li
+}
+219.8.1={
 	holder=3608 #Fei Guan
 }
-#Zhang Yi
-#Liao Li
 #220 Wang Peng
 #Yang Yong
 

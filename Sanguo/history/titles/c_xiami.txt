@@ -7,5 +7,5 @@
 	liege=d_beihai
 }
 184.1.1={
-	holder=1312 #Wang Zhongrei
+	holder=1320 #He Shimin
 }

@@ -14,5 +14,6 @@ b_lianju = castle
 # Misc
 culture = qiang
 religion = baishi
+terrain = desert
 
 #History

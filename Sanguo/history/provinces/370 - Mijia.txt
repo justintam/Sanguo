@@ -13,5 +13,6 @@ b_mijia = tribal
 # Misc
 culture = xianbei
 religion = tengri_pagan
+terrain = steppe
 
 #History

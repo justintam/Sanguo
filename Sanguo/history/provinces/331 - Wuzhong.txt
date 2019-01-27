@@ -14,5 +14,6 @@ b_wuzhongdi = tribal
 # Misc
 culture = wuhuan
 religion = tengri_pagan
+terrain = plains
 
 #History

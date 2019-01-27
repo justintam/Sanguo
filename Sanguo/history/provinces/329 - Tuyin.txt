@@ -13,5 +13,6 @@ b_tuyin = tribal
 # Misc
 culture = wuhuan
 religion = tengri_pagan
+terrain = mountain
 
 #History

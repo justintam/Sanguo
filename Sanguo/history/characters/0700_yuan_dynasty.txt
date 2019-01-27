@@ -1,58 +1,6 @@
 #######Yuan Dynasty range: 700 - 799###### 
 
-701 = {
-	name="An"
-	dynasty=29
-	religion="confucian"
-	culture="han"
-	father=748
-	42.1.1={
-		birth=yes
-	}
-	92.4.9={
-		death=yes
-	}
-}
-702 = {
-	name="Jing"
-	dynasty=29
-	religion="confucian"
-	culture="han"
-	father=701
-	60.1.1={
-		birth=yes
-	}
-	100.1.1={
-		death=yes
-	}
-}
-703 = {
-	name="Tang"
-	dynasty=29
-	religion="confucian"
-	culture="han"
-	father=702
-	90.1.1={
-		birth=yes
-	}
-	130.1.1={
-		death=yes
-	}
-}
-704 = {
-	name="Feng"
-	dynasty=29
-	religion="confucian"
-	culture="han"
-	father=703
-	120.1.1={
-		birth=yes
-	}
-	180.1.1={
-		death=yes
-	}
-}
-700 = {
+700={
 	name="Shao"
 	dynasty=29
 	dna="ivtpchczicw"
@@ -95,41 +43,43 @@
 			wealth=500
 			add_friend=400
 
-			any_realm_character = {
-				limit = {
-					OR = {
-						character = 725
-						character = 726
-						character = 727
-						character = 728
-						character = 729
-						character = 730
+			any_realm_character={
+				limit={
+					OR={
+						character=725
+						character=726
+						character=727
+						character=728
+						character=729
+						character=730
 					}
 				}
-				opinion = {
-					modifier = opinion_loyalty
-					who = ROOT
+				opinion={
+					modifier=opinion_loyalty
+					who=ROOT
 				}
-				reverse_opinion = {
-					modifier = opinion_loyalty
-					who = ROOT
+				reverse_opinion={
+					modifier=opinion_loyalty
+					who=ROOT
 				}
 			}
 		}
 	}
 	189.8.22={
-		effect = {
-			set_character_flag = ten_eunuchs_flag
+		effect={
+			set_character_flag=ten_eunuchs_flag
 		}
 	}
 	190.1.1={
-		add_claim=k_ji
-		add_claim=c_ye
-		effect = { prestige=100 }
+		effect={
+			prestige=100
+			set_character_flag=destiny
+		}
 	}
 	191.1.1={
 		capital=c_ye
 		effect={
+			clr_character_flag=destiny
 			add_rival=705
 			add_rival=900
 		}
@@ -144,14 +94,63 @@
 			add_rival=400
 		}
 	}
-	199.1.1={
-		add_claim=e_china
-	}
 	202.6.28={
 		death=yes
 	}
 }
-705 = {
+701={
+	name="An"
+	dynasty=29
+	religion="confucian"
+	culture="han"
+	father=748
+	42.1.1={
+		birth=yes
+	}
+	92.4.9={
+		death=yes
+	}
+}
+702={
+	name="Jing"
+	dynasty=29
+	religion="confucian"
+	culture="han"
+	father=701
+	60.1.1={
+		birth=yes
+	}
+	100.1.1={
+		death=yes
+	}
+}
+703={
+	name="Tang"
+	dynasty=29
+	religion="confucian"
+	culture="han"
+	father=702
+	90.1.1={
+		birth=yes
+	}
+	130.1.1={
+		death=yes
+	}
+}
+704={
+	name="Feng"
+	dynasty=29
+	religion="confucian"
+	culture="han"
+	father=703
+	120.1.1={
+		birth=yes
+	}
+	180.1.1={
+		death=yes
+	}
+}
+705={
 	name="Shu"
 	dynasty=29
 	dna="uftpchuqmaz"
@@ -180,7 +179,7 @@
 		birth=yes
 	}
 	184.1.1={
-		effect = { wealth=500 }
+		effect={ wealth=500 }
 	}
 	191.1.1={
 		effect={
@@ -188,22 +187,27 @@
 		}
 	}
 	193.1.1={
-		add_claim=k_yang
-		add_claim=k_xu
+		add_spouse=3920
 	}
 	196.5.20={
-		effect = {
+		effect={
 			add_artifact=imperial_seal
 		}
 	}
+	197.1.1={
+		add_trait=excommunicated
+		effect={
+			set_character_flag=founded_empire
+		}
+	}
 	199.6.1={
-		effect = {
-			remove_artifact=imperial_seal
+		effect={
+			destroy_artifact=imperial_seal
 		}
 		death=yes
 	}
 }
-706 = {
+706={
 	name="Liu"
 	female=yes
 	religion="confucian"
@@ -217,11 +221,26 @@
 	184.1.1={
 		employer=700
 	}
+	184.1.1={
+		employer=700
+	}
+	202.6.28={
+		employer=707 #Yuan Shang
+	}
+	204.9.13={
+		employer=708 #Yuan Xi
+	}
+	205.6.1={
+		employer=1605 #Louban
+	}
+	207.11.1={
+		employer=1610 #Nanlou
+	}
 	210.1.1={
 		death=yes
 	}
 }
-707 = {
+707={
 	name="Shang"
 	dynasty=29
     diplomacy=9
@@ -248,11 +267,37 @@
 	177.1.1={
 		birth=yes
 	}
+	184.1.1={
+		employer=700
+	}
+	202.6.28={
+		effect={
+			random_tributary={
+				limit={
+					character=1605
+				}
+				opinion={
+					modifier=opinion_loyalty
+					who=ROOT
+				}
+				reverse_opinion={
+					modifier=opinion_loyalty
+					who=ROOT
+				}
+			}
+		}
+	}
+	204.9.13={
+		employer=708 #Yuan Xi
+	}
+	205.6.1={
+		employer=1605 #Louban
+	}
 	207.11.1={
 		death={death_reason=death_execution killer=972}
 	}
 }
-708 = {
+708={
 	name="Xi"
 	dynasty=29
     diplomacy=7
@@ -274,14 +319,40 @@
 	173.1.1={
 		birth=yes
 	}
+	184.1.1={
+		employer=700
+	}
 	195.1.1={
-		add_spouse=1205
+		add_spouse=10409
+	}
+	204.1.1={
+		remove_spouse=10409
+	}
+	205.2.1={
+		effect={
+			random_tributary={
+				limit={
+					character=1605
+				}
+				opinion={
+					modifier=opinion_loyalty
+					who=ROOT
+				}
+				reverse_opinion={
+					modifier=opinion_loyalty
+					who=ROOT
+				}
+			}
+		}
+	}
+	205.6.1={
+		employer=1605 #Louban
 	}
 	207.11.1={
 		death={death_reason=death_execution killer=972}
 	}
 }
-709 = {
+709={
 	name="Tan"
 	dynasty=29
     diplomacy=4
@@ -292,7 +363,7 @@
 	religion="confucian"
 	culture="han"
 	father=700
-    trait="brilliant_strategist"
+    trait="skilled_tactician"
     trait="duelist"
     trait="destined"
     trait="duel_master_warrior"
@@ -307,23 +378,34 @@
     trait="brave"
 	trait="unyielding_leader"
 	trait="aggressive_leader"
-	trait="organizer"
 	167.1.1={
 		birth=yes
 	}
 	184.1.1={
 		employer=700
 	}
-	202.6.28={
-		add_claim=e_yuan
-		add_claim=k_ji
-		add_claim=c_ye
+	204.9.13={
+		effect={
+			random_tributary={
+				limit={
+					character=1605
+				}
+				opinion={
+					modifier=opinion_loyalty
+					who=ROOT
+				}
+				reverse_opinion={
+					modifier=opinion_loyalty
+					who=ROOT
+				}
+			}
+		}
 	}
 	205.2.1={
-		death=yes
+		death={death_reason=death_battle killer=400}
 	}
 }
-710 = {
+710={
 	name="Wei"
 	dynasty=29
     diplomacy=8
@@ -358,7 +440,7 @@
 		death={death_reason=death_execution killer=300}
 	}
 }
-711 = {
+711={
 	name="Manlai"
 	dynasty=29
 	religion="confucian"
@@ -368,10 +450,10 @@
 		birth=yes
 	}
 	163.1.1={
-		death = yes
+		death=yes
 	}
 }
-712 = {
+712={
 	name="Si"
 	dynasty=29
     diplomacy=7
@@ -381,16 +463,13 @@
 	learning=7
 	religion="confucian"
 	culture="han"
-	father=721
+	father=778
 	trait="underhanded_rogue"
 	165.1.1={
 		birth=yes
 	}
 	184.1.1={
 		employer=705
-	}
-	196.1.1={
-		add_claim=c_ku
 	}
 	196.10.1={
 		employer=400
@@ -399,9 +478,9 @@
 		death=yes
 	}
 }
-713 = {
+713={
 	name="Shang"
-	dynasty=173
+	dynasty=173 #Jin
 	religion="confucian"
 	culture="han"
 	trait="honest"
@@ -425,7 +504,7 @@
 		death={death_reason=death_execution killer=705}
 	}
 }
-714 = {
+714={
 	name="Yi"
 	dynasty=927
 	religion="confucian"
@@ -435,8 +514,13 @@
     trait="duel_trained_warrior"
 	trait="brave"
 	trait="proud"
+	trait="ambitious"
+	trait="deceitful"
 	trait="zealous"
 	trait="diligent"
+	trait="unyielding_leader"
+	trait="flat_terrain_leader"
+	trait="aggressive_leader"
 	160.1.1={
 		birth=yes
 	}
@@ -444,7 +528,7 @@
 		death={death_reason=death_execution killer=700}
 	}
 }
-715 = {
+715={
 	name="Ji"
 	dynasty=29
 	religion="confucian"
@@ -463,7 +547,7 @@
 		death={death_reason=death_execution killer=300}
 	}
 }
-716 = {
+716={
 	name="Yida"
 	dynasty=29
 	religion="confucian"
@@ -482,7 +566,7 @@
 		death={death_reason=death_execution killer=300}
 	}
 }
-717 = {
+717={
 	name="Cheng"
 	dynasty=29
 	religion="confucian"
@@ -495,7 +579,7 @@
 		death=yes
 	}
 }
-718 = {
+718={
 	name="Ping"
 	dynasty=29
 	religion="confucian"
@@ -504,11 +588,11 @@
 	115.1.1={
 		birth=yes
 	}
-	140.1.1={
+	144.1.1={
 		death=yes
 	}
 }
-719 = {
+719={
 	name="Meiting"
 	female=yes
 	dynasty=29
@@ -525,7 +609,7 @@
 		death=yes
 	}
 }
-720 = {
+720={
 	name="Peng"
 	dynasty=29
 	religion="confucian"
@@ -538,7 +622,7 @@
 		death=yes
 	}
 }
-721 = {
+721={
 	name="He"
 	dynasty=29
 	religion="confucian"
@@ -551,7 +635,7 @@
 		death=yes
 	}
 }
-722 = {
+722={
 	name="Qi"
 	dynasty=1579
 	religion="confucian"
@@ -566,7 +650,7 @@
 		death=yes
 	}
 }
-723 = {
+723={
 	name="Kai"
 	dynasty=60
 	religion="confucian"
@@ -581,7 +665,7 @@
 		death={death_reason=death_battle killer=400}
 	}
 }
-724 = {
+724={
 	name="Ji"
 	dynasty=1580
 	religion="confucian"
@@ -596,7 +680,7 @@
 		death=yes
 	}
 }
-725 = {
+725={
 	name="Gan"
 	dynasty=998
     diplomacy=6
@@ -617,6 +701,7 @@
 	trait="deceitful"
 	trait="zealous"
 	trait="aggressive_leader"
+	trait="inspiring_leader"
 	160.1.1={
 		birth=yes
 	}
@@ -627,7 +712,7 @@
 		death=yes
 	}
 }
-726 = {
+726={
 	name="Pei"
 	dynasty=51
     diplomacy=7
@@ -647,7 +732,7 @@
 		death=yes
 	}
 }
-727 = {
+727={
 	name="Liang"
 	dynasty=1581
     diplomacy=5
@@ -657,22 +742,25 @@
 	learning=4
 	religion="confucian"
 	culture="han"
-	trait="brilliant_strategist"
+	trait="skilled_tactician"
 	trait="duel_skilled_warrior"
 	trait="strong"
 	trait="brave"
 	trait="wroth"
-	160.1.1={
+	trait="proud"
+	trait="aggressive_leader"
+	trait="experimenter"
+	162.1.1={
 		birth=yes
 	}
 	184.1.1={
 		employer=700
 	}
 	200.6.1={
-		death=yes
+		death={death_reason=death_duel killer=601}
 	}
 }
-728 = {
+728={
 	name="Chou"
 	dynasty=1582
     diplomacy=5
@@ -682,22 +770,25 @@
 	learning=4
 	religion="confucian"
 	culture="han"
-	trait="brilliant_strategist"
+	trait="skilled_tactician"
 	trait="duel_skilled_warrior"
 	trait="strong"
 	trait="brave"
 	trait="wroth"
-	160.1.1={
+	trait="proud"
+	trait="aggressive_leader"
+	trait="cavalry_leader"
+	163.1.1={
 		birth=yes
 	}
 	184.1.1={
 		employer=700
 	}
 	200.8.1={
-		death=yes
+		death={death_reason=death_battle killer=400}
 	}
 }
-729 = {
+729={
 	name="Weihuang"
 	dynasty=1584
     diplomacy=4
@@ -720,7 +811,7 @@
 		death=yes
 	}
 }
-730 = {
+730={
 	name="Qiong"
 	dynasty=1585
     diplomacy=3
@@ -744,7 +835,7 @@
 		death=yes
 	}
 }
-731 = {
+731={
 	name="Qi"
 	dynasty=1586
     diplomacy=2
@@ -754,7 +845,8 @@
 	learning=5
 	religion="confucian"
 	culture="han"
-	trait="skilled_tactician"
+	trait="tough_soldier"
+	trait="duel_trained_warrior"
 	trait="brave"
 	trait="patient"
 	trait="chivalrous"
@@ -768,7 +860,7 @@
 		death=yes
 	}
 }
-732 = {
+732={
 	name="Xun"
 	dynasty=1587
     diplomacy=5
@@ -791,7 +883,7 @@
 		death=yes
 	}
 }
-733 = {
+733={
 	name="Yuanjin"
 	dynasty=1588
     diplomacy=5
@@ -814,7 +906,7 @@
 		death=yes
 	}
 }
-734 = {
+734={
 	name="Rui"
 	dynasty=1589
     diplomacy=3
@@ -837,7 +929,7 @@
 		death=yes
 	}
 }
-735 = {
+735={
 	name="Mai"
 	dynasty=29
     diplomacy=6
@@ -872,7 +964,7 @@
 		death={death_reason=death_execution killer=972}
 	}
 }
-736 = {
+736={
 	name="Xu"
 	dynasty=29
     diplomacy=6
@@ -905,7 +997,7 @@
 		death={death_reason=death_execution killer=972}
 	}
 }
-737 = {
+737={
 	name="Yi"
 	dynasty=29
     diplomacy=6
@@ -926,14 +1018,14 @@
     trait="zealous"
     trait="just"
     trait="brave"
-	145.1.1={
+	143.1.1={
 		birth=yes
 	}
 	193.5.1={
 		death={death_reason=death_murder_unknown}
 	}
 }
-738 = {
+738={
 	name="Bi"
 	female=yes
 	dynasty=29
@@ -950,7 +1042,7 @@
 		death=yes
 	}
 }
-739 = {
+739={
 	name="Dai"
 	dynasty=1471
     diplomacy=5
@@ -975,7 +1067,7 @@
 		death=yes
 	}
 }
-740 = {
+740={
 	name="Bao"
 	dynasty=29
 	religion="confucian"
@@ -988,7 +1080,7 @@
 		death=yes
 	}
 }
-741 = {
+741={
 	name="Ding"
 	dynasty=29
 	religion="confucian"
@@ -1001,7 +1093,7 @@
 		death=yes
 	}
 }
-742 = {
+742={
 	name="Yuanchang"
 	dynasty=29
 	religion="confucian"
@@ -1020,7 +1112,7 @@
 		death=yes
 	}
 }
-743 = {
+743={
 	name="Chunqing"
 	dynasty=29
 	religion="confucian"
@@ -1039,7 +1131,7 @@
 		death=yes
 	}
 }
-744 = {
+744={
 	name="Fan"
 	dynasty=1699
 	religion="confucian"
@@ -1054,7 +1146,7 @@
 		death=yes
 	}
 }
-745 = {
+745={
 	name="Cheng"
 	dynasty=1832
 	religion="confucian"
@@ -1066,7 +1158,7 @@
 		death={death_reason=death_battle}
 	}
 }
-746 = {
+746={
 	name="Pan"
 	dynasty=1833
 	religion="confucian"
@@ -1078,7 +1170,7 @@
 		death={death_reason=death_battle}
 	}
 }
-747 = {
+747={
 	name="Liang"
 	dynasty=29
 	religion="confucian"
@@ -1090,7 +1182,7 @@
 		death=yes
 	}
 }
-748 = {
+748={
 	name="Chang"
 	dynasty=29
 	religion="confucian"
@@ -1103,7 +1195,7 @@
 		death=yes
 	}
 }
-749 = {
+749={
 	name="Zhang"
 	dynasty=29
 	religion="confucian"
@@ -1116,7 +1208,7 @@
 		death=yes
 	}
 }
-750 = {
+750={
 	name="Shang"
 	dynasty=29
 	religion="confucian"
@@ -1129,7 +1221,7 @@
 		death=yes
 	}
 }
-751 = {
+751={
 	name="Chang"
 	dynasty=29
 	religion="confucian"
@@ -1142,7 +1234,7 @@
 		death={death_reason=death_suicide}
 	}
 }
-752 = {
+752={
 	name="Xu"
 	dynasty=29
 	religion="confucian"
@@ -1155,7 +1247,7 @@
 		death=yes
 	}
 }
-753 = {
+753={
 	name="Renda"
 	dynasty=29
 	religion="confucian"
@@ -1174,7 +1266,7 @@
 		death={death_reason=death_execution killer=300}
 	}
 }
-754 = {
+754={
 	name="Tong"
 	dynasty=1597
     diplomacy=7
@@ -1208,6 +1300,36 @@
 		death=yes
 	}
 }
+755={
+	name="Yuan"
+	dynasty=2013 #Guo
+    diplomacy=5
+    martial=5
+    stewardship=3
+    intrigue=3
+	learning=4
+	religion="confucian"
+	culture="han"
+    trait="tough_soldier"
+	trait="duel_trained_warrior"
+    trait="honest"
+    trait="temperate"
+	trait="paranoid"
+    trait="zealous"
+    trait="brave"
+	165.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=700
+	}
+	202.6.28={
+		employer=707
+	}
+	202.8.1={
+		death={death_reason=death_battle}
+	}
+}
 
 ### Eventually Joined Cao
 
@@ -1218,13 +1340,121 @@
 #Deng Xi serves until 198 when he goes to refuge and joins Cao in 208
 
 #770 - 799 Yuan Shu
-#770 = {
-#771 = {
-#772 = {
-#773 = {
-#774 = {
-#775 = {
-776 = {
+770={
+	name="Yao"
+	dynasty=29
+	religion="confucian"
+	culture="han"
+	father=705
+	180.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=705
+	}
+	199.6.1={
+		employer=20435 #Liu Xun
+	}
+	199.8.1={
+		employer=508
+	}
+	200.2.1={
+		employer=509
+	}
+	240.1.1={
+		death=yes
+	}
+}
+771={
+	name="Qing"
+	female=yes
+	dynasty=29
+	religion="confucian"
+	culture="han"
+	father=705
+	trait="honorable"
+	trait="chaste"
+	trait="celibate"
+	trait="zealous"
+	182.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=705
+	}
+	196.1.1={
+		add_spouse=772
+	}
+	199.6.1={
+		employer=20435 #Liu Xun
+	}
+	199.8.1={
+		employer=508
+	}
+	200.2.1={
+		employer=509
+		effect={
+			add_consort=509
+		}
+	}
+	243.1.1={
+		death=yes
+	}
+}
+772={
+	name="Yi"
+	dynasty=2015 #Huang
+	religion="confucian"
+	culture="han"
+	172.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=705
+	}
+	196.1.1={
+		add_spouse=771
+	}
+	199.6.1={
+		employer=20435 #Liu Xun
+	}
+	199.8.1={
+		employer=508
+	}
+	200.1.1={
+		death=yes
+	}
+}
+#773 - Daughter of Yuan Yao - Marries Sun Fen
+#774 - Unused
+775={
+	name="Yin"
+	dynasty=29
+	religion="confucian"
+	culture="han"
+	father=715
+	trait="brave"
+	trait="temperate"
+	172.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=705
+	}
+	199.6.1={
+		employer=20435 #Liu Xun
+	}
+	199.8.1={
+		employer=508
+	}
+	200.2.1={
+		employer=509
+	}
+	238.1.1={
+		death=yes
+	}
+}
+776={
 	name="Nu"
 	dynasty=1458
     diplomacy=4
@@ -1251,7 +1481,7 @@
 		death=yes
 	}
 }
-777 = {
+777={
 	name="Ji"
 	dynasty=1687
     diplomacy=4
@@ -1278,9 +1508,145 @@
 		death=yes
 	}
 }
+778={
+	name="Hong"
+	dynasty=29
+    diplomacy=5
+    martial=4
+    stewardship=5
+    intrigue=4
+	learning=9
+	religion="confucian"
+	culture="han"
+	father=721
+	trait="scholarly_theologian"
+	trait="scholar"
+	trait="temperate"
+	trait="shy"
+	trait="just"
+	trait="humble"
+	trait="content"
+	trait="honorable"
+	128.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=4000
+		add_trait="refuge"
+		effect={
+			set_character_flag=refuge_yu
+		}
+	}
+	184.8.1={
+		remove_trait="refuge"
+		effect={
+			clr_character_flag=refuge_yu
+		}
+		death=yes
+	}
+}
+779={
+	name="Zhong"
+	dynasty=29
+    diplomacy=6
+    martial=5
+    stewardship=8
+    intrigue=3
+	learning=7
+	religion="confucian"
+	culture="han"
+	father=721
+	trait="scholarly_theologian"
+	trait="scholar"
+	trait="shy"
+	trait="just"
+	trait="humble"
+	trait="honest"
+	trait="content"
+	trait="diligent"
+	trait="honorable"
+	130.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=4000
+		add_trait="refuge"
+		effect={
+			set_character_flag=refuge_yu
+		}
+	}
+	190.1.1={
+		remove_trait="refuge"
+		effect={
+			clr_character_flag=refuge_yu
+		}
+	}
+	196.1.1={
+		employer=4000
+		add_trait="refuge"
+		effect={
+			set_character_flag=refuge_yu
+		}
+	}
+	197.8.1={
+		remove_trait="refuge"
+		effect={
+			clr_character_flag=refuge_yu
+		}
+		death=yes
+	}
+}
+780={
+	name="Hong"
+	dynasty=29
+    diplomacy=5
+    martial=4
+    stewardship=5
+    intrigue=4
+	learning=8
+	religion="confucian"
+	culture="han"
+	father=721
+	trait="scholarly_theologian"
+	trait="scholar"
+	trait="shy"
+	trait="just"
+	trait="humble"
+	trait="content"
+	trait="honorable"
+	133.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=4000
+		add_trait="refuge"
+		effect={
+			set_character_flag=refuge_yu
+		}
+	}
+	210.1.1={
+		remove_trait="refuge"
+		effect={
+			clr_character_flag=refuge_yu
+		}
+		death=yes
+	}
+}
+781={
+	name="Bi"
+	dynasty=29
+	religion="confucian"
+	culture="han"
+	father=779
+	trait="duel_trained_warrior"
+	158.1.1={
+		birth=yes
+	}
+	184.2.1={
+		death={death_reason=death_battle}
+	}
+}
 
 
-#Yuan Si, Yuan Yin, Yuan Yao
-#Huang Yi, Daughters of YS
 #Chen Lan, Lei Pu, # May not be YS officer - Mei Cheng
 #Qiao Rui - Ku County

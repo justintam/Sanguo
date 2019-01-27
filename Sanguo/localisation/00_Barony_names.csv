@@ -125,6 +125,8 @@ b_bayin;Bayin;Bayin;Bayin;;Bayin;;;;;;;;;x
 b_bayin_adj;Bayinian;;bayiner;;;;;;;;;;;x
 b_baying;Baying;Baying;Baying;;Baying;;;;;;;;;x
 b_baying_adj;Bayingian;;bayinger;;;;;;;;;;;x
+b_bazhong;Bazhong;;;;;;;;;;;;;x
+b_bazhong_adj;Bazhongian;;Bazhonger;;;;;;;;;;;x
 b_beidi;Beidi;Beidi;Beidi;;Beidi;;;;;;;;;x
 b_beidi_adj;Beidian;;beider;;;;;;;;;;;x
 b_beiguan;Beiguan;Beiguan;Beiguan;;Beiguan;;;;;;;;;x
@@ -553,6 +555,8 @@ b_dongbuyeo;Dongbuyeo;Dongbuyeo;Dongbuyeo;;Dongbuyeo;;;;;;;;;x
 b_dongbuyeo_adj;Dongbuian;;dongbuer;;;;;;;;;;;x
 b_dongcheng;Dongcheng;Dongcheng;Dongcheng;;Dongcheng;;;;;;;;;x
 b_dongcheng_adj;Dongchengian;;dongchenger;;;;;;;;;;;x
+b_dongfang;Dongfang;Dongfang;Dongfang;;Dongfang;;;;;;;;;x
+b_dongfang_adj;Dongfangian;;dongfangian;;;;;;;;;;;x
 b_dongguang;Dongguang;Dongguang;Dongguang;;Dongguang;;;;;;;;;x
 b_dongguang_adj;Dongguangian;;dongguanger;;;;;;;;;;;x
 b_donghae;Donghae;Donghae;Donghae;;Donghae;;;;;;;;;x
@@ -631,10 +635,10 @@ b_fan;Fan;Fan;Fan;;Fan;;;;;;;;;x
 b_fan_adj;Fanian;;faner;;;;;;;;;;;x
 b_fancheng;Fancheng;Fancheng;Fancheng;;Fancheng;;;;;;;;;x
 b_fancheng_adj;Fanchengian;;fanchenger;;;;;;;;;;;x
-b_fangcheng;Fangcheng;Fangcheng;Fangcheng;;Fangcheng;;;;;;;;;x
-b_fangcheng_adj;Fangchengian;;fangchenger;;;;;;;;;;;x
 b_fanchi;Fanchi;Fanchi;Fanchi;;Fanchi;;;;;;;;;x
 b_fanchi_adj;Fanchian;;fancher;;;;;;;;;;;x
+b_fangcheng;Fangcheng;Fangcheng;Fangcheng;;Fangcheng;;;;;;;;;x
+b_fangcheng_adj;Fangchengian;;fangchenger;;;;;;;;;;;x
 b_fangdi;Fangdi;Fangdi;Fangdi;;Fangdi;;;;;;;;;x
 b_fangdi_adj;Fangdian;;fangder;;;;;;;;;;;x
 b_fanghu;Fanghu;Fanghu;Fanghu;;Fanghu;;;;;;;;;x
@@ -643,6 +647,8 @@ b_fangjian;Fangjian;Fangjian;Fangjian;;Fangjian;;;;;;;;;x
 b_fangjian_adj;Fangjianian;;fangjianer;;;;;;;;;;;x
 b_fangjiu;Fangjiu;Fangjiu;Fangjiu;;Fangjiu;;;;;;;;;x
 b_fangjiu_adj;Fangjian;;fangjer;;;;;;;;;;;x
+b_fangling;Fangling;;;;;;;;;;;;x
+b_fangling_adj;Fanglingian;;;;;;;;;;;;x
 b_fangmen;Fangmen;Fangmen;Fangmen;;Fangmen;;;;;;;;;x
 b_fangmen_adj;Fangmenian;;fangmener;;;;;;;;;;;x
 b_fangpo;Fangpo;Fangpo;Fangpo;;Fangpo;;;;;;;;;x
@@ -937,8 +943,6 @@ b_gudaozhen;Gudaozhen;Gudaozhen;Gudaozhen;;Gudaozhen;;;;;;;;;x
 b_gudaozhen_adj;Gudaozhenian;;gudaozhener;;;;;;;;;;;x
 b_guiling;Guiling;Guiling;Guiling;;Guiling;;;;;;;;;x
 b_guiling_adj;Guilingian;;guilinger;;;;;;;;;;;x
-b_guixu;Guixu;Guixu;Guixu;;Guixu;;;;;;;;;x
-b_guixu_adj;Guixian;;guixer;;;;;;;;;;;x
 b_gulingju;Gulingju;Gulingju;Gulingju;;Gulingju;;;;;;;;;x
 b_gulingju_adj;Gulingjian;;gulingjer;;;;;;;;;;;x
 b_gulou;Gulou;Gulou;Gulou;;Gulou;;;;;;;;;x
@@ -1421,8 +1425,6 @@ b_langxi;Langxi;Langxi;Langxi;;Langxi;;;;;;;;;x
 b_langxi_adj;Langxian;;langxer;;;;;;;;;;;x
 b_langye;Langye;Langye;Langye;;Langye;;;;;;;;;x
 b_langye_adj;Langyean;;langer;;;;;;;;;;;x
-b_langzhong;Langzhong;Langzhong;Langzhong;;Langzhong;;;;;;;;;x
-b_langzhong_adj;Langzhongian;;langzhonger;;;;;;;;;;;x
 b_lanjiao;Lanjiao;Lanjiao;Lanjiao;;Lanjiao;;;;;;;;;x
 b_lanjiao_adj;Lanjian;;lanjer;;;;;;;;;;;x
 b_lankojou;Lankojou;Lankojou;Lankojou;;Lankojou;;;;;;;;;x
@@ -1435,8 +1437,6 @@ b_lanting;Lanting;Lanting;Lanting;;Lanting;;;;;;;;;x
 b_lanting_adj;Lantingian;;lantinger;;;;;;;;;;;x
 b_lanxian;Lanxian;Lanxian;Lanxian;;Lanxian;;;;;;;;;x
 b_lanxian_adj;Lanxianian;;lanxianer;;;;;;;;;;;x
-b_laohufu;Laohufu;Laohufu;Laohufu;;Laohufu;;;;;;;;;x
-b_laohufu_adj;Laohufian;;laohufer;;;;;;;;;;;x
 b_laxin;Laxin;Laxin;Laxin;;Laxin;;;;;;;;;x
 b_laxin_adj;Laxinian;;laxiner;;;;;;;;;;;x
 b_lean;Lean;Lean;Lean;;Lean;;;;;;;;;x
@@ -1679,8 +1679,6 @@ b_malgal;Malgal;Malgal;Malgal;;Malgal;;;;;;;;;x
 b_malgal_adj;Malgalian;;malgaler;;;;;;;;;;;x
 b_mamu;Mamu;Mamu;Mamu;;Mamu;;;;;;;;;x
 b_mamu_adj;Mamian;;mamer;;;;;;;;;;;x
-b_mangdan;Mangdan;Mangdan;Mangdan;;Mangdan;;;;;;;;;x
-b_mangdan_adj;Mangdanian;;mangdaner;;;;;;;;;;;x
 b_mangdi;Mangdi;Mangdi;Mangdi;;Mangdi;;;;;;;;;x
 b_mangdi_adj;Mangdian;;mangder;;;;;;;;;;;x
 b_manghu;Manghu;Manghu;Manghu;;Manghu;;;;;;;;;x
@@ -2221,6 +2219,8 @@ b_sanli;Sanli;Sanli;Sanli;;Sanli;;;;;;;;;x
 b_sanli_adj;Sanlian;;sanler;;;;;;;;;;;x
 b_sanqiao;Sanqiao;Sanqiao;Sanqiao;;Sanqiao;;;;;;;;;x
 b_sanqiao_adj;Sanqian;;sanqer;;;;;;;;;;;x
+b_sanya;Sanya;Sanya;Sanya;;Sanya;;;;;;;;;x
+b_sanya_adj;Sanyan;;sanyan;;;;;;;;;;;x
 b_sanyuan;Sanyuan;Sanyuan;Sanyuan;;Sanyuan;;;;;;;;;x
 b_sanyuan_adj;Sanyuanian;;sanyuaner;;;;;;;;;;;x
 b_sariwon;Sariwon;Sariwon;Sariwon;;Sariwon;;;;;;;;;x
@@ -2269,6 +2269,8 @@ b_shangquyang;Shangquyang;Shangquyang;Shangquyang;;Shangquyang;;;;;;;;;x
 b_shangquyang_adj;Shangquyangian;;shangquyanger;;;;;;;;;;;x
 b_shangrao;Shangrao;Shangrao;Shangrao;;Shangrao;;;;;;;;;x
 b_shangrao_adj;Shangraoian;;shangraoer;;;;;;;;;;;x
+b_shangyong;Shangyong;;;;;;;;;;;;x
+b_shangyong_adj;Shangyongian;;;;;;;;;;;;x
 b_shansang;Shansang;Shansang;Shansang;;Shansang;;;;;;;;;x
 b_shansang_adj;Shansangian;;shansanger;;;;;;;;;;;x
 b_shanyangyi;Shanyangyi;Shanyangyi;Shanyangyi;;Shanyangyi;;;;;;;;;x
@@ -2489,6 +2491,8 @@ b_tongzhou;Tongzhou;Tongzhou;Tongzhou;;Tongzhou;;;;;;;;;x
 b_tongzhou_adj;Tongzhian;;tongzher;;;;;;;;;;;x
 b_touqian;Touqian;Touqian;Touqian;;Touqian;;;;;;;;;x
 b_touqian_adj;Touqianian;;touqianer;;;;;;;;;;;x
+b_tsushima;Tsushima;Tsushima;Tsushima;;Tsushima;;;;;;;;;x
+b_tsushima_adj;Tsushiman;;tsushiman;;;;;;;;;;;x
 b_tuanjie;Tuanjie;Tuanjie;Tuanjie;;Tuanjie;;;;;;;;;x
 b_tuanjie_adj;Tuanjiean;;tuanjer;;;;;;;;;;;x
 b_tucheng;Tucheng;Tucheng;Tucheng;;Tucheng;;;;;;;;;x
@@ -2719,6 +2723,8 @@ b_wuzhang;Wuzhang;Wuzhang;Wuzhang;;Wuzhang;;;;;;;;;x
 b_wuzhang_adj;Wuzhangian;;wuzhanger;;;;;;;;;;;x
 b_wuzhen;Wuzhen;Wuzhen;Wuzhen;;Wuzhen;;;;;;;;;x
 b_wuzhen_adj;Wuzhenian;;wuzhener;;;;;;;;;;;x
+b_wuzhishan;Wuzhishan;Wuzhishan;Wuzhishan;;Wuzhishan;;;;;;;;;x
+b_wuzhishan_adj;Wuzhishanian;;wuzhishanian;;;;;;;;;;;x
 b_wuzhong;Wuzhong;Wuzhong;Wuzhong;;Wuzhong;;;;;;;;;x
 b_wuzhong_adj;Wuzhongian;;wuzhonger;;;;;;;;;;;x
 b_wuzhongdi;Wuzhongdi;Wuzhongdi;Wuzhongdi;;Wuzhongdi;;;;;;;;;x
@@ -2947,6 +2953,8 @@ b_xuncaifu;Xuncaifu;Xuncaifu;Xuncaifu;;Xuncaifu;;;;;;;;;x
 b_xuncaifu_adj;Xuncaifian;;xuncaifer;;;;;;;;;;;x
 b_xundu;Xundu;Xundu;Xundu;;Xundu;;;;;;;;;x
 b_xundu_adj;Xundian;;xunder;;;;;;;;;;;x
+b_xunyang;Xunyang;;;;;;;;;;;;;x
+b_xunyang_adj;Xunyang;;;;;;;;;;;;;x
 b_xunyi;Xunyi;Xunyi;Xunyi;;Xunyi;;;;;;;;;x
 b_xunyi_adj;Xunian;;xuner;;;;;;;;;;;x
 b_xuoli;Xuoli;Xuoli;Xuoli;;Xuoli;;;;;;;;;x
@@ -3127,6 +3135,8 @@ b_yiuji;Yiuji;Yiuji;Yiuji;;Yiuji;;;;;;;;;x
 b_yiuji_adj;Yiujian;;yiujer;;;;;;;;;;;x
 b_yiwa;Yiwa;Yiwa;Yiwa;;Yiwa;;;;;;;;;x
 b_yiwa_adj;Yiwan;;yiwer;;;;;;;;;;;x
+b_yixiang;Yixiang;;;;;;;;;;;;;x
+b_yixiang_adj;Yixiang;;;;;;;;;;;;;x
 b_yiyang;Yiyang;Yiyang;Yiyang;;Yiyang;;;;;;;;;x
 b_yiyang_adj;Yiyangian;;yiyanger;;;;;;;;;;;x
 b_yiyangning;Yiyangning;Yiyangning;Yiyangning;;Yiyangning;;;;;;;;;x
@@ -3263,6 +3273,8 @@ b_zhangcheng;Zhangcheng;Zhangcheng;Zhangcheng;;Zhangcheng;;;;;;;;;x
 b_zhangcheng_adj;Zhangchengian;;zhangchenger;;;;;;;;;;;x
 b_zhanghuatai;Zhanghuatai;Zhanghuatai;Zhanghuatai;;Zhanghuatai;;;;;;;;;x
 b_zhanghuatai_adj;Zhanghuatian;;zhanghuater;;;;;;;;;;;x
+b_zhangli;Zhangli;;;;;;;;;;;;;x
+b_zhangli_adj;Zhangli;;;;;;;;;;;;;x
 b_zhangling;Zhangling;Zhangling;Zhangling;;Zhangling;;;;;;;;;x
 b_zhangling_adj;Zhanglinger;;zhanglinger;;;;;;;;;;;x
 b_zhangwan;Zhangwan;Zhangwan;Zhangwan;;Zhangwan;;;;;;;;;x

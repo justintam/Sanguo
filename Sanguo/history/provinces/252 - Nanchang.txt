@@ -16,5 +16,6 @@ b_kangqiao = city
 # Misc
 culture = minyue
 religion = animist
+terrain = hills
 
 #History

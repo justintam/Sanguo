@@ -7,6 +7,12 @@
 	liege=k_sili
 	vice_royalty = yes
 }
+108.11.1={
+	holder=4518 #Deng Zhi
+}
+111.1.1={
+	holder=0 #None
+}
 140.1.1={
 	holder=4404 #Zhao Jie
 }
@@ -16,13 +22,22 @@
 160.1.1={
 	holder=1287 #Yang Bing
 }
+162.1.1={
+	holder=4531 #Deng Wanshi
+}
+165.1.1={
+	holder=0 #None
+}
 168.1.1={
 	holder=4297 #Qiao Xuan
 }
 169.1.1={
 	holder=0 #None
 }
-178.1.1={
+178.3.1={
+	holder=3641 #Zhang Hao
+}
+178.10.1={
 	holder=4297 #Qiao Xuan
 }
 179.1.1={
@@ -32,7 +47,7 @@
 	holder=1297 #Yang Ci
 }
 184.1.1={
-	holder=100 #He Jin
+	holder=4486 #Wu Fu
 }
 185.1.1={
 	holder=4440 #Li Xie
@@ -43,13 +58,21 @@
 188.1.1={
 	holder=106 #Zhu Jun
 }
-#Wu Fu
-#Wang Yun when Ling died
+#Wang Yun when Ling died TBD
 #190 - yang yuan - Claim
 #191 - Yang Yi - Claim
-192.5.22={
+190.1.1={
 	liege=0
+}
+191.1.1={
+	liege=k_ji
+}
+192.5.22={
+	liege=k_sili
 	holder=20455 #Luo Ye
+}
+192.7.1={
+	liege=0
 }
 193.1.1={
 	liege=k_yan

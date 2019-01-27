@@ -14,5 +14,6 @@ b_chanling = city
 # Misc
 culture = bandunman
 religion = baihu
+terrain = hills
 
 #History

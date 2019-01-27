@@ -1,423 +1,423 @@
-decisions = {
+decisions={
 
-	hold_a_epic_tournament  = {
-		only_independent = yes
-		is_high_prio = yes
+	hold_a_epic_tournament ={
+		only_independent=yes
+		is_high_prio=yes
 		
-		potential = {
-			is_playable = yes
-			NOR = {
-				has_character_modifier = epic_tournament
-				has_character_flag = epic_tournament
+		potential={
+			is_playable=yes
+			NOR={
+				has_character_modifier=epic_tournament
+				has_character_flag=epic_tournament
 			}
-			OR = {
-				religion_group = chinese_religion
-				religion_group = buddhist_religion
+			OR={
+				religion_group=chinese_religion
+				religion_group=buddhist_religion
 			}
-			independent = yes
-			NOT = { is_nomadic = yes }
-			OR = {
-				gender_equality_trigger = yes
-				NOT = { is_female = yes	}
+			independent=yes
+			NOT={ is_nomadic=yes }
+			OR={
+				gender_equality_trigger=yes
+				NOT={ is_female=yes	}
 			}
-			OR = {
-				tier = king
-				tier = emperor 
+			OR={
+				tier=king
+				tier=emperor 
 			}
-			location = {
-				owner = { character = ROOT }
-			}
-		}
-		allow = {
-			war = no
-			prisoner = no
-			in_command = no
-			NOT = { is_inaccessible_trigger = yes }
-			age = 16
-			prestige = 500
-			wealth = 200
-			custom_tooltip = {
-				text = is_not_busy_trigger_tooltip
-				hidden_tooltip = { NOT = { has_character_flag = do_not_disturb } }
+			location={
+				owner={ character=ROOT }
 			}
 		}
-		effect = {
+		allow={
+			war=no
+			prisoner=no
+			in_command=no
+			NOT={ is_inaccessible_trigger=yes }
+			age=16
+			prestige=500
+			wealth=200
+			custom_tooltip={
+				text=is_not_busy_trigger_tooltip
+				hidden_tooltip={ NOT={ has_character_flag=do_not_disturb } }
+			}
+		}
+		effect={
 
-			add_character_modifier = {
-				name = epic_tournament
-				years = 100
-				hidden = yes
+			add_character_modifier={
+				name=epic_tournament
+				years=100
+				hidden=yes
 			}
-			set_character_flag = do_not_disturb
-			clr_character_flag = tournament_has_ended
-			hidden_tooltip = { character_event = { id = 70999 days = 300 } } # Safety catch flag clearing
-			wealth = -200
-			prestige = 100
-			character_event = { id = 70033 tooltip = "tournament_invite" }
-			hidden_tooltip = {
-				clr_character_flag = tournament_has_ended
+			set_character_flag=do_not_disturb
+			clr_character_flag=tournament_has_ended
+			hidden_tooltip={ character_event={ id=70999 days=300 } } # Safety catch flag clearing
+			wealth=-200
+			prestige=100
+			character_event={ id=70033 tooltip="tournament_invite" }
+			hidden_tooltip={
+				clr_character_flag=tournament_has_ended
 			}
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				NOT = {
-					OR = {
-						wealth = 1000
-						scaled_wealth = 3.0
+		ai_will_do={
+			factor=1
+			modifier={
+				factor=0
+				NOT={
+					OR={
+						wealth=1000
+						scaled_wealth=3.0
 					}
 				}
 			}
 		}
 	}
 	
-	buy_bureaucratic_protection = {
-		only_playable = yes
-		potential = {
-			is_playable = yes
-			religion = confucian
-			age = 16
-			demesne_size = 1
-			NOT = { has_character_flag = paid_for_protection }
+	buy_bureaucratic_protection={
+		only_playable=yes
+		potential={
+			is_playable=yes
+			religion=confucian
+			age=16
+			demesne_size=1
+			NOT={ has_character_flag=paid_for_protection }
 		}
-		allow = {
-			scaled_wealth = 1.0
-			wealth = 25
-			is_heretic = no
+		allow={
+			scaled_wealth=1.0
+			wealth=25
+			is_heretic=no
 		}
-		effect = {
-			set_character_flag = paid_for_protection
-			rightful_religious_head_scope = {
-				character_event = { id = 39250 days = 5 random = 12 tooltip = "protection_paid" }
+		effect={
+			set_character_flag=paid_for_protection
+			rightful_religious_head_scope={
+				character_event={ id=39250 days=5 random=12 tooltip="protection_paid" }
 			}
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				OR = {
-					NOT = { scaled_wealth = 10.0 }
-					piety = 0
+		ai_will_do={
+			factor=1
+			modifier={
+				factor=0
+				OR={
+					NOT={ scaled_wealth=10.0 }
+					piety=0
 				}
 			}
 		}
 	}
 
-	issue_declaration_of_repentance = {
-		only_playable = yes
-		potential = {
-			is_playable = yes
-			religion = confucian
-			age = 16
-			demesne_size = 1
-			NOT = { has_character_flag = ask_for_repentance }
-			rightful_religious_head_scope = {
-				ROOT = {
-					excommunicated_for = PREV
+	issue_declaration_of_repentance={
+		only_playable=yes
+		potential={
+			is_playable=yes
+			religion=confucian
+			age=16
+			demesne_size=1
+			NOT={ has_character_flag=ask_for_repentance }
+			rightful_religious_head_scope={
+				ROOT={
+					excommunicated_for=PREV
 				}
 			}
 		}
-		allow = {
-			scaled_wealth = 2.0
-			is_heretic = no
+		allow={
+			scaled_wealth=2.0
+			is_heretic=no
 		}
-		effect = {
-			set_character_flag = ask_for_repentance
-			rightful_religious_head_scope = {
-				character_event = { id = 39252 days = 5 random = 12 tooltip = "repentance_ask" }
+		effect={
+			set_character_flag=ask_for_repentance
+			rightful_religious_head_scope={
+				character_event={ id=39252 days=5 random=12 tooltip="repentance_ask" }
 			}
 		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				NOT = {
-					scaled_wealth = 10.0
+		ai_will_do={
+			factor=1
+			modifier={
+				factor=0
+				NOT={
+					scaled_wealth=10.0
 				}
 			}
 		}
 	}
 	
-	demand_liege_title = {
-		only_playable = yes
-		is_high_prio = yes
-		potential = {
-			ai = no
-			is_playable = yes
-			has_ambition = obj_gain_any_title
-			liege = {
-				NOT = { character = ROOT }
+	demand_liege_title={
+		only_playable=yes
+		is_high_prio=yes
+		potential={
+			ai=no
+			is_playable=yes
+			has_ambition=obj_gain_any_title
+			liege={
+				NOT={ character=ROOT }
 			}
-			is_adult = yes
-			prisoner = no
-			NOT = { trait = incapable }
+			is_adult=yes
+			prisoner=no
+			NOT={ trait=incapable }
 		}
-		allow = {
-			prestige = 60
-			liege = {
-				has_regent = no
-				NOT = { has_opinion_modifier = { who = ROOT modifier = requested_land } }
-				demesne_size = 3
-				any_demesne_title = {
-					can_be_given_away = yes
-					tier = COUNT
-					NOT = { location = { is_capital = yes } }
+		allow={
+			prestige=60
+			liege={
+				has_regent=no
+				NOT={ has_opinion_modifier={ who=ROOT modifier=requested_land } }
+				demesne_size=3
+				any_demesne_title={
+					can_be_given_away=yes
+					tier=COUNT
+					NOT={ location={ is_capital=yes } }
 				}
 			}
 		}
-		effect = {
-			prestige = -60
-			liege = {
-				opinion = {
-					who = ROOT
-					years = 2
-					modifier = requested_land
+		effect={
+			prestige=-60
+			liege={
+				opinion={
+					who=ROOT
+					years=2
+					modifier=requested_land
 				}
-				random_demesne_title = {
-					limit = {
-						can_be_given_away = yes
-						tier = COUNT
-						NOT = { location = { is_capital = yes } }
+				random_demesne_title={
+					limit={
+						can_be_given_away=yes
+						tier=COUNT
+						NOT={ location={ is_capital=yes } }
 					}
-					save_event_target_as = vassal_wanted_title
+					save_event_target_as=vassal_wanted_title
 				}
 			}
-			custom_tooltip = {
-				text = demand_liege_title_tooltip
-				hidden_tooltip = { liege = { letter_event = { id = 63041 days = 4 } } } # "vassal_request_events.txt"
+			custom_tooltip={
+				text=demand_liege_title_tooltip
+				hidden_tooltip={ liege={ letter_event={ id=63041 days=4 } } } # "vassal_request_events.txt"
 			}
 		}
-		ai_will_do = {
-			factor = 0 # The AI is limited to the similar event 63040
+		ai_will_do={
+			factor=0 # The AI is limited to the similar event 63040
 		}
 	}
 	
-	petition_doge_for_tp = {
-		only_playable = yes
-		is_high_prio = yes
-		potential = {
-			is_playable = yes
-			is_merchant_republic = no
-			is_patrician = yes
-			liege = { is_merchant_republic = yes }
-			NOT = { has_character_flag = petition_doge_for_tp_taken }
-			OR = {
-				liege = {
-					any_vassal = {
-						is_patrician = yes
-						num_of_trade_post_diff = {
-							character = ROOT
-							value = 10
+	petition_doge_for_tp={
+		only_playable=yes
+		is_high_prio=yes
+		potential={
+			is_playable=yes
+			is_merchant_republic=no
+			is_patrician=yes
+			liege={ is_merchant_republic=yes }
+			NOT={ has_character_flag=petition_doge_for_tp_taken }
+			OR={
+				liege={
+					any_vassal={
+						is_patrician=yes
+						num_of_trade_post_diff={
+							character=ROOT
+							value=10
 						}
 					}
 				}
-				AND = {
-					NOT = { num_of_trade_posts = 1 }
-					liege = {
-						any_vassal = {
-							is_patrician = yes
-							num_of_trade_posts = 10
+				AND={
+					NOT={ num_of_trade_posts=1 }
+					liege={
+						any_vassal={
+							is_patrician=yes
+							num_of_trade_posts=10
 						}
 					}
 				}
 			}
 		}
-		allow = {
-			liege = {
-				opinion = {
-					who = ROOT
-					value = 25
+		allow={
+			liege={
+				opinion={
+					who=ROOT
+					value=25
 				}
 			}
 		}
-		effect = {
-			set_character_flag = petition_doge_for_tp_taken
-			liege = {
-				letter_event = { id = REP.500 days = 5 tooltip = EVTTOOLTIP_REP_500 }
+		effect={
+			set_character_flag=petition_doge_for_tp_taken
+			liege={
+				letter_event={ id=REP.500 days=5 tooltip=EVTTOOLTIP_REP_500 }
 			}
 		}
-		ai_will_do = {
-			factor = 1
+		ai_will_do={
+			factor=1
 		}
 	}
 	
-	usurp_tp = {
-		only_playable = yes
-		is_high_prio = yes
-		potential = {
-			is_playable = yes
-			is_merchant_republic = yes
-			is_patrician = yes
-			NOT = { has_character_flag = usurp_tp_taken }
-			OR = {
-				any_vassal = {
-					is_patrician = yes
-					num_of_trade_post_diff = {
-						character = ROOT
-						value = 10
+	usurp_tp={
+		only_playable=yes
+		is_high_prio=yes
+		potential={
+			is_playable=yes
+			is_merchant_republic=yes
+			is_patrician=yes
+			NOT={ has_character_flag=usurp_tp_taken }
+			OR={
+				any_vassal={
+					is_patrician=yes
+					num_of_trade_post_diff={
+						character=ROOT
+						value=10
 					}
 				}
-				AND = {
-					NOT = { num_of_trade_posts = 1 }
-					any_vassal = {
-						is_patrician = yes
-						num_of_trade_posts = 10
+				AND={
+					NOT={ num_of_trade_posts=1 }
+					any_vassal={
+						is_patrician=yes
+						num_of_trade_posts=10
 					}
 				}
 			}
 		}
-		allow = {
-			is_merchant_republic = yes
+		allow={
+			is_merchant_republic=yes
 		}
-		effect = {
-			set_character_flag = usurp_tp_taken
-			if = {
-				limit = {
-					num_of_trade_posts = 1
-					any_vassal = {
-						is_patrician = yes
-						num_of_trade_post_diff = {
-							character = ROOT
-							value = 10
+		effect={
+			set_character_flag=usurp_tp_taken
+			if={
+				limit={
+					num_of_trade_posts=1
+					any_vassal={
+						is_patrician=yes
+						num_of_trade_post_diff={
+							character=ROOT
+							value=10
 						}
 					}
 				}
-				random_vassal = {
-					limit = {
-						is_patrician = yes
-						num_of_trade_post_diff = {
-							character = ROOT
-							value = 10
+				random_vassal={
+					limit={
+						is_patrician=yes
+						num_of_trade_post_diff={
+							character=ROOT
+							value=10
 						}
 					}
-					set_character_flag = target_patrician_doge
-					letter_event = { id = REP.510 days = 5 tooltip = EVTTOOLTIP_REP_510 }
+					set_character_flag=target_patrician_doge
+					letter_event={ id=REP.510 days=5 tooltip=EVTTOOLTIP_REP_510 }
 				}
 			}
-			if = {
-				limit = {
-					NOT = { num_of_trade_posts = 1 }
-					any_vassal = {
-						is_patrician = yes
-						num_of_trade_posts = 10
+			if={
+				limit={
+					NOT={ num_of_trade_posts=1 }
+					any_vassal={
+						is_patrician=yes
+						num_of_trade_posts=10
 					}
 				}
-				random_vassal = {
-					limit = {
-						is_patrician = yes
-						num_of_trade_posts = 10
+				random_vassal={
+					limit={
+						is_patrician=yes
+						num_of_trade_posts=10
 					}
-					set_character_flag = target_patrician_doge
-					letter_event = { id = REP.510 days = 5 tooltip = EVTTOOLTIP_REP_510 }
+					set_character_flag=target_patrician_doge
+					letter_event={ id=REP.510 days=5 tooltip=EVTTOOLTIP_REP_510 }
 				}
 			}
 		}
-		ai_will_do = {
-			factor = 1
+		ai_will_do={
+			factor=1
 		}
 	}
 	
-	form_new_kingdom = {
-		only_independent = yes
-		is_high_prio = yes
+	form_new_kingdom={
+		only_independent=yes
+		is_high_prio=yes
 		
-		potential = {
-			is_playable = yes
-			tier = DUKE
-			NOT = { tier = KING }
+		potential={
+			is_playable=yes
+			tier=DUKE
+			NOT={ tier=KING }
 			
-			holy_order = no
-			prestige = 1000
+			holy_order=no
+			prestige=1000
 		}
-		allow = {
-			is_adult = yes
-			prisoner = no
-			NOT = { trait = incapable }
-			independent = yes
+		allow={
+			is_adult=yes
+			prisoner=no
+			NOT={ trait=incapable }
+			independent=yes
 
-			OR = {
-				realm_size = 35
-				custom_tooltip = {
-					text = form_new_kingdom_requirement_tooltip
-					hidden_tooltip = {
-						any_demesne_title = {
-							count = 3
-							tier = DUKE
+			OR={
+				realm_size=35
+				custom_tooltip={
+					text=form_new_kingdom_requirement_tooltip
+					hidden_tooltip={
+						any_demesne_title={
+							count=3
+							tier=DUKE
 						}
 					}
 				}
 			}
-			OR = {
-				AND = {
-					trait = proud
-					prestige = 4000
+			OR={
+				AND={
+					trait=proud
+					prestige=4000
 				}
-				AND = {
-					trait = ambitious
-					prestige = 4000
+				AND={
+					trait=ambitious
+					prestige=4000
 				}
-				AND = {
-					trait = destined
-					prestige = 1000
+				AND={
+					trait=destined
+					prestige=1000
 				}
-				prestige = 8000
+				prestige=8000
 			}
-			wealth = 300
+			wealth=300
 		}
-		effect = {
-			primary_title = {
-				create_title = {
-					tier = KING
-					landless = no
-					temporary = no
-					custom_created = yes
-					culture = ROOT
-					holder = ROOT
-					base_title = THIS
-					copy_title_laws = yes
+		effect={
+			primary_title={
+				create_title={
+					tier=KING
+					landless=no
+					temporary=no
+					custom_created=yes
+					culture=ROOT
+					holder=ROOT
+					base_title=THIS
+					copy_title_laws=yes
 				}
 
-				hidden_tooltip = {
-					empire = {
-						ROOT = {
-							primary_title = {
-								de_jure_liege = PREVPREV
+				hidden_tooltip={
+					empire={
+						ROOT={
+							primary_title={
+								de_jure_liege=PREVPREV
 							}
 						}
 					}
 
-					ROOT = {
-						primary_title = {
-							holder_scope = {
-								any_title_under = {
-									limit = {
-										tier = DUKE
-										kingdom = {
-											has_holder = no
+					ROOT={
+						primary_title={
+							holder_scope={
+								any_title_under={
+									limit={
+										tier=DUKE
+										kingdom={
+											has_holder=no
 										}
 									}
-									de_jure_liege = PREVPREV
+									de_jure_liege=PREVPREV
 								}
-								any_title_under = {
-									limit = {
-										tier = COUNT
-										location = {
-											duchy = {
-												kingdom = {
-													has_holder = no
+								any_title_under={
+									limit={
+										tier=COUNT
+										location={
+											duchy={
+												kingdom={
+													has_holder=no
 												}
 												
-												NOT = { de_jure_liege_or_above = PREVPREVPREVPREV }
-												ROOT = {
-													completely_controls = PREV
+												NOT={ de_jure_liege_or_above=PREVPREVPREVPREV }
+												ROOT={
+													completely_controls=PREV
 												}
 											}
 										}
 									}
-									location = {
-										duchy = {
-											de_jure_liege = PREVPREVPREVPREV
+									location={
+										duchy={
+											de_jure_liege=PREVPREVPREVPREV
 										}
 									}
 								}
@@ -427,87 +427,100 @@ decisions = {
 				}
 
 			}
-			wealth = -300
-			custom_tooltip = { text = form_new_kingdom_tooltip }
-			chronicle = {
-				entry = CHRONICLE_FOUNDED_NEW_KINGDOM_OR_EMPIRE
-				portrait = [Root.GetID]
+			wealth=-300
+			custom_tooltip={ text=form_new_kingdom_tooltip }
+			chronicle={
+				entry=CHRONICLE_FOUNDED_NEW_KINGDOM_OR_EMPIRE
+				portrait=[Root.GetID]
 			}
 		}
-		revoke_allowed = {
-			always = no
+		revoke_allowed={
+			always=no
 		}
-		ai_will_do = {
-			factor = 1
+		ai_will_do={
+			factor=1
 		}
 	}
 
-	form_new_empire = {
-		only_independent = yes
-		is_high_prio = yes
+	form_new_empire={
+		only_playable=yes
+		is_high_prio=yes
 		
-		potential = {
-			is_playable = yes
-			is_nomadic = no
-			holy_order = no
-			OR = {
-				AND = {
-					has_artifact = imperial_seal
-					OR = {
-						NOT = { tier = EMPEROR }
-						primary_title = {
-							tier = EMPEROR
-							has_title_flag = warlord_flag
+		potential={
+			is_playable=yes
+			OR={
+				independent=yes
+				is_tributary=yes
+			}
+			is_nomadic=no
+			holy_order=no
+			OR={
+				AND={
+					has_artifact=imperial_seal
+					OR={
+						NOT={ tier=EMPEROR }
+						primary_title={
+							tier=EMPEROR
+							has_title_flag=warlord_flag
 						}
 					}
 				}
-				AND = {
-					OR = {
-						tier = KING
-						primary_title = {
-							tier = EMPEROR
-							has_title_flag = warlord_flag
+				AND={
+					OR={
+						tier=KING
+						primary_title={
+							tier=EMPEROR
+							has_title_flag=warlord_flag
 						}
-						AND = {
-							real_tier = EMPEROR
-							has_character_flag = coalition_won
-							NOT = {
-								primary_title = {
-									OR = {
-										has_title_flag = premier_title
-										NOT = {
-											any_previous_holder = { is_close_relative = ROOT }
+						AND={
+							k_confucian={
+								has_holder=no
+							}
+							primary_title={
+								tier=EMPEROR
+								has_title_flag=premier_title
+							}
+						}
+						AND={
+							real_tier=EMPEROR
+							has_character_flag=coalition_won
+							NOT={
+								primary_title={
+									OR={
+										has_title_flag=premier_title
+										NOT={
+											any_previous_holder={ is_close_relative=ROOT }
 										}
 									}
 								}
 							}
-							NOT = { has_character_flag = founded_empire }
+							NOT={ has_character_flag=founded_empire }
 						}
 					}
-					OR = {
-						prestige = 8000
-						AND = {
-							has_global_flag = founded_empire_flag
-							prestige = 4000
+					OR={
+						prestige=8000
+						AND={
+							has_global_flag=founded_empire_flag
+							prestige=4000
 						}
 					}
-					OR = {
-						NOT = { religion = confucian }
-						k_confucian = {
-							OR = {
-								has_holder = no
-								holder_scope = {
-									OR = {
-										character = ROOT
-										NOR = {
-											is_landed = no
-											any_demesne_title = {
-												de_jure_liege_or_above = ROOT
+					OR={
+						NOT={ religion=confucian }
+						k_confucian={
+							OR={
+								has_holder=no
+								holder_scope={
+									OR={
+										character=ROOT
+										NOR={
+											is_landed=no
+											any_demesne_title={
+												de_jure_liege_or_above=ROOT
 											}
-											capital_scope = {
-												owner = {
-													top_liege = {
-														character = ROOT
+											capital_scope={
+												owner={
+													top_liege={
+														character=ROOT
 													}
 												}
 											}
@@ -519,328 +532,323 @@ decisions = {
 					}
 				}
 			}
+			NAND={
+				ai=yes
+				primary_title={
+					tier=EMPEROR
+					NOR={
+						has_title_flag=premier_title
+						has_title_flag=warlord_flag
+					}
+					any_previous_holder={
+						dynasty=ROOT
+					}
+				}
+			}
 		}
-		allow = {
-			is_adult = yes
-			prisoner = no
-			NOT = { trait = incapable }
-			independent = yes
-			OR = {
-				OR = {
-					realm_size = 75
-					custom_tooltip = {
-						text = form_new_empire_requirement_tooltip
-						hidden_tooltip = {
-							any_demesne_title = {
-								count = 3
-								tier = KING
+		allow={
+			is_adult=yes
+			prisoner=no
+			NOT={ trait=incapable }
+			independent=yes
+			OR={
+				OR={
+					realm_size=75
+					custom_tooltip={
+						text=form_new_empire_requirement_tooltip
+						hidden_tooltip={
+							any_demesne_title={
+								count=3
+								tier=KING
 							}
 						}
 					}
 				}
-				AND = {
-					has_global_flag = founded_empire_flag
-					OR = {
-						realm_size = 50
-						custom_tooltip = {
-							text = form_new_empire_requirement_tooltip
-							hidden_tooltip = {
-								any_demesne_title = {
-									count = 2
-									tier = KING
+				AND={
+					has_global_flag=founded_empire_flag
+					OR={
+						realm_size=50
+						custom_tooltip={
+							text=form_new_empire_requirement_tooltip
+							hidden_tooltip={
+								any_demesne_title={
+									count=2
+									tier=KING
 								}
 							}
 						}
 					}
 				}
-				AND = {
-					has_artifact = imperial_seal
-					OR = {
-						NOT = { tier = EMPEROR }
-						primary_title = {
-							tier = EMPEROR
-							has_title_flag = warlord_flag
+				AND={
+					has_artifact=imperial_seal
+					OR={
+						NOT={ tier=EMPEROR }
+						primary_title={
+							tier=EMPEROR
+							has_title_flag=warlord_flag
 						}
 					}
 				}
 			}
-			OR = {
-				AND = {
-					has_global_flag = founded_empire_flag
-					OR = {
-						AND = {
-							trait = proud
-							prestige = 4000
+			OR={
+				AND={
+					has_global_flag=founded_empire_flag
+					OR={
+						AND={
+							trait=proud
+							prestige=4000
 						}
-						AND = {
-							trait = ambitious
-							prestige = 4000
+						AND={
+							trait=ambitious
+							prestige=4000
 						}
-						AND = {
-							trait = destined
-							prestige = 2000
+						AND={
+							trait=destined
+							prestige=2000
 						}
-						prestige = 8000
+						prestige=8000
 					}
 				}
-				AND = {
-					trait = proud
-					prestige = 8000
+				AND={
+					trait=proud
+					prestige=8000
 				}
-				AND = {
-					trait = ambitious
-					prestige = 8000
+				AND={
+					trait=ambitious
+					prestige=8000
 				}
-				AND = {
-					trait = destined
-					prestige = 4000
+				AND={
+					trait=destined
+					prestige=4000
 				}
-				prestige = 16000
+				prestige=16000
 			}
-			OR = {
-				AND = {
-					ai = yes
-					wealth = 250
+			OR={
+				AND={
+					ai=yes
+					wealth=250
 				}
-				wealth = 1000
+				wealth=1000
 			}
 		}
-		effect = {
-			custom_tooltip = { text = form_new_empire_tooltip }
-			chronicle = {
-				entry = CHRONICLE_FOUNDED_NEW_KINGDOM_OR_EMPIRE
-				portrait = [Root.GetID]
+		effect={
+			custom_tooltip={ text=form_new_empire_tooltip }
+			chronicle={
+				entry=CHRONICLE_FOUNDED_NEW_KINGDOM_OR_EMPIRE
+				portrait=[Root.GetID]
 			}
 			
 			#Allow for change of Dynasty
 			
-			hidden_tooltip = {
-				set_character_flag = founded_empire
-				set_global_flag = founded_empire_flag
+			hidden_tooltip={
+				wealth=-1000
 				
-				wealth = -1000
-				
-				if = {
-					limit = {
-						NOT = { has_landed_title = k_confucian }
-					}
-					add_claim = k_confucian
-				}
-				if = {
-					limit = {
-						k_confucian = { has_holder = no }
-					}
-					k_confucian = {
-						activate_title = { title = THIS status = yes }
-					}
-				}
-				
-				character_event = { id = DYN.1 }
+				character_event={ id=DYN.1 }
 			}
 		}
-		revoke_allowed = {
-			always = no
+		revoke_allowed={
+			always=no
 		}
-		ai_will_do = {
-			factor = 1
+		ai_will_do={
+			factor=1
 		}
 	}
 
 	# Hold Wargames - for nomads
-	hold_nomad_wargames = {
-		only_playable = yes
+	hold_nomad_wargames={
+		only_playable=yes
 		
-		potential = {
-			is_playable = yes
-			is_nomadic = yes
-			NOT = { has_character_modifier = holding_nomad_wargames }
-			NOT = { has_character_modifier = held_nomad_wargames }
+		potential={
+			is_playable=yes
+			is_nomadic=yes
+			NOT={ has_character_modifier=holding_nomad_wargames }
+			NOT={ has_character_modifier=held_nomad_wargames }
 		}
-		allow = {
-			is_adult = yes
-			prisoner = no
-			NOT = { trait = incapable }
-			NOT = { is_inaccessible_trigger = yes }
-			war = no
-			any_demesne_title = {
-				NOT = { higher_tier_than = count }
-				is_occupied = no
+		allow={
+			is_adult=yes
+			prisoner=no
+			NOT={ trait=incapable }
+			NOT={ is_inaccessible_trigger=yes }
+			war=no
+			any_demesne_title={
+				NOT={ higher_tier_than=count }
+				is_occupied=no
 			}
-			wealth = 20
-			prestige = 100
-			custom_tooltip = {
-				text = is_not_busy_trigger_tooltip
-				hidden_tooltip = { NOT = { has_character_flag = do_not_disturb } }
+			wealth=20
+			prestige=100
+			custom_tooltip={
+				text=is_not_busy_trigger_tooltip
+				hidden_tooltip={ NOT={ has_character_flag=do_not_disturb } }
 			}
 		}
-		effect = {
-			wealth = -30
-			add_character_modifier = {
-				name = holding_nomad_wargames
-				duration = -1
+		effect={
+			wealth=-30
+			add_character_modifier={
+				name=holding_nomad_wargames
+				duration=-1
 			}
-			set_character_flag = recent_minor_decision
-			set_character_flag = do_not_disturb
-			hidden_tooltip = { character_event = { id = HL.7000 } }
+			set_character_flag=recent_minor_decision
+			set_character_flag=do_not_disturb
+			hidden_tooltip={ character_event={ id=HL.7000 } }
 		}
-		revoke_allowed = {
-			always = no
+		revoke_allowed={
+			always=no
 		}
-		ai_will_do = {
-			factor = 0.1
-			modifier = {
-				factor = 0
-				NOT = {
-					wealth = 200
+		ai_will_do={
+			factor=0.1
+			modifier={
+				factor=0
+				NOT={
+					wealth=200
 				}
 			}
-			modifier = {
-				factor = 2
-				current_heir = {
-					dynasty = ROOT
-					combat_rating = 8
+			modifier={
+				factor=2
+				current_heir={
+					dynasty=ROOT
+					combat_rating=8
 				}
 			}
-			modifier = {
-				factor = 0.5
-				NOT = { martial = 10 }
+			modifier={
+				factor=0.5
+				NOT={ martial=10 }
 			}	
-			modifier = {
-				factor = 0
-				has_character_flag = recent_minor_decision
-				NOT = {
-					had_character_flag = {
-						flag = recent_minor_decision
-						days = 730
+			modifier={
+				factor=0
+				has_character_flag=recent_minor_decision
+				NOT={
+					had_character_flag={
+						flag=recent_minor_decision
+						days=730
 					}
 				}
 			}	
 		}
 	}
 	
-	convert_to_feudalism_indep  = {
-		only_independent = yes
-		is_high_prio = yes
+	convert_to_feudalism_indep ={
+		only_independent=yes
+		is_high_prio=yes
 		
-		potential = {
-			is_playable = yes
-			is_tribal = yes
-			independent = yes
+		potential={
+			is_playable=yes
+			is_tribal=yes
+			independent=yes
 		}
-		allow = {
-			war = no
-			custom_tooltip = {
-				text = TT_NOT_UNREFORMED_PAGAN
-				hidden_tooltip = {
-					OR = {
-						NOT = { religion_group = pagan_group }
-						is_reformed_religion = yes
+		allow={
+			war=no
+			custom_tooltip={
+				text=TT_NOT_UNREFORMED_PAGAN
+				hidden_tooltip={
+					OR={
+						NOT={ religion_group=pagan_group }
+						is_reformed_religion=yes
 					}
 				}
 			}
-			primary_title = { has_law = tribal_organization_4 }
-			capital_holding = {
-				OR = {
-					AND = {
-						holding_type = tribal
-						has_building = tb_hillfort_4
+			primary_title={ has_law=tribal_organization_4 }
+			capital_holding={
+				OR={
+					AND={
+						holding_type=tribal
+						has_building=tb_hillfort_4
 					}
-					holding_type = castle
+					holding_type=castle
 				}
 			}
 		}
 		
-		effect = {
+		effect={
 			
-			if = {
-				limit = {
-					NOT = { religion_group = chinese_religion }
+			if={
+				limit={
+					NOT={ religion_group=chinese_religion }
 				}
 				
-				if = {
-					limit = {
-						ai = no
+				if={
+					limit={
+						ai=no
 					}
-					chronicle = {
-						entry = CHRONICLE_ADOPTED_FEUDALISM
-						picture = GFX_evt_castle_construction
+					chronicle={
+						entry=CHRONICLE_ADOPTED_FEUDALISM
+						picture=GFX_evt_castle_construction
 					}
 				}
-				set_government_type = feudal_government
+				set_government_type=feudal_government
 			}
 			
-			if = {
-				limit = {
-					religion_group = chinese_religion
+			if={
+				limit={
+					religion_group=chinese_religion
 				}
 				
-				if = {
-					limit = {
-						ai = no
+				if={
+					limit={
+						ai=no
 					}
-					chronicle = {
-						entry = CHRONICLE_ADOPTED_IQTA
-						picture = GFX_evt_castle_construction
+					chronicle={
+						entry=CHRONICLE_ADOPTED_IQTA
+						picture=GFX_evt_castle_construction
 					}
 				}
-				set_government_type = muslim_government
+				set_government_type=muslim_government
 			}
 
-			if = {
-				limit = {
-					higher_tier_than = king
+			if={
+				limit={
+					higher_tier_than=king
 				}
-				primary_title = {
-					add_law = feudal_administration
+				primary_title={
+					add_law=feudal_administration
 				}
 			}
 			
-			hidden_tooltip = {
-				any_demesne_title = {
-					limit = {
-						tier = baron
-						holding_type = tribal
+			hidden_tooltip={
+				any_demesne_title={
+					limit={
+						tier=baron
+						holding_type=tribal
 					}
-					convert_to = CASTLE
-					refill_holding_levy = yes
+					convert_to=CASTLE
+					refill_holding_levy=yes
 					
-					if = {
-						limit = {
-							dejure_liege_title = {
-								holder = ROOT
-								location = {
-									num_of_empty_holdings = 2
+					if={
+						limit={
+							dejure_liege_title={
+								holder=ROOT
+								location={
+									num_of_empty_holdings=2
 								}
-								NOT = {
-									any_direct_de_jure_vassal_title = {
-										holding_type = city
+								NOT={
+									any_direct_de_jure_vassal_title={
+										holding_type=city
 									}
 								}
 							}
 						}
-						location = {
-							build_holding = {
-								type = city
+						location={
+							build_holding={
+								type=city
 							}
 						}
 					}
-					if = {
-						limit = {
-							dejure_liege_title = {
-								holder = ROOT
-								location = {
-									num_of_empty_holdings = 2
+					if={
+						limit={
+							dejure_liege_title={
+								holder=ROOT
+								location={
+									num_of_empty_holdings=2
 								}
-								NOT = {
-									any_direct_de_jure_vassal_title = {
-										holding_type = temple
+								NOT={
+									any_direct_de_jure_vassal_title={
+										holding_type=temple
 									}
 								}
 							}
 						}
-						location = {
+						location={
 							build_holding  ={
-								type = temple
+								type=temple
 							}
 						}
 					}
@@ -848,311 +856,374 @@ decisions = {
 			}
 		}
 		
-		ai_will_do = {
-			factor = 1
+		ai_will_do={
+			factor=1
 		}
 	}
 	
-	convert_to_feudalism_vassal = {
-		only_rulers = yes
-		is_high_prio = yes
+	convert_to_feudalism_vassal={
+		only_rulers=yes
+		is_high_prio=yes
 		
-		potential = {
-			is_ruler = yes
-			is_tribal = yes
-			independent = no
+		potential={
+			is_ruler=yes
+			is_tribal=yes
+			independent=no
 		}
-		allow = {
-			war = no
-			custom_tooltip = {
-				text = TT_NOT_UNREFORMED_PAGAN
-				hidden_tooltip = {
-					OR = {
-						NOT = { religion_group = pagan_group }
-						is_reformed_religion = yes
+		allow={
+			war=no
+			custom_tooltip={
+				text=TT_NOT_UNREFORMED_PAGAN
+				hidden_tooltip={
+					OR={
+						NOT={ religion_group=pagan_group }
+						is_reformed_religion=yes
 					}
 				}
 			}
-			liege = {
-				OR = {
-					is_feudal = yes
-					is_republic = yes
-					AND = {
-						is_theocracy = yes
-						custom_tooltip = {
-							text = TT_NOT_UNREFORMED_PAGAN
-							hidden_tooltip = {
-								OR = {
-									NOT = { religion_group = pagan_group }
-									is_reformed_religion = yes
+			liege={
+				OR={
+					is_feudal=yes
+					is_republic=yes
+					AND={
+						is_theocracy=yes
+						custom_tooltip={
+							text=TT_NOT_UNREFORMED_PAGAN
+							hidden_tooltip={
+								OR={
+									NOT={ religion_group=pagan_group }
+									is_reformed_religion=yes
 								}
 							}
 						}
 					}
 				}
 			}
-			capital_holding = {
-				OR = {
-					AND = {
-						holding_type = tribal
-						has_building = tb_hillfort_4
+			OR={
+				capital_holding={
+					OR={
+						AND={
+							holding_type=tribal
+							has_building=tb_hillfort_4
+						}
+						holding_type=castle
 					}
-					holding_type = castle
+				}
+				AND={
+					NOT={ tier=BARON }
+					capital_scope={
+						any_province_holding={
+							holding_type=castle
+							holder_scope={
+								OR={
+									character=ROOT
+									is_liege_or_above=ROOT
+								}
+							}
+						}
+					}
 				}
 			}
 		}
 		
-		effect = {
-			if = {
-				limit = {
-					NOT = { religion_group = chinese_religion }
+		effect={
+			if={
+				limit={
+					NOT={ religion_group=chinese_religion }
 				}
 				
-				if = {
-					limit = {
-						ai = no
+				if={
+					limit={
+						ai=no
 					}
-					chronicle = {
-						entry = CHRONICLE_ADOPTED_FEUDALISM
-						picture = GFX_evt_castle_construction
+					chronicle={
+						entry=CHRONICLE_ADOPTED_FEUDALISM
+						picture=GFX_evt_castle_construction
 					}
 				}
-				set_government_type = feudal_government
+				set_government_type=feudal_government
 			}
 			
-			if = {
-				limit = {
-					religion_group = chinese_religion
+			if={
+				limit={
+					religion_group=chinese_religion
 				}
 				
-				if = {
-					limit = {
-						ai = no
+				if={
+					limit={
+						ai=no
 					}
-					chronicle = {
-						entry = CHRONICLE_ADOPTED_IQTA
-						picture = GFX_evt_castle_construction
+					chronicle={
+						entry=CHRONICLE_ADOPTED_IQTA
+						picture=GFX_evt_castle_construction
 					}
 				}
-				set_government_type = muslim_government
+				set_government_type=muslim_government
 			}
 			
-			hidden_tooltip = {
-				any_demesne_title = {
-					limit = {
-						tier = baron
-						holding_type = tribal
-					}
-					convert_to = CASTLE
-					refill_holding_levy = yes
-					
-					if = {
-						limit = {
-							dejure_liege_title = {
-								holder = ROOT
-								location = {
-									num_of_empty_holdings = 2
-								}
-								NOT = {
-									any_direct_de_jure_vassal_title = {
-										holding_type = city
+			hidden_tooltip={
+				if={
+					limit={
+						capital_holding={
+							holding_type=tribal
+							ROOT={ NOT={ tier=BARON } }
+						}
+						capital_scope={
+							any_province_holding={
+								holding_type=castle
+								holder_scope={
+									OR={
+										character=ROOT
+										is_liege_or_above=ROOT
 									}
 								}
 							}
 						}
-						location = {
-							build_holding = {
-								type = city
+					}
+					
+					capital_scope={
+						random_province_holding={
+							limit={
+								holding_type=castle
+								holder_scope={
+									OR={
+										character=ROOT
+										is_liege_or_above=ROOT
+									}
+								}
+							}
+							if={
+								limit={
+									NOT={ holder=ROOT }
+								}
+								usurp_title=ROOT
+							}
+							make_capital_holding=yes
+							ROOT={ set_character_flag=feudalize_handled_capital }
+						}
+					}
+				}
+				
+				any_demesne_title={
+					limit={
+						tier=baron
+						holding_type=tribal
+						location={
+							capital_holding={
+								NOT={ holding_type=castle }
 							}
 						}
 					}
-					if = {
-						limit = {
-							dejure_liege_title = {
-								holder = ROOT
-								location = {
-									num_of_empty_holdings = 2
+					convert_to=CASTLE
+					refill_holding_levy=yes
+					
+					if={
+						limit={
+							dejure_liege_title={
+								holder=ROOT
+								location={
+									num_of_empty_holdings=2
 								}
-								NOT = {
-									any_direct_de_jure_vassal_title = {
-										holding_type = temple
+								NOT={
+									any_direct_de_jure_vassal_title={
+										holding_type=city
 									}
 								}
 							}
 						}
-						location = {
-							build_holding = {
-								type = temple
+						location={
+							build_holding={
+								type=city
+							}
+						}
+					}
+					if={
+						limit={
+							dejure_liege_title={
+								holder=ROOT
+								location={
+									num_of_empty_holdings=2
+								}
+								NOT={
+									any_direct_de_jure_vassal_title={
+										holding_type=temple
+									}
+								}
+							}
+						}
+						location={
+							build_holding={
+								type=temple
 							}
 						}
 					}
 				}
 				
-				liege = {
-					character_event = { id = 55100 } # Notify Liege
+				liege={
+					character_event={ id=55100 } # Notify Liege
 				}
 			}
 		}
 		
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0.001
-				liege = {
-					OR = {
-						NOT = { religion_group = ROOT }
-						AND = {
-							religion_group = pagan_group
-							NOT = { religion = ROOT }
+		ai_will_do={
+			factor=1
+			modifier={
+				factor=0.001
+				liege={
+					OR={
+						NOT={ religion_group=ROOT }
+						AND={
+							religion_group=pagan_group
+							NOT={ religion=ROOT }
 						}
 					}
 				}
 			}
-			modifier = {
-				factor = 0.01
-				liege = {
-					NOT = { culture_group = ROOT }
+			modifier={
+				factor=0.01
+				liege={
+					NOT={ culture_group=ROOT }
 				}
 			}
 			
-			modifier = {
-				factor = 0.01
-				liege = {
-					religion_group = ROOT
-					NOT = { religion_group = pagan_group }
-					NOT = { religion = ROOT }
+			modifier={
+				factor=0.01
+				liege={
+					religion_group=ROOT
+					NOT={ religion_group=pagan_group }
+					NOT={ religion=ROOT }
 				}
 			}
-			modifier = {
-				factor = 0.1
-				liege = {
-					culture_group = ROOT
-					NOT = { culture = ROOT }
+			modifier={
+				factor=0.1
+				liege={
+					culture_group=ROOT
+					NOT={ culture=ROOT }
 				}
 			}
 		}
 	}
 	
-	convert_to_republic_indep  = {
-		only_independent = yes
-		is_high_prio = yes
+	convert_to_republic_indep ={
+		only_independent=yes
+		is_high_prio=yes
 		
-		potential = {
-			is_playable = yes
-			is_tribal = yes
-			independent = yes
-			has_dlc = "The Republic"
+		potential={
+			is_playable=yes
+			is_tribal=yes
+			independent=yes
+			has_dlc="The Republic"
 		}
-		allow = {
-			war = no
-			is_female = no
-			higher_tier_than = COUNT
-			custom_tooltip = {
-				text = TT_NOT_UNREFORMED_PAGAN
-				hidden_tooltip = {
-					OR = {
-						NOT = { religion_group = pagan_group }
-						is_reformed_religion = yes
+		allow={
+			war=no
+			is_female=no
+			higher_tier_than=COUNT
+			custom_tooltip={
+				text=TT_NOT_UNREFORMED_PAGAN
+				hidden_tooltip={
+					OR={
+						NOT={ religion_group=pagan_group }
+						is_reformed_religion=yes
 					}
 				}
 			}
-			primary_title = { has_law = tribal_organization_4 }
-			capital_scope = {
-				port = yes
+			primary_title={ has_law=tribal_organization_4 }
+			capital_scope={
+				port=yes
 			}
-			capital_holding = {
-				OR = {
-					AND = {
-						holding_type = tribal
-						has_building = tb_market_town_4
+			capital_holding={
+				OR={
+					AND={
+						holding_type=tribal
+						has_building=tb_market_town_4
 					}
-					holding_type = city
+					holding_type=city
 				}
 			}
 		}
 		
-		effect = {
-			hidden_tooltip = {
-				create_family_palace = yes
+		effect={
+			hidden_tooltip={
+				create_family_palace=yes
 				
-				set_government_type = merchant_republic_government
+				set_government_type=merchant_republic_government
 				
-				if = {
-					limit = {
-						NOT = {
-							num_of_government_vassals = {
-								government = merchant_republic_government
-								value = 1
+				if={
+					limit={
+						NOT={
+							num_of_government_vassals={
+								government=merchant_republic_government
+								value=1
 							}
 						}
 					}
 					
-					any_unique_dynasty_vassal = { # gives random vassals a family palace
-						count = 4
-						limit = {
-							is_female = no
-							OR = {
-								is_republic = yes
-								is_tribal = yes
+					any_unique_dynasty_vassal={ # gives random vassals a family palace
+						count=4
+						limit={
+							is_female=no
+							OR={
+								is_republic=yes
+								is_tribal=yes
 							}
-							is_patrician = no
-							prisoner = no
-							NOT = { trait = incapable }
-							is_adult = yes
-							NOT = { 
-								dynasty = none 
+							is_patrician=no
+							prisoner=no
+							NOT={ trait=incapable }
+							is_adult=yes
+							NOT={ 
+								dynasty=none 
 							}
 						}
 						
-						if = {
-							limit = { is_tribal = yes }
+						if={
+							limit={ is_tribal=yes }
 							
-							hidden_tooltip = {
-								any_demesne_title = {
-									limit = {
-										tier = baron
-										holding_type = tribal
+							hidden_tooltip={
+								any_demesne_title={
+									limit={
+										tier=baron
+										holding_type=tribal
 									}
-									convert_to = CITY
-									refill_holding_levy = yes
+									convert_to=CITY
+									refill_holding_levy=yes
 									
-									if = {
-										limit = {
-											dejure_liege_title = {
-												holder = PREVPREV
-												location = {
-													num_of_empty_holdings = 2
+									if={
+										limit={
+											dejure_liege_title={
+												holder=PREVPREV
+												location={
+													num_of_empty_holdings=2
 												}
-												NOT = {
-													any_direct_de_jure_vassal_title = {
-														holding_type = castle
+												NOT={
+													any_direct_de_jure_vassal_title={
+														holding_type=castle
 													}
 												}
 											}
 										}
-										location = {
-											build_holding = {
-												type = castle
+										location={
+											build_holding={
+												type=castle
 											}
 										}
 									}
-									if = {
-										limit = {
-											dejure_liege_title = {
-												holder = PREVPREV
-												location = {
-													num_of_empty_holdings = 2
+									if={
+										limit={
+											dejure_liege_title={
+												holder=PREVPREV
+												location={
+													num_of_empty_holdings=2
 												}
-												NOT = {
-													any_direct_de_jure_vassal_title = {
-														holding_type = temple
+												NOT={
+													any_direct_de_jure_vassal_title={
+														holding_type=temple
 													}
 												}
 											}
 										}
-										location = {
-											build_holding = {
-												type = temple
+										location={
+											build_holding={
+												type=temple
 											}
 										}
 									}
@@ -1160,76 +1231,76 @@ decisions = {
 							}
 						}
 						
-						create_family_palace = yes
+						create_family_palace=yes
 					}
 				}
 				
-				any_demesne_title = {
-					limit = {
-						tier = baron
-						holding_type = tribal
+				any_demesne_title={
+					limit={
+						tier=baron
+						holding_type=tribal
 					}
-					convert_to = CITY
-					refill_holding_levy = yes
+					convert_to=CITY
+					refill_holding_levy=yes
 					
-					if = {
-						limit = {
-							dejure_liege_title = {
-								holder = ROOT
-								location = {
-									num_of_empty_holdings = 2
+					if={
+						limit={
+							dejure_liege_title={
+								holder=ROOT
+								location={
+									num_of_empty_holdings=2
 								}
-								NOT = {
-									any_direct_de_jure_vassal_title = {
-										holding_type = castle
+								NOT={
+									any_direct_de_jure_vassal_title={
+										holding_type=castle
 									}
 								}
 							}
 						}
-						location = {
-							build_holding = {
-								type = castle
+						location={
+							build_holding={
+								type=castle
 							}
 						}
 					}
-					if = {
-						limit = {
-							dejure_liege_title = {
-								holder = ROOT
-								location = {
-									num_of_empty_holdings = 2
+					if={
+						limit={
+							dejure_liege_title={
+								holder=ROOT
+								location={
+									num_of_empty_holdings=2
 								}
-								NOT = {
-									any_direct_de_jure_vassal_title = {
-										holding_type = temple
+								NOT={
+									any_direct_de_jure_vassal_title={
+										holding_type=temple
 									}
 								}
 							}
 						}
-						location = {
+						location={
 							build_holding  ={
-								type = temple
+								type=temple
 							}
 						}
 					}
 				}
 			}
 			
-			if = {
-				limit = {
-					ai = no
+			if={
+				limit={
+					ai=no
 				}
-				chronicle = {
-					entry = CHRONICLE_FOUNDED_MERCHANT_REPUBLIC
-					picture = GFX_evt_busy_trading_dock_republic
+				chronicle={
+					entry=CHRONICLE_FOUNDED_MERCHANT_REPUBLIC
+					picture=GFX_evt_busy_trading_dock_republic
 				}
 			}
 			
-			set_government_type = merchant_republic_government
+			set_government_type=merchant_republic_government
 		}
 		
-		ai_will_do = {
-			factor = 0
+		ai_will_do={
+			factor=0
 		}
 	}	
 }

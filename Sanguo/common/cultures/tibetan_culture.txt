@@ -1,8 +1,9 @@
-tibetan = {
-		graphical_cultures = { tibetangfx easterngfx }
+tibetan_group = {
+	graphical_cultures = { tibetangfx mongolgfx indiangfx muslimgfx }
 	
 	di = {
-		graphical_cultures = { tibetangfx easterngfx }
+		graphical_cultures = { tibetangfx mongolgfx indiangfx muslimgfx }
+		secondary_event_pictures = bedouin_arabic
 		
 		color = { 0.5 0.1 0.7 }
 		
@@ -21,7 +22,7 @@ tibetan = {
 			Ji Jia Jian Jiankang Jin Jing Jingming Jingwu
 			Jiong Jishi Ju Jun
 			Kun
-			Lao Lei Leng Li Lin Ling Liu Long Lou Luo
+			Lao Lei Leiding Leng Li Lin Ling Liu Long Lou Luo
 			Mao Maosou Maren Meng Mengsun Midang Ming
 			Nan Nanda Nandang Nandi Ning
 			Pi Ping Po Polou
@@ -71,9 +72,13 @@ tibetan = {
 		mother_name_chance = 25
 
 		modifier = default_culture_modifier
+		
+		allow_looting = yes
 	}
+	
 	qiang = {
-		graphical_cultures = { tibetangfx easterngfx }
+		graphical_cultures = { tibetangfx mongolgfx indiangfx muslimgfx }
+		secondary_event_pictures = bedouin_arabic
 		
 		horde = yes
 		
@@ -138,5 +143,7 @@ tibetan = {
 		mother_name_chance = 25
 
 		modifier = qiang_culture_modifier
+		
+		allow_looting = yes
 	}
 }

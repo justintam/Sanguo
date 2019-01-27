@@ -27,5 +27,5 @@
 	liege=d_guangyang
 }
 207.1.1={
-	holder=433 #Cao Ren
+	holder=1307 #Ding Zhiren
 }

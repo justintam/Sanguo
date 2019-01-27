@@ -1,23 +1,23 @@
 # e_china
 1.1.1={
-	law = agnatic_succession
-	law = succ_gavelkind
+	law=agnatic_succession
+	law=succ_gavelkind
 }
 1.1.1={
 	liege=e_china
-	vice_royalty = yes
+	vice_royalty=yes
 }
 147.1.1={
 	holder=1287 #Yang Bing
 }
 151.1.1={
-	holder=0 #None
+	holder=0
 }
 170.1.1={
 	holder=50 #Liu Yan
 }
 175.1.1={
-	holder=0 #None
+	holder=0
 }
 180.1.1={
 	holder=39 #Liu Yu
@@ -38,9 +38,12 @@
 	liege=e_gongsun
 	holder=900 #Gongsun Zan
 }
-199.1.1={
+199.3.1={
 	liege=e_yuan
 	holder=708 #Yuan Xi
+}
+204.9.13={
+	liege=0
 }
 205.6.1={
 	liege=e_china
@@ -54,13 +57,15 @@
 }
 213.6.1={
 	active=no
-	holder=0 #None
+	holder=0
 }
-#220 Cui Lin
 220.12.10={
 	liege=e_wei
+#220 Cui Lin
 }
 221.3.1={
 	holder=20477 #Wu Zhi
 }
 #Wang Xiong in 235
+
+#Guanqiu Jian

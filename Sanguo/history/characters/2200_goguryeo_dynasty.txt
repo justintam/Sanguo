@@ -254,7 +254,15 @@
 		birth=yes
 	}
 	179.1.1={
-		add_claim = k_goguryeo
+		employer=2215
+	}
+	184.1.1={
+		effect={
+			health=4
+		}
+	}
+	197.1.1={
+		employer=2216
 	}
 	198.1.1={
 		death={death_reason=death_suicide}
@@ -283,6 +291,11 @@
 	180.1.1={
 		add_spouse=2305
 	}
+	184.1.1={
+		effect={
+			health=3
+		}
+	}
 	197.1.1={
 		death=yes
 	}
@@ -298,6 +311,11 @@
 	}
 	179.1.1={
 		employer=2215
+	}
+	184.1.1={
+		effect={
+			health=5
+		}
 	}
 	197.1.1={
 		name="Sansang"
@@ -325,6 +343,11 @@
 	}
 	179.1.1={
 		employer=2215
+	}
+	184.1.1={
+		effect={
+			health=4
+		}
 	}
 	197.1.1={
 		employer=2216
@@ -403,6 +426,11 @@
 	120.1.1={
 		birth=yes
 	}
+	184.1.1={
+		effect={
+			health=3
+		}
+	}
 	192.1.1={
 		death=yes
 	}
@@ -415,6 +443,11 @@
 	father=2214
 	140.1.1={
 		birth=yes
+	}
+	184.1.1={
+		effect={
+			health=2
+		}
 	}
 	208.1.1={
 		death=yes
@@ -444,6 +477,11 @@
 	father=2222
 	162.1.1={
 		birth=yes
+	}
+	184.1.1={
+		effect={
+			health=2
+		}
 	}
 	230.1.1={
 		death=yes

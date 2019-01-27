@@ -9,3 +9,9 @@
 184.1.1={
 	holder=3505 #Random
 }
+215.1.1={
+	liege=d_wuling
+}
+220.1.1={
+	liege=d_lingling
+}

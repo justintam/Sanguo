@@ -14,6 +14,7 @@ b_hutou = tribal
 # Misc
 culture = shanyue
 religion = animist
+terrain = plains
 
 #History
 204.1.1={

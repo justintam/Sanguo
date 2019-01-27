@@ -10,7 +10,11 @@
 	liege=d_black #Heishan Bandits
 	holder=2621 #Yudu
 }
-193.1.1={
+189.1.1={
+	liege=k_xiongnu
+	holder=1501 #Yufuluo
+}
+196.1.1={
 	liege=d_wei
 	holder=4159 #Random
 }

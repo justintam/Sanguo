@@ -327,6 +327,12 @@ character_event = {
 		}
 	}
 	
+	immediate = {
+		location = {
+			save_event_target_as = location_religion
+		}
+	}
+	
 	weight_multiplier = {
 		days = 1		
 		modifier = {
@@ -399,10 +405,7 @@ character_event = {
 				}
 			}
 		}
-		
-		location = {
-			reverse_religion = ROOT
-		}
+		religion = event_target:location_religion
 	}
 	option = {
 		name = EVTOPTB_SOA_4020
@@ -606,7 +609,6 @@ letter_event = {
 	option = { # Accept, but keep old religion secretly
 		name = ACCEPT_SECRETLY_WORSHIP_OLD_RELIGION
 		ai_chance = {
-			#TODO_MNM maybe more AI modifiers?
 			modifier = {
 				factor = 2.0
 				trait = zealous

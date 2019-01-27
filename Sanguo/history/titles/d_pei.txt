@@ -37,5 +37,10 @@
 #}
 220.12.10={
 	vice_royalty=yes
-	holder=4169 #Random
+	holder=30400 #Sun Li
 }
+
+
+
+
+#TBD

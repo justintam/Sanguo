@@ -13,8 +13,8 @@
 184.1.1={
 	holder=156 #Zhao Fan
 }
-209.2.1={
-	liege=0 #Independent
+208.9.1={
+	liege=0
 }
 209.3.1={
 	liege=k_jing
@@ -23,6 +23,9 @@
 215.1.1={
 	liege=e_sun
 	holder=578 #Quan Rou
+}
+220.2.1={
+	liege=k_jing
 }
 #Li Su
 #229

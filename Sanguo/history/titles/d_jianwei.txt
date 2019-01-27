@@ -13,8 +13,16 @@
 184.1.1={
 	holder=1015 #Ren Qi
 }
-191.1.1={
+190.1.1={
+	liege=0
+}
+191.6.1={
+	liege=k_yi
 	holder=3609 #Gong Yang
+}
+201.6.1={
+	holder=3762 #Cheng Ji
+	#Cheng Ji - TBD Jiangyang from south Jianwei
 }
 210.1.1={
 	holder=3617 #He Zong
@@ -22,5 +30,13 @@
 214.1.1={
 	holder=3616 #Li Yan
 }
-#Gong Chen
-#Li Miao
+220.1.1={
+	holder=3633 #Gong Chen
+}
+#Wang Shi - Wang Clan dies in 225
+228.1.1={
+	holder=3610 #Li Miao
+}
+
+
+#TBD

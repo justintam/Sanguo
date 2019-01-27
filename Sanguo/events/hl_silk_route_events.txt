@@ -25,17 +25,38 @@ character_event = {
 	
 	trigger = {
 		has_dlc = "Horse Lords"
+		conditional_tooltip = {
+			trigger = { 
+				has_dlc = "Jade Dragon"
+			}
+	        NOT = { offmap_china = { governor = { character = ROOT } } }
+	        offmap_china = {
+	            NOR = {
+	                has_status = china_civil_war
+	                has_status = china_plague
+	            }
+	        }
+		}
 		higher_tier_than = COUNT
 		NOR = {
 			has_character_flag = had_chinese_envoy
 			has_character_flag = do_not_disturb
 			trait = infirm
 		}
-		capital_scope = {
-			OR = {
-				region = world_central_asia
-				region = world_korea
-				region = world_manchu
+		OR = {
+			AND = {
+				has_dlc = "Jade Dragon"
+	      	  	china_diplo_interaction_trigger = yes
+	      	}
+	      	AND = {
+	      		NOT = { has_dlc = "Jade Dragon" }
+				capital_scope = {
+					OR = {
+						region = world_central_asia
+						region = world_korea
+						region = world_manchu
+					}
+				}
 			}
 		}
 		any_demesne_province = {
@@ -64,6 +85,10 @@ character_event = {
 	option = {
 		name = EVTOPTA_HL_5000
 		scaled_wealth = -1.5
+		if = {
+			limit = { has_dlc = "Jade Dragon" }
+			add_grace_minor_effect = yes
+		}
 		hidden_tooltip = {
 			character_event = {	id = HL.5001 days = 90 random = 41 }
 		}
@@ -72,6 +97,11 @@ character_event = {
 	option = {
 		name = EVTOPTB_HL_5000
 		hidden_tooltip = {
+			if = {
+				limit = { has_dlc = "Jade Dragon" }
+				offmap_china = { governor = { character_event = { id = HL.5062 days = 90 random = 41 } } }
+				break = yes
+			}
 			letter_event = { id = HL.5048 days = 90 random = 41 }
 		}
 	}
@@ -93,7 +123,7 @@ character_event = {
 		}
 		create_character = {
 			random_traits = no
-			dynasty = NONE
+			dynasty = actually_culture
 			religion = confucian
 			culture = han
 			female = no
@@ -159,6 +189,10 @@ character_event = {
 		hidden_tooltip = {
 			character_event = { id = HL.5002 days = 365 } # Determine random events
 		}
+		if = {
+			limit = { has_dlc = "Jade Dragon" }
+			add_grace_trivial_effect = yes
+		}
 	}
 	
 	option = {
@@ -167,11 +201,16 @@ character_event = {
 			factor = 0
 		}
 		hidden_tooltip = { # Angry Emperor
+			if = {
+				limit = { has_dlc = "Jade Dragon" }
+				offmap_china = { governor = { character_event = { id = HL.5062 days = 15 random = 15 } } }
+				break = yes
+			}
 			letter_event = { id = HL.5048 days = 15 random = 15 }
 		}
 		create_character = {
 			random_traits = no
-			dynasty = NONE
+			dynasty = actually_culture
 			religion = confucian
 			culture = han
 			female = no
@@ -462,6 +501,10 @@ province_event = {
 			modifier = surge_of_traders
 			months = 60
 		}
+		if = {
+			limit = { has_dlc = "Jade Dragon" }
+			add_grace_trivial_effect = yes
+		}
 	}
 }
 
@@ -549,6 +592,10 @@ character_event = {
 			set_character_flag = reimbursed_trader
 			character_event = { id = HL.5008 days = 7 }
 		}
+		if = {
+			limit = { has_dlc = "Jade Dragon" }
+			add_grace_trivial_effect = yes
+		}
 	}
 	
 	option = {
@@ -563,6 +610,10 @@ character_event = {
 		}
 		hidden_tooltip = {
 			character_event = { id = HL.5008 days = 7 }
+		}
+		if = {
+			limit = { has_dlc = "Jade Dragon" }
+			detract_grace_trivial_effect = yes
 		}
 	}
 }
@@ -597,6 +648,10 @@ character_event = {
 		}
 		scaled_wealth = 0.5
 		clr_character_flag = reimbursed_trader
+		if = {
+			limit = { has_dlc = "Jade Dragon" }
+			add_grace_trivial_effect = yes
+		}
 	}
 	
 	option = {
@@ -609,6 +664,10 @@ character_event = {
 			}
 		}
 		clr_character_flag = reimbursed_trader
+		if = {
+			limit = { has_dlc = "Jade Dragon" }
+			detract_grace_trivial_effect = yes
+		}
 	}
 }
 
@@ -671,6 +730,10 @@ character_event = {
 				months = 60
 			}
 		}
+		if = {
+			limit = { has_dlc = "Jade Dragon" }
+			add_grace_trivial_effect = yes
+		}
 	}
 	
 	option = {
@@ -684,6 +747,10 @@ character_event = {
 				modifier = grievously_offended
 				months = 60
 			}
+		}
+		if = {
+			limit = { has_dlc = "Jade Dragon" }
+			detract_grace_trivial_effect = yes
 		}
 	}
 	
@@ -1101,6 +1168,10 @@ character_event = {
 			character_event = { id = HL.5049 } # flag-clearing
 			event_target:trade_province = { province_event = { id = HL.5047 } } # clear governor modifier
 		}
+		if = {
+			limit = { has_dlc = "Jade Dragon" }
+			detract_grace_major_effect = yes
+		}
 	}
 }
 
@@ -1151,6 +1222,10 @@ character_event = {
 				}
 			}
 		}
+		if = {
+			limit = { has_dlc = "Jade Dragon" }
+			add_grace_trivial_effect = yes
+		}
 	}
 	
 	option = {
@@ -1161,6 +1236,10 @@ character_event = {
 		}
 		event_target:trade_province = {
 			remove_province_modifier = trade_governor
+		}
+		if = {
+			limit = { has_dlc = "Jade Dragon" }
+			detract_grace_medium_effect = yes
 		}
 	}
 }
@@ -1194,6 +1273,10 @@ character_event = {
 	option = {
 		name = EVTOPTA_HL_5016
 		scaled_wealth = -0.7
+		if = {
+			limit = { has_dlc = "Jade Dragon" }
+			detract_grace_trivial_effect = yes
+		}
 	}
 	
 	option = {
@@ -1201,6 +1284,10 @@ character_event = {
 		scaled_wealth = -0.7
 		event_target:chinese_envoy = {
 			imprison = ROOT
+		}
+		if = {
+			limit = { has_dlc = "Jade Dragon" }
+			detract_grace_medium_effect = yes
 		}
 	}
 }
@@ -1247,6 +1334,10 @@ character_event = {
 				months = 24
 			}
 		}
+		if = {
+			limit = { has_dlc = "Jade Dragon" }
+			add_grace_trivial_effect = yes
+		}
 	}
 	
 	option = {
@@ -1263,6 +1354,10 @@ character_event = {
 			}
 		}
 		set_character_flag = chinese_envoy_snake_ban
+		if = {
+			limit = { has_dlc = "Jade Dragon" }
+			detract_grace_trivial_effect = yes
+		}
 	}
 }
 
@@ -1385,6 +1480,10 @@ letter_event = {
 				months = 60
 			}
 		}
+		if = {
+			limit = { has_dlc = "Jade Dragon" }
+			detract_grace_major_effect = yes
+		}
 	}
 }
 
@@ -1407,6 +1506,15 @@ character_event = {
 		}
 		event_target:chinese_envoy = { clr_character_flag = is_chinese_envoy }
 	}
+}
+
+# Ping Emperor
+character_event = {
+	id = HL.5062
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = { FROM = { letter_event = { id = HL.5048 } } }
 }
 
 ###
@@ -1525,6 +1633,7 @@ province_event = {
 			months = 180
 		}
 		holder_scope = {
+			show_scope_change = no
 			job_marshal = {
 				if = {
 					limit = {
@@ -1542,6 +1651,7 @@ province_event = {
 				if = {
 					limit = {
 						combat_rating = 1
+						NOT = { combat_rating = 30 }
 					}
 					tooltip = {
 						random = {

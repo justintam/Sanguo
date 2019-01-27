@@ -17,5 +17,11 @@
 }
 184.10.1={
 	vice_royalty = yes
-	holder=3560 #Random
+	holder=1306 #Ding Lei
+}
+204.10.1={
+	liege=k_qing
+}
+205.2.1={
+	liege=k_ji
 }

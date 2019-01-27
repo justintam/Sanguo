@@ -14,5 +14,6 @@ b_mayishu = temple
 # Misc
 culture = nanman
 religion = huojiao
+terrain = mountain
 
 #History

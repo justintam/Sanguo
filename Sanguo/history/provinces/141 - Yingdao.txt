@@ -13,8 +13,9 @@ b_yingdao = castle
 #b_youting = city
 
 # Misc
-culture = han
-religion = confucian
+culture = bandunman
+religion = baihu
+terrain = plains
 
 #History
 214.1.1={

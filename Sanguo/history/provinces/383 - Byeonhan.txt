@@ -14,5 +14,6 @@ b_anya = temple
 # Misc
 culture = samhan
 religion = shamanist
+terrain = forest
 
 #History

@@ -12,7 +12,11 @@ b_pingyuanxiang = city
 #b_heixian = castle
 
 # Misc
-culture = bandunman
-religion = baihu
+culture = han
+religion = confucian
+terrain = mountain
 
 #History
+190.1.1={
+	religion=tianshi
+}

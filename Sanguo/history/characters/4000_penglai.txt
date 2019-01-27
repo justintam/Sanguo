@@ -1,13 +1,59 @@
 4000 = {
 	name="Sheng"
 	dynasty=1570
+	diplomacy=100
+	martial=100
+	stewardship=100
+	intrigue=100
+	learning=100
+	fertility=0
+	health=1000000
 	religion="tianshi"
 	culture="han"
 	trait="locked"
 	disallow_random_traits=yes
-	160.1.1={
+	168.1.1={
 		birth=yes
-		health = 100
+	}
+	189.9.1={
+		effect = {
+			set_global_flag = ten_eunuchs_end
+		}
+	}
+	190.4.9={
+		effect = {
+			set_global_flag = dong_zhuo_retreat
+		}
+	}
+	190.10.1={
+		effect = {
+			set_global_flag = liang_rebel_end
+		}
+	}
+	192.5.22={
+		effect = {
+			set_global_flag = lu_bu_plot_end
+		}
+	}
+	196.1.1={
+		effect = {
+			set_global_flag = changan_duel_end
+		}
+	}
+	199.1.1={
+		effect = {
+			set_global_flag = north_unify_end
+		}
+	}
+	205.5.1={
+		effect = {
+			set_global_flag = yellow_turban_end
+		}
+	}
+	220.12.10={
+		effect = {
+			set_global_flag = founded_empire_flag
+		}
 	}
 	1000.1.1={
 		death = yes

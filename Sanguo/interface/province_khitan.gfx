@@ -1,6 +1,102 @@
-# Definitions for khitan culture holding graphics
-spriteTypes = {
+# Definitions for chinese culture holding graphics
+### Sanguo
 
+spriteTypes = {
+	spriteType = {
+		name = "GFX_settlement_temple_khitangfx_chinesesgfx"
+		texturefile = "gfx\\interface\\placeholder_temple_mongol.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_khitangfx_chinesesgfx_looted"
+		texturefile = "gfx\\interface\\placeholder_temple_mongol_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_khitangfx_japanesegfx"
+		texturefile = "gfx\\interface\\placeholder_temple_mongol.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_khitangfx_japanesegfx_looted"
+		texturefile = "gfx\\interface\\placeholder_temple_mongol_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_khitangfx_koreangfx"
+		texturefile = "gfx\\interface\\placeholder_temple_mongol.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_khitangfx_koreangfx_looted"
+		texturefile = "gfx\\interface\\placeholder_temple_mongol_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_khitangfx_kushangfx"
+		texturefile = "gfx\\interface\\placeholder_temple_mongol.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_khitangfx_kushangfx_looted"
+		texturefile = "gfx\\interface\\placeholder_temple_mongol_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_khitangfx_nanmangfx"
+		texturefile = "gfx\\interface\\placeholder_temple_mongol.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_khitangfx_nanmangfx_looted"
+		texturefile = "gfx\\interface\\placeholder_temple_mongol_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_khitangfx_tibetangfx"
+		texturefile = "gfx\\interface\\placeholder_temple_mongol.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_khitangfx_tibetangfx_looted"
+		texturefile = "gfx\\interface\\placeholder_temple_mongol_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+
+### Frame
+	spriteType = {
+		name = "GFX_province_settlement_frame_khitangfx"
+		texturefile = "gfx\\interface\\province_settlement_frame_mongolgfx.tga"
+	}
+
+	spriteType = {
+		name = "GFX_province_capital_settlement_frame_khitangfx"
+		texturefile = "gfx\\interface\\province_capital_settlement_frame_mongolgfx.tga"
+	}
+	
 ### Castle
 	spriteType = {
 		name = "GFX_settlement_castle_khitangfx"
@@ -12,6 +108,37 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_settlement_castle_khitangfx_looted"
 		texturefile = "gfx\\interface\\placeholder_castle_mongol_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+### Tribal
+	spriteType = {
+		name = "GFX_settlement_tribal_khitangfx"
+		texturefile = "gfx\\interface\\placeholder_tribal_mongol.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_tribal_empty_khitangfx"
+		texturefile = "gfx\\interface\\placeholder_empty_tribal_mongol.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_tribal_khitangfx_looted"
+		texturefile = "gfx\\interface\\placeholder_tribal_mongol_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+### Nomad
+
+	spriteType = {
+		name = "GFX_settlement_nomad_empty_khitangfx"
+		texturefile = "gfx\\interface\\placeholder_empty_nomad_mongol.dds"
 		noOfFrames = 1
 		norefcount = yes
 	}
@@ -92,6 +219,22 @@ spriteTypes = {
 		noOfFrames = 1
 		norefcount = yes
 	}
+	
+	# Tibetan temples
+	
+	spriteType = {
+		name = "GFX_settlement_temple_khitangfx_bodpagfx"
+		texturefile = "gfx\\interface\\placeholder_temple_mongol.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_khitangfx_bodpagfx_looted"
+		texturefile = "gfx\\interface\\placeholder_temple_mongol_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
 
 	# Aztec temples
 	spriteType = {
@@ -160,10 +303,81 @@ spriteTypes = {
 		noOfFrames = 1
 		norefcount = yes
 	}
+
+	spriteType = {
+		name = "GFX_settlement_temple_khitangfx_southindiangfx"
+		texturefile = "gfx\\interface\\placeholder_temple_mongol.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
 	
 	spriteType = {
 		name = "GFX_settlement_temple_khitangfx_indiangfx_looted"
 		texturefile = "gfx\\interface\\placeholder_temple_mongol_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_khitangfx_southindiangfx_looted"
+		texturefile = "gfx\\interface\\placeholder_temple_mongol_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	# Forts
+	
+	spriteType = {
+		name = "GFX_settlement_fort_khitangfx"
+		texturefile = "gfx\\interface\\placeholder_fort_mongol.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_fort_khitangfx"
+		texturefile = "gfx\\interface\\fort_mongol.dds"
+		noOfFrames = 3
+		clicksound = generic_click_02
+	}
+	
+	# Hospitals
+	
+	spriteType = {
+		name = "GFX_settlement_hospital_khitangfx"
+		texturefile = "gfx\\interface\\placeholder_hospital_mongol.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_hospital_khitangfx"
+		texturefile = "gfx\\interface\\hospital_mongol.dds"
+		noOfFrames = 4
+		clicksound = generic_click_02
+	}
+	
+	# Trade Posts
+	
+	spriteType = {
+		name = "GFX_trade_post_khitangfx"
+		texturefile = "gfx\\interface\\trade_post.dds"
+		noOfFrames = 3
+		clicksound = generic_click_02
+	}
+	
+	# Land Trade Posts
+	
+	spriteType = {
+		name = "GFX_trade_post_khitangfx_land"
+		texturefile = "gfx\\interface\\trade_post_land_mongol.dds"
+		noOfFrames = 3
+		clicksound = generic_click_02
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_trade_post_khitangfx_land"
+		texturefile = "gfx\\interface\\trade_post_land_mongol_large_frame.tga"
 		noOfFrames = 1
 		norefcount = yes
 	}

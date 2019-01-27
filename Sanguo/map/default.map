@@ -15,8 +15,8 @@ geographical_region = "geographical_region.txt"
 static = "statics"
 seasons = "seasons.txt"
 
-sea_zones = { 388 400 }
-sea_zones = { 435 482 }
+sea_zones = { 390 402 }
+sea_zones = { 437 484 }
 
 ocean_region = {	# Pacific Ocean
 	sea_zones = { 1 2 }
@@ -28,8 +28,8 @@ tree = { 3 4 7 10 }
 major_rivers = 
 {
 	# Pacific Ocean
-	396 397 398 399 400  #Yangtze River
-	388 389 390 391 392 393 394 395  #Yellow River
+	398 399 400 401 402  #Yangtze River
+	390 391 392 393 394 395 396 397  #Yellow River
 
 }
 

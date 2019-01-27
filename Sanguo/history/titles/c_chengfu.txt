@@ -10,6 +10,12 @@
 	liege=0 #Independent
 	holder=2635 #Jiang Gong
 }
+196.4.1={
+	liege=d_runan
+}
+197.8.1={
+	liege=0
+}
 201.5.1={
 	liege=d_runan
 	holder=10494 #Li Tong

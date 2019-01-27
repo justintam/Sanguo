@@ -1,16 +1,27 @@
 1.1.1={
-	active = no
-	law = agnatic_succession
-	law = succ_open_elective
+	active=no
+	law=agnatic_succession
+	law=succ_open_elective
 }
 193.1.1={
-	active = yes
+	active=yes
 	holder=2638 #Zang Ba
 }
 198.1.1={
+	liege=k_xu
 	holder=2643 #Chang Xi
+}
+199.2.7={
+	liege=0
+}
+199.6.1={
+	liege=k_xu
+	holder=600 #Liu Bei
+}
+206.1.1={
+	liege=0
 }
 206.4.1={
 	holder=0 #None
-	active = no
+	active=no
 }

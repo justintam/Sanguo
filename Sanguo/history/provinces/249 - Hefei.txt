@@ -15,5 +15,6 @@ b_boan = city
 # Misc
 culture = han
 religion = confucian
+terrain = plains
 
 #History

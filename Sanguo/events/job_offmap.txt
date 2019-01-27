@@ -19,6 +19,8 @@ character_event = {
 	trigger = {
 		has_job_action = action_statecraft
 		NOT = { has_character_modifier = in_seclusion }
+		NOT = { has_character_modifier = bedridden_illness }
+		NOT = { trait = incapable }
 		liege = {
 			NOT = { 
 				has_character_modifier = popular_ruler
@@ -428,6 +430,8 @@ character_event = {
 	trigger = {
 		has_job_action = action_improve_relations
 		NOT = { has_character_modifier = in_seclusion }
+		NOT = { has_character_modifier = bedridden_illness }
+		NOT = { trait = incapable }
 		liege = { 
 			any_vassal = {
 				is_priest = no
@@ -514,6 +518,8 @@ character_event = {
 	trigger = {
 		has_job_action = action_administer_realm
 		NOT = { has_character_modifier = in_seclusion }
+		NOT = { has_character_modifier = bedridden_illness }
+		NOT = { trait = incapable }
 	}
 	
 	mean_time_to_happen = {
@@ -699,6 +705,8 @@ character_event = {
 	trigger = {
 		has_job_action = action_administer_realm
 		NOT = { has_character_modifier = in_seclusion }
+		NOT = { has_character_modifier = bedridden_illness }
+		NOT = { trait = incapable }
 		liege = { 
 			any_demesne_province = {
 				NOT = {
@@ -825,6 +833,8 @@ character_event = {
 	trigger = {
 		has_job_action = action_organize_army
 		NOT = { has_character_modifier = in_seclusion }
+		NOT = { has_character_modifier = bedridden_illness }
+		NOT = { trait = incapable }
 		liege = {
 			any_courtier_or_vassal = {
 				has_minor_title = title_commander
@@ -1200,6 +1210,8 @@ character_event = {
 	trigger = {
 		has_job_action = action_organize_army
 		NOT = { has_character_modifier = in_seclusion }
+		NOT = { has_character_modifier = bedridden_illness }
+		NOT = { trait = incapable }
 		OR = {
 			ai = no
 			NOR = {
@@ -1401,15 +1413,6 @@ character_event = {
 				}
 				5 = { 
 					add_trait = shrewd
-				}
-			}
-			hidden_tooltip = {
-				if = {
-					limit = {
-						religion_group = indian_group
-					}
-					add_trait = kshatriya
-					character_event = { id = RoI.30121 }
 				}
 			}
 			save_event_target_as = found_commander
@@ -1616,6 +1619,8 @@ character_event = {
 	trigger = {
 		has_job_action = action_organize_army
 		NOT = { has_character_modifier = in_seclusion }
+		NOT = { has_character_modifier = bedridden_illness }
+		NOT = { trait = incapable }
 		can_be_maimed_trigger = yes
 		liege = {
 			any_courtier_or_vassal = {
@@ -1756,8 +1761,10 @@ character_event = {
 	trigger = {
 		has_job_action = action_sabotage_province
 		NOT = { has_character_modifier = in_seclusion }
+		NOT = { has_character_modifier = bedridden_illness }
+		NOT = { trait = incapable }
 		location = {
-			can_be_sabotaged_trigger = yes #TODO maybe have intimidate check and give letter if all done
+			can_be_sabotaged_trigger = yes
 		}
 	}
 	
@@ -1819,7 +1826,7 @@ character_event = {
 				100 = {
 					modifier = {
 						factor = 0
-						has_province_modifier = sabotaged_buildings	#TODO Maybe hide list, have letter events telling liege what happened			
+						has_province_modifier = sabotaged_buildings		
 					}
 					add_province_modifier = { 					
 						name = sabotaged_buildings
@@ -1879,6 +1886,8 @@ character_event = {
 	trigger = {
 		has_job_action = action_uncover_plots_offmap
 		NOT = { has_character_modifier = in_seclusion }
+		NOT = { has_character_modifier = bedridden_illness }
+		NOT = { trait = incapable }
 		liege = {
 			any_realm_lord = {
 				NOT = { is_liege_of = ROOT }
@@ -1974,6 +1983,8 @@ character_event = {
 	
 	trigger = {
 		has_job_action = action_uncover_plots_offmap
+		NOT = { has_character_modifier = bedridden_illness }
+		NOT = { trait = incapable }
 		NOT = { has_character_modifier = in_seclusion }
 		liege = {
 			any_realm_lord = {
@@ -2125,6 +2136,8 @@ character_event = {
 	trigger = {
 		has_job_action = action_uncover_plots_offmap
 		NOT = { has_character_modifier = in_seclusion }
+		NOT = { has_character_modifier = bedridden_illness }
+		NOT = { trait = incapable }
 		liege = {
 			any_vassal = {
 				NOT = { character = ROOT }
@@ -2229,6 +2242,8 @@ character_event = { # Hunt Apostates meta event
 	trigger = {
 		has_job_action = action_hunt_heretics
 		NOT = { has_character_modifier = in_seclusion }
+		NOT = { has_character_modifier = bedridden_illness }
+		NOT = { trait = incapable }
 		liege = {
 			OR = {
 				# There is someone who is highly suspect
@@ -2990,34 +3005,6 @@ character_event = { # Outcome event
 			text = apostate_found_tooltip
 		}
 		
-		hidden_tooltip = {
-			if = {
-				limit = {
-					has_nickname = no
-					NOT = {
-						event_target:accused_apostate = { character = event_target:innocent_victim }
-					}
-				}
-				random_list = {
-					500 = {
-						# No Nickname
-					}
-					50 = {
-						give_nickname = nick_the_cleansing_flame
-					}
-					50 = {
-						give_nickname = nick_the_witch_hunter
-					}
-					50 = {
-						give_nickname = nick_the_inquisitor
-					}
-					50 = {
-						give_nickname = nick_the_purifier
-					}
-				}
-			}
-		}
-		
 		liege = {
 			character_event = { id = MNM.70200 }
 		}
@@ -3160,16 +3147,8 @@ character_event = { # What does the liege wish to do with the apostate?
 				}
 			}
 		}
-		if = {
-			limit = {
-				NOT = { trait = kinslayer }
-				NOT = { religion_group = muslim }
-				event_target:accused_apostate = {
-					dynasty = ROOT
-				}
-			}
-			add_trait = kinslayer
-		}
+		event_target:accused_apostate = { save_event_target_as = kinslayer_target }
+		add_kinslayer_trait_effect = yes
 		hidden_tooltip = {
 			event_target:accused_apostate = {
 				if = {
@@ -3219,31 +3198,6 @@ character_event = { # What does the liege wish to do with the apostate?
 			}
 			event_target:accused_apostate = {
 				character_event = { id = MNM.70300 }
-			}
-			if = {
-				limit = {
-					has_nickname = no
-					NOT = {
-						event_target:accused_apostate = { character = event_target:innocent_victim }
-					}
-				}
-				random_list = {
-					500 = {
-						# No Nickname
-					}
-					5 = {
-						give_nickname = nick_the_cleansing_flame
-					}
-					5 = {
-						give_nickname = nick_the_witch_hunter
-					}
-					5 = {
-						give_nickname = nick_the_inquisitor
-					}
-					5 = {
-						give_nickname = nick_the_purifier
-					}
-				}
 			}
 		}
 	}

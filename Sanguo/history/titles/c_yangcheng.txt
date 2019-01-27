@@ -23,5 +23,9 @@
 	liege=d_yingchuan
 }
 191.1.1={
+	liege=d_henan
 	holder=3573 #Random
+}
+191.6.1={
+	liege=d_yingchuan
 }

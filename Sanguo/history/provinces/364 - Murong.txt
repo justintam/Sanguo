@@ -14,5 +14,6 @@ b_xianbeijiao = temple
 # Misc
 culture = xianbei
 religion = tengri_pagan
+terrain = desert
 
 #History

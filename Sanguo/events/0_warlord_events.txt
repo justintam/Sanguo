@@ -19,7 +19,7 @@ character_event = {
 	id = WRL.1
 	desc = EVTDESC_WRL.1
 	title = EVTTITLE_WRL.1
-	picture = GFX_evt_crusaders
+	picture = GFX_evt_china_rebel_general
 	border = GFX_event_normal_frame_war
 	
 	is_triggered_only = yes
@@ -79,12 +79,10 @@ character_event = {
 			leader = ROOT
 			reinforces = yes
 			troops = {
-				knights = { 50 50 }
-				light_infantry = { 250 250 }
-				heavy_infantry = { 100 100 }
-				light_cavalry = { 100 100 }
-				archers = { 250 250 }
-				pikemen = { 250 250 }
+				knights = { 150 150 }
+				heavy_infantry = { 350 350 }
+				archers = { 150 150 }
+				pikemen = { 350 350 }
 			}
 			attrition = 0.25
 			earmark = clan_army
@@ -143,7 +141,7 @@ character_event = {
 	id = WRL.5
 	desc = EVTDESC_WRL.5
 	title = EVTTITLE_WRL.5
-	picture = GFX_evt_crusaders
+	picture = GFX_evt_china_rebel_general
 	border = GFX_event_normal_frame_war
 	
 	is_triggered_only = yes

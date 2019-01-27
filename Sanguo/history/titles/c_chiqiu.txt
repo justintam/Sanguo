@@ -7,8 +7,14 @@
 	liege=d_wei
 }
 184.1.1={
-	holder=10402 #Zhen Yan
+	holder=10403 #Zhen Yan
 }
-196.1.1={
+196.6.1={
+	holder=4171 #Random
+}
+206.4.1={
+	holder=4240 #Yang Jun
+}
+207.8.1={
 	holder=4171 #Random
 }

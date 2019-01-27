@@ -14,5 +14,6 @@ b_jingxian = tribal
 # Misc
 culture = shanyue
 religion = animist
+terrain = mountain
 
 #History

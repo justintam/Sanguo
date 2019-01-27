@@ -12,7 +12,8 @@ b_yinpingxia = city
 #b_cangke = castle
 
 # Misc
-culture = bandunman
-religion = tianshi
+culture = di
+religion = baima
+terrain = mountain
 
 #History

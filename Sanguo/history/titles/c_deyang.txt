@@ -24,16 +24,24 @@
 195.1.1={
 	holder=1279 #Zhao Yao
 }
-#200 Wang Shang
+200.1.1={
+	holder=4479 #Wang Shang
+}
 211.1.1={
 	holder=3615 #Xu Jing
 }
 214.1.1={
 	holder=3621 #Fa Zheng
 }
-#Xue Yong, son of Xue Lan
-#Yang Hong?
-#220 Wang Lian
+#Yang Hong? TBD
+217.1.1={
+	holder=655 #She Jian
+}
 220.10.1={
-	holder=4113 #Random
+	holder=3629 #Wang Lian
+}
+#Xue Yong, son of Xue Lan
+#Yang Hong dies in 228
+228.1.1={
+	holder=3640 #Zhang Yi
 }

@@ -14,5 +14,6 @@ b_youxian = castle
 # Misc
 culture = shanyue
 religion = animist
+terrain = mountain
 
 #History

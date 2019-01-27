@@ -66,7 +66,7 @@
 	holder=601 #Guan Yu
 }
 #215 - Inspector of Jing for Cao is Hu Zhi
-220.1.1={
+220.2.1={
 	liege=e_sun #Independent
 	holder=3322 #Lu Xun
 }

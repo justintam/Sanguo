@@ -16,14 +16,11 @@
 	holder=315 # Duan Wei
 }
 198.6.1={
-	liege=d_hongnong
 	holder=3582 # Random
 }
 211.1.1={
-	liege=k_sili
-	holder=10496 #Zhong Yao
+	holder=20478 #Xu Yi
 }
-213.6.1={
-	liege=d_hongnong
+211.10.1={
 	holder=3582 # Random
 }

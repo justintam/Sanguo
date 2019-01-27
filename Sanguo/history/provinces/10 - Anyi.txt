@@ -16,5 +16,6 @@ b_pubang = city
 # Misc
 culture = han
 religion = confucian
+terrain = plains
 
 #History

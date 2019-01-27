@@ -1,4 +1,6 @@
 #MAN,,
+EVTDESC_MAN.1;The Emperor has asked for our permission to instate a new Empress. This would strip us of our current Imperial powers. How would you reply?;;;;;;;;;;;;;x;,,
+EVTTITLE_MAN.1;Emperor's Request;;;;;;;;;;;;;x;,,
 EVTDESC_MAN.5;These are troubled times. The Emperor is weak and unable to control the various provinces. Will you choose to follow the Imperial Court? Or follow your own path?;;;;;;;;;;;;;x;,,
 EVTTITLE_MAN.5;Imperial Loyalty;;;;;;;;;;;;;x;,,
 EVTOPTA_MAN.5;For the Emperor!;;;;;;;;;;;;;x;,,

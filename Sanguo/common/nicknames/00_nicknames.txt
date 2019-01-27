@@ -14,19 +14,3 @@
 
 # GIVEN BY TRAITS
 #################
-
-nick_dyn = {
-	allow = {
-		is_ruler = yes
-		NOT = { dynasty = none }
-		OR = {
-			culture_group = chinese
-			culture_group = korean
-			culture_group = man
-			culture_group = yue
-		}
-	}
-	chance = {
-		factor = 100
-	}
-}

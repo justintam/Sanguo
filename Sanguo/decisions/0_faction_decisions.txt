@@ -1,4 +1,4 @@
-	plot_decisions = {
+plot_decisions = {
 	faction_install_chancellor_ultimatum = {
 		only_playable = yes
 		is_high_prio = yes

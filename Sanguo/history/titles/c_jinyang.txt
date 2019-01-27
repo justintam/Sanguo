@@ -21,8 +21,14 @@
 169.1.1={
 	holder=0 #Proscriptions
 }
+178.1.1={
+	holder=300 #Dong Zhuo
+}
 184.1.1={
 	holder=115 #Ding Yuan
+}
+188.1.1={
+	holder=4480 #Zhang Yi
 }
 189.10.1={
 	holder=300 #Dong Zhuo
@@ -33,9 +39,6 @@
 206.6.1={
 	holder=20450 #Liang Xi
 }
-207.2.1={
-	holder=20466 #Zhang Zhi
-}
-213.6.1={
-	holder=20450 #Liang Xi
+228.1.1={
+	holder=20466 #Zhang Zhi - was actually also Inspector in 207
 }

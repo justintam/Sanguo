@@ -16,5 +16,6 @@ b_mouping = city
 # Misc
 culture = han
 religion = confucian
+terrain = hills
 
 #History

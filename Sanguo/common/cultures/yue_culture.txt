@@ -1,10 +1,12 @@
 yue = {
-		graphical_cultures = { koreangfx turkishgfx easterngfx }
+	graphical_cultures = { koreangfx turkishgfx easterngfx }
 	
 	minyue = {
 		graphical_cultures = { koreangfx turkishgfx easterngfx }
 		
 		color = { 0.5 0.2 0.5 }
+		
+		dynasty_name_first = yes
 		
 		male_names = {
 			Bo Bopi Bushou
@@ -29,11 +31,11 @@ yue = {
 			Zixi
 		}
 		female_names = {
-			Ailiao
+			Ai Ailiao
 			Dongshi
 			Guang
 			Helu
-			Li
+			Li Liao
 			Ji Jiguang
 			Shi
 			Xishi
@@ -54,62 +56,73 @@ yue = {
 		mother_name_chance = 25
 
 		modifier = default_culture_modifier
+		
+		allow_looting = yes
 	}
 	nanyue = {
 		graphical_cultures = { nanmangfx turkishgfx easterngfx }
 		
 		color = { 0.3 0.2 0.6 }
 		
+		dynasty_name_first = yes
+		
 		male_names = {
 			Ai An Anh
 			Ba Bach Banh Bao Bi Bian Bo Bon
-			Cai Cao Cha Chau Chi Chia Chu Chuong Cong
-			Da Dai Dam Dao Dat De Diep Dinh Doan Du
-			Duc Due Duong Duyang
+			Cai Cao Cha Chau Chi Chia Chu
+			Chuong Cong
+			Da Dai Dam Danh Dao Dat De Diep
+			Dinh Doan Du Duc Due Duong Duy
+			Duyang
 			Fudu
 			Gia Giang Giap
-			Ha Han Hien Hoa Hung
-			Khanh Kien Kieu Kim
-			La Lac Lang Lian Liang Lien Lin Ling
-			Loan Long Lu Luong
+			Ha Hai Han Hao Hien Hoa Hoang Hue
+			Hung Huy Hy
+			Jia Jing
+			Kha Khai Khanh Kien Kiet Kieu Kim
+			La Lac Lang Le Lian Liang Lien Lin
+			Linh Ling Loan Long Lu Luong
 			Ma Mach Mai Mat Minh Mo
-			Nam Nghiem Ngoc Nguyen Nhan Nhuong
-			Ouda Oulian Oulin Ouling
-			Phat Phi Pho Phuc Phung Pian
+			Nam Nghiem Ngoc Nguyen Nhan Nhat
+			Nhi Nhuong
+			Phat Phi Pho Phu Phuc Phuoc Phung
+			Pian
 			Quach Quang Quy Quyen
 			Sach Shihui Shuhui
-			Ta Tao Te Thach Thai Thanh Thao Thi
-			Thien Thieu Thua Thuc Thuy Tiao
-			Tiaobian Tiaopian Tiaowang Tien Tieu
-			Tinh To Ton Tong Trang Trieu Trinh
-			Truc Truong Tu Tuc
+			Ta Tam Tao Tau Te Thach Thai Thanh
+			Thao Thi Thien Thieu Thua Thuan
+			Thuc Thuy Tiao Tiaobian Tiaopian
+			Tiaowang Tien Tieu Tinh To Ton
+			Tong Tran Trang Trieu Trinh Truc
+			Truong Tu Tuan Tuc
 			Van Viet Vinh Vu Vuong
 			Xuong
 			Yingqi
 		}
 		female_names = {
 			Ai An Anh Au
-			Be Bian Bich Binh
+			Be Bian Bich Binh Bui
 			Cam Canh Cao Chau Chi Cong Cuc
 			Dao Diep Dinh Diu Doan Dong Duong
 			Gan Giang
-			Ha Hai Han Hang Hanh Hien Hoa Hong
-			Hue Hung Huong Huyen Hyunh
+			Ha Hai Han Hang Hanh Hien Hoa
+			Hoang Hong Hue Hung Huong Huyen
+			Hyunh
 			Ket Khanh Kieu Kim
 			Lam Lan Lang Lanh Le Lien Lieu
 			Linh Loan Long Ly
 			Mai Minh My
-			Nam Ngoc Ngon Ngu Nguyet Nhi Nhu
-			Nhung Nien Nu
-			Oulian
+			Nam Nga Ngan Ngoc Ngon Ngu Nguyen
+			Nguyet Nhat Nhi Nhu Nhung Nien Nu
+			Oanh
 			Phuc Phuong
-			Quy Quyen
+			Quy Quyen Quynh
 			Sang Suong
 			Tam Tan Tham Thanh Thao Thi Thien
-			Thom Thu Thuy Tien Trac Trinh Truc
-			Tu Tuyen Tuyet
+			Thom Thu Thuan Thuy Tien Trac Tram
+			Trang Trinh Truc Tu Tuyen Tuyet
 			Uoc
-			Van Viet
+			Van Vi Viet Vy
 			Xuan
 			Yen
 		}
@@ -127,11 +140,16 @@ yue = {
 		mother_name_chance = 25
 
 		modifier = default_culture_modifier
+		
+		allow_looting = yes
+		seafarer = yes
 	}
 	shanyue = {
 		graphical_cultures = { koreangfx turkishgfx easterngfx }
 		
 		color = { 0.8 0.8 0.8 }
+		
+		dynasty_name_first = yes
 		
 		male_names = {
 			Baihu Bao Bo Bopo
@@ -150,11 +168,11 @@ yue = {
 			Zhan Zhen Zhou
 		}
 		female_names = {
-			Ailiao
+			Ai Ailiao
 			Dongshi
 			Guang
 			Helu
-			Li
+			Li Liao
 			Ji Jiguang
 			Shi
 			Xishi
@@ -175,5 +193,7 @@ yue = {
 		mother_name_chance = 25
 
 		modifier = default_culture_modifier
+		
+		allow_looting = yes
 	}
 }

@@ -13,5 +13,9 @@ b_bushan = tribal
 # Misc
 culture = nanyue
 religion = animist
+terrain = plains
 
 #History
+211.1.1={
+	b_bushan=castle
+}

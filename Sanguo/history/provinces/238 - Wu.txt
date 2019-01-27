@@ -15,6 +15,7 @@ b_wuqing = temple
 # Misc
 culture = han
 religion = confucian
+terrain = plains
 
 #History
 200.1.1={

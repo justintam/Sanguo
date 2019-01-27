@@ -7,7 +7,7 @@
 	liege=d_yuyang
 }
 184.1.1={
-	holder=127 #Guo Xun
+	holder=4306 #Random
 }
 184.4.1={
 	liege=d_beihuang

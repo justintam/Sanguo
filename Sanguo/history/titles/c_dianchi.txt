@@ -7,8 +7,25 @@
 	liege=d_yizhou
 }
 184.1.1={
+	holder=3639 #Gao Zhen
+}
+196.1.1={
+	holder=3637 #Gao Yi
+}
+209.1.1={
 	holder=164 #Dong He
 }
 214.1.1={
-	holder=1801 #Meng Huo
+	holder=667 #Zheng Ang
 }
+215.4.1={
+	holder=3638 #Gao Wei
+}
+221.1.1={
+	holder=3630 #Zhang Yi
+}
+223.1.1={
+#Wang Shi - Wang Clan
+}
+
+#TBD

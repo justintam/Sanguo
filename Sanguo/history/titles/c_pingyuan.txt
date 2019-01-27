@@ -29,10 +29,9 @@
 192.5.1={
 	holder=709 #Yuan Tan
 }
-204.1.1={
-	holder=4118 #Random
+196.1.1={
+	holder=1397 #Shih Jinwei
 }
-
 
 
 #Incomplete

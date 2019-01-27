@@ -1,573 +1,590 @@
-decisions = {
-	coalition_call = {
-		is_high_prio = yes
-		only_playable = yes
+decisions={
+	coalition_call={
+		is_high_prio=yes
+		only_playable=yes
 		
-		potential = {
-			controls_religion = no
-			NOT = { has_global_flag = coalition_called }
-			NOT = { has_global_flag = coalition_start }
-			NOT = { has_character_flag = coalition_target }
-			capital_scope = {
-				region = world_china
-			}
-			any_independent_ruler = {
-				count = 1
-				has_character_flag = coalition_target
-				NOT = { reverse_has_truce = ROOT }
-				NOT = { war_with = ROOT }
-			}
-			any_liege = { in_revolt = no }
-			NOT = { in_faction = faction_install_chancellor }
-			in_battle = no
-			in_siege = no
-		}
-		
-		allow = {
-			is_adult = yes
-			higher_tier_than = COUNT
-			prestige = 100
-			war = no
-		}
-		
-		effect = {
-			prestige = -100
-			hidden_tooltip = {
-				set_global_flag = coalition_called
-				set_character_flag = coalition_leader
-				clr_character_flag = destiny
-				if = {
-					limit = {
-						top_liege = { has_character_flag = coalition_target }
+		potential={
+			controls_religion=no
+			NOT={ has_global_flag=coalition_called }
+			NOT={ has_global_flag=coalition_start }
+			NOT={ has_character_flag=coalition_target }
+			NOT={
+				any_playable_ruler={
+					OR={
+						has_character_flag=coalition_leader
+						AND={
+							NOT = { character=ROOT }
+							has_character_flag=destiny
+						}
 					}
-					set_defacto_liege = THIS
 				}
-				if = {
-					limit = {
-						NOT = { top_liege = { has_character_flag = coalition_target } }
-						liege = { has_character_flag = coalition_target }
+			}
+			capital_scope={
+				region=world_china
+			}
+			any_independent_ruler={
+				has_character_flag=coalition_target
+				NOT={ reverse_has_truce=ROOT }
+				NOT={ war_with=ROOT }
+			}
+			OR={
+				independent=yes
+				any_liege={ in_revolt=no }
+			}
+			NOT={ in_faction=faction_install_chancellor }
+			in_battle=no
+			in_siege=no
+		}
+		
+		allow={
+			is_adult=yes
+			higher_tier_than=COUNT
+			prestige=100
+			war=no
+		}
+		
+		effect={
+			prestige=-100
+			hidden_tooltip={
+				set_global_flag=coalition_called
+				set_character_flag=coalition_leader
+				clr_character_flag=destiny
+				if={
+					limit={
+						top_liege={ has_character_flag=coalition_target }
 					}
-					top_liege = {
-						ROOT = { set_defacto_liege = PREV }
+					set_defacto_liege=THIS
+				}
+				if={
+					limit={
+						NOT={ top_liege={ has_character_flag=coalition_target } }
+						liege={ has_character_flag=coalition_target }
+					}
+					top_liege={
+						ROOT={ set_defacto_liege=PREV }
 					}
 				}
 				
-				any_independent_ruler = {
-					limit = {
-						has_character_flag = coalition_target
+				any_independent_ruler={
+					limit={
+						has_character_flag=coalition_target
 					}
-					save_event_target_as = target_coalition
+					save_event_target_as=target_coalition
 				}
 
-				if = {
-					limit = {
-						is_tributary = yes
-						pays_tribute_to = event_target:target_coalition
+				if={
+					limit={
+						is_tributary=yes
+						pays_tribute_to=event_target:target_coalition
 					}
-					event_target:target_coalition = {
-						remove_tributary = ROOT
+					event_target:target_coalition={
+						remove_tributary=ROOT
 					}
 				}
 				
-				any_playable_ruler = {
-					limit = {
-						capital_scope = {
-							region = world_china
+				any_playable_ruler={
+					limit={
+						capital_scope={
+							region=world_china
 						}
-						NOR = {
-							war_with = ROOT
-							has_character_flag = coalition_target
-							has_character_flag = coalition_leader
-							has_character_flag = coalition_member
-							has_character_flag = neutral
+						NOR={
+							war_with=ROOT
+							has_character_flag=coalition_target
+							has_character_flag=coalition_leader
+							has_character_flag=coalition_member
+							has_character_flag=neutral
 						}
-						higher_tier_than = COUNT
-						is_adult = yes
+						higher_tier_than=COUNT
+						is_adult=yes
 					}
-					character_event = { id = RTK.130010 }
+					character_event={ id=RTK.11 }
 				}
 		    }
 		}
 		
-		ai_will_do = { 
-			factor = 1
+		ai_will_do={ 
+			factor=1
 			
-			modifier = {
-				factor = 0.1 #Reduce chance of call
+			modifier={
+				factor=0.1 #Reduce chance of call
 			}
-			modifier = {
-				factor = 100
-				has_character_flag = destiny
+			modifier={
+				factor=100
+				has_character_flag=destiny
 			}
-			modifier = {
-				factor = 5
-				has_character_flag = coalition_won
+			modifier={
+				factor=10
+				character=700
 			}
-			modifier = {
-				factor = 5
-				trait = destined
+			modifier={
+				factor=5
+				has_character_flag=coalition_won
 			}
-			modifier = {
-				factor = 1.5 #Everyone hates the player!
-				any_independent_ruler = {
-					has_character_flag = coalition_target
-					ai = no
+			modifier={
+				factor=5
+				trait=destined
+			}
+			modifier={
+				factor=1.5 #Everyone hates the player!
+				any_independent_ruler={
+					has_character_flag=coalition_target
+					ai=no
 				}
 			}
-			modifier = {
-				factor = 0.05
-				NOT = { culture = han }
+			modifier={
+				factor=0.05
+				NOT={ culture=han }
 			}
-			modifier = {
-				factor = 0.05
-				NOT = { religion = confucian }
+			modifier={
+				factor=0.05
+				NOT={ religion=confucian }
 			}
-			modifier = {
-				factor = 1.1
-				trait = fate_lead
+			modifier={
+				factor=1.1
+				trait=fate_lead
 			}
-			modifier = {
-				factor = 1.05
-				trait = ambitious
+			modifier={
+				factor=1.05
+				trait=ambitious
 			}
-			modifier = {
-				factor = 1.1
-				trait = zealous
+			modifier={
+				factor=1.1
+				trait=zealous
 			}
-			modifier = {
-				factor = 1.05
-				trait = just
+			modifier={
+				factor=1.05
+				trait=just
 			}
-			modifier = {
-				factor = 1.05
-				trait = chivalrous
+			modifier={
+				factor=1.05
+				trait=chivalrous
 			}
-			modifier = {
-				factor = 1.05
-				trait = gregarious
+			modifier={
+				factor=1.05
+				trait=gregarious
 			}
-			modifier = {
-				factor = 1.05
-				trait = honorable
+			modifier={
+				factor=1.05
+				trait=honorable
 			}
-			modifier = {
-				factor = 1.05
-				trait = proud
+			modifier={
+				factor=1.05
+				trait=proud
 			}
-			modifier = {
-				factor = 1.05
-				trait = brave
+			modifier={
+				factor=1.05
+				trait=brave
 			}
-			modifier = {
-				factor = 1.05
-				trait = diligent
+			modifier={
+				factor=1.05
+				trait=diligent
 			}
-			modifier = {
-				factor = 1.05
-				trait = envious
+			modifier={
+				factor=1.05
+				trait=envious
 			}
-			modifier = {
-				factor = 1.05
-				trait = greedy
+			modifier={
+				factor=1.05
+				trait=greedy
 			}
-			modifier = {
-				factor = 0
-				trait = cruel
+			modifier={
+				factor=0
+				trait=cruel
 			}
-			modifier = {
-				factor = 0
-				trait = deceitful
+			modifier={
+				factor=0
+				trait=deceitful
 			}
-			modifier = {
-				factor = 0
-				trait = ruthless
+			modifier={
+				factor=0
+				trait=ruthless
 			}
-			modifier = {
-				factor = 0
-				trait = dishonorable
+			modifier={
+				factor=0
+				trait=dishonorable
 			}
-			modifier = {
-				factor = 0
-				trait = gluttonous
+			modifier={
+				factor=0
+				trait=gluttonous
 			}
-			modifier = {
-				factor = 0
-				trait = selfish
+			modifier={
+				factor=0
+				trait=selfish
 			}
-			modifier = {
-				factor = 0
-				trait = craven
+			modifier={
+				factor=0
+				trait=craven
 			}
-			modifier = {
-				factor = 0
-				trait = slothful
+			modifier={
+				factor=0
+				trait=slothful
 			}
-			modifier = {
-				factor = 1.05
-				demesne_size = 5
+			modifier={
+				factor=1.05
+				demesne_size=5
 			}
-			modifier = {
-				factor = 1.1
-				demesne_size = 10
+			modifier={
+				factor=1.1
+				demesne_size=10
 			}
-			modifier = {
-				factor = 1.25
-				demesne_size = 15
+			modifier={
+				factor=1.25
+				demesne_size=15
 			}
-			modifier = {
-				factor = 1.5
-				demesne_size = 25
+			modifier={
+				factor=1.5
+				demesne_size=25
 			}
-			modifier = {
-				factor = 2
-				demesne_size = 50
+			modifier={
+				factor=2
+				demesne_size=50
 			}
-			modifier = {
-				factor = 2
-				independent = yes
+			modifier={
+				factor=2
+				independent=yes
 			}
-			modifier = {
-				factor = 10
-				higher_tier_than = KING
+			modifier={
+				factor=10
+				higher_tier_than=KING
 			}
-			modifier = {
-				factor = 10
-				primary_title = {
-					has_title_flag = warlord_flag
+			modifier={
+				factor=10
+				primary_title={
+					has_title_flag=warlord_flag
 				}
 			}
-			modifier = {
-				factor = 0.25
-				primary_title = {
-					OR = {
-						region = world_china_jiaozhi
-						region = world_china_yang
-						region = world_china_yi
+			modifier={
+				factor=0.25
+				primary_title={
+					OR={
+						region=world_china_jiaozhi
+						region=world_china_yang
+						region=world_china_yi
 					}
 				}
 			}
-			modifier = {
-				factor = 0.25
-				independent = no
-				any_independent_ruler = {
-					has_character_flag = coalition_target
-					NOT = { is_vassal_or_below = ROOT }
+			modifier={
+				factor=0.25
+				independent=no
+				any_independent_ruler={
+					has_character_flag=coalition_target
+					NOT={ is_vassal_or_below=ROOT }
 				}
 			}
 			
 			# Coalition Target
-			modifier = {
-				factor = 1.05
-				any_independent_ruler = {
-					has_character_flag = coalition_target
-					trait = ambitious
+			modifier={
+				factor=1.05
+				any_independent_ruler={
+					has_character_flag=coalition_target
+					trait=ambitious
 				}
 			}
-			modifier = {
-				factor = 1.05
-				any_independent_ruler = {
-					has_character_flag = coalition_target
-					trait = cruel
+			modifier={
+				factor=1.05
+				any_independent_ruler={
+					has_character_flag=coalition_target
+					trait=cruel
 				}
 			}
-			modifier = {
-				factor = 1.05
-				any_independent_ruler = {
-					has_character_flag = coalition_target
-					trait = deceitful
+			modifier={
+				factor=1.05
+				any_independent_ruler={
+					has_character_flag=coalition_target
+					trait=deceitful
 				}
 			}
-			modifier = {
-				factor = 1.05
-				any_independent_ruler = {
-					has_character_flag = coalition_target
-					trait = dishonorable
+			modifier={
+				factor=1.05
+				any_independent_ruler={
+					has_character_flag=coalition_target
+					trait=dishonorable
 				}
 			}
-			modifier = {
-				factor = 1.05
-				any_independent_ruler = {
-					has_character_flag = coalition_target
-					trait = ruthless
+			modifier={
+				factor=1.05
+				any_independent_ruler={
+					has_character_flag=coalition_target
+					trait=ruthless
 				}
 			}
-			modifier = {
-				factor = 0.05
-				any_independent_ruler = {
-					has_character_flag = coalition_target
-					trait = content
+			modifier={
+				factor=0.05
+				any_independent_ruler={
+					has_character_flag=coalition_target
+					trait=content
 				}
 			}
-			modifier = {
-				factor = 0.05
-				any_independent_ruler = {
-					has_character_flag = coalition_target
-					trait = chivalrous
+			modifier={
+				factor=0.05
+				any_independent_ruler={
+					has_character_flag=coalition_target
+					trait=chivalrous
 				}
 			}
-			modifier = {
-				factor = 0.05
-				any_independent_ruler = {
-					has_character_flag = coalition_target
-					trait = honorable
+			modifier={
+				factor=0.05
+				any_independent_ruler={
+					has_character_flag=coalition_target
+					trait=honorable
 				}
 			}
-			modifier = {
-				factor = 0.05
-				any_independent_ruler = {
-					has_character_flag = coalition_target
-					trait = just
+			modifier={
+				factor=0.05
+				any_independent_ruler={
+					has_character_flag=coalition_target
+					trait=just
 				}
 			}
-			modifier = {
-				factor = 0.05
-				any_independent_ruler = {
-					has_character_flag = coalition_target
-					trait = zealous
+			modifier={
+				factor=0.05
+				any_independent_ruler={
+					has_character_flag=coalition_target
+					trait=zealous
 				}
 			}
-			modifier = {
-				factor = 0.25
-				top_liege = {
-					has_character_flag = coalition_target
+			modifier={
+				factor=0.25
+				top_liege={
+					has_character_flag=coalition_target
 				}
 			}
-			modifier = {
-				factor = 0.25
-				liege = {
-					has_landed_title = k_confucian
-					has_character_flag = coalition_target
+			modifier={
+				factor=0.25
+				liege={
+					has_landed_title=k_confucian
+					has_character_flag=coalition_target
 				}
-				in_faction = faction_install_chancellor
+				in_faction=faction_install_chancellor
 			}
-			modifier = {
-				factor = 0.25
-				any_independent_ruler = {
-					has_character_flag = coalition_target
-					dynasty = ROOT
-				}
-			}
-			modifier = {
-				factor = 0
-				any_independent_ruler = {
-					has_character_flag = coalition_target
-					is_close_relative = ROOT
+			modifier={
+				factor=0.25
+				any_independent_ruler={
+					has_character_flag=coalition_target
+					dynasty=ROOT
 				}
 			}
-			modifier = {
-				factor = 0
-				any_independent_ruler = {
-					has_character_flag = coalition_target
-					is_father = ROOT
+			modifier={
+				factor=0
+				any_independent_ruler={
+					has_character_flag=coalition_target
+					is_close_relative=ROOT
 				}
 			}
-			modifier = {
-				factor = 0
-				any_independent_ruler = {
-					has_character_flag = coalition_target
-					is_friend = ROOT
+			modifier={
+				factor=0
+				any_independent_ruler={
+					has_character_flag=coalition_target
+					is_father=ROOT
 				}
 			}
-			modifier = {
-				factor = 0
-				any_independent_ruler = {
-					has_character_flag = coalition_target
-					is_lover = ROOT
+			modifier={
+				factor=0
+				any_independent_ruler={
+					has_character_flag=coalition_target
+					is_friend=ROOT
 				}
 			}
-			modifier = {
-				factor = 5
-				any_independent_ruler = {
-					has_character_flag = coalition_target
-					is_foe = ROOT
+			modifier={
+				factor=0
+				any_independent_ruler={
+					has_character_flag=coalition_target
+					is_lover=ROOT
 				}
 			}
-			modifier = {
-				factor = 0.25
-				any_independent_ruler = {
-					has_character_flag = coalition_target
-					any_courtier = {
-						is_close_relative = ROOT
+			modifier={
+				factor=5
+				any_independent_ruler={
+					has_character_flag=coalition_target
+					is_foe=ROOT
+				}
+			}
+			modifier={
+				factor=0.25
+				any_independent_ruler={
+					has_character_flag=coalition_target
+					any_courtier={
+						is_close_relative=ROOT
 					}
 				}
 			}
-			modifier = {
-				factor = 0.1
-				any_independent_ruler = {
-					has_character_flag = coalition_target
-					any_courtier = {
-						is_close_relative = ROOT
-						is_primary_heir = ROOT
+			modifier={
+				factor=0.1
+				any_independent_ruler={
+					has_character_flag=coalition_target
+					any_courtier={
+						is_close_relative=ROOT
+						is_primary_heir=ROOT
 					}
 				}
 			}
 		}
 	}
 	
-	coalition_end = {
-		is_high_prio = yes
+	coalition_end={
+		is_high_prio=yes
 		
-		potential = {
-			controls_religion = no
-			has_global_flag = coalition_start
-			OR = { 
-				has_character_flag = coalition_member
-				has_character_flag = coalition_leader
+		potential={
+			controls_religion=no
+			has_global_flag=coalition_start
+			OR={ 
+				has_character_flag=coalition_member
+				has_character_flag=coalition_leader
 			}
-			any_independent_ruler = {
-				has_character_flag = coalition_target
-				war_with = ROOT
+			any_independent_ruler={
+				has_character_flag=coalition_target
+				war_with=ROOT
 			}
 		}
 		
-		allow = {
-			any_war = {
-				defender = { has_character_flag = coalition_target }
-				NOT = { war_score = -40 }
-				war_score = -80
+		allow={
+			any_war={
+				defender={ has_character_flag=coalition_target }
+				NOT={ war_score=-40 }
+				war_score=-80
 			}
-			is_adult = yes
-			is_playable = yes
-			higher_tier_than = COUNT
-			religion = confucian
-			prestige = 100
+			is_adult=yes
+			is_playable=yes
+			higher_tier_than=COUNT
+			religion=confucian
+			prestige=100
 		}
 		
-		effect = {
-			prestige = -100
-			hidden_tooltip = {
-				any_playable_ruler = {
-					limit = {
-						has_character_flag = coalition_leader
+		effect={
+			prestige=-100
+			hidden_tooltip={
+				any_playable_ruler={
+					limit={
+						has_character_flag=coalition_leader
 					}
-					character_event = { id = RTK.130013 }
+					character_event={ id=RTK.14 }
 				}
-				any_playable_ruler = {
-					limit = {
-						OR = {
-							has_character_flag = coalition_member
-							has_character_flag = neutral
+				any_playable_ruler={
+					limit={
+						OR={
+							has_character_flag=coalition_member
+							has_character_flag=neutral
 						}
 					}
-					character_event = { id = RTK.130014 }
+					character_event={ id=RTK.15 }
 				}
 			}
 		}
 		
-		ai_will_do = { 
-			factor = 1
+		ai_will_do={ 
+			factor=1
 			
-			modifier = {
-				factor = 0.01 #Reduce chance of call
+			modifier={
+				factor=0.01 #Reduce chance of call
 			}
-			modifier = {
-				factor = 5
-				any_war = {
-					defender = { has_character_flag = coalition_target }
-					NOT = { war_score = -50 }
+			modifier={
+				factor=5
+				any_war={
+					defender={ has_character_flag=coalition_target }
+					NOT={ war_score=-50 }
 				}
 			}
-			modifier = {
-				factor = 5
-				any_war = {
-					defender = { has_character_flag = coalition_target }
-					NOT = { war_score = -60 }
+			modifier={
+				factor=5
+				any_war={
+					defender={ has_character_flag=coalition_target }
+					NOT={ war_score=-60 }
 				}
 			}
-			modifier = {
-				factor = 5
-				any_war = {
-					defender = { has_character_flag = coalition_target }
-					NOT = { war_score = -70 }
+			modifier={
+				factor=5
+				any_war={
+					defender={ has_character_flag=coalition_target }
+					NOT={ war_score=-70 }
 				}
 			}
 		}
 	}
 	
-	coalition_win = {
-		is_high_prio = yes
+	coalition_win={
+		is_high_prio=yes
 		
-		potential = {
-			controls_religion = no
-			has_global_flag = coalition_start
-			has_character_flag = coalition_target
-			war = yes
+		potential={
+			controls_religion=no
+			has_global_flag=coalition_start
+			has_character_flag=coalition_target
+			war=yes
 		}
 		
-		allow = {
-			any_war = {
-				attacker = { has_character_flag = coalition_leader }
-				defender = { character = ROOT }
-				war_score = 20
-				NOT = { war_score = 80 }
+		allow={
+			any_war={
+				attacker={ has_character_flag=coalition_leader }
+				defender={ character=ROOT }
+				war_score=20
+				NOT={ war_score=80 }
 			}
-			is_adult = yes
-			is_playable = yes
-			higher_tier_than = COUNT
-			religion = confucian
-			prestige = 500
+			is_adult=yes
+			is_playable=yes
+			higher_tier_than=COUNT
+			religion=confucian
+			prestige=500
 		}
 		
-		effect = {
-			prestige = -500
+		effect={
+			prestige=-500
 			
-			hidden_tooltip = {
-				character_event = { id = RTK.130016 }
+			hidden_tooltip={
+				character_event={ id=RTK.17 }
 				
-				any_playable_ruler = {
-					limit = {
-						has_character_flag = coalition_leader
+				any_playable_ruler={
+					limit={
+						has_character_flag=coalition_leader
 					}
-					character_event = { id = RTK.130015 }
+					character_event={ id=RTK.16 }
 				}
-				any_playable_ruler = {
-					limit = {
-						OR = {
-							has_character_flag = coalition_member
-							has_character_flag = neutral
+				any_playable_ruler={
+					limit={
+						OR={
+							has_character_flag=coalition_member
+							has_character_flag=neutral
 						}
 					}
-					character_event = { id = RTK.130017 }
+					character_event={ id=RTK.18 }
 				}
 			}
 		}
 		
-		ai_will_do = {
-			factor = 1
+		ai_will_do={
+			factor=1
 			
-			modifier = {
-				factor = 0.01 #Reduce chance of call
+			modifier={
+				factor=0.01 #Reduce chance of call
 			}
-			modifier = {
-				factor = 0.5
-				trait = stubborn
+			modifier={
+				factor=0.5
+				trait=stubborn
 			}
-			modifier = {
-				factor = 0.5
-				trait = proud
+			modifier={
+				factor=0.5
+				trait=proud
 			}
-			modifier = {
-				factor = 5
-				any_war = {
-					attacker = { has_character_flag = coalition_leader }
-					defender = { character = ROOT }
-					war_score = 35
+			modifier={
+				factor=5
+				any_war={
+					attacker={ has_character_flag=coalition_leader }
+					defender={ character=ROOT }
+					war_score=35
 				}
 			}
-			modifier = {
-				factor = 5
-				any_war = {
-					attacker = { has_character_flag = coalition_leader }
-					defender = { character = ROOT }
-					war_score = 50
+			modifier={
+				factor=5
+				any_war={
+					attacker={ has_character_flag=coalition_leader }
+					defender={ character=ROOT }
+					war_score=50
 				}
 			}
-			modifier = {
-				factor = 5
-				any_war = {
-					attacker = { has_character_flag = coalition_leader }
-					defender = { character = ROOT }
-					war_score = 65
+			modifier={
+				factor=5
+				any_war={
+					attacker={ has_character_flag=coalition_leader }
+					defender={ character=ROOT }
+					war_score=65
 				}
 			}
 		}

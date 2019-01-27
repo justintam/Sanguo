@@ -28,7 +28,7 @@
 	liege=d_nan
 	holder=602 #Zhang Fei
 }
-216.1.1={
+214.1.1={
 	holder=626 #Mi Fang
 }
 220.1.1={

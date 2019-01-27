@@ -14,5 +14,6 @@ b_aifucheng = city
 # Misc
 culture = nanman
 religion = huojiao
+terrain = mountain
 
 #History

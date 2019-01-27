@@ -17,5 +17,6 @@ b_penjing = city
 # Misc
 culture = han
 religion = confucian
+terrain = plains
 
 #History

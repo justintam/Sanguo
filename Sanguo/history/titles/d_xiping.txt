@@ -1,15 +1,15 @@
 1.1.1={
-	active = no
-	law = agnatic_succession
-	law = succ_gavelkind
+	active=no
+	law=agnatic_succession
+	law=succ_gavelkind
 }
 196.1.1={
-	active = yes
+	active=yes
 	liege=k_liang
-	vice_royalty = yes
+	vice_royalty=yes
 	holder=10486 #Du Ji
 }
 205.1.1={
 	holder=0
-	active = no
+	active=no
 }

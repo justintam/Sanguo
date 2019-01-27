@@ -6,6 +6,12 @@
 1.1.1={
 	liege=d_nanyang
 }
+80.1.1={
+	holder=4487 #Du An
+}
+82.1.1={
+	holder=0 #None
+}
 135.1.1={
 	holder=4404 #Zhao Jie
 }
@@ -48,10 +54,7 @@
 	holder=325 #Zhang Xiu
 }
 207.4.1={
-	holder=48 #Liu Biao
-}
-208.8.1={
-	holder=53 #Liu Cong
+	holder=1380 #Li Fengzhu
 }
 208.9.1={
 	holder=4240 #Yang Jun

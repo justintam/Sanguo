@@ -15,5 +15,6 @@ b_taebang = tribal
 # Misc
 culture = samhan
 religion = confucian
+terrain = hills
 
 #History

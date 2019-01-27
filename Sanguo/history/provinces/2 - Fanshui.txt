@@ -15,5 +15,6 @@ b_fanshuicheng = city
 # Misc
 culture = han
 religion = confucian
+terrain = plains
 
 #History

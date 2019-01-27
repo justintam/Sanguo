@@ -20,7 +20,6 @@
 211.1.1={
 	liege=e_sun
 }
-215.1.1={
-	holder=0 #None
-	active=no
+219.5.1={
+	liege=0
 }

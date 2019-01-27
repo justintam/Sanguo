@@ -1385,24 +1385,18 @@ laws = {
 			factor = 3
 			modifier = {
 				factor = 0
-				AND = {
-					has_law = vice_royalty_0
-					over_vassal_limit = -8
-				}
+				has_law = vice_royalty_0
+				over_vassal_limit = -8
 			}
 			modifier = {
 				factor = 0
-				AND = {
-					has_law = vice_royalty_1
-					over_vassal_limit = -4
-				}
+				has_law = vice_royalty_1
+				over_vassal_limit = -4
 			}
 			modifier = {
 				factor = 0
-				AND = {
-					has_law = vice_royalty_2
-					over_vassal_limit = -2
-				}
+				has_law = vice_royalty_2
+				over_vassal_limit = -2
 			}
 		}
 		ai_will_revoke = {

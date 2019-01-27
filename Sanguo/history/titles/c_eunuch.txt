@@ -1,6 +1,6 @@
 # e_china
 1.1.1={
-	law = succ_open_elective
+	law=succ_open_elective
 }
 1.1.1={
 	liege=k_confucian
@@ -13,10 +13,9 @@
 	holder=1101 #Zhang Rang
 }
 189.9.1={
-	holder=0 #None
-}
-190.4.9={
-	liege=0
-	holder=0 #Destroyed
+	holder=0
 	active=no
+}
+600.1.1={
+	active=yes
 }

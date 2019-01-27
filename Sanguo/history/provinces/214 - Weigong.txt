@@ -15,6 +15,7 @@ b_hemucheng = temple
 # Misc
 culture = han
 religion = confucian
+terrain = plains
 
 #History
 208.1.1={

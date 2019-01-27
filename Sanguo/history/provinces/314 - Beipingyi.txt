@@ -13,5 +13,6 @@ b_beipingyi = tribal
 # Misc
 culture = xiongnu
 religion = tengri_pagan
+terrain = steppe
 
 #History

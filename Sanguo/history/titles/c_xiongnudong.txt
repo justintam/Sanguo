@@ -9,8 +9,11 @@
 	holder=1500 #Qiangqui
 }
 188.1.1={
-	holder=1501 #Yufuluo
+	holder=1504 #Gudu
 }
-195.1.1={
+189.9.1={
 	holder=1505 #Huchuquan
+}
+216.1.1={
+	holder=1523 #Liu Bao
 }

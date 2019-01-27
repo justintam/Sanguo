@@ -15,5 +15,6 @@ b_gaoliangting = city
 # Misc
 culture = han
 religion = confucian
+terrain = hills
 
 #History

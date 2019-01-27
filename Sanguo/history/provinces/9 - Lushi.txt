@@ -13,5 +13,6 @@ b_lushi = castle
 # Misc
 culture = han
 religion = confucian
+terrain = hills
 
 #History

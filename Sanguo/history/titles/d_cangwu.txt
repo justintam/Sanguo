@@ -50,3 +50,6 @@
 	vice_royalty = yes
 	holder=10510 #Bu Zhi
 }
+220.1.1={
+	holder=540 #Lü Dai
+}

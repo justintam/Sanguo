@@ -1448,112 +1448,11 @@ character_event = {
 	option = { #I understand
 		name = EVTOPTA_79023
 		custom_tooltip = { text = EVTOPTA_79023_TOOLTIP }
-		
-		#hidden_tooltip = {
-			random_list = {
-				500 = {
-					modifier = {
-						factor = 0
-						NOT = { had_character_flag = { flag = special_marshal years = 20 } }
-					}
-					give_nickname = nick_the_valkyrie
-				}
-				10 = {
-					modifier = {
-						factor = 0
-						NOT = { had_character_flag = { flag = special_marshal days = 90 } }
-					}
-					give_nickname = nick_the_shieldmaiden
-				}
-				100 = {
-					modifier = {
-						factor = 0
-						NOR = { 
-							has_character_modifier = clumsy_shieldmaiden
-							has_character_modifier = fell_into_the_river
-							has_character_modifier = inattentive_soldier
-						}
-					}
-					give_nickname = nick_the_clumsy
-				}
-				10 = {
-					modifier = {
-						factor = 0
-						NAND = {
-							trait = brave
-							had_character_flag = { flag = special_marshal days = 90 }
-						}
-					}
-					give_nickname = nick_the_fearless
-				}
-				10 = {
-					modifier = {
-						factor = 0
-						NAND = {
-							trait = impaler
-							had_character_flag = { flag = special_marshal days = 90 }
-						}
-					}
-					give_nickname = nick_the_impaler
-				}
-				10 = {
-					modifier = {
-						factor = 0
-						NAND = {
-							martial = 18
-							had_character_flag = { flag = special_marshal days = 90 }
-						}
-					}
-					give_nickname = nick_bloodaxe
-				}
-				10 = {
-					modifier = {
-						factor = 0
-						NAND = {
-							has_character_modifier = favored_shieldmaiden
-							had_character_flag = { flag = special_marshal years = 5 }
-							NOT = { age = 30 }
-						}
-					}
-					give_nickname = nick_the_legendary
-				}
-				10 = {
-					modifier = {
-						factor = 0
-						NAND = {
-							has_character_modifier = favored_shieldmaiden
-							had_character_flag = { flag = special_marshal days = 90 }
-						}
-					}
-					give_nickname = nick_the_defender
-				}
-				20 = {
-					modifier = {
-						factor = 0
-						NOR = {
-							trait = severely_injured
-							has_character_modifier = lucky_to_be_alive
-							trait = one_eyed
-							trait = blinded
-							trait = one_legged
-							trait = one_handed
-							trait = disfigured
-							trait = mangled
-							trait = maimed
-							trait = wounded
-						}
-					}
-					give_nickname = nick_the_survivor
-				}
-			}
-			remove_opinion = {
-				who = FROMFROM
-				modifier = opinion_shieldmaiden
-			}
-		#}
-
+		remove_opinion = {
+			who = FROMFROM
+			modifier = opinion_shieldmaiden
+		}
 		clr_character_flag = special_marshal		
 		remove_trait = shieldmaiden
-
 	}
 }

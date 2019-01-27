@@ -15,8 +15,9 @@ b_zhaoyang = city
 #b_longmen = castle
 
 # Misc
-culture = han
-religion = confucian
+culture = di
+religion = baima
+terrain = mountain
 
 #History
 200.1.1={

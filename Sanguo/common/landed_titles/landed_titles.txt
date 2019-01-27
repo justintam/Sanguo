@@ -4,6 +4,7 @@ e_rebels = {
 	primary = yes
 
 	culture = han
+	religion = folk
 	tribe = yes
 
 	color={ 0 0 0 }
@@ -16,10 +17,11 @@ e_pirates = {
 	primary = yes
 
 	culture = han
+	religion = folk
 	tribe = yes
 
-	color={ 255 255 255 }
-	color2={ 255 255 255 }
+	color={ 0 0 0 }
+	color2={ 0 0 0 }
 }
 
 # Religion
@@ -66,23 +68,27 @@ k_confucian = {
 	male_names = {
 		Ai An
 		Bang Bian Bing
-		Cheng Chong Chu
-		Da
-		Fei
+		Cheng Chong Chu Ci
+		Da Dao De Ding
+		Fa Fei
 		Gao Gong Guang
-		He Huai Huan Huang Hui Huo
-		Jia Jing
-		Kang
+		He Houfei Huai Huan Huang Hui Huo
+		Jia Jian Jiang Jianwen Jie Jin Jing
+		Jiong
+		Kang Kao Kuang
 		Li Liang Lie Ling Lu
-		Min Ming Mu
+		Mang Min Ming Mo Mu
+		Nan
 		Ping
-		Qi Qiao Qing
-		Shang Shao Shi Shun Shuo Si
+		Qi Qianfei Qiao Qin Qing
+		Ren Rui
+		Shang Shao Shenjing Shi Shun Shuo Si
 		Tian
-		Wei Wen Wu
-		Xi Xian Xiang Xiao Xiaowu Xuan
-		Yan Yang Yao Yi Yin Ying Yu Yuan
-		Zhang Zhao Zhi Zhuang
+		Wei Weilie Wen Wu
+		Xi Xian Xiang Xiao Xiaowu Xie Xuan
+		Yan Yang Yao Yi Yin Ying You Yu Yuan
+		Zhang Zhao Zhaowen Zhending Zhengyang
+		Zhi Zhu Zhuang
 
 #		#Temple/Era names/Barbarian/Post han
 #		Baoding
@@ -118,12 +124,55 @@ k_confucian = {
 #		Zhaowu Zhenghe Zhengyuan Zhongyuan
 #		Zhuangdi
 	}
+	
+	female_names = {
+		Ai Aijing Ansi Anxi
+		Bian Bo
+		Cao Chen Chengai Chengong Chengjun
+		Chongde Chu Cixi
+		Dan Daolian Daowu Deng Dong Dou Du
+		Duan
+		Fahui Fanglan Fani Fanjing Feishan
+		Feiyan Fu
+		Gao Gongai Gou Guanglie Guo
+		He Hexi Huansi Huide Huijie Huo
+		Ji Jia Jiang Jiao Jie Jing Jingai
+		Jingying Ju
+		Kangxian
+		Lanbi Li Liang Lihua Lingqu Lingsi
+		Lingyuan Liu Lu Lü
+		Ma Mao Maoying Mengnu Miao Mingdao
+		Mingde Mingmu Mingyuan Mu Muzhang
+		Muzhi
+		Na Nanfeng Nuwang Nuying
+		Pan Ping Pingjun
+		Qi Qiang Qigui Qiongcheng Quan
+		Shang Shangguan Shaoming She Shen
+		Shenai
+		Shengtong Shi Shou Shunhua Shunlie
+		Si Song Suanzi Sui Sun
+		Taisi Teng
+		Wang Wei Wende Wenjun Wu Wudao
+		Wuxiao Wuxuan Wuyuan
+		Xianmu Xianrong Xianwen Xiao Xiaoai
+		Xiaocheng Xiaohui Xiaomu Xiaoping
+		Xiaoren Xiaowen Xiaowu Xiaowuding
+		Xiaoxuan Xiaoyuan Xiaozhao Xie Xin
+		Xu Xuan
+		Yan Yang Yi Yin Yixian Yongan Yu
+		Yuan Yuying
+		Zetian Zhang Zhangde Zhangsun Zhao
+		Zhen Zhenfeng Zhengjun Zhi Zhou Zhu
+		Zifu
+	}
 }
 
 c_empress = {
 	color={ 255 215 0 }
 	color2={ 255 255 255 }
 	graphical_culture = holygfx
+	
+	capital=1 #Henan
 	
 	culture = han
 	religion = confucian
@@ -142,11 +191,114 @@ c_empress = {
 	name_tier = EMPEROR
 	foa = "EMPEROR_FOA"
 	short_name = yes
+
+	male_names = {
+		Ai An
+		Bang Bian Bing
+		Cheng Chong Chu Ci
+		Da Dao De Ding
+		Fa Fei
+		Gao Gong Guang
+		He Houfei Huai Huan Huang Hui Huo
+		Jia Jian Jiang Jianwen Jie Jin Jing
+		Jiong
+		Kang Kao Kuang
+		Li Liang Lie Ling Lu
+		Mang Min Ming Mo Mu
+		Nan
+		Ping
+		Qi Qianfei Qiao Qin Qing
+		Ren Rui
+		Shang Shao Shenjing Shi Shun Shuo Si
+		Tian
+		Wei Weilie Wen Wu
+		Xi Xian Xiang Xiao Xiaowu Xie Xuan
+		Yan Yang Yao Yi Yin Ying You Yu Yuan
+		Zhang Zhao Zhaowen Zhending Zhengyang
+		Zhi Zhu Zhuang
+
+#		#Temple/Era names/Barbarian/Post han
+#		Baoding
+#		Chenping Chongzhen
+#		Daowu Dihuang
+#		Fenghuang
+#		Ganlu Gengshi Guanghe Guangwen Guangwu
+#		Hanxing Heilong Hongguang Hongshi
+#		Hongwu Hongxi Hongzhi Houfei Houyuan
+#		Huangchu Huanghuo Huanglong Huangshi
+#		Huangwu Huimin
+#		Jiajing Jianguang Jiankang Jianmin
+#		Jianwen Jianwu Jianyuan Jianzhao
+#		Jiaping Jiaqing Jingtai
+#		Longli Longqing Longwu
+#		Mingyuan
+#		Pingwen
+#		Qianfei Qinglong
+#		Shaowu Shuzhi
+#		Taichang Taiping Taishang Taiwu
+#		Taiyuan Tianfeng
+#		Wanli Wencheng Wenhuan Wenming
+#		Wenxuan Wenzhao Wucheng Wulie Wuyuan
+#		Xiantong Xianwen Xianwu Xianxi
+#		Xiaojing Xiaomin Xiaoming Xiaowen
+#		Xiaowu Xiaozhao Xiaozhuang Xiping
+#		Xuande Xuanwu Xuaozhao
+#		Yangjia Yanguang Yankang Yanxi
+#		Yongchu Yongkang Yongle Yongxi
+#		Youzhu Yuanding Yuanfeng Yuanguang
+#		Yuanhe Yuanping Yuanshuo
+#		Zhangwu Zhaocheng Zhaoning Zhaowen
+#		Zhaowu Zhenghe Zhengyuan Zhongyuan
+#		Zhuangdi
+	}
+	
+	female_names = {
+		Ai Aijing Ansi Anxi
+		Bian Bo
+		Cao Chen Chengai Chengong Chengjun
+		Chongde Chu Cixi
+		Dan Daolian Daowu Deng Dong Dou Du
+		Duan
+		Fahui Fanglan Fani Fanjing Feishan
+		Feiyan Fu
+		Gao Gongai Gou Guanglie Guo
+		He Hexi Huansi Huide Huijie Huo
+		Ji Jia Jiang Jiao Jie Jing Jingai
+		Jingying Ju
+		Kangxian
+		Lanbi Li Liang Lihua Lingqu Lingsi
+		Lingyuan Liu Lu Lü
+		Ma Mao Maoying Mengnu Miao Mingdao
+		Mingde Mingmu Mingyuan Mu Muzhang
+		Muzhi
+		Na Nanfeng Nuwang Nuying
+		Pan Ping Pingjun
+		Qi Qiang Qigui Qiongcheng Quan
+		Shang Shangguan Shaoming She Shen
+		Shenai
+		Shengtong Shi Shou Shunhua Shunlie
+		Si Song Suanzi Sui Sun
+		Taisi Teng
+		Wang Wei Wende Wenjun Wu Wudao
+		Wuxiao Wuxuan Wuyuan
+		Xianmu Xianrong Xianwen Xiao Xiaoai
+		Xiaocheng Xiaohui Xiaomu Xiaoping
+		Xiaoren Xiaowen Xiaowu Xiaowuding
+		Xiaoxuan Xiaoyuan Xiaozhao Xie Xin
+		Xu Xuan
+		Yan Yang Yi Yin Yixian Yongan Yu
+		Yuan Yuying
+		Zetian Zhang Zhangde Zhangsun Zhao
+		Zhen Zhenfeng Zhengjun Zhi Zhou Zhu
+		Zifu
+	}
 }
 
 c_eunuch = {
 	color={ 210 120 120 }
 	color2={ 255 255 255 }
+	
+	capital=1 #Henan
 	
 	culture = han
 	religion = confucian

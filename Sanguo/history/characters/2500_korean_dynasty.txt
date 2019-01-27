@@ -234,6 +234,11 @@
 	48.1.1={
 		add_spouse=2521
 	}
+	184.1.1={
+		effect={
+			health=9
+		}
+	}
 	199.1.1={
 		death=yes
 	}
@@ -250,6 +255,11 @@
 	}
 	48.1.1={
 		add_spouse=2520
+	}
+	184.1.1={
+		effect={
+			health=9
+		}
 	}
 	189.1.1={
 		death=yes
@@ -268,6 +278,9 @@
 	}
 	184.1.1={
 		add_spouse=2523
+		effect={
+			health=5
+		}
 	}
 	259.1.1={
 		death=yes
@@ -285,6 +298,9 @@
 	}
 	184.1.1={
 		add_spouse=2522
+		effect={
+			health=4
+		}
 	}
 	230.1.1={
 		death=yes
@@ -299,6 +315,9 @@
 	mother=2523
 	200.1.1={
 		birth=yes
+		effect={
+			health=5
+		}
 	}
 	248.1.1={
 		add_spouse=2525
@@ -331,6 +350,9 @@
 	mother=2525
 	260.1.1={
 		birth=yes
+		effect={
+			health=5
+		}
 	}
 	318.1.1={
 		add_spouse=2527
@@ -363,6 +385,9 @@
 	mother=2527
 	320.1.1={
 		birth=yes
+		effect={
+			health=4
+		}
 	}
 	338.1.1={
 		add_spouse=2529
@@ -395,6 +420,9 @@
 	mother=2529
 	340.1.1={
 		birth=yes
+		effect={
+			health=4
+		}
 	}
 	368.1.1={
 		add_spouse=2531
@@ -427,6 +455,9 @@
 	mother=2531
 	370.1.1={
 		birth=yes
+		effect={
+			health=4
+		}
 	}
 	398.1.1={
 		add_spouse=2533

@@ -410,10 +410,29 @@ narrative_event = {
 
 	immediate = {
 		set_character_flag = black_death_close
+
+		if = {
+			limit = { has_power_omen_modifier_trigger = yes }
+			set_character_flag = negative_event_flag
+		}
 	}
 	
 	option = {
 		name = EVTOPTA_RIP_10001
+		trigger = {
+			has_power_omen_modifier_trigger = no
+		}
+	}
+
+	option = { # Monks & Mystics - Hermetics Scrying reaction
+		name = EVTOPTA_SSI_006
+
+		calculate_scrying_outcome_effect = yes
+		remove_scrying_omen_modifiers_effect = yes
+		tooltip_info = yes
+		trigger = {
+			has_power_omen_modifier_trigger = yes
+		}
 	}
 }
 
@@ -501,7 +520,7 @@ narrative_event = {
 							trait = kind 
 							trait = charitable 
 						}
-						NAND = {
+						AND = {
 							OR = { 
 								trait = strong 
 								trait = robust 
@@ -533,12 +552,12 @@ narrative_event = {
 				modifier = {
 					factor = 0
 					NAND = {
-							NOT = { religion_group = FROM }
-							OR = {
-								trait = zealous
-								trait = cruel
-							}
+						NOT = { religion_group = FROM }
+						OR = {
+							trait = zealous
+							trait = cruel
 						}
+					}
 				}
 			}
 			10 = {
@@ -574,15 +593,33 @@ narrative_event = {
 				}
 			}
 		}
+		if = {
+			limit = {
+				NOR = {
+					has_character_flag = option_a
+					has_character_flag = option_b
+					has_character_flag = option_c
+					has_character_flag = option_d
+					has_character_flag = option_e
+					has_character_flag = option_f
+				}
+			}
+			set_character_flag = option_a
+		}
 		chronicle = {
 			entry = CHRONICLE_BORDERING_PLAGUE
 			picture = GFX_evt_plague_spreading
+		}
+		if = {
+			limit = { has_power_omen_modifier_trigger = yes }
+			set_character_flag = negative_event_flag
 		}
 	}
 	
 	option = {
 		trigger = {
 			has_character_flag = option_a
+			has_power_omen_modifier_trigger = no
 		}
 		name = EVTOPTA_RIP_10006
 	}
@@ -590,6 +627,7 @@ narrative_event = {
 	option = {
 		trigger = {
 			has_character_flag = option_b
+			has_power_omen_modifier_trigger = no
 		}
 		name = EVTOPTB_RIP_10006
 		clr_character_flag = option_b
@@ -598,6 +636,7 @@ narrative_event = {
 	option = {
 		trigger = {
 			has_character_flag = option_c
+			has_power_omen_modifier_trigger = no
 		}
 		name = EVTOPTC_RIP_10006
 		clr_character_flag = option_c
@@ -606,6 +645,7 @@ narrative_event = {
 	option = {
 		trigger = {
 			has_character_flag = option_d
+			has_power_omen_modifier_trigger = no
 		}
 		name = EVTOPTD_RIP_10006
 		clr_character_flag = option_d
@@ -614,6 +654,7 @@ narrative_event = {
 	option = {
 		trigger = {
 			has_character_flag = option_e
+			has_power_omen_modifier_trigger = no
 		}
 		name = EVTOPTE_RIP_10006
 		clr_character_flag = option_e
@@ -622,10 +663,85 @@ narrative_event = {
 	option = {
 		trigger = {
 			has_character_flag = option_f
+			has_power_omen_modifier_trigger = no
 		}
 		name = EVTOPTF_RIP_10006
 		clr_character_flag = option_f
 	}
+
+	### Hermetics: Scrying Omen result options below... ###
+	option = {
+		trigger = {
+			has_character_flag = option_a
+			has_power_omen_modifier_trigger = yes
+		}
+		name = EVTOPTA_RIP_10006
+
+		calculate_scrying_outcome_effect = yes
+		remove_scrying_omen_modifiers_effect = yes
+		tooltip_info = yes
+	}
+
+	option = {
+		trigger = {
+			has_character_flag = option_b
+			has_power_omen_modifier_trigger = yes
+		}
+		name = EVTOPTB_RIP_10006
+		calculate_scrying_outcome_effect = yes
+		remove_scrying_omen_modifiers_effect = yes
+		tooltip_info = yes
+		clr_character_flag = option_b
+	}
+
+	option = {
+		trigger = {
+			has_character_flag = option_c
+			has_power_omen_modifier_trigger = yes
+		}
+		name = EVTOPTC_RIP_10006
+		calculate_scrying_outcome_effect = yes
+		remove_scrying_omen_modifiers_effect = yes
+		tooltip_info = yes
+		clr_character_flag = option_c
+	}
+
+	option = {
+		trigger = {
+			has_character_flag = option_d
+			has_power_omen_modifier_trigger = yes
+		}
+		name = EVTOPTD_RIP_10006
+		calculate_scrying_outcome_effect = yes
+		remove_scrying_omen_modifiers_effect = yes
+		tooltip_info = yes
+		clr_character_flag = option_d
+	}
+
+	option = {
+		trigger = {
+			has_character_flag = option_e
+			has_power_omen_modifier_trigger = yes
+		}
+		name = EVTOPTE_RIP_10006
+		calculate_scrying_outcome_effect = yes
+		remove_scrying_omen_modifiers_effect = yes
+		tooltip_info = yes
+		clr_character_flag = option_e
+	}
+
+	option = {
+		trigger = {
+			has_character_flag = option_f
+			has_power_omen_modifier_trigger = yes
+		}
+		name = EVTOPTF_RIP_10006
+		calculate_scrying_outcome_effect = yes
+		remove_scrying_omen_modifiers_effect = yes
+		tooltip_info = yes
+		clr_character_flag = option_f
+	}
+	
 }
 
 #See if any world_region has been severely damaged by the plague
@@ -638,23 +754,19 @@ character_event = {
 
 	trigger = {
 		NAND = {
-			has_global_flag = bp_world_india_broadcasted
-			has_global_flag = bp_world_persia_broadcasted
-			has_global_flag = bp_world_middle_east_broadcasted
-			has_global_flag = bp_world_africa_broadcasted
-			has_global_flag = bp_world_asia_minor_broadcasted
-			has_global_flag = bp_world_europe_east_broadcasted
-			has_global_flag = bp_world_europe_south_broadcasted
-			has_global_flag = bp_world_europe_west_broadcasted
-			has_global_flag = bp_world_europe_north_broadcasted
-			has_global_flag = bp_world_steppe_broadcasted
+			has_global_flag = bp_world_central_asia_broadcasted
+			has_global_flag = bp_world_china_broadcasted
+			has_global_flag = bp_world_korea_broadcasted
+			has_global_flag = bp_world_manchu_broadcasted
+			has_global_flag = bp_world_mongol_broadcasted
+			has_global_flag = bp_world_tibet_broadcasted
 		}
 	}
 
 	immediate = {
 		if = {
 			limit = {
-				NOT = { has_global_flag = bp_world_india_broadcasted }
+				NOT = { has_global_flag = bp_world_central_asia_broadcasted }
 				regional_percentage = {
 					region = world_india
 					percentage = 0.5
@@ -665,16 +777,16 @@ character_event = {
 					}
 				}
 			}
-			set_global_flag = bp_world_india_broadcasted
+			set_global_flag = bp_world_central_asia_broadcasted
 			capital_scope = { province_event = { id = RIP.10115 } }
 			chronicle = {
-			entry = CHRONICLE_INDIA_GONE
+			entry = CHRONICLE_CENTRAL_ASIA_GONE
 			picture = GFX_evt_monk
 			}
 		}
 		if = {
 			limit = {
-				NOT = { has_global_flag = bp_world_persia_broadcasted }
+				NOT = { has_global_flag = bp_world_china_broadcasted }
 				regional_percentage = {
 					region = world_persia
 					percentage = 0.5
@@ -685,16 +797,16 @@ character_event = {
 					}
 				}
 			}
-			set_global_flag = bp_world_persia_broadcasted
+			set_global_flag = bp_world_china_broadcasted
 			capital_scope = { province_event = { id = RIP.10116 } }
 			chronicle = {
-			entry = CHRONICLE_PERSIA_GONE
+			entry = CHRONICLE_CHINA_GONE
 			picture = GFX_evt_monk
 			}
 		}
 		if = {
 			limit = {
-				NOT = { has_global_flag = bp_world_middle_east_broadcasted }
+				NOT = { has_global_flag = bp_world_korea_broadcasted }
 				regional_percentage = {
 					region = world_middle_east
 					percentage = 0.5
@@ -705,16 +817,16 @@ character_event = {
 					}
 				}
 			}
-			set_global_flag = bp_world_middle_east_broadcasted
+			set_global_flag = bp_world_korea_broadcasted
 			capital_scope = { province_event = { id = RIP.10117 } }
 			chronicle = {
-			entry = CHRONICLE_MIDDLEEAST_GONE
+			entry = CHRONICLE_KOREA_GONE
 			picture = GFX_evt_monk
 			}
 		}
 		if = {
 			limit = {
-				NOT = { has_global_flag = bp_world_africa_broadcasted }
+				NOT = { has_global_flag = bp_world_manchu_broadcasted }
 				regional_percentage = {
 					region = world_africa
 					percentage = 0.5
@@ -725,16 +837,16 @@ character_event = {
 					}
 				}
 			}
-			set_global_flag = bp_world_africa_broadcasted
+			set_global_flag = bp_world_manchu_broadcasted
 			capital_scope = { province_event = { id = RIP.10118 } }
 			chronicle = {
-			entry = CHRONICLE_AFRICA_GONE
+			entry = CHRONICLE_MANCHU_GONE
 			picture = GFX_evt_monk
 			}
 		}
 		if = {
 			limit = {
-				NOT = { has_global_flag = bp_world_asia_minor_broadcasted }
+				NOT = { has_global_flag = bp_world_mongol_broadcasted }
 				regional_percentage = {
 					region = world_asia_minor
 					percentage = 0.5
@@ -745,16 +857,16 @@ character_event = {
 					}
 				}
 			}
-			set_global_flag = bp_world_asia_minor_broadcasted
+			set_global_flag = bp_world_mongol_broadcasted
 			capital_scope = { province_event = { id = RIP.10119 } }
 			chronicle = {
-			entry = CHRONICLE_ASIAMINOR_GONE
+			entry = CHRONICLE_MONGOL_GONE
 			picture = GFX_evt_monk
 			}
 		}
 		if = {
 			limit = {
-				NOT = { has_global_flag = bp_world_europe_east_broadcasted }
+				NOT = { has_global_flag = bp_world_tibet_broadcasted }
 				regional_percentage = {
 					region = world_europe_east
 					percentage = 0.5
@@ -765,90 +877,10 @@ character_event = {
 					}
 				}
 			}
-			set_global_flag = bp_world_europe_east_broadcasted
+			set_global_flag = bp_world_tibet_broadcasted
 			capital_scope = { province_event = { id = RIP.10120 } }
 			chronicle = {
-			entry = CHRONICLE_EASTEUROPE_GONE
-			picture = GFX_evt_monk
-			}
-		}
-		if = {
-			limit = {
-				NOT = { has_global_flag = bp_world_europe_south_broadcasted }
-				regional_percentage = {
-					region = world_europe_south
-					percentage = 0.5
-					OR = {
-						has_province_modifier = depopulated_1
-						has_province_modifier = depopulated_2
-						has_province_modifier = depopulated_3
-					}
-				}
-			}
-			set_global_flag = bp_world_europe_south_broadcasted
-			capital_scope = { province_event = { id = RIP.10121 } }
-			chronicle = {
-			entry = CHRONICLE_SOUTHEUROPE_GONE
-			picture = GFX_evt_monk
-			}
-		}
-		if = {
-			limit = {
-				NOT = { has_global_flag = bp_world_europe_west_broadcasted }
-				regional_percentage = {
-					region = world_europe_west
-					percentage = 0.5
-					OR = {
-						has_province_modifier = depopulated_1
-						has_province_modifier = depopulated_2
-						has_province_modifier = depopulated_3
-					}
-				}
-			}
-			set_global_flag = bp_world_europe_west_broadcasted
-			capital_scope = { province_event = { id = RIP.10122 } }
-			chronicle = {
-			entry = CHRONICLE_WESTEUROPE_GONE
-			picture = GFX_evt_monk
-			}
-		}
-		if = {
-			limit = {
-				NOT = { has_global_flag = bp_world_europe_north_broadcasted }
-				regional_percentage = {
-					region = world_europe_north
-					percentage = 0.5
-					OR = {
-						has_province_modifier = depopulated_1
-						has_province_modifier = depopulated_2
-						has_province_modifier = depopulated_3
-					}
-				}
-			}
-			set_global_flag = bp_world_europe_north_broadcasted
-			capital_scope = { province_event = { id = RIP.10123 } }
-			chronicle = {
-			entry = CHRONICLE_NORTHEUROPE_GONE
-			picture = GFX_evt_monk
-			}
-		}
-		if = {
-			limit = {
-				NOT = { has_global_flag = bp_world_steppe_broadcasted }
-				regional_percentage = {
-					region = world_steppe
-					percentage = 0.5
-					OR = {
-						has_province_modifier = depopulated_1
-						has_province_modifier = depopulated_2
-						has_province_modifier = depopulated_3
-					}
-				}
-			}
-			set_global_flag = bp_world_steppe_broadcasted
-			capital_scope = { province_event = { id = RIP.10124 } }
-			chronicle = {
-			entry = CHRONICLE_STEPPE_GONE
+			entry = CHRONICLE_TIBET_GONE
 			picture = GFX_evt_monk
 			}
 		}
@@ -1066,146 +1098,6 @@ narrative_event = {
 	}
 }
 
-# The Black Death has ravaged Europe South
-province_event = {
-	id = RIP.10121
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = { province_event = { id = RIP.10221 days = 70 random = 250 } } 
-}
-
-province_event = {
-	id = RIP.10221
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = { owner = { narrative_event = { id = RIP.10021 } } }
-}
-
-narrative_event = {
-	id = RIP.10021
-	title = EVTNAME_RIP_10021
-	picture = GFX_evt_danse_macabre
-	border = GFX_event_narrative_frame_religion
-
-	desc = EVTDESC_RIP_10021
-
-	is_triggered_only = yes
-	hide_from = yes
-
-	major = yes
-	
-	option = {
-		name = EVTOPTA_RIP_10015
-	}
-}
-
-# The Black Death has ravaged Europe West
-province_event = {
-	id = RIP.10122
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = { province_event = { id = RIP.10222 days = 80 random = 250 } } 
-}
-
-province_event = {
-	id = RIP.10222
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = { owner = { narrative_event = { id = RIP.10022 } } }
-}
-
-narrative_event = {
-	id = RIP.10022
-	title = EVTNAME_RIP_10022
-	picture = GFX_evt_danse_macabre
-	border = GFX_event_narrative_frame_religion
-
-	desc = EVTDESC_RIP_10022
-
-	is_triggered_only = yes
-	hide_from = yes
-
-	major = yes
-	
-	option = {
-		name = EVTOPTA_RIP_10015
-	}
-}
-
-# The Black Death has ravaged Europe North
-province_event = {
-	id = RIP.10123
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = { province_event = { id = RIP.10223 days = 90 random = 250 } } 
-}
-
-province_event = {
-	id = RIP.10223
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = { owner = { narrative_event = { id = RIP.10023 } } }
-}
-
-narrative_event = {
-	id = RIP.10023
-	title = EVTNAME_RIP_10023
-	picture = GFX_evt_danse_macabre
-	border = GFX_event_narrative_frame_religion
-
-	desc = EVTDESC_RIP_10023
-
-	is_triggered_only = yes
-	hide_from = yes
-
-	major = yes
-	
-	option = {
-		name = EVTOPTA_RIP_10015
-	}
-}
-
-# The Black Death has ravaged the Steppe
-province_event = {
-	id = RIP.10124
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = { province_event = { id = RIP.10224 days = 100 random = 250 } } 
-}
-
-province_event = {
-	id = RIP.10224
-	hide_window = yes
-	is_triggered_only = yes
-
-	immediate = { owner = { narrative_event = { id = RIP.10024 } } }
-}
-
-narrative_event = {
-	id = RIP.10024
-	title = EVTNAME_RIP_10024
-	picture = GFX_evt_danse_macabre
-	border = GFX_event_narrative_frame_religion
-
-	desc = EVTDESC_RIP_10024
-
-	is_triggered_only = yes
-	hide_from = yes
-
-	major = yes
-	
-	option = {
-		name = EVTOPTA_RIP_10015
-	}
-}
-
 #depopulation modifier dissipating
 province_event = {
 	id = RIP.10030
@@ -1310,9 +1202,11 @@ province_event = {
 			70 = { # Nothing Happens
 				modifier = {
 					factor = 3
-					OR = {
-						is_occupied = yes
-						in_siege = yes
+					any_province_holding = {
+						OR = {
+							is_occupied = yes
+							has_siege = yes
+						}
 					}
 				}
 				modifier = {
@@ -1347,7 +1241,7 @@ character_event = {
 				disease = bubonic_plague
 			}
 			regional_percentage = {
-				region = world_india
+				region = world_central_asia
 				percentage = 0.5
 				OR = {
 					has_province_modifier = depopulated_1
@@ -1356,7 +1250,7 @@ character_event = {
 				}
 			}
 			regional_percentage = {
-				region = world_persia
+				region = world_china
 				percentage = 0.5
 				OR = {
 					has_province_modifier = depopulated_1
@@ -1365,7 +1259,7 @@ character_event = {
 				}
 			}
 			regional_percentage = {
-				region = world_middle_east
+				region = world_korea
 				percentage = 0.5
 				OR = {
 					has_province_modifier = depopulated_1
@@ -1374,7 +1268,7 @@ character_event = {
 				}
 			}
 			regional_percentage = {
-				region = world_africa
+				region = world_manchu
 				percentage = 0.5
 				OR = {
 					has_province_modifier = depopulated_1
@@ -1383,7 +1277,7 @@ character_event = {
 				}
 			}
 			regional_percentage = {
-				region = world_asia_minor
+				region = world_mongol
 				percentage = 0.5
 				OR = {
 					has_province_modifier = depopulated_1
@@ -1392,43 +1286,7 @@ character_event = {
 				}
 			}
 			regional_percentage = {
-				region = world_europe_east
-				percentage = 0.5
-				OR = {
-					has_province_modifier = depopulated_1
-					has_province_modifier = depopulated_2
-					has_province_modifier = depopulated_3
-				}
-			}
-			regional_percentage = {
-				region = world_europe_south
-				percentage = 0.5
-				OR = {
-					has_province_modifier = depopulated_1
-					has_province_modifier = depopulated_2
-					has_province_modifier = depopulated_3
-				}
-			}
-			regional_percentage = {
-				region = world_europe_west
-				percentage = 0.5
-				OR = {
-					has_province_modifier = depopulated_1
-					has_province_modifier = depopulated_2
-					has_province_modifier = depopulated_3
-				}
-			}
-			regional_percentage = {
-				region = world_europe_north
-				percentage = 0.5
-				OR = {
-					has_province_modifier = depopulated_1
-					has_province_modifier = depopulated_2
-					has_province_modifier = depopulated_3
-				}
-			}
-			regional_percentage = {
-				region = world_steppe
+				region = world_tibet
 				percentage = 0.5
 				OR = {
 					has_province_modifier = depopulated_1
@@ -1441,15 +1299,11 @@ character_event = {
 
 	immediate = {
 		clr_global_flag = black_death_broadcasted
-		clr_global_flag = bp_world_india_broadcasted
-		clr_global_flag = bp_world_persia_broadcasted
-		clr_global_flag = bp_world_middle_east_broadcasted
-		clr_global_flag = bp_world_africa_broadcasted
-		clr_global_flag = bp_world_asia_minor_broadcasted
-		clr_global_flag = bp_world_europe_east_broadcasted
-		clr_global_flag = bp_world_europe_south_broadcasted
-		clr_global_flag = bp_world_europe_west_broadcasted
-		clr_global_flag = bp_world_europe_north_broadcasted
-		clr_global_flag = bp_world_steppe_broadcasted
+		clr_global_flag = bp_world_central_asia_broadcasted
+		clr_global_flag = bp_world_china_broadcasted
+		clr_global_flag = bp_world_korea_broadcasted
+		clr_global_flag = bp_world_manchu_broadcasted
+		clr_global_flag = bp_world_mongol_broadcasted
+		clr_global_flag = bp_world_tibet_broadcasted
 	}
 }

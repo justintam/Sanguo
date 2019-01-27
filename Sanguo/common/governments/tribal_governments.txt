@@ -4,6 +4,7 @@ tribal_governments = {
 		preferred_holdings = { TRIBAL }
 		allowed_holdings = {
 			TRIBAL
+			TEMPLE
 			FORT
 		}
 		accepts_liege_governments_culture = { # Tribals have no opinion penalty towards their liege if of the same culture
@@ -52,7 +53,7 @@ tribal_governments = {
 #		barons_need_dynasty = yes
 		
 		demesne_size = 2
-		vassal_limit = -4
+		vassal_limit = -10
 		capital_move_delay = 600
 	}
 	

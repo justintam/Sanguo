@@ -25,14 +25,20 @@
 187.4.1={
 	holder=105 #Huangfu Song
 }
+188.12.1={
+	#TBD
+}
 189.9.1={
-	holder=34 #Shao
+	holder=33 #Shao
 }
 190.1.1={
+	holder=312 #Niu Fu
+}
+192.6.1={
 	holder=310 #Zhang Ji
 }
 196.1.1={
-	holder=1296 # Yang Liang
+	holder=1296 #Yang Liang
 }
 206.1.1={
 	holder=3792 #Yan Gan
@@ -44,5 +50,5 @@
 	liege=k_ji
 }
 213.9.1={
-	holder=1348 #Teng Daguzhang
+	holder=30407 #Shen Gu
 }

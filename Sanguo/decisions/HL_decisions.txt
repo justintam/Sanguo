@@ -2,6 +2,7 @@
 decisions = {
 	recruit_troops_base = {
 		only_rulers = yes
+		ai_check_interval = 16
 		potential = {
 			is_ruler = yes
 			has_character_flag = raiding_adventurer
@@ -90,6 +91,7 @@ decisions = {
 	become_genghis_khan = {
 		only_independent = yes
 		is_high_prio = yes
+		ai_check_interval = 12
 		
 		potential = {
 			is_playable = yes
@@ -165,6 +167,7 @@ decisions = {
 	become_genghis_khan_tribal = {
 		only_independent = yes
 		is_high_prio = yes
+		ai_check_interval = 12
 		
 		potential = {
 			is_playable = yes

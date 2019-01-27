@@ -14,5 +14,6 @@ b_qiangjiu = temple
 # Misc
 culture = qiang
 religion = baishi
+terrain = mountain
 
 #History

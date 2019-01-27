@@ -12,383 +12,431 @@
 #                                         #
 ###########################################
 
-namespace = MAN
+namespace=MAN
 
-### INITIATE nick_dynasty ###
-character_event = {
-	id = MAN.1
+### NEW EMPRESS? ###
+character_event={
+	id=MAN.1
+	desc=EVTDESC_MAN.1
+	title=EVTTITLE_MAN.1
+	picture=GFX_evt_chinese_empress
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	hide_window = yes
-	
-	trigger = {
-		has_nickname = no
-		is_ruler=yes
-		NOT = { dynasty = none }
-		OR = {
-			culture_group = chinese
-			culture_group = korean
-			culture_group = yue
+	option={
+		name=ACCEPT
+		
+		hidden_tooltip={
+			FROM={
+				character_event={ id=MAN.2 }
+				opinion={
+					modifier=opinion_ennobled
+					who=FROMFROM
+				}
+			}
+			
+			FROMFROM={
+				character_event={ id=EMP.26 }
+			}
+		}
+		
+		ai_chance={
+			factor=1
+			
+			modifier={
+				factor=5
+				opinion={ who=FROMFROM value=50 }
+			}
+			modifier={
+				factor=5
+				opinion={ who=FROM value=50 }
+			}
+			modifier={
+				factor=10
+				dynasty=FROM
+			}
+			modifier={
+				factor=2
+				trait=charitable
+			}
+			modifier={
+				factor=2
+				trait=kind
+			}
+			modifier={
+				factor=2
+				trait=content
+			}
 		}
 	}
 	
-	immediate = {
-		give_nickname = nick_dyn
+	option={
+		name=DECLINE
+		
+		hidden_tooltip={
+			FROMFROM={
+				character_event={ id=EMP.27 }
+				opinion={ modifier=opinion_denied_request who=ROOT }
+			}
+		}
+		
+		ai_chance={
+			factor=1
+			
+			modifier={
+				factor=5
+				NOT={ opinion={ who=FROMFROM value=0 } }
+			}
+			modifier={
+				factor=5
+				NOT={ opinion={ who=FROM value=0 } }
+			}
+			modifier={
+				factor=2
+				trait=ambitious
+			}
+			modifier={
+				factor=2
+				trait=envious
+			}
+			modifier={
+				factor=2
+				trait=greedy
+			}
+			modifier={
+				factor=2
+				trait=selfish
+			}
+		}
 	}
 }
 
 ### NEW EMPRESS ###
-character_event = {
-	id = MAN.2
+character_event={
+	id=MAN.2
 	
-	hide_window = yes
+	hide_window=yes
 	
-	is_triggered_only = no
+	is_triggered_only=yes
 	
-	trigger = {
-		k_confucian = {
-			holder_scope = {
-				is_married = ROOT
+	immediate={
+		k_confucian={
+			holder_scope={
+				save_event_target_as=target_husband
 			}
 		}
-		is_main_spouse = yes
-		NOT = { has_landed_title = c_empress }
-	}
-	
-	immediate = {
-		c_empress = {
-			holder_scope = {
-				save_event_target_as = target_oldempress
-			}
+		c_empress={
+			grant_title_no_opinion=ROOT
 		}
-		c_empress = {
-			grant_title_no_opinion = ROOT
+		if={
+			limit={ liege={ NOT={ has_landed_title=k_confucian } } }
+			set_defacto_liege=event_target:target_husband
 		}
-		event_target:target_oldempress = {
-			any_courtier = {
-				limit = {
-					is_ruler = no
-					OR = {
-						trait = inner_court
-						AND = {
-							OR = {
-								father = { has_landed_title = k_confucian }
-								mother = { has_landed_title = k_confucian }
-							}
-							NOT = { age = 16 }
-						}
-					}
-				}
-				move_character = ROOT
-			}
-		}
-		spouse = {
-			ROOT = {
-				if = {
-					limit = { liege = { NOT = { has_landed_title = k_confucian } } }
-					set_defacto_liege = PREV
-				}
-			}
-			character_event = { id = MAN.41 }
+		event_target:target_husband={
+			character_event={ id=MAN.41 }
 		}
 	}
 }
 
 ### NEW EMPIRE ###
-character_event = {
-	id = MAN.3
+character_event={
+	id=MAN.3
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	hide_window = yes
+	hide_window=yes
 	
-	trigger = {
-		primary_title = { real_tier = EMPEROR }
+	trigger={
+		primary_title={ real_tier=EMPEROR }
 	}
 	
-	immediate = {
-		character_event = { id = MAN.4 }
+	immediate={
+		character_event={ id=MAN.4 }
 	#if chancelllor give him chancellor title, call cha.1?
-#		if = {
-#			limit = {
-#				has_character_flag = chancellor
+#		if={
+#			limit={
+#				has_character_flag=chancellor
 #			}
-#			k_confucian = {
-#				holder_scope = {
-#					save_event_target_as = target_emperor
+#			k_confucian={
+#				holder_scope={
+#					save_event_target_as=target_emperor
 #				}
 #			}
-#			primary_title = {
-#				any_vassal = {
-#					set_defacto_liege = FROM
+#			primary_title={
+#				any_vassal={
+#					set_defacto_liege=FROM
 #				}
-#				grant_title_no_opinion = event_target:target_emperor
+#				grant_title_no_opinion=event_target:target_emperor
 #			}
 #		}
-#		if = {
-#			limit = {
-#				num_of_emperor_titles = 2
-#				NOT = { has_character_flag = chancellor }
+#		if={
+#			limit={
+#				num_of_emperor_titles=2
+#				NOT={ has_character_flag=chancellor }
 #			}
-#			primary_title = {
-#				any_vassal = {
-#					set_defacto_liege = FROM
+#			primary_title={
+#				any_vassal={
+#					set_defacto_liege=FROM
 #				}
-#				activate_title = { title = THIS status = no }
-#				unsafe_destroy_landed_title = THIS
+#				activate_title={ title=THIS status=no }
+#				unsafe_destroy_landed_title=THIS
 #			}
 #		}
-		event_target:target_empire = { make_primary_title = yes }
-		primary_title = {
-			add_law = imperial_administration
+		if={
+			limit={ is_tributary=yes }
+			suzerain={ remove_tributary=ROOT }
 		}
-		if = { limit = { has_character_flag = chancellor }
-			primary_title = {
-				set_title_flag = premier_title
-				add_law = succ_feudal_elective
+		event_target:target_empire={ make_primary_title=yes }
+		primary_title={
+			add_law=imperial_administration
+			add_law=ze_administration_laws_2
+		}
+		if={ limit={ has_character_flag=chancellor }
+			primary_title={
+				set_title_flag=premier_title
+				add_law=succ_feudal_elective
 			}
-			clr_character_flag = chancellor
-			break = yes
+			clr_character_flag=chancellor
+			break=yes
 		}
-		chronicle = {
-			entry = CHRONICLE_FOUNDED_NEW_KINGDOM_OR_EMPIRE
-			portrait = [Root.GetID]
+		chronicle={
+			entry=CHRONICLE_FOUNDED_NEW_KINGDOM_OR_EMPIRE
+			portrait=[Root.GetID]
 		}
-		primary_title = {
-			add_law = succ_primogeniture
+		primary_title={
+			add_law=succ_primogeniture
 		}
-		any_realm_lord = {
-			limit = {
-				NOT = { dynasty = ROOT }
-				any_demesne_title = {
-					is_titular = yes
-					OR = {
-						has_title_flag = noble_mark
-						has_title_flag = noble_duke
-						has_title_flag = noble_king
-						has_title_flag = warlord_flag
+		any_realm_lord={
+			limit={
+				NOT={ dynasty=ROOT }
+				any_demesne_title={
+					is_titular=yes
+					OR={
+						has_title_flag=noble_mark
+						has_title_flag=noble_duke
+						has_title_flag=noble_king
+						has_title_flag=warlord_flag
 					}
 				}
 			}
-			any_demesne_title = {
-				limit = {
-					is_titular = yes
-					OR = {
-						has_title_flag = noble_mark
-						has_title_flag = noble_duke
-						has_title_flag = noble_king
-						has_title_flag = warlord_flag
+			any_demesne_title={
+				limit={
+					is_titular=yes
+					OR={
+						has_title_flag=noble_mark
+						has_title_flag=noble_duke
+						has_title_flag=noble_king
+						has_title_flag=warlord_flag
 					}
 				}
 				#Make this an event to give up or revolt
-				activate_title = { title = THIS status = no }
-				unsafe_destroy_landed_title = THIS
+				activate_title={ title=THIS status=no }
+				unsafe_destroy_landed_title=THIS
 			}
 		}
 	}
 }
 
-character_event = { # Remove Titular
-	id = MAN.4
+character_event={ # Remove Titular
+	id=MAN.4
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	hide_window = yes
+	hide_window=yes
 	
-	only_playable = yes
-	only_independent = yes
+	only_playable=yes
+	only_independent=yes
 	
-	trigger = {
-		NOT = { has_character_flag = chancellor }
-		OR = {
-			primary_title = {
-				tier = EMPEROR
-				NOR = {
-					has_title_flag = premier_title
-					has_title_flag = warlord_flag
+	trigger={
+		NOT={ has_character_flag=chancellor }
+		OR={
+			primary_title={
+				tier=EMPEROR
+				NOR={
+					has_title_flag=premier_title
+					has_title_flag=warlord_flag
 				}
 			}
-			num_of_emperor_titles = 2
-			has_landed_title = k_confucian
+			num_of_emperor_titles=2
+			has_landed_title=k_confucian
 		}
-		any_demesne_title = {
-			OR = {
-				AND = {
-					tier = EMPEROR
-					NOT = { title = event_target:target_empire }
+		any_demesne_title={
+			OR={
+				AND={
+					tier=EMPEROR
+					NOT={ title=event_target:target_empire }
 				}
-				has_title_flag = premier_title
-				has_title_flag = noble_mark
-				has_title_flag = noble_duke
-				has_title_flag = noble_king
-				has_title_flag = warlord_flag
+				has_title_flag=premier_title
+				has_title_flag=noble_mark
+				has_title_flag=noble_duke
+				has_title_flag=noble_king
+				has_title_flag=warlord_flag
 			}
 		}
 	}
 	
-	immediate = {
-		any_demesne_title = {
-			limit = {
-				OR = {
-					AND = {
-						tier = EMPEROR
-						NOT = { title = event_target:target_empire }
+	immediate={
+		any_demesne_title={
+			limit={
+				OR={
+					AND={
+						tier=EMPEROR
+						NOT={ title=event_target:target_empire }
 					}
-					has_title_flag = premier_title
-					has_title_flag = noble_mark
-					has_title_flag = noble_duke
-					has_title_flag = noble_king
-					has_title_flag = warlord_flag
+					has_title_flag=premier_title
+					has_title_flag=noble_mark
+					has_title_flag=noble_duke
+					has_title_flag=noble_king
+					has_title_flag=warlord_flag
 				}
 			}
-			activate_title = { title = THIS status = no }
-			unsafe_destroy_landed_title = THIS
+			activate_title={ title=THIS status=no }
+			unsafe_destroy_landed_title=THIS
 		}
 	}
 }
 
 ### Loyalty ###
-character_event = {
-	id = MAN.5
-	desc = EVTDESC_MAN.5
-	title = EVTTITLE_MAN.5
-	picture = GFX_evt_civil_war
+character_event={
+	id=MAN.5
+	desc=EVTDESC_MAN.5
+	title=EVTTITLE_MAN.5
+	picture=GFX_evt_civil_war
 	
-	only_playable = yes
-	prisoner = no
+	only_playable=yes
+	prisoner=no
 	
-	trigger = {
-		NOT = { year = 190 }
-		NOT = { has_character_flag = loyalty_flag }
-		e_china = { has_holder = yes }
-		top_liege = { has_landed_title = e_china }
-		real_tier = KING
-		primary_title = {
-			OR = {
-				title = k_sili
-				title = k_ji
-				title = k_yan
-				title = k_you
-				title = k_yu
-				title = k_yi
-				title = k_xu
-				title = k_bing
-				title = k_jing
-				title = k_qing
-				title = k_yang
-				title = k_liang
-				title = k_jiaozhi
+	trigger={
+		NOT={ year=190 }
+		NOT={ has_character_flag=loyalty_flag }
+		e_china={ has_holder=yes }
+		top_liege={ has_landed_title=e_china }
+		real_tier=KING
+		primary_title={
+			OR={
+				title=k_sili
+				title=k_ji
+				title=k_yan
+				title=k_you
+				title=k_yu
+				title=k_yi
+				title=k_xu
+				title=k_bing
+				title=k_jing
+				title=k_qing
+				title=k_yang
+				title=k_liang
+				title=k_jiaozhi
 			}
 		}
-		war = no
+		war=no
 	}
 	
-	mean_time_to_happen = {
-		days = 1
+	mean_time_to_happen={
+		days=1
 	}
 	
-	immediate = {
-		set_character_flag = loyalty_flag
+	immediate={
+		set_character_flag=loyalty_flag
 	}
 	
-	option = {
+	option={
 		name=EVTOPTA_MAN.5
 		
-		set_defacto_liege = e_china
+		set_defacto_liege=e_china
 		
-		hidden_tooltip = {
-			primary_title = {
-				succession = gavelkind
+		hidden_tooltip={
+			primary_title={
+				succession=gavelkind
 			}
 		}
 		
-		ai_chance = {
-			factor = 1
+		ai_chance={
+			factor=1
 			
-			modifier = {
-				factor = 0.1 #Everyone hates the player!
-				e_china = { holder_scope = { ai = no } }
+			modifier={
+				factor=0.1 #Everyone hates the player!
+				e_china={ holder_scope={ ai=no } }
 			}
-			modifier = {
-				factor = 0.1
-				NOT = { culture = han }
+			modifier={
+				factor=0.1
+				NOT={ culture=han }
 			}
-			modifier = {
-				factor = 0.1
-				NOT = { religion = confucian }
+			modifier={
+				factor=0.1
+				NOT={ religion=confucian }
 			}
-			modifier = {
-				factor = 0.5
-				trait = fate_admin
+			modifier={
+				factor=0.5
+				trait=fate_admin
 			}
-			modifier = {
-				factor = 0.5
-				trait = fate_lead
+			modifier={
+				factor=0.5
+				trait=fate_lead
 			}
-			modifier = {
-				factor = 0.5
-				trait = fate_loved
+			modifier={
+				factor=0.5
+				trait=fate_loved
 			}
-			modifier = {
-				factor = 0.5
-				trait = fate_plot
+			modifier={
+				factor=0.5
+				trait=fate_plot
 			}
-			modifier = {
-				factor = 1.05
-				trait = content
+			modifier={
+				factor=1.05
+				trait=content
 			}
-			modifier = {
-				factor = 0.9
-				trait = ambitious
+			modifier={
+				factor=0.9
+				trait=ambitious
 			}
-			modifier = {
-				factor = 1.05
-				trait = chivalrous
+			modifier={
+				factor=1.05
+				trait=chivalrous
 			}
-			modifier = {
-				factor = 1.05
-				trait = honorable
+			modifier={
+				factor=1.05
+				trait=honorable
 			}
-			modifier = {
-				factor = 0.9
-				trait = dishonorable
+			modifier={
+				factor=0.9
+				trait=dishonorable
 			}
-			modifier = {
-				factor = 0.9
-				trait = wroth
+			modifier={
+				factor=0.9
+				trait=wroth
 			}
-			modifier = {
-				factor = 0.9
-				trait = greedy
+			modifier={
+				factor=0.9
+				trait=greedy
 			}
-			modifier = {
-				factor = 0.9
-				trait = envious
+			modifier={
+				factor=0.9
+				trait=envious
 			}
-			modifier = {
-				factor = 1.05
-				trait = just
+			modifier={
+				factor=1.05
+				trait=just
 			}
-			modifier = {
-				factor = 2
-				trait = zealous
+			modifier={
+				factor=2
+				trait=zealous
 			}
-			modifier = {
-				factor = 1.15
-				dynasty = 2
+			modifier={
+				factor=1.15
+				dynasty=2
 			}
 		}
 	}
 	
-	option = {
+	option={
 		name=EVTOPTB_MAN.5
 		
-		set_defacto_liege = THIS
+		set_defacto_liege=THIS
 		
-		hidden_tooltip = {
-			primary_title = {
-				succession = primogeniture
+		hidden_tooltip={
+			primary_title={
+				succession=primogeniture
 			}
 		}
 	}
@@ -396,105 +444,105 @@ character_event = {
 
 ### Morale Troop Effects
 
-character_event = { # Battle Minor Neg
-	id = MAN.6
+character_event={ # Battle Minor Neg
+	id=MAN.6
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	hide_window = yes
+	hide_window=yes
 	
-	trigger = { in_battle = yes }
+	trigger={ in_battle=yes }
 	
-	immediate = {
-		morale = -0.1
+	immediate={
+		morale=-0.1
 	}
 }
 
-character_event = { # Winner Effect
-	id = MAN.7
+character_event={ # Winner Effect
+	id=MAN.7
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	hide_window = yes
+	hide_window=yes
 	
-	immediate = {
-		morale = 0.5
+	immediate={
+		morale=0.5
 	}
 }
 
-character_event = { # Winner Effect
-	id = MAN.8
+character_event={ # Winner Effect
+	id=MAN.8
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	hide_window = yes
+	hide_window=yes
 	
-	immediate = {
-		siege = {
-			enemy = {
-				troops = -0.3
-				morale = -0.5
+	immediate={
+		siege={
+			enemy={
+				troops=-0.3
+				morale=-0.5
 			}
 		}
 	}
 }
 
-character_event = { # Loser Effect
-	id = MAN.9
+character_event={ # Loser Effect
+	id=MAN.9
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	hide_window = yes
+	hide_window=yes
 	
-	immediate = {
-		troops = -0.3
-		morale = -0.5
+	immediate={
+		troops=-0.3
+		morale=-0.5
 	}
 }
 
-character_event = { # Loser Effect
-	id = MAN.10
+character_event={ # Loser Effect
+	id=MAN.10
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	hide_window = yes
+	hide_window=yes
 	
-	immediate = {
-		siege = {
-			enemy = {
-				morale = 0.5
+	immediate={
+		siege={
+			enemy={
+				morale=0.5
 			}
 		}
 	}
 }
 
-character_event = { # Winner Recovery
-	id = MAN.11
+character_event={ # Winner Recovery
+	id=MAN.11
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	hide_window = yes
+	hide_window=yes
 	
-	immediate = {
-		siege = {
-			enemy = {
-				troops = 0.2
-				morale = 0.4
+	immediate={
+		siege={
+			enemy={
+				troops=0.2
+				morale=0.4
 			}
 		}
 	}
 }
 
-character_event = { # Loser Recovery
-	id = MAN.12
+character_event={ # Loser Recovery
+	id=MAN.12
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	hide_window = yes
+	hide_window=yes
 	
-	immediate = {
-		troops = 0.2
-		morale = 0.4
+	immediate={
+		troops=0.2
+		morale=0.4
 	}
 }
 
@@ -502,75 +550,107 @@ character_event = { # Loser Recovery
 ### LIMIT TERRITORY ###
 #######################
 
-character_event = { # Independent or No?
-	id = MAN.13
+character_event={ # Independent or No?
+	id=MAN.13
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	hide_window = yes
+	hide_window=yes
 	
-	only_playable = yes
+	only_playable=yes
 	
-	trigger = {
-		is_feudal = yes
-		capital_scope = {
-			region = world_china
-		}
-		OR = {
-			current_heir = {
-				OR = {
-					dynasty = ROOT
-					is_close_relative = ROOT
-					is_vassal_or_below = ROOT
+	trigger={
+		is_feudal=yes
+		capital_scope={ region=world_china }
+		OR={
+			current_heir={
+				OR={
+					dynasty=ROOT
+					is_close_relative=ROOT
+					is_vassal_or_below=ROOT
 				}
 			}
-			primary_title = { has_title_flag = premier_title }
+			primary_title={ has_title_flag=premier_title }
+		}
+		OR={
+			NAND={
+				current_heir={
+					dynasty=ROOT
+				}
+				primary_title={
+					tier=EMPEROR
+					NOT={ has_title_flag=premier_title }
+				}
+			}
+			AND={
+				current_heir={
+					dynasty=ROOT
+					is_landed=yes
+					NOT={ same_realm=ROOT }
+				}
+				primary_title={
+					tier=EMPEROR
+					NOT={ has_title_flag=premier_title }
+				}
+			}
+		}
+		NAND={
+			primary_title={
+				has_title_flag=warlord_flag
+			}
+			current_heir={
+				dynasty=ROOT
+				OR={
+					is_liege_or_above=ROOT
+					is_landed=no
+				}
+			}
 		}
 	}
 
-	immediate = {
-		top_liege = { save_event_target_as = target_liege }
-		if = {
-			limit = {
-				primary_title = { NOT = { has_title_flag = premier_title } }
+	immediate={
+		top_liege={ save_event_target_as=target_liege }
+		if={
+			limit={
+				primary_title={ NOT={ has_title_flag=premier_title } }
 			}
-			current_heir = {
-				save_event_target_as = target_heir
-				ROOT = { character_event = { id = MAN.14 } }
+			current_heir={
+				save_event_target_as=target_heir
+				ROOT={ character_event={ id=MAN.14 } }
 			}
 		}
-		if = {
-			limit = {
-				primary_title = {
-					OR = {
-						AND = {
-							is_vice_royalty = yes
-							ROOT = { independent = no }
+		if={
+			limit={
+				primary_title={
+					OR={
+						AND={
+							is_vice_royalty=yes
+							ROOT={ independent=no }
 						}
-						has_title_flag = premier_title
+						has_title_flag=premier_title
 					}
 				}
 			}
-			any_demesne_title = {
-				limit = {
-					holder_scope = { character = ROOT }
-					is_capital = no
-					is_vice_royalty = no
-					NOR = {
-						has_title_flag = premier_title
-						has_title_flag = noble_mark
-						has_title_flag = noble_duke
-						has_title_flag = noble_king
-						has_title_flag = warlord_flag
+			any_demesne_title={
+				limit={
+					holder_scope={ character=ROOT }
+					is_capital=no
+					is_vice_royalty=no
+					NOR={
+						has_title_flag=premier_title
+						has_title_flag=noble_mark
+						has_title_flag=noble_duke
+						has_title_flag=noble_king
+						has_title_flag=warlord_flag
 					}
 				}
-				heir_under_primogeniture_law = {
-					if = {
-						limit = { NOT = { character = event_target:target_heir } }
-						event_target:target_heir = { top_liege = { save_event_target_as = target_liege } }
-						save_event_target_as = target_heir
-						ROOT = { character_event = { id = MAN.14 } }
-						break = yes
+				heir_under_primogeniture_law={
+					if={
+						limit={ NOT={ character=event_target:target_heir } }
+						event_target:target_heir={ top_liege={ save_event_target_as=target_liege } }
+						save_event_target_as=target_heir
+						ROOT={ character_event={ id=MAN.14 } }
+						break=yes
 					}
 				}
 			}
@@ -578,199 +658,237 @@ character_event = { # Independent or No?
 	}
 }
 
-character_event = { # Take Inheritance or Not?
-	id = MAN.14
+character_event={ # Take Inheritance or Not?
+	id=MAN.14
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	hide_window = yes
+	hide_window=yes
 	
-	immediate = {
-		if = {
-			limit = {
-				OR = {
-					independent = no
-					primary_title = { has_title_flag = premier_title }
+	immediate={
+		if={
+			limit={
+				OR={
+					independent=no
+					primary_title={ has_title_flag=premier_title }
 				}
-				OR = {
-					top_liege = {
-						OR = {
-							NOT = { tier = EMPEROR }
-							has_law = crown_authority_3
-							has_law = crown_authority_4
-							has_law = vice_royalty_3
+				OR={
+					top_liege={
+						OR={
+							NOT={ tier=EMPEROR }
+							has_law=crown_authority_3
+							has_law=crown_authority_4
+							has_law=vice_royalty_3
 						}
 					}
-					event_target:target_heir = { is_adult = no }
+					event_target:target_heir={ is_adult=no }
 				}
-				primary_title = {
-					NOR = {
-						has_title_flag = noble_mark
-						has_title_flag = noble_duke
-						has_title_flag = noble_king
+				primary_title={
+					NOR={
+						has_title_flag=noble_mark
+						has_title_flag=noble_duke
+						has_title_flag=noble_king
 					}
 				}
 			}
 			#If vassal pass decision to top liege
-			top_liege = {
-				random_list = {
-					50 = { #Accept Heir
-						ROOT = { character_event = { id = MAN.15 } }
-						modifier = {
-							factor = 0
-							event_target:target_heir = { is_adult = no }
+			top_liege={
+				random_list={
+					50={ #Accept Heir
+						ROOT={ character_event={ id=MAN.15 } }
+						modifier={
+							factor=0
+							event_target:target_heir={ is_adult=no }
 						}
-						modifier = {
-							factor = 0
-							event_target:target_heir = {
-								is_ruler = yes
-								NOT = { is_vassal_or_below = PREV }
+						modifier={
+							factor=0
+							event_target:target_heir={
+								is_ruler=yes
+								NOT={ is_vassal_or_below=PREV }
 							}
 						}
-						modifier = {
-							factor = 1.5
-							trait = kind
+						modifier={
+							factor=1.5
+							trait=kind
 						}
-						modifier = {
-							factor = 1.5
-							trait = charitable
+						modifier={
+							factor=1.5
+							trait=charitable
 						}
-						modifier = {
-							factor = 1.5
-							trait = content
+						modifier={
+							factor=1.5
+							trait=content
 						}
-						modifier = {
-							factor = 1.5
-							opinion = { who = event_target:target_heir value = 25 }
+						modifier={
+							factor=1.5
+							opinion={ who=event_target:target_heir value=25 }
 						}
-						modifier = {
-							factor = 1.5
-							opinion = { who = event_target:target_heir value = 50 }
+						modifier={
+							factor=1.5
+							opinion={ who=event_target:target_heir value=50 }
 						}
-						modifier = {
-							factor = 1.5
-							opinion = { who = event_target:target_heir value = 75 }
+						modifier={
+							factor=1.5
+							opinion={ who=event_target:target_heir value=75 }
 						}
-						modifier = {
-							factor = 2
-							opinion = { who = event_target:target_heir value = 100 }
+						modifier={
+							factor=2
+							opinion={ who=event_target:target_heir value=100 }
 						}
 					}
-					50 = { #Give it to the Liege
-						ROOT = { character_event = { id = MAN.16 } }
-						modifier = {
-							factor = 1.5
-							trait = greedy
+					50={ #Give it to the Liege
+						ROOT={ character_event={ id=MAN.16 } }
+						modifier={
+							factor=1.5
+							trait=greedy
 						}
-						modifier = {
-							factor = 1.5
-							trait = cruel
+						modifier={
+							factor=1.5
+							trait=cruel
 						}
-						modifier = {
-							factor = 1.5
-							trait = dishonorable
+						modifier={
+							factor=1.5
+							trait=dishonorable
 						}
-						modifier = {
-							factor = 1.5
-							NOT = { opinion = { who = event_target:target_heir value = -25 } }
+						modifier={
+							factor=1.5
+							NOT={ opinion={ who=event_target:target_heir value=-25 } }
 						}
-						modifier = {
-							factor = 1.5
-							NOT = { opinion = { who = event_target:target_heir value = -50 } }
+						modifier={
+							factor=1.5
+							NOT={ opinion={ who=event_target:target_heir value=-50 } }
 						}
-						modifier = {
-							factor = 1.5
-							NOT = { opinion = { who = event_target:target_heir value = -75 } }
+						modifier={
+							factor=1.5
+							NOT={ opinion={ who=event_target:target_heir value=-75 } }
 						}
-						modifier = {
-							factor = 2
-							NOT = { opinion = { who = event_target:target_heir value = -100 } }
+						modifier={
+							factor=2
+							NOT={ opinion={ who=event_target:target_heir value=-100 } }
 						}
 					}
 				}
 			}
-			break = yes
+			break=yes
 		}
 		
-		character_event = { id = MAN.15 }
+		character_event={ id=MAN.15 }
 	}
 }
 
-character_event = { # Take Inheritance or Not?
-	id = MAN.15
+character_event={ # Take Inheritance or Not?
+	id=MAN.15
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	hide_window = yes
+	hide_window=yes
 
-	trigger = {
-		event_target:target_heir = {
+	trigger={
+		event_target:target_heir={
 			is_ruler=yes
-			NOT = {
-				is_liege_or_above = ROOT
+			NOT={
+				is_liege_or_above=ROOT
 			}
 		}
 	}
 	
-	immediate = {
-		if = {
-			limit = {
-				independent = yes
-				event_target:target_heir = {
-					independent = yes
-					lower_tier_than = ROOT
-					primary_title = {
-						NOT = { has_title_flag = warlord_flag }
+	immediate={
+		if={
+			limit={
+				independent=yes
+				event_target:target_heir={
+					independent=yes
+					lower_tier_than=ROOT
+					primary_title={
+						NOT={ has_title_flag=warlord_flag }
 					}
 				}
 			}
-			event_target:target_heir = {
-				character_event = { id = MAN.16 }
+			event_target:target_heir={
+				character_event={ id=MAN.16 }
 			}
-			break = yes
+			break=yes
 		}
-		character_event = { id = MAN.16 }
+		if={
+			limit={
+				independent=yes
+				primary_title={
+					NOR={
+						has_title_flag=noble_mark
+						has_title_flag=noble_duke
+						has_title_flag=noble_king
+						has_title_flag=warlord_flag
+						has_title_flag=premier_title
+					}
+				}
+			}
+			primary_title={
+				save_event_target_as=target_title
+			}
+			random_realm_lord={
+				limit={
+					NOT={ character=ROOT }
+					NOT={ real_tier=BARON }
+				}
+				save_event_target_as=target_new
+			}
+			any_vassal={
+				limit={
+					NOT={ character=ROOT }
+					NOT={ real_tier=BARON }
+				}
+				set_defacto_liege=THIS
+			}
+			any_demesne_title={
+				limit={
+					NOT={ title=event_target:target_title }
+				}
+				grant_title_no_opinion=event_target:target_new
+			}
+			break=yes
+		}
+		character_event={ id=MAN.16 }
 	}
 }
 
-character_event = { # Give up land to Liege
-	id = MAN.16
+character_event={ # Give up land to Liege
+	id=MAN.16
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	hide_window = yes
+	hide_window=yes
 	
-	immediate = {
-		any_demesne_title = {
-			if = {
-				limit = {
-					holder_scope = { character = ROOT }
-					is_capital = no
-					NOT = { has_title_flag = inherit_flag }
-					NOR = {
-						has_title_flag = premier_title
-						has_title_flag = noble_mark
-						has_title_flag = noble_duke
-						has_title_flag = noble_king
-						has_title_flag = warlord_flag
+	immediate={
+		any_demesne_title={
+			if={
+				limit={
+					holder_scope={ character=ROOT }
+					is_capital=no
+					NOT={ has_title_flag=inherit_flag }
+					NOR={
+						has_title_flag=premier_title
+						has_title_flag=noble_mark
+						has_title_flag=noble_duke
+						has_title_flag=noble_king
+						has_title_flag=warlord_flag
 					}
 				}
-				set_title_flag = inherit_flag
+				set_title_flag=inherit_flag
 			}
 		}
-		if = {
-			limit = {
-				character = event_target:target_liege
-				primary_title = {
-					OR = {
-						has_title_flag = noble_mark
-						has_title_flag = noble_duke
-						has_title_flag = noble_king
-						has_title_flag = warlord_flag
+		if={
+			limit={
+				character=event_target:target_liege
+				primary_title={
+					OR={
+						has_title_flag=noble_mark
+						has_title_flag=noble_duke
+						has_title_flag=noble_king
+						has_title_flag=warlord_flag
 					}
 				}
-				any_realm_character = {
-					NOT = { character = ROOT }
+				any_realm_character={
+					NOT={ character=ROOT }
 					is_landed=yes
 					is_dying=no
 					is_adult=yes
@@ -778,18 +896,18 @@ character_event = { # Give up land to Liege
 					prisoner=no
 					culture=ROOT
 					religion=ROOT
-					NOT = { dynasty = none }
-					OR = {
-						tier = DUKE
-						tier = COUNT
+					NOT={ dynasty=none }
+					OR={
+						tier=DUKE
+						tier=COUNT
 					}
-					is_liege_or_above = ROOT
-					NOT = { distance = { who = ROOT distance = 50 } }
+					is_liege_or_above=ROOT
+					NOT={ distance={ who=ROOT distance=50 } }
 				}
 			}
-			random_realm_character = {
-				limit = {
-					NOT = { character = ROOT }
+			random_realm_character={
+				limit={
+					NOT={ character=ROOT }
 					is_landed=yes
 					is_dying=no
 					is_adult=yes
@@ -797,31 +915,31 @@ character_event = { # Give up land to Liege
 					prisoner=no
 					culture=ROOT
 					religion=ROOT
-					NOT = { dynasty = none }
-					OR = {
-						tier = DUKE
-						tier = COUNT
+					NOT={ dynasty=none }
+					OR={
+						tier=DUKE
+						tier=COUNT
 					}
-					is_liege_or_above = ROOT
-					NOT = { distance = { who = ROOT distance = 50 } }
+					is_liege_or_above=ROOT
+					NOT={ distance={ who=ROOT distance=50 } }
 				}
-				save_event_target_as = target_liege
+				save_event_target_as=target_liege
 			}
 		}
-		if = {
-			limit = {
-				character = event_target:target_liege
-				primary_title = {
-					OR = {
-						has_title_flag = noble_mark
-						has_title_flag = noble_duke
-						has_title_flag = noble_king
-						has_title_flag = warlord_flag
+		if={
+			limit={
+				character=event_target:target_liege
+				primary_title={
+					OR={
+						has_title_flag=noble_mark
+						has_title_flag=noble_duke
+						has_title_flag=noble_king
+						has_title_flag=warlord_flag
 					}
 				}
-				NOT = {
-					any_realm_character = {
-						NOT = { character = ROOT }
+				NOT={
+					any_realm_character={
+						NOT={ character=ROOT }
 						is_landed=yes
 						is_dying=no
 						is_adult=yes
@@ -829,38 +947,38 @@ character_event = { # Give up land to Liege
 						prisoner=no
 						culture=ROOT
 						religion=ROOT
-						NOT = { dynasty = none }
-						OR = {
-							tier = DUKE
-							tier = COUNT
+						NOT={ dynasty=none }
+						OR={
+							tier=DUKE
+							tier=COUNT
 						}
-						is_liege_or_above = ROOT
-						NOT = { distance = { who = ROOT distance = 50 } }
+						is_liege_or_above=ROOT
+						NOT={ distance={ who=ROOT distance=50 } }
 					}
 				}
 			}
-			current_heir = {
-				top_liege = {
-					save_event_target_as = target_liege
+			current_heir={
+				top_liege={
+					save_event_target_as=target_liege
 				}
 			}
 		}
-		if = {
-			limit = {
-				character = event_target:target_liege
-				primary_title = {
-					NOR = {
-						has_title_flag = noble_mark
-						has_title_flag = noble_duke
-						has_title_flag = noble_king
-						has_title_flag = warlord_flag
+		if={
+			limit={
+				character=event_target:target_liege
+				primary_title={
+					NOR={
+						has_title_flag=noble_mark
+						has_title_flag=noble_duke
+						has_title_flag=noble_king
+						has_title_flag=warlord_flag
 					}
 				}
 			}
-			primary_title = { save_event_target_as = target_title }
-			random_realm_character = {
-				limit = {
-					NOT = { character = ROOT }
+			primary_title={ save_event_target_as=target_title }
+			random_realm_character={
+				limit={
+					NOT={ character=ROOT }
 					is_landed=yes
 					is_dying=no
 					is_adult=yes
@@ -868,205 +986,205 @@ character_event = { # Give up land to Liege
 					prisoner=no
 					culture=ROOT
 					religion=ROOT
-					NOT = { dynasty = none }
-					OR = {
-						tier = DUKE
-						tier = COUNT
+					NOT={ dynasty=none }
+					OR={
+						tier=DUKE
+						tier=COUNT
 					}
-					OR = {
-						any_demesne_title = { de_jure_liege_or_above = event_target:target_title }
-						capital_holding = {
-							OR = {
-								kingdom = {
-									title = event_target:target_title
+					OR={
+						any_demesne_title={ de_jure_liege_or_above=event_target:target_title }
+						capital_holding={
+							OR={
+								kingdom={
+									title=event_target:target_title
 								}
-								duchy = {
-									title = event_target:target_title
+								duchy={
+									title=event_target:target_title
 								}
 							}
 						}
 					}
-					NOT = { distance = { who = ROOT distance = 50 } }
+					NOT={ distance={ who=ROOT distance=50 } }
 				}
-				save_event_target_as = target_liege
+				save_event_target_as=target_liege
 			}
 		}
-		event_target:target_heir = {
-			set_character_flag = heir_flag
-			if = {
-				limit = {
-					is_landed = no
-					NOT = { ROOT = { current_heir = { character = event_target:target_heir } } }
+		event_target:target_heir={
+			set_character_flag=heir_flag
+			if={
+				limit={
+					is_landed=no
+					NOT={ ROOT={ current_heir={ character=event_target:target_heir } } }
 				}
-				ROOT = {
-					current_heir = {
-						opinion = { who = PREVPREV modifier = opinion_oldheir_target }
-						reverse_opinion = { who = PREVPREV modifier = opinion_oldheir_target }
+				ROOT={
+					current_heir={
+						opinion={ who=PREVPREV modifier=opinion_oldheir_target }
+						reverse_opinion={ who=PREVPREV modifier=opinion_oldheir_target }
 					}
 				}
 			}
-			if = {
-				limit = {
-					is_landed = yes
-					independent = no
+			if={
+				limit={
+					is_landed=yes
+					independent=no
 				}
-				liege = {
-					opinion = { who = PREV modifier = opinion_oldheir_target }
-					reverse_opinion = { who = PREV modifier = opinion_oldheir_target }
-				}
-			}
-			if = {
-				limit = { NOT = { character = event_target:target_liege } }
-				event_target:target_liege = {
-					opinion = { who = PREV modifier = opinion_heir_target }
-					reverse_opinion = { who = PREV modifier = opinion_heir_target }
+				liege={
+					opinion={ who=PREV modifier=opinion_oldheir_target }
+					reverse_opinion={ who=PREV modifier=opinion_oldheir_target }
 				}
 			}
-			if = {
-				limit = { character = event_target:target_liege }
-				set_character_flag = liege_flag
+			if={
+				limit={ NOT={ character=event_target:target_liege } }
+				event_target:target_liege={
+					opinion={ who=PREV modifier=opinion_heir_target }
+					reverse_opinion={ who=PREV modifier=opinion_heir_target }
+				}
+			}
+			if={
+				limit={ character=event_target:target_liege }
+				set_character_flag=liege_flag
 			}
 		}
-		if = {
-			limit = { independent = yes }
-			random_demesne_title = {
-				limit = {
-					holder_scope = { character = ROOT }
-					has_title_flag = inherit_flag
-					real_tier = KING
+		if={
+			limit={ independent=yes }
+			random_demesne_title={
+				limit={
+					holder_scope={ character=ROOT }
+					has_title_flag=inherit_flag
+					real_tier=KING
 				}
-				set_title_flag = independent_flag
-				break = yes
+				set_title_flag=independent_flag
+				break=yes
 			}
-			random_demesne_title = {
-				limit = {
-					holder_scope = { character = ROOT }
-					has_title_flag = inherit_flag
-					real_tier = DUKE
+			random_demesne_title={
+				limit={
+					holder_scope={ character=ROOT }
+					has_title_flag=inherit_flag
+					real_tier=DUKE
 				}
-				set_title_flag = independent_flag
-				break = yes
+				set_title_flag=independent_flag
+				break=yes
 			}
-			capital_holding = {
-				county = {
-					set_title_flag = independent_flag
+			capital_holding={
+				county={
+					set_title_flag=independent_flag
 				}
 			}
 		}
 	}
 }
 
-character_event = { # Limit Territory
-	id = MAN.17
+character_event={ # Limit Territory
+	id=MAN.17
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	hide_window = yes
+	hide_window=yes
 	
-	only_playable = yes
-	has_character_flag = heir_flag
+	only_playable=yes
+	has_character_flag=heir_flag
 	
-	trigger = {
-		has_game_started = yes
-		NOT = { has_character_flag = inherit_empire }
+	trigger={
+		has_game_started=yes
+		NOT={ has_character_flag=inherit_empire }
 	}
 	
-	immediate = {
-		if = {
-			limit = {
-				FROMFROM = {
-					tier = EMPEROR
+	immediate={
+		if={
+			limit={
+				FROMFROM={
+					tier=EMPEROR
 				}
 			}
-			set_character_flag = inherit_empire
-			character_event = { id = MAN.20 days = 1 }
-			break = yes
+			set_character_flag=inherit_empire
+			character_event={ id=MAN.20 days=1 }
+			break=yes
 		}
-		if = {
-			limit = {
-				has_character_flag = liege_flag
+		if={
+			limit={
+				has_character_flag=liege_flag
 			}
-			FROM = {
-				clr_title_flag = inherit_flag
-				save_event_target_as = target_title
-				ROOT = {
-					character_event = { id = MAN.18 }
-					character_event = { id = MAN.20 days = 1 }
+			FROM={
+				clr_title_flag=inherit_flag
+				save_event_target_as=target_title
+				ROOT={
+					character_event={ id=MAN.18 }
+					character_event={ id=MAN.20 days=1 }
 				}
-				break = yes
+				break=yes
 			}
 		}
-		random_playable_ruler = {
-			limit = { has_opinion_modifier = { who = ROOT modifier = opinion_heir_target } }
-			save_event_target_as = target_liege
+		random_playable_ruler={
+			limit={ has_opinion_modifier={ who=ROOT modifier=opinion_heir_target } }
+			save_event_target_as=target_liege
 		}
-		FROM = {
-			if = {
-				limit = {
-					has_title_flag = inherit_flag
+		FROM={
+			if={
+				limit={
+					has_title_flag=inherit_flag
 				}
-				clr_title_flag = inherit_flag
-				save_event_target_as = target_title
-				event_target:target_liege = {
-					event_target:target_title = {
-						grant_title_no_opinion = PREV
+				clr_title_flag=inherit_flag
+				save_event_target_as=target_title
+				event_target:target_liege={
+					event_target:target_title={
+						grant_title_no_opinion=PREV
 					}
-					character_event = { id = MAN.18 }
+					character_event={ id=MAN.18 }
 				}
-				random_playable_ruler = {
-					limit = { has_opinion_modifier = { who = ROOT modifier = opinion_oldheir_target } }
-					ROOT = { set_defacto_liege = PREV }
+				random_playable_ruler={
+					limit={ has_opinion_modifier={ who=ROOT modifier=opinion_oldheir_target } }
+					ROOT={ set_defacto_liege=PREV }
 				}
 			}
 		}
-		any_demesne_title = {
-			if = {
-				limit = {
-					holder_scope = { character = ROOT }
-					has_title_flag = inherit_flag
+		any_demesne_title={
+			if={
+				limit={
+					holder_scope={ character=ROOT }
+					has_title_flag=inherit_flag
 				}
-				clr_title_flag = inherit_flag
-				save_event_target_as = target_title
-				event_target:target_liege = {
-					event_target:target_title = {
-						grant_title_no_opinion = PREV
+				clr_title_flag=inherit_flag
+				save_event_target_as=target_title
+				event_target:target_liege={
+					event_target:target_title={
+						grant_title_no_opinion=PREV
 					}
-					character_event = { id = MAN.18 }
+					character_event={ id=MAN.18 }
 				}
 			}
 		}
-		event_target:target_liege = { character_event = { id = MAN.20 days = 1 } }
+		event_target:target_liege={ character_event={ id=MAN.20 days=1 } }
 	}
 }
 
-character_event = { # Liege handles land
-	id = MAN.18
+character_event={ # Liege handles land
+	id=MAN.18
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	hide_window = yes
+	hide_window=yes
 	
-	immediate = {
-		if = {
-			limit = {
-				capital_holding = {
-					de_jure_liege_or_above = event_target:target_title
+	immediate={
+		if={
+			limit={
+				capital_holding={
+					de_jure_liege_or_above=event_target:target_title
 				}
 			}
-			character_event = { id = MAN.19 }
-			break = yes
+			character_event={ id=MAN.19 }
+			break=yes
 		}
 		### KING
-		if = {
-			limit = {
-				event_target:target_title = {
-					NOT = { higher_tier_than = KING }
-					tier = KING
+		if={
+			limit={
+				event_target:target_title={
+					NOT={ higher_tier_than=KING }
+					tier=KING
 				}
 			}
-			random_realm_character = {
-				limit = {
-					NOT = { character = ROOT }
+			random_realm_character={
+				limit={
+					NOT={ character=ROOT }
 					is_ruler=yes
 					is_dying=no
 					is_adult=yes
@@ -1074,27 +1192,27 @@ character_event = { # Liege handles land
 					prisoner=no
 					culture=ROOT
 					religion=ROOT
-					NOT = { dynasty = none }
-					OR = {
-						tier = COUNT
-						tier = DUKE
+					NOT={ dynasty=none }
+					OR={
+						tier=COUNT
+						tier=DUKE
 					}
-					OR = {
-						any_demesne_title = { de_jure_liege_or_above = event_target:target_title }
-						capital_holding = {
-							kingdom = {
-								title = event_target:target_title
+					OR={
+						any_demesne_title={ de_jure_liege_or_above=event_target:target_title }
+						capital_holding={
+							kingdom={
+								title=event_target:target_title
 							}
 						}
 					}
-					has_newly_acquired_titles = yes
+					has_newly_acquired_titles=yes
 				}
-				character_event = { id = MAN.19 }
-				break = yes
+				character_event={ id=MAN.19 }
+				break=yes
 			}
-			random_realm_character = {
-				limit = {
-					NOT = { character = ROOT }
+			random_realm_character={
+				limit={
+					NOT={ character=ROOT }
 					is_ruler=yes
 					is_dying=no
 					is_adult=yes
@@ -1102,35 +1220,35 @@ character_event = { # Liege handles land
 					prisoner=no
 					culture=ROOT
 					religion=ROOT
-					NOT = { dynasty = none }
-					OR = {
-						tier = COUNT
-						tier = DUKE
+					NOT={ dynasty=none }
+					OR={
+						tier=COUNT
+						tier=DUKE
 					}
-					OR = {
-						any_demesne_title = { de_jure_liege_or_above = event_target:target_title }
-						capital_holding = {
-							kingdom = {
-								title = event_target:target_title
+					OR={
+						any_demesne_title={ de_jure_liege_or_above=event_target:target_title }
+						capital_holding={
+							kingdom={
+								title=event_target:target_title
 							}
 						}
 					}
 				}
-				character_event = { id = MAN.19 }
-				break = yes
+				character_event={ id=MAN.19 }
+				break=yes
 			}
 		}
 		### DUKE
-		if = {
-			limit = {
-				event_target:target_title = {
-					NOT = { higher_tier_than = DUKE }
-					tier = DUKE
+		if={
+			limit={
+				event_target:target_title={
+					NOT={ higher_tier_than=DUKE }
+					tier=DUKE
 				}
 			}
-			random_realm_character = {
-				limit = {
-					NOT = { character = ROOT }
+			random_realm_character={
+				limit={
+					NOT={ character=ROOT }
 					is_ruler=yes
 					is_dying=no
 					is_adult=yes
@@ -1138,24 +1256,24 @@ character_event = { # Liege handles land
 					prisoner=no
 					culture=ROOT
 					religion=ROOT
-					NOT = { dynasty = none }
-					tier = COUNT
-					OR = {
-						any_demesne_title = { de_jure_liege_or_above = event_target:target_title }
-						capital_holding = {
-							duchy = {
-								title = event_target:target_title
+					NOT={ dynasty=none }
+					tier=COUNT
+					OR={
+						any_demesne_title={ de_jure_liege_or_above=event_target:target_title }
+						capital_holding={
+							duchy={
+								title=event_target:target_title
 							}
 						}
 					}
-					has_newly_acquired_titles = yes
+					has_newly_acquired_titles=yes
 				}
-				character_event = { id = MAN.19 }
-				break = yes
+				character_event={ id=MAN.19 }
+				break=yes
 			}
-			random_realm_character = {
-				limit = {
-					NOT = { character = ROOT }
+			random_realm_character={
+				limit={
+					NOT={ character=ROOT }
 					is_ruler=yes
 					is_dying=no
 					is_adult=yes
@@ -1163,32 +1281,32 @@ character_event = { # Liege handles land
 					prisoner=no
 					culture=ROOT
 					religion=ROOT
-					NOT = { dynasty = none }
-					tier = COUNT
-					OR = {
-						any_demesne_title = { de_jure_liege_or_above = event_target:target_title }
-						capital_holding = {
-							duchy = {
-								title = event_target:target_title
+					NOT={ dynasty=none }
+					tier=COUNT
+					OR={
+						any_demesne_title={ de_jure_liege_or_above=event_target:target_title }
+						capital_holding={
+							duchy={
+								title=event_target:target_title
 							}
 						}
 					}
 				}
-				character_event = { id = MAN.19 }
-				break = yes
+				character_event={ id=MAN.19 }
+				break=yes
 			}
 		}
 		### COUNT
-		if = {
-			limit = {
-				event_target:target_title = {
-					NOT = { higher_tier_than = COUNT }
-					tier = COUNT
+		if={
+			limit={
+				event_target:target_title={
+					NOT={ higher_tier_than=COUNT }
+					tier=COUNT
 				}
 			}
-			random_realm_character = {
-				limit = {
-					NOT = { character = ROOT }
+			random_realm_character={
+				limit={
+					NOT={ character=ROOT }
 					is_ruler=yes
 					is_dying=no
 					is_adult=yes
@@ -1196,17 +1314,17 @@ character_event = { # Liege handles land
 					prisoner=no
 					culture=ROOT
 					religion=ROOT
-					NOT = { dynasty = none }
-					higher_tier_than = COUNT
-					NOT = { demesne_size = 1 }
-					has_newly_acquired_titles = yes
+					NOT={ dynasty=none }
+					higher_tier_than=COUNT
+					NOT={ demesne_size=1 }
+					has_newly_acquired_titles=yes
 				}
-				character_event = { id = MAN.19 }
-				break = yes
+				character_event={ id=MAN.19 }
+				break=yes
 			}
-			random_realm_character = {
-				limit = {
-					NOT = { character = ROOT }
+			random_realm_character={
+				limit={
+					NOT={ character=ROOT }
 					is_ruler=yes
 					is_dying=no
 					is_adult=yes
@@ -1214,17 +1332,164 @@ character_event = { # Liege handles land
 					prisoner=no
 					culture=ROOT
 					religion=ROOT
-					NOT = { dynasty = none }
-					higher_tier_than = COUNT
-					NOT = { demesne_size = 1 }
+					NOT={ dynasty=none }
+					higher_tier_than=COUNT
+					NOT={ demesne_size=1 }
 				}
-				character_event = { id = MAN.19 }
-				break = yes
+				character_event={ id=MAN.19 }
+				break=yes
 			}
 		}
 		### Everyone
-		random_courtier = {
-			limit = {
+		random_courtier={
+			limit={
+				is_dying=no
+				is_adult=yes
+				is_female=no
+				prisoner=no
+				is_ruler=no
+				is_councillor=no
+				has_minor_title=no
+				culture=ROOT
+				religion=ROOT
+				NOT={ is_primary_heir=ROOT }
+				NOT={ dynasty=none }
+				reverse_opinion={ who=ROOT value=70 }
+			}
+			character_event={ id=MAN.19 }
+			break=yes
+		}
+		random_courtier={
+			limit={
+				is_dying=no
+				is_adult=yes
+				is_female=no
+				prisoner=no
+				is_ruler=no
+				is_councillor=no
+				has_minor_title=no
+				culture=ROOT
+				religion=ROOT
+				NOT={ is_primary_heir=ROOT }
+				NOT={ dynasty=none }
+				trait=gentleman_3
+			}
+			remove_trait=gentleman_3
+			character_event={ id=MAN.19 }
+			break=yes
+		}
+		random_courtier={
+			limit={
+				is_dying=no
+				is_adult=yes
+				is_female=no
+				prisoner=no
+				is_ruler=no
+				is_councillor=no
+				has_minor_title=no
+				culture=ROOT
+				religion=ROOT
+				NOT={ is_primary_heir=ROOT }
+				NOT={ dynasty=none }
+				trait=gentleman_2
+			}
+			remove_trait=gentleman_2
+			character_event={ id=MAN.19 }
+			break=yes
+		}
+		random_courtier={
+			limit={
+				is_dying=no
+				is_adult=yes
+				is_female=no
+				prisoner=no
+				is_ruler=no
+				is_councillor=no
+				has_minor_title=no
+				culture=ROOT
+				religion=ROOT
+				NOT={ is_primary_heir=ROOT }
+				NOT={ dynasty=none }
+				trait=gentleman_1
+			}
+			remove_trait=gentleman_1
+			character_event={ id=MAN.19 }
+			break=yes
+		}
+		random_courtier={
+			limit={
+				is_dying=no
+				is_adult=yes
+				is_female=no
+				prisoner=no
+				is_ruler=no
+				is_councillor=no
+				has_minor_title=no
+				culture=ROOT
+				religion=ROOT
+				NOT={ is_primary_heir=ROOT }
+				NOT={ dynasty=none }
+				trait=gentleman_0
+			}
+			remove_trait=gentleman_0
+			character_event={ id=MAN.19 }
+			break=yes
+		}
+		random_courtier={
+			limit={
+				is_dying=no
+				is_adult=yes
+				is_female=no
+				prisoner=no
+				is_ruler=no
+				is_councillor=no
+				has_minor_title=no
+				culture=ROOT
+				religion=ROOT
+				NOT={ is_primary_heir=ROOT }
+				NOT={ dynasty=none }
+				trait=crusader
+			}
+			character_event={ id=MAN.19 }
+			break=yes
+		}
+		random_courtier={
+			limit={
+				is_dying=no
+				is_adult=yes
+				is_female=no
+				prisoner=no
+				is_ruler=no
+				is_councillor=no
+				has_minor_title=no
+				culture=ROOT
+				religion=ROOT
+				NOT={ is_primary_heir=ROOT }
+				NOT={ dynasty=none }
+				reverse_opinion={ who=ROOT value=30 }
+			}
+			character_event={ id=MAN.19 }
+			break=yes
+		}
+		random_courtier={
+			limit={
+				is_dying=no
+				is_adult=yes
+				is_female=no
+				prisoner=no
+				is_ruler=no
+				is_councillor=no
+				has_minor_title=no
+				culture=ROOT
+				religion=ROOT
+				NOT={ is_primary_heir=ROOT }
+				NOT={ dynasty=none }
+			}
+			character_event={ id=MAN.19 }
+			break=yes
+		}
+		random_courtier={
+			limit={
 				is_dying=no
 				is_adult=yes
 				is_female=no
@@ -1232,15 +1497,15 @@ character_event = { # Liege handles land
 				is_ruler=no
 				culture=ROOT
 				religion=ROOT
-				NOT = { is_primary_heir = ROOT }
-				NOT = { dynasty = none }
-				reverse_opinion = { who = ROOT value = 70 }
+				NOT={ is_primary_heir=ROOT }
+				NOT={ dynasty=none }
+				reverse_opinion={ who=ROOT value=70 }
 			}
-			character_event = { id = MAN.19 }
-			break = yes
+			character_event={ id=MAN.19 }
+			break=yes
 		}
-		random_courtier = {
-			limit = {
+		random_courtier={
+			limit={
 				is_dying=no
 				is_adult=yes
 				is_female=no
@@ -1248,16 +1513,16 @@ character_event = { # Liege handles land
 				is_ruler=no
 				culture=ROOT
 				religion=ROOT
-				NOT = { is_primary_heir = ROOT }
-				NOT = { dynasty = none }
-				trait = gentleman_3
+				NOT={ is_primary_heir=ROOT }
+				NOT={ dynasty=none }
+				trait=gentleman_3
 			}
-			remove_trait = gentleman_3
-			character_event = { id = MAN.19 }
-			break = yes
+			remove_trait=gentleman_3
+			character_event={ id=MAN.19 }
+			break=yes
 		}
-		random_courtier = {
-			limit = {
+		random_courtier={
+			limit={
 				is_dying=no
 				is_adult=yes
 				is_female=no
@@ -1265,16 +1530,16 @@ character_event = { # Liege handles land
 				is_ruler=no
 				culture=ROOT
 				religion=ROOT
-				NOT = { is_primary_heir = ROOT }
-				NOT = { dynasty = none }
-				trait = gentleman_2
+				NOT={ is_primary_heir=ROOT }
+				NOT={ dynasty=none }
+				trait=gentleman_2
 			}
-			remove_trait = gentleman_2
-			character_event = { id = MAN.19 }
-			break = yes
+			remove_trait=gentleman_2
+			character_event={ id=MAN.19 }
+			break=yes
 		}
-		random_courtier = {
-			limit = {
+		random_courtier={
+			limit={
 				is_dying=no
 				is_adult=yes
 				is_female=no
@@ -1282,16 +1547,16 @@ character_event = { # Liege handles land
 				is_ruler=no
 				culture=ROOT
 				religion=ROOT
-				NOT = { is_primary_heir = ROOT }
-				NOT = { dynasty = none }
-				trait = gentleman_1
+				NOT={ is_primary_heir=ROOT }
+				NOT={ dynasty=none }
+				trait=gentleman_1
 			}
-			remove_trait = gentleman_1
-			character_event = { id = MAN.19 }
-			break = yes
+			remove_trait=gentleman_1
+			character_event={ id=MAN.19 }
+			break=yes
 		}
-		random_courtier = {
-			limit = {
+		random_courtier={
+			limit={
 				is_dying=no
 				is_adult=yes
 				is_female=no
@@ -1299,16 +1564,16 @@ character_event = { # Liege handles land
 				is_ruler=no
 				culture=ROOT
 				religion=ROOT
-				NOT = { is_primary_heir = ROOT }
-				NOT = { dynasty = none }
-				trait = gentleman_0
+				NOT={ is_primary_heir=ROOT }
+				NOT={ dynasty=none }
+				trait=gentleman_0
 			}
-			remove_trait = gentleman_0
-			character_event = { id = MAN.19 }
-			break = yes
+			remove_trait=gentleman_0
+			character_event={ id=MAN.19 }
+			break=yes
 		}
-		random_courtier = {
-			limit = {
+		random_courtier={
+			limit={
 				is_dying=no
 				is_adult=yes
 				is_female=no
@@ -1316,15 +1581,15 @@ character_event = { # Liege handles land
 				is_ruler=no
 				culture=ROOT
 				religion=ROOT
-				NOT = { is_primary_heir = ROOT }
-				NOT = { dynasty = none }
-				trait = crusader
+				NOT={ is_primary_heir=ROOT }
+				NOT={ dynasty=none }
+				trait=crusader
 			}
-			character_event = { id = MAN.19 }
-			break = yes
+			character_event={ id=MAN.19 }
+			break=yes
 		}
-		random_courtier = {
-			limit = {
+		random_courtier={
+			limit={
 				is_dying=no
 				is_adult=yes
 				is_female=no
@@ -1332,15 +1597,15 @@ character_event = { # Liege handles land
 				is_ruler=no
 				culture=ROOT
 				religion=ROOT
-				NOT = { is_primary_heir = ROOT }
-				NOT = { dynasty = none }
-				reverse_opinion = { who = ROOT value = 30 }
+				NOT={ is_primary_heir=ROOT }
+				NOT={ dynasty=none }
+				reverse_opinion={ who=ROOT value=30 }
 			}
-			character_event = { id = MAN.19 }
-			break = yes
+			character_event={ id=MAN.19 }
+			break=yes
 		}
-		random_courtier = {
-			limit = {
+		random_courtier={
+			limit={
 				is_dying=no
 				is_adult=yes
 				is_female=no
@@ -1348,42 +1613,42 @@ character_event = { # Liege handles land
 				is_ruler=no
 				culture=ROOT
 				religion=ROOT
-				NOT = { is_primary_heir = ROOT }
-				NOT = { dynasty = none }
+				NOT={ is_primary_heir=ROOT }
+				NOT={ dynasty=none }
 			}
-			character_event = { id = MAN.19 }
-			break = yes
+			character_event={ id=MAN.19 }
+			break=yes
 		}
-		random_realm_character = {
-			limit = {
-				NOT = { character = ROOT }
+		random_realm_character={
+			limit={
+				NOT={ character=ROOT }
 				is_ruler=yes
 				is_dying=no
 				is_adult=yes
 				is_female=no
 				prisoner=no
-				NOT = { dynasty = none }
-				tier = COUNT
-				OR = {
-					any_demesne_title = { de_jure_liege_or_above = event_target:target_title }
-					capital_holding = {
-						kingdom = {
-							title = event_target:target_title
+				NOT={ dynasty=none }
+				tier=COUNT
+				OR={
+					any_demesne_title={ de_jure_liege_or_above=event_target:target_title }
+					capital_holding={
+						kingdom={
+							title=event_target:target_title
 						}
 					}
-					capital_holding = {
-						duchy = {
-							title = event_target:target_title
+					capital_holding={
+						duchy={
+							title=event_target:target_title
 						}
 					}
 				}
 			}
-			character_event = { id = MAN.19 }
-			break = yes
+			character_event={ id=MAN.19 }
+			break=yes
 		}
-		random_realm_character = {
-			limit = {
-				NOT = { character = ROOT }
+		random_realm_character={
+			limit={
+				NOT={ character=ROOT }
 				is_ruler=no
 				is_dying=no
 				is_adult=yes
@@ -1391,851 +1656,890 @@ character_event = { # Liege handles land
 				prisoner=no
 				culture=ROOT
 				religion=ROOT
-				NOT = { dynasty = none }
+				NOT={ dynasty=none }
 			}
-			character_event = { id = MAN.19 }
-			break = yes
+			character_event={ id=MAN.19 }
+			break=yes
 		}
-		random_realm_character = {
-			limit = {
-				NOT = { character = ROOT }
+		random_realm_character={
+			limit={
+				NOT={ character=ROOT }
 				is_ruler=no
 				is_dying=no
 				is_adult=yes
 				is_female=no
 				prisoner=no
-				NOT = { dynasty = none }
+				NOT={ dynasty=none }
 			}
-			character_event = { id = MAN.19 }
-			break = yes
+			character_event={ id=MAN.19 }
+			break=yes
 		}
-		create_character = {
-			dynasty = random
-			religion = ROOT
-			culture = ROOT
-			random_traits = yes
-			female = no
-			age = 30
+		create_character={
+			dynasty=random
+			religion=ROOT
+			culture=ROOT
+			random_traits=yes
+			female=no
+			age=30
 		}
-		new_character = {
-			character_event = { id = MAN.19 }
+		new_character={
+			character_event={ id=MAN.19 }
 		}
 	}
 }
 
-character_event = { # Handle Land
-	id = MAN.19
+character_event={ # Handle Land
+	id=MAN.19
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	hide_window = yes
+	hide_window=yes
 	
-	immediate = {
-		event_target:target_title = {
-			grant_title = ROOT
+	immediate={
+		event_target:target_title={
+			grant_title=ROOT
 		}
-		FROM = {
-			any_vassal = {
-				limit = {
-					NOT = { character = ROOT }
-					NOT = { real_tier = BARON }
-					capital_holding = {
-						de_jure_liege_or_above = event_target:target_title
+		FROM={
+			any_vassal={
+				limit={
+					NOT={ character=ROOT }
+					NOT={ real_tier=BARON }
+					capital_holding={
+						de_jure_liege_or_above=event_target:target_title
 					}
 				}
-				set_defacto_liege = ROOT
+				set_defacto_liege=ROOT
 			}
 		}
-		if = {
-			limit = {
-				primary_title = {
-					OR = {
-						has_title_flag = noble_mark
-						has_title_flag = noble_duke
-						has_title_flag = noble_king
-						has_title_flag = warlord_flag
+		if={
+			limit={
+				primary_title={
+					OR={
+						has_title_flag=noble_mark
+						has_title_flag=noble_duke
+						has_title_flag=noble_king
+						has_title_flag=warlord_flag
 					}
-					tier = COUNT
+					tier=COUNT
 				}
-				event_target:target_title = {
-					tier = BARON
-					dejure_liege_title = {
-						dejure_liege_title = {
-							holder_scope = {
-								NOT = { character = ROOT }
-								is_liege_or_above = FROM
+				event_target:target_title={
+					tier=BARON
+					dejure_liege_title={
+						dejure_liege_title={
+							holder_scope={
+								NOT={ character=ROOT }
+								is_liege_or_above=FROM
 							}
 						}
 					}
 				}
 			}
-			event_target:target_title = {
-				dejure_liege_title = {
-					dejure_liege_title = {
-						holder_scope = {
-							ROOT = { set_defacto_liege = PREV }
-							break = yes
+			event_target:target_title={
+				dejure_liege_title={
+					dejure_liege_title={
+						holder_scope={
+							ROOT={ set_defacto_liege=PREV }
+							break=yes
 						}
 					}
 				}
 			}
 		}
-		if = {
-			limit = {
-				primary_title = {
-					OR = {
-						has_title_flag = noble_mark
-						has_title_flag = noble_duke
-						has_title_flag = noble_king
-						has_title_flag = warlord_flag
+		if={
+			limit={
+				primary_title={
+					OR={
+						has_title_flag=noble_mark
+						has_title_flag=noble_duke
+						has_title_flag=noble_king
+						has_title_flag=warlord_flag
 					}
-					tier = COUNT
+					tier=COUNT
 				}
-				event_target:target_title = {
-					dejure_liege_title = {
-						holder_scope = {
-							NOT = { character = ROOT }
-							is_liege_or_above = FROM
+				event_target:target_title={
+					dejure_liege_title={
+						holder_scope={
+							NOT={ character=ROOT }
+							is_liege_or_above=FROM
 						}
 					}
 				}
 			}
-			event_target:target_title = {
-				dejure_liege_title = {
-					holder_scope = {
-						ROOT = { set_defacto_liege = PREV }
-						break = yes
+			event_target:target_title={
+				dejure_liege_title={
+					holder_scope={
+						ROOT={ set_defacto_liege=PREV }
+						break=yes
 					}
 				}
 			}
 		}
-		if = {
-			limit = {
-				primary_title = {
-					OR = {
-						has_title_flag = noble_mark
-						has_title_flag = noble_duke
-						has_title_flag = noble_king
-						has_title_flag = warlord_flag
+		if={
+			limit={
+				primary_title={
+					OR={
+						has_title_flag=noble_mark
+						has_title_flag=noble_duke
+						has_title_flag=noble_king
+						has_title_flag=warlord_flag
 					}
-					tier = COUNT
+					tier=COUNT
 				}
-				event_target:target_title = {
-					dejure_liege_title = {
-						dejure_liege_title = {
-							holder_scope = {
-								NOT = { character = ROOT }
-								is_liege_or_above = FROM
+				event_target:target_title={
+					dejure_liege_title={
+						dejure_liege_title={
+							holder_scope={
+								NOT={ character=ROOT }
+								is_liege_or_above=FROM
 							}
 						}
 					}
 				}
 			}
-			event_target:target_title = {
-				dejure_liege_title = {
-					dejure_liege_title = {
-						holder_scope = {
-							ROOT = { set_defacto_liege = PREV }
-							break = yes
+			event_target:target_title={
+				dejure_liege_title={
+					dejure_liege_title={
+						holder_scope={
+							ROOT={ set_defacto_liege=PREV }
+							break=yes
 						}
 					}
 				}
 			}
 		}
-		if = {
-			limit = {
-				primary_title = {
-					OR = {
-						has_title_flag = noble_mark
-						has_title_flag = noble_duke
-						has_title_flag = noble_king
-						has_title_flag = warlord_flag
+		if={
+			limit={
+				primary_title={
+					OR={
+						has_title_flag=noble_mark
+						has_title_flag=noble_duke
+						has_title_flag=noble_king
+						has_title_flag=warlord_flag
 					}
-					tier = COUNT
+					tier=COUNT
 				}
-				event_target:target_title = {
-					dejure_liege_title = {
-						dejure_liege_title = {
-							dejure_liege_title = {
-								holder_scope = {
-									NOT = { character = ROOT }
-									is_liege_or_above = FROM
+				event_target:target_title={
+					dejure_liege_title={
+						dejure_liege_title={
+							dejure_liege_title={
+								holder_scope={
+									NOT={ character=ROOT }
+									is_liege_or_above=FROM
 								}
 							}
 						}
 					}
 				}
 			}
-			event_target:target_title = {
-				dejure_liege_title = {
-					dejure_liege_title = {
-						dejure_liege_title = {
-							holder_scope = {
-								ROOT = { set_defacto_liege = PREV }
-								break = yes
+			event_target:target_title={
+				dejure_liege_title={
+					dejure_liege_title={
+						dejure_liege_title={
+							holder_scope={
+								ROOT={ set_defacto_liege=PREV }
+								break=yes
 							}
 						}
 					}
 				}
 			}
 		}
-		if = {
-			limit = {
-				primary_title = {
-					OR = {
-						has_title_flag = noble_mark
-						has_title_flag = noble_duke
-						has_title_flag = noble_king
-						has_title_flag = warlord_flag
+		if={
+			limit={
+				primary_title={
+					OR={
+						has_title_flag=noble_mark
+						has_title_flag=noble_duke
+						has_title_flag=noble_king
+						has_title_flag=warlord_flag
 					}
-					tier = DUKE
+					tier=DUKE
 				}
-				event_target:target_title = {
-					tier = COUNT
-					dejure_liege_title = {
-						dejure_liege_title = {
-							holder_scope = {
-								NOT = { character = ROOT }
-								is_liege_or_above = FROM
+				event_target:target_title={
+					tier=COUNT
+					dejure_liege_title={
+						dejure_liege_title={
+							holder_scope={
+								NOT={ character=ROOT }
+								is_liege_or_above=FROM
 							}
 						}
 					}
 				}
 			}
-			event_target:target_title = {
-				dejure_liege_title = {
-					dejure_liege_title = {
-						holder_scope = {
-							ROOT = { set_defacto_liege = PREV }
-							break = yes
+			event_target:target_title={
+				dejure_liege_title={
+					dejure_liege_title={
+						holder_scope={
+							ROOT={ set_defacto_liege=PREV }
+							break=yes
 						}
 					}
 				}
 			}
 		}
-		if = {
-			limit = {
-				primary_title = {
-					OR = {
-						has_title_flag = noble_mark
-						has_title_flag = noble_duke
-						has_title_flag = noble_king
-						has_title_flag = warlord_flag
+		if={
+			limit={
+				primary_title={
+					OR={
+						has_title_flag=noble_mark
+						has_title_flag=noble_duke
+						has_title_flag=noble_king
+						has_title_flag=warlord_flag
 					}
-					tier = DUKE
+					tier=DUKE
 				}
-				event_target:target_title = {
-					tier = COUNT
-					dejure_liege_title = {
-						dejure_liege_title = {
-							dejure_liege_title = {
-								holder_scope = {
-									NOT = { character = ROOT }
-									is_liege_or_above = FROM
+				event_target:target_title={
+					tier=COUNT
+					dejure_liege_title={
+						dejure_liege_title={
+							dejure_liege_title={
+								holder_scope={
+									NOT={ character=ROOT }
+									is_liege_or_above=FROM
 								}
 							}
 						}
 					}
 				}
 			}
-			event_target:target_title = {
-				dejure_liege_title = {
-					dejure_liege_title = {
-						dejure_liege_title = {
-							holder_scope = {
-								ROOT = { set_defacto_liege = PREV }
-								break = yes
+			event_target:target_title={
+				dejure_liege_title={
+					dejure_liege_title={
+						dejure_liege_title={
+							holder_scope={
+								ROOT={ set_defacto_liege=PREV }
+								break=yes
 							}
 						}
 					}
 				}
 			}
 		}
-		if = {
-			limit = {
-				primary_title = {
-					OR = {
-						has_title_flag = noble_mark
-						has_title_flag = noble_duke
-						has_title_flag = noble_king
-						has_title_flag = warlord_flag
+		if={
+			limit={
+				primary_title={
+					OR={
+						has_title_flag=noble_mark
+						has_title_flag=noble_duke
+						has_title_flag=noble_king
+						has_title_flag=warlord_flag
 					}
-					tier = DUKE
+					tier=DUKE
 				}
-				event_target:target_title = {
-					dejure_liege_title = {
-						holder_scope = {
-							NOT = { character = ROOT }
-							is_liege_or_above = FROM
+				event_target:target_title={
+					dejure_liege_title={
+						holder_scope={
+							NOT={ character=ROOT }
+							is_liege_or_above=FROM
 						}
 					}
 				}
 			}
-			event_target:target_title = {
-				dejure_liege_title = {
-					holder_scope = {
-						ROOT = { set_defacto_liege = PREV }
-						break = yes
+			event_target:target_title={
+				dejure_liege_title={
+					holder_scope={
+						ROOT={ set_defacto_liege=PREV }
+						break=yes
 					}
 				}
 			}
 		}
-		if = {
-			limit = {
-				primary_title = {
-					OR = {
-						has_title_flag = noble_mark
-						has_title_flag = noble_duke
-						has_title_flag = noble_king
-						has_title_flag = warlord_flag
+		if={
+			limit={
+				primary_title={
+					OR={
+						has_title_flag=noble_mark
+						has_title_flag=noble_duke
+						has_title_flag=noble_king
+						has_title_flag=warlord_flag
 					}
-					tier = DUKE
+					tier=DUKE
 				}
-				event_target:target_title = {
-					dejure_liege_title = {
-						dejure_liege_title = {
-							holder_scope = {
-								NOT = { character = ROOT }
-								is_liege_or_above = FROM
+				event_target:target_title={
+					dejure_liege_title={
+						dejure_liege_title={
+							holder_scope={
+								NOT={ character=ROOT }
+								is_liege_or_above=FROM
 							}
 						}
 					}
 				}
 			}
-			event_target:target_title = {
-				dejure_liege_title = {
-					dejure_liege_title = {
-						holder_scope = {
-							ROOT = { set_defacto_liege = PREV }
-							break = yes
+			event_target:target_title={
+				dejure_liege_title={
+					dejure_liege_title={
+						holder_scope={
+							ROOT={ set_defacto_liege=PREV }
+							break=yes
 						}
 					}
 				}
 			}
 		}
-		if = {
-			limit = {
-				primary_title = {
-					OR = {
-						has_title_flag = noble_mark
-						has_title_flag = noble_duke
-						has_title_flag = noble_king
-						has_title_flag = warlord_flag
+		if={
+			limit={
+				primary_title={
+					OR={
+						has_title_flag=noble_mark
+						has_title_flag=noble_duke
+						has_title_flag=noble_king
+						has_title_flag=warlord_flag
 					}
-					tier = KING
+					tier=KING
 				}
-				event_target:target_title = {
-					tier = COUNT
-					dejure_liege_title = {
-						dejure_liege_title = {
-							dejure_liege_title = {
-								holder_scope = {
-									NOT = { character = ROOT }
-									is_liege_or_above = FROM
+				event_target:target_title={
+					tier=COUNT
+					dejure_liege_title={
+						dejure_liege_title={
+							dejure_liege_title={
+								holder_scope={
+									NOT={ character=ROOT }
+									is_liege_or_above=FROM
 								}
 							}
 						}
 					}
 				}
 			}
-			event_target:target_title = {
-				dejure_liege_title = {
-					dejure_liege_title = {
-						dejure_liege_title = {
-							holder_scope = {
-								ROOT = { set_defacto_liege = PREV }
-								break = yes
+			event_target:target_title={
+				dejure_liege_title={
+					dejure_liege_title={
+						dejure_liege_title={
+							holder_scope={
+								ROOT={ set_defacto_liege=PREV }
+								break=yes
 							}
 						}
 					}
 				}
 			}
 		}
-		if = {
-			limit = {
-				primary_title = {
-					OR = {
-						has_title_flag = noble_mark
-						has_title_flag = noble_duke
-						has_title_flag = noble_king
-						has_title_flag = warlord_flag
+		if={
+			limit={
+				primary_title={
+					OR={
+						has_title_flag=noble_mark
+						has_title_flag=noble_duke
+						has_title_flag=noble_king
+						has_title_flag=warlord_flag
 					}
-					tier = KING
+					tier=KING
 				}
-				event_target:target_title = {
-					tier = DUKE
-					dejure_liege_title = {
-						dejure_liege_title = {
-							holder_scope = {
-								NOT = { character = ROOT }
-								is_liege_or_above = FROM
+				event_target:target_title={
+					tier=DUKE
+					dejure_liege_title={
+						dejure_liege_title={
+							holder_scope={
+								NOT={ character=ROOT }
+								is_liege_or_above=FROM
 							}
 						}
 					}
 				}
 			}
-			event_target:target_title = {
-				dejure_liege_title = {
-					dejure_liege_title = {
-						holder_scope = {
-							ROOT = { set_defacto_liege = PREV }
-							break = yes
+			event_target:target_title={
+				dejure_liege_title={
+					dejure_liege_title={
+						holder_scope={
+							ROOT={ set_defacto_liege=PREV }
+							break=yes
 						}
 					}
 				}
 			}
 		}
-		if = {
-			limit = {
-				primary_title = {
-					OR = {
-						has_title_flag = noble_mark
-						has_title_flag = noble_duke
-						has_title_flag = noble_king
-						has_title_flag = warlord_flag
+		if={
+			limit={
+				primary_title={
+					OR={
+						has_title_flag=noble_mark
+						has_title_flag=noble_duke
+						has_title_flag=noble_king
+						has_title_flag=warlord_flag
 					}
-					tier = KING
+					tier=KING
 				}
-				event_target:target_title = {
-					dejure_liege_title = {
-						holder_scope = {
-							NOT = { character = ROOT }
-							is_liege_or_above = FROM
+				event_target:target_title={
+					dejure_liege_title={
+						holder_scope={
+							NOT={ character=ROOT }
+							is_liege_or_above=FROM
 						}
 					}
 				}
 			}
-			event_target:target_title = {
-				dejure_liege_title = {
-					holder_scope = {
-						ROOT = { set_defacto_liege = PREV }
-						break = yes
+			event_target:target_title={
+				dejure_liege_title={
+					holder_scope={
+						ROOT={ set_defacto_liege=PREV }
+						break=yes
 					}
 				}
 			}
 		}
-		dejure_liege_title = {
-			holder_scope = {
-				if = {
-					limit = { is_liege_or_above = FROM }
-					ROOT = { set_defacto_liege = PREV }
-					break = yes
+		dejure_liege_title={
+			holder_scope={
+				if={
+					limit={ is_liege_or_above=FROM }
+					ROOT={ set_defacto_liege=PREV }
+					break=yes
 				}
 			}
 		}
-		set_defacto_liege = FROM
+		set_defacto_liege=FROM
 	}
 }
 
-character_event = { # Handle Land
-	id = MAN.20
+character_event={ # Handle Land
+	id=MAN.20
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	hide_window = yes
+	hide_window=yes
 	
-	immediate = {
-		if = {
-			limit = { has_character_flag = inherit_empire }
-			clr_character_flag = inherit_empire
-			break = yes
+	immediate={
+		if={
+			limit={ has_character_flag=inherit_empire }
+			clr_character_flag=inherit_empire
+			break=yes
 		}
-		remove_claim = FROMFROM
-		FROM = {
-			clr_character_flag = heir_flag
-			clr_character_flag = liege_flag
-			remove_claim = FROMFROM
-			any_sibling = {
-				limit = { has_claim = FROMFROM }
-				remove_claim = FROMFROM
+		remove_claim=FROMFROM
+		FROM={
+			clr_character_flag=heir_flag
+			clr_character_flag=liege_flag
+			remove_claim=FROMFROM
+			any_sibling={
+				limit={ has_claim=FROMFROM }
+				remove_claim=FROMFROM
 			}
 		}
-		if = {
-			limit = {
-				FROMFROM = {
-					has_title_flag = independent_flag
+		if={
+			limit={
+				FROMFROM={
+					has_title_flag=independent_flag
 				}
 			}
-			FROMFROM = {
-				clr_title_flag = independent_flag
+			FROMFROM={
+				clr_title_flag=independent_flag
 			}
-			set_defacto_liege = THIS
-			break = yes
+			set_defacto_liege=THIS
+			break=yes
 		}
-		random_playable_ruler = {
-			limit = { has_opinion_modifier = { who = FROM modifier = opinion_oldheir_target } }
-			remove_opinion = { who = FROM modifier = opinion_oldheir_target }
-			reverse_remove_opinion = { who = FROM modifier = opinion_oldheir_target }
+		random_playable_ruler={
+			limit={ has_opinion_modifier={ who=FROM modifier=opinion_oldheir_target } }
+			remove_opinion={ who=FROM modifier=opinion_oldheir_target }
+			reverse_remove_opinion={ who=FROM modifier=opinion_oldheir_target }
 		}
-		remove_opinion = { who = FROM modifier = opinion_heir_target }
-		reverse_remove_opinion = { who = FROM modifier = opinion_heir_target }
+		remove_opinion={ who=FROM modifier=opinion_heir_target }
+		reverse_remove_opinion={ who=FROM modifier=opinion_heir_target }
 	}
 }
 
 #Remove Warlord
-character_event = {
-	id = MAN.21
+character_event={
+	id=MAN.21
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	hide_window = yes
+	hide_window=yes
 	
-	only_rulers = yes
+	only_rulers=yes
 	
-	trigger = {
-		has_game_started = yes
-		FROM = {
-			is_titular = yes
-			OR = {
-				has_title_flag = noble_mark
-				has_title_flag = noble_duke
-				has_title_flag = noble_king
-				has_title_flag = warlord_flag
+	trigger={
+		has_game_started=yes
+		FROM={
+			is_titular=yes
+			OR={
+				has_title_flag=noble_mark
+				has_title_flag=noble_duke
+				has_title_flag=noble_king
+				AND={
+					has_title_flag=warlord_flag
+					holder_scope={
+						NOT={
+							dynasty=FROMFROM
+						}
+					}
+				}
 			}
 		}
-		OR = {
-			NOT = { is_close_relative = FROMFROM }
-			AND = {
-				FROM = { has_title_flag = noble_mark }
-				any_demesne_title = {
-					OR = {
-						AND = {
-							has_title_flag = noble_mark
-							count = 2
+		OR={
+			NOT={ is_close_relative=FROMFROM }
+			AND={
+				FROM={ has_title_flag=noble_mark }
+				any_demesne_title={
+					OR={
+						AND={
+							has_title_flag=noble_mark
+							count=2
 						}
-						has_title_flag = noble_duke
-						has_title_flag = noble_king
+						has_title_flag=noble_duke
+						has_title_flag=noble_king
 					}
 				}
 			}
-			AND = {
-				FROM = { has_title_flag = noble_duke }
-				any_demesne_title = {
-					OR = {
-						AND = {
-							has_title_flag = noble_duke
-							count = 2
+			AND={
+				FROM={ has_title_flag=noble_duke }
+				any_demesne_title={
+					OR={
+						AND={
+							has_title_flag=noble_duke
+							count=2
 						}
-						has_title_flag = noble_king
+						has_title_flag=noble_king
 					}
 				}
 			}
-			AND = {
-				FROM = { has_title_flag = noble_king }
-				any_demesne_title = {
-					has_title_flag = noble_king
-					count = 2
+			AND={
+				FROM={ has_title_flag=noble_king }
+				any_demesne_title={
+					has_title_flag=noble_king
+					count=2
 				}
 			}
-			AND = {
-				FROM = { has_title_flag = warlord_flag }
-				any_demesne_title = {
-					has_title_flag = warlord_flag
-					count = 2
+			AND={
+				FROM={ has_title_flag=warlord_flag }
+				any_demesne_title={
+					has_title_flag=warlord_flag
+					count=2
 				}
 			}
-			OR = {
-				primary_title = {
-					tier = EMPEROR
-					NOR = {
-						has_title_flag = premier_title
-						has_title_flag = warlord_flag
+			OR={
+				primary_title={
+					tier=EMPEROR
+					NOR={
+						has_title_flag=premier_title
+						has_title_flag=warlord_flag
 					}
 				}
-				num_of_emperor_titles = 2
-				has_landed_title = k_confucian
+				num_of_emperor_titles=2
+				has_landed_title=k_confucian
 			}
 		}
 	}
 	
-	immediate = {
-		top_liege = {
-			save_event_target_as = target_liege
+	immediate={
+		top_liege={
+			save_event_target_as=target_liege
 		}
-		FROM = {
-			save_event_target_as = target_title
+		FROM={
+			save_event_target_as=target_title
 		}
-		character_event = { id = WRL.4 }
+		character_event={ id=WRL.4 }
 	}
 }
 
 #Remove Independent
-character_event = {
-	id = MAN.22
+character_event={
+	id=MAN.22
 	
-	hide_window = yes
+	hide_window=yes
 	
-	only_rulers = yes
+	only_rulers=yes
 	
-	trigger = {
-		any_demesne_title = {
-			OR = {
-				has_title_flag = inherit_flag
-				has_title_flag = independent_flag
+	trigger={
+		any_demesne_title={
+			OR={
+				has_title_flag=inherit_flag
+				has_title_flag=independent_flag
 			}
 		}
 	}
 	
-	mean_time_to_happen = {
-		months = 120
-		modifier = {
-			factor = 0
-			any_demesne_title = {
-				OR = {
-					has_title_flag = inherit_flag
-					has_title_flag = independent_flag
+	mean_time_to_happen={
+		months=120
+		modifier={
+			factor=0
+			any_demesne_title={
+				OR={
+					has_title_flag=inherit_flag
+					has_title_flag=independent_flag
 				}
 			}
 		}
 	}
 	
-	immediate = {
-		any_demesne_title = {
-			limit = {
-				OR = {
-					has_title_flag = inherit_flag
-					has_title_flag = independent_flag
+	immediate={
+		any_demesne_title={
+			limit={
+				OR={
+					has_title_flag=inherit_flag
+					has_title_flag=independent_flag
 				}
 			}
-			clr_title_flag = inherit_flag
-			clr_title_flag = independent_flag
+			clr_title_flag=inherit_flag
+			clr_title_flag=independent_flag
 		}
 	}
 }
 
-character_event = { # Remove Historical
-	id = MAN.23
+character_event={ # Remove Historical
+	id=MAN.23
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	hide_window = yes
+	hide_window=yes
 	
-	only_playable = yes
-	religion = confucian
+	only_playable=yes
+	religion=confucian
 	
-	trigger = {
-		any_demesne_title = {
-			is_titular = yes
-			is_primary_type_title = yes
-			NOR = {
-				tier = EMPEROR
-				has_title_flag = noble_mark
-				has_title_flag = noble_duke
-				has_title_flag = noble_king
-				has_title_flag = warlord_flag
+	trigger={
+		any_demesne_title={
+			is_titular=yes
+			is_primary_type_title=yes
+			NOR={
+				tier=EMPEROR
+				has_title_flag=noble_mark
+				has_title_flag=noble_duke
+				has_title_flag=noble_king
+				has_title_flag=warlord_flag
 			}
 		}
 	}
 	
-	weight_multiplier = {
-		days = 1
-		modifier = {
-			factor = 1000
-			religion = confucian
-			any_demesne_title = {
-				is_titular = yes
-				is_primary_type_title = yes
-				NOR = {
-					tier = EMPEROR
-					has_title_flag = noble_mark
-					has_title_flag = noble_duke
-					has_title_flag = noble_king
-					has_title_flag = warlord_flag
+	weight_multiplier={
+		days=1
+		modifier={
+			factor=1000
+			religion=confucian
+			any_demesne_title={
+				is_titular=yes
+				is_primary_type_title=yes
+				NOR={
+					tier=EMPEROR
+					has_title_flag=noble_mark
+					has_title_flag=noble_duke
+					has_title_flag=noble_king
+					has_title_flag=warlord_flag
 				}
 			}
 		}
 	}
 	
-	immediate = {
-		any_demesne_title = {
-			limit = {
-				is_titular = yes
-				is_primary_type_title = yes
-				NOR = {
-					tier = EMPEROR
-					has_title_flag = noble_mark
-					has_title_flag = noble_duke
-					has_title_flag = noble_king
-					has_title_flag = warlord_flag
+	immediate={
+		any_demesne_title={
+			limit={
+				is_titular=yes
+				is_primary_type_title=yes
+				NOR={
+					tier=EMPEROR
+					has_title_flag=noble_mark
+					has_title_flag=noble_duke
+					has_title_flag=noble_king
+					has_title_flag=warlord_flag
 				}
 			}
-			activate_title = { title = THIS status = no }
-			unsafe_destroy_landed_title = THIS
+			activate_title={ title=THIS status=no }
+			unsafe_destroy_landed_title=THIS
 		}
 	}
 }
 
 #Remove Empires
-character_event = {
-	id = MAN.24
+character_event={
+	id=MAN.24
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	hide_window = yes
+	hide_window=yes
 	
-	only_playable = yes
-	only_independent = yes
+	only_playable=yes
+	only_independent=yes
 	
-	trigger = {
-		num_of_emperor_titles = 2
-		FROM = { tier = EMPEROR }
+	trigger={
+		num_of_emperor_titles=2
+		NOT={
+			any_demesne_title={
+				temporary=yes
+			}
+		}
+		FROM={ tier=EMPEROR }
 	}
 	
-	immediate = {
-		FROM = {
-			activate_title = { title = THIS status = no }
-			unsafe_destroy_landed_title = THIS
+	immediate={
+		if={
+			limit={
+				primary_title={
+					has_title_flag=warlord_flag
+				}
+				FROM={
+					NOT={ has_title_flag=warlord_flag }
+				}
+			}
+			primary_title={				
+				activate_title={ title=THIS status=no }
+				unsafe_destroy_landed_title=THIS
+			}
+			break=yes
+		}
+		FROM={
+			activate_title={ title=THIS status=no }
+			unsafe_destroy_landed_title=THIS
 		}
 	}
 }
 
 # Conquer k_confucian
-character_event = { 
-	id = MAN.25
+character_event={ 
+	id=MAN.25
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	hide_window = yes
+	hide_window=yes
 	
-	only_playable = yes
+	only_playable=yes
 	
-	trigger = {
-		FROMFROM = { NOT = { tier = EMPEROR } }
-		FROM = { title = k_confucian }
-		primary_title = { NOT = { real_tier = EMPEROR } }
+	trigger={
+		FROM={ title=k_confucian }
 	}
 	
-	immediate = {
-		character_event = { id = DYN.1 }
+	immediate={
+		if={
+			limit={
+				FROMFROM={ NOT={ tier=EMPEROR } }
+				primary_title={ NOT={ real_tier=EMPEROR } }
+			}
+			character_event={ id=DYN.1 }
+		}
+		if={
+			limit={
+				is_married=yes
+			}
+			spouse={
+				character_event={ id=MAN.2 }
+			}
+		}
 	}
 }
 
 # Inherit k_confucian
-character_event = {
-	id = MAN.26
+character_event={
+	id=MAN.26
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	hide_window = yes
+	hide_window=yes
 	
-	only_playable = yes
+	only_playable=yes
 	
-	trigger = {
-		independent = no
-		has_landed_title = k_confucian
-		top_liege = {
-			NOT = { character = ROOT }
-			primary_title = {
-				NOR = {
-					has_title_flag = premier_title
-					has_title_flag = warlord_flag
+	trigger={
+		independent=no
+		has_landed_title=k_confucian
+		top_liege={
+			NOT={ character=ROOT }
+			primary_title={
+				NOR={
+					has_title_flag=premier_title
+					has_title_flag=warlord_flag
 				}
 			}
 		}
 	}
 	
-	immediate = {
-		top_liege = {
-			save_event_target_as = target_liege
+	immediate={
+		top_liege={
+			save_event_target_as=target_liege
 		}
-		any_demesne_title = {
-			grant_title_no_opinion = event_target:target_liege
+		any_demesne_title={
+			grant_title_no_opinion=event_target:target_liege
 		}
 	}
 }
 
 ### Imperial Assign ###
-character_event = {
-	id = MAN.27
+character_event={
+	id=MAN.27
 	
-	hide_window = yes
+	hide_window=yes
 	
-	only_rulers = yes
+	only_rulers=yes
 	
-	trigger = {
-		k_confucian = { has_holder = yes }
-		OR = {
-			has_landed_title = c_guard
-			has_landed_title = c_eunuch
-			has_landed_title = c_empress
+	trigger={
+		k_confucian={ has_holder=yes }
+		OR={
+			has_landed_title=c_guard
+			has_landed_title=c_eunuch
+			has_landed_title=c_empress
 		}
-		NOT = { has_landed_title = k_confucian }
-		liege = {
-			NOT = { has_landed_title = k_confucian }
+		NOT={ has_landed_title=k_confucian }
+		liege={
+			NOT={ has_landed_title=k_confucian }
 		}
-		top_liege = {
-			has_landed_title = k_confucian
+		top_liege={
+			has_landed_title=k_confucian
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 120
-		modifier = {
-			factor = 0
-			k_confucian = { has_holder = yes }
-			OR = {
-				has_landed_title = c_guard
-				has_landed_title = c_eunuch
-				has_landed_title = c_empress
+	mean_time_to_happen={
+		months=120
+		modifier={
+			factor=0
+			k_confucian={ has_holder=yes }
+			OR={
+				has_landed_title=c_guard
+				has_landed_title=c_eunuch
+				has_landed_title=c_empress
 			}
-			NOT = { has_landed_title = k_confucian }
-			liege = {
-				NOT = { has_landed_title = k_confucian }
+			NOT={ has_landed_title=k_confucian }
+			liege={
+				NOT={ has_landed_title=k_confucian }
 			}
-			top_liege = {
-				has_landed_title = k_confucian
+			top_liege={
+				has_landed_title=k_confucian
 			}
 		}
 	}
 	
-	immediate = {
-		k_confucian = {
-			holder_scope = {
-				save_event_target_as = target_emperor
+	immediate={
+		k_confucian={
+			holder_scope={
+				save_event_target_as=target_emperor
 			}
 		}
-		if = {
-			limit = {
-				OR = {
-					has_landed_title = c_guard
-					has_landed_title = c_eunuch
-					has_landed_title = c_empress
+		if={
+			limit={
+				OR={
+					has_landed_title=c_guard
+					has_landed_title=c_eunuch
+					has_landed_title=c_empress
 				}
 			}
-			set_defacto_liege = event_target:target_emperor
+			set_defacto_liege=event_target:target_emperor
 		}
 	}
 }
 
 ### Guard Assign ###
-character_event = {
-	id = MAN.28
+character_event={
+	id=MAN.28
 	
-	hide_window = yes
+	hide_window=yes
 	
-	only_rulers = yes
+	only_rulers=yes
 	
-	trigger = {
-		has_landed_title = c_guard
-		OR = {
-			AND = {
-				has_landed_title = k_confucian
-				any_courtier = {
-					is_adult = yes
-					has_minor_title = title_bodyguard
+	trigger={
+		has_landed_title=c_guard
+		OR={
+			AND={
+				has_landed_title=k_confucian
+				any_courtier={
+					is_adult=yes
+					has_minor_title=title_bodyguard
 				}
 			}
-			AND = {
-				top_liege = {
-					NOT = {
-						has_landed_title = k_confucian
+			AND={
+				top_liege={
+					NOT={
+						has_landed_title=k_confucian
 					}
 				}
-				k_confucian = {
-					holder_scope = {
-						any_courtier = {
-							is_adult = yes
-							has_minor_title = title_bodyguard
+				k_confucian={
+					holder_scope={
+						any_courtier={
+							is_adult=yes
+							has_minor_title=title_bodyguard
 						}
 					}
 				}
@@ -2243,59 +2547,59 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 120
-		modifier = {
-			factor = 0
-			has_landed_title = c_guard
-			OR = {
-				has_landed_title = k_confucian
-				top_liege = {
-					NOT = {
-						has_landed_title = k_confucian
+	mean_time_to_happen={
+		months=120
+		modifier={
+			factor=0
+			has_landed_title=c_guard
+			OR={
+				has_landed_title=k_confucian
+				top_liege={
+					NOT={
+						has_landed_title=k_confucian
 					}
 				}
 			}
 		}
 	}
 	
-	immediate = {
-		k_confucian = {
-			holder_scope = {
-				if = {
-					limit = {
-						NOT = { has_landed_title = c_guard }
+	immediate={
+		k_confucian={
+			holder_scope={
+				if={
+					limit={
+						NOT={ has_landed_title=c_guard }
 					}
-					c_guard = { grant_title_no_opinion = PREV }
+					c_guard={ grant_title_no_opinion=PREV }
 				}
-				any_courtier = {
-					limit = {
-						is_adult = yes
-						has_minor_title = title_bodyguard
-						reverse_opinion = { who = ROOT value = 70 }
+				any_courtier={
+					limit={
+						is_adult=yes
+						has_minor_title=title_bodyguard
+						reverse_opinion={ who=ROOT value=70 }
 					}
-					c_guard = {
-						grant_title = PREV
+					c_guard={
+						grant_title=PREV
 					}
-					if = {
-						limit = { liege = { NOT = { has_landed_title = k_confucian } } }
-						set_defacto_liege = PREV
+					if={
+						limit={ liege={ NOT={ has_landed_title=k_confucian } } }
+						set_defacto_liege=PREV
 					}
-					break = yes
+					break=yes
 				}
-				any_courtier = {
-					limit = {
-						is_adult = yes
-						has_minor_title = title_bodyguard
+				any_courtier={
+					limit={
+						is_adult=yes
+						has_minor_title=title_bodyguard
 					}
-					c_guard = {
-						grant_title = PREV
+					c_guard={
+						grant_title=PREV
 					}
-					if = {
-						limit = { liege = { NOT = { has_landed_title = k_confucian } } }
-						set_defacto_liege = PREV
+					if={
+						limit={ liege={ NOT={ has_landed_title=k_confucian } } }
+						set_defacto_liege=PREV
 					}
-					break = yes
+					break=yes
 				}
 			}
 		}
@@ -2303,34 +2607,34 @@ character_event = {
 }
 
 ### Eunuch Assign ###
-character_event = {
-	id = MAN.29
+character_event={
+	id=MAN.29
 	
-	hide_window = yes
+	hide_window=yes
 	
-	only_rulers = yes
+	only_rulers=yes
 	
-	trigger = {
-		has_landed_title = c_eunuch
-		OR = {
-			AND = {
-				has_landed_title = k_confucian
-				any_courtier = {
-					is_adult = yes
-					trait = eunuch
+	trigger={
+		has_landed_title=c_eunuch
+		OR={
+			AND={
+				has_landed_title=k_confucian
+				any_courtier={
+					is_adult=yes
+					trait=eunuch
 				}
 			}
-			AND = {
-				top_liege = {
-					NOT = {
-						has_landed_title = k_confucian
+			AND={
+				top_liege={
+					NOT={
+						has_landed_title=k_confucian
 					}
 				}
-				k_confucian = {
-					holder_scope = {
-						any_courtier = {
-							is_adult = yes
-							trait = eunuch
+				k_confucian={
+					holder_scope={
+						any_courtier={
+							is_adult=yes
+							trait=eunuch
 						}
 					}
 				}
@@ -2338,393 +2642,372 @@ character_event = {
 		}
 	}
 
-	mean_time_to_happen = {
-		months = 120
-		modifier = {
-			factor = 0
-			has_landed_title = c_eunuch
-			OR = {
-				has_landed_title = k_confucian
-				top_liege = {
-					NOT = {
-						has_landed_title = k_confucian
+	mean_time_to_happen={
+		months=120
+		modifier={
+			factor=0
+			has_landed_title=c_eunuch
+			OR={
+				has_landed_title=k_confucian
+				top_liege={
+					NOT={
+						has_landed_title=k_confucian
 					}
 				}
 			}
 		}
 	}
 	
-	immediate = {
-		k_confucian = {
-			holder_scope = {
-				if = {
-					limit = {
-						NOT = {
-							has_landed_title = c_eunuch
+	immediate={
+		k_confucian={
+			holder_scope={
+				if={
+					limit={
+						NOT={
+							has_landed_title=c_eunuch
 						}
 					}
-					c_eunuch = { grant_title_no_opinion = PREV }
+					c_eunuch={ grant_title_no_opinion=PREV }
 				}
-				any_courtier = {
-					limit = {
-						is_adult = yes
-						trait = eunuch
-						reverse_opinion = { who = ROOT value = 70 }
+				any_courtier={
+					limit={
+						is_adult=yes
+						trait=eunuch
+						reverse_opinion={ who=ROOT value=70 }
 					}
-					c_eunuch = {
-						grant_title = PREV
+					c_eunuch={
+						grant_title=PREV
 					}
-					if = {
-						limit = { liege = { NOT = { has_landed_title = k_confucian } } }
-						set_defacto_liege = PREV
+					if={
+						limit={ liege={ NOT={ has_landed_title=k_confucian } } }
+						set_defacto_liege=PREV
 					}
-					break = yes
+					break=yes
 				}
-				any_courtier = {
-					limit = {
-						is_adult = yes
-						trait = eunuch
+				any_courtier={
+					limit={
+						is_adult=yes
+						trait=eunuch
 					}
-					c_eunuch = {
-						grant_title = PREV
+					c_eunuch={
+						grant_title=PREV
 					}
-					if = {
-						limit = { liege = { NOT = { has_landed_title = k_confucian } } }
-						set_defacto_liege = PREV
+					if={
+						limit={ liege={ NOT={ has_landed_title=k_confucian } } }
+						set_defacto_liege=PREV
 					}
-					break = yes
+					break=yes
 				}
 			}
 		}
 	}
 }
 
-character_event = { # Add spouse
-	id = MAN.30
+character_event={ # Add spouse
+	id=MAN.30
 	
-	hide_window = yes
+	hide_window=yes
 	
-	min_age = 20
-	only_playable = yes
-	prisoner = no
-	is_married = no
-	capable_only = yes
+	is_triggered_only=yes
 	
-	ai = yes
+	min_age=20
+	only_playable=yes
+	prisoner=no
+	is_married=no
+	capable_only=yes
 	
-	trigger = {
-		NOT = {
-			is_female = yes
-			age = 50
+	ai=yes
+	
+	trigger={
+		NOT={
+			is_female=yes
+			age=50
 		}
-		is_consort = no
-		is_landed = yes
-		NOR = {
-			trait = inner_court
-			trait = refuge
+		is_consort=no
+		is_landed=yes
+		NOR={
+			trait=inner_court
+			trait=refuge
 		}
-		NOT = { dynasty = none }
-		NOT = {
-			any_child = {
-				is_female = no
+		NOT={ dynasty=none }
+		NOT={
+			any_child={
+				is_female=no
 			}
 		}
 	}
 	
-	weight_multiplier = {
-		days = 150
+	weight_multiplier={
+		days=150
 	}
 	
-	immediate = {
-		if = {
-			limit = {
-				is_landed = no
+	immediate={
+		if={
+			limit={
+				is_landed=no
 			}
-			break = yes
+			break=yes
 		}
-		prestige = -50
-		if = {
-			limit = {
-				is_female = yes
-				NOT = { age = 24 }
+		prestige=-50
+		if={
+			limit={
+				is_female=yes
+				NOT={ age=24 }
 			}
-			create_character = {
-				dynasty = none
-				religion = ROOT
-				culture = ROOT
-				random_traits = yes
-				female = no
-				age = 24
+			create_character={
+				dynasty=none
+				religion=ROOT
+				culture=ROOT
+				random_traits=yes
+				female=no
+				age=24
 			}
-			new_character = {
-				add_spouse = ROOT
+			new_character={
+				add_spouse=ROOT
 			}
-			break = yes
+			break=yes
 		}
-		if = {
-			limit = {
-				is_female = yes
-				NOT = { age = 30 }
+		if={
+			limit={
+				is_female=yes
+				NOT={ age=30 }
 			}
-			create_character = {
-				dynasty = none
-				religion = ROOT
-				culture = ROOT
-				random_traits = yes
-				female = no
-				age = 30
+			create_character={
+				dynasty=none
+				religion=ROOT
+				culture=ROOT
+				random_traits=yes
+				female=no
+				age=30
 			}
-			new_character = {
-				add_spouse = ROOT
+			new_character={
+				add_spouse=ROOT
 			}
-			break = yes
+			break=yes
 		}
-		if = {
-			limit = {
-				is_female = yes
-				NOT = { age = 40 }
+		if={
+			limit={
+				is_female=yes
+				NOT={ age=40 }
 			}
-			create_character = {
-				dynasty = none
-				religion = ROOT
-				culture = ROOT
-				random_traits = yes
-				female = no
-				age = 40
+			create_character={
+				dynasty=none
+				religion=ROOT
+				culture=ROOT
+				random_traits=yes
+				female=no
+				age=40
 			}
-			new_character = {
-				add_spouse = ROOT
+			new_character={
+				add_spouse=ROOT
 			}
-			break = yes
+			break=yes
 		}
-		if = {
-			limit = {
-				is_female = yes
-				age = 40
+		if={
+			limit={
+				is_female=yes
+				age=40
 			}
-			create_character = {
-				dynasty = none
-				religion = ROOT
-				culture = ROOT
-				random_traits = yes
-				female = no
-				age = 60
+			create_character={
+				dynasty=none
+				religion=ROOT
+				culture=ROOT
+				random_traits=yes
+				female=no
+				age=60
 			}
-			new_character = {
-				add_spouse = ROOT
+			new_character={
+				add_spouse=ROOT
 			}
-			break = yes
+			break=yes
 		}
-		if = {
-			limit = {
-				is_female = no
-				NOT = { age = 30 }
+		if={
+			limit={
+				is_female=no
+				NOT={ age=30 }
 			}
-			create_character = {
-				dynasty = none
-				religion = ROOT
-				culture = ROOT
-				random_traits = yes
-				female = yes
-				age = 16
+			create_character={
+				dynasty=none
+				religion=ROOT
+				culture=ROOT
+				random_traits=yes
+				female=yes
+				age=16
 			}
-			new_character = {
-				add_spouse = ROOT
+			new_character={
+				add_spouse=ROOT
 			}
-			break = yes
+			break=yes
 		}
-		if = {
-			limit = {
-				is_female = no
-				NOT = { age = 40 }
+		if={
+			limit={
+				is_female=no
+				NOT={ age=40 }
 			}
-			create_character = {
-				dynasty = none
-				religion = ROOT
-				culture = ROOT
-				random_traits = yes
-				female = yes
-				age = 20
+			create_character={
+				dynasty=none
+				religion=ROOT
+				culture=ROOT
+				random_traits=yes
+				female=yes
+				age=20
 			}
-			new_character = {
-				add_spouse = ROOT
+			new_character={
+				add_spouse=ROOT
 			}
-			break = yes
+			break=yes
 		}
-		if = {
-			limit = {
-				is_female = no
-				age = 40
+		if={
+			limit={
+				is_female=no
+				age=40
 			}
-			create_character = {
-				dynasty = none
-				religion = ROOT
-				culture = ROOT
-				random_traits = yes
-				female = yes
-				age = 30
+			create_character={
+				dynasty=none
+				religion=ROOT
+				culture=ROOT
+				random_traits=yes
+				female=yes
+				age=30
 			}
-			new_character = {
-				add_spouse = ROOT
+			new_character={
+				add_spouse=ROOT
 			}
-			break = yes
+			break=yes
 		}
 	}
 }
 
 ##Coalition War - War Fails
-character_event = {
-	id = MAN.31
+character_event={
+	id=MAN.31
 	
-	is_triggered_only = yes	
+	is_triggered_only=yes	
 	
-	hide_window = yes
+	hide_window=yes
 	
-	has_global_flag = coalition_start
-	
-	trigger = {
-		NOT = {
-			any_playable_ruler = {
-				has_character_flag = coalition_leader
+	trigger={
+		has_global_flag=coalition_start
+		NOT={
+			any_playable_ruler={
+				has_character_flag=coalition_leader
 			}
 		}
 	}
 
-	immediate = {
-		any_playable_ruler = {
-			limit = {
-				OR = {
-					has_character_flag = coalition_member
-					has_character_flag = neutral
+	immediate={
+		any_playable_ruler={
+			limit={
+				OR={
+					has_character_flag=coalition_member
+					has_character_flag=neutral
 				}
 			}
-			character_event = { id = RTK.130014 }
+			character_event={ id=RTK.15 }
 		}
 	}
 }
 
-#Setup Revolts and Jail
-character_event = {
-	id = MAN.32
+#MAN.32
+character_event={ # Clear Inner Court Claim
+	id=MAN.33
 	
-	is_triggered_only = yes
+	hide_window=yes
 	
-	hide_window = yes
+	trigger={
+		has_claim=c_empress
+	}
 	
-	only_playable = yes
-	has_character_flag = setup_flag
-	
-	immediate = {
-		clr_character_flag = setup_flag
-		if = {
-			limit = {
-				year = 184
-				NOT = { year = 185 }
-			}
-			character_event = { id = MAN.50 }
+	mean_time_to_happen={
+		months=120
+		modifier={
+			factor=0
+			has_claim=c_empress
 		}
+	}
+	
+	immediate={
+		remove_claim=c_empress
 	}
 }
 
-character_event = { # Clear Inner Court Claim
-	id = MAN.33
+character_event={ # Clear Imperial Guard Claim
+	id=MAN.34
 	
-	hide_window = yes
+	hide_window=yes
 	
-	trigger = {
-		has_claim = c_empress
+	trigger={
+		has_claim=c_guard
 	}
 	
-	mean_time_to_happen = {
-		months = 120
-		modifier = {
-			factor = 0
-			has_claim = c_empress
+	mean_time_to_happen={
+		months=120
+		modifier={
+			factor=0
+			has_claim=c_guard
 		}
 	}
 	
-	immediate = {
-		remove_claim = c_empress
-	}
-}
-
-character_event = { # Clear Yellow Guard Claim
-	id = MAN.34
-	
-	hide_window = yes
-	
-	trigger = {
-		has_claim = c_guard
-	}
-	
-	mean_time_to_happen = {
-		months = 120
-		modifier = {
-			factor = 0
-			has_claim = c_guard
-		}
-	}
-	
-	immediate = {
-		remove_claim = c_guard
+	immediate={
+		remove_claim=c_guard
 	}
 }
 
 #Combat Traits Initialization
-character_event = {
-	id = MAN.35
+character_event={
+	id=MAN.35
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	hide_window = yes
+	hide_window=yes
 	
-	min_age = 15
+	min_age=15
 	
-	trigger = {
-		NOR = {
-			trait = duel_master_warrior
-			trait = duel_skilled_warrior
-			trait = duel_trained_warrior
-			trait = duel_poor_warrior
+	trigger={
+		NOR={
+			trait=duel_master_warrior
+			trait=duel_skilled_warrior
+			trait=duel_trained_warrior
+			trait=duel_poor_warrior
 		}
-		NOT = { has_character_flag = combat_init_flag }
+		NOT={ has_character_flag=combat_init_flag }
 	}
 	
-	weight_multiplier = {
-		days = 1
-		modifier = {
-			factor = 5
-			NOT = { has_character_flag = combat_init_flag }
-			is_adult = yes
+	weight_multiplier={
+		days=1
+		modifier={
+			factor=5
+			NOT={ has_character_flag=combat_init_flag }
+			is_adult=yes
 		}
 	}
 	
-	immediate = {
-		set_character_flag = combat_init_flag
-		random_list = {
-			5 = { add_trait = duel_skilled_warrior }
-			30 = { add_trait = duel_trained_warrior }
-			55 = { add_trait = duel_poor_warrior }
-			10 = {
-				modifier = {
-					factor = 5
-					NOR = {
-						trait = misguided_warrior
-						trait = tough_soldier
-						trait = skilled_tactician
-						trait = brilliant_strategist
-						trait = duelist
-						trait = strong
-						trait = robust
+	immediate={
+		set_character_flag=combat_init_flag
+		random_list={
+			5={ add_trait=duel_skilled_warrior }
+			30={ add_trait=duel_trained_warrior }
+			55={ add_trait=duel_poor_warrior }
+			10={
+				modifier={
+					factor=5
+					NOR={
+						trait=misguided_warrior
+						trait=tough_soldier
+						trait=skilled_tactician
+						trait=brilliant_strategist
+						trait=duelist
+						trait=strong
+						trait=robust
 					}
 				}
-				modifier = {
-					factor = 5
-					is_female = yes
-					NOR = {
-						culture_group = yue
-						culture_group = tibetan
-						culture_group = man
+				modifier={
+					factor=5
+					is_female=yes
+					NOR={
+						culture_group=yue
+						culture_group=tibetan_group
+						culture_group=man
 					}
 				}
 			}
@@ -2732,697 +3015,825 @@ character_event = {
 	}
 }
 
-character_event = { # Remove Duel Flags
-	id = MAN.36
+character_event={ # Remove Duel Flags
+	id=MAN.36
 	
-	hide_window = yes
+	hide_window=yes
 	
-	trigger = {
-		is_adult = yes
-		OR = {
-			is_female = no
-			AND = {
-				is_female = yes
-				OR = {
-					culture_group = mongol
-					culture_group = yue
-					culture_group = tibetan
-					culture_group = man
+	trigger={
+		is_adult=yes
+		OR={
+			is_female=no
+			AND={
+				is_female=yes
+				OR={
+					culture_group=mongol
+					culture_group=yue
+					culture_group=tibetan_group
+					culture_group=man
 				}
 			}
 		}
-		has_character_flag = flag_battlefield_duel
+		has_character_flag=flag_battlefield_duel
 	}
 
-	mean_time_to_happen = {
-		months = 120
-		modifier = {
-			factor = 0
-			has_character_flag = flag_battlefield_duel
+	mean_time_to_happen={
+		months=120
+		modifier={
+			factor=0
+			has_character_flag=flag_battlefield_duel
 		}
 	}
 	
-	immediate = {
-		clr_character_flag = flag_battlefield_duel
+	immediate={
+		clr_character_flag=flag_battlefield_duel
 	}
 }
 
 ### Empress Eunuchs ###
-character_event = {
-	id = MAN.37
+character_event={
+	id=MAN.37
 	
-	hide_window = yes
+	hide_window=yes
 	
-	trigger = {
-		has_landed_title = c_empress
-		NOT = { has_landed_title = k_confucian }
-		NOT = { demesne_size = 1 }
-		any_courtier = {
-			is_adult = yes
-			is_female = no
-			dynasty = none
-			NOT = { trait = eunuch }
+	trigger={
+		has_landed_title=c_empress
+		NOT={ has_landed_title=k_confucian }
+		NOT={ demesne_size=1 }
+		any_courtier={
+			is_adult=yes
+			is_female=no
+			dynasty=none
+			NOT={ trait=eunuch }
 		}
 	}
 	
-	immediate = {
-		liege = {
-			ROOT = {
-				any_courtier = {
-					limit = {
-						is_adult = yes
-						is_female = no
-						NOT = { dynasty = none }
-						NOT = { trait = eunuch }
-					}
-					move_character = PREVPREV
-				}
+	mean_time_to_happen={
+		months=120
+		modifier={
+			factor=0
+			has_landed_title=c_empress
+			NOT={ has_landed_title=k_confucian }
+			NOT={ demesne_size=1 }
+			any_courtier={
+				is_adult=yes
+				is_female=no
+				dynasty=none
+				NOT={ trait=eunuch }
 			}
 		}
-		any_courtier = {
-			limit = {
-				is_ruler = no
-				is_adult = yes
-				is_female = no
-				dynasty = none
-				NOT = { trait = eunuch }
+	}
+	
+	immediate={
+		liege={
+			save_event_target_as=target_emperor
+		}
+		any_courtier={
+			limit={
+				is_adult=yes
+				is_female=no
+				NOT={ dynasty=none }
+				NOT={ trait=eunuch }
 			}
-			add_trait = eunuch
+			move_character=event_target:target_emperor
+		}
+		any_courtier={
+			limit={
+				is_ruler=no
+				is_adult=yes
+				is_female=no
+				dynasty=none
+				NOT={ trait=eunuch }
+			}
+			add_trait=eunuch
 		}
 	}
 }
 
-### Empress Set ###
-character_event = {
-	id = MAN.38
+#Handle Improper Empress Holder
+character_event={
+	id=MAN.38
 	
-	hide_window = yes
+	is_triggered_only=yes
 	
-	only_rulers = yes
+	hide_window=yes
 	
-	trigger = {
-		has_landed_title = c_empress
-		NOT = { has_landed_title = k_confucian }
-		OR = {
-			AND = {
-				is_female = no
-				k_confucian = {
-					holder_scope = {
-						is_female = no
+	trigger={
+		k_confucian={ has_holder=yes }
+		c_empress={ has_holder=yes }
+		has_landed_title=c_empress
+		OR={
+			AND={
+				k_confucian={
+					holder_scope={
+						is_female=no
 					}
 				}
+				c_empress={
+					holder_scope={
+						is_female=no
+					}
+				}
+				NOT={ trait=homosexual }
 			}
-			AND = {
-				is_female = yes
-				k_confucian = {
-					holder_scope = {
-						is_female = yes
+			AND={
+				k_confucian={
+					holder_scope={
+						is_female=yes
 					}
 				}
-			}
-		}
-	}
-
-	mean_time_to_happen = {
-		months = 120
-		modifier = {
-			factor = 0
-			has_landed_title = c_empress
-			NOT = { has_landed_title = k_confucian }
-			OR = {
-				AND = {
-					is_female = no
-					k_confucian = {
-						holder_scope = {
-							is_female = no
-						}
+				c_empress={
+					holder_scope={
+						is_female=yes
 					}
 				}
-				AND = {
-					is_female = yes
-					k_confucian = {
-						holder_scope = {
-							is_female = yes
-						}
-					}
-				}
+				NOT={ trait=homosexual }
 			}
 		}
 	}
 	
-	immediate = {
-		k_confucian = {
-			holder_scope = {
-				spouse = {
-					c_empress = {
-						grant_title_no_opinion = PREV
+	weight_multiplier={
+		days=1
+	}
+	
+	immediate={
+		k_confucian={
+			holder_scope={
+				if={
+					limit={
+						is_female=no
+						mother={
+							is_alive=yes
+							is_landed=no
+						}
 					}
-					break = yes
+					mother={
+						c_empress={
+							grant_title_no_opinion=PREV
+						}
+						character_event={ id=MAN.50 }
+						break=yes
+					}
 				}
-				any_dynasty_member = {
-					limit = {
-						OR = {
-							AND = {
-								is_female = yes
-								is_adult = yes
-								PREV = { is_female = no }
+				if={
+					limit={
+						is_female=no
+						father={
+							mother={
+								is_alive=yes
+								is_landed=no
 							}
-							AND = {
-								is_female = no
-								is_adult = yes
-								PREV = { is_female = yes }
-							}
 						}
 					}
-					c_empress = {
-						grant_title_no_opinion = PREV
+					father={
+						mother={
+							c_empress={
+								grant_title_no_opinion=PREV
+							}
+							character_event={ id=MAN.50 }
+							break=yes
+						}
 					}
-					break = yes
+				}
+				if={
+					limit={
+						is_female=yes
+						father={
+							is_alive=yes
+							is_landed=no
+						}
+					}
+					father={
+						c_empress={
+							grant_title_no_opinion=PREV
+						}
+						character_event={ id=MAN.50 }
+						break=yes
+					}
+				}
+				random_close_relative={
+					limit={
+						OR={
+							AND={
+								is_female=yes
+								is_adult=yes
+								PREV={ is_female=no }
+							}
+							AND={
+								is_female=no
+								is_adult=yes
+								PREV={ is_female=yes }
+							}
+						}
+						is_landed=no
+					}
+					c_empress={
+						grant_title_no_opinion=PREV
+					}
+					character_event={ id=MAN.50 }
+					break=yes
+				}
+				random_dynasty_member={
+					limit={
+						OR={
+							AND={
+								is_female=yes
+								is_adult=yes
+								PREV={ is_female=no }
+							}
+							AND={
+								is_female=no
+								is_adult=yes
+								PREV={ is_female=yes }
+							}
+						}
+						is_landed=no
+					}
+					c_empress={
+						grant_title_no_opinion=PREV
+					}
+					character_event={ id=MAN.50 }
+					break=yes
+				}
+				random_realm_character={
+					limit={
+						OR={
+							AND={
+								is_female=yes
+								is_adult=yes
+								PREV={ is_female=no }
+							}
+							AND={
+								is_female=no
+								is_adult=yes
+								PREV={ is_female=yes }
+							}
+						}
+						is_landed=no
+					}
+					c_empress={
+						grant_title_no_opinion=PREV
+					}
+					character_event={ id=MAN.50 }
+					break=yes
 				}
 			}
 		}
 	}
 }
 
-character_event = { # Stop Illegal War
-	id = MAN.39	
-	is_triggered_only = yes
+character_event={ # Stop Illegal War
+	id=MAN.39
 	
-	hide_window = yes
+	is_triggered_only=yes
 	
-	war = yes
+	hide_window=yes
 	
-	trigger = {
-		has_landed_title = k_confucian
-		is_landed = no
+	war=yes
+	
+	trigger={
+		has_landed_title=k_confucian
+		is_landed=no
 	}
 	
-	weight_multiplier = {
-		days = 1
+	weight_multiplier={
+		days=1
 	}
 	
-	immediate = {
-		end_war = invalid
+	immediate={
+		end_war=invalid
 	}
 }
 
-character_event = { # Remove founded_empire_flag
-	id = MAN.40
+character_event={ # Remove founded_empire_flag
+	id=MAN.40
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	hide_window = yes
+	hide_window=yes
 	
-	ai = no
+	ai=no
 	
-	trigger = {
-		has_global_flag = founded_empire_flag
+	trigger={
+		has_global_flag=founded_empire_flag
 	}
 	
-	weight_multiplier = {
-		days = 1
-		modifier = {
-			factor = 0.2
+	weight_multiplier={
+		days=1
+		modifier={
+			factor=0.2
 		}
 	}
 	
-	immediate = {
-		clr_global_flag = founded_empire_flag
+	immediate={
+		clr_global_flag=founded_empire_flag
 	}
 }
 
 #Handle Consorts
-character_event = {
-	id = MAN.41
-	desc = EVTDESC_MAN.41
-	title = EVTTITLE_MAN.41
-	picture = GFX_evt_sultan
+character_event={
+	id=MAN.41
+	desc=EVTDESC_MAN.41
+	title=EVTTITLE_MAN.41
+	picture=GFX_evt_sultan
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	immediate = {
-		spouse = {
-			save_event_target_as = target_spouse
-		}
-		if = {
-			limit = { c_eunuch = { has_holder = yes } }
-			c_eunuch = {
-				holder_scope = {
-					set_defacto_liege = k_confucian
-					save_event_target_as = target_eunuch
-				}
-			}
-			any_courtier = {
-				limit = {
-					trait = eunuch
-					is_ruler = no
-				}
-				move_character = event_target:target_eunuch
-			}
-		}
-		any_consort = {
-			add_trait = inner_court
-		}
-		any_courtier = {
-			limit = {
-				OR = {
-					trait = inner_court
-					trait = eunuch
-				}
-				is_ruler = no
-			}
-			move_character = event_target:target_spouse
-		}
-	}
-	
-	option = {
-		name = OK
-	}
-}
-
-character_event = { # Add Petition
-	id = MAN.42
-	
-	is_triggered_only = yes
-	
-	hide_window = yes
-	
-	only_playable = yes
-	
-	trigger = {
-		is_feudal = yes
-	}
-	
-	immediate = {
-		random_list = {
-			40 = {
-				# Do Nothing
-			}
-			40 = {
-				character_event = { id = MAN.43	}
-			}
-			15 = {
-				character_event = { id = MAN.43	}
-				character_event = { id = MAN.43	}
-			}
-			5 = {
-				character_event = { id = MAN.43	}
-				character_event = { id = MAN.43	}
-				character_event = { id = MAN.43	}
-			}
-		}
-	}
-}
-
-character_event = {
-	id = MAN.43
-	
-	is_triggered_only = yes
-	
-	hide_window = yes
-	
-	immediate = {
-		random_demesne_province = {
-			save_event_target_as = target_province
-			if = {
-				limit = { has_province_modifier = petition_25 }
-				add_province_modifier = { name = peasant_crisis duration = 900 }
-				holder_scope = { character_event = { id = SAN.40 } }
-				break = yes
-			}
-			if = {
-				limit = {
-					NOR = {
-						has_province_modifier = petition_1
-						has_province_modifier = petition_2
-						has_province_modifier = petition_3
-						has_province_modifier = petition_4
-						has_province_modifier = petition_5
-						has_province_modifier = petition_6
-						has_province_modifier = petition_7
-						has_province_modifier = petition_8
-						has_province_modifier = petition_9
-						has_province_modifier = petition_10
-						has_province_modifier = petition_11
-						has_province_modifier = petition_12
-						has_province_modifier = petition_13
-						has_province_modifier = petition_14
-						has_province_modifier = petition_15
-						has_province_modifier = petition_16
-						has_province_modifier = petition_17
-						has_province_modifier = petition_18
-						has_province_modifier = petition_19
-						has_province_modifier = petition_20
-						has_province_modifier = petition_21
-						has_province_modifier = petition_22
-						has_province_modifier = petition_23
-						has_province_modifier = petition_24
-						has_province_modifier = petition_25
+	immediate={
+		if={
+			limit={
+				c_eunuch={
+					has_holder=yes
+					holder_scope={
+						liege={
+							NOT={ has_landed_title=k_confucian }
+						}
 					}
 				}
-				add_province_modifier = { name = petition_1 duration = 3600 }
-				break = yes
+				
 			}
-			if = {
-				limit = { has_province_modifier = petition_1 }
-				remove_province_modifier = petition_1
-				add_province_modifier = { name = petition_2 duration = 3600 }
-				break = yes
+			c_eunuch={
+				holder_scope={
+					set_defacto_liege=k_confucian
+					save_event_target_as=target_eunuch
+				}
 			}
-			if = {
-				limit = { has_province_modifier = petition_2 }
-				remove_province_modifier = petition_2
-				add_province_modifier = { name = petition_3 duration = 3600 }
-				break = yes
+			any_courtier={
+				limit={
+					trait=eunuch
+					is_ruler=no
+				}
+				move_character=event_target:target_eunuch
 			}
-			if = {
-				limit = { has_province_modifier = petition_3 }
-				remove_province_modifier = petition_3
-				add_province_modifier = { name = petition_4 duration = 3600 }
-				break = yes
+			c_empress={
+				holder_scope={
+					any_courtier={
+						limit={
+							trait=eunuch
+							is_ruler=no
+						}
+						move_character=event_target:target_eunuch
+					}
+				}
 			}
-			if = {
-				limit = { has_province_modifier = petition_4 }
-				remove_province_modifier = petition_4
-				add_province_modifier = { name = petition_5 duration = 3600 }
-				break = yes
+		}
+		any_consort={
+			add_trait=inner_court
+		}
+		character_event={ id=MAN.50 }
+	}
+	
+	option={
+		name=OK
+	}
+}
+
+character_event={ # Add Petition
+	id=MAN.42
+	
+	is_triggered_only=yes
+	
+	hide_window=yes
+	
+	only_playable=yes
+	
+	trigger={
+		is_feudal=yes
+	}
+	
+	immediate={
+		random_list={
+			40={
+				# Do Nothing
 			}
-			if = {
-				limit = { has_province_modifier = petition_5 }
-				remove_province_modifier = petition_5
-				add_province_modifier = { name = petition_6 duration = 3600 }
-				break = yes
+			40={
+				character_event={ id=MAN.43	}
 			}
-			if = {
-				limit = { has_province_modifier = petition_6 }
-				remove_province_modifier = petition_6
-				add_province_modifier = { name = petition_7 duration = 3600 }
-				break = yes
+			15={
+				character_event={ id=MAN.43	}
+				character_event={ id=MAN.43	}
 			}
-			if = {
-				limit = { has_province_modifier = petition_7 }
-				remove_province_modifier = petition_7
-				add_province_modifier = { name = petition_8 duration = 3600 }
-				break = yes
+			5={
+				character_event={ id=MAN.43	}
+				character_event={ id=MAN.43	}
+				character_event={ id=MAN.43	}
 			}
-			if = {
-				limit = { has_province_modifier = petition_8 }
-				remove_province_modifier = petition_8
-				add_province_modifier = { name = petition_9 duration = 3600 }
-				break = yes
+		}
+	}
+}
+
+character_event={
+	id=MAN.43
+	
+	is_triggered_only=yes
+	
+	hide_window=yes
+	
+	immediate={
+		random_demesne_province={
+			save_event_target_as=target_province
+			if={
+				limit={ has_province_modifier=petition_25 }
+				add_province_modifier={ name=peasant_crisis duration=900 }
+				holder_scope={ character_event={ id=SAN.40 } }
+				break=yes
 			}
-			if = {
-				limit = { has_province_modifier = petition_9 }
-				remove_province_modifier = petition_9
-				add_province_modifier = { name = petition_10 duration = 3600 }
-				holder_scope = { character_event = { id = SAN.40 } }
-				break = yes
+			if={
+				limit={
+					NOR={
+						has_province_modifier=petition_1
+						has_province_modifier=petition_2
+						has_province_modifier=petition_3
+						has_province_modifier=petition_4
+						has_province_modifier=petition_5
+						has_province_modifier=petition_6
+						has_province_modifier=petition_7
+						has_province_modifier=petition_8
+						has_province_modifier=petition_9
+						has_province_modifier=petition_10
+						has_province_modifier=petition_11
+						has_province_modifier=petition_12
+						has_province_modifier=petition_13
+						has_province_modifier=petition_14
+						has_province_modifier=petition_15
+						has_province_modifier=petition_16
+						has_province_modifier=petition_17
+						has_province_modifier=petition_18
+						has_province_modifier=petition_19
+						has_province_modifier=petition_20
+						has_province_modifier=petition_21
+						has_province_modifier=petition_22
+						has_province_modifier=petition_23
+						has_province_modifier=petition_24
+						has_province_modifier=petition_25
+					}
+				}
+				add_province_modifier={ name=petition_1 duration=3600 }
+				break=yes
 			}
-			if = {
-				limit = { has_province_modifier = petition_10 }
-				remove_province_modifier = petition_10
-				add_province_modifier = { name = petition_11 duration = 3600 }
-				break = yes
+			if={
+				limit={ has_province_modifier=petition_1 }
+				remove_province_modifier=petition_1
+				add_province_modifier={ name=petition_2 duration=3600 }
+				break=yes
 			}
-			if = {
-				limit = { has_province_modifier = petition_11 }
-				remove_province_modifier = petition_11
-				add_province_modifier = { name = petition_12 duration = 3600 }
-				break = yes
+			if={
+				limit={ has_province_modifier=petition_2 }
+				remove_province_modifier=petition_2
+				add_province_modifier={ name=petition_3 duration=3600 }
+				break=yes
 			}
-			if = {
-				limit = { has_province_modifier = petition_12 }
-				remove_province_modifier = petition_12
-				add_province_modifier = { name = petition_13 duration = 3600 }
-				break = yes
+			if={
+				limit={ has_province_modifier=petition_3 }
+				remove_province_modifier=petition_3
+				add_province_modifier={ name=petition_4 duration=3600 }
+				break=yes
 			}
-			if = {
-				limit = { has_province_modifier = petition_13 }
-				remove_province_modifier = petition_13
-				add_province_modifier = { name = petition_14 duration = 3600 }
-				break = yes
+			if={
+				limit={ has_province_modifier=petition_4 }
+				remove_province_modifier=petition_4
+				add_province_modifier={ name=petition_5 duration=3600 }
+				break=yes
 			}
-			if = {
-				limit = { has_province_modifier = petition_14 }
-				remove_province_modifier = petition_14
-				add_province_modifier = { name = petition_15 duration = 3600 }
-				holder_scope = { character_event = { id = SAN.40 } }
-				break = yes
+			if={
+				limit={ has_province_modifier=petition_5 }
+				remove_province_modifier=petition_5
+				add_province_modifier={ name=petition_6 duration=3600 }
+				break=yes
 			}
-			if = {
-				limit = { has_province_modifier = petition_15 }
-				remove_province_modifier = petition_15
-				add_province_modifier = { name = petition_16 duration = 3600 }
-				break = yes
+			if={
+				limit={ has_province_modifier=petition_6 }
+				remove_province_modifier=petition_6
+				add_province_modifier={ name=petition_7 duration=3600 }
+				break=yes
 			}
-			if = {
-				limit = { has_province_modifier = petition_16 }
-				remove_province_modifier = petition_16
-				add_province_modifier = { name = petition_17 duration = 3600 }
-				break = yes
+			if={
+				limit={ has_province_modifier=petition_7 }
+				remove_province_modifier=petition_7
+				add_province_modifier={ name=petition_8 duration=3600 }
+				break=yes
 			}
-			if = {
-				limit = { has_province_modifier = petition_17 }
-				remove_province_modifier = petition_17
-				add_province_modifier = { name = petition_18 duration = 3600 }
-				break = yes
+			if={
+				limit={ has_province_modifier=petition_8 }
+				remove_province_modifier=petition_8
+				add_province_modifier={ name=petition_9 duration=3600 }
+				break=yes
 			}
-			if = {
-				limit = { has_province_modifier = petition_18 }
-				remove_province_modifier = petition_18
-				add_province_modifier = { name = petition_19 duration = 3600 }
-				break = yes
+			if={
+				limit={ has_province_modifier=petition_9 }
+				remove_province_modifier=petition_9
+				add_province_modifier={ name=petition_10 duration=3600 }
+				holder_scope={ character_event={ id=SAN.40 } }
+				break=yes
 			}
-			if = {
-				limit = { has_province_modifier = petition_19 }
-				remove_province_modifier = petition_19
-				add_province_modifier = { name = petition_20 duration = 3600 }
-				holder_scope = { character_event = { id = SAN.40 } }
-				break = yes
+			if={
+				limit={ has_province_modifier=petition_10 }
+				remove_province_modifier=petition_10
+				add_province_modifier={ name=petition_11 duration=3600 }
+				break=yes
 			}
-			if = {
-				limit = { has_province_modifier = petition_20 }
-				remove_province_modifier = petition_20
-				add_province_modifier = { name = petition_21 duration = 3600 }
-				break = yes
+			if={
+				limit={ has_province_modifier=petition_11 }
+				remove_province_modifier=petition_11
+				add_province_modifier={ name=petition_12 duration=3600 }
+				break=yes
 			}
-			if = {
-				limit = { has_province_modifier = petition_21 }
-				remove_province_modifier = petition_21
-				add_province_modifier = { name = petition_22 duration = 3600 }
-				break = yes
+			if={
+				limit={ has_province_modifier=petition_12 }
+				remove_province_modifier=petition_12
+				add_province_modifier={ name=petition_13 duration=3600 }
+				break=yes
 			}
-			if = {
-				limit = { has_province_modifier = petition_22 }
-				remove_province_modifier = petition_22
-				add_province_modifier = { name = petition_23 duration = 3600 }
-				break = yes
+			if={
+				limit={ has_province_modifier=petition_13 }
+				remove_province_modifier=petition_13
+				add_province_modifier={ name=petition_14 duration=3600 }
+				break=yes
 			}
-			if = {
-				limit = { has_province_modifier = petition_23 }
-				remove_province_modifier = petition_23
-				add_province_modifier = { name = petition_24 duration = 3600 }
-				break = yes
+			if={
+				limit={ has_province_modifier=petition_14 }
+				remove_province_modifier=petition_14
+				add_province_modifier={ name=petition_15 duration=3600 }
+				holder_scope={ character_event={ id=SAN.40 } }
+				break=yes
 			}
-			if = {
-				limit = { has_province_modifier = petition_24 }
-				remove_province_modifier = petition_24
-				add_province_modifier = { name = petition_25 duration = 3600 }
-				break = yes
+			if={
+				limit={ has_province_modifier=petition_15 }
+				remove_province_modifier=petition_15
+				add_province_modifier={ name=petition_16 duration=3600 }
+				break=yes
+			}
+			if={
+				limit={ has_province_modifier=petition_16 }
+				remove_province_modifier=petition_16
+				add_province_modifier={ name=petition_17 duration=3600 }
+				break=yes
+			}
+			if={
+				limit={ has_province_modifier=petition_17 }
+				remove_province_modifier=petition_17
+				add_province_modifier={ name=petition_18 duration=3600 }
+				break=yes
+			}
+			if={
+				limit={ has_province_modifier=petition_18 }
+				remove_province_modifier=petition_18
+				add_province_modifier={ name=petition_19 duration=3600 }
+				break=yes
+			}
+			if={
+				limit={ has_province_modifier=petition_19 }
+				remove_province_modifier=petition_19
+				add_province_modifier={ name=petition_20 duration=3600 }
+				holder_scope={ character_event={ id=SAN.40 } }
+				break=yes
+			}
+			if={
+				limit={ has_province_modifier=petition_20 }
+				remove_province_modifier=petition_20
+				add_province_modifier={ name=petition_21 duration=3600 }
+				break=yes
+			}
+			if={
+				limit={ has_province_modifier=petition_21 }
+				remove_province_modifier=petition_21
+				add_province_modifier={ name=petition_22 duration=3600 }
+				break=yes
+			}
+			if={
+				limit={ has_province_modifier=petition_22 }
+				remove_province_modifier=petition_22
+				add_province_modifier={ name=petition_23 duration=3600 }
+				break=yes
+			}
+			if={
+				limit={ has_province_modifier=petition_23 }
+				remove_province_modifier=petition_23
+				add_province_modifier={ name=petition_24 duration=3600 }
+				break=yes
+			}
+			if={
+				limit={ has_province_modifier=petition_24 }
+				remove_province_modifier=petition_24
+				add_province_modifier={ name=petition_25 duration=3600 }
+				break=yes
 			}
 		}
 	}
 }
 
 #Destroy Imperial Court
-character_event = {
-	id = MAN.44
+character_event={
+	id=MAN.44
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	hide_window = yes
+	hide_window=yes
 
-	immediate = {
-		k_confucian = {
-			activate_title = { title = THIS status = no }
-			unsafe_destroy_landed_title = THIS
+	immediate={
+		k_confucian={
+			activate_title={ title=THIS status=no }
+			unsafe_destroy_landed_title=THIS
 		}
-		c_penglai = {
-			holder_scope = {
-				c_guard = {
-					grant_title_no_opinion = PREV
+		c_penglai={
+			holder_scope={
+				c_guard={
+					grant_title_no_opinion=PREV
 				}
-				c_empress = {
-					grant_title_no_opinion = PREV
+				c_empress={
+					grant_title_no_opinion=PREV
 				}
-				c_eunuch = {
-					grant_title_no_opinion = PREV
+				c_eunuch={
+					grant_title_no_opinion=PREV
 				}
 			}
 		}
 	}
 }
 
-character_event = { # Border Tensions
-	id = MAN.45
+character_event={ # Border Tensions
+	id=MAN.45
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	hide_window = yes
+	hide_window=yes
 	
-	only_playable = yes
+	only_playable=yes
 	
-	trigger = {
-		OR = {
-			tier = EMPEROR
-			tier = KING
-			independent = yes
+	trigger={
+		OR={
+			tier=EMPEROR
+			tier=KING
+			independent=yes
 		}
-		capital_scope = {
-			region = world_china
+		capital_scope={
+			region=world_china
 		}
 	}
 	
-	immediate = {
-		random_independent_ruler = {
-			limit = {
-				is_landed = yes
-				capital_scope = {
-					region = world_china
+	immediate={
+		random_independent_ruler={
+			limit={
+				is_landed=yes
+				capital_scope={
+					region=world_china
 				}
-				NOT = { character = ROOT }
-				any_realm_province = {
-					any_neighbor_province = {
-						any_province_lord = {
-							OR = {
-								character = ROOT
-								any_liege = { character = ROOT }
+				NOT={ character=ROOT }
+				any_realm_province={
+					any_neighbor_province={
+						any_province_lord={
+							OR={
+								character=ROOT
+								any_liege={ character=ROOT }
 							}
 						}
 					}
 				}
 			}
-			random = {
-				chance = 50
-				modifier = {
-					factor = 1.2
-					year = 194
+			random={
+				chance=50
+				modifier={
+					factor=1.2
+					year=194
 				}
-				modifier = {
-					factor = 1.5
-					year = 220
+				modifier={
+					factor=1.5
+					year=220
 				}
-				modifier = {
-					factor = 1.5
-					e_china = { has_holder = no }
+				modifier={
+					factor=1.5
+					e_china={ has_holder=no }
 				}
-				add_claim = ROOT
-				opinion = {
-					who = ROOT
-					modifier = opinion_border_tensions
+				modifier={
+					factor=0.5
+					is_vassal_or_below = ROOT
 				}
-				ROOT = {
-					add_claim = PREV
-					opinion = {
-						who = PREV
-						modifier = opinion_border_tensions
+				add_claim=ROOT
+				opinion={
+					who=ROOT
+					modifier=opinion_border_tensions
+				}
+				ROOT={
+					add_claim=PREV
+					opinion={
+						who=PREV
+						modifier=opinion_border_tensions
 					}
 				}
 			}
-			break = yes
+			break=yes
 		}
 	}
 }
 
-#46-49 Unused
+character_event={ # Destroy Heaven's Mandate
+	id=MAN.46
 
-character_event = { # Remove initial claims
-	id = MAN.47
-
-	is_triggered_only = yes
-
-	hide_window = yes
+	hide_window=yes
 	
-	ai = no
-
-	trigger = {
-		NOT = { has_global_flag = added_claims_flag }
+	only_playable=yes
+	
+	trigger={
+		k_confucian={
+			has_holder=yes
+			holder_scope={
+				primary_title={
+					title=k_confucian
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen={
+		days=1
 	}
 
-	immediate = {
-		any_title = {
-			any_claimant = {
-				limit = {
-					NOR = {
-						liege = {
-							is_primary_war_attacker = yes
-							any_war = {
-								using_cb = other_claim
+	immediate={
+		k_confucian={
+			holder_scope={
+				character_event={
+					id=MAN.44
+				}
+			}
+		}
+	}
+}
+
+character_event={ # Remove initial claims
+	id=MAN.47
+
+	is_triggered_only=yes
+
+	hide_window=yes
+	
+	ai=no
+
+	trigger={
+		has_game_started=yes
+		NOR={
+			has_global_flag=added_claims_flag
+			has_global_flag=removed_claims_flag
+		}
+	}
+
+	immediate={
+		any_title={
+			any_claimant={
+				limit={
+					NOR={
+						liege={
+							is_primary_war_attacker=yes
+							any_war={
+								using_cb=other_claim
 							}
 						}
-						AND = {
-							is_primary_war_attacker = yes
-							OR = {
-								any_war = {
-									using_cb = claim_all
+						AND={
+							is_primary_war_attacker=yes
+							OR={
+								any_war={
+									using_cb=claim_all
 								}
-								any_war = {
-									using_cb = claim
+								any_war={
+									using_cb=claim
 								}
 							}
 						}
 					}
 				}
-				remove_claim = PREV
+				remove_claim=PREV
 			}
 		}
+		set_global_flag=removed_claims_flag
 	}
 }
 
-character_event = { # Set Flag
-	id = MAN.48
+character_event={ # Set Claims
+	id=MAN.48
 
-	is_triggered_only = yes
+	is_triggered_only=yes
 
-	hide_window = yes
+	hide_window=yes
 	
-	ai = no
+	ai=no
 
-	trigger = {
-		has_game_started = yes
-		NOT = { has_global_flag = removed_claims_flag }
+	trigger={
+		has_game_started=yes
+		has_global_flag=removed_claims_flag
+		NOT={ has_global_flag=added_claims_flag }
 	}
 
-	immediate = {
-		set_global_flag = removed_claims_flag
-		character_event = { id = MAN.49 days = 1 }
-	}
-}
+	immediate={
 
-character_event = { # Set Claims
-	id = MAN.49
-
-	is_triggered_only = yes
-
-	hide_window = yes
-	
-	ai = no
-
-	trigger = {
-		NOT = { has_global_flag = added_claims_flag }
-	}
-
-	immediate = {
 		#Balgi
-		if = {
-			limit = {
-				year = 179
-				NOT = { year = 198 }
+		if={
+			limit={
+				year=179
+				NOT={ year=198 }
 			}
-			k_goguryeo = {
-				holder_scope = {
-					any_courtier = {
-						limit = { character = 2214 }
+			k_goguryeo={
+				holder_scope={
+					random_courtier={
+						limit={ character=2214 }
 						add_claim=k_goguryeo
 					}
 				}
@@ -3430,46 +3841,69 @@ character_event = { # Set Claims
 		}
 		
 		#Gongsun Zan
-		if = {
-			limit = { 
-				year = 184
-				NOT = { year = 194 }
+		if={
+			limit={ 
+				year=184
+				NOT={ year=194 }
+				d_gongsun={
+					holder_scope={
+						character=900
+					}
+				}
 			}
-			d_gongsun = {
-				holder_scope = {
+			d_gongsun={
+				holder_scope={
 					add_claim=k_you
 				}
 			}
 		}
 		
-		#Lu Jun
-		if = {
-			limit = {
-				year = 190
-				NOT = { year = 191 }
-				c_yutai = {
-					holder_scope = {
-						character = 3319
+		#Yufuluo
+		if={
+			limit={ 
+				year=188
+				NOT={ year=196 }
+				c_wei={
+					holder_scope={
+						character=1501
 					}
 				}
 			}
-			c_yutai = {
-				holder_scope = {
+			c_wei={
+				holder_scope={
+					add_claim=k_xiongnu
+				}
+			}
+		}
+		
+		#Lu Jun
+		if={
+			limit={
+				year=190
+				NOT={ year=191 }
+				c_yutai={
+					holder_scope={
+						character=3319
+					}
+				}
+			}
+			c_yutai={
+				holder_scope={
 					add_claim=d_jiujiang
 				}
 			}
 		}
 		
 		#Zhou Ang
-		if = {
-			limit = {
-				year = 190
-				NOT = { year = 191 }
+		if={
+			limit={
+				year=190
+				NOT={ year=191 }
 			}
-			d_danyang = {
-				holder_scope = {
-					any_courtier = {
-						limit = { character = 3378 }
+			d_danyang={
+				holder_scope={
+					random_courtier={
+						limit={ character=3378 }
 						add_claim=d_jiujiang
 					}
 				}
@@ -3477,15 +3911,15 @@ character_event = { # Set Claims
 		}
 		
 		#Liu Mao
-		if = {
-			limit = {
-				year = 190
-				NOT = { year = 191 }
+		if={
+			limit={
+				year=190
+				NOT={ year=191 }
 			}
-			d_k_langye = {
-				holder_scope = {
-					any_courtier = {
-						limit = { character = 3391 }
+			d_k_langye={
+				holder_scope={
+					random_courtier={
+						limit={ character=3391 }
 						add_claim=d_jiujiang
 					}
 				}
@@ -3493,34 +3927,58 @@ character_event = { # Set Claims
 		}
 		
 		#Yuan Shao
-		if = {
-			limit = {
-				year = 190
-				NOT = { year = 191 }
-				d_bohai = {
-					holder_scope = {
-						character = 700
+		if={
+			limit={
+				year=190
+				NOT={ year=191 }
+				d_bohai={
+					holder_scope={
+						character=700
 					}
 				}
 			}
-			d_bohai = {
-				holder_scope = {
+			d_bohai={
+				holder_scope={
 					add_claim=k_ji
 					add_claim=c_ye
 				}
 			}
 		}
 		
-		#Zang Hong
-		if = {
-			limit = { 
-				year = 192
-				NOT = { year = 196 }
+		#Gongsun Zan
+		if={
+			limit={
+				OR={
+					AND={
+						year=191
+						month=6
+					}
+					year=192
+				}
+				NOT={ year=199 }
+				e_gongsun={
+					holder_scope={
+						character=900
+					}
+				}
 			}
-			c_yan = {
-				holder_scope = {
-					any_courtier = {
-						limit = { character = 3742 }
+			e_gongsun={
+				holder_scope={
+					add_claim=k_ji
+				}
+			}
+		}
+		
+		#Zang Hong
+		if={
+			limit={ 
+				year=192
+				NOT={ year=194 }
+			}
+			c_yan={
+				holder_scope={
+					random_courtier={
+						limit={ character=3742 }
 						add_claim=d_dong
 					}
 				}
@@ -3528,36 +3986,36 @@ character_event = { # Set Claims
 		}
 		
 		#Chen Yu
-		if = {
-			limit = { 
-				year = 193
-				NOT = { year = 196 }
-				c_hefei = {
-					holder_scope = {
-						character = 167
+		if={
+			limit={ 
+				year=193
+				NOT={ year=196 }
+				c_hefei={
+					holder_scope={
+						character=167
 					}
 				}
 			}
-			c_hefei = {
-				holder_scope = {
+			c_hefei={
+				holder_scope={
 					add_claim=k_yang
 				}
 			}
 		}
 		
 		#Yuan Shu
-		if = {
-			limit = {
-				year = 193
-				NOT = { year = 197 }
-				k_yuan = {
-					holder_scope = {
-						character = 700
+		if={
+			limit={
+				year=193
+				NOT={ year=197 }
+				k_yuan={
+					holder_scope={
+						character=700
 					}
 				}
 			}
-			k_yuan = {
-				holder_scope = {
+			k_yuan={
+				holder_scope={
 					add_claim=k_yang
 					add_claim=k_xu
 				}
@@ -3565,33 +4023,34 @@ character_event = { # Set Claims
 		}
 		
 		#Cao Cao
-		if = {
-			limit = { 
-				year = 194
-				NOT = { year = 196 }
-				k_cao = {
-					holder_scope = {
-						character = 400
+		if={
+			limit={ 
+				year=194
+				NOT={ year=196 }
+				k_cao={
+					holder_scope={
+						character=400
 					}
 				}
 			}
-			k_cao = {
-				holder_scope = {
+			k_cao={
+				holder_scope={
 					add_claim=k_yan
+					add_claim=c_puyang
 				}
 			}
 		}
 		
 		#Cao Ren
-		if = {
-			limit = { 
-				year = 193
-				NOT = { year = 194 }
+		if={
+			limit={ 
+				year=193
+				NOT={ year=194 }
 			}
-			k_cao = {
-				holder_scope = {
-					any_courtier = {
-						limit = { character = 433 }
+			k_cao={
+				holder_scope={
+					random_courtier={
+						limit={ character=433 }
 						add_claim=d_guangyang
 					}
 				}
@@ -3599,47 +4058,37 @@ character_event = { # Set Claims
 		}
 		
 		#Zhou Shang
-		if = {
-			limit = { 
-				year = 194
-				NOT = { year = 196 }
+		if={
+			limit={ 
+				year=194
+				NOT={ year=196 }
 			}
-			k_yuan = {
-				holder_scope = {
-					any_courtier = {
-						limit = { character = 4290 }
+			k_yuan={
+				holder_scope={
+					random_courtier={
+						limit={ character=4290 }
 						add_claim=d_danyang
 					}
 				}
 			}
 		}
 		
-		#Cai Mao
-		if = {
-			limit = {
-				OR = {
-					AND = {
-						year = 194
-						OR = {
-							month = 3
-							month = 4
-							month = 5
-							month = 6
-							month = 7
-							month = 8
-							month = 9
-							month = 10
-							month = 11
-						}
+		#Hu Mao
+		if={
+			limit={
+				OR={
+					AND={
+						year=194
+						month=3
 					}
-					year = 195
+					year=195
 				}
-				NOT = { year = 196 }
+				NOT={ year=196 }
 			}
-			k_jing = {
-				holder_scope = {
-					any_courtier = {
-						limit = { character = 4447 }
+			k_jing={
+				holder_scope={
+					random_courtier={
+						limit={ character=4447 }
 						add_claim=k_yi
 					}
 				}
@@ -3647,217 +4096,286 @@ character_event = { # Set Claims
 		}
 		
 		#Guo Si
-		if = {
-			limit = {
-				OR = {
-					AND = {
-						year = 194
-						OR = {
-							month = 3
-							month = 4
-							month = 5
-							month = 6
-							month = 7
-							month = 8
-							month = 9
-							month = 10
-							month = 11
-						}
+		if={
+			limit={
+				OR={
+					AND={
+						year=194
+						month=3
 					}
-					year = 195
+					year=195
 				}
-				NOT = { year = 198 }
-				k_sili = {
-					holder_scope = {
-						character = 308
+				NOT={ year=196 }
+				k_sili={
+					holder_scope={
+						character=308
 					}
 				}
 			}
-			k_sili = {
-				holder_scope = {
+			k_sili={
+				holder_scope={
 					add_claim=e_china
+					add_claim=c_changan
 				}
 			}
 		}
 		
 		#Li Zheng
-		if = {
-			limit = { 
-				year = 195
-				NOT = { year = 196 }
+		if={
+			limit={ 
+				year=195
+				NOT={ year=196 }
 			}
-			k_cao = {
-				holder_scope = {
-					any_courtier = {
-						limit = { character = 20476 }
+			k_cao={
+				holder_scope={
+					random_courtier={
+						limit={ character=20476 }
 						add_claim=k_qing
 					}
 				}
 			}
 		}
 		
-		#Yuan Si
-		if = {
-			limit = {
-				year = 196
-				NOT = { year = 197 }
+		#Yuan Shao
+		if={
+			limit={ 
+				year=195
+				NOT={ year=199 }
+				e_yuan={
+					holder_scope={
+						character=700
+					}
+				}
 			}
-			k_yuan = {
-				holder_scope = {
-					any_courtier = {
-						limit = { character = 712 }
+			e_yuan={
+				holder_scope={
+					add_claim=k_you
+				}
+			}
+		}
+		
+		#Guo Si
+		if={
+			limit={
+				year=196
+				NOT={ year=197 }
+				c_duling={
+					holder_scope={
+						character=308
+					}
+				}
+			}
+			c_duling={
+				holder_scope={
+					add_claim=k_sili
+					add_claim=c_changan
+				}
+			}
+		}
+		
+		#Yuan Si
+		if={
+			limit={
+				year=196
+				NOR={
+					month=9
+					year=197
+				}
+			}
+			k_yuan={
+				holder_scope={
+					random_courtier={
+						limit={ character=712 }
+						add_claim=d_chen
 						add_claim=c_ku
 					}
 				}
 			}
 		}
 		
-		#Chen Yu
-		if = {
-			limit = { 
-				year = 197
-				NOT = { year = 198 }
-				c_fuchun = {
-					holder_scope = {
-						character = 167
+		#Imperial Boon
+		#Han Xian
+		if={
+			limit={
+				year=196
+				NOT={ year=197 }
+				c_white={ holder_scope={ character=2601 } }
+			}
+			c_white={
+				holder_scope={
+					add_claim=k_you
+				}
+			}
+		}
+		
+		#Imperial Boon
+		#Hu Cai
+		if={
+			limit={
+				year=196
+				NOT={ year=197 }
+				c_dongyuan={ holder_scope={ character=2603 } }
+			}
+			c_dongyuan={
+				holder_scope={
+					add_claim=k_bing
+				}
+			}
+		}
+		
+		#Imperial Boon
+		#Li Le
+		if={
+			limit={
+				year=196
+				NOT={ year=199 }
+				c_yangyi={ holder_scope={ character=260 } }
+			}
+			c_yangyi={
+				holder_scope={
+					add_claim=k_liang
+				}
+			}
+		}
+		
+		#Liu Bei
+		if={
+			limit={ 
+				year=197
+				NOT={ year=199 }
+				d_liu={
+					holder_scope={
+						character=600
 					}
 				}
 			}
-			c_fuchun = {
-				holder_scope = {
+			d_liu={
+				holder_scope={
+					add_claim=k_yu
+				}
+			}
+		}
+		
+		#Chen Yu
+		if={
+			limit={ 
+				year=197
+				NOT={ year=198 }
+				c_fuchun={
+					holder_scope={
+						character=167
+					}
+				}
+			}
+			c_fuchun={
+				holder_scope={
 					add_claim=d_wu
 				}
 			}
 		}
 		
 		#Xiang
-		if = {
-			limit = {
-				year = 197
-				NOT = { year = 198 }
+		if={
+			limit={
+				year=198
+				NOT={ year=199 }
 			}
-			e_zhong = {
-				holder_scope = {
-					any_courtier = {
-						limit = { character = 546 }
-						add_claim = d_runan
+			e_zhong={
+				holder_scope={
+					random_courtier={
+						limit={ character=546 }
+						add_claim=d_yangan
+					}
+				}
+			}
+		}
+		
+		#Yuan Yin
+		if={
+			limit={
+				year=197
+				NOT={ year=198 }
+			}
+			e_zhong={
+				holder_scope={
+					random_courtier={
+						limit={ character=775 }
+						add_claim=d_danyang
 					}
 				}
 			}
 		}
 		
 		#Cheng Pu
-		if = {
-			limit = {
-				year = 196
-				NOT = { year = 197 }
+		if={
+			limit={
+				year=198
+				NOT={ year=199 }
 			}
-			k_yuan = {
-				holder_scope = {
-					any_courtier = {
-						limit = { character = 515 }
-						add_claim = d_wu
-					}
-				}
-			}
-		}
-		
-		#Cheng Pu
-		if = {
-			limit = {
-				year = 197
-				NOT = { year = 198 }
-			}
-			e_zhong = {
-				holder_scope = {
-					any_courtier = {
-						limit = { character = 515 }
-						add_claim = d_danyang
-					}
-				}
-			}
-		}
-		
-		#Cheng Pu
-		if = {
-			limit = {
-				year = 198
-				NOT = { year = 199 }
-			}
-			e_zhong = {
-				holder_scope = {
-					any_courtier = {
-						limit = { character = 515 }
-						add_claim = d_lingling
+			k_sun={
+				holder_scope={
+					any_courtier={
+						limit={ character=515 }
+						add_claim=d_lingling
 					}
 				}
 			}
 		}
 		
 		#Zhou Yu
-		if = {
-			limit = {
-				year = 199
-				OR = {
-					month = 5
-					month = 6
-					month = 7
-					month = 8
-					month = 9
-					month = 10
-					month = 11
-				}
-				NOT = { year = 200 }
+		if={
+			limit={
+				year=199
+				month=5
+				NOT={ year=200 }
 			}
-			k_sun = {
-				holder_scope = {
-					any_courtier = {
-						limit = { character = 10528 }
-						add_claim = d_jiangxia
+			k_sun={
+				holder_scope={
+					random_courtier={
+						limit={ character=10528 }
+						add_claim=d_jiangxia
 					}
 				}
 			}
 		}
 		
 		#Yuan Shao
-		if = {
-			limit = {
-				year = 199
-				NOT = { year = 203 }
-				e_yuan = {
-					holder_scope = {
-						character = 700
+		if={
+			limit={
+				year=199
+				NOT={ year=203 }
+				e_yuan={
+					holder_scope={
+						character=700
 					}
 				}
 			}
-			e_yuan = {
-				holder_scope = {
-					add_claim = e_china
+			e_yuan={
+				holder_scope={
+					add_claim=e_china
 				}
 			}
 		}
 		
 		#Yuan Tan
-		if = {
-			limit = {
-				year = 202
-				OR = {
-					month = 6
-					month = 7
-					month = 8
-					month = 9
-					month = 10
-					month = 11
+		if={
+			limit={
+				OR={
+					AND={
+						year=202
+						month=6
+					}
+					year=203
 				}
-				NOT = { year = 206 }
-				k_qing = {
-					holder_scope = {
-						character = 709
+				NOT={ year=206 }
+				k_qing={
+					holder_scope={
+						character=709
 					}
 				}
 			}
-			k_qing = {
-				holder_scope = {
+			k_qing={
+				holder_scope={
 					add_claim=e_yuan
 					add_claim=k_ji
 					add_claim=c_ye
@@ -3865,105 +4383,115 @@ character_event = { # Set Claims
 			}
 		}
 		
+		#Guo Yuan
+		if={
+			limit={
+				year=202
+				month=6
+				NOR={
+					month=7
+					year=203
+				}
+			}
+			e_yuan={
+				holder_scope={
+					random_courtier={
+						limit={ character=755 }
+						add_claim=d_hedong
+					}
+				}
+			}
+		}
+		
 		#Liu Qi
-		if = {
-			limit = {
-				year = 208
-				OR = {
-					month = 7
-					month = 8
-					month = 9
-					month = 10
-					month = 11
-				}
-				NOT = { year = 209 }
-				d_jiangxia = {
-					holder_scope = {
-						character = 52
+		if={
+			limit={
+				year=208
+				month=7
+				NOT={ year=209 }
+				d_jiangxia={
+					holder_scope={
+						character=52
 					}
 				}
 			}
-			d_jiangxia = {
-				holder_scope = {
-					add_claim = k_jing
+			d_jiangxia={
+				holder_scope={
+					add_claim=k_jing
 				}
 			}
 		}
 		
 		#Sun Quan
-		if = {
-			limit = {
-				OR = {
-					AND = {
-						year = 208
-						OR = {
-							month = 9
-							month = 10
-							month = 11
-						}
+		if={
+			limit={
+				OR={
+					AND={
+						year=208
+						month=9
 					}
-					year = 209
+					year=209
 				}
-				NOT = { year = 211 }
-				k_sun = {
-					holder_scope = {
-						character = 509
+				NOT={ year=211 }
+				k_sun={
+					holder_scope={
+						character=509
 					}
 				}
 			}
-			k_sun = {
-				holder_scope = {
-					add_pressed_claim = k_jing
-				}
-			}
-		}
-		
-		#Sun Quan
-		if = {
-			limit = {
-				year = 211
-				NOT = { year = 220 }
-				e_sun = {
-					holder_scope = {
-						character = 509
-					}
-				}
-			}
-			e_sun = {
-				holder_scope = {
-					add_pressed_claim = k_jing
+			k_sun={
+				holder_scope={
+					add_pressed_claim=k_jing
 				}
 			}
 		}
 		
 		#Liu Bei
-		if = {
-			limit = {
-				year = 211
-				NOT = { year = 214 }
-				k_liu = {
-					holder_scope = {
-						character = 600
+		if={
+			limit={
+				year=211
+				NOT={ year=214 }
+				k_liu={
+					holder_scope={
+						character=600
 					}
 				}
 			}
-			k_liu = {
-				holder_scope = {
+			k_liu={
+				holder_scope={
 					add_claim=k_yi
 				}
 			}
 		}
 		
-		#Li Yi
-		if = {
-			limit = {
-				year = 215
-				NOT = { year = 220 }
+		#Sun Quan
+		if={
+			limit={
+				year=211
+				NOT={ year=220 }
+				e_sun={
+					holder_scope={
+						character=509
+					}
+				}
 			}
-			e_china = {
-				holder_scope = {
-					any_courtier = {
-						limit = { character = 3791 }
+			e_sun={
+				holder_scope={
+					add_pressed_claim=k_jing
+				}
+			}
+		}
+		
+		#Li Yi
+		if={
+			limit={
+				year=215
+				NOT={ year=220 }
+			}
+			e_china={
+				holder_scope={
+					random_courtier={
+						limit={ character=3791 }
 						add_claim=k_yi
 					}
 				}
@@ -3971,50 +4499,63 @@ character_event = { # Set Claims
 		}
 		
 		#Liu Bei
-		if = {
-			limit = {
-				year = 220
-				NOT = { year = 221 }
-				e_liu = {
-					holder_scope = {
-						character = 600
+		if={
+			limit={
+				year=219
+				NOR={
+					month=6
+					year=220
+				}
+				e_liu={
+					holder_scope={
+						character=600
+						
 					}
 				}
 			}
-			e_liu = {
-				holder_scope = {
+			e_liu={
+				holder_scope={
+					add_claim=d_hanzhong
+					add_claim=c_hanzhong
+					add_claim=c_shangyong
+					add_claim=c_yongan
+					add_claim=c_zhi
+				}
+			}
+		}
+		
+		#Liu Bei
+		if={
+			limit={
+				year=220
+				NOT={ year=221 }
+				e_liu={
+					holder_scope={
+						character=600
+					}
+				}
+			}
+			e_liu={
+				holder_scope={
 					add_claim=k_jing
 				}
 			}
 		}
 		
 		#Xin Ji
-		if = {
-			limit = {
-				OR = {
-					AND = {
-						year = 220
-						OR = {
-							month = 2
-							month = 3
-							month = 4
-							month = 5
-							month = 6
-							month = 7
-							month = 8
-							month = 9
-							month = 10
-							month = 11
-						}
-					}
-					year = 221
+		if={
+			limit={
+				year=220
+				month=3
+				NOR={
+					month=8
+					year=221
 				}
-				NOT = { year = 225 }
 			}
-			e_wei = {
-				holder_scope = {
-					any_courtier = {
-						limit = { character = 3883 }
+			e_china={
+				holder_scope={
+					random_courtier={
+						limit={ character=3883 }
 						add_claim=d_jiuquan
 					}
 				}
@@ -4022,61 +4563,219 @@ character_event = { # Set Claims
 		}
 		
 		#Chao
-		if = {
-			limit = {
-				year = 221
-				NOT = { year = 222 }
+		if={
+			limit={
+				year=221
+				NOT={ year=222 }
 			}
-			e_liu = {
-				holder_scope = {
-					any_courtier = {
-						limit = { character = 815 }
+			e_liu={
+				holder_scope={
+					random_courtier={
+						limit={ character=815 }
 						add_claim=k_liang
 					}
 				}
 			}
 		}
 		
-		#Zhuge Jin
-		if = {
-			limit = {
-				year = 229
-				NOT = { year = 234 }
-				d_nan = {
-					holder_scope = {
-						character = 537
+		#Yong Kai
+		if={
+			limit={
+				year=223
+				NOT={ year=226 }
+				d_zhuti={
+					holder_scope={
+						character=1802
 					}
 				}
 			}
-			d_nan = {
-				holder_scope = {
+			d_zhuti={
+				holder_scope={
+					add_claim=d_yongchang
+				}
+			}
+		}
+		
+		#Zhuge Jin
+		if={
+			limit={
+				year=229
+				NOT={ year=234 }
+				d_nan={
+					holder_scope={
+						character=537
+					}
+				}
+			}
+			d_nan={
+				holder_scope={
 					add_claim=k_yu
 				}
 			}
 		}
 		
-		set_global_flag = added_claims_flag
+		set_global_flag=added_claims_flag
 	}
 }
 
-#Setup Revolts and Jail
-character_event = {
-	id = MAN.50
+#Setup Revolts and Jail and Disasters
+character_event={
+	id=MAN.49
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	hide_window = yes
+	hide_window=yes
 	
-	immediate = {
-		if = {
-			limit = { has_landed_title = d_hepu }
-			character_event = { id = SAN.24 }
-			any_war = {
-				limit = { using_cb = peasant_revolt }
-				attacker = {
-					reverse_imprison = ROOT
+	ai=no
+
+	trigger={
+		NOT={ has_global_flag=setup_revolt_flag }
+	}
+	
+	immediate={
+		if={
+			limit={
+				year=184
+				NOT={ year=185 }
+			}
+			d_hepu={
+				holder_scope={
+					character_event={ id=SAN.24 }
+					any_war={
+						limit={ using_cb=peasant_revolt }
+						attacker={
+							reverse_imprison=PREVPREV
+						}
+					}
 				}
 			}
 		}
+		if={
+			limit={
+				year=185
+				NOT={ year=186 }
+			}
+			hidden_tooltip={}
+			random_province={
+				limit={ capital_scope={ region=world_china } }
+				spawn_disease=small_pox
+			}
+			hidden_tooltip={}
+			random_province={
+				limit={ capital_scope={ region=world_china } }
+				spawn_disease=small_pox
+			}
+			hidden_tooltip={}
+			random_province={
+				limit={ capital_scope={ region=world_china } }
+				spawn_disease=small_pox
+			}
+			hidden_tooltip={}
+			random_province={
+				limit={ capital_scope={ region=world_china } }
+				spawn_disease=small_pox
+			}
+			hidden_tooltip={}
+			random_province={
+				limit={ capital_scope={ region=world_china } }
+				spawn_disease=small_pox
+			}
+		}
+		if={
+			limit={
+				year=194
+				NOT={ year=195 }
+			}
+			any_playable_ruler={
+				limit={
+					capital_scope={
+						OR={
+							region=world_china_ji
+							region=world_china_qing
+							region=world_china_sili
+							region=world_china_xu
+							region=world_china_yan
+							region=world_china_yu
+						}
+					}
+				}
+				hidden_tooltip={}
+				random={
+					chance=30
+					character_event={ id=SAN.16 }
+				}
+			}
+		}
+		set_global_flag=setup_revolt_flag
+	}
+}
+
+### Handle Consorts ###
+character_event={
+	id=MAN.50
+	
+	hide_window=yes
+	
+	is_triggered_only=yes
+	
+	trigger={
+		k_confucian={ has_holder=yes }
+		c_empress={ has_holder=yes }
+	}
+	
+	immediate={
+		k_confucian={
+			holder_scope={
+				save_event_target_as=target_emperor
+			}
+		}
+		c_empress={
+			holder_scope={
+				save_event_target_as=target_empress
+			}
+		}
+		any_realm_character={
+			limit={
+				trait=inner_court
+				OR={
+					age=30
+					is_close_relative=event_target:target_emperor
+				}
+			}
+			remove_trait=inner_court
+			move_character=event_target:target_emperor
+		}
+		any_realm_character={
+			limit={
+				trait=inner_court
+				NOT={ age=30 }
+			}
+			move_character=event_target:target_empress
+		}
+	}
+}
+
+#MAN.51
+character_event={ # Clear k_confucian claims on death
+	id=MAN.51
+	
+	hide_window=yes
+	
+	is_triggered_only=yes
+	
+	trigger={
+		has_claim=k_confucian
+	}
+	
+	immediate={
+		if={
+			limit={
+				has_strong_claim=k_confucian
+			}
+			any_child={
+				add_weak_claim=k_confucian
+			}
+		}
+		remove_claim=k_confucian
 	}
 }

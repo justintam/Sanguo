@@ -6,9 +6,15 @@
 1.1.1={
 	liege=d_zangke
 }
+170.1.1={
+	holder=4483 #Chang Yuan
+}
 184.1.1={
 	holder=181 #Liu Chong
 }
 193.1.1={
 	holder=1805 #Zhu Bao
+}
+223.6.1={
+	holder=662 #Xiang Lang
 }

@@ -47,6 +47,7 @@
 220.12.10={
 	liege=e_wei
 }
-#Linghu Yan - 249
-#Huang Hua - 251
+#Wang Chang 20s/30s
+#Linghu Yan - active by 249
+#Huang Hua - active by 251
 #Deng Ai - 255

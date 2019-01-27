@@ -23,7 +23,7 @@
 }
 209.3.1={
 	liege=d_jiangxia
-	holder=515 #Cheng Pu
+	holder=4303 #Random
 }
 210.2.1={
 	holder=570 #Lu Meng
@@ -31,7 +31,12 @@
 213.1.1={
 	holder=528 #Sun Jiao
 }
-219.12.1={
-	holder=529 #Sun Huan
+215.1.1={
+	liege=d_xiling
+	holder=580 #Gan Ning
+}
+219.5.1={
+	liege=d_jiangxia
+	holder=4303 #Random
 }
 #Cai Yi

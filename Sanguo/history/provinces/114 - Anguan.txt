@@ -13,5 +13,6 @@ b_anguan = castle
 # Misc
 culture = nanyue
 religion = animist
+terrain = hills
 
 #History

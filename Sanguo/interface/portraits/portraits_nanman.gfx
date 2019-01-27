@@ -224,76 +224,6 @@ spriteTypes = {
 		noOfFrames = 12
 		norefcount = yes
 	}
-
-	spriteType = {
-		name = "GFX_korean_female_hair_behind"
-		texturefile = "gfx\\characters\\korean_female\\korean_female_hair_behind_1.dds"
-		noOfFrames = 15
-		norefcount = yes
-	}
-
-	spriteType = {
-		name = "GFX_korean_female_hair_behind_midage"
-		texturefile = "gfx\\characters\\korean_female\\korean_female_hair_behind_2.dds"
-		noOfFrames = 15
-		norefcount = yes
-	}
-
-	spriteType = {
-		name = "GFX_korean_female_hair_behind_oldage"
-		texturefile = "gfx\\characters\\korean_female\\korean_female_hair_behind_3.dds"
-		noOfFrames = 15
-		norefcount = yes
-	}
-
-	spriteType = {
-		name = "GFX_korean_female_chin"
-		texturefile = "gfx\\characters\\korean_female\\korean_female_chin_1.dds"
-		noOfFrames = 12
-		norefcount = yes
-	}
-
-	spriteType = {
-		name = "GFX_korean_female_nose"
-		texturefile = "gfx\\characters\\korean_female\\korean_female_nose_1.dds"
-		noOfFrames = 13
-		norefcount = yes
-	}
-
-	spriteType = {
-		name = "GFX_korean_female_nose_midage"
-		texturefile = "gfx\\characters\\korean_female\\korean_female_nose_2.dds"
-		noOfFrames = 13
-		norefcount = yes
-	}
-	
-	spriteType = {
-		name = "GFX_korean_female_nose_oldage"
-		texturefile = "gfx\\characters\\korean_female\\korean_female_nose_3.dds"
-		noOfFrames = 13
-		norefcount = yes
-	}
-
-	spriteType = {
-		name = "GFX_korean_female_hair"
-		texturefile = "gfx\\characters\\korean_female\\korean_female_hair_1.dds"
-		noOfFrames = 15
-		norefcount = yes
-	}
-
-	spriteType = {
-		name = "GFX_korean_female_hair_midage"
-		texturefile = "gfx\\characters\\korean_female\\korean_female_hair_2.dds"
-		noOfFrames = 15
-		norefcount = yes
-	}
-
-	spriteType = {
-		name = "GFX_korean_female_hair_oldage"
-		texturefile = "gfx\\characters\\korean_female\\korean_female_hair_3.dds"
-		noOfFrames = 15
-		norefcount = yes
-	}
 	
 	spriteType = {
 		name = "GFX_nanman_female_clothes"
@@ -308,7 +238,6 @@ spriteTypes = {
 		noOfFrames = 12
 		norefcount = yes
 	}
-
 	
 	# Nanman female
 	portraitType = {
@@ -318,7 +247,7 @@ spriteTypes = {
 			"GFX_character_background:p0"
 			"GFX_nanman_female_clothes_behind:p3:c0"
 			"GFX_nanman_female_headgear_behind:p5:c1"
-			"GFX_korean_female_hair_behind:p1:y"
+			"GFX_japanese_female_hair_behind:p1:y"
 			"GFX_khitan_female_base:p2"
 			"GFX_khitan_female_neck:d0"
 			"GFX_khitan_female_mouth:d2"
@@ -335,7 +264,7 @@ spriteTypes = {
 			"GFX_character_eyepatch:p13:y:o32x63"
 			"GFX_nanman_female_clothes:p3:c2"
 			"GFX_empty:p5:c3"
-			"GFX_korean_female_hair:p1:y"
+			"GFX_japanese_female_hair:p1:y"
 			"GFX_empty:p3:c4"
 			"GFX_nanman_female_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -363,7 +292,7 @@ spriteTypes = {
 			"GFX_character_background:p0"
 			"GFX_nanman_female_clothes_behind:p3:c0"
 			"GFX_nanman_female_headgear_behind:p5:c1"
-			"GFX_korean_female_hair_behind_midage:p1:y"
+			"GFX_japanese_female_hair_behind_midage:p1:y"
 			"GFX_khitan_female_base_midage:p2"
 			"GFX_khitan_female_neck_midage:d0"
 			"GFX_khitan_female_mouth_midage:d2"
@@ -380,7 +309,7 @@ spriteTypes = {
 			"GFX_character_eyepatch:p13:y:o32x63"
 			"GFX_nanman_female_clothes:p3:c2"
 			"GFX_empty:p5:c3"
-			"GFX_korean_female_hair_midage:p1:y"			
+			"GFX_japanese_female_hair_midage:p1:y"			
 			"GFX_empty:p3:c4"
 			"GFX_nanman_female_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"
@@ -408,7 +337,7 @@ spriteTypes = {
 			"GFX_character_background:p0"
 			"GFX_nanman_female_clothes_behind:p3:c0"
 			"GFX_nanman_female_headgear_behind:p5:c1"
-			"GFX_korean_female_hair_behind_oldage:p1:y"
+			"GFX_japanese_female_hair_behind_oldage:p1:y"
 			"GFX_khitan_female_base_oldage:p2"
 			"GFX_khitan_female_neck_oldage:d0"
 			"GFX_khitan_female_mouth_oldage:d2"
@@ -425,7 +354,7 @@ spriteTypes = {
 			"GFX_character_eyepatch:p13:y:o32x63"
 			"GFX_nanman_female_clothes:p3:c2"
 			"GFX_empty:p5:c3"
-			"GFX_korean_female_hair_oldage:p1:y"
+			"GFX_japanese_female_hair_oldage:p1:y"
 			"GFX_empty:p3:c4"
 			"GFX_nanman_female_headgear:p5:c5"
 			"GFX_character_imprisoned:p6"

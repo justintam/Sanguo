@@ -9,6 +9,6 @@
 170.1.1={
 	holder=1302 #Tan Jingquan
 }
-206.1.1={
-	holder=1378 #Tan Quan
+179.1.1={
+	holder=1367 #Wang Zancheng
 }

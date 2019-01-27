@@ -1,16 +1,15 @@
 # e_wei
 1.1.1={
-	active = no
-	law = agnatic_succession
-	law = succ_primogeniture
+	active=no
+	law=agnatic_succession
+	law=succ_primogeniture
 }
 220.12.10={
-	active = yes
-	law = succ_feudal_elective
-	law = imperial_administration
-	law = vice_royalty_3
-	law = crown_authority_4
-	law = centralization_4
+	active=yes
+	law=imperial_administration
+	law=vice_royalty_3
+	law=crown_authority_4
+	law=centralization_4
 	holder=10400 #Cao Pi
 }
 226.6.29={
@@ -26,6 +25,6 @@
 	holder=463 #Cao Huan
 }
 265.2.8={
-	holder=0 #None
+	holder=0
 	active=no
 }

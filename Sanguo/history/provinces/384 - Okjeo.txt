@@ -14,5 +14,6 @@ b_guda = temple
 # Misc
 culture = joseon
 religion = shamanist
+terrain = mountain
 
 #History

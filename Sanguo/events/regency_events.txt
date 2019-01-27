@@ -751,6 +751,7 @@ character_event = {
 	prisoner = no
 	
 	trigger = {
+		has_regent = yes
 		NOT = { has_character_flag = pushed_regent }
 		is_nomadic = no
 	}
@@ -785,8 +786,13 @@ character_event = {
 		set_character_flag = pushed_regent
 		random_list = {
 			50 = {
-				random_courtier = {
-					limit = { has_minor_title = title_regent }
+				random_courtier_or_vassal = {
+					limit = { 
+						OR = { 
+							has_minor_title = title_regent 
+							has_minor_title = title_appointed_regent 
+						} 
+					}
 					death = {
 						death_reason = death_murder_unknown_fall
 						killer = ROOT
@@ -794,8 +800,13 @@ character_event = {
 				}
 			}
 			50 = { 
-				random_courtier = {
-					limit = { has_minor_title = title_regent }
+				random_courtier_or_vassal = {
+					limit = { 
+						OR = { 
+							has_minor_title = title_regent 
+							has_minor_title = title_appointed_regent 
+						} 
+					}
 					add_trait = wounded
 					opinion = {
 						modifier = opinion_mad_as_hell
@@ -2644,11 +2655,11 @@ character_event = {
 	prisoner = no
 	capable_only = yes
 	only_women = yes
+	is_married = yes
 	
 	trigger = {
 		NOT = { has_minor_title = title_regent }
 		has_minor_title = title_ruler_consort
-		is_married = yes
 		spouse = {
 			prisoner = no
 			is_alive = yes
@@ -2783,9 +2794,9 @@ character_event = {
 	prisoner = no
 	capable_only = yes
 	only_playable = yes # Only titled Regents do this
+	lacks_dlc = "Zeus"
 	
 	trigger = {
-		NOT = { has_dlc = "Zeus" }
 		is_landed = yes
 		has_minor_title = title_regent
 		NOT = { trait = content }

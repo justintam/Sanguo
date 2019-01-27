@@ -15,5 +15,6 @@ b_yuanjie = city
 # Misc
 culture = han
 religion = confucian
+terrain = mountain
 
 #History

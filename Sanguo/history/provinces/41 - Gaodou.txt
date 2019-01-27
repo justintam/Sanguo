@@ -12,7 +12,8 @@ b_tiankai = castle
 #b_gaoden = castle
 
 # Misc
-culture = han
-religion = confucian
+culture = jie
+religion = tengri_pagan
+terrain = mountain
 
 #History

@@ -6,6 +6,20 @@
 1.1.1={
 	liege=d_ba
 }
+120.1.1={
+	holder=4475 #Wang Kang
+}
 184.1.1={
-	holder=170 #Wang Kang
+	holder=3762 #Cheng Ji
+}
+196.1.1={
+	liege=d_baxi
+}
+201.6.1={
+	liege=d_hanzhong
+	holder=1823 #Du Huo
+}
+219.5.1={
+	liege=d_baxi
+	holder=3640 #Zhang Yi
 }

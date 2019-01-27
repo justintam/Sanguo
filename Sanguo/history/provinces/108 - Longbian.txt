@@ -13,8 +13,9 @@ b_longbian = castle
 #b_chudat = city
 
 # Misc
-culture = han
-religion = confucian
+culture = nanyue
+religion = animist
+terrain = hills
 
 #History
 190.1.1={

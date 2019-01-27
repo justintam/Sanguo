@@ -14,5 +14,6 @@ b_gaiteng = city
 # Misc
 culture = han
 religion = confucian
+terrain = forest
 
 #History

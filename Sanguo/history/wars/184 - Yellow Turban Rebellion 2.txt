@@ -28,6 +28,7 @@ casus_belli={
 	add_defender = 600 #Liu Bei
 	add_defender = 1500 #Qiangqui
 	add_attacker = 201 #Zhang Bao
+	add_attacker = 202 #Zhang Liang
 	add_attacker = 2600 #Guo Da
 	add_attacker = 2610 #Zhang Niujiao
 }
@@ -53,5 +54,6 @@ casus_belli={
 	rem_defender = 100 #He Jin
 	rem_attacker = 2610 #Zhang Niujiao
 	rem_attacker = 2600 #Guo Da
+	rem_attacker = 202 #Zhang Liang
 	rem_attacker = 201 #Zhang Bao
 }

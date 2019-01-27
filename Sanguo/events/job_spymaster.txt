@@ -37,6 +37,8 @@ character_event = {
 	trigger = {
 		has_job_action = action_uncover_plots
 		NOT = { has_character_modifier = in_seclusion }
+		NOT = { has_character_modifier = bedridden_illness }
+		NOT = { trait = incapable }
 		location = {
 			any_province_character = {
 				NOT = { is_liege_of = ROOT }
@@ -274,6 +276,8 @@ character_event = {
 			has_job_action = action_organize_spies_mystics
 		}
 		NOT = { has_character_modifier = in_seclusion }
+		NOT = { has_character_modifier = bedridden_illness }
+		NOT = { trait = incapable }
 		location = {
 			any_province_lord = {
 				NOT = { is_liege_of = ROOT }
@@ -487,6 +491,8 @@ character_event = {
 			has_job_action = action_organize_spies_mystics
 		}
 		NOT = { has_character_modifier = in_seclusion }
+		NOT = { has_character_modifier = bedridden_illness }
+		NOT = { trait = incapable }
 		location = {
 			OR = {
 				owner = {
@@ -690,7 +696,6 @@ letter_event = {
 						trait = lustful
 						trait = drunkard
 						trait = hedonist
-						trait = syphilitic
 					}
 				}
 			}
@@ -807,26 +812,6 @@ letter_event = {
 		name = "EVTOPTE9002"
 		tooltip_info = hedonist
 		trigger = { trait = hedonist }
-		FROM = {
-			opinion = {
-				modifier = opinion_pleased
-				who = ROOT
-				years = 2
-			}
-		}
-		custom_tooltip = {
-			text = EVTTOOLTIP9004
-			hidden_tooltip = {
-				FROM = {
-					letter_event = { id = 9004 days = 7 }
-				}
-			}
-		}
-	}
-	option = { # Agree (Syphilis)
-		name = "EVTOPTF9002"
-		tooltip_info = syphilitic
-		trigger = { trait = syphilitic }
 		FROM = {
 			opinion = {
 				modifier = opinion_pleased
@@ -1213,6 +1198,8 @@ character_event = {
 			has_job_action = action_organize_spies_mystics
 		}
 		NOT = { has_character_modifier = in_seclusion }
+		NOT = { has_character_modifier = bedridden_illness }
+		NOT = { trait = incapable }
 		liege = { in_faction = yes }
 		location = {
 			owner = {
@@ -1311,7 +1298,6 @@ letter_event = {
 						trait = lustful
 						trait = drunkard
 						trait = hedonist
-						trait = syphilitic
 					}
 				}
 			}
@@ -1364,7 +1350,6 @@ letter_event = {
 							trait = lustful
 							trait = drunkard
 							trait = hedonist
-							trait = syphilitic
 						}
 					}
 				}
@@ -1488,26 +1473,6 @@ letter_event = {
 			}
 		}
 		custom_tooltip = {
-			text = EVTTOOLTIP9004
-			hidden_tooltip = {
-				FROM = {
-					letter_event = { id = 9024 days = 7 }
-				}
-			}
-		}
-	}
-	option = { # Agree (Syphilis)
-		name = EVTOPTF9002
-		tooltip_info = syphilitic
-		trigger = { trait = syphilitic }
-		FROM = {
-			opinion = {
-				modifier = opinion_pleased
-				who = ROOT
-				years = 2
-			}
-		}
-		custom_tooltip = { 
 			text = EVTTOOLTIP9004
 			hidden_tooltip = {
 				FROM = {
@@ -1752,6 +1717,8 @@ character_event = {
 	trigger = {
 		has_job_action = action_study_technology
 		NOT = { has_character_modifier = in_seclusion }
+		NOT = { has_character_modifier = bedridden_illness }
+		NOT = { trait = incapable }
 		location = { has_higher_tech_than = ROOT }
 	}
 	
@@ -1858,6 +1825,8 @@ character_event = {
 			has_job_action = action_sabotage_province
 		}
 		NOT = { has_character_modifier = in_seclusion }
+		NOT = { has_character_modifier = bedridden_illness }
+		NOT = { trait = incapable }
 		location = {
 			any_province_lord = {
 				NOT = { is_liege_of = ROOT }
@@ -2026,6 +1995,8 @@ character_event = {
 	trigger = {
 		has_job_action = action_organize_spies
 		NOT = { has_character_modifier = in_seclusion }
+		NOT = { has_character_modifier = bedridden_illness }
+		NOT = { trait = incapable }
 		location = {
 			any_province_lord = {
 				NOT = { is_liege_of = ROOT }
@@ -2588,6 +2559,8 @@ character_event = {
 	trigger = {
 		has_job_action = action_organize_spies
 		NOT = { has_character_modifier = in_seclusion }
+		NOT = { has_character_modifier = bedridden_illness }
+		NOT = { trait = incapable }
 		location = {
 			any_province_lord = {
 				NOT = { is_liege_of = ROOT }
@@ -2935,5 +2908,3 @@ letter_event = {
 		wealth = 50
 	}
 }
-
-

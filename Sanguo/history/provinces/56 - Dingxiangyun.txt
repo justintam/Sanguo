@@ -14,5 +14,6 @@ b_yaozu = tribal
 # Misc
 culture = xiongnu
 religion = confucian
+terrain = steppe
 
 #History

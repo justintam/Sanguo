@@ -17,7 +17,9 @@ targeted_decisions = {
 		}
 		effect = {
 			remove_tributary = FROM
-			prestige = -200
+			FROM = {
+				prestige = -200
+			}
 		}
 		revoke_allowed = {
 			always = no
@@ -355,7 +357,8 @@ targeted_decisions = {
 	demand_gavelkind = {
 		filter = vassals
 		ai_target_filter = vassals
-	
+		only_playable = yes
+		
 		from_potential = {
 			ai = no
 			has_dlc = "Reapers"
@@ -415,6 +418,8 @@ targeted_decisions = {
 	demand_gavelkind_use_favor = {
 		filter = vassals
 		ai_target_filter = vassals
+		
+		only_playable = yes
 	
 		from_potential = {
 			ai = no
@@ -898,11 +903,22 @@ decisions = {
 	employ_court_physician = {
 		only_playable = yes
 		is_high_prio = yes
+		ai_check_interval = 3
 		potential = {
 			has_dlc = "Reapers"
 			NOR = {
 				is_tribal = yes
 				is_nomadic = yes
+			}
+			OR = {
+				mercenary = no
+				ai = no
+			}
+			OR = {
+				higher_tier_than = COUNT
+				ai = no
+				is_ill = yes
+				num_of_symptoms > 0
 			}
 		}
 		allow = {
@@ -940,7 +956,7 @@ decisions = {
 			always = no
 		}
 		ai_will_do = {
-			factor = 0.1
+			factor = 0.3
 			
 			modifier = {
 				factor = 0
@@ -1136,12 +1152,21 @@ decisions = {
 		}
 		ai_will_do = {
 			factor = 0.2
+			modifier = {
+				factor = 0
+				NOT = {
+					capital_scope = {
+						OR = {
+							has_epidemic = yes
+							any_neighbor_province = {
+								has_epidemic = yes
+							}
+						}
+					}
+				}
+			}
 			
 			modifier = {
-
-
-
-
 				factor = 0.01
 				OR = {
 					capital_scope = {
@@ -1154,10 +1179,6 @@ decisions = {
 			}
 			modifier = {
 				factor = 0.5
-
-
-
-
 				trait = brave
 			}
 			modifier = {

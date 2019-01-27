@@ -19,6 +19,7 @@ targetted_decisions = {
 		only_playable = yes
 		ai_target_filter = realm
 		filter = realm
+		ai_check_interval = 6
 		
 		from_potential = {
 			is_playable = yes

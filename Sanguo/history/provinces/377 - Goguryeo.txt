@@ -14,5 +14,6 @@ b_hwando = temple
 # Misc
 culture = joseon
 religion = shamanist
+terrain = forest
 
 #History

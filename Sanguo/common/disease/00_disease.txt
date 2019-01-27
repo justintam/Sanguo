@@ -4,8 +4,8 @@
 
 tuberculosis = { # Consumption
 	rip = yes
-	contagiousness = 0.125
-	outbreak_chance = 0.006
+	contagiousness = 0.075
+	outbreak_chance = 0.005
 	effect = {
 		local_tax_modifier = -0.25
 		supply_limit = -2
@@ -72,6 +72,7 @@ tuberculosis = { # Consumption
 					has_character_flag = got_tuberculosis
 					trait = has_tuberculosis
 					trait = horse
+					trait = cat
 					
 					has_character_flag = got_bubonic_plague
 					has_character_flag = got_smallpox
@@ -131,9 +132,9 @@ tuberculosis = { # Consumption
 	
 	timeperiod = { # Minor Outbreak
 		start_date = 184.1.1
-		end_date = 1000.1.1	
+		end_date = 1000.1.1
 		
-		outbreak_chance = 0.0055
+		outbreak_chance = 0.004
 		
 		can_outbreak = {
 			NOT = {
@@ -158,7 +159,7 @@ tuberculosis = { # Consumption
 		start_date = 184.1.1
 		end_date = 1000.1.1	
 		
-		outbreak_chance = 0.004
+		outbreak_chance = 0.003
 
 		max_total_provinces = 20
 		
@@ -172,7 +173,7 @@ tuberculosis = { # Consumption
 		start_date = 184.1.1
 		end_date = 1000.1.1	
 		
-		outbreak_chance = 0.0025
+		outbreak_chance = 0.002
 		
 		can_outbreak = {
 			has_game_rule = {
@@ -241,8 +242,8 @@ tuberculosis = { # Consumption
 
 typhoid_fever = { # Slow Fever
 	rip = yes
-	contagiousness = 0.13
-	outbreak_chance = 0.006
+	contagiousness = 0.075
+	outbreak_chance = 0.005
 	effect = {
 		local_tax_modifier = -0.40
 		supply_limit = -3
@@ -309,6 +310,7 @@ typhoid_fever = { # Slow Fever
 					has_character_flag = got_typhoid_fever
 					trait = has_typhoid_fever
 					trait = horse
+					trait = cat
 					
 					has_character_flag = got_bubonic_plague
 					has_character_flag = got_smallpox
@@ -370,7 +372,7 @@ typhoid_fever = { # Slow Fever
 		start_date = 184.1.1
 		end_date = 1000.1.1	
 		
-		outbreak_chance = 0.0055
+		outbreak_chance = 0.004
 		
 		can_outbreak = {
 			NOT = {
@@ -395,7 +397,7 @@ typhoid_fever = { # Slow Fever
 		start_date = 184.1.1
 		end_date = 1000.1.1	
 		
-		outbreak_chance = 0.004
+		outbreak_chance = 0.003
 
 		max_total_provinces = 17
 		
@@ -409,7 +411,7 @@ typhoid_fever = { # Slow Fever
 		start_date = 184.1.1
 		end_date = 1000.1.1	
 		
-		outbreak_chance = 0.0025
+		outbreak_chance = 0.002
 		
 		can_outbreak = {
 			has_game_rule = {
@@ -479,7 +481,7 @@ typhoid_fever = { # Slow Fever
 typhus = { # Camp Fever
 	rip = yes
 	contagiousness = 0.135
-	outbreak_chance = 0.005
+	outbreak_chance = 0.004
 	effect = {
 		local_tax_modifier = -0.40
 		supply_limit = -3
@@ -546,6 +548,7 @@ typhus = { # Camp Fever
 					has_character_flag = got_typhus
 					trait = has_typhus
 					trait = horse
+					trait = cat
 					
 					has_character_flag = got_bubonic_plague
 					has_character_flag = got_smallpox
@@ -607,7 +610,7 @@ typhus = { # Camp Fever
 		start_date = 184.1.1
 		end_date = 1000.1.1	
 		
-		outbreak_chance = 0.0055
+		outbreak_chance = 0.003
 		
 		can_outbreak = {
 			NOT = {
@@ -632,7 +635,7 @@ typhus = { # Camp Fever
 		start_date = 184.1.1
 		end_date = 1000.1.1	
 		
-		outbreak_chance = 0.004
+		outbreak_chance = 0.002
 
 		max_total_provinces = 22
 		
@@ -646,7 +649,7 @@ typhus = { # Camp Fever
 		start_date = 184.1.1
 		end_date = 1000.1.1	
 		
-		outbreak_chance = 0.0025
+		outbreak_chance = 0.001
 		
 		can_outbreak = {
 			has_game_rule = {
@@ -692,7 +695,7 @@ typhus = { # Camp Fever
 		start_date = 184.1.1
 		end_date = 1000.1.1	
 		
-		outbreak_chance = 0.0001
+		outbreak_chance = 0.001
 		
 		can_outbreak = {
 			has_game_rule = {
@@ -782,6 +785,7 @@ bubonic_plague = {
 					has_character_flag = got_bubonic_plague
 					trait = has_bubonic_plague
 					trait = horse
+					trait = cat
 				}
 			}
 			random_list = {
@@ -943,6 +947,7 @@ measles = {
 					has_character_flag = got_measles
 					trait = has_measles
 					trait = horse
+					trait = cat
 					
 					has_character_flag = got_bubonic_plague
 					has_character_flag = got_smallpox
@@ -1004,7 +1009,7 @@ measles = {
 		start_date = 184.1.1
 		end_date = 1000.1.1	
 		
-		outbreak_chance = 0.008
+		outbreak_chance = 0.005
 		
 		can_outbreak = {
 			NOT = {
@@ -1043,7 +1048,7 @@ measles = {
 		start_date = 184.1.1
 		end_date = 1000.1.1	
 		
-		outbreak_chance = 0.0025
+		outbreak_chance = 0.002
 		
 		can_outbreak = {
 			has_game_rule = {
@@ -1089,7 +1094,7 @@ measles = {
 		start_date = 184.1.1
 		end_date = 1000.1.1	
 		
-		outbreak_chance = 0.001
+		outbreak_chance = 0.0008
 		
 		can_outbreak = {
 			has_game_rule = {
@@ -1180,6 +1185,7 @@ small_pox = {
 					has_character_flag = got_smallpox
 					trait = has_small_pox
 					trait = horse
+					trait = cat
 					
 					has_character_flag = got_bubonic_plague
 					has_character_flag = got_measles
@@ -1241,7 +1247,7 @@ small_pox = {
 		start_date = 184.1.1
 		end_date = 1000.1.1	
 		
-		outbreak_chance = 0.0055
+		outbreak_chance = 0.006
 		
 		can_outbreak = {
 			NOT = {
@@ -1280,7 +1286,7 @@ small_pox = {
 		start_date = 184.1.1
 		end_date = 1000.1.1	
 		
-		outbreak_chance = 0.0025
+		outbreak_chance = 0.002
 		
 		can_outbreak = {
 			has_game_rule = {
@@ -1376,6 +1382,7 @@ dancing_plague = {
 					has_character_flag = got_dancing_plague
 					trait = dancing_plague
 					trait = horse
+					trait = cat
 					trait = incapable
 				}
 			}			

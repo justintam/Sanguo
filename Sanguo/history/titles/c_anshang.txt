@@ -9,3 +9,17 @@
 184.1.1={
 	holder=1803 #Gao Ding
 }
+214.1.1={
+	holder=668 #Jiao Huang
+}
+225.4.1={
+	holder=3634 #Gong Lu
+}
+225.8.1={
+	holder=670 #Ma Su
+}
+228.5.1={
+	holder=0 #None
+}
+#240 - Zhang Yi another one
+#254 Zhang Yi dies

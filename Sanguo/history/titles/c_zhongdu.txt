@@ -7,12 +7,5 @@
 	liege=d_taiyuan
 }
 184.1.1={
-	liege=d_black #Heishan Bandits
-	holder=2611 #Zhang Yan
-}
-206.1.1={
-	liege=d_taiyuan
-}
-215.1.1={
-	holder=3597 #Random
+	holder=1331 #Guo Zhaofei
 }

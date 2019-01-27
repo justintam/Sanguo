@@ -6,6 +6,12 @@
 1.1.1={
 	liege=d_zuopingyi
 }
+40.1.1={
+	holder=4548 #Zheng Xing
+}
+45.1.1={
+	holder=0 #None
+}
 80.1.1={
 	holder=3754 #Cao Shu
 }

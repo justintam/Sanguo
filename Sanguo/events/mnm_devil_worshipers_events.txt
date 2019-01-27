@@ -73,6 +73,7 @@ character_event = {
 
 	is_triggered_only = yes
 
+	prisoner = no
 	trigger = { has_dlc = Mystics }
 
 	immediate = {
@@ -83,6 +84,10 @@ character_event = {
 		save_event_target_as = satanists_recruit
 	}
 
+	fail_trigger_effect = {
+		clr_character_flag = being_recruited_by_the_satanists
+	}
+	
 	#Approving of heretics
 	option = {
 		name = {
@@ -93,12 +98,6 @@ character_event = {
 			OR = {
 				ai = no
 				NOT = { controls_religion = yes }
-				trait = bad_priest_christian
-				trait = bad_priest_muslim
-				trait = bad_priest_norse
-				trait = bad_priest_tengri
-				trait = bad_priest_zoroastrian
-				trait = bad_priest_aztec
 			}
 		}
 
@@ -132,17 +131,6 @@ character_event = {
 			}
 			modifier = {
 				factor = 1.5
-				OR = {
-					trait = bad_priest_christian
-					trait = bad_priest_muslim
-					trait = bad_priest_norse
-					trait = bad_priest_tengri
-					trait = bad_priest_zoroastrian
-					trait = bad_priest_aztec
-				}
-			}
-			modifier = {
-				factor = 1.5
 				trait = hedonist
 			}
 			modifier = {
@@ -152,18 +140,6 @@ character_event = {
 			modifier = {
 				factor = 1.5
 				trait = cynical
-			}
-			modifier = {
-				factor = 0.2
-				OR = {
-					AND = {
-						has_character_flag = being_recruited_by_the_satanists
-						true_religion_group_christian_trigger = no
-						true_religion_group_muslim_trigger = no
-						true_religion_group_jewish_group_trigger = no
-						true_religion_group_zoroastrian_group_trigger = no
-					}
-				}
 			}
 		}
 	}
@@ -216,6 +192,14 @@ character_event = {
 	immediate = {
 		if = {
 			limit = {
+				prisoner = yes
+			}
+			set_character_flag = dw_recruitment_end_unable
+			character_event = { id = MNM.6995 }
+			break = yes
+		}
+		if = {
+			limit = {
 				event_target:satanists_recruiter = {
 					is_alive = yes
 					is_devil_worshiper_trigger = yes
@@ -239,6 +223,14 @@ character_event = {
 	is_triggered_only = yes
 	
 	immediate = {
+		if = {
+			limit = {
+				prisoner = yes
+			}
+			set_character_flag = dw_recruitment_end_unable
+			character_event = { id = MNM.6995 }
+			break = yes
+		}
 		if = {
 			limit = {
 				event_target:satanists_recruiter = {
@@ -266,6 +258,14 @@ character_event = {
 	immediate = {
 		if = {
 			limit = {
+				prisoner = yes
+			}
+			set_character_flag = dw_recruitment_end_unable
+			character_event = { id = MNM.6995 }
+			break = yes
+		}
+		if = {
+			limit = {
 				event_target:satanists_recruiter = {
 					is_alive = yes
 					is_devil_worshiper_trigger = yes
@@ -291,6 +291,14 @@ character_event = {
 	immediate = {
 		if = {
 			limit = {
+				prisoner = yes
+			}
+			set_character_flag = dw_recruitment_end_unable
+			character_event = { id = MNM.6995 }
+			break = yes
+		}
+		if = {
+			limit = {
 				event_target:satanists_recruiter = {
 					is_alive = yes
 					is_devil_worshiper_trigger = yes
@@ -308,14 +316,30 @@ character_event = {
 
 character_event = { # event notifying recruitee that "Something must've gone wrong" (in case recruiter/inductor dies)
 	id = MNM.6995
-	desc = EVTDESC_MNM_6995
+	desc = {
+		text = EVTDESCA_MNM_6995
+		trigger = { NOT = { has_character_flag = dw_recruitment_end_unable } }
+	}
+	desc = {
+		text = EVTDESCB_MNM_6995
+		trigger = { has_character_flag = dw_recruitment_end_unable }
+		picture = GFX_evt_into_the_dungeon
+	}
 	picture = GFX_evt_state_diplomacy
 	border = GFX_event_normal_frame_intrigue
 	
 	is_triggered_only = yes
+	show_root = yes
 	
 	option = {
-		name = EVTOPTA_MNM_6995
+		name = {
+			text = EVTOPTA_MNM_6995
+			trigger = { NOT = { has_character_flag = dw_recruitment_end_unable } }
+		}
+		name = {
+			text = EVTOPTB_MNM_6995
+			trigger = { has_character_flag = dw_recruitment_end_unable }
+		}
 		custom_tooltip = { text = EVTTOOLTIP_MNM_6995 }
 		clr_character_flag = being_recruited_by_the_satanists
 	}
@@ -397,12 +421,6 @@ character_event = {
 			OR = {
 				ai = no
 				NOT = { controls_religion = yes }
-				trait = bad_priest_christian
-				trait = bad_priest_muslim
-				trait = bad_priest_norse
-				trait = bad_priest_tengri
-				trait = bad_priest_zoroastrian
-				trait = bad_priest_aztec
 			}
 		}
 		
@@ -437,17 +455,6 @@ character_event = {
 			modifier = {
 				factor = 1.5
 				is_dumb_trigger = yes
-			}
-			modifier = {
-				factor = 1.5
-				OR = {
-					trait = bad_priest_christian
-					trait = bad_priest_muslim
-					trait = bad_priest_norse
-					trait = bad_priest_tengri
-					trait = bad_priest_zoroastrian
-					trait = bad_priest_aztec
-				}
 			}
 			modifier = {
 				factor = 1.5
@@ -492,6 +499,7 @@ character_event = {
 		reverse_opinion = {
 			who = event_target:satanists_recruiter
 			modifier = opinion_narrow_minded
+			years = 5
 		}
 
 		set_character_flag = unwilling_to_join
@@ -754,6 +762,43 @@ character_event = {
 
 	is_triggered_only = yes
 
+	trigger = {
+		NOR = {
+			prisoner = yes
+			event_target:satanists_recruiter = {
+				OR = {
+					is_alive = no
+					is_devil_worshiper_trigger = no
+				}
+			}
+		}
+	}
+
+	fail_trigger_effect = {
+		if = {
+			limit = {
+				prisoner = yes
+			}
+			set_character_flag = dw_recruitment_end_unable
+			character_event = { id = MNM.6995 } #notify broken chain
+			break = yes
+		}
+		if = {
+			limit = {
+				event_target:satanists_recruiter = {
+					OR = {
+						is_alive = no
+						is_devil_worshiper_trigger = no
+					}
+				}
+			}
+			event_target:satanists_recruiter = { 
+				character_event = { id = MNM.6995 } #notify broken chain
+			}
+			break = yes
+		}
+	}
+
 	# I have been blinded by convention
 	option = {
 		name = EVTOPTA_7009
@@ -838,6 +883,43 @@ character_event = {
 	hide_from = yes
 
 	is_triggered_only = yes
+
+	trigger = {
+		NOR = {
+			prisoner = yes
+			event_target:satanists_recruiter = {
+				OR = {
+					is_alive = no
+					is_devil_worshiper_trigger = no
+				}
+			}
+		}
+	}
+
+	fail_trigger_effect = {
+		if = {
+			limit = {
+				prisoner = yes
+			}
+			set_character_flag = dw_recruitment_end_unable
+			character_event = { id = MNM.6995 } #notify broken chain
+			break = yes
+		}
+		if = {
+			limit = {
+				event_target:satanists_recruiter = {
+					OR = {
+						is_alive = no
+						is_devil_worshiper_trigger = no
+					}
+				}
+			}
+			event_target:satanists_recruiter = { 
+				character_event = { id = MNM.6995 } #notify broken chain
+			}
+			break = yes
+		}
+	}
 
 	#Yes
 	option = {
@@ -945,6 +1027,44 @@ letter_event = {
 	border = GFX_event_letter_frame_intrigue
 
 	is_triggered_only = yes
+
+	trigger = {
+		NOR = {
+			prisoner = yes
+			event_target:satanists_recruiter = {
+				OR = {
+					is_alive = no
+					is_devil_worshiper_trigger = no
+				}
+			}
+		}
+	}
+
+	fail_trigger_effect = {
+		if = {
+			limit = {
+				prisoner = yes
+			}
+			set_character_flag = dw_recruitment_end_unable
+			character_event = { id = MNM.6995 } #notify broken chain
+			break = yes
+		}
+		if = {
+			limit = {
+				event_target:satanists_recruiter = {
+					OR = {
+						is_alive = no
+						is_devil_worshiper_trigger = no
+						prisoner = yes
+					}
+				}
+			}
+			event_target:satanists_recruiter = { 
+				character_event = { id = MNM.6995 } #notify broken chain
+			}
+			break = yes
+		}
+	}
 
 	option = {
 		name = EVTOPTA_7014
@@ -1096,6 +1216,43 @@ character_event = {
 
 	is_triggered_only = yes
 
+	trigger = {
+		NOR = {
+			prisoner = yes
+			event_target:satanists_inductor = {
+				OR = {
+					is_alive = no
+					is_devil_worshiper_trigger = no
+				}
+			}
+		}
+	}
+
+	fail_trigger_effect = {
+		if = {
+			limit = {
+				prisoner = yes
+			}
+			set_character_flag = dw_recruitment_end_unable
+			character_event = { id = MNM.6993 } #notify broken chain
+			break = yes
+		}
+		if = {
+			limit = {
+				event_target:satanists_inductor = {
+					OR = {
+						is_alive = no
+						is_devil_worshiper_trigger = no
+					}
+				}
+			}
+			event_target:satanists_inductor = { 
+				character_event = { id = MNM.6993 } #notify broken chain
+			}
+			break = yes
+		}
+	}
+	
 	option = {
 		name = EVTOPTA_7015
 
@@ -1113,6 +1270,14 @@ character_event = {
 	is_triggered_only = yes
 	
 	immediate = {
+		if = {
+			limit = {
+				prisoner = yes
+			}
+			set_character_flag = dw_recruitment_end_unable
+			character_event = { id = MNM.6993 }
+			break = yes
+		}
 		if = {
 			limit = {
 				event_target:satanists_inductor = { is_alive = yes }
@@ -1138,6 +1303,14 @@ character_event = {
 	immediate = {
 		if = {
 			limit = {
+				prisoner = yes
+			}
+			set_character_flag = dw_recruitment_end_unable
+			character_event = { id = MNM.6993 }
+			break = yes
+		}
+		if = {
+			limit = {
 				event_target:satanists_inductor = { is_alive = yes }
 			}
 			event_target:satanists_inductor = { 
@@ -1159,6 +1332,14 @@ character_event = {
 	is_triggered_only = yes
 	
 	immediate = {
+		if = {
+			limit = {
+				prisoner = yes
+			}
+			set_character_flag = dw_recruitment_end_unable
+			character_event = { id = MNM.6993 }
+			break = yes
+		}
 		if = {
 			limit = {
 				event_target:satanists_inductor = { is_alive = yes }
@@ -1185,6 +1366,14 @@ character_event = {
 	immediate = {
 		if = {
 			limit = {
+				prisoner = yes
+			}
+			set_character_flag = dw_recruitment_end_unable
+			character_event = { id = MNM.6993 }
+			break = yes
+		}
+		if = {
+			limit = {
 				event_target:satanists_inductor = { is_alive = yes }
 			}
 			event_target:satanists_inductor = { 
@@ -1201,14 +1390,30 @@ character_event = {
 
 character_event = {
 	id = MNM.6993
-	desc = EVTDESC_MNM_6993
+	desc = {
+		text = EVTDESCA_MNM_6993
+		trigger = { NOT = { has_character_flag = dw_recruitment_end_unable } }
+	}
+	desc = {
+		text = EVTDESCB_MNM_6993
+		trigger = { has_character_flag = dw_recruitment_end_unable }
+		picture = GFX_evt_into_the_dungeon
+	}
 	picture = GFX_evt_dark_prayer
 	border = GFX_event_normal_frame_intrigue
 	
 	is_triggered_only = yes
+	show_root = yes
 	
 	option = {
-		name = EVTOPTA_MNM_6993
+		name = {
+			text = EVTOPTA_MNM_6993
+			trigger = { NOT = { has_character_flag = dw_recruitment_end_unable } }
+		}
+		name = {
+			text = EVTOPTB_MNM_6993
+			trigger = { has_character_flag = dw_recruitment_end_unable }
+		}
 		custom_tooltip = { text = EVTTOOLTIP_MNM_6993 }
 		clr_character_flag = being_recruited_by_the_satanists
 	}
@@ -1222,6 +1427,43 @@ character_event = {
 	border = GFX_event_normal_frame_intrigue
 
 	is_triggered_only = yes
+
+	trigger = {
+		NOR = {
+			prisoner = yes
+			event_target:satanists_inductor = {
+				OR = {
+					is_alive = no
+					is_devil_worshiper_trigger = no
+				}
+			}
+		}
+	}
+
+	fail_trigger_effect = {
+		if = {
+			limit = {
+				prisoner = yes
+			}
+			set_character_flag = dw_recruitment_end_unable
+			character_event = { id = MNM.6993 } #notify broken chain
+			break = yes
+		}
+		if = {
+			limit = {
+				event_target:satanists_inductor = {
+					OR = {
+						is_alive = no
+						is_devil_worshiper_trigger = no
+					}
+				}
+			}
+			event_target:satanists_inductor = { 
+				character_event = { id = MNM.6993 } #notify broken chain
+			}
+			break = yes
+		}
+	}
 
 	option = {
 		name = EVTOPTA_7016
@@ -2394,19 +2636,6 @@ character_event = {
 		hidden_effect = {
 			random_list = {
 				50 = {
-					modifier = {
-						factor = 2
-						event_target:corrupt_priest_target = {
-							OR = {
-								trait = bad_priest_christian
-								trait = bad_priest_muslim
-								trait = bad_priest_norse
-								trait = bad_priest_tengri
-								trait = bad_priest_zoroastrian
-								trait = bad_priest_aztec
-							}
-						}
-					}
 					hidden_effect = {
 						event_target:corrupt_priest_target = {
 							character_event = { id = MNM.7831 days = 15 random = 45 } #success event
@@ -2465,19 +2694,6 @@ character_event = {
 		hidden_effect = {
 			random_list = {
 				90 = {
-					modifier = {
-						factor = 2
-						event_target:corrupt_priest_target = {
-							OR = {
-								trait = bad_priest_christian
-								trait = bad_priest_muslim
-								trait = bad_priest_norse
-								trait = bad_priest_tengri
-								trait = bad_priest_zoroastrian
-								trait = bad_priest_aztec
-							}
-						}
-					}
 					hidden_effect = {
 						event_target:corrupt_priest_target = {
 							character_event = { id = MNM.7831 days = 15 random = 45 } #success event
@@ -2507,19 +2723,6 @@ character_event = {
 		hidden_effect = {
 			random_list = {
 				90 = {
-					modifier = {
-						factor = 2
-						event_target:corrupt_priest_target = {
-							OR = {
-								trait = bad_priest_christian
-								trait = bad_priest_muslim
-								trait = bad_priest_norse
-								trait = bad_priest_tengri
-								trait = bad_priest_zoroastrian
-								trait = bad_priest_aztec
-							}
-						}
-					}
 					hidden_effect = {
 						event_target:corrupt_priest_target = {
 							character_event = { id = MNM.7831 days = 15 random = 45 } #success event
@@ -3028,19 +3231,6 @@ character_event = {
 		hidden_effect = {
 			random_list = {
 				50 = {
-					modifier = {
-						factor = 2
-						event_target:corrupt_priest_target = {
-							OR = {
-								trait = bad_priest_christian
-								trait = bad_priest_muslim
-								trait = bad_priest_norse
-								trait = bad_priest_tengri
-								trait = bad_priest_zoroastrian
-								trait = bad_priest_aztec
-							}
-						}
-					}
 					hidden_effect = {
 						event_target:corrupt_priest_target = {
 							character_event = { id = MNM.7836 days = 15 random = 45 } #success event
@@ -3099,19 +3289,6 @@ character_event = {
 		hidden_effect = {
 			random_list = {
 				90 = {
-					modifier = {
-						factor = 2
-						event_target:corrupt_priest_target = {
-							OR = {
-								trait = bad_priest_christian
-								trait = bad_priest_muslim
-								trait = bad_priest_norse
-								trait = bad_priest_tengri
-								trait = bad_priest_zoroastrian
-								trait = bad_priest_aztec
-							}
-						}
-					}
 					hidden_effect = {
 						event_target:corrupt_priest_target = {
 							character_event = { id = MNM.7836 days = 15 random = 45 } #success event
@@ -3141,19 +3318,6 @@ character_event = {
 		hidden_effect = {
 			random_list = {
 				90 = {
-					modifier = {
-						factor = 2
-						event_target:corrupt_priest_target = {
-							OR = {
-								trait = bad_priest_christian
-								trait = bad_priest_muslim
-								trait = bad_priest_norse
-								trait = bad_priest_tengri
-								trait = bad_priest_zoroastrian
-								trait = bad_priest_aztec
-							}
-						}
-					}
 					hidden_effect = {
 						event_target:corrupt_priest_target = {
 							character_event = { id = MNM.7836 days = 15 random = 45 } #success event
@@ -3577,15 +3741,16 @@ character_event = {
 							}
 							modifier = {
 								trait = cancer
-								NOT = { trait = has_measles }
-								NOT = { trait = flu }
-								NOT = { trait = food_poisoning }
-								NOT = { trait = gout }
-								NOT = { trait = scurvy }
-								NOT = { trait = lovers_pox }
-								NOT = { trait = pneumonic }
-								NOT = { trait = syphilitic }
-								NOT = { trait = leper }
+								NOR = {
+									trait = has_measles
+									trait = flu
+									trait = food_poisoning
+									trait = gout
+									trait = scurvy
+									trait = lovers_pox
+									trait = pneumonic
+									trait = leper
+								}
 								factor = 0.5
 							}
 							remove_random_disease_effect = yes # sets a flag to remove random "regular" disease
@@ -3801,16 +3966,16 @@ character_event = {
 			remove_trait = one_handed
 			if = {
 				limit = {
-					has_character_modifier = golden_hand
+					has_artifact = prosthetic_hand_gold
 				}
-				remove_character_modifier = golden_hand
+				destroy_artifact = prosthetic_hand_gold
 				wealth = 10
 			}
 			if = {
 				limit = {
-					has_character_modifier = iron_hand
+					has_artifact = prosthetic_hand_metal
 				}
-				remove_character_modifier = iron_hand
+				destroy_artifact = prosthetic_hand_metal
 			}
 			if = {
 				limit = {
@@ -3833,9 +3998,9 @@ character_event = {
 			}
 			if = {
 				limit = {
-					has_character_modifier = prosthetic_leg
+					has_artifact = prosthetic_leg_artifact
 				}
-				remove_character_modifier = prosthetic_leg
+				destroy_artifact = prosthetic_leg_artifact
 			}
 			if = {
 				limit = {
@@ -3901,11 +4066,6 @@ character_event = {
 			remove_trait = pneumonic
 		}
 		if = {
-			limit = { has_character_flag = removing_syphilitic }
-			remove_trait = syphilitic
-			set_character_flag = immune_syphilis
-		}
-		if = {
 			limit = { has_character_flag = removing_leper }
 			remove_trait = leper
 		}
@@ -3913,11 +4073,6 @@ character_event = {
 			limit = { has_character_flag = removing_has_tuberculosis }
 			remove_trait = has_tuberculosis
 			set_character_flag = immune_tuberculosis
-		}
-		if = {
-			limit = { has_character_flag = removing_has_aztec_disease }
-			remove_trait = has_aztec_disease
-			set_character_flag = immune_aztec_disease
 		}
 		if = {
 			limit = { has_character_flag = removing_has_small_pox }
@@ -3972,7 +4127,6 @@ character_event = {
 		clr_character_flag = removing_cancer
 		clr_character_flag = removing_leper
 		clr_character_flag = removing_has_tuberculosis
-		clr_character_flag = removing_has_aztec_disease
 		clr_character_flag = removing_has_small_pox
 		clr_character_flag = removing_has_bubonic_plague
 		clr_character_flag = removing_has_typhus
@@ -4077,7 +4231,11 @@ character_event = {
 				dynasty = FROM
 				factor = 2
 			}
-			join_from_devil_worshiper_society = yes
+			modifier = {
+				is_in_society = yes
+				factor = 0
+			}
+			join_from_devil_worshiper_society_effect = yes
 		}
 
 		random = {
@@ -4795,11 +4953,15 @@ character_event = {
 			50 = { #Dangerous
 				modifier = {
 					factor = 1.3
-					society_rank == 4
+					event_target:curser = {
+						society_rank == 4
+					}
 				}
 				modifier = {
 					factor = 1.3
-					is_learned_trigger = yes
+					event_target:curser = {
+						is_learned_trigger = yes
+					}
 				}
 				modifier = {
 					factor = 0.75
@@ -4815,7 +4977,6 @@ character_event = {
 				}
 				random_list = {
 					10 = { give_pneumonic_effect = yes }
-					10 = { give_syphilitic_effect = yes }
 					10 = { give_has_tuberculosis_effect = yes }
 					10 = { give_has_small_pox_effect = yes }
 					10 = { give_has_measles_effect = yes }
@@ -4833,11 +4994,15 @@ character_event = {
 			20 = { #Lethal
 				modifier = {
 					factor = 1.5
-					society_rank == 4
+					event_target:curser = {
+						society_rank == 4
+					}
 				}
 				modifier = {
 					factor = 1.5
-					is_learned_trigger = yes
+					event_target:curser = {
+						is_learned_trigger = yes
+					}
 				}
 				modifier = {
 					factor = 0.75
@@ -4869,24 +5034,24 @@ character_event = {
 	hide_window = yes
 	is_triggered_only = yes
 
-	option = {
+	immediate = {
 		if = {
 			limit = { has_disease_trigger = yes } 
-			event_target:curser = { character_event = { id = MNM.7821 } }
+			event_target:curser = { 
+				character_event = { id = MNM.7821 } 
+				hidden_effect = {
+					major_soul_corruption_effect = yes
+				}
+			}
+
 			#the three following lines are hook-ins from hermetics ward off evil-event:
 			clr_character_flag = small_defense_against_dark_forces
 			clr_character_flag = medium_defense_against_dark_forces
 			clr_character_flag = large_defense_against_dark_forces
-			hidden_effect = {
-				major_soul_corruption_effect = yes
-			}
 		}
 		if = {
 			limit = { has_disease_trigger = no } 
 			character_event = { id = MNM.7820 days = 5 }
-			hidden_effect = {
-				minor_soul_corruption_effect = yes
-			}
 		}
 	}
 }
@@ -4915,7 +5080,6 @@ character_event = {
 				limit = {
 					OR = {
 						trait = ill
-						trait = syphilitic
 						trait = flu
 						trait = food_poisoning
 						trait = gout
@@ -5053,7 +5217,7 @@ character_event = {
 				limit = {
 					ROOT = { ai = no }
 				}
-				join_prev_devil_worshiper_society = yes
+				join_prev_devil_worshiper_society_effect = yes
 			}
 		
 			#Set correct education
@@ -5213,97 +5377,6 @@ character_event = {
 			# Females should be able to lead armies
 			set_character_flag = special_marshal
 
-			#Nicknames
-			random_list = {
-				10 = {
-					give_nickname = nick_the_alchemist
-				}
-				10 = { 
-					modifier = {
-						factor = 0
-						NOR = {
-							trait = deceitful
-							trait = elusive_shadow
-							trait = intricate_webweaver
-						}
-					}
-					give_nickname = nick_the_spider
-				}
-				10 = { 
-					modifier = {
-						factor = 0
-						has_education_intrigue_trigger = no
-					}
-					give_nickname = nick_the_whisperer
-				}
-				10 = { 
-					modifier = {
-						factor = 0
-						has_education_intrigue_trigger = no
-					}
-					give_nickname = nick_the_shadow
-				}
-				10 = { 
-					give_nickname = nick_of_the_wilds
-				}
-				10 = { 
-					modifier = {
-						factor = 0
-						NAND = {
-							is_female = yes
-							OR = {
-								trait = seductress
-								trait = lustful
-							}
-						}
-					}
-					give_nickname = nick_the_temptress
-				}
-				10 = { 
-					modifier = {
-						factor = 0
-						NAND = {
-							is_female = no
-							OR = {
-								trait = seducer
-								trait = lustful
-							}
-						}
-					}
-					give_nickname = nick_the_seducer
-				}
-				10 = { 
-					modifier = {
-						factor = 0
-						NAND = {
-							is_female = yes
-							trait = fair
-						}
-					}
-					give_nickname = nick_the_fair
-				}
-				10 = { 
-					modifier = {
-						factor = 0
-						NAND = {
-							is_female = no
-							trait = fair
-						}
-					}
-					give_nickname = nick_the_handsome
-				}
-				10 = { 
-					give_nickname = nick_the_black
-				}
-				10 = { 
-					modifier = {
-						factor = 0
-						NOT = { trait = hunchback }
-					}
-					give_nickname = nick_the_hunchback
-				}
-				50 = { }
-			}
 			character_event = { id = MNM.7823 }	
 		}
 	}
@@ -5390,99 +5463,6 @@ character_event = { #Head of Religion
 
 	option = {
 		name = MNM.7500.a
-		FROM = {
-			hidden_effect = { character_event = { id = MNM.7506 } }
-			death = {
-				death_reason = death_missing
-			}
-		}
-
-
-		#Clear missions and give rewards
-		if = {
-			limit = { 
-				FROM = { is_virgin_trigger = yes }
-				has_quest = quest_the_devil_worshipers_sacrifice_virgin
-			}
-			clr_quest = quest_the_devil_worshipers_sacrifice_virgin
-			if = {
-				limit = { FROM = { is_female = yes } }
-				sound_effect = devil_worshippers_sacrifice_virgin_female
-			}
-			if = {
-				limit = { FROM = { is_female = no } }
-				sound_effect = devil_worshippers_sacrifice_virgin_male
-			}
-			add_society_currency_major_effect = yes
-			increase_visibility_minor_effect = yes
-			minor_soul_corruption_effect = yes
-			break = yes
-		}
-		if = {
-			limit = { 
-				OR = {
-					FROM = { is_priest = yes }
-					FROM = { is_ascetic_trigger = yes }
-				}
-				has_quest = quest_the_devil_worshipers_sacrifice_holy_person
-			}
-			clr_quest = quest_the_devil_worshipers_sacrifice_holy_person
-			if = {
-				limit = { FROM = { is_female = yes } }
-				sound_effect = devil_worshippers_sacrifice_holy_woman
-			}
-			if = {
-				limit = { FROM = { is_female = no } }
-				sound_effect = devil_worshippers_sacrifice_holy_man
-			}
-			add_society_currency_major_effect = yes
-			increase_visibility_minor_effect = yes
-			minor_soul_corruption_effect = yes
-			break = yes
-		}
-		if = {
-			limit = { 
-				FROM = { trait = dwarf }
-				has_quest = quest_the_devil_worshipers_sacrifice_dwarf
-			}
-			clr_quest = quest_the_devil_worshipers_sacrifice_dwarf
-			if = {
-				limit = { FROM = { is_female = yes } }
-				sound_effect = devil_worshippers_sacrifice_dwarf_female
-			}
-			if = {
-				limit = { FROM = { is_female = no } }
-				sound_effect = devil_worshippers_sacrifice_dwarf_male
-			}
-			add_society_currency_major_effect = yes
-			increase_visibility_minor_effect = yes
-			minor_soul_corruption_effect = yes
-			break = yes
-		}
-		if = {
-			limit = { 
-				FROM = { is_landed = yes }
-				has_quest = quest_the_devil_worshipers_sacrifice_ruler
-			}
-			clr_quest = quest_the_devil_worshipers_sacrifice_ruler
-			if = {
-				limit = { FROM = { is_female = yes } }
-				sound_effect = devil_worshippers_sacrifice_ruler_female
-			}
-			if = {
-				limit = { FROM = { is_female = no } }
-				sound_effect = devil_worshippers_sacrifice_ruler_male
-			}
-			add_society_currency_major_effect = yes
-			increase_visibility_minor_effect = yes
-			minor_soul_corruption_effect = yes
-			break = yes
-		}
-
-		#And if there is no quest is completed
-		add_society_currency_medium_effect = yes
-		increase_visibility_effect = yes
-		major_soul_corruption_effect = yes
 	}
 }
 
@@ -5496,98 +5476,6 @@ character_event = { #Holy man
 
 	option = {
 		name = MNM.7500.a
-		FROM = {
-			hidden_effect = { character_event = { id = MNM.7506 } }
-			death = {
-				death_reason = death_missing
-			}
-		}
-
-		#Clear missions and give rewards
-		if = {
-			limit = { 
-				FROM = { is_virgin_trigger = yes }
-				has_quest = quest_the_devil_worshipers_sacrifice_virgin
-			}
-			clr_quest = quest_the_devil_worshipers_sacrifice_virgin
-			if = {
-				limit = { FROM = { is_female = yes } }
-				sound_effect = devil_worshippers_sacrifice_virgin_female
-			}
-			if = {
-				limit = { FROM = { is_female = no } }
-				sound_effect = devil_worshippers_sacrifice_virgin_male
-			}
-			add_society_currency_medium_effect = yes
-			increase_visibility_minor_effect = yes
-			minor_soul_corruption_effect = yes
-			break = yes
-		}
-		if = {
-			limit = { 
-				OR = {
-					FROM = { is_priest = yes }
-					FROM = { is_ascetic_trigger = yes }
-				}
-				has_quest = quest_the_devil_worshipers_sacrifice_holy_person
-			}
-			clr_quest = quest_the_devil_worshipers_sacrifice_holy_person
-			if = {
-				limit = { FROM = { is_female = yes } }
-				sound_effect = devil_worshippers_sacrifice_holy_woman
-			}
-			if = {
-				limit = { FROM = { is_female = no } }
-				sound_effect = devil_worshippers_sacrifice_holy_man
-			}
-			add_society_currency_medium_effect = yes
-			increase_visibility_minor_effect = yes
-			minor_soul_corruption_effect = yes
-			break = yes
-		}
-		if = {
-			limit = { 
-				FROM = { trait = dwarf }
-				has_quest = quest_the_devil_worshipers_sacrifice_dwarf
-			}
-			clr_quest = quest_the_devil_worshipers_sacrifice_dwarf
-			if = {
-				limit = { FROM = { is_female = yes } }
-				sound_effect = devil_worshippers_sacrifice_dwarf_female
-			}
-			if = {
-				limit = { FROM = { is_female = no } }
-				sound_effect = devil_worshippers_sacrifice_dwarf_male
-			}
-			add_society_currency_medium_effect = yes
-			increase_visibility_minor_effect = yes
-			minor_soul_corruption_effect = yes
-			break = yes
-		}
-		if = {
-			limit = { 
-				FROM = { is_landed = yes }
-				has_quest = quest_the_devil_worshipers_sacrifice_ruler
-			}
-			clr_quest = quest_the_devil_worshipers_sacrifice_ruler
-			if = {
-				limit = { FROM = { is_female = yes } }
-				sound_effect = devil_worshippers_sacrifice_ruler_female
-			}
-			if = {
-				limit = { FROM = { is_female = no } }
-				sound_effect = devil_worshippers_sacrifice_ruler_male
-			}
-			add_society_currency_medium_effect = yes
-			increase_visibility_minor_effect = yes
-			minor_soul_corruption_effect = yes
-			break = yes
-		}
-
-		#And if there is no quest is completed
-		add_society_currency_minor_effect = yes
-		increase_visibility_effect = yes
-		major_soul_corruption_effect = yes
 	}
 }
 
@@ -5601,98 +5489,6 @@ character_event = { #Dwarf
 
 	option = {
 		name = MNM.7502.a
-		FROM = {
-			hidden_effect = { character_event = { id = MNM.7506 } }
-			death = {
-				death_reason = death_missing
-			}
-		}
-
-		#Clear missions and give rewards
-		if = {
-			limit = { 
-				FROM = { is_virgin_trigger = yes }
-				has_quest = quest_the_devil_worshipers_sacrifice_virgin
-			}
-			clr_quest = quest_the_devil_worshipers_sacrifice_virgin
-			if = {
-				limit = { FROM = { is_female = yes } }
-				sound_effect = devil_worshippers_sacrifice_virgin_female
-			}
-			if = {
-				limit = { FROM = { is_female = no } }
-				sound_effect = devil_worshippers_sacrifice_virgin_male
-			}
-			add_society_currency_medium_effect = yes
-			increase_visibility_minor_effect = yes
-			minor_soul_corruption_effect = yes
-			break = yes
-		}
-		if = {
-			limit = { 
-				OR = {
-					FROM = { is_priest = yes }
-					FROM = { is_ascetic_trigger = yes }
-				}
-				has_quest = quest_the_devil_worshipers_sacrifice_holy_person
-			}
-			clr_quest = quest_the_devil_worshipers_sacrifice_holy_person
-			if = {
-				limit = { FROM = { is_female = yes } }
-				sound_effect = devil_worshippers_sacrifice_holy_woman
-			}
-			if = {
-				limit = { FROM = { is_female = no } }
-				sound_effect = devil_worshippers_sacrifice_holy_man
-			}
-			add_society_currency_medium_effect = yes
-			increase_visibility_minor_effect = yes
-			minor_soul_corruption_effect = yes
-			break = yes
-		}
-		if = {
-			limit = { 
-				FROM = { trait = dwarf }
-				has_quest = quest_the_devil_worshipers_sacrifice_dwarf
-			}
-			clr_quest = quest_the_devil_worshipers_sacrifice_dwarf
-			if = {
-				limit = { FROM = { is_female = yes } }
-				sound_effect = devil_worshippers_sacrifice_dwarf_female
-			}
-			if = {
-				limit = { FROM = { is_female = no } }
-				sound_effect = devil_worshippers_sacrifice_dwarf_male
-			}
-			add_society_currency_medium_effect = yes
-			increase_visibility_minor_effect = yes
-			minor_soul_corruption_effect = yes
-			break = yes
-		}
-		if = {
-			limit = { 
-				FROM = { is_landed = yes }
-				has_quest = quest_the_devil_worshipers_sacrifice_ruler
-			}
-			clr_quest = quest_the_devil_worshipers_sacrifice_ruler
-			if = {
-				limit = { FROM = { is_female = yes } }
-				sound_effect = devil_worshippers_sacrifice_ruler_female
-			}
-			if = {
-				limit = { FROM = { is_female = no } }
-				sound_effect = devil_worshippers_sacrifice_ruler_male
-			}
-			add_society_currency_medium_effect = yes
-			increase_visibility_minor_effect = yes
-			minor_soul_corruption_effect = yes
-			break = yes
-		}
-
-		#And if there is no quest is completed
-		add_society_currency_minor_effect = yes
-		increase_visibility_effect = yes
-		major_soul_corruption_effect = yes
 	}
 }
 
@@ -5706,98 +5502,6 @@ character_event = { #child
 
 	option = {
 		name = MNM.7503.a
-		FROM = {
-			hidden_effect = { character_event = { id = MNM.7506 } }
-			death = {
-				death_reason = death_missing
-			}
-		}
-
-		#Clear missions and give rewards
-		if = {
-			limit = { 
-				FROM = { is_virgin_trigger = yes }
-				has_quest = quest_the_devil_worshipers_sacrifice_virgin
-			}
-			clr_quest = quest_the_devil_worshipers_sacrifice_virgin
-			if = {
-				limit = { FROM = { is_female = yes } }
-				sound_effect = devil_worshippers_sacrifice_virgin_female
-			}
-			if = {
-				limit = { FROM = { is_female = no } }
-				sound_effect = devil_worshippers_sacrifice_virgin_male
-			}
-			add_society_currency_minor_effect = yes
-			increase_visibility_minor_effect = yes
-			minor_soul_corruption_effect = yes
-			break = yes
-		}
-		if = {
-			limit = { 
-				OR = {
-					FROM = { is_priest = yes }
-					FROM = { is_ascetic_trigger = yes }
-				}
-				has_quest = quest_the_devil_worshipers_sacrifice_holy_person
-			}
-			clr_quest = quest_the_devil_worshipers_sacrifice_holy_person
-			if = {
-				limit = { FROM = { is_female = yes } }
-				sound_effect = devil_worshippers_sacrifice_holy_woman
-			}
-			if = {
-				limit = { FROM = { is_female = no } }
-				sound_effect = devil_worshippers_sacrifice_holy_man
-			}
-			add_society_currency_minor_effect = yes
-			increase_visibility_minor_effect = yes
-			minor_soul_corruption_effect = yes
-			break = yes
-		}
-		if = {
-			limit = { 
-				FROM = { trait = dwarf }
-				has_quest = quest_the_devil_worshipers_sacrifice_dwarf
-			}
-			clr_quest = quest_the_devil_worshipers_sacrifice_dwarf
-			if = {
-				limit = { FROM = { is_female = yes } }
-				sound_effect = devil_worshippers_sacrifice_dwarf_female
-			}
-			if = {
-				limit = { FROM = { is_female = no } }
-				sound_effect = devil_worshippers_sacrifice_dwarf_male
-			}
-			add_society_currency_minor_effect = yes
-			increase_visibility_minor_effect = yes
-			minor_soul_corruption_effect = yes
-			break = yes
-		}
-		if = {
-			limit = { 
-				FROM = { is_landed = yes }
-				has_quest = quest_the_devil_worshipers_sacrifice_ruler
-			}
-			clr_quest = quest_the_devil_worshipers_sacrifice_ruler
-			if = {
-				limit = { FROM = { is_female = yes } }
-				sound_effect = devil_worshippers_sacrifice_ruler_female
-			}
-			if = {
-				limit = { FROM = { is_female = no } }
-				sound_effect = devil_worshippers_sacrifice_ruler_male
-			}
-			add_society_currency_minor_effect = yes
-			increase_visibility_minor_effect = yes
-			minor_soul_corruption_effect = yes
-			break = yes
-		}
-
-		#And if there is no quest is completed
-		add_society_currency_trivial_effect = yes
-		increase_visibility_effect = yes
-		major_soul_corruption_effect = yes
 	}
 }
 
@@ -5811,98 +5515,6 @@ character_event = { #Virgin
 
 	option = {
 		name = MNM.7504.a
-		FROM = {
-			hidden_effect = { character_event = { id = MNM.7506 } }
-			death = {
-				death_reason = death_missing
-			}
-		}
-
-		#Clear missions and give rewards
-		if = {
-			limit = { 
-				FROM = { is_virgin_trigger = yes }
-				has_quest = quest_the_devil_worshipers_sacrifice_virgin
-			}
-			clr_quest = quest_the_devil_worshipers_sacrifice_virgin
-			if = {
-				limit = { FROM = { is_female = yes } }
-				sound_effect = devil_worshippers_sacrifice_virgin_female
-			}
-			if = {
-				limit = { FROM = { is_female = no } }
-				sound_effect = devil_worshippers_sacrifice_virgin_male
-			}
-			add_society_currency_medium_effect = yes
-			increase_visibility_minor_effect = yes
-			minor_soul_corruption_effect = yes
-			break = yes
-		}
-		if = {
-			limit = { 
-				OR = {
-					FROM = { is_priest = yes }
-					FROM = { is_ascetic_trigger = yes }
-				}
-				has_quest = quest_the_devil_worshipers_sacrifice_holy_person
-			}
-			clr_quest = quest_the_devil_worshipers_sacrifice_holy_person
-			if = {
-				limit = { FROM = { is_female = yes } }
-				sound_effect = devil_worshippers_sacrifice_holy_woman
-			}
-			if = {
-				limit = { FROM = { is_female = no } }
-				sound_effect = devil_worshippers_sacrifice_holy_man
-			}
-			add_society_currency_medium_effect = yes
-			increase_visibility_minor_effect = yes
-			minor_soul_corruption_effect = yes
-			break = yes
-		}
-		if = {
-			limit = { 
-				FROM = { trait = dwarf }
-				has_quest = quest_the_devil_worshipers_sacrifice_dwarf
-			}
-			clr_quest = quest_the_devil_worshipers_sacrifice_dwarf
-			if = {
-				limit = { FROM = { is_female = yes } }
-				sound_effect = devil_worshippers_sacrifice_dwarf_female
-			}
-			if = {
-				limit = { FROM = { is_female = no } }
-				sound_effect = devil_worshippers_sacrifice_dwarf_male
-			}
-			add_society_currency_medium_effect = yes
-			increase_visibility_minor_effect = yes
-			minor_soul_corruption_effect = yes
-			break = yes
-		}
-		if = {
-			limit = { 
-				FROM = { is_landed = yes }
-				has_quest = quest_the_devil_worshipers_sacrifice_ruler
-			}
-			clr_quest = quest_the_devil_worshipers_sacrifice_ruler
-			if = {
-				limit = { FROM = { is_female = yes } }
-				sound_effect = devil_worshippers_sacrifice_ruler_female
-			}
-			if = {
-				limit = { FROM = { is_female = no } }
-				sound_effect = devil_worshippers_sacrifice_ruler_male
-			}
-			add_society_currency_medium_effect = yes
-			increase_visibility_minor_effect = yes
-			minor_soul_corruption_effect = yes
-			break = yes
-		}
-
-		#And if there is no quest is completed
-		add_society_currency_minor_effect = yes
-		increase_visibility_effect = yes
-		major_soul_corruption_effect = yes
 	}
 }
 
@@ -5916,98 +5528,6 @@ character_event = { #regular dude
 
 	option = {
 		name = MNM.7505.a
-		FROM = {
-			hidden_effect = { character_event = { id = MNM.7506 } }
-			death = {
-				death_reason = death_missing
-			}
-		}
-
-		#Clear missions and give rewards
-		if = {
-			limit = { 
-				FROM = { is_virgin_trigger = yes }
-				has_quest = quest_the_devil_worshipers_sacrifice_virgin
-			}
-			clr_quest = quest_the_devil_worshipers_sacrifice_virgin
-			if = {
-				limit = { FROM = { is_female = yes } }
-				sound_effect = devil_worshippers_sacrifice_virgin_female
-			}
-			if = {
-				limit = { FROM = { is_female = no } }
-				sound_effect = devil_worshippers_sacrifice_virgin_male
-			}
-			add_society_currency_minor_effect = yes
-			increase_visibility_minor_effect = yes
-			minor_soul_corruption_effect = yes
-			break = yes
-		}
-		if = {
-			limit = { 
-				OR = {
-					FROM = { is_priest = yes }
-					FROM = { is_ascetic_trigger = yes }
-				}
-				has_quest = quest_the_devil_worshipers_sacrifice_holy_person
-			}
-			clr_quest = quest_the_devil_worshipers_sacrifice_holy_person
-			if = {
-				limit = { FROM = { is_female = yes } }
-				sound_effect = devil_worshippers_sacrifice_holy_woman
-			}
-			if = {
-				limit = { FROM = { is_female = no } }
-				sound_effect = devil_worshippers_sacrifice_holy_man
-			}
-			add_society_currency_minor_effect = yes
-			increase_visibility_minor_effect = yes
-			minor_soul_corruption_effect = yes
-			break = yes
-		}
-		if = {
-			limit = { 
-				FROM = { trait = dwarf }
-				has_quest = quest_the_devil_worshipers_sacrifice_dwarf
-			}
-			clr_quest = quest_the_devil_worshipers_sacrifice_dwarf
-			if = {
-				limit = { FROM = { is_female = yes } }
-				sound_effect = devil_worshippers_sacrifice_dwarf_female
-			}
-			if = {
-				limit = { FROM = { is_female = no } }
-				sound_effect = devil_worshippers_sacrifice_dwarf_male
-			}
-			add_society_currency_minor_effect = yes
-			increase_visibility_minor_effect = yes
-			minor_soul_corruption_effect = yes
-			break = yes
-		}
-		if = {
-			limit = { 
-				FROM = { is_landed = yes }
-				has_quest = quest_the_devil_worshipers_sacrifice_ruler
-			}
-			clr_quest = quest_the_devil_worshipers_sacrifice_ruler
-			if = {
-				limit = { FROM = { is_female = yes } }
-				sound_effect = devil_worshippers_sacrifice_ruler_female
-			}
-			if = {
-				limit = { FROM = { is_female = no } }
-				sound_effect = devil_worshippers_sacrifice_ruler_male
-			}
-			add_society_currency_minor_effect = yes
-			increase_visibility_minor_effect = yes
-			minor_soul_corruption_effect = yes
-			break = yes
-		}
-
-		#And if there is no quest is completed
-		add_society_currency_trivial_effect = yes
-		increase_visibility_effect = yes
-		major_soul_corruption_effect = yes
 	}
 }
 
@@ -6074,10 +5594,19 @@ character_event = { #birth
 	}
 	
 	immediate = {
-		random_list = {
-			50 = { set_character_flag = demon_child }
-			50 = { set_character_flag = demon_child_fake }
+		set_character_flag = demon_child_non_pagan
+		set_global_flag = demon_child_born
+		add_character_modifier = {
+			name = demon_child_non_pagan
+			hidden = yes
+			days = -1
 		}
+		remove_trait = sickly
+		character_event = { id = SoA.3019 days = 90 random = 90 } # Demon child tombola
+		#random_list = {
+		#	50 = { set_character_flag = demon_child_non_pagan }
+		#	50 = { set_character_flag = demon_child_fake }
+		#}
 		mother = { 
 			clr_character_flag = DW_unholy_mother 
 			save_event_target_as = unholy_mother
@@ -6179,6 +5708,7 @@ character_event = {
 
 	is_triggered_only = yes
 	is_in_society = yes
+	only_capable = yes
 
 	trigger = {
 		is_devil_worshiper_trigger = yes
@@ -6207,6 +5737,23 @@ character_event = {
 					factor = 0 
 					is_playable = no 
 				}
+				modifier = {
+					factor = 0
+					NOT = {
+						any_character = {
+					    	is_offmap_ruler = no
+					        is_priest = yes
+					        ai = yes
+					        NOT = { character = ROOT }
+					        is_within_diplo_range = ROOT
+					        is_inaccessible_trigger = no
+					        religion = ROOT
+					        prisoner = no
+					        NOT = { trait = incapable }
+					        NOT = { same_society_as = ROOT }
+						}
+					}
+				}
 				event_target:grand_enchanter = {
 					character_event = { id = MNM.7838 } #Corrupt a priest
 				}
@@ -6229,6 +5776,9 @@ character_event = {
 									NOT = {
 										character = ROOT
 									}
+								}
+								holder_scope = {
+									NOT = { same_society_as = ROOT }
 								}
 							}
 						}
@@ -6349,6 +5899,7 @@ society_quest_event = {
 					holding_type = temple
 					holder_scope = { religion = ROOT }
 					holder_scope = { NOT = { character = ROOT } }
+					holder_scope = { NOT = { same_society_as = ROOT } }
 				}
 			}
 			random_province_holding = {
@@ -6356,6 +5907,7 @@ society_quest_event = {
 					holding_type = temple
 					holder_scope = { religion = ROOT }
 					holder_scope = { NOT = { character = ROOT } }
+					holder_scope = { NOT = { same_society_as = ROOT } }
 				}
 				save_event_target_as = dw_desecration_target
 			}
@@ -6367,12 +5919,14 @@ society_quest_event = {
 				any_province_holding = {
 					holding_type = temple
 					holder_scope = { religion = ROOT }
+					holder_scope = { NOT = { same_society_as = ROOT } }
 				}
 			}
 			random_province_holding = {
 				limit = {
 					holding_type = temple
 					holder_scope = { religion = ROOT }
+					holder_scope = { NOT = { same_society_as = ROOT } }
 				}
 				save_event_target_as = dw_desecration_target
 			}
@@ -6557,7 +6111,7 @@ character_event = {
 		}
 		tooltip_info = martial
 		name = EVTOPT_MNM_7113_MARTIAL
-		add_society_currency_medium_effect = yes
+		add_society_currency_minor_effect = yes
 		event_target:desecration_holder = {
 			if = {
 				death = {
@@ -6578,7 +6132,7 @@ character_event = {
 		}
 		tooltip_info = intrigue
 		name = EVTOPT_MNM_7113_INTRIGUE
-		add_society_currency_medium_effect = yes
+		add_society_currency_minor_effect = yes
 		event_target:desecration_holder = {
 			death = {
 				death_reason = death_sacrificed
@@ -6759,7 +6313,7 @@ character_event = {
 		}
 		name = EVTOPT_MNM_7116_STEWARDSHIP
 		tooltip_info = stewardship
-		add_society_currency_medium_effect = yes
+		add_society_currency_minor_effect = yes
 		if = {
 			limit = {
 				event_target:dw_desecration_target = {
@@ -6803,7 +6357,7 @@ character_event = {
 		}
 		tooltip_info = learning
 		name = EVTOPT_MNM_7116_LEARNING
-		add_society_currency_major_effect = yes
+		add_society_currency_medium_effect = yes
 		character_event = { id = MNM.7117 days = 4 }
 	}
 	option = {
@@ -6849,7 +6403,7 @@ character_event = {
 	option = {
 		name = EVTOPTB_MNM_7116
 
-		add_society_currency_minor_effect = yes
+		add_society_currency_trivial_effect = yes
 
 		character_event = { id = MNM.7117 days = 4 }
 	}
@@ -6883,7 +6437,7 @@ character_event = {
 		name = EVTOPT_MNM_7117_VIOLENT
 		
 		clr_quest = quest_devil_worshipers_desecrate_temple
-		add_society_currency_medium_effect = yes
+		add_society_currency_minor_effect = yes
 		
 		event_target:dw_desecration_target = {
 			add_holding_modifier = {
@@ -6975,6 +6529,7 @@ society_quest_event = {
 	immediate = {
 		random_character = {
 		    limit = {
+		    	is_offmap_ruler = no
 		        is_priest = yes
 		        ai = yes
 		        NOT = { character = ROOT }
@@ -6982,7 +6537,8 @@ society_quest_event = {
 		        is_inaccessible_trigger = no
 		        religion = ROOT
 		        prisoner = no
-		        NOT = { trait = incapable }   
+		        NOT = { trait = incapable }
+		        NOT = { same_society_as = ROOT }
 		    }
 		    save_event_target_as = corrupt_priest_mission_target
 		}
@@ -6990,6 +6546,7 @@ society_quest_event = {
 		    limit = { society_rank >= 2 }
 		    random_character = {
 		        limit = {
+		        	is_offmap_ruler = no
 		            is_ruler = yes
 		            ai = yes
 		            NOT = { character = ROOT }
@@ -7001,6 +6558,7 @@ society_quest_event = {
 		            higher_tier_than = BARON
 		            lower_tier_than = KING
 		            is_priest = yes
+		            NOT = { same_society_as = ROOT }
 		        }
 		        save_event_target_as = corrupt_priest_mission_target
 		    }
@@ -7009,6 +6567,7 @@ society_quest_event = {
 		    limit = { society_rank >= 3 }
 		    random_character = {
 		        limit = {
+		        	is_offmap_ruler = no
 		            is_ruler = yes
 		            ai = yes
 		            NOT = { character = ROOT }
@@ -7019,6 +6578,7 @@ society_quest_event = {
 		            NOT = { trait = incapable }
 		            higher_tier_than = BARON
 		            is_priest = yes
+		            NOT = { same_society_as = ROOT }
 		        }
 		        save_event_target_as = corrupt_priest_mission_target
 		    }
@@ -7194,6 +6754,7 @@ society_quest_event = {
 		        NOT = { trait = lunatic }
 		        NOT = { trait = possessed }
 				is_adult = yes
+				NOT = { same_society_as = ROOT }
 		    }
 		    save_event_target_as = demonic_possession_mission_target
 		}
@@ -10129,8 +9690,7 @@ narrative_event = {
 					duration = -1
 				}
 			}
-			
-			if = {
+			else_if = {
 				limit = { has_character_modifier = suspected_witch }
 				remove_character_modifier = suspected_witch
 				add_character_modifier = {
@@ -11223,34 +10783,6 @@ narrative_event = {
 				set_character_flag = dw_gain_poet
 			}
 		}
-		
-		random_courtier = {
-			limit = {
-				prisoner = yes
-				host = { character = ROOT }
-			}
-			death = {
-				death_reason = death_execution_burning killer = ROOT
-			}
-		}
-		random_courtier = {
-			limit = {
-				prisoner = yes
-				host = { character = ROOT }
-			}
-			death = {
-				death_reason = death_execution_burning killer = ROOT
-			}
-		}
-		random_courtier = {
-			limit = {
-				prisoner = yes
-				host = { character = ROOT }
-			}
-			death = {
-				death_reason = death_execution_burning killer = ROOT
-			}
-		}
 	}
 	
 	option = {
@@ -11578,11 +11110,7 @@ character_event = {
 		if = {
 			limit = {
 				FROMFROM = {
-					OR = {
-						trait = on_hajj
-						is_inaccessible_trigger = yes
-						trait = on_pilgrimage
-					}
+					is_inaccessible_trigger = yes
 				}
 			}
 			break = yes
@@ -12047,10 +11575,11 @@ character_event = {
 
     trigger = {
 	    has_dlc = "Mystics"
-    	is_devil_worshiper_trigger = yes
+    	#is_devil_worshiper_trigger = yes
     	OR = {
    			has_character_modifier = known_satanist
    			has_character_flag = was_ratted_out_by_fellow_member
+			has_character_flag = has_it_coming
     	}
     }
 	
@@ -12068,9 +11597,18 @@ character_event = {
 			factor = 2
 			independent = yes
 		}
+		modifier = {
+			factor = 2
+			is_devil_worshiper_trigger = yes
+		}
 	}
 	
     immediate = {
+    	if = { #Incapable ruler attacked in bed
+    		limit = { is_incapable = yes }
+    		set_character_flag = DW_was_attacked_is_incapable
+    		break = yes
+    	}
     	#chooses who attacks you...
     	random_list = {
     		10 = {
@@ -12183,10 +11721,7 @@ character_event = {
 					limit = {
 						is_incapable = no
 						prisoner = no
-						OR = {
-							dynasty = ROOT
-							family_of_root_trigger = yes
-						}
+						is_blood_relative_of_root_trigger = yes
 						NOT = { character = ROOT }
 					}
 					save_event_target_as = other_member_to_blame
@@ -12231,6 +11766,7 @@ character_event = {
     }
     after = {
 		character_event = { id = MNM.7855 }
+		clr_character_flag = has_it_coming
     }
 }
 
@@ -12246,7 +11782,6 @@ character_event = {
 
     trigger = {
     	has_dlc = "Mystics"
-    	is_devil_worshiper_trigger = yes
     	OR = {
    			has_character_modifier = known_satanist
    			has_character_flag = was_ratted_out_by_fellow_member
@@ -12290,6 +11825,11 @@ character_event = {
     	picture = GFX_evt_catching_heretic
     }
     desc = {
+    	trigger = { has_character_flag = DW_was_attacked_is_incapable } #Incapable ruler attacked in bed
+    	text = EVTDESC_MNM_7855_F
+    	picture = GFX_evt_illness
+    }
+    desc = {
     	trigger = { has_character_flag = DW_was_attacked_by_the_slayer_again } #The Slayer II
     	text = EVTDESC_MNM_7855_A_again
     	picture = GFX_evt_whispers
@@ -12327,6 +11867,7 @@ character_event = {
     }
 
     option = { #fight them...
+    	trigger = { NOT = { has_character_flag = DW_was_attacked_is_incapable } }
         name = {
         	trigger = {
         		OR = {
@@ -12459,6 +12000,7 @@ character_event = {
     }
 
     option = { #attempt to bribe them...
+    	trigger = { NOT = { has_character_flag = DW_was_attacked_is_incapable } }
         name = {
         	text = EVTOPTC_MNM_7855_A
         	trigger = { has_character_flag = DW_was_attacked_by_the_slayer }
@@ -12628,6 +12170,7 @@ character_event = {
         }
 
         trigger = {
+        	NOT = { has_character_flag = DW_was_attacked_is_incapable }
     		has_society_currency_major_trigger = yes
     		num_of_children = 1
     		any_child = {
@@ -12702,11 +12245,17 @@ character_event = {
         }
 
         trigger = {
+        	NOT = { has_character_flag = DW_was_attacked_is_incapable }
  			is_devil_worshiper_trigger = yes
  			society_rank < 4
 
  			event_target:other_member_to_blame = { always = yes }
         }
+    }
+    option = {
+    	name = EVTOPTE_MNM_7855
+    	trigger = { has_character_flag = DW_was_attacked_is_incapable }
+    	death = { death_reason = death_execution_burning }
     }
 	
     after = {

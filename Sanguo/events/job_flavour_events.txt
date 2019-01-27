@@ -509,6 +509,7 @@ character_event = {
 				tooltip = "EVTTOOLTIP75013"
 			}
 		}
+		show_portrait = job_chancellor
 	}
 	option = {
 		name = "EVTOPTB75011"
@@ -1833,6 +1834,12 @@ character_event = {
 		}
 	}
 	
+	immediate = {
+		job_treasurer = {
+			save_event_target_as = my_treasurer
+		}
+	}
+	
 	weight_multiplier = {
 		days = 1
 	}
@@ -1845,6 +1852,7 @@ character_event = {
 				tooltip = "EVTTOOLTIP75066"
 			}
 		}
+		show_portrait = event_target:my_treasurer
 	}
 }
 
@@ -2605,7 +2613,8 @@ character_event = {
 	picture = GFX_evt_scandal
 	border = GFX_event_normal_frame_war
 	
-	only_men = yes
+
+	min_age = 16
 	capable_only = yes
 	
 	is_triggered_only = yes
@@ -2614,7 +2623,7 @@ character_event = {
 		independent = no
 		has_job_title = job_marshal
 		trait = wroth
-		demesne_size = 1
+		NOT = { demesne_size = 1 }
 		liege = {
 			NOT = {
 				character = ROOT
@@ -2664,14 +2673,16 @@ character_event = {
 				}
 			}
 		}
-		
-		add_trait = arbitrary
-		hidden_tooltip = {
-			character_event = {
-				id = 38266 #Notify Arbitrary
+		random = {
+			chance = 25
+			
+			add_trait = arbitrary
+			hidden_tooltip = {
+				character_event = {
+					id = 38266 #Notify Arbitrary
+				}
 			}
 		}
-		
 		random_demesne_province = {
 			add_province_modifier = {
 				name = peasants_upset
@@ -2728,14 +2739,10 @@ character_event = {
 				tooltip = "EVTTOOLTIP75114"
 			}
 		}
-		random = {
-			chance = 25
-			
-			add_trait = arbitrary
-			hidden_tooltip = {
-				character_event = {
-					id = 38266 #Notify Arbitrary
-				}
+		add_trait = arbitrary
+		hidden_tooltip = {
+			character_event = {
+				id = 38266 #Notify Arbitrary
 			}
 		}
 		random_demesne_province = {
@@ -2758,7 +2765,7 @@ character_event = {
 	
 	option = {
 		name = "EVTOPTA75112"
-		clear_wealth = yes
+		wealth = -20
 	}
 }
 

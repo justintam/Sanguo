@@ -1,5 +1,5 @@
 # Xianbei Clan
-1400 = {
+1400={
 	name="Budugen"
 	dynasty=800
 	religion="tengri_pagan"
@@ -18,7 +18,7 @@
 		death=yes
 	}
 }
-1401 = {
+1401={
 	name="Bianhe"
 	dynasty=800
 	religion="tengri_pagan"
@@ -30,7 +30,7 @@
 		death=yes
 	}
 }
-1402 = {
+1402={
 	name="Yuchoupen"
 	dynasty=800
 	religion="tengri_pagan"
@@ -43,7 +43,7 @@
 		death=yes
 	}
 }
-1403 = {
+1403={
 	name="Cizhiqian"
 	dynasty=800
 	religion="tengri_pagan"
@@ -56,7 +56,7 @@
 		death=yes
 	}
 }
-1404 = {
+1404={
 	name="Touluhou"
 	dynasty=800
 	religion="tengri_pagan"
@@ -69,7 +69,7 @@
 		death=yes
 	}
 }
-1405 = {
+1405={
 	name="Tanshihuai"
 	dynasty=800
 	religion="tengri_pagan"
@@ -88,7 +88,7 @@
 		death=yes
 	}
 }
-1406 = {
+1406={
 	name="Bishibi"
 	dynasty=800
 	religion="tengri_pagan"
@@ -102,7 +102,7 @@
 		death=yes
 	}
 }
-1407 = {
+1407={
 	name="Helian"
 	dynasty=800
 	religion="tengri_pagan"
@@ -113,13 +113,13 @@
 		birth=yes
 	}
 	184.1.1={
-		effect = { health = -3 fertility = -0.4 }
+		effect={ health=-3 fertility=-0.4 }
 	}
 	185.8.1={
 		death=yes
 	}
 }
-1408 = {
+1408={
 	name="Kuitou"
 	dynasty=800
 	religion="tengri_pagan"
@@ -137,7 +137,7 @@
 		death=yes
 	}
 }
-1409 = {
+1409={
 	name="Fuluohan"
 	dynasty=800
 	religion="tengri_pagan"
@@ -159,7 +159,7 @@
 		}
 	}
 }
-1410 = {
+1410={
 	name="Kebineng"
 	religion="tengri_pagan"
 	culture="xianbei"
@@ -184,7 +184,7 @@
 		death=yes #Killed by Han Long, a man under Wang Xiong
 	}
 }
-1411 = {
+1411={
 	name="Qianman"
 	dynasty=800
 	religion="tengri_pagan"
@@ -201,7 +201,7 @@
 	}
 }
 #Right
-1412 = {
+1412={
 	name="Huaitou"
 	dynasty=803
 	religion="tengri_pagan"
@@ -218,7 +218,7 @@
 		death=yes
 	}
 }
-1413 = {
+1413={
 	name="Mijia"
 	dynasty=805
 	religion="tengri_pagan"
@@ -235,7 +235,7 @@
 		death=yes
 	}
 }
-1414 = {
+1414={
 	name="Queji"
 	dynasty=806
 	religion="tengri_pagan"
@@ -252,7 +252,7 @@
 		death=yes
 	}
 }
-1415 = {
+1415={
 	name="Suli"
 	dynasty=809
 	religion="tengri_pagan"
@@ -270,7 +270,7 @@
 	}
 }
 #Middle
-1416 = {
+1416={
 	name="Kezui"
 	dynasty=804
 	religion="tengri_pagan"
@@ -287,7 +287,7 @@
 		death=yes
 	}
 }
-1417 = {
+1417={
 	name="Queju"
 	dynasty=807
 	religion="tengri_pagan"
@@ -304,7 +304,7 @@
 		death=yes
 	}
 }
-1418 = {
+1418={
 	name="Murong"
 	dynasty=801
 	religion="tengri_pagan"
@@ -318,14 +318,23 @@
 		birth=yes
 	}
 	184.1.1={
-		employer=1400
+		employer=1407 #Helian
+	}
+	185.8.1={
+		employer=1408 #Kuitou
+	}
+	187.1.1={
+		employer=1400 #Budugen
+	}
+	233.1.1={
+		employer=1410 #Kebineng
 	}
 	240.1.1={
 		death=yes
 	}
 }
 #Left
-1419 = {
+1419={
 	name="Rilutuiyan"
 	dynasty=808
 	religion="tengri_pagan"
@@ -342,7 +351,7 @@
 		death=yes
 	}
 }
-1420 = {
+1420={
 	name="Yanliyou"
 	dynasty=810
 	religion="tengri_pagan"
@@ -359,7 +368,7 @@
 		death=yes
 	}
 }
-1421 = {
+1421={
 	name="Zhijianluoluo"
 	dynasty=811
 	religion="tengri_pagan"
@@ -376,7 +385,7 @@
 		death=yes
 	}
 }
-1422 = {
+1422={
 	name="Liwei"
 	dynasty=802
 	religion="tengri_pagan"
@@ -394,7 +403,7 @@
 		death=yes
 	}
 }
-1423 = {
+1423={
 	name="Xilu"
 	dynasty=802
 	religion="tengri_pagan"
@@ -413,7 +422,7 @@
 		death=yes
 	}
 }
-1424 = {
+1424={
 	name="Chuo"
 	dynasty=802
 	religion="tengri_pagan"
@@ -432,7 +441,7 @@
 		death=yes
 	}
 }
-1425 = {
+1425={
 	name="Chuo"
 	dynasty=802
 	religion="tengri_pagan"
@@ -451,7 +460,7 @@
 		death=yes
 	}
 }
-1426 = {
+1426={
 	name="Suonu"
 	religion="tengri_pagan"
 	culture="xianbei"
@@ -467,13 +476,22 @@
 		birth=yes
 	}
 	184.1.1={
+		employer=1407 #Helian
+	}
+	185.8.1={
+		employer=1408 #Kuitou
+	}
+	187.1.1={
+		employer=1400 #Budugen
+	}
+	198.1.1={
 		employer=1410
 	}
 	240.1.1={
 		death=yes
 	}
 }
-1427 = {
+1427={
 	name="Yuzhujian"
 	religion="tengri_pagan"
 	culture="xianbei"
@@ -489,16 +507,23 @@
 		birth=yes
 	}
 	184.1.1={
-		employer=1410
+		employer=1407 #Helian
+	}
+	185.8.1={
+		employer=1408 #Kuitou
+	}
+	187.1.1={
+		employer=1400 #Budugen
 	}
 	198.1.1={
+		employer=1410
 		add_spouse=1428
 	}
 	240.1.1={
 		death=yes
 	}
 }
-1428 = {
+1428={
 	name="Yuzhu"
 	female=yes
 	religion="tengri_pagan"
@@ -517,9 +542,16 @@
 		birth=yes
 	}
 	184.1.1={
-		employer=1410
+		employer=1407 #Helian
+	}
+	185.8.1={
+		employer=1408 #Kuitou
+	}
+	187.1.1={
+		employer=1400 #Budugen
 	}
 	198.1.1={
+		employer=1410
 		add_spouse=1427
 	}
 	260.1.1={

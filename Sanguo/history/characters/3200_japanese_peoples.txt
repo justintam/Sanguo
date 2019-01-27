@@ -1,2 +1,138 @@
-#Himiko
-#Iyo
+3200={
+	name="Himiko"
+	female="yes"
+	dynasty=2100 #Yamato
+	dna="nnjuplzzjog"
+	prp="gd0dbd000000000000"
+	diplomacy=10
+	martial=5
+	stewardship=9
+	intrigue=6
+	learning=10
+	religion="shinto"
+	culture="wa"
+	father=3201
+	disallow_random_traits=yes
+	trait="fate_loved"
+	trait="shrewd"
+	trait="quick"
+	trait="fair"
+	trait="just"
+	trait="celibate"
+	trait="deceitful"
+	trait="temperate"
+	trait="diligent"
+	trait="zealous"
+	trait="mystic"
+	trait="mastermind_theologian"
+    trait="duel_trained_warrior"
+	170.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=3201
+		effect={
+			health=3
+		}
+	}
+	248.1.1={
+		death=yes
+	}
+}
+3201={
+	name="Seimu"
+	dynasty=2100 #Yamato
+	religion="shinto"
+	culture="wa"
+	trait="arbitrary"
+	trait="cynical"
+	trait="wroth"
+	84.1.1={
+		birth=yes
+	}
+	189.1.1={
+		employer=3200
+		add_trait="ill"
+		add_trait="incapable"
+	}
+	191.1.1={
+		death={death_reason=death_trait}
+	}
+}
+3202={
+	name="Akira"
+	dynasty=2100 #Yamato
+	diplomacy=8
+	martial=8
+	stewardship=9
+	intrigue=7
+	learning=8
+	religion="shinto"
+	culture="wa"
+	father=3201
+	disallow_random_traits=yes
+	trait="gregarious"
+	trait="quick"
+	trait="fair"
+	trait="just"
+	trait="kind"
+	trait="honorable"
+	trait="temperate"
+	trait="diligent"
+	trait="zealous"
+	trait="grey_eminence"
+    trait="duel_skilled_warrior"
+	172.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=3201
+		effect={
+			health=3
+		}
+	}
+	189.1.1={
+		employer=3200
+	}
+	253.1.1={
+		death={death_reason=death_murder_unknown}
+	}
+}
+3203={
+	name="Iyo"
+	female="yes"
+	dynasty=2100 #Yamato
+	diplomacy=8
+	martial=5
+	stewardship=10
+	intrigue=8
+	learning=9
+	religion="shinto"
+	culture="wa"
+	father=3202
+	disallow_random_traits=yes
+	trait="shrewd"
+	trait="quick"
+	trait="fair"
+	trait="just"
+	trait="kind"
+	trait="honorable"
+	trait="temperate"
+	trait="diligent"
+	trait="zealous"
+	trait="mystic"
+	trait="mastermind_theologian"
+    trait="duel_trained_warrior"
+	240.1.1={
+		birth=yes
+	}
+	240.1.1={
+		employer=3200
+		effect={
+			health=4
+		}
+	}
+	335.1.1={
+		death=yes
+	}
+}

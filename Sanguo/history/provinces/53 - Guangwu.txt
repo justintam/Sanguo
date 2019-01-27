@@ -14,5 +14,6 @@ b_guangwu = castle
 # Misc
 culture = xiongnu
 religion = confucian
+terrain = steppe
 
 #History

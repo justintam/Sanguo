@@ -16,6 +16,7 @@ b_yangyinli = city
 # Misc
 culture = han
 religion = confucian
+terrain = plains
 
 #History
 196.1.1={

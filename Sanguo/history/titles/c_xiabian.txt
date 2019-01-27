@@ -8,9 +8,13 @@
 }
 184.1.1={
 	liege=0 #Independent
-	holder=1828 #Random
+	holder=1717 #Doumao
 }
-214.11.1={
+190.1.1={
+	set_tribute_suzerain={ who=k_five percentage=0.25 }
+}
+215.6.1={
 	liege=d_wudu
+	clear_tribute_suzerain=k_five
 	holder=4198 #Random
 }

@@ -13,5 +13,6 @@ b_yelang = tribal
 # Misc
 culture = nanman
 religion = huojiao
+terrain = hills
 
 #History

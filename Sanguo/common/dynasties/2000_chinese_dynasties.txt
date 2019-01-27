@@ -1,12 +1,601 @@
-2000 = {
+2000={
 	name="Chenggong" #Chenggong Ying - IND
-	culture = han
+	culture=han
+	used_for_random=no
 }
-2001 = {
+2001={
 	name="Huang" #Huang Gai - WU
-	culture = han
+	culture=han
+	used_for_random=no
 }
-2002 = {
+2002={
 	name="Pang" #Pang Tong - SHU
-	culture = han
+	culture=han
+	used_for_random=no
+}
+2003={
+	name="Wu" #Wu Huan - YT
+	culture=han
+	used_for_random=no
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 12 0 0 0 			}
+		religion="confucian"
+	}
+}
+2004={
+	name="Liu" #Liu Zan - WU
+	culture=han
+	used_for_random=no
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 1 0 0 0 			}
+		religion="confucian"
+	}
+}
+2005={
+	name="Chen" #Special
+	culture=han
+	used_for_random=no
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 10 0 0 0 			}
+		religion="confucian"
+	}
+}
+2006={
+	name="Zhang" #Special
+	culture=han
+	used_for_random=no
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
+}
+2007={
+	name="Pan" #Special
+	culture=han
+	used_for_random=no
+}
+2008={
+	name="Lei" #Special
+	culture=han
+	used_for_random=no
+}
+2009={
+	name="Zhou" #Zhou Fang - WU
+	culture=han
+	used_for_random=no
+}
+2010={
+	name="Liang" #Liang Xiu - HAN
+	culture=han
+	used_for_random=no
+}
+2011={
+	name="Xu" #Xu Rong - DZ
+	culture=han
+	used_for_random=no
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 12 0 0 0 			}
+		religion="confucian"
+	}
+}
+2012={
+	name="Li" #Li Su - DZ
+	culture=han
+	used_for_random=no
+}
+2013={
+	name="Guo" #Guo Yuan - YS
+	culture=han
+	used_for_random=no
+}
+2014={
+	name="Feng" #Feng Fang - YS
+	culture=han
+	used_for_random=no
+}
+2015={
+	name="Huang" #Huang Yi - YS
+	culture=han
+	used_for_random=no
+}
+2016={
+	name="Cheng" #Cheng Kuang - EF
+	culture=han
+	used_for_random=no
+}
+2017={
+	name="Shi" #Shi Ren - SHU
+	culture=han
+	used_for_random=no
+}
+2018={
+	name="Xiong" #Xiong Zhi - SHU
+	culture=han
+	used_for_random=no
+}
+2019={
+	name="Yue" #Yue Hedang - GZ
+	culture=han
+	used_for_random=no
+}
+2020={
+	name="Zhang" #Zhang Chang - GS
+	culture=han
+	used_for_random=no
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
+}
+2021={
+	name="Li" #Li Fu - ZL
+	culture=han
+	used_for_random=no
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="tianshi"
+	}
+}
+2022={
+	name="Li" #Li Xiu - ZL
+	culture=han
+	used_for_random=no
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="tianshi"
+	}
+}
+2023={
+	name="Jiang" #Jiang He - ZL
+	culture=han
+	used_for_random=no
+}
+2024={
+	name="Li" #Li Shu - ZL
+	culture=han
+	used_for_random=no
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="tianshi"
+	}
+}
+2025={
+	name="Yang" #Yang Ang - ZL
+	culture=han
+	used_for_random=no
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 11 0 0 0 			}
+		religion="confucian"
+	}
+}
+2026={
+	name="Yang" #Yang Bo - ZL
+	culture=han
+	used_for_random=no
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 11 0 0 0 			}
+		religion="confucian"
+	}
+}
+2027={
+	name="Zhang" #Zhang Bing - WU
+	culture=han
+	used_for_random=no
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
+}
+2028={
+	name="Xu" #Xu Zhen - WU
+	culture=han
+	used_for_random=no
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 12 0 0 0 			}
+		religion="confucian"
+	}
+}
+2029={
+	name="Liu"
+	culture=han
+	used_for_random=no
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 1 0 0 0 			}
+		religion="confucian"
+	}
+}
+2030={
+	name="Sun" #Sun Li - WEI
+	culture=han
+	used_for_random=no
+}
+2031={
+	name="Fu" #Fu Jin - SHU
+	culture=han
+	used_for_random=no
+}
+2032={
+	name="Xiang" #Xiang Zun - SHU
+	culture=han
+	used_for_random=no
+}
+2033={
+	name="Shan" #Shan Lady - WEI
+	culture=han
+	used_for_random=no
+}
+2034={
+	name="Zhang" #Zhang Wang - WEI
+	culture=han
+	used_for_random=no
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
+}
+2035={
+	name="Zhang" #Zhang Shuji and Zhang Ba - SHU
+	culture=han
+	used_for_random=no
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
+}
+2036={
+	name="Wen" #Wen Ji - SHU
+	culture=han
+	used_for_random=no
+}
+2037={
+	name="Yang" #Yang Jin - SHU
+	culture=han
+	used_for_random=no
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 11 0 0 0 			}
+		religion="confucian"
+	}
+}
+2038={
+	name="Sima" #Sima Jingsi - SHU
+	culture=han
+	used_for_random=no
+}
+2039={
+	name="Yuan" #Yuan Feng - SHU
+	culture=han
+	used_for_random=no
+}
+2040={
+	name="Wang" #Wang Tang - SHU
+	culture=han
+	used_for_random=no
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 2 0 0 0 			}
+		religion="confucian"
+	}
+}
+2041={
+	name="Wang" #Wang Lian - SHU
+	culture=han
+	used_for_random=no
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 2 0 0 0 			}
+		religion="confucian"
+	}
+}
+2042={
+	name="She" #She Jian - SHU
+	culture=han
+	used_for_random=no
+}
+2043={
+	name="Lu" #Lu Qiang - EUN
+	culture=han
+	used_for_random=no
+}
+2044={
+	name="Zhang" # - HAN
+	culture=han
+	used_for_random=no
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
+}
+2045={
+	name="Zhang" # - SHU
+	culture=han
+	used_for_random=no
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
+}
+2046={
+	name="Sun" #Sun Xiu - SHU
+	culture=han
+	used_for_random=no
+}
+2047={
+	name="Fei" #Fei Shi - SHU
+	culture=han
+	used_for_random=no
+}
+2048={
+	name="Gong" #Gong Chen - SHU
+	culture=han
+	used_for_random=no
+}
+2049={
+	name="Gao" #Gao Yi - SHU
+	culture=han
+	used_for_random=no
+}
+2050={
+	name="Zhang" #Zhang Yi - SHU
+	culture=han
+	used_for_random=no
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
+}
+2051={
+	name="Zhang" #Zhang Yi - HAN
+	culture=han
+	used_for_random=no
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
+}
+2052={
+	name="Zhang" #Zhang Hao - HAN
+	culture=han
+	used_for_random=no
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
+}
+2053={
+	name="Lü" #Lü Kai
+	culture=han
+	used_for_random=no
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 6 0 0 0 			}
+		religion="confucian"
+	}
+}
+2054={
+	name="Chang" #Chang Yuan - SHU
+	culture=han
+	used_for_random=no
+}
+2055={
+	name="Yao" #Yao Zhou - SHU
+	culture=han
+	used_for_random=no
+}
+2056={
+	name="Feng" #Feng Ren - WEI
+	culture=han
+	used_for_random=no
+}
+2057={
+	name="Wu" #Wu Fu - HAN
+	culture=han
+	used_for_random=no
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 12 0 0 0 			}
+		religion="confucian"
+	}
+}
+2058={
+	name="Du" #Du Xi - HAN
+	culture=han
+	used_for_random=no
+}
+2059={
+	name="Yan" #Yan Yan - SHU
+	culture=han
+	used_for_random=no
+}
+2060={
+	name="Ji" #Ji Ben - WEI
+	culture=han
+	used_for_random=no
+}
+2061={
+	name="Zhu" #Zhu Nan - WEI
+	culture=han
+	used_for_random=no
+}
+2062={
+	name="Zhao" #Zhao Ze - SHU
+	culture=han
+	used_for_random=no
+}
+2063={
+	name="Meng" #Meng Biao - SHU
+	culture=han
+	used_for_random=no
+}
+2064={
+	name="Mo" #Mo Si - SHU
+	culture=han
+	used_for_random=no
+}
+2065={
+	name="Han" #Han Song - WEI
+	culture=han
+	used_for_random=no
+}
+2066={
+	name="Shen" #Shen Dan - IND
+	culture=han
+	used_for_random=no
+}
+2067={
+	name="Shen" #Shen Gu - WEI
+	culture=han
+	used_for_random=no
+}
+2068={
+	name="Zhou" #Zhou Bin - EUN
+	culture=han
+	used_for_random=no
+}
+2069={
+	name="Wang" #Wang Fu - EUN
+	culture=han
+	used_for_random=no
+}
+2070={
+	name="Man" #Man Chong - WEI
+	culture=han
+	used_for_random=no
+}
+2071={
+	name="Zheng" #Zheng Ang - SHU
+	culture=han
+	used_for_random=no
+}
+2072={
+	name="Deng" #Deng Dao - HAN
+	culture=han
+	used_for_random=no
+}
+2073={
+	name="Jiao" #Jiao Huang - SHU
+	culture=han
+	used_for_random=no
+}
+2074={
+	name="Ma" #Ma Su - SHU
+	culture=han
+	used_for_random=no
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 7 0 0 0 			}
+		religion="confucian"
+	}
+}
+2075={
+	name="Ding" #Ding Feng - WU
+	culture=han
+	used_for_random=no
+}
+2076={
+	name="Pan" #Pan Zhang - WU
+	culture=han
+	used_for_random=no
+}
+2077={
+	name="Wang" #Wang Ping - SHU
+	culture=han
+	used_for_random=no
+}
+2078={
+	name="He" #He Matriarchy
+	culture=han
+	used_for_random=no
+}
+2079={
+	name="Min" #Min - Pan Zhang Wife - WU
+	culture=han
+	used_for_random=no
+}
+2080={
+	name="Wu" #Wu Ban - SHU
+	culture=han
+	used_for_random=no
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 12 0 0 0 			}
+		religion="confucian"
+	}
 }

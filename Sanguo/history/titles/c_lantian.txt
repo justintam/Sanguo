@@ -7,8 +7,26 @@
 	liege=d_jingzhao
 }
 184.1.1={
-	holder=10486 #Du Ji
+	holder=158 #Min Gong
 }
 189.8.22={
-	holder=4190 #Random
+	holder=4402 #Chang Xia
+}
+195.4.1={
+	holder=4311 #Random
+}
+196.1.1={
+	holder=20418 #Zhang Ji
+}
+199.1.1={
+	holder=20460 #Zhang Shi
+}
+211.10.1={
+	holder=20418 #Zhang Ji
+}
+215.1.1={
+	holder=4555 #Zheng Hun
+}
+222.1.1={
+	holder=20471 #Yan Fei
 }

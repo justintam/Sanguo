@@ -1,7 +1,7 @@
 1.1.1={
 	active=no
-	effect = {
-		set_title_flag = warlord_flag
+	effect={
+		set_title_flag=warlord_flag
 	}
 }
 211.1.1={
@@ -9,10 +9,10 @@
 	holder=509 #Sun Quan
 }
 220.12.10={
-	set_tribute_suzerain = { who = e_wei percentage = 0.10 }
+	set_tribute_suzerain={ who=e_wei percentage=0.10 type=permanent }
 }
 222.1.1={
-	clear_tribute_suzerain = e_wei
+	clear_tribute_suzerain=e_wei
 }
 229.1.1={
 	holder=0

@@ -14,5 +14,6 @@ b_langwu = tribal
 # Misc
 culture = di
 religion = baima
+terrain = desert
 
 #History

@@ -58,10 +58,8 @@ targetted_decisions = {
 										NOT = { month = 9 }
 
 										OR = {
-											capital_scope = { region = world_africa }
-											capital_scope = { region = world_middle_east }
-											capital_scope = { region = world_persia }
-											capital_scope = { region = world_india_rajastan }
+											capital_scope = { region = world_central_asia }
+											capital_scope = { region = world_china_jiaozhi }
 										}
 									}
 								}
@@ -80,9 +78,9 @@ targetted_decisions = {
 										}
 
 										OR = {
-											capital_scope = { region = world_europe_north }
-											capital_scope = { region = world_steppe_west }
-											capital_scope = { region = world_steppe_east }
+											capital_scope = { region = world_tibet }
+											capital_scope = { region = world_mongol }
+											capital_scope = { region = world_manchu }
 										}
 									}
 								}
@@ -174,9 +172,11 @@ targetted_decisions = {
 				prisoner = no
 			}
 			FROM = {
+				show_scope_change = no
+				remove_opinions_with_prison_reason_effect = yes
 				save_event_target_as = remove_prison_reason_effect_accuser
 				ROOT = { save_event_target_as = remove_prison_reason_effect_accused }
-				hidden_tooltip = { remove_prison_reason_effect = yes }
+				#hidden_tooltip = { remove_prison_reason_effect = yes } #NOTE: OUTDATED. Now uses the "remove_opinions_with_prison_reason_effect" instead.
 				if = {
 					limit = {
 						NOR = {
@@ -411,6 +411,7 @@ targetted_decisions = {
 			}
 			
 			FROM = {
+				show_scope_change = no
 				piety = -50
 				if = {
 					limit = { NOT = { trait = cruel } }
@@ -471,7 +472,8 @@ targetted_decisions = {
 				}
 				FROM = { save_event_target_as = remove_prison_reason_effect_accuser }
 				ROOT = { save_event_target_as = remove_prison_reason_effect_accused }
-				hidden_tooltip = { remove_prison_reason_effect = yes }
+				#hidden_tooltip = { remove_prison_reason_effect = yes } #NOTE: OUTDATED. Now uses the "remove_opinions_with_prison_reason_effect" instead.
+				FROM = { remove_opinions_with_prison_reason_effect = yes }
 			}
 		}
 		revoke_allowed = {
@@ -580,7 +582,8 @@ targetted_decisions = {
 
 			FROM = { save_event_target_as = remove_prison_reason_effect_accuser }
 			ROOT = { save_event_target_as = remove_prison_reason_effect_accused }
-			hidden_tooltip = { remove_prison_reason_effect = yes }
+			#hidden_tooltip = { remove_prison_reason_effect = yes }
+			hidden_effect = { FROM = { remove_opinions_with_prison_reason_effect = yes } }
 		}
 		revoke_allowed = {
 			always = no
@@ -810,7 +813,8 @@ targetted_decisions = {
 			}
 			FROM = { save_event_target_as = remove_prison_reason_effect_accuser }
 			ROOT = { save_event_target_as = remove_prison_reason_effect_accused }
-			hidden_tooltip = { remove_prison_reason_effect = yes }
+			#hidden_tooltip = { remove_prison_reason_effect = yes }
+			hidden_effect = { FROM = { remove_opinions_with_prison_reason_effect = yes } }
 		}
 		revoke_allowed = {
 			always = no
@@ -884,6 +888,7 @@ targetted_decisions = {
 			hidden_tooltip = {
 				any_dynasty_member = {
 					limit = {
+						is_offmap_ruler = no
 						is_close_relative = ROOT
 						NOT = { character = FROM }
 					}
@@ -991,6 +996,7 @@ targetted_decisions = {
 				death_reason = death_execution_eaten
 				killer = FROM
 			}
+			save_event_target_as = kinslayer_target
 			FROM = {
 				if = {
 					limit = {
@@ -1007,13 +1013,7 @@ targetted_decisions = {
 						duration = -1
 					}
 				}
-				if = {
-					limit = {
-						dynasty = ROOT
-						NOT = { trait = kinslayer }
-					}
-					add_trait = kinslayer
-				}
+				add_kinslayer_trait_effect = yes
 			}
 		}
 	}

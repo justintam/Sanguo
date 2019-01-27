@@ -18,7 +18,12 @@
 }
 213.6.1={
 	liege=k_ji
+	holder=4555 #Zheng Hun
+}
+215.1.1={
+	holder=1030 #Li Xiu
 }
 220.12.10={
 	liege=k_bing
+	holder=1246 #Yang Dao
 }

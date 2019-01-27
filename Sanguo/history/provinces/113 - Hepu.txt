@@ -15,6 +15,7 @@ b_hepu = castle
 # Misc
 culture = nanyue
 religion = animist
+terrain = plains
 
 #History
 200.1.1={

@@ -1,9 +1,9 @@
 # e_china
 1.1.1={
-	law = agnatic_succession
-	law = succ_primogeniture
-	effect = {
-		set_title_flag = noble_king
+	law=agnatic_succession
+	law=succ_primogeniture
+	effect={
+		set_title_flag=noble_king
 	}
 }
 1.1.1={
@@ -13,12 +13,12 @@
 	holder=4257 #Liu Jing
 }
 67.1.1={
-	holder=0 #None
+	holder=0
 }
 212.1.1={
-	holder = 4256 # Liu Yi
+	holder=4256 # Liu Yi
 }
 220.12.10={
-	holder=0 #None
-	active = no
+	holder=0
+	active=no
 }

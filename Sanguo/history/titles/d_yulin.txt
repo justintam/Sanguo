@@ -9,14 +9,11 @@
 184.1.1={
 	holder=1900 #Ly Tien
 }
-204.1.1={
-	liege=k_sun
+211.1.1={
+	liege=k_jiaozhi
 	vice_royalty = yes
 	holder=3321 #Lu Ji
 }
-211.1.1={
-	liege=k_jiaozhi
-}
 219.1.1={
-	holder=3579 #Random
+	holder=10560 #Zhang Bing
 }

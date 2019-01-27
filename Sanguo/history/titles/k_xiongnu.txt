@@ -1,25 +1,44 @@
 # e_northern
 1.1.1={
-	historical_nomad = yes
-	active = no
+	historical_nomad=yes
+	active=no
 }
 1.1.1={
 	liege=e_northern
 }
 184.1.1={
-	active = yes
+	active=yes
 	liege=0
-	set_tribute_suzerain = { who = e_china percentage = 0.25 }
+	set_tribute_suzerain={ who=e_china percentage=0.25 }
 	holder=1500 #Qiangqui
 }
 188.1.1={
-	clear_tribute_suzerain = e_china
 	holder=1501 #Yufuluo
 }
 189.1.1={
-	active=no
-	#Replaced by Xubu
+	clear_tribute_suzerain=e_china
 }
-195.1.1={
-	holder=0 #None
+191.1.1={
+	set_tribute_suzerain={ who=d_black percentage=0.25 }
 }
+196.1.1={
+	clear_tribute_suzerain=d_black
+	set_tribute_suzerain={ who=e_yuan percentage=0.25 }
+	holder=1505 #Huchuquan
+}
+202.6.1={
+	clear_tribute_suzerain=e_yuan
+	set_tribute_suzerain={ who=e_china percentage=0.25 }
+}
+216.1.1={
+	holder=1523 #Liu Bao
+}
+220.12.10={
+	clear_tribute_suzerain=e_china
+	set_tribute_suzerain={ who=e_wei percentage=0.25 }
+}
+
+
+
+
+#TBD

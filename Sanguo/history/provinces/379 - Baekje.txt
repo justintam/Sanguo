@@ -16,5 +16,6 @@ b_sinbungo = temple
 # Misc
 culture = samhan
 religion = shamanist
+terrain = hills
 
 #History

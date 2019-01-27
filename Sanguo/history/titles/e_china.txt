@@ -10,6 +10,12 @@
 		set_title_flag = premier_title
 	}
 }
+108.11.1={
+	holder=4518 #Deng Zhi
+}
+111.1.1={
+	holder=0 #None
+}
 #Li Gu
 147.1.1={
 	holder=4404 #Zhao Jie
@@ -23,7 +29,10 @@
 168.1.1={
 	holder=0 #None
 }
-178.1.1={
+178.3.1={
+	holder=3641 #Zhang Hao
+}
+178.10.1={
 	holder=4297 #Qiao Xuan
 }
 179.1.1={

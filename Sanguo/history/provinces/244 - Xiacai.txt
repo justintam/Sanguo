@@ -14,5 +14,6 @@ b_xiacai = castle
 # Misc
 culture = han
 religion = confucian
+terrain = plains
 
 #History

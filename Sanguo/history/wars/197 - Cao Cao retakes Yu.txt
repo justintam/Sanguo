@@ -1,8 +1,9 @@
 name = "Cao Cao retakes Yu"
 
 casus_belli={
-	actor=400
+	actor=600
 	recipient=309
+	thirdparty=400
 	casus_belli=other_claim
 	landed_title=k_yu
 	date=197.3.1

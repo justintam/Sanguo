@@ -1,219 +1,278 @@
-chinese = {
-		graphical_cultures = { chinesegfx mongolgfx easterngfx }
+chinese_group = {
+	graphical_cultures = { chinesesgfx mongolgfx indiangfx muslimgfx }
 	
 	han = {
-		graphical_cultures = { chinesegfx easterngfx }
+		graphical_cultures = { chinesesgfx mongolgfx indiangfx muslimgfx }
+		secondary_event_pictures = bedouin_arabic
 		
 		color = { 0.2 0.6 1.00 }
 		
+		dynasty_name_first = yes
+		
 		male_names = {
-			Ah Ai Aiguo Aihou Aixing Aman An
-			Anding Ang Anguo Anli Anle Anliang
-			Anmin Anyu Ao Asu Ayi Ayu
-			Ba Bai Baihu Ban Bang Bao Baochou
-			Baojian Bei Beidi Beigong Ben Benchu
-			Bi Bian Biao Biecheng Biming Bin
-			Binbo Bing Bingwen Binqing Binshi
-			Binshuo Bo Boan Boben Bobing Bochang
-			Bochu Bochun Boda Bodao Bodu Bodun
-			Bofang Bofu Bogao Bogong Bogui Boguo
-			Bohai Bohao Bohe Bohou Bohuai Bohuan
-			Boji Bojian Bojie Bojin Bojing Boju
-			Bokang Bokao Bokuang Bolang
-			Boli Boliang Bolin Boling Boliu
-			Boluan Bomi Bomiao Boming Bonan
-			Boneng Boning Bopi Boping Boqi
-			Boqian Boqiang Boqin Boqing Boqiu
-			Boque Boran Borang Borao Boren
-			Borong Boru Boshan Boshen Bosheng
-			Boshi Boshu Bosi Bosun Bota Botai
-			Botiao Botong Bowang Bowei Bowen
-			Bowu Boxi Boxia Boxian Boxiang
-			Boxiao Boxin Boxing Boxiu Boxu Boya
-			Boyan Boyang Boye Boyi Boyin Boying
-			Boyou Boyu Boyuan Boyue Bozai
-			Bozhang Bozhao Bozhen Bozhi Bozhong
-			Bozhou Bozhu Bozhuo Bozong Bozu Bu
-			Buwei Buyi
-			Cai Can Cang Cangshu Cao Ce Cen
-			Chai Chan Chanbo Chang Changbo
-			Changchong Changchun Changde
-			Changhua Changji Changjun
-			Changming Changping Changpu
-			Changqing Changquan Changsheng
-			Changsun Changwen Changxu Changyu
-			Chanruo Chanying Chao Chaoguang
-			Che Chen Cheng Chengbo Chengguo
-			Chenglei Chengli Chengming Chengpu
-			Chengyan Chengyuan Chi Chong Chongan
-			Chonghuan Chongkun Chonglin Chou
-			Chouhou Chu Chuan Chuanli Chun
-			Chunguang Chunqing Chunyu Chuo
-			Chuqi Churen Chushan Chuxu Ci Cibo
-			Ciming Ciqing Cisun Ciwen Ciweng
-			Ciyang Cong Cui Cuan Cun
-			Da Dachun Dafang Daguo Dai Daiping
-			Daming Damu Dan Dang Dao Daochu
-			Daohe Daozhen Daxun Dayi De Deang
-			Decao Dedu Degao Degong Deguang
-			Degui Deli Delian Delun Deming
-			Demou Deng Derang Derong Deru Derun
-			Deshan Deshi Deshu Deshun Desi Deta
-			Dewei Dewen Dexia Dexian Dexin
-			Dexing Dexu Deyan Deyao Deyi Deyu
-			Deyun Dezhong Dezhou Dezong Dezu
-			Di Dian Diao Digong Ding Dingan
-			Dinggong Dingguo Dingqing Dingzhu
-			Dingzu Disun Dong Dongli Dou Du Duan
-			Dun Duyi
+			Ah Ai Aiguo Aihou Aixing Aman An Anding Ang
+			Anguo Anli Anle Anliang Anmin Anqi Anshi Anyu
+			Ao Asu Ayi Ayu
+			Ba Bai Baihu Ban Bang Bao Baochou Baojian Bei
+			Beidi Beigong Ben Benchu Benli Bi Bian Biao
+			Biecheng Biming Bin Binbo Bing Bingwen
+			Binqing Binshi Binshuo Bo Boan Boben Bobing
+			Bochang Bochu Bochun Boda Bodao Bodu Bodun
+			Bofang Bofu Bogao Bogong Bogui Boguo Bohai
+			Bohao Bohe Bohou Bohuai Bohuan Boji Bojian
+			Bojie Bojin Bojing Boju Bokang Bokao Bokuang
+			Bolang Boli Boliang Bolin Boling Boliu Boluan
+			Bomi Bomiao Boming Bonan Boneng Boning Bopi
+			Boping Boqi Boqian Boqiang Boqin Boqing Boqiu
+			Boque Boran Borang Borao Boren Borong Boru
+			Boshan Boshen Bosheng Boshi Boshu Bosi Bosun
+			Bota Botai Botiao Botong Bowang Bowei Bowen
+			Bowu Boxi Boxia Boxian Boxiang Boxiao Boxin
+			Boxing Boxiu Boxu Boya Boyan Boyang Boye Boyi
+			Boyin Boying Boyou Boyu Boyuan Boyue Bozai
+			Bozhang Bozhao Bozhen Bozhi Bozhong Bozhou
+			Bozhu Bozhuo Bozong Bozu Bu Buwei Buyi
+			Cai Can Cang Cangshu Cao Ce Cen Cha Chai Chan
+			Chanbo Chang Changbo Changchong Changchun
+			Changde Changhua Changji Changjun Changliang
+			Changming Changping Changpu Changqing
+			Changquan Changsheng Changsun Changtu
+			Changwen Changxu Changyu Chanruo Chanying
+			Chao Chaoguang Che Chen Cheng Chengbo
+			Chengguo Chenglei Chengli Chengming Chengpu
+			Chengqi Chengqing Chengsi Chengyan Chengyuan
+			Chi Chong Chongan Chonghuan Chongkun Chonglin
+			Chou Chouhou Chu Chuan Chuanli Chuhou Chuiun
+			Chujun Chuke Chun Chuna Chunguang Chunqing
+			Chunyu Chuo Chuqi Churen Chushan Chuxu Chuyue
+			Ci Cibo Ciming Ciqing Cisun Ciwen Ciweng
+			Ciyang Cong Congdang Congyi Cui Cuan Cun
+			Da Daan Dachun Dafang Daguo Dai Daijia Daiju
+			Daiping Daming Damu Dan Dang Dao Daochu
+			Daoguang Daohe Daozhen Daxun Dayi De Deang
+			Decao Dedu Degao Degong Deguang Degui Deli
+			Delian Delun Deming Demou Deng Derang Derong
+			Deru Derun Deshan Deshi Deshu Deshun Desi
+			Deta Dewei Dewen Dexia Dexian Dexin Dexing
+			Dexu Dexuan Deyan Deyao Deyi Deyu Deyun
+			Dezhen Dezhong Dezhou Dezong Dezu Di Dian
+			Diao Digong Ding Dingan Dinggong Dingguo
+			Dingqing Dingzhu Dingzu Disun Dong Dongli
+			Dou Du Duan Dun Dunli Dunxin Duo Duyi
 			E En Ending Enlai Erkang Ertai
-			Fa Fai Fan Fang Fanglan Fangzheng
-			Fei Feixin Fen Feng Fenggao Fengge
-			Fengqing Fengxian Fengxiao Fengxun
-			Fu Fucheng Fuguo Fuhua Fuling Fulu
-			Fuluan Fuxiang Fuxing Fuxiu Fuxuan
-			Gai Gan Gang Gao Gaoqing Gaotang Ge
-			Geming Gen Geng Genju Gong Gonga
-			Gongbi Gongchao Gongda Gongdu
-			Gongfang Gongfen Gongfeng Gongfu
-			Gonggan Gonggao Gongheng Gongji
-			Gongjie Gongjin Gongju Gongli
-			Gongliang Gonglu Gongmiao Gongming
-			Gongping Gongqi Gongqian Gongqing
-			Gongran Gongren Gongshan Gongshi
-			Gongshu Gongsi Gongsun Gongtai
-			Gongti Gongting Gongwei Gongwen
-			Gongxi Gongxian Gongxiang Gongxiao
-			Gongxin Gongxing Gongxiu Gongxu
-			Gongxuan Gongya Gongyan Gongye
-			Gongyi Gongying Gongyou Gongyuan
-			Gongzai Gongze Gongzhen Gongzhi
-			Gongzhong Gongzhu Gongzi Gongzu
-			Gou Gu Guan Guande Guang Guangli
-			Guangshi Guangyan Guangyuan
-			Guangxu Guanqiu Gui Guifen Guiren
-			Guilong Gun Guo Guofan Guofu
-			Guoliang Guoping Guorang Guoshan
-			Guotin Guowei Guoyi Guozhang Guozhi
-			Hai Han Hanbo Handa Handan Hanfeng
-			Hangong Hanhe Hannan Hanru Hansheng
-			Hanwen Hanyu Hanzong Hao He Hei
-			Heng Ho Hong Honghui Hongming Hongqi
-			Hou Howin Hu Huhai Hua Huai
-			Huan Huang Hui Huiyang Hulin Hun Hung Huo Huojin
-			Ji Jia Jian Jiang Jianguo Jianjun Jianyu Jiao
-			Jie Jiezi Jiguang Jin Jing Jingde Jingguo Jingsun
-			Jinhai Jinjing Jingke Jingquan Jingzong Jiong Jiu
-			Jizi Jong Ju Jue Jugong Jun Jung Junjie Junshi
+			Fa Fai Fan Fang Fanglan Fangqing Fangzheng
+			Fangzhi Fei Feixin Fen Feng Fenggao Fengge
+			Fengji Fengqing Fengxian Fengxiao Fengxun
+			Fu Fucheng Fuguo Fuhua Fuling Fulu Fuluan
+			Fuxiang Fuxing Fuxiu Fuxuan Fuyuan
+			Gai Gan Gang Gao Gaoqing Gaotang Ge Geming
+			Gen Geng Gengguo Genju Gong Gonga Gongbi
+			Gongchao Gongda Gongdu Gongfang Gongfen
+			Gongfeng Gongfu Gonggan Gonggao Gongheng
+			Gongji Gongjie Gongjin Gongju Gongli
+			Gongliang Gonglu Gongmiao Gongming Gongping
+			Gongqi Gongqian Gongqing Gongran Gongren
+			Gongshan Gongshi Gongshu Gongsi Gongsun
+			Gongtai Gongti Gongting Gongwei Gongwen
+			Gongxi Gongxian Gongxiang Gongxiao Gongxin
+			Gongxing Gongxiu Gongxu Gongxuan Gongya
+			Gongyan Gongye Gongyi Gongying Gongyou
+			Gongyuan Gongzai Gongze Gongzhen Gongzhi
+			Gongzhong Gongzhu Gongzi Gongzu Gou Gu
+			Guan Guande Guang Guangfu Guangli Guangqi
+			Guangshi Guangting Guangxu Guangyan
+			Guangyuan Guanqiu Guanzhi Gui Guicong
+			Guifen Guiren Guilong Gun Guo Guofan Guofu
+			Guoliang Guoping Guorang Guoshan Guotin
+			Guowei Guoyi Guozhang Guozhi Guozhong Guyan
+			Hai Han Hanbo Handa Handan Hanfeng Hangong
+			Hanhe Hannan Hanru Hansheng Hanwen Hanyu
+			Hanzong Hao He Hei Heng Ho Hong Hongda
+			Honghui Hongjian Hongjin Hongmin Hongming
+			Hongqi Hongwu Hou Howin Hu Huhai Hua Huai
+			Huaiguang Huaishen Huaiyuan Huaizhen Huan
+			Huang Huangshang Hui Huiyang Hulin Hun
+			Hung Huo Huojin
+			Ji Jia Jiafu Jian Jiang Jianguo Jianjun
+			Jiansu Jianyu Jianzhi Jiao Jiazhen Jie
+			Jiezi Jifu Jiguang Jin Jing Jingchen
+			Jingde Jingguo Jingke Jingquan Jingsun
+			Jingxian Jingxuan Jingze Jingzong Jinhai
+			Jinjing Jinqin Jiong Jiongxiu Jishan Jiu
+			Jiuling Jizi Jong Ju Judao Jue Jugong Jun
+			Jung Junji Junjie Junliang Junshi Juyuan
 			Juzheng
-			Kai Kan Kang Ke Kong Kua Kuai Kuan Kuang Kui
-			Kuizi Kun
+			Kai Kan Kang Ke Kong Kua Kuai Kuan Kuang
+			Kui Kuizi Kun
 			Lai Lan Lang Lao Laohu Lei Li Lian Liang
-			Liao Lie Lin Linfu Ling Linghu Liqing
-			Lishi Liu
-			Liwei Long Longlong Longwei Lou Lu Lue Lun
-			Luo Luxi
-			Ma Mai Man Mang Mao Mea Mei Meng Mi Miao
-			Min Ming Minghua Mingli Minsheng Minzhe Mo Mu
-			Nan Ne Ni Ning Niu
+			Liangsi Liao Liben Lie Lin Linfu Ling
+			Linghu Liqing Lishi Liu Liwei Long Longji
+			Longlong Longwei Lou Lu Lue Lun Luo Luxi
+			Ma Mai Man Mang Mao Maojiang Maozhen Mea
+			Mei Meng Mi Mian Miao Min Ming Minghua
+			Mingli Minsheng Minzhe Minzhong Mo Mu
+			Na Nan Ne Ni Ning Niu
 			On Ou Ouyang
 			Pan Pang Pei Peng Pengju Pi Ping Pou Pu
-			Qi Qian Qianfan Qiang Qiao Qin Qiong Qing
-			Qingshan Qiqiang Qiu Qu Quan Qub Que Qun Quon
-			Ran Rang Rei Ren Rengui Renshu Rong Rou Ru Ruan
-			Rui Ruo
-			Shaiming Shan Shang Shanyuan Shao She Shen
-			Sheng Shengcheng Shi Shidai Shilang Shilin
-			Shing Shiren Shirong Shoiming Shou Shu Shuang
-			Shubao Shuihu Shuliao Shun Shunyuan Shuo Si Sima
-			Sitong Siyu
-			Song Songzhi Su Sui Sun Suo
+			Qi Qian Qianfan Qiang Qianyao Qiao Qin
+			Qinke Qiong Qing Qingshan Qinming Qinwang
+			Qiqiang Qiu Qixiang Qu Quan Qub Que Qun
+			Quon
+			Ran Rang Rangneng Rangyi Rei Ren Renben
+			Rengui Renjie Renshi Renshu Renyuan
+			Riyong Rizhi Rong Rou Ru Ruan Ruhui Rui
+			Ruo
+			Sansi Sengru Shaiming Shan Shang Shanyuan
+			Shao Shaojing She Shen Sheng Shengcheng
+			Shenji Shenquan Shenxi Shenyou Shi Shidai
+			Shidao Shifang Shiji Shilang Shilian
+			Shilin Shing Shiren Shirong Shizi
+			Shoiming Shou Shouli Shouyi Shu Shuang
+			Shubao Shuda Shuji Shuihu Shuliao Shun
+			Shunyuan Shuo Si Sifu Sihui Sili Sima
+			Siqian Sitong Siyu Song Songzhi Su Sui
+			Suiliang Sun Suo
 			Ta Tai Taishi Tan Tang Tao Taotu Taoyu Te
-			Teng Tengfei Ti Tian Tiankai Tianxi Tiao Tie
-			Tingzhe Tong Tu Tung Tuo Tuoren
-			Wai Wan Wang Wangzhuo Wannian Wansui Wei Weihao
-			Weihuang Weimin Weiping Weisheng Weiyuan Wen
-			Wencheng Wenshu Wenyan Wing Wu Wuji Wukong Wuzhen
-			Wuzhong Wuzhou
-			Xi Xia Xiahou Xian Xiande Xiang Xiangruo Xiao
-			Xiaochang Xiaode Xiaojian Xiaoping Xiaosheng Xiaotong
-			Xiasheng Xie Xin Xing Xingguo Xiong Xiongming
-			Xiu Xu Xuan Xuande Xuangui Xuanyang Xuanzong Xue
-			Xueqin Xueyou Xun Xunzi
-			Yan Yang Yanlin Yanshou Yanzuo Yao Yaochuan
-			Yaozu Ye Yi Yide Yilu Yin Ying Yingjie Yong
-			Yongrui Yongzuo You Youping Youwei Youzhi Yu Yuan Yuangui
-			Yuanjun Yuanyuan Yuanzhen Yue Yun Yunchang Yunlu
-			Yunxu Yusheng
-			Zan Zang Zao Ze Zedong Zeng Zengguang
-			Zenguang Zha Zhai Zhan Zhang Zhangke Zhao
-			Zhaoxun Zhen Zheng Zhengsheng Zhensheng
-			Zhenzhong Zhi Zhicai Zhichao Zhiguo Zhihan
-			Zhiqiang Zhiren Zhiyuan Zhiyue Zhong
-			Zhongchang Zhongdi Zhongjin Zhongli Zhongmou
-			Zhongwu Zhongzhen Zhou Zhousheng Zhu Zhuan
-			Zhuang Zhuanxu Zhuge Zhuo Zi Zian Zicai Zichu
-			Zidao  Zihao
-			Zijing Ziqin Zishang Zicheng Zixin Ziyi Ziying
-			Zizheng Zong Zongmeng Zou Zu Zuan Zun Zuo
+			Teng Tengfei Ti Tian Tiankai Tianxi Tiao
+			Tie Ting Tingzhe Tong Tu Tung Tuo Tuoren
+			Wai Wan Wang Wangzhuo Wannian Wansui Wei
+			Weidao Weihao Weihuang Weimin Weiping
+			Weiqian Weisheng Weiyuan Weizhi Wen
+			Wenben Wenchang Wencheng Wenguan Wenjie
+			Wenjing Wenshu Wenwei Wenyan Wing Wo Wu
+			Wuji Wukong Wuzhen Wuzhong Wuzhou Wuzi
+			Xi Xia Xiahou Xian Xiande Xiang Xiangdao
+			Xiangruo Xiangxian Xianke Xiao Xiaochang
+			Xiaode Xiaojian Xiaojie Xiaoping
+			Xiaosheng Xiaotong Xiasheng Xie Xilie
+			Xin Xinfu Xing Xingben Xingbo Xingcheng
+			Xingguo Xiong Xiongming Xisheng Xiu
+			Xiujing Xu Xuan Xuande Xuangui Xuanling
+			Xuantong Xuanwei Xuanyang Xuanzong Xue
+			Xueqin Xueyou Xun Xunyu Xunzi
+			Yan Yanbo Yanchang Yanfan Yang Yanjing
+			Yanlin Yanruo Yanshang Yanshou Yanwei
+			Yanzhao Yanzuo Yao Yaochuan Yaoqin
+			Yaozu Yaxiang Ye Yi Yide Yifu Yijian
+			Yilu Yin Ying Yingjie Yixing Yiyan
+			Yizhi Yong Yongrui Yongzuo You Youdao
+			Youfu Youning Youping Youqiu Youwei
+			Youyi Youzhi Yu Yuan Yuanchao Yuanchong
+			Yuanfang Yuangui Yuanheng Yuanhong Yuanji
+			Yuanjun Yuanshi Yuansu Yuanying Yuanyu
+			Yuanyuan Yuanzhen Yuanzhong Yuanzong Yue
+			Yun Yunchang Yunlu Yunxu Yunyuan Yuqing
+			Yusheng Yushi
+			Zai Zaisi Zan Zang Zao Ze Zedong Zeng
+			Zengguang Zenguang Zha Zhai Zhan Zhang
+			Zhangke Zhao Zhaode Zhaodu Zhaoxun Zhen
+			Zheng Zhenglun Zhengsheng Zhengyi
+			Zhensheng Zhenzhong Zhi Zhicai Zhichao
+			Zhide Zhigu Zhiguo Zhihan Zhihong Zhining
+			Zhiqiang Zhiren Zhirou Zhiwen Zhiyi
+			Zhiyuan Zhiyue Zhizhong Zhizhou Zhong
+			Zhongchang Zhongchen Zhongdi Zhongjin
+			Zhongli Zhongmou Zhongwu Zhongzhen Zhou
+			Zhousheng Zhu Zhuan Zhuang Zhuanxu Zhuge
+			Zhuo Zi Zian Zicai Zichu Zidao Zihao
+			Zijing Ziqin Zishang Zicheng Zixin Ziyi
+			Ziying Zizheng Zong Zongmeng Zongmin
+			Zongru Zou Zu Zuan Zun Zunqing Zuo
 		}
 		female_names = {
-			Ai Aili Ailing Aimei An Anyang Awu
-			Bai Bao Baosi Baoyu Baozhai Biyu Bing Bo
-			Cai Caihua Cha Changchang Changying Chen
-			Chenguang Chi Chiying Chuhua Chunhua Chuntao
-			Daiyu Damei Dandan Daofei Daqiao Daya Dayi
-			Diaochan Dongmei
-			E Ehuang Erzhu
-			Fa Fahui Fan Fang Fani Feishan Feiyan Fenfang
-			Feng
-			Gaowei Gaozong Guang Guangji Guifei Guinu Guo
-			Hai Han Hang He Helian Hong Honghua Hongyu Hou
-			Hua Huali Hualing Huan Hui Huian Huidai Huifei
-			Huimin Huiqing Huizhong Huiyu
+			Ai Aili Ailing Aimei Aiqin Aman An Anyang
+			Anzong Awu
+			Bai Bao Baoming Baosi Baoyu Baozhai Baozhu Bing
+			Bingyi Biniang Biyu Bo
+			Cai Caichun Caihua Caiping Cha Chang Changchang
+			Changyi Changying Chaochao Chen Chenguang Chi
+			Chiying Chongyan Chuanzhu Chuhua Chunhua Chunluo
+			Chuntao Chunyan Cuiqiao
+			Daiyu Damei Dandan Daoan Daofei Daoqing Daoyi
+			Daozheng Daqiao Daya Dayi Dehua Dexiu Diaochan
+			Dongmei
+			E Ehuang Erzhu Ezi
+			Fa Fahui Fan Fang Fangmei Fani Fanjing Farong
+			Feishan Feiyan Fenfang Feng Fengniang Fu Fujin
+			Fuyuan
+			Gaowei Gaozong Guang Guangji Gui Guifei Guilan
+			Guinu Guiying Guo Guoer
+			Hai Han Hang Hanyue He Helian Hengbo Hong
+			Honghong Honghua Hongyu Hou Hua Huali Hualing
+			Huan Huanghua Huawan Huazhuang Huer Hui Huian
+			Huidai Huiduan Huifei Huilan Huimei Huimin
+			Huinan Huiqing Huitong Huizhao Huizhong Huiyu
 			Ji Jia Jian Jiang Jiangnu Jiangqing Jiangui
-			Jianwen Jiao Jiayi Jiaying Jie Jieyou Jieyu
-			Jinfeng Jing Jingai Jinghua Jinghuai Jingshou
-			Jingying Jinhu Jiuchang Jun
-			Kaidi Ki Ko Kou
-			Lan Lanbi Lanying Li Lian Lianshi Lien
-			Lieying Lihua Lijuan Liling Lin Linfen Linfeng
-			Ling Lingfeng Lingji Lingnu Lingqi Lingqu
-			Lingyang Lingyuan Liqiu Liu Luban Luyin Luyu
-			Mai Maoying Maozhen Mei Meifeng Meihua Meihui
-			Meilin Meiling Meirong Meiting Meixing Meixiu
-			Meiying Meizi Min Ming Minghua Mingxia Mingyu
+			Jianrong Jianwen Jiao Jiayi Jiaying Jicong Jie
+			Jieyou Jieyu Jijiang Jiner Jinfeng Jing Jingai
+			Jinghua Jinghuai Jinghui Jingshou Jingyan
+			Jingying Jingyue Jinhu Jinhua Jinluan Jinluo
+			Jinnu Jinxian Jinzhu Jiuchang Jun
+			Kaidi Kangyi Ki Ko Kou
+			Lan Lanbi Lanying Li Lian Lianshi Lien Lieying
+			Lihua Lijuan Liling Lin Linfen Linfeng Ling
+			Lingbing Lingfeng Lingguang Lingji Lingnu Lingqi
+			Lingqu Lingxuan Lingyang Lingying Lingyuan
+			Lingyue Liqiu Liu Lize Lizhi Luban Luyin Luyu
+			Luzhen
+			Mai Mantang Manyue Maoer Maoying Maozhen Mei
+			Meifeng Meihua Meihui Meilin Meiling Meirong
+			Meiting Meixing Meixiu Meiying Meizi Min Ming
+			Mingda Minghua Mingxia Mingxiang Mingyu Mingyue
 			Mulan Muzhi
-			Na Nanfeng Ning Ninghong Nuo Nuwa Nuwang
-			Peizhi Ping Pinghua Pingling Piyang
-			Qiang Qianfei Qiao Qiaolian Qichang Qigui Qing
-			Qinger Qinghe Qingling Qingzhao Qiu
-			Rong Rou Ruogan Ruolan Ruomei
-			Sanniang Shangxiang Shan Shanshan
-			Shaoming Shenai Shengtong Shinan
-			Shou Shu Shuang Shun Shunhua Song
-			Su Suanzi Suyin Suying
-			Tai Taihua Taisi Taiying Taizhen Tao Ting Tiying
-			Tu
-			Wangmu Weici Weiwen Wen Wencheng Wenji Wenjun
-			Wenqian Wenzhao Wuyin
-			Xanghua Xian Xiang Xianrong Xianying Xianyuan
-			Xiao Xiaocha Xiaodong Xiaodan Xiaofan Xiaohua
-			Xiaohui Xiaojing Xiaolian Xiaoling Xiaomai
-			Xiaomei Xiaomin Xiaosheng Xiaotong Xiaowen
-			Xiaoya Xiaoyanzi Xiaozhao Xiaozhi Xijun
-			Xingcai Xinghua Xingmei Xingnu Xiu Xiulan
-			Xiurong Xiuying Xuanzong Xue
-			Yan Yanlin Yanyu Yanzi Yen Yenai Yi Yijiang
-			Yifu Ying Yinge Yingtai Yinping Yu Yuan
-			Yuanji Yue Yueying Yuhuan Yujiulu Yuming
-			Yunru Yuwen Yuying
-			Zetian Zhangde Zhangsun Zhaohui Zhaojun Zhen
-			Zhenfeng Zhenji Zhenzhen Zhenzong Zhi Zhide
-			Zhilan Zhongmei Zhu Zi Ziwei Zongying Zhurong
+			Na Najie Nanfeng Nanxian Naying Nenniang Niangzi
+			Ning Ninghong Nizi Nuo Nuwa Nuwang
+			Panpan Peizhi Ping Pinghua Pingling Piyang Puxian
+			Qiang Qianfei Qiao Qiaolian Qiaoyun Qichang Qieluo
+			Qigui Qing Qinger Qinghe Qingling Qingyu Qingzhao
+			Qiniang Qiu Qiuniang Que Quyi
+			Rong Ronghua Rongji Rou Rouniang Rounu Rui Ruirong
+			Ruogan Ruolan Ruomei Ruoxian Ruoxin Ruoxun Ruozhao
+			Rushi Ruying
+			Saihua Sanjing Sanniang Shan Shangrou Shangxiang
+			Shanli Shanshan Shanwei Shanxiang Shaoji Shaoming
+			Shenai Shengqiong Shengtong Shi  Shier Shiguang
+			Shinan Shou Shouji Shouying Shu Shuang Shun
+			Shunhua Shunxuan Shuozhen Shuyi Shuyuan Shuzhen
+			Shuzhu Siniang Song Su Suanzi Sujie Suyue Suyin
+			Suying Suzhen
+			Tai Taihua Taisi Taiying Taizhen Tao Taotao Ting
+			Tiying Tonge Tu
+			Waner Wangmu Wanyi Wanying Weici Weiwen Wen
+			Wencheng Wenji Wenjun Wenqian Wenshou Wenxiu
+			Wenzhao Wuhua Wuxian Wuyin
+			Xanghua Xian Xiane Xiang Xiangjun Xianglan
+			Xiangyun Xianhui Xianji Xianrong Xianying
+			Xianyuan Xianzi Xiao Xiaocha Xiaodong Xiaodan
+			Xiaoe Xiaofan Xiaohua Xiaohui Xiaoji Xiaojin
+			Xiaojing Xiaoli Xiaolian Xiaoling Xiaomai Xiaomei
+			Xiaomin Xiaosheng Xiaotong Xiaowan Xiaowen
+			Xiaoya Xiaoyanzi Xiaoying Xiaoyuan Xiaozhao
+			Xiaozhi Xier Xijie Xijun Xingcai Xinghua
+			Xingmei Xingnu Xinyue Xiu Xiulan Xiurong
+			Xiuui Xiuying Xiuyong Xuanzong Xuchen Xue
+			Yan Yanlin Yanxiang Yanyan Yanyu Yanzi Yaoer
+			Yen Yenai Yi Yian Yijiang Yifu Ying Yinge
+			Yingmei Yingtai Yingwu Yinping Yixing Yiyang
+			Youwei Youwu Yu Yuan Yuanhua Yuanji Yuantong
+			Yuanyuan Yue Yuer Yueshang Yueyi Yueying
+			Yuguang Yuhua Yuhuan Yujing Yujiulu Yuming
+			Yuniang Yunru Yunu Yunxian Yupan Yuwen Yuyi
+			Yuying Yuzhu
+			Zetian Zhangde Zhangsun Zhaohui Zhaojun Zhaopei
+			Zhaorong Zhaoyi  Zhaoyun Zhen Zhener Zhenfeng
+			Zheng Zhenji Zhenli Zhenniang Zhenyi Zhenzhen
+			Zhenzong Zhi Zhichong Zhide Zhihui Zhilan
+			Zhirong Zhonghua Zhongmei Zhongyang Zhou Zhu
+			Zhuozhen Zhurong Zhuzhu Zi Ziwei Zongying Zue
+			Zuimei Zuqi
 		}
 		
 		founder_named_dynasties = no
+		
+		dynasty_title_names = no
+		
+		from_dynasty_prefix = ""
 		
 		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
 		pat_grf_name_chance = 0

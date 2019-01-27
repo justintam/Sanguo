@@ -13,12 +13,10 @@
 }
 188.1.1={
 	liege=k_yi
-	vice_royalty = no
-	holder=50 #Liu Yan
+	holder=3637 #Gao Yi
 }
-190.1.1={
-	vice_royalty = yes
-	holder=4113 #Random
+196.1.1={
+	holder=1351 #He Xialong
 }
 214.1.1={
 	holder=618 #Liu Yan

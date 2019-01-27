@@ -16,6 +16,7 @@ b_jibei = castle
 # Misc
 culture = han
 religion = confucian
+terrain = forest
 
 #History
 208.1.1={

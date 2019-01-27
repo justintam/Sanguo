@@ -16,5 +16,6 @@ b_jingjin = city
 # Misc
 culture = han
 religion = confucian
+terrain = forest
 
 #History

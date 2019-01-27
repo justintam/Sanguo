@@ -29,6 +29,7 @@ letter_event = {
 				trait = has_bubonic_plague
 			}			
 	    	any_dynasty_member = {
+	    		is_offmap_ruler = no
 				is_adult = yes
 				ai = yes
 				trait = has_bubonic_plague
@@ -69,6 +70,7 @@ letter_event = {
 			}
 			random_dynasty_member = {
 				limit = {
+					is_offmap_ruler = no
 					is_adult = yes
 					ai = yes
 					trait = has_bubonic_plague        
@@ -182,6 +184,7 @@ character_event = {
 
 	trigger = {
 		any_dynasty_member = {
+			is_offmap_ruler = no
 			is_adult = yes
 			ai = yes
 			NOT = { trait = incapable }
@@ -191,6 +194,7 @@ character_event = {
 	immediate = {
 		random_dynasty_member = {
 			limit = {
+				is_offmap_ruler = no
 				is_adult = yes
 				ai = yes
 				NOT = { trait = incapable }
@@ -205,7 +209,6 @@ character_event = {
 		} 
 	}
 	option = {
-		name = EVTOPTA_GBC_4
 		event_target:GBC_new_friend = {
 			character_event = { id = GBC.41 }					
 		}
@@ -221,7 +224,6 @@ character_event = {
 	hide_from = yes
 
 	option = {
-		name = EVTOPTA_GBC_41
 		hidden_tooltip = {
 			FROM = {
 				character_event = { id = GBC.5 }
@@ -336,7 +338,6 @@ character_event = {
 character_event = {
 	id = GBC.7
 	picture = GFX_evt_council
-	desc = EVTDESC_GBC_7
 	border = GFX_event_normal_frame_religion
 
 	is_triggered_only = yes
@@ -439,8 +440,6 @@ character_event = {
 		}
 	}
 	option = {
-		name = EVTOPTA_GBC_7
-
 		hidden_tooltip = {
 			event_target:GBC_nice_councillor = { character_event = { id = GBC.71 } }
 		}
@@ -455,7 +454,6 @@ character_event = {
 	hide_window = yes
 
 	option = {
-		name = EVTOPTA_GBC_41
 		hidden_tooltip = {
 			FROM = {
 				character_event = { id = GBC.73 }
@@ -509,7 +507,6 @@ character_event = {
 	hide_window = yes
 
 	option = {
-		name = EVTOPTA_GBC_41
 		hidden_tooltip = {
 			FROM = {
 				character_event = { id = GBC.8 }
@@ -649,7 +646,6 @@ character_event = {
 	hide_window = yes
 
 	option = {
-		name = EVTOPTA_GBC_41
 		hidden_tooltip = {
 			add_trait = falconer
 			FROM = {
@@ -688,7 +684,6 @@ character_event = {
 	hide_from = yes
 
 	option = {
-		name = EVTOPTA_GBC_41
 		hidden_tooltip = {
 			FROM = {
 				random_list = {
@@ -788,8 +783,6 @@ character_event = {
 	}
 	
 	option = {
-		name = EVTOPTA_GBC_19
-
 		if = {
 			limit = { has_dlc = "Reapers" }
 			
@@ -1755,7 +1748,7 @@ character_event = {
 		hidden_tooltip = {
 			set_character_flag = gbc_courtly_lover
 			event_target:gbc_lover = {
-				remove_lover = event_target.gbc_rival
+				remove_lover = event_target:gbc_rival
 			}
 		}
 

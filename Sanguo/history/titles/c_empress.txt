@@ -3,7 +3,8 @@
 	liege=k_confucian
 }
 1.1.1={
-	law=enatic_succession
+	law=enatic_cognatic_succession
+	law=succ_open_elective
 }
 27.1.1={
 	holder=35 #Shengtong
@@ -33,5 +34,16 @@
 	holder=31 #He Lingsi
 }
 189.9.1={
-	holder=0 #None
+	holder=0
+	active=no
+}
+195.1.1={
+	active=yes
+	holder=3906 #Fu Shou
+}
+214.1.1={
+	holder=3930 #Cao Jie
+}
+221.12.10={
+#	holder=0 - Someone else
 }

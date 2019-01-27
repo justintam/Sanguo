@@ -14,5 +14,6 @@ b_jiaohe = temple
 # Misc
 culture = yuezhi
 religion = buddhist
+terrain = desert
 
 #History

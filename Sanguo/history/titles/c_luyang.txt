@@ -28,15 +28,14 @@
 }
 197.4.1={
 	liege=d_yingchuan
-	holder=3565 #Random
+	holder=4490 #Du Xi
 }
-208.9.1={
+199.12.1={
 	liege=d_nanyang
 }
-
-#196.4.1={
-#	holder=0 #Du Xi, grandson of Du Gen
-#}
+201.2.1={
+	holder=3565 #Random
+}
 
 
 

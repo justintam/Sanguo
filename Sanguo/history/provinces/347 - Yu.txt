@@ -15,5 +15,6 @@ b_tongting = city
 # Misc
 culture = han
 religion = taiping
+terrain = plains
 
 #History

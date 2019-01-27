@@ -7,6 +7,12 @@
 	liege=k_sili
 	vice_royalty = yes
 }
+79.1.1={
+	holder=4549 #Zheng Zhong
+}
+81.1.1={
+	holder=0 #None
+}
 110.1.1={
 	holder=5001 #Sima Jun
 }
@@ -26,6 +32,10 @@
 	liege=k_sili
 	holder=142 #Han Bin
 }
+212.1.1={
+	holder=4555 #Zheng Hun
+}
 213.6.1={
 	liege=k_yong
+	holder=3448 #Deng Dao
 }

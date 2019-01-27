@@ -13,5 +13,6 @@ b_dongjun = tribal
 # Misc
 culture = qiang
 religion = baishi
+terrain = mountain
 
 #History

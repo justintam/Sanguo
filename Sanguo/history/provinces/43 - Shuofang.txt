@@ -14,6 +14,7 @@ b_baotou = tribal
 # Misc
 culture = xiongnu
 religion = tengri_pagan
+terrain = steppe
 
 #History
 200.1.1={

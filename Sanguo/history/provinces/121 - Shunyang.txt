@@ -9,11 +9,12 @@ max_settlements = 5
 b_shunyang = castle
 b_xingju = city
 b_fumeng = city
-#b_numai = castle
+#b_nanxiang = castle
 #b_tongbai = castle
 
 # Misc
 culture = han
 religion = confucian
+terrain = mountain
 
 #History

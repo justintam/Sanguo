@@ -13,5 +13,6 @@ b_fanyang = castle
 # Misc
 culture = han
 religion = confucian
+terrain = plains
 
 #History

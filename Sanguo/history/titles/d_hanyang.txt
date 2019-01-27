@@ -23,11 +23,12 @@
 	#He Xun
 	holder=155 #Jin Xuan
 }
-188.10.1={
-	holder=155 #Jin Xuan
-}
+#188.10.1={
+#	holder=155 #Jin Xuan
+#}
+#193 - Administrator of Yongyang - He Shun
 199.1.1={
-	holder=3461 #Wei Duan
+	holder=3580 #Random
 }
 209.1.1={
 	holder=20494 #Meng Jian

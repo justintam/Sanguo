@@ -6,38 +6,23 @@
 1.1.1={
 	liege=d_ba
 }
-160.1.1={
-	holder=4407 #Zhao Wen
+50.1.1={
+	holder=3753 #Cao Min
 }
-170.1.1={
-	holder=4411 #Wang Mou
+60.1.1={
+	holder=0 #None
 }
 184.1.1={
-	holder=130 #Zhao Bu
+	holder=4494 #Mo Si
 }
-188.10.1={
-	holder=3622 #Wang Xian
+196.1.1={
+	liege=d_badong
+	holder=3630 #Zhang Yi
 }
-190.1.1={
-	holder=163 #Fan Min
+201.6.1={
+	liege=d_hanzhong
+	holder=1824 #Pu Hu
 }
-#Zhang Na
-198.1.1={
-	holder=161 #Pang Xi
+219.5.1={
+	liege=d_badong
 }
-208.1.1={
-	holder=3615 #Xu Jing
-}
-210.1.1={
-	holder=3609 #Gong Yang
-}
-214.1.1={
-	holder=3608 #Fei Guan
-}
-#Zhang Yi
-#Liao Li
-#220 Wang Peng
-#Yang Yong
-
-
-#Zhao Min? -Baxi, Badong, Ba

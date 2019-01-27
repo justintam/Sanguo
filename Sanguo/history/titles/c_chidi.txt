@@ -16,7 +16,7 @@
 	liege=k_liangzei #Liang Rebellion
 }
 186.1.1={
-	holder=4137 #Random
+	holder=3597 #Random
 }
 189.9.1={
 	liege=d_beidi

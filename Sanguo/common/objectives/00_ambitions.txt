@@ -113,7 +113,7 @@ obj_become_chancellor = {
 		opinion = {
 			who = liege
 			modifier = opinion_ambition_fulfilled
-			months = 24
+			years = 5
 		}
 		set_character_flag = successful_council_ambition
 	}
@@ -224,7 +224,7 @@ obj_become_marshal = {
 		opinion = {
 			who = liege
 			modifier = opinion_ambition_fulfilled
-			months = 24
+			years = 5
 		}
 		set_character_flag = successful_council_ambition
 	}
@@ -324,7 +324,6 @@ obj_become_treasurer = {
 	}
 	abort = {
 		OR = {
-
 			AND = {
 				is_councillor = yes
 				NOT = { has_job_title = job_treasurer }
@@ -344,7 +343,7 @@ obj_become_treasurer = {
 		opinion = {
 			who = liege
 			modifier = opinion_ambition_fulfilled
-			months = 24
+			years = 5
 		}
 		set_character_flag = successful_council_ambition
 	}
@@ -464,7 +463,7 @@ obj_become_spymaster = {
 		opinion = {
 			who = liege
 			modifier = opinion_ambition_fulfilled
-			months = 24
+			years = 5
 		}
 		set_character_flag = successful_council_ambition
 	}
@@ -548,7 +547,6 @@ obj_become_spiritual = {
 	}
 	abort = {
 		OR = {
-
 			AND = {
 				is_councillor = yes
 				NOT = { has_job_title = job_spiritual }
@@ -568,7 +566,7 @@ obj_become_spiritual = {
 		opinion = {
 			who = liege
 			modifier = opinion_ambition_fulfilled
-			months = 24
+			years = 5
 		}
 		set_character_flag = successful_council_ambition
 	}
@@ -639,7 +637,7 @@ obj_become_paragon_of_virtue = {
 	type = character
 	
 	potential = {
-		NOT = { religion_group = buddhist_religion }
+		NOT = { religion_group = indian_group }
 	}
 	
 	allow = {
@@ -793,12 +791,16 @@ obj_get_married = {
 	}
 	
 	allow = {
-		NOT = { has_dlc = "Zeus" }
+		OR = {
+			NOT = { has_dlc = "Zeus" }
+			ai = yes
+		}
 		prisoner = no
 		is_marriage_adult = yes
 		NOT = { trait = celibate }
 		NOT = { trait = incapable }
 		NOT = { trait = eunuch }
+		NOT = { is_ascetic_trigger = yes }
 		OR = {
 			is_female = no
 			NOT = { age = 40 }
@@ -861,6 +863,7 @@ obj_get_married = {
 			trait = celibate
 			trait = incapable
 			trait = eunuch
+			is_ascetic_trigger = yes
 		}
 	}
 	abort_effect = {
@@ -871,11 +874,11 @@ obj_get_married = {
 	effect = {
 		piety = 10
 		if = {
-			limit = { independent = no }
+			limit = { is_ruler = no }
 			opinion = {
 				who = liege
 				modifier = opinion_fulfilled_marriage_wish
-				months = 24
+				years = 5
 			}
 		}
 		hidden_tooltip = {
@@ -897,7 +900,10 @@ obj_marry_ruler = {
 	}
 	
 	allow = {
-		NOT = { has_dlc = "Zeus" }
+		OR = {
+			NOT = { has_dlc = "Zeus" }
+			ai = yes
+		}
 		prisoner = no
 		is_marriage_adult = yes
 		NOT = { trait = celibate }
@@ -941,6 +947,10 @@ obj_marry_ruler = {
 	}
 	abort = {
 		OR = {
+			AND = {
+				is_married = yes
+				is_ruler = yes
+			}
 			AND = {
 				is_priest = yes
 				can_marry = no
@@ -1126,12 +1136,16 @@ obj_wants_landed_title = {
 	}
 	
 	allow = {
-		NOT = { has_dlc = "Zeus" }
+		OR = {
+			NOT = { has_dlc = "Zeus" }
+			ai = yes
+		}
 		prisoner = no
 		is_adult = yes
 		is_female = no
 		NOT = { trait = incapable }
 		NOT = { trait = eunuch }
+		NOT = { is_ascetic_trigger = yes }
 		NOT = { has_minor_title = title_guru }
 		liege = {
 			OR = {
@@ -1190,6 +1204,13 @@ obj_wants_landed_title = {
 			factor = 3.0
 			trait = ambitious
 		}
+		modifier = {
+			factor = 2.0
+			religion_group = muslim
+			liege = {
+				dynasty = ROOT
+			}
+		}
 	}
 	success = {
 		is_ruler = yes
@@ -1201,7 +1222,10 @@ obj_wants_landed_title = {
 				NOT = { num_of_extra_landed_titles = 1 }
 			}
 		}
-		trait = eunuch
+		OR = {
+			trait = eunuch
+			is_ascetic_trigger = yes
+		}
 	}	
 	abort_effect = {
 		clr_character_flag = flag_denied_title
@@ -1214,7 +1238,7 @@ obj_wants_landed_title = {
 		opinion = {
 			who = liege
 			modifier = opinion_generous_relative
-			months = 60
+			years = 10
 		}
 		hidden_tooltip = {
 			clr_character_flag = flag_denied_title
@@ -1253,7 +1277,10 @@ obj_become_heir = {
 	}
 	
 	allow = {
-		NOT = { has_dlc = "Zeus" }
+		OR = {
+			NOT = { has_dlc = "Zeus" }
+			ai = yes
+		}
 		prisoner = no
 		is_adult = yes
 		is_primary_heir = no
@@ -1668,9 +1695,6 @@ obj_lower_decadence = {
 		NOT = { decadence = 60 }
 	}
 	abort = {
-
-
-
 		trait = incapable
 	}
 	abort_effect = {
@@ -1809,6 +1833,7 @@ obj_become_king = {
 			clr_character_flag = kingdom_claimed_with_ambition
 		}
 	}
+	
 }
 
 ### Buddhist ambitions ###
@@ -2267,7 +2292,7 @@ obj_become_paragon_of_enlightenment = {
 	type = character
 	
 	potential = {
-		religion_group = buddhist_religion
+		religion_group = indian_group
 	}
 	
 	allow = {
@@ -2351,7 +2376,7 @@ obj_gain_any_title = {
 		is_adult = yes
 		is_playable = yes
 		independent = no
-		liege = { independent = yes }
+		#liege = { independent = yes }
 		is_nomadic = no
 		liege = { is_nomadic = no }
 		NOT = { has_character_flag = gain_any_title_ambition_success }

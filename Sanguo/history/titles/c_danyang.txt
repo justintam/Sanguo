@@ -24,10 +24,12 @@
 194.6.1={
 	holder=58 #Liu Yao
 }
-195.6.1={ #Zhou Shang
+195.6.1={
+	liege=d_sun
 	holder=508 #Sun Ce
 }
 197.1.1={
+	liege=d_danyang
 	holder=517 #Wu Jing
 }
 203.1.1={
@@ -38,4 +40,7 @@
 }
 215.4.1={
 	holder=4101 #Random
+}
+222.1.1={
+	holder=10559 #Zhou Fang
 }

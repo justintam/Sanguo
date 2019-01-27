@@ -21,6 +21,40 @@
 	179.1.1={
 		birth=yes
 	}
+	184.1.1={
+		employer=4000
+		add_trait = "refuge"
+		effect = {
+			set_character_flag = refuge_sili
+			health=2
+		}
+	}
+	202.1.1={
+		employer=4212
+		add_spouse=3940
+		remove_trait = "refuge"
+		effect = {
+			clr_character_flag = refuge_sili
+		}
+	}
+	208.1.1={
+		employer=400
+	}
+	217.4.1 = {
+		employer=10400
+	}
+	219.1.1={
+		employer=400
+	}
+	220.3.15 ={
+		employer=10400
+	}
+	226.6.29={
+		employer=10410 #Cao Rui
+	}
+	239.1.22={
+		employer=10420 #Cao Fang
+	}
 	251.1.1={
 		death=yes
 	}
@@ -65,6 +99,7 @@
 		add_trait = "refuge"
 		effect = {
 			set_character_flag = refuge_sili
+			health=3
 		}
 	}
 	197.1.1={
@@ -89,6 +124,11 @@
 	149.1.1={
 		birth=yes
 	}
+	184.1.1={
+		effect={
+			health=2
+		}
+	}
 	189.8.22={
 		employer=300
 	}
@@ -108,6 +148,11 @@
 		death=yes
 	}
 }
+#####
+#
+#	2nd Generation
+#
+#####
 5005={
 	name="Lang"
 	dynasty=22
@@ -127,7 +172,7 @@
 	184.1.1={
 		employer=5004
 	}
-	190.1.1={
+	189.8.22={
 		employer=4000
 		add_trait = "refuge"
 		effect = {
@@ -172,6 +217,33 @@
 	}
 	184.1.1={
 		employer=5004
+		effect={
+			health=4
+		}
+	}
+	189.8.22={
+		employer=300
+	}
+	192.5.22={
+		employer=120
+	}
+	192.7.1={
+		employer=307
+	}
+	195.1.1={
+		employer=308
+	}
+	196.1.1={
+		employer=400
+	}
+	220.3.15 ={
+		employer=10400
+	}
+	226.6.29={
+		employer=10410 #Cao Rui
+	}
+	239.1.22={
+		employer=10420 #Cao Fang
 	}
 	272.1.1={
 		death=yes
@@ -188,6 +260,33 @@
 	}
 	184.1.1={
 		employer=5004
+		effect={
+			health=2
+		}
+	}
+	189.8.22={
+		employer=300
+	}
+	192.5.22={
+		employer=120
+	}
+	192.7.1={
+		employer=307
+	}
+	195.1.1={
+		employer=308
+	}
+	196.1.1={
+		employer=400
+	}
+	220.3.15 ={
+		employer=10400
+	}
+	226.6.29={
+		employer=10410 #Cao Rui
+	}
+	239.1.22={
+		employer=10420 #Cao Fang
 	}
 	260.1.1={
 		death=yes
@@ -204,6 +303,33 @@
 	}
 	184.1.1={
 		employer=5004
+		effect={
+			health=2
+		}
+	}
+	189.8.22={
+		employer=300
+	}
+	192.5.22={
+		employer=120
+	}
+	192.7.1={
+		employer=307
+	}
+	195.1.1={
+		employer=308
+	}
+	196.1.1={
+		employer=400
+	}
+	220.3.15 ={
+		employer=10400
+	}
+	226.6.29={
+		employer=10410 #Cao Rui
+	}
+	239.1.22={
+		employer=10420 #Cao Fang
 	}
 	260.1.1={
 		death=yes
@@ -220,6 +346,33 @@
 	}
 	184.1.1={
 		employer=5004
+		effect={
+			health=2
+		}
+	}
+	189.8.22={
+		employer=300
+	}
+	192.5.22={
+		employer=120
+	}
+	192.7.1={
+		employer=307
+	}
+	195.1.1={
+		employer=308
+	}
+	196.1.1={
+		employer=400
+	}
+	220.3.15 ={
+		employer=10400
+	}
+	226.6.29={
+		employer=10410 #Cao Rui
+	}
+	239.1.22={
+		employer=10420 #Cao Fang
 	}
 	260.1.1={
 		death=yes
@@ -236,6 +389,33 @@
 	}
 	184.1.1={
 		employer=5004
+		effect={
+			health=2
+		}
+	}
+	189.8.22={
+		employer=300
+	}
+	192.5.22={
+		employer=120
+	}
+	192.7.1={
+		employer=307
+	}
+	195.1.1={
+		employer=308
+	}
+	196.1.1={
+		employer=400
+	}
+	220.3.15 ={
+		employer=10400
+	}
+	226.6.29={
+		employer=10410 #Cao Rui
+	}
+	239.1.22={
+		employer=10420 #Cao Fang
 	}
 	260.1.1={
 		death=yes
@@ -253,6 +433,15 @@
 	184.1.1={
 		employer=5004
 	}
+	189.8.22={
+		employer=300
+	}
+	192.5.22={
+		employer=120
+	}
+	192.7.1={
+		employer=307
+	}
 	195.1.1={
 		death=yes
 	}
@@ -265,9 +454,25 @@
 	father=5000
 	208.1.1={
 		birth=yes
+		employer=400
 	}
-	208.1.1={
-		employer=5000
+	217.4.1 = {
+		employer=10400
+	}
+	219.1.1={
+		employer=400
+	}
+	220.3.15 ={
+		employer=10400
+	}
+	226.6.29={
+		employer=10410 #Cao Rui
+	}
+	239.1.22={
+		employer=10420 #Cao Fang
+	}
+	254.8.1={
+		employer=10426 #Cao Mao
 	}
 	255.1.1={
 		death=yes
@@ -281,9 +486,25 @@
 	father=5000
 	211.1.1={
 		birth=yes
+		employer=400
 	}
-	211.1.1={
-		employer=5000
+	217.4.1 = {
+		employer=10400
+	}
+	219.1.1={
+		employer=400
+	}
+	220.3.15 ={
+		employer=10400
+	}
+	226.6.29={
+		employer=10410 #Cao Rui
+	}
+	239.1.22={
+		employer=10420 #Cao Fang
+	}
+	254.8.1={
+		employer=10426 #Cao Mao
 	}
 	265.1.1={
 		death=yes
@@ -366,13 +587,199 @@
 	213.6.1={
 		employer=400
 	}
+	220.3.15 ={
+		employer=10400
+	}
+	226.6.29={
+		employer=10410 #Cao Rui
+	}
+	239.1.22={
+		employer=10420 #Cao Fang
+	}
 	240.1.1={
 		death=yes
 	}
 }
-#Sima Yan
-#	265.2.8={
-#		effect = {
-#			add_artifact=imperial_seal
-#		}
-#	}
+#####
+#
+#	3rd Generation
+#
+#####
+5018={
+	name="Yi"
+	dynasty=22
+	religion="confucian"
+	culture="han"
+	father=5005
+	194.1.1={
+		birth=yes
+		employer=400 #Cao Cao
+	}
+	208.1.1={
+		death=yes
+	}
+}
+5019={
+	name="Wang"
+	dynasty=22
+	religion="confucian"
+	culture="han"
+	father=5006
+	trait="skilled_tactician"
+	trait="duel_trained_warrior"
+	trait="scholar"
+	trait="quick"
+	trait="just"
+	trait="brave"
+	trait="diligent"
+	trait="honorable"
+	trait="temperate"
+	205.1.1={
+		birth=yes
+		employer=400 #Cao Cao
+	}
+	208.1.1={
+		add_trait=adopted
+		father=5005
+	}
+	271.1.1={
+		death=yes
+	}
+}
+5020={
+	name="Yi"
+	dynasty=22
+	religion="confucian"
+	culture="han"
+	father=5005
+	194.1.1={
+		birth=yes
+		employer=400 #Cao Cao
+	}
+	208.1.1={
+		death=yes
+	}
+}
+5021={
+	name="Shi"
+	dynasty=22
+	religion="confucian"
+	culture="han"
+	father=5000
+	mother=3940
+	208.1.1={
+		birth=yes
+		employer=400 #Cao Cao
+	}
+	217.4.1 = {
+		employer=10400
+	}
+	219.1.1={
+		employer=400
+	}
+	220.3.15 ={
+		employer=10400
+	}
+	226.6.29={
+		employer=10410 #Cao Rui
+	}
+	239.1.22={
+		employer=10420 #Cao Fang
+	}
+	255.3.1={
+		death=yes
+	}
+}
+5022={
+	name="Zhao"
+	dynasty=22
+	religion="confucian"
+	culture="han"
+	father=5000
+	mother=3940
+	211.1.1={
+		birth=yes
+		employer=400 #Cao Cao
+	}
+	217.4.1 = {
+		employer=10400
+	}
+	219.1.1={
+		employer=400
+	}
+	220.3.15 ={
+		employer=10400
+	}
+	226.6.29={
+		employer=10410 #Cao Rui
+	}
+	239.1.22={
+		employer=10420 #Cao Fang
+	}
+	265.9.6={
+		death=yes
+	}
+}
+5023={
+	name="Gan"
+	dynasty=22
+	religion="confucian"
+	culture="han"
+	father=5000
+	mother=3940
+	214.1.1={
+		birth=yes
+		employer=400 #Cao Cao
+	}
+	217.4.1 = {
+		employer=10400
+	}
+	219.1.1={
+		employer=400
+	}
+	220.3.15 ={
+		employer=10400
+	}
+	226.6.29={
+		employer=10410 #Cao Rui
+	}
+	239.1.22={
+		employer=10420 #Cao Fang
+	}
+	260.1.1={
+		death=yes
+	}
+}
+
+
+
+#5018
+5050={
+	name="Yan"
+	dynasty=22
+	religion="confucian"
+	culture="han"
+	father=5013
+	236.1.1={
+		birth=yes
+		employer=10410 #Cao Rui
+	}
+	239.1.22={
+		employer=10420 #Cao Fang
+	}
+	254.8.1={
+		employer=10426 #Cao Mao
+	}
+	265.2.8={
+		name="Wu"
+		effect = {
+			add_artifact=imperial_seal
+		}
+	}
+	290.5.26={
+		death=yes
+	}
+}
+
+
+#TBD - SIMA FAMILY TREE

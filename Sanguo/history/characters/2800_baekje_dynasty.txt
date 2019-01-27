@@ -217,7 +217,7 @@
 	dynasty=2204
 	religion="shamanist"
 	culture="joseon"
-	father=2807
+	father=2801
 	1.1.10={
 		birth=yes
 	}

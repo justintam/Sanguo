@@ -10,6 +10,9 @@
 	holder=106 #Zhu Jun
 }
 188.1.1={
+	holder=115 #Ding Yuan
+}
+189.10.1={
 	holder=174 #Wang Kuang
 }
 190.1.1={

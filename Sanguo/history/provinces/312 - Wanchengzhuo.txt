@@ -14,5 +14,6 @@ b_wuruanguan = castle
 # Misc
 culture = han
 religion = confucian
+terrain = hills
 
 #History

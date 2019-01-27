@@ -15,6 +15,7 @@ b_buping = city
 # Misc
 culture = han
 religion = confucian
+terrain = mountain
 
 #History
 214.1.1={

@@ -22,5 +22,8 @@
 	holder=10491 #Dong Zhao
 }
 194.1.1={
-	holder=4188 #Random
+	holder=11304 #Chu Zang
+}
+220.12.10={
+	holder=1030 #Li Xiu
 }

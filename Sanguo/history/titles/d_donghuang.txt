@@ -1,6 +1,6 @@
 1.1.1={
-	law = agnatic_succession
-	law = succ_gavelkind
+	law=agnatic_succession
+	law=succ_gavelkind
 }
 184.1.1={
 	holder=240 #Sima Ju
@@ -9,6 +9,6 @@
 	holder=217 #Xu He
 }
 207.6.1={
-	holder=0 #None
+	holder=0
 	active=no
 }

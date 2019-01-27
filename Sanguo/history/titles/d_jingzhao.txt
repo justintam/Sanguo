@@ -20,11 +20,10 @@
 	holder=4402 #Chang Xia
 }
 195.4.1={
-	liege=k_liang
-	holder=307 #Li Jue
+	holder=308 #Guo Si
 }
-196.1.1={
-	liege=k_sili
+197.10.1={
+	holder=307 #Li Jue
 }
 199.1.1={
 	holder=20460 #Zhang Shi
@@ -35,6 +34,9 @@
 213.6.1={
 	liege=k_yong
 }
-213.9.1={
+215.1.1={
+	holder=4555 #Zheng Hun
+}
+222.1.1={
 	holder=20471 #Yan Fei
 }

@@ -16,5 +16,6 @@ b_xiting = castle
 # Misc
 culture = han
 religion = confucian
+terrain = forest
 
 #History

@@ -14,5 +14,6 @@ b_chengkuang = city
 # Misc
 culture = han
 religion = confucian
+terrain = plains
 
 #History

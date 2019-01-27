@@ -7,3 +7,9 @@ RETTYPE_CUL_TAO;Yellow Turban Zealot;;;;;;;;;;;;;x
 RETTYPE_CUL_TIB;Western Horse Raider;;;;;;;;;;;;;x
 CLAN_ARMY;[Root.GetOnlyDynastyName] Clan;;;;;;;;;;;;;x
 CLAN_ARMY_adj;[Root.GetOnlyDynastyName];;;;;;;;;;;;;x
+IMPERIAL_ARMY;[Root.GetOnlyDynastyName] Imperial Army;;;;;;;;;;;;;x
+IMPERIAL_ARMY_adj;[Root.GetOnlyDynastyName];;;;;;;;;;;;;x
+WAKO_BAND;[Root.GetOnlyDynastyName] Wako Pirates;;;;;;;;;;;;;x
+WAKO_BAND_adj;[Root.GetOnlyDynastyName];;;;;;;;;;;;;x
+WAKO_SHIP;[Root.GetOnlyDynastyName] Wako Fleet;;;;;;;;;;;;;x
+WAKO_SHIP_adj;[Root.GetOnlyDynastyName];;;;;;;;;;;;;x

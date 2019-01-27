@@ -19,6 +19,9 @@ TOOLTIPlimit_ref;You refuse to hand over your new territories. This will brand y
 TOOLTIPlimit_emp;A provincial administrator has passed away. The post has been assigned to an appropriate official to manage.;;;;;;;;;;;;;x,,
 # Clan,,
 TOOLTIPform_clan;Your cash will be used to fund and equip a decent army loyal solely to you.;;;;;;;;;;;;;,,
+# Wako,,
+TOOLTIPally_wako;Ally yourself with the Wako.;;;;;;;;;;;;;,,
+TOOLTIPform_wako;Your cash will be used to fund and equip a Wako pirate army to loot and pillage the mainland.;;;;;;;;;;;;;,,
 # Conversion
 TOOLTIPmass_conversion;Your vassals will decide whether to obey your demand or not.;;;;;;;;;;;;;x,,
 # Tom and Jerry,,

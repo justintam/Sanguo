@@ -33,15 +33,11 @@
 197.1.1={
 	liege=e_zhong
 	vice_royalty = yes
-	holder=705 #Yuan Shu
+	holder=1378 #Tan Quan
 }
 197.6.1={
 	liege=k_yan
-	holder=1352 #De Min
 }
 199.1.1={
 	liege=k_yu
-}
-220.1.1={
-	holder=1353 #De Laohu
 }

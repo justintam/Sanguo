@@ -7,7 +7,10 @@ government_flavor = {
 	graphics = GFX_evt_found_hre
 	priority = 1
 	trigger = {
-		government = feudal_government
+		OR = {
+			government = feudal_government
+			government = theocratic_feudal_government
+		}
 		has_law = succ_feudal_elective
 		NOR = {
 			religion = tengri_pagan
@@ -38,7 +41,10 @@ government_flavor = {
 	graphics = GFX_evt_mongols
 	priority = 1
 	trigger = {
-		government = feudal_government
+		OR = {
+			government = feudal_government
+			government = theocratic_feudal_government
+		}
 		has_law = succ_feudal_elective
 		OR = {
 			religion = tengri_pagan
@@ -124,7 +130,10 @@ government_flavor = {
 	graphics = GFX_evt_found_hre
 	priority = 1
 	trigger = {
-		government = feudal_government
+		OR = {
+			government = feudal_government
+			government = theocratic_feudal_government
+		}
 		NOT = { has_law = succ_feudal_elective }
 		mercenary = no
 		NOR = {
@@ -153,7 +162,10 @@ government_flavor = {
 	graphics = GFX_evt_mongols
 	priority = 1
 	trigger = {
-		government = feudal_government
+		OR = {
+			government = feudal_government
+			government = theocratic_feudal_government
+		}
 		NOT = { has_law = succ_feudal_elective }
 		mercenary = no
 		OR = {
@@ -182,7 +194,10 @@ government_flavor = {
 	graphics = GFX_evt_throne_room
 	priority = 1
 	trigger = {
-		government = feudal_government
+		OR = {
+			government = feudal_government
+			government = theocratic_feudal_government
+		}
 		has_law = succ_feudal_elective
 		NOR = {
 			religion = tengri_pagan
@@ -221,7 +236,10 @@ government_flavor = {
 	graphics = GFX_evt_tengri_throneroom_oldgods
 	priority = 1
 	trigger = {
-		government = feudal_government
+		OR = {
+			government = feudal_government
+			government = theocratic_feudal_government
+		}
 		has_law = succ_feudal_elective
 		OR = {
 			religion = tengri_pagan
@@ -337,7 +355,10 @@ government_flavor = {
 	graphics = GFX_evt_throne_room
 	priority = 1
 	trigger = {
-		government = feudal_government
+		OR = {
+			government = feudal_government
+			government = theocratic_feudal_government
+		}
 		NOT = { has_law = succ_feudal_elective }
 		mercenary = no
 		NOR = {
@@ -380,7 +401,10 @@ government_flavor = {
 	graphics = GFX_evt_tengri_throneroom_oldgods
 	priority = 1
 	trigger = {
-		government = feudal_government
+		OR = {
+			government = feudal_government
+			government = theocratic_feudal_government
+		}
 		NOT = { has_law = succ_feudal_elective }
 		mercenary = no
 		OR = {
@@ -423,7 +447,10 @@ government_flavor = {
 	graphics = GFX_evt_powerful_ruler
 	priority = 1
 	trigger = {
-		government = feudal_government
+		OR = {
+			government = feudal_government
+			government = theocratic_feudal_government
+		}
 		has_law = succ_feudal_elective
 		NOR = {
 			religion = tengri_pagan
@@ -448,7 +475,10 @@ government_flavor = {
 	graphics = GFX_evt_mongols_pillage_oldgods
 	priority = 1
 	trigger = {
-		government = feudal_government
+		OR = {
+			government = feudal_government
+			government = theocratic_feudal_government
+		}
 		has_law = succ_feudal_elective
 		OR = {
 			religion = tengri_pagan
@@ -516,7 +546,10 @@ government_flavor = {
 	graphics = GFX_evt_powerful_ruler
 	priority = 1
 	trigger = {
-		government = feudal_government
+		OR = {
+			government = feudal_government
+			government = theocratic_feudal_government
+		}
 		NOT = { has_law = succ_feudal_elective }
 		mercenary = no
 		NOR = {
@@ -542,7 +575,10 @@ government_flavor = {
 	graphics = GFX_evt_mongols_pillage_oldgods
 	priority = 1
 	trigger = {
-		government = feudal_government
+		OR = {
+			government = feudal_government
+			government = theocratic_feudal_government
+		}
 		NOT = { has_law = succ_feudal_elective }
 		mercenary = no
 		OR = {
@@ -572,7 +608,10 @@ government_flavor = {
 			has_law = imperial_administration
 			has_law = ze_administration_laws_2
 		}
-		government = feudal_government
+		OR = {
+			government = feudal_government
+			government = theocratic_feudal_government
+		}
 		NOT = { has_law = succ_feudal_elective }
 		mercenary = no
 		NOR = {
@@ -598,7 +637,10 @@ government_flavor = {
 			has_law = imperial_administration
 			has_law = ze_administration_laws_2
 		}
-		government = feudal_government
+		OR = {
+			government = feudal_government
+			government = theocratic_feudal_government
+		}
 		NOT = { has_law = succ_feudal_elective }
 		mercenary = no
 		OR = {
@@ -667,7 +709,10 @@ government_flavor = {
 			has_law = imperial_administration
 			has_law = ze_administration_laws_2
 		}
-		government = feudal_government
+		OR = {
+			government = feudal_government
+			government = theocratic_feudal_government
+		}
 		has_law = succ_feudal_elective
 		NOR = {
 			religion = tengri_pagan
@@ -692,7 +737,10 @@ government_flavor = {
 			has_law = imperial_administration
 			has_law = ze_administration_laws_2
 		}
-		government = feudal_government
+		OR = {
+			government = feudal_government
+			government = theocratic_feudal_government
+		}
 		has_law = succ_feudal_elective
 		OR = {
 			religion = tengri_pagan
@@ -713,7 +761,10 @@ government_flavor = {
 	graphics = GFX_evt_emissary_byzantine
 	priority = 1
 	trigger = {
-		government = feudal_government
+		OR = {
+			government = feudal_government
+			government = theocratic_feudal_government
+		}
 		NOT = { has_law = succ_feudal_elective }
 		mercenary = no
 		NOR = {
@@ -756,7 +807,10 @@ government_flavor = {
 	graphics = GFX_evt_tengri_throneroom_oldgods
 	priority = 1
 	trigger = {
-		government = feudal_government
+		OR = {
+			government = feudal_government
+			government = theocratic_feudal_government
+		}
 		NOT = { has_law = succ_feudal_elective }
 		mercenary = no
 		OR = {
@@ -876,7 +930,10 @@ government_flavor = {
 	graphics = GFX_evt_emissary_byzantine
 	priority = 1
 	trigger = {
-		government = feudal_government
+		OR = {
+			government = feudal_government
+			government = theocratic_feudal_government
+		}
 		has_law = succ_feudal_elective
 		NOR = {
 			religion = tengri_pagan
@@ -915,7 +972,10 @@ government_flavor = {
 	graphics = GFX_evt_tengri_throneroom_oldgods
 	priority = 1
 	trigger = {
-		government = feudal_government
+		OR = {
+			government = feudal_government
+			government = theocratic_feudal_government
+		}
 		has_law = succ_feudal_elective
 		OR = {
 			religion = tengri_pagan
@@ -954,7 +1014,10 @@ government_flavor = {
 	graphics = GFX_evt_throne_room_byzantine
 	priority = 1
 	trigger = {
-		government = feudal_government
+		OR = {
+			government = feudal_government
+			government = theocratic_feudal_government
+		}
 		NOT = { has_law = succ_feudal_elective }
 		mercenary = no
 		NOR = {
@@ -983,7 +1046,10 @@ government_flavor = {
 	graphics = GFX_evt_mongols
 	priority = 1
 	trigger = {
-		government = feudal_government
+		OR = {
+			government = feudal_government
+			government = theocratic_feudal_government
+		}
 		NOT = { has_law = succ_feudal_elective }
 		mercenary = no
 		OR = {
@@ -1061,7 +1127,10 @@ government_flavor = {
 	graphics = GFX_evt_throne_room_byzantine
 	priority = 1
 	trigger = {
-		government = feudal_government
+		OR = {
+			government = feudal_government
+			government = theocratic_feudal_government
+		}
 		has_law = succ_feudal_elective
 		NOR = {
 			religion = tengri_pagan
@@ -1092,7 +1161,10 @@ government_flavor = {
 	graphics = GFX_evt_mongols
 	priority = 1
 	trigger = {
-		government = feudal_government
+		OR = {
+			government = feudal_government
+			government = theocratic_feudal_government
+		}
 		has_law = succ_feudal_elective
 		OR = {
 			religion = tengri_pagan
@@ -1283,7 +1355,7 @@ government_flavor = {
 government_flavor = {
 	name = gov_theocracy
 	graphics = GFX_evt_heretic
-	priority = 4
+	priority = 2
 	trigger = {
 		is_theocracy = yes
 	}
@@ -1292,7 +1364,7 @@ government_flavor = {
 government_flavor = {
 	name = gov_republic
 	graphics = GFX_evt_powerful_tower
-	priority = 4
+	priority = 2
 	trigger = {
 		is_republic = yes
 		is_patrician = no
@@ -1310,6 +1382,24 @@ government_flavor = {
 	trigger = {
 		is_feudal = yes
 		has_character_flag = demon_child_non_pagan
+	}
+}
+
+government_flavor = {
+	name = gov_confucian
+	graphics = GFX_evt_chinese_emissary
+	priority = 4
+	trigger = {
+		government = confucian_bureaucracy
+	}
+}
+
+government_flavor = {
+	name = gov_pretender_chinese_empire
+	graphics = GFX_evt_chinese_emissary
+	priority = 4
+	trigger = {
+		government = chinese_imperial_government
 	}
 }
 

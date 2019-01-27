@@ -123,7 +123,6 @@ diploresponse_event = {
 # Event triggers for a player
 character_event = {
 	id = SoA.3000
-	
 	hide_window = yes
 	
 	only_playable = yes
@@ -150,7 +149,6 @@ character_event = {
 			religion_group = chinese_religion
 			religion_group = tao
 		}
-		
 		any_child = {
 			NOT = { age = 3 }
 			is_ill = no
@@ -177,6 +175,10 @@ character_event = {
 			factor = 0.75
 			trait = impaler
 		}
+		modifier = {
+			factor = 0.25
+			society_member_of = the_satanists
+		}
 	}
 	
 	immediate = {
@@ -195,7 +197,6 @@ character_event = {
 # Can also be fired from event 335
 character_event = {
 	id = SoA.3001
-	
 	hide_window = yes
 	
 	is_triggered_only = yes
@@ -225,7 +226,28 @@ narrative_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = EVTOPTA_SOA_3002 # Do nothing, father
+		name = { 
+			text = EVTOPTA_SOA_3002 # Pray and fast, father
+			trigger = {
+				NOT = { society_member_of = the_satanists }
+			}
+		}
+		name = { 
+			text = EVTOPTA_SOA_3002_SATANIST # Rejoice, father
+			trigger = {
+				society_member_of = the_satanists
+			}
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+		if = {
+			limit = { society_member_of = the_satanists }
+			add_society_currency_major_effect = yes
+		}
+		
 		trigger = {
 			is_female = no
 		}
@@ -242,11 +264,34 @@ narrative_event = {
 			}
 		}
 	}
+	
 	option = {
-		name = EVTOPTB_SOA_3002 # Do nothing, mother
+		name = { 
+			text = EVTOPTB_SOA_3002 # Pray and fast, mother
+			trigger = {
+				NOT = { society_member_of = the_satanists }
+			}
+		}
+		name = { 
+			text = EVTOPTB_SOA_3002_SATANIST # Rejoice, mother
+			trigger = {
+				society_member_of = the_satanists
+			}
+		}
+		
 		trigger = {
 			is_female = yes
 		}
+		
+		ai_chance = {
+			factor = 100
+		}
+		
+		if = {
+			limit = { society_member_of = the_satanists }
+			add_society_currency_massive_effect = yes
+		}
+		
 		random_list = {
 			50 = {
 			}
@@ -273,7 +318,9 @@ narrative_event = {
 	
 	option = {
 		name = EVTOPTC_SOA_3002 # Consult the Court Chaplain
+		
 		trigger = {
+			NOT = { society_member_of = the_satanists }
 			job_spiritual = {
 				religion = ROOT
 			}
@@ -300,6 +347,7 @@ character_event = {
 			modifier = {
 				factor = 0
 				trait = zealous
+				NOT = { society_member_of = the_satanists }
 			}
 			modifier = {
 				factor = 2
@@ -347,6 +395,10 @@ character_event = {
 			modifier = {
 				factor = 0
 				trait = cynical
+			}
+			modifier = {
+				factor = 0
+				society_member_of = the_satanists
 			}
 			modifier = {
 				factor = 2
@@ -431,6 +483,10 @@ character_event = {
 			modifier = {
 				factor = 0
 				trait = cynical
+			}
+			modifier = {
+				factor = 0
+				society_member_of = the_satanists
 			}
 			modifier = {
 				factor = 2
@@ -518,7 +574,6 @@ character_event = {
 # Do not worry - bounce the event to get the name of the child
 character_event = {
 	id = SoA.3004
-	
 	hide_window = yes
 	
 	is_triggered_only = yes
@@ -531,7 +586,6 @@ character_event = {
 # Accuse of witchcraft - bounce the event to get the name of the child
 character_event = {
 	id = SoA.3005
-	
 	hide_window = yes
 	
 	is_triggered_only = yes
@@ -544,7 +598,6 @@ character_event = {
 # Accuse the mother of witchcraft - bounce the event to get the name of the child
 character_event = {
 	id = SoA.3006
-	
 	hide_window = yes
 	
 	is_triggered_only = yes
@@ -786,7 +839,6 @@ character_event = {
 # Accused! - bounce
 character_event = {
 	id = SoA.3012
-	
 	hide_window = yes
 	
 	is_triggered_only = yes
@@ -902,7 +954,6 @@ character_event = {
 # Set real father correctly
 character_event = {
 	id = SoA.3016
-	
 	hide_window = yes
 	
 	is_triggered_only = yes
@@ -1093,6 +1144,20 @@ character_event = {
 			add_trait = mastermind_theologian
 		}
 		
+		if = {
+			limit = { has_dlc = "Mystics" }
+			join_society = the_satanists
+			add_society_currency_massive_effect = yes
+			set_society_grandmaster = yes
+			
+			society = {
+				any_society_member = {
+					limit = { NOT = { character = ROOT } }
+					narrative_event = { id = SoA.3090 days = 3 }
+				}
+			}
+		}
+		
 		add_character_modifier = {
 			name = voice_of_satan
 			duration = -1
@@ -1131,14 +1196,24 @@ narrative_event = {
 	is_triggered_only = yes
 	
 	option = { 
-		name = EVTOPTA_SOA_3021
+		name = {
+			text = EVTOPTA_SOA_3021
+			trigger = {
+				NOT = { society_member_of = the_satanists }
+			}
+		}
+		name = {
+			text = EVTOPTA_SOA_3021_SATANIST
+			trigger = {
+				society_member_of = the_satanists
+			}
+		}
 	}
 }
 
 # Demon Child tries to murder sibling in bed
 character_event = {
 	id = SoA.3030
-
 	hide_window = yes
 	
 	is_triggered_only = yes
@@ -1148,7 +1223,6 @@ character_event = {
 			limit = {
 				NOT = { trait = bastard }
 				NOT = { trait = incapable }
-
 				OR = {
 					is_older_than = ROOT
 					AND = {
@@ -1174,7 +1248,6 @@ character_event = {
 # Demon Child tries to murder sibling in bed
 character_event = {
 	id = SoA.3031
-	
 	hide_window = yes
 	
 	is_triggered_only = yes
@@ -1334,6 +1407,15 @@ narrative_event = {
 	
 	option = { 
 		name = EVTOPTA_SOA_3039
+		trigger = {
+			NOT = { society_member_of = the_satanists }
+		}
+	}
+	option = { 
+		name = EVTOPTA_SOA_3039_SATANIST
+		trigger = {
+			society_member_of = the_satanists
+		}
 	}
 }
 
@@ -1349,6 +1431,15 @@ narrative_event = {
 	
 	option = { 
 		name = EVTOPTA_SOA_3040
+		trigger = {
+			NOT = { society_member_of = the_satanists }
+		}
+	}
+	option = { 
+		name = EVTOPTA_SOA_3039_SATANIST
+		trigger = {
+			society_member_of = the_satanists
+		}
 	}
 }
 
@@ -1364,6 +1455,15 @@ narrative_event = {
 	
 	option = { 
 		name = EVTOPTA_SOA_3041
+		trigger = {
+			NOT = { society_member_of = the_satanists }
+		}
+	}
+	option = { 
+		name = EVTOPTA_SOA_3039_SATANIST
+		trigger = {
+			society_member_of = the_satanists
+		}
 	}
 }
 
@@ -1376,7 +1476,7 @@ character_event = {
 	
 	trigger = {
 		is_maimed_trigger = yes
-		trait = possessed
+#		trait = possessed
 		has_dlc = "Sons of Abraham"
 		OR = {
 			has_character_modifier = voice_of_satan
@@ -1544,6 +1644,8 @@ character_event = {
 	trigger = {
 #		trait = possessed
 		has_dlc = "Sons of Abraham"
+		has_epidemic = yes
+		
 		OR = {
 			has_character_modifier = voice_of_satan
 			has_character_flag = demon_child_non_pagan
@@ -1561,6 +1663,15 @@ character_event = {
 	option = {
 		name = EVTOPTA_SOA_3054
 		
+		if = {
+			limit = {
+				trait = has_bubonic_plague
+			}
+			remove_trait = has_bubonic_plague
+		}
+		
+		cure_illness = yes
+		
 		clear_disease_level_effect = yes
 	}
 }
@@ -1575,7 +1686,7 @@ character_event = {
 	prisoner = yes
 	
 	trigger = {
-		trait = possessed
+#		trait = possessed
 		has_dlc = "Sons of Abraham"
 		OR = {
 			has_character_modifier = voice_of_satan
@@ -1623,24 +1734,7 @@ character_event = {
 	picture = GFX_evt_burning_house
 	border = GFX_event_normal_frame_religion
 	
-	only_rulers = yes
-	has_character_flag = demon_child_non_pagan
-	war = yes
-	has_dlc = "Sons of Abraham"
-	
-	trigger = {
-		trait = possessed
-		OR = {
-			is_primary_war_defender = yes
-			is_primary_war_attacker = yes
-		}
-		NOT = { has_character_flag = demon_child_non_pagan_cultists }
-		is_at_sea = no
-	}
-	
-	mean_time_to_happen = {
-		months = 24
-	}
+	is_triggered_only = yes
 	
 	immediate = {
 		location = {
@@ -1686,6 +1780,13 @@ character_event = {
 						name = known_witch
 						duration = -1
 					}
+					
+					if = {
+						limit = { has_dlc = "Mystics" }
+						religion = ROOT
+						join_society = the_satanists
+					}
+					
 					opinion = {
 						who = ROOT
 						modifier = opinion_the_chosen_one
@@ -1737,6 +1838,13 @@ character_event = {
 						name = known_witch
 						duration = -1
 					}
+					
+					if = {
+						limit = { has_dlc = "Mystics" }
+						religion = ROOT
+						join_society = the_satanists
+					}
+					
 					opinion = {
 						who = ROOT
 						modifier = opinion_the_chosen_one
@@ -1789,6 +1897,13 @@ character_event = {
 						name = known_witch
 						duration = -1
 					}
+					
+					if = {
+						limit = { has_dlc = "Mystics" }
+						religion = ROOT
+						join_society = the_satanists
+					}
+					
 					opinion = {
 						who = ROOT
 						modifier = opinion_the_chosen_one
@@ -1812,23 +1927,9 @@ character_event = {
 # A witch nanny arrives at court
 character_event = {
 	id = SoA.3070
-	
 	hide_window = yes
 	
 	is_triggered_only = yes
-	max_age = 15
-	prisoner = no
-	has_character_flag = demon_child_non_pagan
-	
-	trigger = {
-		has_dlc = "Sons of Abraham"
-		NOT = { religion_group = pagan_group }
-		NOT = { has_character_flag = demon_child_non_pagan_got_nanny }
-	}
-	
-	mean_time_to_happen = {
-		months = 3
-	}
 	
 	immediate = {
 		set_character_flag = demon_child_non_pagan_got_nanny
@@ -1898,6 +1999,18 @@ character_event = {
 					duration = -1
 				}
 				
+				if = {
+					limit = { has_dlc = "Mystics" }
+					join_society = the_satanists
+				}
+				
+				if = {
+					limit = {
+						religion_group = christian
+					}
+					add_trait = nun
+				}
+				
 				FROM = {
 					reverse_opinion = {
 						who = PREV
@@ -1957,6 +2070,11 @@ character_event = {
 					duration = -1
 				}
 				
+				if = {
+					limit = { has_dlc = "Mystics" }
+					join_society = the_satanists
+				}
+				
 				FROM = {
 					reverse_opinion = {
 						who = PREV
@@ -1971,7 +2089,6 @@ character_event = {
 # Witch nanny moves with her charge
 character_event = {
 	id = SoA.3073
-	
 	hide_window = yes
 	
 	only_women = yes
@@ -2047,10 +2164,10 @@ character_event = {
 # Witch nanny commits suicide for the demon child
 character_event = {
 	id = SoA.3075
-	
 	hide_window = yes
 	
 	prisoner = no
+	min_age = 6
 	max_age = 15
 	has_character_flag = demon_child_non_pagan_got_nanny
 	
@@ -2092,7 +2209,6 @@ character_event = {
 # Witch nanny commits suicide for the demon child
 character_event = {
 	id = SoA.3076
-	
 	hide_window = yes
 	
 	is_triggered_only = yes
@@ -2135,7 +2251,18 @@ narrative_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = EVTOPTA_SOA_3077
+		name = {
+			text = EVTOPTA_SOA_3077
+			trigger = {
+				NOT = { society_member_of = the_satanists }
+			}
+		}
+		name = {
+			text = EVTOPTA_SOA_3078
+			trigger = {
+				society_member_of = the_satanists
+			}
+		}
 	}
 }
 
@@ -2153,4 +2280,3 @@ narrative_event = {
 		name = EVTOPTA_SOA_3078
 	}
 }
-

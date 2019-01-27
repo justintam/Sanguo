@@ -14,5 +14,6 @@ b_suixiang = city
 # Misc
 culture = han
 religion = taiping
+terrain = forest
 
 #History

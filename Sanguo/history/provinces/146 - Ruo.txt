@@ -14,5 +14,6 @@ b_lankojou = city
 # Misc
 culture = bandunman
 religion = baihu
+terrain = mountain
 
 #History

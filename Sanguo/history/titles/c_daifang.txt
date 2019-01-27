@@ -8,8 +8,15 @@
 }
 184.1.1={
 	liege=d_lelang
-	holder=1316 #Li Shinu
+	holder=1309 #Li Kyungjik
 }
 204.1.1={
 	liege=d_daifang
+}
+210.1.1={
+	holder=979 #Zhang Chang
+}
+238.8.1={
+	liege=k_ji
+	#holder=0 #Cao Rui
 }

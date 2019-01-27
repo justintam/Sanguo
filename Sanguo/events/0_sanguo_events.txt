@@ -22,177 +22,177 @@
 #                                         #
 ###########################################
 
-namespace = SAN
+namespace=SAN
 
 #Peasant begs for money
-character_event = {
-	id = SAN.1
-	desc = EVTDESC_SAN.1
-	title = EVTTITLE_SAN.1
-	picture = GFX_evt_death
+character_event={
+	id=SAN.1
+	desc=EVTDESC_SAN.1
+	title=EVTTITLE_SAN.1
+	picture=GFX_evt_death
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	option = {
-		name = EVTOPTA_SAN.1 # YES
-		scaled_wealth = -0.10
-		character_event = {
-			id = SAN.2
+	option={
+		name=EVTOPTA_SAN.1 # YES
+		scaled_wealth=-0.10
+		character_event={
+			id=SAN.2
 		}
 		
-		ai_chance = {
-			factor = 1
+		ai_chance={
+			factor=1
 
-			modifier = {
-				factor = 1.5
-				trait = charitable
+			modifier={
+				factor=1.5
+				trait=charitable
 			}
-			modifier = {
-				factor = 1.05
-				trait = chivalrous
+			modifier={
+				factor=1.05
+				trait=chivalrous
 			}
-			modifier = {
-				factor = 1.05
-				trait = content
+			modifier={
+				factor=1.05
+				trait=content
 			}
-			modifier = {
-				factor = 1.05
-				trait = honorable
+			modifier={
+				factor=1.05
+				trait=honorable
 			}
-			modifier = {
-				factor = 1.05
-				trait = humble
+			modifier={
+				factor=1.05
+				trait=humble
 			}
-			modifier = {
-				factor = 1.05
-				trait = kind
+			modifier={
+				factor=1.05
+				trait=kind
 			}
 		}
 	}
-	option = {
-		name = EVTOPTB_SAN.1 # NO
-		set_character_flag = refused_flag
-		character_event = {
-			id = SAN.3
+	option={
+		name=EVTOPTB_SAN.1 # NO
+		set_character_flag=refused_flag
+		character_event={
+			id=SAN.3
 		}
 		
-		ai_chance = {
-			factor = 1
+		ai_chance={
+			factor=1
 			
-			modifier = {
-				factor = 1.5
-				trait = greedy
+			modifier={
+				factor=1.5
+				trait=greedy
 			}
-			modifier = {
-				factor = 1.05
-				trait = dishonorable
+			modifier={
+				factor=1.05
+				trait=dishonorable
 			}
-			modifier = {
-				factor = 1.05
-				trait = envious
+			modifier={
+				factor=1.05
+				trait=envious
 			}
-			modifier = {
-				factor = 1.05
-				trait = proud
+			modifier={
+				factor=1.05
+				trait=proud
 			}
-			modifier = {
-				factor = 1.05
-				trait = selfish
+			modifier={
+				factor=1.05
+				trait=selfish
 			}
-			modifier = {
-				factor = 1.05
-				trait = wroth
+			modifier={
+				factor=1.05
+				trait=wroth
 			}
 		}
 	}
 }
 
 #Of course - Chance of him becoming a loyal retainer or just being a con
-character_event = {
-	id = SAN.2
-	desc = EVTDESC_SAN.2
-	title = EVTTITLE_SAN.2
-	picture = GFX_evt_death
+character_event={
+	id=SAN.2
+	desc=EVTDESC_SAN.2
+	title=EVTTITLE_SAN.2
+	picture=GFX_evt_death
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	option = {
-		name = ACCEPT # YES
-		hidden_tooltip = {
-			random_list = {
-				75 = {
-					set_character_flag = create_default
-					character_event = { id = SAN.54 }
+	option={
+		name=ACCEPT # YES
+		hidden_tooltip={
+			random_list={
+				75={
+					set_character_flag=create_default
+					character_event={ id=SAN.54 }
 				}
-				25 = {
-					set_character_flag = conned_flag
-					character_event = {
-						id = SAN.3
+				25={
+					set_character_flag=conned_flag
+					character_event={
+						id=SAN.3
 					}
 				}
 			}
 		}
 	}
-	option = {
-		name = NOTHX # NO
+	option={
+		name=NOTHX # NO
 	}
 }
 
 #Charity Refused
-character_event = {
-	id = SAN.3
-	title = EVTTITLE_SAN.3
-	picture = GFX_evt_peasants
+character_event={
+	id=SAN.3
+	title=EVTTITLE_SAN.3
+	picture=GFX_evt_peasants
 	
-	desc = {
-		text = EVTDESCA_SAN.3
-		trigger = {
-			has_character_flag = conned_flag
+	desc={
+		text=EVTDESCA_SAN.3
+		trigger={
+			has_character_flag=conned_flag
 		}
 	}
 	
-	desc = {
-		text = EVTDESCB_SAN.3
-		trigger = {
-			has_character_flag = refused_flag
+	desc={
+		text=EVTDESCB_SAN.3
+		trigger={
+			has_character_flag=refused_flag
 		}
 	}
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	option = {
-		name = "CURSES"
+	option={
+		name="CURSES"
 		
-		trigger = {
-			has_character_flag = conned_flag
+		trigger={
+			has_character_flag=conned_flag
 		}
 		
-		hidden_tooltip = {
-			clr_character_flag = conned_flag
+		hidden_tooltip={
+			clr_character_flag=conned_flag
 		}
 
-		scaled_wealth = -0.10
+		scaled_wealth=-0.10
 	}
 	
-	option = {
-		name = "OHNO"
+	option={
+		name="OHNO"
 		
-		trigger = {
-			has_character_flag = refused_flag
+		trigger={
+			has_character_flag=refused_flag
 		}
 		
-		hidden_tooltip = {
-			clr_character_flag = refused_flag
-			random_demesne_province = {
-				add_province_modifier = {
-					name = peasant_unrest
-					duration = 365
+		hidden_tooltip={
+			clr_character_flag=refused_flag
+			random_demesne_province={
+				add_province_modifier={
+					name=peasant_unrest
+					duration=365
 				}
-				random_list = {
-					10 = {
-						province_event = { id=SAN.25 }
+				random_list={
+					10={
+						province_event={ id=SAN.25 }
 					}
-					90 = { } #Nothing happens
+					90={ } #Nothing happens
 				}
 			}
 		}
@@ -200,1632 +200,1662 @@ character_event = {
 }
 
 #Petition Decision
-character_event = {
-	id = SAN.4
+character_event={
+	id=SAN.4
 
-	hide_window = yes
+	hide_window=yes
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	immediate = {
-		FROM = { character_event = { id = SAN.40 } }
+	immediate={
+		FROM={ character_event={ id=SAN.40 } }
 	}
 }
 
 #A bandit gang has gained notoriety in your lands. What should we do?
-character_event = {
-	id = SAN.5
-	desc = EVTDESC_SAN.5
-	title = EVTTITLE_SAN.5
-	picture = GFX_evt_bandits
+character_event={
+	id=SAN.5
+	desc=EVTDESC_SAN.5
+	title=EVTTITLE_SAN.5
+	picture=GFX_evt_bandits
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	option = {
-		trigger = {
-			NOR = {
-				trait = craven
-				trait = arbitrary
+	option={
+		trigger={
+			NOR={
+				trait=craven
+				trait=arbitrary
 			}
 		}
-		name = EVTOPTA_SAN.5 # I will fix this myself
-		character_event = {
-			id = SAN.6
+		name=EVTOPTA_SAN.5 # I will fix this myself
+		character_event={
+			id=SAN.6
 		}
 		
-		ai_chance = {
-			factor = 1
+		ai_chance={
+			factor=1
 
-			modifier = {
-				factor = 1.05
-				trait = brave
+			modifier={
+				factor=1.05
+				trait=brave
 			}
-			modifier = {
-				factor = 1.05
-				trait = chivalrous
+			modifier={
+				factor=1.05
+				trait=chivalrous
 			}
-			modifier = {
-				factor = 1.05
-				trait = honorable
+			modifier={
+				factor=1.05
+				trait=honorable
 			}
-			modifier = {
-				factor = 1.05
-				trait = just
+			modifier={
+				factor=1.05
+				trait=just
 			}
-			modifier = {
-				factor = 1.05
-				trait = proud
+			modifier={
+				factor=1.05
+				trait=proud
 			}
-			modifier = {
-				factor = 1.05
-				trait = wroth
+			modifier={
+				factor=1.05
+				trait=wroth
 			}
-			modifier = {
-				factor = 1.05
-				trait = zealous
+			modifier={
+				factor=1.05
+				trait=zealous
 			}
 		}
 	}
-	option = {
-		trigger = {
-			any_courtier = { has_job_title = job_marshal }
+	option={
+		trigger={
+			any_courtier={ has_job_title=job_marshal }
 		}
-		name = EVTOPTB_SAN.5 # Have the marshal eliminate them
-		job_marshal = {
-			character_event = {
-				id = SAN.6
+		name=EVTOPTB_SAN.5 # Have the marshal eliminate them
+		job_marshal={
+			character_event={
+				id=SAN.6
 			}
 		}
 		
-		ai_chance = {
-			factor = 1
+		ai_chance={
+			factor=1
 
-			modifier = {
-				factor = 1.05
-				trait = craven
+			modifier={
+				factor=1.05
+				trait=craven
 			}
-			modifier = {
-				factor = 1.05
-				trait = honorable
+			modifier={
+				factor=1.05
+				trait=honorable
 			}
-			modifier = {
-				factor = 1.05
-				trait = humble
+			modifier={
+				factor=1.05
+				trait=humble
 			}
-			modifier = {
-				factor = 1.05
-				trait = just
+			modifier={
+				factor=1.05
+				trait=just
 			}
-			modifier = {
-				factor = 1.05
-				trait = patient
+			modifier={
+				factor=1.05
+				trait=patient
 			}
-			modifier = {
-				factor = 1.05
-				trait = zealous
+			modifier={
+				factor=1.05
+				trait=zealous
 			}
 		}
 	}
-	option = {
-		trigger = {
-			NOR = {
-				trait = just
-				trait = chivalrous
-				trait = honorable
+	option={
+		trigger={
+			NOR={
+				trait=just
+				trait=chivalrous
+				trait=honorable
 			}
-			wealth = 50
+			wealth=50
 		}
-		name = EVTOPTC_SAN.5 # Make a deal with them
-		character_event = {
-			id = SAN.7
+		name=EVTOPTC_SAN.5 # Make a deal with them
+		character_event={
+			id=SAN.7
 		}
-		wealth = -50
+		wealth=-50
 		
-		ai_chance = {
-			factor = 1
+		ai_chance={
+			factor=1
 
-			modifier = {
-				factor = 1.05
-				trait = arbitrary
+			modifier={
+				factor=1.05
+				trait=arbitrary
 			}
-			modifier = {
-				factor = 1.05
-				trait = content
+			modifier={
+				factor=1.05
+				trait=content
 			}
-			modifier = {
-				factor = 1.05
-				trait = craven
+			modifier={
+				factor=1.05
+				trait=craven
 			}
-			modifier = {
-				factor = 1.05
-				trait = cynical
+			modifier={
+				factor=1.05
+				trait=cynical
 			}
-			modifier = {
-				factor = 1.05
-				trait = dishonorable
+			modifier={
+				factor=1.05
+				trait=dishonorable
 			}
-			modifier = {
-				factor = 1.05
-				trait = humble
+			modifier={
+				factor=1.05
+				trait=humble
 			}
-			modifier = {
-				factor = 1.05
-				trait = patient
+			modifier={
+				factor=1.05
+				trait=patient
 			}
 		}
 	}
-	option = {
-		trigger = {
-			NOR = {
-				trait = just
-				trait = chivalrous
-				trait = honorable
+	option={
+		trigger={
+			NOR={
+				trait=just
+				trait=chivalrous
+				trait=honorable
 			}
-			wealth = 100
+			wealth=100
 		}
-		name = EVTOPTD_SAN.5 # Hire Them
-		wealth = -100
+		name=EVTOPTD_SAN.5 # Hire Them
+		wealth=-100
 		
-		hidden_tooltip = {
-			event_target:target_province = {
-				set_province_flag = buy_rebel
-				province_event = { id=SAN.25 }
+		hidden_tooltip={
+			event_target:target_province={
+				set_province_flag=buy_rebel
+				province_event={ id=SAN.25 }
 			}
 		}
 		
-		ai_chance = {
-			factor = 1
+		ai_chance={
+			factor=1
 
-			modifier = {
-				factor = 1.05
-				trait = ambitious
+			modifier={
+				factor=1.05
+				trait=ambitious
 			}
-			modifier = {
-				factor = 1.05
-				trait = arbitrary
+			modifier={
+				factor=1.05
+				trait=arbitrary
 			}
-			modifier = {
-				factor = 1.05
-				trait = cruel
+			modifier={
+				factor=1.05
+				trait=cruel
 			}
-			modifier = {
-				factor = 1.05
-				trait = cynical
+			modifier={
+				factor=1.05
+				trait=cynical
 			}
-			modifier = {
-				factor = 1.05
-				trait = dishonorable
+			modifier={
+				factor=1.05
+				trait=dishonorable
 			}
-			modifier = {
-				factor = 1.05
-				trait = patient
+			modifier={
+				factor=1.05
+				trait=patient
 			}
-			modifier = {
-				factor = 1.05
-				trait = ruthless
+			modifier={
+				factor=1.05
+				trait=ruthless
 			}
 		}
 	}
-	option = {
-		name = EVTOPTE_SAN.5 # Why are you bothering me?
-		hidden_tooltip = {
-			event_target:target_province = {
-				add_province_modifier = {
-					name = peasant_unrest
-					duration = 365
+	option={
+		name=EVTOPTE_SAN.5 # Why are you bothering me?
+		hidden_tooltip={
+			event_target:target_province={
+				add_province_modifier={
+					name=peasant_unrest
+					duration=365
 				}
-				random_list = {
-					1 = {
-						set_province_flag = big_rebel
-						province_event = { id=SAN.25 }
+				random_list={
+					1={
+						set_province_flag=big_rebel
+						province_event={ id=SAN.25 }
 					}
-					9 = {
-						province_event = { id=SAN.25 }
+					9={
+						province_event={ id=SAN.25 }
 					}
-					90 = { } #Nothing happens
+					90={ } #Nothing happens
 				}
 			}
 		}
 		
-		ai_chance = {
-			factor = 1
+		ai_chance={
+			factor=1
 
-			modifier = {
-				factor = 1.05
-				trait = arbitrary
+			modifier={
+				factor=1.05
+				trait=arbitrary
 			}
-			modifier = {
-				factor = 1.05
-				trait = content
+			modifier={
+				factor=1.05
+				trait=content
 			}
-			modifier = {
-				factor = 1.05
-				trait = craven
+			modifier={
+				factor=1.05
+				trait=craven
 			}
-			modifier = {
-				factor = 1.05
-				trait = dishonorable
+			modifier={
+				factor=1.05
+				trait=dishonorable
 			}
-			modifier = {
-				factor = 1.05
-				trait = gluttonous
+			modifier={
+				factor=1.05
+				trait=gluttonous
 			}
-			modifier = {
-				factor = 1.05
-				trait = proud
+			modifier={
+				factor=1.05
+				trait=proud
 			}
-			modifier = {
-				factor = 1.05
-				trait = slothful
+			modifier={
+				factor=1.05
+				trait=slothful
 			}
 		}
 	}
 }
 
 #Fix Bandit
-character_event = {
-	id = SAN.6
-	desc = EVTDESC_SAN.6
-	title = EVTTITLE_SAN.6
-	picture = GFX_evt_mysterious_forest
+character_event={
+	id=SAN.6
+	desc=EVTDESC_SAN.6
+	title=EVTTITLE_SAN.6
+	picture=GFX_evt_mysterious_forest
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	option = {
-		name = OK
-		add_character_modifier = {
-			name = battlefield_fight
-			duration = 20
+	option={
+		name=OK
+		add_character_modifier={
+			name=battlefield_fight
+			duration=20
 		}
 		
-		event_target:target_province = {
-			set_province_flag = duel_rebel
-			province_event = { id=SAN.25 }	
+		event_target:target_province={
+			set_province_flag=duel_rebel
+			province_event={ id=SAN.25 }	
 		}
 	}
 }
 
 #Pay Bandit
-character_event = {
-	id = SAN.7
-	desc = EVTDESC_SAN.7
-	title = EVTTITLE_SAN.7
-	picture = GFX_evt_scandal
+character_event={
+	id=SAN.7
+	desc=EVTDESC_SAN.7
+	title=EVTTITLE_SAN.7
+	picture=GFX_evt_scandal
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	option = {
-		name = OK
+	option={
+		name=OK
 	}
 }
 
 ### DEBATE ###
 #Local Debate between scholars
-character_event = {
-	id = SAN.8
-	desc = EVTDESC_SAN.8
-	title = EVTTITLE_SAN.8
-	picture = GFX_evt_courtiers_talking
+character_event={
+	id=SAN.8
+	desc=EVTDESC_SAN.8
+	title=EVTTITLE_SAN.8
+	picture=GFX_evt_courtiers_talking
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	option = {
-		name = EVTOPTA_SAN.8 #Join debate
-		character_event = {
-			id = SAN.9
+	option={
+		name=EVTOPTA_SAN.8 #Join debate
+		character_event={
+			id=SAN.9
 		}
 	}
-	option = {
-		trigger = {
-			any_courtier = { has_job_title = job_spiritual }
+	option={
+		trigger={
+			any_courtier={ has_job_title=job_spiritual }
 		}
-		name = EVTOPTB_SAN.8 #Send the tutor
-		job_spiritual = {
-			character_event = {
-				id = SAN.9
+		name=EVTOPTB_SAN.8 #Send the tutor
+		job_spiritual={
+			character_event={
+				id=SAN.9
 			}
 		}
 	}
-	option = {
-		trigger = { wealth = 100 }
-		name = EVTOPTC_SAN.8 #Sponsor their Debate
-		wealth = -100
-		character_event = { id = SAN.15 }
+	option={
+		trigger={ wealth=100 }
+		name=EVTOPTC_SAN.8 #Sponsor their Debate
+		wealth=-100
+		character_event={ id=SAN.15 }
 	}
-	option = {
-		name = EVTOPTD_SAN.8 #Ignore
+	option={
+		name=EVTOPTD_SAN.8 #Ignore
 	}
 }
 
 #Go to Debate
-character_event = {
-	id = SAN.9
-	title = EVTTITLE_SAN.9
-	picture = GFX_evt_courtiers_talking
+character_event={
+	id=SAN.9
+	title=EVTTITLE_SAN.9
+	picture=GFX_evt_courtiers_talking
 	
-	desc = {
-		text = EVTDESCA_SAN.9
-		trigger = {
-			NOR = {
-				has_character_flag = debate1
-				has_character_flag = debate2
-				has_character_flag = debate3
-				has_character_flag = debate4
-				has_character_flag = debate5
+	desc={
+		text=EVTDESCA_SAN.9
+		trigger={
+			NOR={
+				has_character_flag=debate1
+				has_character_flag=debate2
+				has_character_flag=debate3
+				has_character_flag=debate4
+				has_character_flag=debate5
 			}
 		}
 	}
 	
-	desc = {
-		text = EVTDESCB_SAN.9
-		trigger = {
-			OR = {
-				has_character_flag = debate1
-				has_character_flag = debate2
-				has_character_flag = debate3
-				has_character_flag = debate4
-				has_character_flag = debate5
+	desc={
+		text=EVTDESCB_SAN.9
+		trigger={
+			OR={
+				has_character_flag=debate1
+				has_character_flag=debate2
+				has_character_flag=debate3
+				has_character_flag=debate4
+				has_character_flag=debate5
 			}
-			NAND = {
-				has_character_flag = debate1
-				has_character_flag = debate2
-				has_character_flag = debate3
-				has_character_flag = debate4
-				has_character_flag = debate5
+			NAND={
+				has_character_flag=debate1
+				has_character_flag=debate2
+				has_character_flag=debate3
+				has_character_flag=debate4
+				has_character_flag=debate5
 			}
 		}
 	}
 	
-	desc = {
-		text = EVTDESCC_SAN.9
-		trigger = {
-			has_character_flag = debate1
-			has_character_flag = debate2
-			has_character_flag = debate3
-			has_character_flag = debate4
-			has_character_flag = debate5
+	desc={
+		text=EVTDESCC_SAN.9
+		trigger={
+			has_character_flag=debate1
+			has_character_flag=debate2
+			has_character_flag=debate3
+			has_character_flag=debate4
+			has_character_flag=debate5
 		}
 	}
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	option = {
-		name = EVTOPTA_SAN.9
-		trigger = {
-			NOT = { has_character_flag = debate1 }
+	option={
+		name=EVTOPTA_SAN.9
+		trigger={
+			NOT={ has_character_flag=debate1 }
 		}
-		hidden_tooltip = {
-			character_event = { id = SAN.10 }
+		hidden_tooltip={
+			character_event={ id=SAN.10 }
 		}
 	}
 	
-	option = {
-		name = EVTOPTB_SAN.9
-		trigger = {
-			NOT = { has_character_flag = debate2 }
+	option={
+		name=EVTOPTB_SAN.9
+		trigger={
+			NOT={ has_character_flag=debate2 }
 		}
-		hidden_tooltip = {
-			character_event = { id = SAN.11 }
-		}
-	}
-	
-	option = {
-		name = EVTOPTC_SAN.9
-		trigger = {
-			NOT = { has_character_flag = debate3 }
-		}
-		hidden_tooltip = {
-			character_event = { id = SAN.12 }
+		hidden_tooltip={
+			character_event={ id=SAN.11 }
 		}
 	}
 	
-	option = {
-		name = EVTOPTD_SAN.9
-		trigger = {
-			NOT = { has_character_flag = debate4 }
+	option={
+		name=EVTOPTC_SAN.9
+		trigger={
+			NOT={ has_character_flag=debate3 }
 		}
-		hidden_tooltip = {
-			character_event = { id = SAN.13 }
-		}
-	}
-	
-	option = {
-		name = EVTOPTE_SAN.9
-		trigger = {
-			NOT = { has_character_flag = debate5 }
-		}
-		hidden_tooltip = {
-			character_event = { id = SAN.14 }
+		hidden_tooltip={
+			character_event={ id=SAN.12 }
 		}
 	}
 	
-	option = {
-		name = EVTOPTF_SAN.9
-		trigger = {
-			has_character_flag = debate1
-			has_character_flag = debate2
-			has_character_flag = debate3
-			has_character_flag = debate4
-			has_character_flag = debate5
+	option={
+		name=EVTOPTD_SAN.9
+		trigger={
+			NOT={ has_character_flag=debate4 }
 		}
-		hidden_tooltip = {
-			character_event = { id = SAN.15 }
+		hidden_tooltip={
+			character_event={ id=SAN.13 }
+		}
+	}
+	
+	option={
+		name=EVTOPTE_SAN.9
+		trigger={
+			NOT={ has_character_flag=debate5 }
+		}
+		hidden_tooltip={
+			character_event={ id=SAN.14 }
+		}
+	}
+	
+	option={
+		name=EVTOPTF_SAN.9
+		trigger={
+			has_character_flag=debate1
+			has_character_flag=debate2
+			has_character_flag=debate3
+			has_character_flag=debate4
+			has_character_flag=debate5
+		}
+		hidden_tooltip={
+			character_event={ id=SAN.15 }
 		}
 	}
 }
 
 #Debate 1
-character_event = {
-	id = SAN.10
-	desc = EVTDESC_SAN.10
-	title = EVTTITLE_SAN.10
-	picture = GFX_evt_courtiers_talking
+character_event={
+	id=SAN.10
+	desc=EVTDESC_SAN.10
+	title=EVTTITLE_SAN.10
+	picture=GFX_evt_courtiers_talking
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	immediate = {
-		set_character_flag = debate1
+	immediate={
+		set_character_flag=debate1
 	}
 	
-	option = {
-		name = EVTOPTA_SAN.10
-		hidden_tooltip = {
-			character_event = { id = SAN.9 }
+	option={
+		name=EVTOPTA_SAN.10
+		hidden_tooltip={
+			character_event={ id=SAN.9 }
 		}
 	}
-	option = {
-		name = EVTOPTB_SAN.10
-		hidden_tooltip = {
-			character_event = { id = SAN.9 }
+	option={
+		name=EVTOPTB_SAN.10
+		hidden_tooltip={
+			character_event={ id=SAN.9 }
 		}
 	}
-	option = {
-		name = EVTOPTC_SAN.10
-		hidden_tooltip = {
-			character_event = { id = SAN.9 }
+	option={
+		name=EVTOPTC_SAN.10
+		hidden_tooltip={
+			character_event={ id=SAN.9 }
 		}
 	}
-	option = {
-		name = EVTOPTD_SAN.10
+	option={
+		name=EVTOPTD_SAN.10
 	}
 }
 
 #Debate 2
-character_event = {
-	id = SAN.11
-	desc = EVTDESC_SAN.11
-	title = EVTTITLE_SAN.11
-	picture = GFX_evt_courtiers_talking
+character_event={
+	id=SAN.11
+	desc=EVTDESC_SAN.11
+	title=EVTTITLE_SAN.11
+	picture=GFX_evt_courtiers_talking
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	immediate = {
-		set_character_flag = debate2
+	immediate={
+		set_character_flag=debate2
 	}
 	
-	option = {
-		name = EVTOPTA_SAN.11
-		hidden_tooltip = {
-			character_event = { id = SAN.9 }
+	option={
+		name=EVTOPTA_SAN.11
+		hidden_tooltip={
+			character_event={ id=SAN.9 }
 		}
 	}
-	option = {
-		name = EVTOPTB_SAN.11
-		hidden_tooltip = {
-			character_event = { id = SAN.9 }
+	option={
+		name=EVTOPTB_SAN.11
+		hidden_tooltip={
+			character_event={ id=SAN.9 }
 		}
 	}
-	option = {
-		name = EVTOPTC_SAN.11
-		hidden_tooltip = {
-			character_event = { id = SAN.9 }
+	option={
+		name=EVTOPTC_SAN.11
+		hidden_tooltip={
+			character_event={ id=SAN.9 }
 		}
 	}
-	option = {
-		name = EVTOPTD_SAN.11
+	option={
+		name=EVTOPTD_SAN.11
 	}
 }
 
 #Debate 3
-character_event = {
-	id = SAN.12
-	desc = EVTDESC_SAN.12
-	title = EVTTITLE_SAN.12
-	picture = GFX_evt_courtiers_talking
+character_event={
+	id=SAN.12
+	desc=EVTDESC_SAN.12
+	title=EVTTITLE_SAN.12
+	picture=GFX_evt_courtiers_talking
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	immediate = {
-		set_character_flag = debate3
+	immediate={
+		set_character_flag=debate3
 	}
 	
-	option = {
-		name = EVTOPTA_SAN.12
-		hidden_tooltip = {
-			character_event = { id = SAN.9 }
+	option={
+		name=EVTOPTA_SAN.12
+		hidden_tooltip={
+			character_event={ id=SAN.9 }
 		}
 	}
-	option = {
-		name = EVTOPTB_SAN.12
-		hidden_tooltip = {
-			character_event = { id = SAN.9 }
+	option={
+		name=EVTOPTB_SAN.12
+		hidden_tooltip={
+			character_event={ id=SAN.9 }
 		}
 	}
-	option = {
-		name = EVTOPTC_SAN.12
-		hidden_tooltip = {
-			character_event = { id = SAN.9 }
+	option={
+		name=EVTOPTC_SAN.12
+		hidden_tooltip={
+			character_event={ id=SAN.9 }
 		}
 	}
-	option = {
-		name = EVTOPTD_SAN.12
+	option={
+		name=EVTOPTD_SAN.12
 	}
 }
 
 #Debate 4
-character_event = {
-	id = SAN.13
-	desc = EVTDESC_SAN.13
-	title = EVTTITLE_SAN.13
-	picture = GFX_evt_courtiers_talking
+character_event={
+	id=SAN.13
+	desc=EVTDESC_SAN.13
+	title=EVTTITLE_SAN.13
+	picture=GFX_evt_courtiers_talking
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	immediate = {
-		set_character_flag = debate4
+	immediate={
+		set_character_flag=debate4
 	}
 	
-	option = {
-		name = EVTOPTA_SAN.13
-		hidden_tooltip = {
-			character_event = { id = SAN.9 }
+	option={
+		name=EVTOPTA_SAN.13
+		hidden_tooltip={
+			character_event={ id=SAN.9 }
 		}
 	}
-	option = {
-		name = EVTOPTB_SAN.13
-		hidden_tooltip = {
-			character_event = { id = SAN.9 }
+	option={
+		name=EVTOPTB_SAN.13
+		hidden_tooltip={
+			character_event={ id=SAN.9 }
 		}
 	}
-	option = {
-		name = EVTOPTC_SAN.13
-		hidden_tooltip = {
-			character_event = { id = SAN.9 }
+	option={
+		name=EVTOPTC_SAN.13
+		hidden_tooltip={
+			character_event={ id=SAN.9 }
 		}
 	}
-	option = {
-		name = EVTOPTD_SAN.13
+	option={
+		name=EVTOPTD_SAN.13
 	}
 }
 
 #Debate 5
-character_event = {
-	id = SAN.14
-	desc = EVTDESC_SAN.14
-	title = EVTTITLE_SAN.14
-	picture = GFX_evt_courtiers_talking
+character_event={
+	id=SAN.14
+	desc=EVTDESC_SAN.14
+	title=EVTTITLE_SAN.14
+	picture=GFX_evt_courtiers_talking
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	immediate = {
-		set_character_flag = debate5
+	immediate={
+		set_character_flag=debate5
 	}
 	
-	option = {
-		name = EVTOPTA_SAN.14
-		hidden_tooltip = {
-			character_event = { id = SAN.9 }
+	option={
+		name=EVTOPTA_SAN.14
+		hidden_tooltip={
+			character_event={ id=SAN.9 }
 		}
 	}
-	option = {
-		name = EVTOPTB_SAN.14
-		hidden_tooltip = {
-			character_event = { id = SAN.9 }
+	option={
+		name=EVTOPTB_SAN.14
+		hidden_tooltip={
+			character_event={ id=SAN.9 }
 		}
 	}
-	option = {
-		name = EVTOPTC_SAN.14
-		hidden_tooltip = {
-			character_event = { id = SAN.9 }
+	option={
+		name=EVTOPTC_SAN.14
+		hidden_tooltip={
+			character_event={ id=SAN.9 }
 		}
 	}
-	option = {
-		name = EVTOPTD_SAN.14
+	option={
+		name=EVTOPTD_SAN.14
 	}
 }
 
 #Debate Finish
-character_event = {
-	id = SAN.15
-	desc = EVTDESC_SAN.15
-	title = EVTTITLE_SAN.15
-	picture = GFX_evt_death
+character_event={
+	id=SAN.15
+	desc=EVTDESC_SAN.15
+	title=EVTTITLE_SAN.15
+	picture=GFX_evt_death
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	immediate = {
-		prestige = 50
-		clr_character_flag = debate1
-		clr_character_flag = debate2
-		clr_character_flag = debate3
-		clr_character_flag = debate4
-		clr_character_flag = debate5
+	immediate={
+		prestige=50
+		clr_character_flag=debate1
+		clr_character_flag=debate2
+		clr_character_flag=debate3
+		clr_character_flag=debate4
+		clr_character_flag=debate5
 	}
 	
-	option = {
-		name = ACCEPT
-		hidden_tooltip = {
-			random_list = {
-				30 = {
-					set_character_flag = create_diplomat
-					character_event = { id = SAN.54 }
+	option={
+		name=ACCEPT
+		hidden_tooltip={
+			random_list={
+				30={
+					set_character_flag=create_diplomat
+					character_event={ id=SAN.54 }
 				}
-				30 = {
-					set_character_flag = create_priest
-					character_event = { id = SAN.54 }
+				30={
+					set_character_flag=create_priest
+					character_event={ id=SAN.54 }
 				}
-				30 = {
-					set_character_flag = create_steward
-					character_event = { id = SAN.54 }
+				30={
+					set_character_flag=create_steward
+					character_event={ id=SAN.54 }
 				}
-				10 = {
-					character_event = {
-						id = SAN.3
+				10={
+					character_event={
+						id=SAN.3
 					}
 				}
 			}
 		}
 	}
-	option = {
-		name = NOTHX
+	option={
+		name=NOTHX
 	}
 }
 
 ### FAMINE ###
 #Famine
-character_event = {
-	id = SAN.16
-	desc = EVTDESC_SAN.16
-	title = EVTTITLE_SAN.16
-	picture = GFX_evt_illness
+character_event={
+	id=SAN.16
+	desc=EVTDESC_SAN.16
+	title=EVTTITLE_SAN.16
+	picture=GFX_evt_china_famine
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	trigger = {
-		is_landed = yes
-		NOR = {
-			capital_scope = { has_province_modifier = land_reform }
-			capital_scope = { has_province_modifier = local_famine }
+	trigger={
+		is_landed=yes
+		NOR={
+			capital_scope={ has_province_modifier=land_reform }
+			capital_scope={ has_province_modifier=local_famine }
 		}
 	}
 	
-	option = {
-		name = EVTOPTA_SAN.16 #Land Reforms
-		trigger = {
-			wealth = 50
+	option={
+		name=EVTOPTA_SAN.16 #Land Reforms
+		trigger={
+			wealth=50
 		}
-		wealth = -50
-		hidden_tooltip = {
-			random_list = {
-				40 = {
-					character_event = {
-						id = SAN.17
+		wealth=-50
+		hidden_tooltip={
+			random_list={
+				40={
+					character_event={
+						id=SAN.17
 					}
 				}
-				40 = {
-					character_event = {
-						id = SAN.18
+				40={
+					character_event={
+						id=SAN.18
 					}
 				}
-				20 = {
+				20={
 				}
 			}
 		}
 		
-		ai_chance = {
-			factor = 1
+		ai_chance={
+			factor=1
 			
-			modifier = {
-				factor = 1.5
-				trait = charitable
+			modifier={
+				factor=1.5
+				trait=charitable
 			}
-			modifier = {
-				factor = 1.05
-				trait = chivalrous
+			modifier={
+				factor=1.05
+				trait=chivalrous
 			}
-			modifier = {
-				factor = 1.05
-				trait = content
+			modifier={
+				factor=1.05
+				trait=content
 			}
-			modifier = {
-				factor = 1.05
-				trait = honorable
+			modifier={
+				factor=1.05
+				trait=honorable
 			}
-			modifier = {
-				factor = 1.05
-				trait = humble
+			modifier={
+				factor=1.05
+				trait=humble
 			}
-			modifier = {
-				factor = 1.05
-				trait = kind
+			modifier={
+				factor=1.05
+				trait=kind
 			}
 		}
 	}
-	option = {
-		name = EVTOPTB_SAN.16 #Give Food
-		trigger = {
-			wealth = 10
+	option={
+		name=EVTOPTB_SAN.16 #Give Food
+		trigger={
+			wealth=10
 		}
-		wealth = -10
-		hidden_tooltip = {
-			random_list = {
-				40 = {
+		wealth=-10
+		hidden_tooltip={
+			random_list={
+				40={
 				}
-				60 = {
-					character_event = {
-						id = SAN.18
+				60={
+					character_event={
+						id=SAN.18
 					}
 				}
 			}
 		}
 		
-		ai_chance = {
-			factor = 1
+		ai_chance={
+			factor=1
 			
-			modifier = {
-				factor = 1.5
-				trait = greedy
+			modifier={
+				factor=1.5
+				trait=greedy
 			}
-			modifier = {
-				factor = 1.05
-				trait = chivalrous
+			modifier={
+				factor=1.05
+				trait=chivalrous
 			}
-			modifier = {
-				factor = 1.05
-				trait = content
+			modifier={
+				factor=1.05
+				trait=content
 			}
-			modifier = {
-				factor = 1.05
-				trait = honorable
+			modifier={
+				factor=1.05
+				trait=honorable
 			}
-			modifier = {
-				factor = 1.05
-				trait = humble
+			modifier={
+				factor=1.05
+				trait=humble
 			}
-			modifier = {
-				factor = 1.05
-				trait = kind
+			modifier={
+				factor=1.05
+				trait=kind
 			}
 		}
 	}
-	option = {
-		name = EVTOPTC_SAN.16 #Ignore
-		prestige = -100
-		hidden_tooltip = {		
-			capital_scope = {
-				add_province_modifier = {
-					name = local_famine
-					duration = 900
+	option={
+		name=EVTOPTC_SAN.16 #Ignore
+		prestige=-100
+		hidden_tooltip={		
+			capital_scope={
+				add_province_modifier={
+					name=local_famine
+					duration=900
 				}
 			}
 		}
 		
-		ai_chance = {
-			factor = 1
+		ai_chance={
+			factor=1
 			
-			modifier = {
-				factor = 1.05
-				trait = dishonorable
+			modifier={
+				factor=1.05
+				trait=dishonorable
 			}
-			modifier = {
-				factor = 1.05
-				trait = envious
+			modifier={
+				factor=1.05
+				trait=envious
 			}
-			modifier = {
-				factor = 1.05
-				trait = greedy
+			modifier={
+				factor=1.05
+				trait=greedy
 			}
-			modifier = {
-				factor = 1.05
-				trait = proud
+			modifier={
+				factor=1.05
+				trait=proud
 			}
-			modifier = {
-				factor = 1.05
-				trait = selfish
+			modifier={
+				factor=1.05
+				trait=selfish
 			}
-			modifier = {
-				factor = 1.05
-				trait = wroth
+			modifier={
+				factor=1.05
+				trait=wroth
 			}
 		}
 	}
 }
 
 #Land Reforms - Good
-character_event = {
-	id = SAN.17
-	desc = EVTDESC_SAN.17
-	title = EVTTITLE_SAN.17
-	picture = GFX_evt_garden
+character_event={
+	id=SAN.17
+	desc=EVTDESC_SAN.17
+	title=EVTTITLE_SAN.17
+	picture=GFX_evt_garden
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	immediate = {
-		capital_scope = {
-			add_province_modifier = {
-				name = land_reform
-				duration = 900
+	immediate={
+		capital_scope={
+			add_province_modifier={
+				name=land_reform
+				duration=900
 			}
 		}
 	}
 	
-	option = {
-		name = EXCELLENT
+	option={
+		name=EXCELLENT
 	}
 }
 
 #Famine
-character_event = {
-	id = SAN.18
-	desc = EVTDESC_SAN.18
-	title = EVTTITLE_SAN.18
-	picture = GFX_evt_death
+character_event={
+	id=SAN.18
+	desc=EVTDESC_SAN.18
+	title=EVTTITLE_SAN.18
+	picture=GFX_evt_death
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	immediate = {
-		capital_scope = {
-			add_province_modifier = {
-				name = local_famine
-				duration = 900
+	immediate={
+		capital_scope={
+			add_province_modifier={
+				name=local_famine
+				duration=900
 			}
 		}
 	}
 	
-	option = {
-		name = CURSES
-		prestige = -50
+	option={
+		name=CURSES
+		prestige=-50
 	}
 }
 
 #Death and Taxes
-character_event = {
-	id = SAN.19
-	desc = EVTDESC_SAN.19
-	title = EVTTITLE_SAN.19
-	picture = GFX_evt_death
+character_event={
+	id=SAN.19
+	desc=EVTDESC_SAN.19
+	title=EVTTITLE_SAN.19
+	picture=GFX_evt_death
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	option = {
-		name = ACCEPT
+	option={
+		name=ACCEPT
 		
-		trigger = {
-			wealth = 50
+		trigger={
+			wealth=50
 		}
 		
-		custom_tooltip = { text = TOOLTIPaidrequest_a }
+		custom_tooltip={ text=TOOLTIPaidrequest_a }
 		
-		wealth = -50
+		wealth=-50
 		
-		hidden_tooltip = {
-			event_target:target_province = {
-				add_province_modifier = {
-					name = peasants_protected
-					duration = 900
+		hidden_tooltip={
+			event_target:target_province={
+				add_province_modifier={
+					name=peasants_protected
+					duration=900
 				}
 			}
 		}
 		
-		ai_chance = {
-			factor = 1
+		ai_chance={
+			factor=1
 			
-			modifier = {
-				factor = 1.05
-				trait = charitable
+			modifier={
+				factor=1.05
+				trait=charitable
 			}
-			modifier = {
-				factor = 1.05
-				trait = chivalrous
+			modifier={
+				factor=1.05
+				trait=chivalrous
 			}
-			modifier = {
-				factor = 1.05
-				trait = content
+			modifier={
+				factor=1.05
+				trait=content
 			}
-			modifier = {
-				factor = 1.05
-				trait = honorable
+			modifier={
+				factor=1.05
+				trait=honorable
 			}
-			modifier = {
-				factor = 1.05
-				trait = humble
+			modifier={
+				factor=1.05
+				trait=humble
 			}
-			modifier = {
-				factor = 1.05
-				trait = kind
+			modifier={
+				factor=1.05
+				trait=kind
 			}
 		}
 	}
 	
-	option = {
-		name = OH
+	option={
+		name=OH
 		
-		trigger = {
-			NOT = { wealth = 50 }
+		trigger={
+			NOT={ wealth=50 }
 		}
 		
-		custom_tooltip = { text = TOOLTIPaidrequest_b }
+		custom_tooltip={ text=TOOLTIPaidrequest_b }
 		
-		prestige = -10
+		prestige=-10
 		
-		hidden_tooltip = {
-			event_target:target_province = {
-				add_province_modifier = {
-					name = peasant_unrest
-					duration = 365
+		hidden_tooltip={
+			event_target:target_province={
+				add_province_modifier={
+					name=peasant_unrest
+					duration=365
 				}
 			}
 		}
 		
-		ai_chance = {
-			factor = 1
+		ai_chance={
+			factor=1
 		}
 	}
 	
-	option = {
-		name = REFUSE
+	option={
+		name=REFUSE
 		
-		trigger = {
-			wealth = 50
+		trigger={
+			wealth=50
 		}
 		
-		custom_tooltip = { text = TOOLTIPaidrequest_c }
+		custom_tooltip={ text=TOOLTIPaidrequest_c }
 		
-		hidden_tooltip = {
-			event_target:target_province = {
-				add_province_modifier = {
-					name = peasant_unrest
-					duration = 365
+		hidden_tooltip={
+			event_target:target_province={
+				add_province_modifier={
+					name=peasant_unrest
+					duration=365
 				}
 			}
 		}
 		
-		ai_chance = {
-			factor = 1
+		ai_chance={
+			factor=1
 			
-			modifier = {
-				factor = 1.05
-				trait = dishonorable
+			modifier={
+				factor=1.05
+				trait=dishonorable
 			}
-			modifier = {
-				factor = 1.05
-				trait = envious
+			modifier={
+				factor=1.05
+				trait=envious
 			}
-			modifier = {
-				factor = 1.05
-				trait = greedy
+			modifier={
+				factor=1.05
+				trait=greedy
 			}
-			modifier = {
-				factor = 1.05
-				trait = proud
+			modifier={
+				factor=1.05
+				trait=proud
 			}
-			modifier = {
-				factor = 1.05
-				trait = selfish
+			modifier={
+				factor=1.05
+				trait=selfish
 			}
-			modifier = {
-				factor = 1.05
-				trait = wroth
+			modifier={
+				factor=1.05
+				trait=wroth
 			}
 		}
 	}
 }
 
 #YT Rebels
-character_event = {
-	id = SAN.20
-	desc = {
-		text = EVTDESC_SAN.20
-		trigger = {
-			has_regent = no
+character_event={
+	id=SAN.20
+	desc={
+		text=EVTDESC_SAN.20
+		trigger={
+			has_regent=no
 		}
 	}
-	desc = {
-		text = EVTDESC_SAN.REG
-		trigger = {
-			has_regent = yes
+	desc={
+		text=EVTDESC_SAN.REG
+		trigger={
+			has_regent=yes
 		}
 	}
-	title = EVTTITLE_SAN.20
-	picture = GFX_evt_peasants
+	title=EVTTITLE_SAN.20
+	picture=GFX_evt_china_unrest
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 
-	only_playable = yes
-	religion_group = chinese_religion
-	culture_group = chinese
+	only_playable=yes
+	religion_group=chinese_religion
+	culture_group=chinese_group
 
-	weight_multiplier = {
-		days = 1
-		modifier = {
-			factor = 0.1
-			any_demesne_province = {
-				has_province_modifier = peasants_protected
+	weight_multiplier={
+		days=1
+		modifier={
+			factor=0.1
+			any_demesne_province={
+				has_province_modifier=peasants_protected
 			}
 		}
-		modifier = {
-			factor = 2
-			any_demesne_province = {
-				has_province_modifier = peasant_unrest
+		modifier={
+			factor=2
+			any_demesne_province={
+				has_province_modifier=peasant_unrest
 			}
 		}
-		modifier = {
-			factor = 0.1
-			ai = yes
+		modifier={
+			factor=0.1
+			ai=yes
 		}
 	}
 	
-	trigger = {
-		has_global_flag = yellow_turban_rise
-		is_landed = yes
-		capital_scope = {
-			OR = {
-				region = world_china_bing
-				region = world_china_ji
-				region = world_china_jing
-				region = world_china_qing
-				region = world_china_sili
-				region = world_china_xu
-				region = world_china_yan
-				region = world_china_yi
-				region = world_china_you
-				region = world_china_yu
+	trigger={
+		has_global_flag=yellow_turban_rise
+		is_landed=yes
+		capital_scope={
+			OR={
+				region=world_china_bing
+				region=world_china_ji
+				region=world_china_jing
+				region=world_china_qing
+				region=world_china_sili
+				region=world_china_xu
+				region=world_china_yan
+				region=world_china_yi
+				region=world_china_you
+				region=world_china_yu
 			}
 		}
 	}
 	
-	immediate = {
-		random_demesne_province = {
-			add_province_modifier = {
-				name = religious_unrest
-				duration = 365
+	immediate={
+		random_demesne_province={
+			add_province_modifier={
+				name=religious_unrest
+				duration=365
 			}
-			set_province_flag = yellow_rebel
-			province_event = { id=SAN.25 }
+			set_province_flag=yellow_rebel
+			province_event={ id=SAN.25 }
 		}
 	}
 	
-	option = {
-		name = OHNO
+	option={
+		name=OHNO
 	}
 }
 
 #Liang Rebels
-character_event = {
-	id = SAN.21
-	desc = {
-		text = EVTDESC_SAN.21
-		trigger = {
-			has_regent = no
+character_event={
+	id=SAN.21
+	desc={
+		text=EVTDESC_SAN.21
+		trigger={
+			has_regent=no
 		}
 	}
-	desc = {
-		text = EVTDESC_SAN.REG
-		trigger = {
-			has_regent = yes
+	desc={
+		text=EVTDESC_SAN.REG
+		trigger={
+			has_regent=yes
 		}
 	}
-	title = EVTTITLE_SAN.21
-	picture = GFX_evt_peasants
+	title=EVTTITLE_SAN.21
+	picture=GFX_evt_mongols_pillage_oldgods
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	only_playable = yes
-	culture_group = chinese
+	only_playable=yes
+	culture_group=chinese_group
 
-	weight_multiplier = {
-		days = 1
-		modifier = {
-			factor = 0.1
-			any_demesne_province = {
-				has_province_modifier = peasants_protected
+	weight_multiplier={
+		days=1
+		modifier={
+			factor=0.1
+			any_demesne_province={
+				has_province_modifier=peasants_protected
 			}
 		}
-		modifier = {
-			factor = 2
-			any_demesne_province = {
-				has_province_modifier = peasant_unrest
+		modifier={
+			factor=2
+			any_demesne_province={
+				has_province_modifier=peasant_unrest
 			}
 		}
-		modifier = {
-			factor = 0.1
-			ai = yes
+		modifier={
+			factor=0.1
+			ai=yes
 		}
 	}
 	
-	trigger = {
-		OR = {
-			religion = confucian
-			religion = legal
+	trigger={
+		OR={
+			religion=confucian
+			religion=legal
 		}
-		has_global_flag = liang_rebel_rise
-		is_landed = yes
-		capital_scope = {
-			region = world_china_liang
+		has_global_flag=liang_rebel_rise
+		is_landed=yes
+		capital_scope={
+			region=world_china_liang
 		}
 	}
 	
-	immediate = {
-		random_demesne_province = {
-			add_province_modifier = {
-				name = cultural_unrest
-				duration = 365
+	immediate={
+		random_demesne_province={
+			add_province_modifier={
+				name=cultural_unrest
+				duration=365
 			}
-			set_province_flag = liang_rebel
-			province_event = { id=SAN.25 }
+			set_province_flag=liang_rebel
+			province_event={ id=SAN.25 }
 		}
 	}
 	
-	option = {
-		name = OHNO
+	option={
+		name=OHNO
 	}
 }
 
 #Liang Rebellion
-character_event = {
-	id = SAN.22
-	desc = EVTDESC_SAN.22
-	title = EVTTITLE_SAN.22
-	picture = GFX_evt_peasants
+character_event={
+	id=SAN.22
+	desc=EVTDESC_SAN.22
+	title=EVTTITLE_SAN.22
+	picture=GFX_evt_china_mongols_invade
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	option = {
-		name = ACCEPT
+	option={
+		name=ACCEPT
 		
-		if = {
-			limit = {
-				religion = confucian
+		if={
+			limit={
+				religion=confucian
 			}
-			religion = folk
+			religion=folk
 		}
 		
-		set_defacto_liege = k_liangzei
+		set_defacto_liege=k_liangzei
 		
-		ai_chance = {
-			factor = 1
+		ai_chance={
+			factor=1
 			
-			modifier = {
-				factor = 0.25 #Reduce chance of call
+			modifier={
+				factor=0.25 #Reduce chance of call
 			}
-			modifier = {
-				factor = 10
-				NOT = { culture = han }
+			modifier={
+				factor=10
+				NOT={ culture=han }
 			}
-			modifier = {
-				factor = 10
-				NOT = { religion = confucian }
+			modifier={
+				factor=10
+				NOT={ religion=confucian }
 			}
-			modifier = {
-				factor = 2
-				trait = fate_lead
+			modifier={
+				factor=2
+				trait=fate_lead
 			}
-			modifier = {
-				factor = 2
-				trait = fate_war
+			modifier={
+				factor=2
+				trait=fate_war
 			}
-			modifier = {
-				factor = 1.05
-				trait = ambitious
+			modifier={
+				factor=1.05
+				trait=ambitious
 			}
-			modifier = {
-				factor = 1.05
-				trait = wroth
+			modifier={
+				factor=1.05
+				trait=wroth
 			}
-			modifier = {
-				factor = 1.05
-				trait = envious
+			modifier={
+				factor=1.05
+				trait=envious
 			}
-			modifier = {
-				factor = 1.05
-				trait = greedy
+			modifier={
+				factor=1.05
+				trait=greedy
 			}
-			modifier = {
-				factor = 0.9
-				trait = chivalrous
+			modifier={
+				factor=0.9
+				trait=chivalrous
 			}
-			modifier = {
-				factor = 0.9
-				trait = just
+			modifier={
+				factor=0.9
+				trait=just
 			}
-			modifier = {
-				factor = 2
-				trait = zealous
-				NOT = { religion = confucian }
+			modifier={
+				factor=2
+				trait=zealous
+				NOT={ religion=confucian }
 			}
-			modifier = {
-				factor = 0.15
-				dynasty = 2
+			modifier={
+				factor=0.15
+				dynasty=2
 			}
 		}
 	}
 	
-	option = {
-		name = NOTHX
+	option={
+		name=NOTHX
 		
-		ai_chance = {
-			factor = 1
+		ai_chance={
+			factor=1
 		}
 	}
 }
 
 ### Liang Rebel Forced ###
-character_event = {
-	id = SAN.23
+character_event={
+	id=SAN.23
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 
-	hide_window = yes
+	hide_window=yes
 	
-	immediate = {
-		random = {
-			chance = 50
-			FROM = {
-				set_defacto_liege = k_liangzei
+	immediate={
+		random={
+			chance=50
+			FROM={
+				set_defacto_liege=k_liangzei
 			}
 		}
 	}
 }
 
 # Native Rebels
-character_event = {
-	id = SAN.24
-	desc = {
-		text = EVTDESC_SAN.24
-		trigger = {
-			has_regent = no
+character_event={
+	id=SAN.24
+	desc={
+		text=EVTDESC_SAN.24
+		trigger={
+			has_regent=no
 		}
 	}
-	desc = {
-		text = EVTDESC_SAN.REG
-		trigger = {
-			has_regent = yes
+	desc={
+		text=EVTDESC_SAN.REG
+		trigger={
+			has_regent=yes
 		}
 	}
-	title = EVTTITLE_SAN.24
-	picture = GFX_evt_peasants
+	title=EVTTITLE_SAN.24
+	picture=GFX_evt_peasants
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	only_playable = yes
-	prisoner = no
-	religion_group = chinese_religion
+	only_playable=yes
+	prisoner=no
+	religion_group=chinese_religion
 
-	weight_multiplier = {
-		days = 1
-		modifier = {
-			factor = 0.1
-			any_demesne_province = {
-				has_province_modifier = peasants_protected
+	weight_multiplier={
+		days=1
+		modifier={
+			factor=0.1
+			any_demesne_province={
+				has_province_modifier=peasants_protected
 			}
 		}
-		modifier = {
-			factor = 2
-			any_demesne_province = {
-				has_province_modifier = peasant_unrest
+		modifier={
+			factor=2
+			any_demesne_province={
+				has_province_modifier=peasant_unrest
 			}
 		}
-		modifier = {
-			factor = 0.1
-			ai = yes
+		modifier={
+			factor=0.1
+			ai=yes
 		}
 	}
 	
-	trigger = {
-		is_landed = yes
-		capital_scope = {
-			OR = {
-				region = world_china_bing
-				region = world_china_ji
-				region = world_china_jiaozhi
-				region = world_china_jing
-				region = world_china_liang
-				region = world_china_yang
-				region = world_china_you
-				region = world_china_yi
+	trigger={
+		is_landed=yes
+		capital_scope={
+			OR={
+				region=world_china_bing
+				region=world_china_ji
+				region=world_china_jiaozhi
+				region=world_china_jing
+				region=world_china_liang
+				region=world_china_yang
+				region=world_china_you
+				region=world_china_yi
 			}
 		}
-		any_realm_province = {
-			NOT = { culture_group = chinese }
+		any_realm_province={
+			NOT={ culture_group=chinese_group }
 		}
 	}
 	
-	immediate = {
-		random_realm_province = {
-			limit = { NOT = { culture_group = chinese } }
-			add_province_modifier = {
-				name = cultural_unrest
-				duration = 365
+	immediate={
+		random_realm_province={
+			limit={ NOT={ culture_group=chinese_group } }
+			add_province_modifier={
+				name=cultural_unrest
+				duration=365
 			}
-			set_province_flag = native_rebel
-			province_event = { id=SAN.25 }
+			set_province_flag=native_rebel
+			province_event={ id=SAN.25 }
 		}
 	}
 	
-	option = {
-		name = OHNO
+	option={
+		name=OHNO
 	}
 }
 
 #Rebels
-province_event = {
-	id = SAN.25
+province_event={
+	id=SAN.25
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	hide_window = yes
+	hide_window=yes
 	
-	immediate = {
+	immediate={
 		### Normal Rebels
-		if = {
-			limit = {
-				OR = {
-					has_province_flag = yellow_rebel
-					has_province_flag = liang_rebel
-					has_province_flag = native_rebel
+		if={
+			limit={
+				OR={
+					has_province_flag=yellow_rebel
+					has_province_flag=liang_rebel
+					has_province_flag=native_rebel
 				}
 			}
-			random = {
-				chance = 25
-				set_province_flag = big_rebel
+			random={
+				chance=25
+				set_province_flag=big_rebel
 			}
 		}
 		
-		create_random_soldier = {
-			random_traits = yes
-			dynasty = none
-			religion = ROOT
-			culture = ROOT
-			female = no
-			age = 25
-			attributes = {
-				martial = 5
+		create_random_soldier={
+			random_traits=yes
+			dynasty=none
+			religion=ROOT
+			culture=ROOT
+			female=no
+			age=25
+			attributes={
+				martial=5
 			}
-			trait = peasant_leader
-			trait = tough_soldier
+			trait=peasant_leader
+			trait=tough_soldier
 		}
-		new_character = {
-			wealth = 100
+		new_character={
+			wealth=100
 			
-			random_list = {
-				10 = { add_trait = duel_skilled_warrior }
-				30 = { add_trait = duel_trained_warrior }
-				60 = { add_trait = duel_poor_warrior }
+			random_list={
+				10={ add_trait=duel_skilled_warrior }
+				30={ add_trait=duel_trained_warrior }
+				60={ add_trait=duel_poor_warrior }
 			}
 			
-			save_event_target_as = target_rebel
+			save_event_target_as=target_rebel
 		}
 		
-		event_target:target_rebel = {
-			if = {
-				limit = {
-					culture = han
-					ROOT = { NOT = { region = world_china_yi } }
+		event_target:target_rebel={
+			if={
+				limit={
+					culture=han
+					ROOT={ NOT={ region=world_china_yi } }
 				}
-				random_list = {
-					10 = { religion = taiping }
-					90 = { religion = folk }
-				}
-			}
-			if = {
-				limit = {
-					culture = han
-					ROOT = { region = world_china_yi }
-				}
-				random_list = {
-					50 = { religion = tianshi }
-					50 = { religion = folk }
+				random_list={
+					10={ religion=taiping }
+					90={ religion=folk }
 				}
 			}
-			if = {
-				limit = { culture_group = korean }
-				religion = shamanist
+			if={
+				limit={
+					culture=han
+					ROOT={ region=world_china_yi }
+				}
+				random_list={
+					50={ religion=tianshi }
+					50={ religion=folk }
+				}
 			}
-			if = {
-				limit = { culture_group = mongol }
-				religion = tengri_pagan
+			if={
+				limit={ culture_group=japanese }
+				religion=shinto
 			}
-			if = {
-				limit = { culture_group = yue }
-				religion = animist
+			if={
+				limit={ culture_group=korean }
+				religion=shamanist
 			}
-			if = {
-				limit = { culture = yuezhi }
-				religion = buddhist
+			if={
+				limit={
+					OR={
+						culture_group=mongol
+						culture=jie
+					}
+				}
+				religion=tengri_pagan
 			}
-			if = {
-				limit = { culture = qiang }
-				religion = baishi
+			if={
+				limit={ culture_group=yue }
+				religion=animist
 			}
-			if = {
-				limit = { culture = di }
-				religion = baima
+			if={
+				limit={ culture=yuezhi }
+				religion=buddhist
 			}
-			if = {
-				limit = { culture = bandunman }
-				religion = baihu
+			if={
+				limit={ culture=qiang }
+				religion=baishi
 			}
-			if = {
-				limit = { culture = nanman }
-				religion = huojiao
+			if={
+				limit={ culture=di }
+				religion=baima
+			}
+			if={
+				limit={ culture=bandunman }
+				religion=baihu
+			}
+			if={
+				limit={ culture=nanman }
+				religion=huojiao
 			}
 		}
 		
 		###
 		
-		if = {
-			limit = {
-				NOR = {
-					has_province_flag = yellow_rebel
-					has_province_flag = liang_rebel
-					has_province_flag = native_rebel
-					has_province_flag = buy_rebel
+		if={
+			limit={
+				NOR={
+					has_province_flag=yellow_rebel
+					has_province_flag=liang_rebel
+					has_province_flag=native_rebel
+					has_province_flag=buy_rebel
 				}
 			}
-			event_target:target_rebel = {
-				create_title = {
-					tier = DUKE
-					landless = yes
-					temporary = yes
-					rebel = yes
-					culture = PREV
-					name = "PEASANT_REVOLT"
-					holder = THIS
+			event_target:target_rebel={
+				create_title={
+					tier=DUKE
+					landless=yes
+					temporary=yes
+					rebel=yes
+					culture=PREV
+					name="PEASANT_REVOLT"
+					holder=THIS
 				}
 			}
 		}
 		### YT Rebels
-		if = {
-			limit = { has_province_flag = yellow_rebel }
-			clr_province_flag = yellow_rebel
+		if={
+			limit={ has_province_flag=yellow_rebel }
+			clr_province_flag=yellow_rebel
 		
-			event_target:target_rebel = {
-				religion = taiping
+			event_target:target_rebel={
+				religion=taiping
 			
-				create_title = {
-					tier = DUKE
-					landless = yes
-					temporary = yes
-					rebel = yes
-					culture = PREV
-					name = "YELLOW_REVOLT"
-					holder = THIS
+				create_title={
+					tier=DUKE
+					landless=yes
+					temporary=yes
+					rebel=yes
+					culture=PREV
+					name="YELLOW_REVOLT"
+					holder=THIS
 				}
 			}
 		}
 	
 		### Liang Rebels
-		if = {
-			limit = { has_province_flag = liang_rebel }
-			clr_province_flag = liang_rebel
+		if={
+			limit={ has_province_flag=liang_rebel }
+			clr_province_flag=liang_rebel
 			
-			event_target:target_rebel = {
-				create_title = {
-					tier = DUKE
-					landless = yes
-					temporary = yes
-					rebel = yes
-					culture = PREV
-					name = "LIANG_REVOLT"
-					holder = THIS
+			event_target:target_rebel={
+				create_title={
+					tier=DUKE
+					landless=yes
+					temporary=yes
+					rebel=yes
+					culture=PREV
+					name="LIANG_REVOLT"
+					holder=THIS
+				}
+			}
+		}
+	
+		### Wako Pirates
+		if={
+			limit={ has_province_flag=wako_rebel }
+			clr_province_flag=wako_rebel
+			
+			event_target:target_rebel={
+				religion=shinto
+				
+				create_title={
+					tier=DUKE
+					landless=yes
+					temporary=yes
+					rebel=yes
+					adventurer=yes
+					culture=PREV
+					name="WAKO_REVOLT"
+					holder=THIS
 				}
 			}
 		}
 	
 		### Native Rebels
-		if = {
-			limit = { has_province_flag = native_rebel }
-			clr_province_flag = native_rebel
+		if={
+			limit={ has_province_flag=native_rebel }
+			clr_province_flag=native_rebel
 			
-			event_target:target_rebel = {
-				create_title = {
-					tier = DUKE
-					landless = yes
-					temporary = yes
-					rebel = yes
-					culture = PREV
-					name = "NATIVE_REVOLT"
-					holder = THIS
+			event_target:target_rebel={
+				create_title={
+					tier=DUKE
+					landless=yes
+					temporary=yes
+					rebel=yes
+					culture=PREV
+					name="NATIVE_REVOLT"
+					holder=THIS
 				}
 			}
 		}
-		if = {
-			limit = { has_province_flag = buy_rebel }
-			clr_province_flag = buy_rebel
-			event_target:target_rebel = {
-				spawn_unit = {
-					province = ROOT
-					home = ROOT
-					owner = FROM
-					leader = THIS
-					scaled_by_biggest_garrison = 1
-					troops = {
-						light_infantry = { 14 14 }
-						heavy_infantry = { 1 1 }
-						archers = { 5 5 }
+		if={
+			limit={ has_province_flag=buy_rebel }
+			clr_province_flag=buy_rebel
+			event_target:target_rebel={
+				spawn_unit={
+					province=ROOT
+					home=ROOT
+					owner=FROM
+					leader=THIS
+					scaled_by_biggest_garrison=1
+					troops={
+						light_infantry={ 14 14 }
+						heavy_infantry={ 1 1 }
+						archers={ 5 5 }
 					}
-					attrition = 1.0
-					maintenance_multiplier = 1.0
-					reinforces = yes
+					attrition=1.0
+					maintenance_multiplier=1.0
+					reinforces=yes
 				}
 			}
-			break = yes
+			break=yes
 		}
-		if = {
-			limit = { has_province_flag = big_rebel }
-			clr_province_flag = big_rebel
-			event_target:target_rebel = {
-				spawn_unit = {
-					province = ROOT
-					home = ROOT
-					owner = THIS
-					leader = THIS
-					scaled_by_biggest_garrison = 1
-					troops = {
-						light_infantry = { 14 14 }
-						heavy_infantry = { 1 1 }
-						archers = { 5 5 }
+		if={
+			limit={ has_province_flag=big_rebel }
+			clr_province_flag=big_rebel
+			event_target:target_rebel={
+				spawn_unit={
+					province=ROOT
+					home=ROOT
+					owner=THIS
+					leader=THIS
+					scaled_by_biggest_garrison=1
+					troops={
+						light_infantry={ 14 14 }
+						heavy_infantry={ 1 1 }
+						archers={ 5 5 }
 					}
-					attrition = 1.0
-					disband_on_peace = yes
+					attrition=1.0
+					disband_on_peace=yes
 				}
-				spawn_unit = {
-					province = ROOT
-					home = ROOT
-					owner = THIS
-					leader = THIS
-					scaled_by_biggest_garrison = 1
-					troops = {
-						light_infantry = { 14 14 }
-						heavy_infantry = { 1 1 }
-						archers = { 5 5 }
+				spawn_unit={
+					province=ROOT
+					home=ROOT
+					owner=THIS
+					leader=THIS
+					scaled_by_biggest_garrison=1
+					troops={
+						light_infantry={ 14 14 }
+						heavy_infantry={ 1 1 }
+						archers={ 5 5 }
 					}
-					attrition = 1.0
-					disband_on_peace = yes
+					attrition=1.0
+					disband_on_peace=yes
 				}
 			}
 		}
 		
-		if = {
-			limit = { NOT = { has_province_flag = buy_rebel } }
-			event_target:target_rebel = {
-				spawn_unit = {
-					province = ROOT
-					home = ROOT
-					owner = THIS
-					leader = THIS
-					scaled_by_biggest_garrison = 1
-					merge = yes
-					troops = {
-						light_infantry = { 14 14 }
-						heavy_infantry = { 1 1 }
-						archers = { 5 5 }
+		if={
+			limit={ NOT={ has_province_flag=buy_rebel } }
+			event_target:target_rebel={
+				spawn_unit={
+					province=ROOT
+					home=ROOT
+					owner=THIS
+					leader=THIS
+					scaled_by_biggest_garrison=1
+					merge=yes
+					troops={
+						light_infantry={ 14 14 }
+						heavy_infantry={ 1 1 }
+						archers={ 5 5 }
 					}
-					attrition = 1.0
-					disband_on_peace = yes
+					attrition=1.0
+					disband_on_peace=yes
 				}
 					
-				ROOT = {
-					owner = {
-						top_liege = {
-							reverse_war = {
-								target = PREVPREVPREV
-								casus_belli = peasant_revolt
-								thirdparty_title = ROOT # The county
+				ROOT={
+					owner={
+						top_liege={
+							reverse_war={
+								target=PREVPREVPREV
+								casus_belli=peasant_revolt
+								thirdparty_title=ROOT # The county
 							}
-							reverse_opinion = {
-								who = PREVPREVPREV
-								modifier = opinion_evil_tyrant
+							reverse_opinion={
+								who=PREVPREVPREV
+								modifier=opinion_evil_tyrant
 							}
 						}
 					}
@@ -1833,236 +1863,236 @@ province_event = {
 			}
 		}
 				
-		if = {
-			limit = { has_province_flag = duel_rebel }
-			clr_province_flag = duel_rebel
-			event_target:target_rebel = {
-				character_event = { id = challenge.6 }
+		if={
+			limit={ has_province_flag=duel_rebel }
+			clr_province_flag=duel_rebel
+			event_target:target_rebel={
+				character_event={ id=challenge.6 }
 			}
 		}
 	}
 }
 
 ### ANCESTOR SACRIFICE ###
-character_event = {
-	id = SAN.26
-	desc = EVTDESC_SAN.26
-	title = EVTTITLE_SAN.26
-	picture = GFX_evt_bishop
+character_event={
+	id=SAN.26
+	desc=EVTDESC_SAN.26
+	title=EVTTITLE_SAN.26
+	picture=GFX_evt_bishop
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	only_playable = yes
+	only_playable=yes
 	
-	trigger = {
-		religion = confucian
+	trigger={
+		religion=confucian
 	}
 	
-	option = {
-		name = ACCEPT
+	option={
+		name=ACCEPT
 		
-		trigger = { wealth = 15 }
+		trigger={ wealth=15 }
 		
-		wealth = -15
+		wealth=-15
 		
-		add_character_modifier = {
-			name = sacrifice_ancestor
-			duration = 365
+		add_character_modifier={
+			name=sacrifice_ancestor
+			duration=365
 		}
 		
-		ai_chance = {
-			factor = 1
+		ai_chance={
+			factor=1
 			
-			modifier = {
-				factor = 1.05
-				trait = ambitious
+			modifier={
+				factor=1.05
+				trait=ambitious
 			}
-			modifier = {
-				factor = 1.05
-				trait = charitable
+			modifier={
+				factor=1.05
+				trait=charitable
 			}
-			modifier = {
-				factor = 1.05
-				trait = chaste
+			modifier={
+				factor=1.05
+				trait=chaste
 			}
-			modifier = {
-				factor = 1.05
-				trait = chivalrous
+			modifier={
+				factor=1.05
+				trait=chivalrous
 			}
-			modifier = {
-				factor = 1.05
-				trait = diligent
+			modifier={
+				factor=1.05
+				trait=diligent
 			}
-			modifier = {
-				factor = 1.05
-				trait = honorable
+			modifier={
+				factor=1.05
+				trait=honorable
 			}
-			modifier = {
-				factor = 1.05
-				trait = kind
+			modifier={
+				factor=1.05
+				trait=kind
 			}
-			modifier = {
-				factor = 1.05
-				trait = proud
+			modifier={
+				factor=1.05
+				trait=proud
 			}
-			modifier = {
-				factor = 1.05
-				trait = temperate
+			modifier={
+				factor=1.05
+				trait=temperate
 			}
-			modifier = {
-				factor = 1.05
-				trait = zealous
+			modifier={
+				factor=1.05
+				trait=zealous
 			}
-			modifier = {
-				factor = 0.9
-				trait = arbitrary
+			modifier={
+				factor=0.9
+				trait=arbitrary
 			}
-			modifier = {
-				factor = 0.9
-				trait = cruel
+			modifier={
+				factor=0.9
+				trait=cruel
 			}
-			modifier = {
-				factor = 0.9
-				trait = cynical
+			modifier={
+				factor=0.9
+				trait=cynical
 			}
-			modifier = {
-				factor = 0.9
-				trait = dishonorable
+			modifier={
+				factor=0.9
+				trait=dishonorable
 			}
-			modifier = {
-				factor = 0.9
-				trait = envious
+			modifier={
+				factor=0.9
+				trait=envious
 			}
-			modifier = {
-				factor = 0.9
-				trait = gluttonous
+			modifier={
+				factor=0.9
+				trait=gluttonous
 			}
-			modifier = {
-				factor = 0.9
-				trait = greedy
+			modifier={
+				factor=0.9
+				trait=greedy
 			}
-			modifier = {
-				factor = 0.9
-				trait = ill
+			modifier={
+				factor=0.9
+				trait=ill
 			}
-			modifier = {
-				factor = 0.9
-				trait = kinslayer
+			modifier={
+				factor=0.9
+				trait=kinslayer
 			}
-			modifier = {
-				factor = 0.9
-				trait = slothful
+			modifier={
+				factor=0.9
+				trait=slothful
 			}
-			modifier = {
-				factor = 0.9
-				trait = stressed
+			modifier={
+				factor=0.9
+				trait=stressed
 			}
-			modifier = {
-				factor = 0.9
-				trait = wroth
+			modifier={
+				factor=0.9
+				trait=wroth
 			}
 		}
 	}
 	
-	option = {
-		name = NOTHX
+	option={
+		name=NOTHX
 		
-		piety = -25
+		piety=-25
 		
-		ai_chance = {
-			factor = 1
+		ai_chance={
+			factor=1
 		}
 	}
 }
 
 #Refuge Search Results
-character_event = {
-	id = SAN.27
+character_event={
+	id=SAN.27
 	
-	hide_window = yes
+	hide_window=yes
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	immediate = {
-		random_list = {
-			30 = {
-				clr_character_flag = refuge_bing
-				clr_character_flag = refuge_ji
-				clr_character_flag = refuge_jiaozhi
-				clr_character_flag = refuge_jing
-				clr_character_flag = refuge_liang
-				clr_character_flag = refuge_qing
-				clr_character_flag = refuge_sili
-				clr_character_flag = refuge_xu
-				clr_character_flag = refuge_yan
-				clr_character_flag = refuge_yang
-				clr_character_flag = refuge_yi
-				clr_character_flag = refuge_you
-				clr_character_flag = refuge_yu
-				remove_trait = refuge
-				move_character = FROM
-				FROM = { character_event = { id = SAN.29 } }
+	immediate={
+		random_list={
+			30={
+				clr_character_flag=refuge_bing
+				clr_character_flag=refuge_ji
+				clr_character_flag=refuge_jiaozhi
+				clr_character_flag=refuge_jing
+				clr_character_flag=refuge_liang
+				clr_character_flag=refuge_qing
+				clr_character_flag=refuge_sili
+				clr_character_flag=refuge_xu
+				clr_character_flag=refuge_yan
+				clr_character_flag=refuge_yang
+				clr_character_flag=refuge_yi
+				clr_character_flag=refuge_you
+				clr_character_flag=refuge_yu
+				remove_trait=refuge
+				move_character=FROM
+				FROM={ character_event={ id=SAN.29 } }
 				
-				modifier = {
-					factor = 2
-					trait = ambitious
+				modifier={
+					factor=2
+					trait=ambitious
 				}
-				modifier = {
-					factor = 2
-					trait = gregarious
+				modifier={
+					factor=2
+					trait=gregarious
 				}
-				modifier = {
-					factor = 2
-					trait = greedy
+				modifier={
+					factor=2
+					trait=greedy
 				}
-				modifier = {
-					factor = 2
-					trait = zealous
+				modifier={
+					factor=2
+					trait=zealous
 				}
 			}
 	
-			70 = {
-				FROM = { character_event = { id = SAN.30 } }
+			70={
+				FROM={ character_event={ id=SAN.30 } }
 				
-				modifier = {
-					factor = 2
-					trait = craven
+				modifier={
+					factor=2
+					trait=craven
 				}
-				modifier = {
-					factor = 2
-					trait = content
+				modifier={
+					factor=2
+					trait=content
 				}
-				modifier = {
-					factor = 2
-					trait = destined
+				modifier={
+					factor=2
+					trait=destined
 				}
-				modifier = {
-					factor = 2
-					trait = honorable
+				modifier={
+					factor=2
+					trait=honorable
 				}
-				modifier = {
-					factor = 2
-					trait = humble
+				modifier={
+					factor=2
+					trait=humble
 				}
-				modifier = {
-					factor = 2
-					trait = paranoid
+				modifier={
+					factor=2
+					trait=paranoid
 				}
-				modifier = {
-					factor = 2
-					trait = proud
+				modifier={
+					factor=2
+					trait=proud
 				}
-				modifier = {
-					factor = 2
-					trait = shy
+				modifier={
+					factor=2
+					trait=shy
 				}
-				modifier = {
-					factor = 2
-					trait = stressed
+				modifier={
+					factor=2
+					trait=stressed
 				}
-				modifier = {
-					factor = 10
-					is_ill = yes
+				modifier={
+					factor=10
+					is_ill=yes
 				}
 			}
 		}
@@ -2070,825 +2100,825 @@ character_event = {
 }
 
 #Refuge Search Fail
-character_event = {
-	id = SAN.28
-	desc = EVTDESC_SAN.28
-	title = EVTTITLE_SAN.28
-	picture = GFX_evt_courtiers_talking
+character_event={
+	id=SAN.28
+	desc=EVTDESC_SAN.28
+	title=EVTTITLE_SAN.28
+	picture=GFX_evt_courtiers_talking
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	option = {
-		name = OH
+	option={
+		name=OH
 	}
 }
 
 #Refuge Search Success
-character_event = {
-	id = SAN.29
-	desc = EVTDESC_SAN.29
-	title = EVTTITLE_SAN.29
-	picture = GFX_evt_courtiers_talking
+character_event={
+	id=SAN.29
+	desc=EVTDESC_SAN.29
+	title=EVTTITLE_SAN.29
+	picture=GFX_evt_courtiers_talking
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	option = {
-		name = EXCELLENT
+	option={
+		name=EXCELLENT
 	}
 }
 
 #Refuge Search Reject
-character_event = {
-	id = SAN.30
-	desc = EVTDESC_SAN.30
-	title = EVTTITLE_SAN.30
-	picture = GFX_evt_courtiers_talking
+character_event={
+	id=SAN.30
+	desc=EVTDESC_SAN.30
+	title=EVTTITLE_SAN.30
+	picture=GFX_evt_courtiers_talking
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	option = {
-		name = OH
+	option={
+		name=OH
 	}
 }
 
 #Legalist Bend
-character_event = {
-	id = SAN.31
-	desc = EVTDESC_SAN.31
-	title = EVTTITLE_SAN.31
-	picture = GFX_evt_cathedral_muslim
+character_event={
+	id=SAN.31
+	desc=EVTDESC_SAN.31
+	title=EVTTITLE_SAN.31
+	picture=GFX_evt_cathedral_muslim
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	only_playable = yes
+	only_playable=yes
+	culture=han
+	religion=confucian
 	
-	trigger = {
-		culture = han
-		religion = confucian
-		trait = just
+	trigger={
+		trait=just
 	}
 	
-	option = {
-		name = OH
+	option={
+		name=OH
 		
-		religion = legal
+		religion=legal
 	}
 }
 
 #Kid Wars
-character_event = {
-	id = SAN.32
-	desc = EVTDESC_SAN.32
-	title = EVTTITLE_SAN.32
-	picture = GFX_evt_lunatic
+character_event={
+	id=SAN.32
+	desc=EVTDESC_SAN.32
+	title=EVTTITLE_SAN.32
+	picture=GFX_evt_lunatic
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	only_playable = yes
+	only_playable=yes
 	
-	trigger = {
-		num_of_children = 2
-		any_child = {
-			OR = {
-				is_female = yes
-				trait = bastard
-				trait = legit_bastard
-				trait = child_of_consort
+	trigger={
+		num_of_children=2
+		any_child={
+			OR={
+				is_female=yes
+				trait=bastard
+				trait=legit_bastard
+				trait=child_of_consort
 			}
-			is_primary_heir = ROOT
-			any_sibling = {
-				is_child_of = ROOT
-				mother_even_if_dead = { NOT = { is_mother = PREVPREV } }
-				OR = {
-					is_female = no
-					trait = ambitious
-					trait = envious
+			is_primary_heir=ROOT
+			any_sibling={
+				is_child_of=ROOT
+				mother_even_if_dead={ NOT={ is_mother=PREVPREV } }
+				OR={
+					is_female=no
+					trait=ambitious
+					trait=envious
 				}
-				NOT = { trait = content }
-				is_primary_heir = no
-				NOT = { is_rival = PREV }
+				NOT={ trait=content }
+				is_primary_heir=no
+				NOT={ is_rival=PREV }
 			}
 		}
 	}
 	
-	immediate = {
-		random_child = {
-			limit = {
-				OR = {
-					is_female = yes
-					trait = bastard
-					trait = legit_bastard
-					trait = child_of_consort
+	immediate={
+		random_child={
+			limit={
+				OR={
+					is_female=yes
+					trait=bastard
+					trait=legit_bastard
+					trait=child_of_consort
 				}
-				is_primary_heir = ROOT
+				is_primary_heir=ROOT
 			}
-			save_event_target_as = target_tom
-			random_sibling = {
-				limit = {
-					is_child_of = ROOT
-					mother_even_if_dead = { NOT = { is_mother = PREVPREV } }
-					OR = {
-						is_female = no
-						trait = ambitious
-						trait = envious
+			save_event_target_as=target_tom
+			random_sibling={
+				limit={
+					is_child_of=ROOT
+					mother_even_if_dead={ NOT={ is_mother=PREVPREV } }
+					OR={
+						is_female=no
+						trait=ambitious
+						trait=envious
 					}
-					NOR = {
-						trait = bastard
-						trait = legit_bastard
-						trait = child_of_consort
-						trait = content
+					NOR={
+						trait=bastard
+						trait=legit_bastard
+						trait=child_of_consort
+						trait=content
 					}
-					is_primary_heir = no
+					is_primary_heir=no
 				}
-				add_rival = PREV
-				save_event_target_as = target_jerry
+				add_rival=PREV
+				save_event_target_as=target_jerry
 			}
 		}
 	}
 	
-	option = {
-		name = EVTOPTA_SAN.32
+	option={
+		name=EVTOPTA_SAN.32
 		
-		custom_tooltip = { text = TOOLTIPtom_jerry }
+		custom_tooltip={ text=TOOLTIPtom_jerry }
 		
-		hidden_tooltip = {
-			event_target:target_tom = {
-				remove_rival = event_target:target_jerry
-				add_rival = ROOT
+		hidden_tooltip={
+			event_target:target_tom={
+				remove_rival=event_target:target_jerry
+				add_rival=ROOT
 			}
-			event_target:target_jerry = {
-				remove_rival = event_target:target_tom
-				add_rival = ROOT
+			event_target:target_jerry={
+				remove_rival=event_target:target_tom
+				add_rival=ROOT
 			}
 		}
 	}
 	
-	option = {
-		name = OHNO
+	option={
+		name=OHNO
 		
-		hidden_tooltip = {
-			event_target:target_tom = {
-				character_event = { id = SAN.33 days = 5 }
+		hidden_tooltip={
+			event_target:target_tom={
+				character_event={ id=SAN.33 days=5 }
 			}
-			event_target:target_jerry = {
-				character_event = { id = SAN.33 days = 5 }
+			event_target:target_jerry={
+				character_event={ id=SAN.33 days=5 }
 			}
 		}
 	}
 }
 
-character_event = {
-	id = SAN.33
-	desc = EVTDESC_SAN.33
-	title = EVTTITLE_SAN.33
-	picture = GFX_evt_child_sword
+character_event={
+	id=SAN.33
+	desc=EVTDESC_SAN.33
+	title=EVTTITLE_SAN.33
+	picture=GFX_evt_child_sword
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	immediate = {
-		random_list = {
-			25 = {}
-			50 = { add_trait = wounded }
-			20 = { add_trait = maimed }
-			5 = {
-				death = {
-					death_reason = death_duel
+	immediate={
+		random_list={
+			25={}
+			50={ add_trait=wounded }
+			20={ add_trait=maimed }
+			5={
+				death={
+					death_reason=death_duel
 				}
-				break = yes
+				break=yes
 			}
 		}
-		random = {
-			chance = 10
-			change_martial = 1
+		random={
+			chance=10
+			change_martial=1
 		}
 	}
 	
-	option = {
-		name = ACCEPT
+	option={
+		name=ACCEPT
 		
-		FROM = {
-			opinion = { modifier = opinion_disappointed who = ROOT years = 5 }
-			character_event = { id = SAN.34 }
+		FROM={
+			opinion={ modifier=opinion_disappointed who=ROOT years=5 }
+			character_event={ id=SAN.34 }
 		}
 
-		ai_chance = {
-			factor = 1
+		ai_chance={
+			factor=1
 			
-			modifier = {
-				factor = 1.05
-				trait = charitable
+			modifier={
+				factor=1.05
+				trait=charitable
 			}
-			modifier = {
-				factor = 1.05
-				trait = chivalrous
+			modifier={
+				factor=1.05
+				trait=chivalrous
 			}
-			modifier = {
-				factor = 1.05
-				trait = content
+			modifier={
+				factor=1.05
+				trait=content
 			}
-			modifier = {
-				factor = 1.05
-				trait = honorable
+			modifier={
+				factor=1.05
+				trait=honorable
 			}
-			modifier = {
-				factor = 1.05
-				trait = humble
+			modifier={
+				factor=1.05
+				trait=humble
 			}
-			modifier = {
-				factor = 1.05
-				trait = kind
+			modifier={
+				factor=1.05
+				trait=kind
 			}
 		}
 	}
 
-	option = {
-		name = DECLINE
+	option={
+		name=DECLINE
 		
-		random = {
-			chance = 40
-			FROM = {
-				opinion = { modifier = opinion_furious who = ROOT years = 5 }
-				character_event = { id = SAN.34 }
+		random={
+			chance=40
+			FROM={
+				opinion={ modifier=opinion_furious who=ROOT years=5 }
+				character_event={ id=SAN.34 }
 			}
 		}
 		
-		ai_chance = {
-			factor = 1
+		ai_chance={
+			factor=1
 			
-			modifier = {
-				factor = 1.05
-				trait = dishonorable
+			modifier={
+				factor=1.05
+				trait=dishonorable
 			}
-			modifier = {
-				factor = 1.05
-				trait = envious
+			modifier={
+				factor=1.05
+				trait=envious
 			}
-			modifier = {
-				factor = 1.05
-				trait = greedy
+			modifier={
+				factor=1.05
+				trait=greedy
 			}
-			modifier = {
-				factor = 1.05
-				trait = proud
+			modifier={
+				factor=1.05
+				trait=proud
 			}
-			modifier = {
-				factor = 1.05
-				trait = selfish
+			modifier={
+				factor=1.05
+				trait=selfish
 			}
-			modifier = {
-				factor = 1.05
-				trait = wroth
+			modifier={
+				factor=1.05
+				trait=wroth
 			}
 		}
 	}
 }
 
 #Kids Fighting
-character_event = {
-	id = SAN.34
-	desc = EVTDESC_SAN.34
-	title = EVTTITLE_SAN.34
-	picture = GFX_evt_child_sword
+character_event={
+	id=SAN.34
+	desc=EVTDESC_SAN.34
+	title=EVTTITLE_SAN.34
+	picture=GFX_evt_child_sword
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	only_playable = yes
+	only_playable=yes
 	
-	trigger = {
+	trigger={
 	}
 	
-	option = {
-		name = OHNO
-	}
-}
-
-#Destined
-character_event = {
-	id = SAN.35
-	
-	is_triggered_only = yes
-	
-	hide_window = yes
-	
-	only_playable = yes
-	only_capable = yes
-	prisoner = no
-	
-	trigger = {
-		NOT = { trait = destined }
-	}
-	
-	weight_multiplier = {
-		days = 1
-		modifier = {
-			factor = 0.25
-		}
-	}
-	
-	immediate = {
-		random = {
-			chance = 1
-			character_event = { id = SAN.36 }
-		}
+	option={
+		name=OHNO
 	}
 }
 
 #Destined
-character_event = {
-	id = SAN.36
-	desc = EVTDESC_SAN.36
-	title = EVTTITLE_SAN.36
-	picture = GFX_evt_battle
+character_event={
+	id=SAN.35
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	only_playable = yes
+	hide_window=yes
 	
-	option = {
-		name = OH
+	only_playable=yes
+	only_capable=yes
+	prisoner=no
+	
+	trigger={
+		NOT={ trait=destined }
+	}
+	
+	weight_multiplier={
+		days=1
+		modifier={
+			factor=0.25
+		}
+	}
+	
+	immediate={
+		random={
+			chance=1
+			character_event={ id=SAN.36 }
+		}
+	}
+}
+
+#Destined
+character_event={
+	id=SAN.36
+	desc=EVTDESC_SAN.36
+	title=EVTTITLE_SAN.36
+	picture=GFX_evt_battle
+	
+	is_triggered_only=yes
+	
+	only_playable=yes
+	
+	option={
+		name=OH
 		
-		add_trait = destined
+		add_trait=destined
 	}
 }
 
 #Broken wheel
-character_event = {
-	id = SAN.37
-	desc = EVTDESC_SAN.37
-	title = EVTTITLE_SAN.37
-	picture = GFX_evt_carriage
+character_event={
+	id=SAN.37
+	desc=EVTDESC_SAN.37
+	title=EVTTITLE_SAN.37
+	picture=GFX_evt_carriage
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	option = {
-		name = ACCEPT
-		hidden_tooltip = {
-			if = {
-				limit = {
-					OR = {
-						trait = fate_plot
-						AND = {
-							trait = paranoid
-							is_smart_trigger = yes
+	option={
+		name=ACCEPT
+		hidden_tooltip={
+			if={
+				limit={
+					OR={
+						trait=fate_plot
+						AND={
+							trait=paranoid
+							is_smart_trigger=yes
 						}
 					}
 				}
-				set_character_flag = broken_wheel_flag
+				set_character_flag=broken_wheel_flag
 			}
-			piety = 15
-			character_event = { id = SAN.38 }
+			piety=15
+			character_event={ id=SAN.38 }
 		}
 	}
 	
-	option = {
-		name = REFUSE
-		prestige = -15
+	option={
+		name=REFUSE
+		prestige=-15
 	}
 }
 
 #Broken Wheel
-character_event = {
-	id = SAN.38
-	title = EVTTITLE_SAN.38
-	picture = GFX_evt_carriage
-	desc = {
-		text = EVTDESCA_SAN.38
-		trigger = {
-			NOT = {
-				has_character_flag = broken_wheel_flag
+character_event={
+	id=SAN.38
+	title=EVTTITLE_SAN.38
+	picture=GFX_evt_carriage
+	desc={
+		text=EVTDESCA_SAN.38
+		trigger={
+			NOT={
+				has_character_flag=broken_wheel_flag
 			}
 		}
 	}
-	desc = {
-		text = EVTDESCB_SAN.38
-		trigger = {
-			has_character_flag = broken_wheel_flag
+	desc={
+		text=EVTDESCB_SAN.38
+		trigger={
+			has_character_flag=broken_wheel_flag
 		}
 	}
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	option = {
-		name = EVTOPTA_SAN.38
-		trigger = {
-			NOT = {
-				has_character_flag = broken_wheel_flag
+	option={
+		name=EVTOPTA_SAN.38
+		trigger={
+			NOT={
+				has_character_flag=broken_wheel_flag
 			}
 		}
-		hidden_tooltip = {
-			character_event = { id = SAN.39 }
+		hidden_tooltip={
+			character_event={ id=SAN.39 }
 		}
 	}
 	
-	option = {
-		name = ESCAPE
-		trigger = {
-			has_character_flag = broken_wheel_flag
+	option={
+		name=ESCAPE
+		trigger={
+			has_character_flag=broken_wheel_flag
 		}
-		hidden_tooltip = {
-			random = {
-				chance = 60
-				set_character_flag = broken_wheel_escape
+		hidden_tooltip={
+			random={
+				chance=60
+				set_character_flag=broken_wheel_escape
 			}
-			character_event = { id = SAN.39 }
+			character_event={ id=SAN.39 }
 		}
 	}
 	
-	option = {
-		name = EVTOPTB_SAN.38
-		hidden_tooltip = {
-			character_event = { id = SAN.39 }
+	option={
+		name=EVTOPTB_SAN.38
+		hidden_tooltip={
+			character_event={ id=SAN.39 }
 		}
 	}
 }
 
 #Broken Wheel
-character_event = {
-	id = SAN.39
-	title = EVTTITLE_SAN.39
-	picture = GFX_evt_carriage
-	desc = {
-		text = EVTDESCA_SAN.39
-		trigger = {
-			NOT = {
-				has_character_flag = broken_wheel_flag
+character_event={
+	id=SAN.39
+	title=EVTTITLE_SAN.39
+	picture=GFX_evt_carriage
+	desc={
+		text=EVTDESCA_SAN.39
+		trigger={
+			NOT={
+				has_character_flag=broken_wheel_flag
 			}
 		}
 	}
-	desc = {
-		text = EVTDESCB_SAN.39
-		trigger = {
-			has_character_flag = broken_wheel_flag
-			NOT = {
-				has_character_flag = broken_wheel_escape
+	desc={
+		text=EVTDESCB_SAN.39
+		trigger={
+			has_character_flag=broken_wheel_flag
+			NOT={
+				has_character_flag=broken_wheel_escape
 			}
 		}
 	}
-	desc = {
-		text = EVTDESCC_SAN.39
-		trigger = {
-			has_character_flag = broken_wheel_escape
+	desc={
+		text=EVTDESCC_SAN.39
+		trigger={
+			has_character_flag=broken_wheel_escape
 		}
 	}
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	immediate = {
-		hidden_tooltip = {
-			location = {
-				create_random_soldier = {
-					random_traits = yes
-					dynasty = none
-					religion = FOLK
-					culture = ROOT
-					female = no
-					age = 25
-					attributes = {
-						martial = 5
+	immediate={
+		hidden_tooltip={
+			location={
+				create_random_soldier={
+					random_traits=yes
+					dynasty=none
+					religion=FOLK
+					culture=ROOT
+					female=no
+					age=25
+					attributes={
+						martial=5
 					}
-					trait = tough_soldier
+					trait=tough_soldier
 				}
-				new_character = {
-					random_list = {
-						10 = { add_trait = duel_skilled_warrior }
-						30 = { add_trait = duel_trained_warrior }
-						60 = { add_trait = duel_poor_warrior }
+				new_character={
+					random_list={
+						10={ add_trait=duel_skilled_warrior }
+						30={ add_trait=duel_trained_warrior }
+						60={ add_trait=duel_poor_warrior }
 					}
 					
-					save_event_target_as = target_rebel
+					save_event_target_as=target_rebel
 				}
 			}
 		}
 	}
 	
-	option = {
-		name = CURSES
-		trigger = {
-			NOT = {
-				has_character_flag = broken_wheel_flag
+	option={
+		name=CURSES
+		trigger={
+			NOT={
+				has_character_flag=broken_wheel_flag
 			}
 		}
-		add_trait = wounded
-		hidden_tooltip = {
-			event_target:target_rebel = {
-				character_event = { id = challenge.6 }
-			}
-		}
-	}
-	
-	option = {
-		name = THIEF
-		trigger = {
-			has_character_flag = broken_wheel_flag
-			NOT = {
-				has_character_flag = broken_wheel_escape
-			}
-		}
-		hidden_tooltip = {
-			clr_character_flag = broken_wheel_flag
-			event_target:target_rebel = {
-				character_event = { id = challenge.6 }
+		add_trait=wounded
+		hidden_tooltip={
+			event_target:target_rebel={
+				character_event={ id=challenge.6 }
 			}
 		}
 	}
 	
-	option = {
-		name = EXCELLENT
-		trigger = {
-			has_character_flag = broken_wheel_escape
+	option={
+		name=THIEF
+		trigger={
+			has_character_flag=broken_wheel_flag
+			NOT={
+				has_character_flag=broken_wheel_escape
+			}
 		}
-		hidden_tooltip = {
-			clr_character_flag = broken_wheel_flag
-			clr_character_flag = broken_wheel_escape
+		hidden_tooltip={
+			clr_character_flag=broken_wheel_flag
+			event_target:target_rebel={
+				character_event={ id=challenge.6 }
+			}
+		}
+	}
+	
+	option={
+		name=EXCELLENT
+		trigger={
+			has_character_flag=broken_wheel_escape
+		}
+		hidden_tooltip={
+			clr_character_flag=broken_wheel_flag
+			clr_character_flag=broken_wheel_escape
 		}
 	}
 }
 
 #Petition System
-character_event = {
-	id = SAN.40
-	desc = EVTDESC_SAN.40
-	title = EVTTITLE_SAN.40
-	picture = GFX_evt_courtiers_talking
+character_event={
+	id=SAN.40
+	desc=EVTDESC_SAN.40
+	title=EVTTITLE_SAN.40
+	picture=GFX_evt_courtiers_talking
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	immediate = {
-		event_target:target_province = {
-			if = {
-				limit = { has_province_modifier = petition_1 }
-				remove_province_modifier = petition_1
-				add_province_modifier = { name = peasants_protected duration = 900 }
-				break = yes
+	immediate={
+		event_target:target_province={
+			if={
+				limit={ has_province_modifier=petition_1 }
+				remove_province_modifier=petition_1
+				add_province_modifier={ name=peasants_protected duration=900 }
+				break=yes
 			}
-			if = {
-				limit = { has_province_modifier = petition_2 }
-				remove_province_modifier = petition_2
-				add_province_modifier = { name = petition_1 duration = 3600 }
-				break = yes
+			if={
+				limit={ has_province_modifier=petition_2 }
+				remove_province_modifier=petition_2
+				add_province_modifier={ name=petition_1 duration=3600 }
+				break=yes
 			}
-			if = {
-				limit = { has_province_modifier = petition_3 }
-				remove_province_modifier = petition_3
-				add_province_modifier = { name = petition_2 duration = 3600 }
-				break = yes
+			if={
+				limit={ has_province_modifier=petition_3 }
+				remove_province_modifier=petition_3
+				add_province_modifier={ name=petition_2 duration=3600 }
+				break=yes
 			}
-			if = {
-				limit = { has_province_modifier = petition_4 }
-				remove_province_modifier = petition_4
-				add_province_modifier = { name = petition_3 duration = 3600 }
-				break = yes
+			if={
+				limit={ has_province_modifier=petition_4 }
+				remove_province_modifier=petition_4
+				add_province_modifier={ name=petition_3 duration=3600 }
+				break=yes
 			}
-			if = {
-				limit = { has_province_modifier = petition_5 }
-				remove_province_modifier = petition_5
-				add_province_modifier = { name = petition_4 duration = 3600 }
-				break = yes
+			if={
+				limit={ has_province_modifier=petition_5 }
+				remove_province_modifier=petition_5
+				add_province_modifier={ name=petition_4 duration=3600 }
+				break=yes
 			}
-			if = {
-				limit = { has_province_modifier = petition_6 }
-				remove_province_modifier = petition_6
-				add_province_modifier = { name = petition_5 duration = 3600 }
-				break = yes
+			if={
+				limit={ has_province_modifier=petition_6 }
+				remove_province_modifier=petition_6
+				add_province_modifier={ name=petition_5 duration=3600 }
+				break=yes
 			}
-			if = {
-				limit = { has_province_modifier = petition_7 }
-				remove_province_modifier = petition_7
-				add_province_modifier = { name = petition_6 duration = 3600 }
-				break = yes
+			if={
+				limit={ has_province_modifier=petition_7 }
+				remove_province_modifier=petition_7
+				add_province_modifier={ name=petition_6 duration=3600 }
+				break=yes
 			}
-			if = {
-				limit = { has_province_modifier = petition_8 }
-				remove_province_modifier = petition_8
-				add_province_modifier = { name = petition_7 duration = 3600 }
-				break = yes
+			if={
+				limit={ has_province_modifier=petition_8 }
+				remove_province_modifier=petition_8
+				add_province_modifier={ name=petition_7 duration=3600 }
+				break=yes
 			}
-			if = {
-				limit = { has_province_modifier = petition_9 }
-				remove_province_modifier = petition_9
-				add_province_modifier = { name = petition_8 duration = 3600 }
-				break = yes
+			if={
+				limit={ has_province_modifier=petition_9 }
+				remove_province_modifier=petition_9
+				add_province_modifier={ name=petition_8 duration=3600 }
+				break=yes
 			}
-			if = {
-				limit = { has_province_modifier = petition_10 }
-				remove_province_modifier = petition_10
-				add_province_modifier = { name = petition_9 duration = 3600 }
-				break = yes
+			if={
+				limit={ has_province_modifier=petition_10 }
+				remove_province_modifier=petition_10
+				add_province_modifier={ name=petition_9 duration=3600 }
+				break=yes
 			}
-			if = {
-				limit = { has_province_modifier = petition_11 }
-				remove_province_modifier = petition_11
-				add_province_modifier = { name = petition_10 duration = 3600 }
-				break = yes
+			if={
+				limit={ has_province_modifier=petition_11 }
+				remove_province_modifier=petition_11
+				add_province_modifier={ name=petition_10 duration=3600 }
+				break=yes
 			}
-			if = {
-				limit = { has_province_modifier = petition_12 }
-				remove_province_modifier = petition_12
-				add_province_modifier = { name = petition_11 duration = 3600 }
-				break = yes
+			if={
+				limit={ has_province_modifier=petition_12 }
+				remove_province_modifier=petition_12
+				add_province_modifier={ name=petition_11 duration=3600 }
+				break=yes
 			}
-			if = {
-				limit = { has_province_modifier = petition_13 }
-				remove_province_modifier = petition_13
-				add_province_modifier = { name = petition_12 duration = 3600 }
-				break = yes
+			if={
+				limit={ has_province_modifier=petition_13 }
+				remove_province_modifier=petition_13
+				add_province_modifier={ name=petition_12 duration=3600 }
+				break=yes
 			}
-			if = {
-				limit = { has_province_modifier = petition_14 }
-				remove_province_modifier = petition_14
-				add_province_modifier = { name = petition_13 duration = 3600 }
-				break = yes
+			if={
+				limit={ has_province_modifier=petition_14 }
+				remove_province_modifier=petition_14
+				add_province_modifier={ name=petition_13 duration=3600 }
+				break=yes
 			}
-			if = {
-				limit = { has_province_modifier = petition_15 }
-				remove_province_modifier = petition_15
-				add_province_modifier = { name = petition_14 duration = 3600 }
-				break = yes
+			if={
+				limit={ has_province_modifier=petition_15 }
+				remove_province_modifier=petition_15
+				add_province_modifier={ name=petition_14 duration=3600 }
+				break=yes
 			}
-			if = {
-				limit = { has_province_modifier = petition_16 }
-				remove_province_modifier = petition_16
-				add_province_modifier = { name = petition_15 duration = 3600 }
-				break = yes
+			if={
+				limit={ has_province_modifier=petition_16 }
+				remove_province_modifier=petition_16
+				add_province_modifier={ name=petition_15 duration=3600 }
+				break=yes
 			}
-			if = {
-				limit = { has_province_modifier = petition_17 }
-				remove_province_modifier = petition_17
-				add_province_modifier = { name = petition_16 duration = 3600 }
-				break = yes
+			if={
+				limit={ has_province_modifier=petition_17 }
+				remove_province_modifier=petition_17
+				add_province_modifier={ name=petition_16 duration=3600 }
+				break=yes
 			}
-			if = {
-				limit = { has_province_modifier = petition_18 }
-				remove_province_modifier = petition_18
-				add_province_modifier = { name = petition_17 duration = 3600 }
-				break = yes
+			if={
+				limit={ has_province_modifier=petition_18 }
+				remove_province_modifier=petition_18
+				add_province_modifier={ name=petition_17 duration=3600 }
+				break=yes
 			}
-			if = {
-				limit = { has_province_modifier = petition_19 }
-				remove_province_modifier = petition_19
-				add_province_modifier = { name = petition_18 duration = 3600 }
-				break = yes
+			if={
+				limit={ has_province_modifier=petition_19 }
+				remove_province_modifier=petition_19
+				add_province_modifier={ name=petition_18 duration=3600 }
+				break=yes
 			}
-			if = {
-				limit = { has_province_modifier = petition_20 }
-				remove_province_modifier = petition_20
-				add_province_modifier = { name = petition_19 duration = 3600 }
-				break = yes
+			if={
+				limit={ has_province_modifier=petition_20 }
+				remove_province_modifier=petition_20
+				add_province_modifier={ name=petition_19 duration=3600 }
+				break=yes
 			}
-			if = {
-				limit = { has_province_modifier = petition_21 }
-				remove_province_modifier = petition_21
-				add_province_modifier = { name = petition_20 duration = 3600 }
-				break = yes
+			if={
+				limit={ has_province_modifier=petition_21 }
+				remove_province_modifier=petition_21
+				add_province_modifier={ name=petition_20 duration=3600 }
+				break=yes
 			}
-			if = {
-				limit = { has_province_modifier = petition_22 }
-				remove_province_modifier = petition_22
-				add_province_modifier = { name = petition_21 duration = 3600 }
-				break = yes
+			if={
+				limit={ has_province_modifier=petition_22 }
+				remove_province_modifier=petition_22
+				add_province_modifier={ name=petition_21 duration=3600 }
+				break=yes
 			}
-			if = {
-				limit = { has_province_modifier = petition_23 }
-				remove_province_modifier = petition_23
-				add_province_modifier = { name = petition_22 duration = 3600 }
-				break = yes
+			if={
+				limit={ has_province_modifier=petition_23 }
+				remove_province_modifier=petition_23
+				add_province_modifier={ name=petition_22 duration=3600 }
+				break=yes
 			}
-			if = {
-				limit = { has_province_modifier = petition_24 }
-				remove_province_modifier = petition_24
-				add_province_modifier = { name = petition_23 duration = 3600 }
-				break = yes
+			if={
+				limit={ has_province_modifier=petition_24 }
+				remove_province_modifier=petition_24
+				add_province_modifier={ name=petition_23 duration=3600 }
+				break=yes
 			}
-			if = {
-				limit = { has_province_modifier = petition_25 }
-				remove_province_modifier = petition_25
-				add_province_modifier = { name = petition_24 duration = 3600 }
-				break = yes
+			if={
+				limit={ has_province_modifier=petition_25 }
+				remove_province_modifier=petition_25
+				add_province_modifier={ name=petition_24 duration=3600 }
+				break=yes
 			}
 		}
 	}
 	
-	option = {
-		name = EXCELLENT
+	option={
+		name=EXCELLENT
 		
-		trigger = {
-			ai = no
-			has_regent = no
+		trigger={
+			ai=no
+			has_regent=no
 		}
 		
-		custom_tooltip = { text = TOOLTIPpetition1 }
+		custom_tooltip={ text=TOOLTIPpetition1 }
 		
-		hidden_tooltip = {
-			random_list = {
-				20 = { character_event = { id = SAN.1 } }
-				5 = { character_event = { id = SAN.5 } }
-				15 = { character_event = { id = SAN.8 } }
-				20 = { character_event = { id = SAN.19 } }
-				20 = { character_event = { id = SAN.37 } }
-				20 = { character_event = { id = SAN.41 } }
+		hidden_tooltip={
+			random_list={
+				20={ character_event={ id=SAN.1 } }
+				5={ character_event={ id=SAN.5 } }
+				15={ character_event={ id=SAN.8 } }
+				20={ character_event={ id=SAN.19 } }
+				20={ character_event={ id=SAN.37 } }
+				20={ character_event={ id=SAN.41 } }
 			}
 		}
 	}
 	
-	option = {
-		name = OK
+	option={
+		name=OK
 		
-		trigger = {
-			ai = no
-			has_regent = yes
+		trigger={
+			ai=no
+			has_regent=yes
 		}
 
-		custom_tooltip = { text = TOOLTIPpetition2 }
+		custom_tooltip={ text=TOOLTIPpetition2 }
 		
-		hidden_tooltip = {
-			regent = {
-				reverse_add_favor = ROOT
-				random_list = {
-					20 = { character_event = { id = SAN.1 } }
-					5 = { character_event = { id = SAN.5 } }
-					15 = { character_event = { id = SAN.8 } }
-					20 = { character_event = { id = SAN.19 } }
-					20 = { character_event = { id = SAN.37 } }
-					20 = { character_event = { id = SAN.41 } }
+		hidden_tooltip={
+			regent={
+				reverse_add_favor=ROOT
+				random_list={
+					20={ character_event={ id=SAN.1 } }
+					5={ character_event={ id=SAN.5 } }
+					15={ character_event={ id=SAN.8 } }
+					20={ character_event={ id=SAN.19 } }
+					20={ character_event={ id=SAN.37 } }
+					20={ character_event={ id=SAN.41 } }
 				}
 			}
 		}
 	}
 	
-	option = {
-		name = OK
+	option={
+		name=OK
 		
-		trigger = {
-			ai = yes
-			has_regent = no
+		trigger={
+			ai=yes
+			has_regent=no
 		}
 		
-		hidden_tooltip = {
-			random_list = {
-				20 = { wealth = 50 }
-				20 = { wealth = -25 }
-				15 = { prestige = 15 }
-				15 = { piety = 10 }
-				10 = {
-					random_demesne_province = {
-						add_province_modifier = {
-							name = peasants_protected
-							duration = 365
+		hidden_tooltip={
+			random_list={
+				20={ wealth=50 }
+				20={ wealth=-25 }
+				15={ prestige=15 }
+				15={ piety=10 }
+				10={
+					random_demesne_province={
+						add_province_modifier={
+							name=peasants_protected
+							duration=365
 						}
 					}
 				}
-				10 = {
-					random_demesne_province = {
-						add_province_modifier = {
-							name = peasant_unrest
-							duration = 365
+				10={
+					random_demesne_province={
+						add_province_modifier={
+							name=peasant_unrest
+							duration=365
 						}
 					}
 				}
-				5 = { add_trait = wounded }
-				5 = { add_trait = ill }
+				5={ add_trait=wounded }
+				5={ add_trait=ill }
 			}
 		}
 	}
 	
-	option = {
-		name = OK
+	option={
+		name=OK
 		
-		trigger = {
-			ai = yes
-			has_regent = yes
+		trigger={
+			ai=yes
+			has_regent=yes
 		}
 		
-		hidden_tooltip = {
-			regent = {
-				reverse_add_favor = ROOT
-				random_list = {
-					20 = { wealth = 50 }
-					20 = { wealth = -25 }
-					15 = { prestige = 15 }
-					15 = { piety = 10 }
-					10 = {
-						ROOT = {
-							random_demesne_province = {
-								add_province_modifier = {
-									name = peasants_protected
-									duration = 365
+		hidden_tooltip={
+			regent={
+				reverse_add_favor=ROOT
+				random_list={
+					20={ wealth=50 }
+					20={ wealth=-25 }
+					15={ prestige=15 }
+					15={ piety=10 }
+					10={
+						ROOT={
+							random_demesne_province={
+								add_province_modifier={
+									name=peasants_protected
+									duration=365
 								}
 							}
 						}
 					}
-					10 = {
-						ROOT = {
-							random_demesne_province = {
-								add_province_modifier = {
-									name = peasant_unrest
-									duration = 365
+					10={
+						ROOT={
+							random_demesne_province={
+								add_province_modifier={
+									name=peasant_unrest
+									duration=365
 								}
 							}
 						}
 					}
-					5 = { add_trait = wounded }
-					5 = { add_trait = ill }
+					5={ add_trait=wounded }
+					5={ add_trait=ill }
 				}
 			}
 		}
@@ -2896,625 +2926,625 @@ character_event = {
 }
 
 #The Whip
-character_event = {
-	id = SAN.41
-	desc = EVTDESC_SAN.41
-	title = EVTTITLE_SAN.41
-	picture = GFX_evt_carriage
+character_event={
+	id=SAN.41
+	desc=EVTDESC_SAN.41
+	title=EVTTITLE_SAN.41
+	picture=GFX_evt_carriage
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	option = {
-		name = ACCEPT
-		hidden_tooltip = {
-			character_event = { id = SAN.42 }
+	option={
+		name=ACCEPT
+		hidden_tooltip={
+			character_event={ id=SAN.42 }
 		}
 	}
 	
-	option = {
-		name = REFUSE
-		piety = 15
-	}
-}
-
-#The Whip
-character_event = {
-	id = SAN.42
-	desc = EVTDESC_SAN.42
-	title = EVTTITLE_SAN.42
-	picture = GFX_evt_carriage
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = EVTOPTA_SAN.42
-		trigger = {
-			NOT = {
-				trait = kind
-			}
-		}
-		hidden_tooltip = {
-			set_character_flag = whip_flag
-			character_event = { id = SAN.43 }
-		}
-	}
-	
-	option = {
-		name = EVTOPTB_SAN.42
-		trigger = {
-			NOT = {
-				trait = kind
-			}
-		}
-		hidden_tooltip = {
-			set_character_flag = whip_flag
-			character_event = { id = SAN.44 }
-		}
-	}
-	
-	option = {
-		name = EVTOPTC_SAN.42
-		hidden_tooltip = {
-			character_event = { id = SAN.44 }
-		}
-	}
-	
-	option = {
-		name = EVTOPTD_SAN.42
-		hidden_tooltip = {
-			character_event = { id = SAN.43 }
-		}
+	option={
+		name=REFUSE
+		piety=15
 	}
 }
 
 #The Whip
-character_event = {
-	id = SAN.43
-	title = EVTTITLE_SAN.43
-	picture = GFX_evt_carriage
-	desc = {
-		text = EVTDESCA_SAN.43
-		trigger = {
-			NOT = {
-				has_character_flag = whip_flag
+character_event={
+	id=SAN.42
+	desc=EVTDESC_SAN.42
+	title=EVTTITLE_SAN.42
+	picture=GFX_evt_carriage
+	
+	is_triggered_only=yes
+	
+	option={
+		name=EVTOPTA_SAN.42
+		trigger={
+			NOT={
+				trait=kind
+			}
+		}
+		hidden_tooltip={
+			set_character_flag=whip_flag
+			character_event={ id=SAN.43 }
+		}
+	}
+	
+	option={
+		name=EVTOPTB_SAN.42
+		trigger={
+			NOT={
+				trait=kind
+			}
+		}
+		hidden_tooltip={
+			set_character_flag=whip_flag
+			character_event={ id=SAN.44 }
+		}
+	}
+	
+	option={
+		name=EVTOPTC_SAN.42
+		hidden_tooltip={
+			character_event={ id=SAN.44 }
+		}
+	}
+	
+	option={
+		name=EVTOPTD_SAN.42
+		hidden_tooltip={
+			character_event={ id=SAN.43 }
+		}
+	}
+}
+
+#The Whip
+character_event={
+	id=SAN.43
+	title=EVTTITLE_SAN.43
+	picture=GFX_evt_carriage
+	desc={
+		text=EVTDESCA_SAN.43
+		trigger={
+			NOT={
+				has_character_flag=whip_flag
 			}
 		}
 	}
-	desc = {
-		text = EVTDESCB_SAN.43
-		trigger = {
-			has_character_flag = whip_flag
+	desc={
+		text=EVTDESCB_SAN.43
+		trigger={
+			has_character_flag=whip_flag
 		}
 	}
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	option = {
-		name = EXCELLENT
-		trigger = {
-			NOT = {
-				has_character_flag = whip_flag
+	option={
+		name=EXCELLENT
+		trigger={
+			NOT={
+				has_character_flag=whip_flag
 			}
 		}
-		wealth = 25
+		wealth=25
 	}
 	
-	option = {
-		name = EXCELLENT
-		trigger = {
-			has_character_flag = whip_flag
+	option={
+		name=EXCELLENT
+		trigger={
+			has_character_flag=whip_flag
 		}
-		wealth = 50
-		add_trait = cruel
-		random_demesne_province = {
-			add_province_modifier = { name = peasant_unrest duration = 1800 }
+		wealth=50
+		add_trait=cruel
+		random_demesne_province={
+			add_province_modifier={ name=peasant_unrest duration=1800 }
 		}
-		hidden_tooltip = {
+		hidden_tooltip={
 			character_event ={
-				id = 38259 #Notify Cruel
+				id=38259 #Notify Cruel
 			}
-			clr_character_flag = whip_flag
+			clr_character_flag=whip_flag
 		}
 	}
 }
 
 #The Whip
-character_event = {
-	id = SAN.44
-	title = EVTTITLE_SAN.44
-	picture = GFX_evt_carriage
-	desc = {
-		text = EVTDESCA_SAN.44
-		trigger = {
-			NOT = {
-				has_character_flag = whip_flag
+character_event={
+	id=SAN.44
+	title=EVTTITLE_SAN.44
+	picture=GFX_evt_carriage
+	desc={
+		text=EVTDESCA_SAN.44
+		trigger={
+			NOT={
+				has_character_flag=whip_flag
 			}
 		}
 	}
-	desc = {
-		text = EVTDESCB_SAN.44
-		trigger = {
-			has_character_flag = whip_flag
+	desc={
+		text=EVTDESCB_SAN.44
+		trigger={
+			has_character_flag=whip_flag
 		}
 	}
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	option = {
-		name = OK
-		trigger = {
-			NOT = {
-				has_character_flag = whip_flag
+	option={
+		name=OK
+		trigger={
+			NOT={
+				has_character_flag=whip_flag
 			}
 		}
-		wealth = 15
+		wealth=15
 	}
 	
-	option = {
-		name = EXCELLENT
-		trigger = {
-			has_character_flag = whip_flag
+	option={
+		name=EXCELLENT
+		trigger={
+			has_character_flag=whip_flag
 		}
-		piety = 50
-		add_trait = just
-		add_trait = cruel
-		random_demesne_province = {
-			add_province_modifier = { name = peasants_protected duration = 1800 }
-			add_province_modifier = { name = merchants_unhappy duration = 900 }
+		piety=50
+		add_trait=just
+		add_trait=cruel
+		random_demesne_province={
+			add_province_modifier={ name=peasants_protected duration=1800 }
+			add_province_modifier={ name=merchants_unhappy duration=900 }
 		}
-		hidden_tooltip = {
-			character_event = {
-				id = 38267 #Notify Just
+		hidden_tooltip={
+			character_event={
+				id=38267 #Notify Just
 			}
 			character_event ={
-				id = 38259 #Notify Cruel
+				id=38259 #Notify Cruel
 			}
-			clr_character_flag = whip_flag
+			clr_character_flag=whip_flag
 		}
 	}
 }
 
 #The Beast
-character_event = {
-	id = SAN.45
-	desc = EVTDESC_SAN.45
-	title = EVTTITLE_SAN.45
-	picture = GFX_evt_bandits
+character_event={
+	id=SAN.45
+	desc=EVTDESC_SAN.45
+	title=EVTTITLE_SAN.45
+	picture=GFX_evt_bandits
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 
-	prisoner = no
-	capable_only = yes
+	prisoner=no
+	capable_only=yes
 	
-	trigger = {
-		NOT = {
-			trait = pet_wolf
+	trigger={
+		NOT={
+			trait=pet_wolf
 		}
 	}
 	
-	option = {
-		name = EXPLORE
-		trigger = {
-			NOT = { trait = craven }
+	option={
+		name=EXPLORE
+		trigger={
+			NOT={ trait=craven }
 		}
-		hidden_tooltip = {
-			random_list = {
-				50 = {
-					character_event = { id = SAN.46 }
+		hidden_tooltip={
+			random_list={
+				50={
+					character_event={ id=SAN.46 }
 				}
-				50 = {
-					character_event = { id = SAN.47 }
+				50={
+					character_event={ id=SAN.47 }
 				}
 			}
 		}
 	}
 	
-	option = {
-		name = ESCAPE
+	option={
+		name=ESCAPE
 	}
 }
 
 #The Beast
-character_event = {
-	id = SAN.46
-	title = EVTTITLE_SAN.46
-	picture = GFX_evt_bandits
-	desc = {
-		text = EVTDESCA_SAN.46
-		trigger = {
-			NOT = {
-				trait = hunter
+character_event={
+	id=SAN.46
+	title=EVTTITLE_SAN.46
+	picture=GFX_evt_bandits
+	desc={
+		text=EVTDESCA_SAN.46
+		trigger={
+			NOT={
+				trait=hunter
 			}
 		}
 	}
-	desc = {
-		text = EVTDESCB_SAN.46
-		trigger = {
-			trait = hunter
+	desc={
+		text=EVTDESCB_SAN.46
+		trigger={
+			trait=hunter
 		}
 	}
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	option = {
-		name = EXPLORE
-		trigger = {
-			NOT = {
-				trait = hunter
+	option={
+		name=EXPLORE
+		trigger={
+			NOT={
+				trait=hunter
 			}
 		}
-		hidden_tooltip = {
-			character_event = { id = SAN.47 }
+		hidden_tooltip={
+			character_event={ id=SAN.47 }
 		}
 	}
 	
-	option = {
-		name = FIGHT
-		trigger = {
-			trait = hunter
+	option={
+		name=FIGHT
+		trigger={
+			trait=hunter
 		}
-		hidden_tooltip = {
-			set_character_flag = beast_fight_flag
-			character_event = { id = SAN.47 }
+		hidden_tooltip={
+			set_character_flag=beast_fight_flag
+			character_event={ id=SAN.47 }
 		}
 	}
 	
-	option = {
-		name = ESCAPE
+	option={
+		name=ESCAPE
 	}
 }
 
 #The Beast
-character_event = {
-	id = SAN.47
-	title = EVTTITLE_SAN.47
-	picture = GFX_evt_bandits
-	desc = {
-		text = EVTDESCA_SAN.47
-		trigger = {
-			NOT = {
-				has_character_flag = beast_fight_flag
+character_event={
+	id=SAN.47
+	title=EVTTITLE_SAN.47
+	picture=GFX_evt_bandits
+	desc={
+		text=EVTDESCA_SAN.47
+		trigger={
+			NOT={
+				has_character_flag=beast_fight_flag
 			}
 		}
 	}
-	desc = {
-		text = EVTDESCB_SAN.47
-		trigger = {
-			has_character_flag = beast_fight_flag
-			trait = wounded
+	desc={
+		text=EVTDESCB_SAN.47
+		trigger={
+			has_character_flag=beast_fight_flag
+			trait=wounded
 		}
 	}
-	desc = {
-		text = EVTDESCC_SAN.47
-		trigger = {
-			has_character_flag = beast_fight_flag
-			trait = maimed
+	desc={
+		text=EVTDESCC_SAN.47
+		trigger={
+			has_character_flag=beast_fight_flag
+			trait=maimed
 		}
 	}
-	desc = {
-		text = EVTDESCD_SAN.47
-		trigger = {
-			has_character_flag = beast_fight_flag
-			NOR = {
-				trait = wounded
-				trait = maimed
+	desc={
+		text=EVTDESCD_SAN.47
+		trigger={
+			has_character_flag=beast_fight_flag
+			NOR={
+				trait=wounded
+				trait=maimed
 			}
 		}
 	}
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	option = {
-		name = FIGHT
+	option={
+		name=FIGHT
 		
-		trigger = {
-			NOT = {
-				has_character_flag = beast_fight_flag
+		trigger={
+			NOT={
+				has_character_flag=beast_fight_flag
 			}
 		}
 		
-		hidden_tooltip = {
-			set_character_flag = beast_fight_flag
-			e_rebels = { holder_scope = { character_event = { id = SAN.48 } } }
+		hidden_tooltip={
+			set_character_flag=beast_fight_flag
+			e_rebels={ holder_scope={ character_event={ id=SAN.48 } } }
 		}
 	}
 	
-	option = {
-		name = ATTACK
+	option={
+		name=ATTACK
 		
-		trigger = {
-			has_character_flag = beast_fight_flag
+		trigger={
+			has_character_flag=beast_fight_flag
 		}
 		
-		hidden_tooltip = {
-			e_rebels = { holder_scope = { character_event = { id = SAN.48 } } }
+		hidden_tooltip={
+			e_rebels={ holder_scope={ character_event={ id=SAN.48 } } }
 		}
 	}
 	
-	option = {
-		name = ESCAPE
-		random = {
-			chance = 25
-			if = {
-				limit = {
-					trait = wounded
+	option={
+		name=ESCAPE
+		random={
+			chance=25
+			if={
+				limit={
+					trait=wounded
 				}
-				remove_trait = wounded
-				add_trait = maimed
+				remove_trait=wounded
+				add_trait=maimed
 			}
-			if = {
-				limit = {
-					NOR = {
-						trait = wounded
-						trait = maimed
+			if={
+				limit={
+					NOR={
+						trait=wounded
+						trait=maimed
 					}
 				}
-				add_trait = wounded
+				add_trait=wounded
 			}
 		}
-		hidden_tooltip = {
-			random = {
-				chance = 25
-				set_character_flag = beast_fight_flag
-				e_rebels = { holder_scope = { character_event = { id = SAN.48 } } }
-				break = yes
+		hidden_tooltip={
+			random={
+				chance=25
+				set_character_flag=beast_fight_flag
+				e_rebels={ holder_scope={ character_event={ id=SAN.48 } } }
+				break=yes
 			}
-			clr_character_flag = beast_fight_flag
+			clr_character_flag=beast_fight_flag
 		}
 	}
 }
 
 #The Beast
-character_event = {
-	id = SAN.48
-	title = EVTTITLE_SAN.48
-	desc = EVTDESC_SAN.48
-	picture = GFX_evt_bandits
+character_event={
+	id=SAN.48
+	title=EVTTITLE_SAN.48
+	desc=EVTDESC_SAN.48
+	picture=GFX_evt_bandits
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	immediate = {
-		FROM = {
-			random = {
-				chance = 35
-				if = {
-					limit = {
-						trait = wounded
+	immediate={
+		FROM={
+			random={
+				chance=35
+				if={
+					limit={
+						trait=wounded
 					}
-					remove_trait = wounded
-					add_trait = maimed
+					remove_trait=wounded
+					add_trait=maimed
 				}
-				if = {
-					limit = {
-						NOR = {
-							trait = wounded
-							trait = maimed
+				if={
+					limit={
+						NOR={
+							trait=wounded
+							trait=maimed
 						}
 					}
-					add_trait = wounded
+					add_trait=wounded
 				}
 			}
 		}
 	}
 	
-	option = {
-		name = OK
-		hidden_tooltip = {
-			FROM = {
-				character_event = { id = SAN.49 }
+	option={
+		name=OK
+		hidden_tooltip={
+			FROM={
+				character_event={ id=SAN.49 }
 			}
 		}
 	}
 	
-	option = {
-		name = OHNO
-		hidden_tooltip = {
-			FROM = {
-				character_event = { id = SAN.47 }
+	option={
+		name=OHNO
+		hidden_tooltip={
+			FROM={
+				character_event={ id=SAN.47 }
 			}
 		}
 	}
 }
 
 #The Beast
-character_event = {
-	id = SAN.49
-	title = EVTTITLE_SAN.49
-	picture = GFX_evt_bandits
-	desc = {
-		text = EVTDESCA_SAN.49
-		trigger = {
-			trait = wounded
+character_event={
+	id=SAN.49
+	title=EVTTITLE_SAN.49
+	picture=GFX_evt_bandits
+	desc={
+		text=EVTDESCA_SAN.49
+		trigger={
+			trait=wounded
 		}
 	}
-	desc = {
-		text = EVTDESCB_SAN.49
-		trigger = {
-			trait = maimed
+	desc={
+		text=EVTDESCB_SAN.49
+		trigger={
+			trait=maimed
 		}
 	}
-	desc = {
-		text = EVTDESCC_SAN.49
-		trigger = {
-			NOR = {
-				trait = wounded
-				trait = maimed
+	desc={
+		text=EVTDESCC_SAN.49
+		trigger={
+			NOR={
+				trait=wounded
+				trait=maimed
 			}
 		}
 	}
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	immediate = {
-		clr_character_flag = beast_fight_flag
-		if = {
-			limit = {
-				NOR = {
-					trait = wounded
-					trait = maimed
+	immediate={
+		clr_character_flag=beast_fight_flag
+		if={
+			limit={
+				NOR={
+					trait=wounded
+					trait=maimed
 				}
 			}
-			add_trait = wounded
+			add_trait=wounded
 		}
 	}
 	
-	option = {
-		name = ATTACK
+	option={
+		name=ATTACK
 	}
 	
-	option = {
-		name = OH
-		hidden_tooltip = {
-			add_trait = pet_wolf
+	option={
+		name=OH
+		hidden_tooltip={
+			add_trait=pet_wolf
 		}
 	}
 }
 
 #Natural Disaster
-character_event = {
-	id = SAN.50
+character_event={
+	id=SAN.50
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 
-	hide_window = yes
+	hide_window=yes
 	
-	immediate = {
-		random_demesne_province = {
-			province_event = { id = SAN.51 }
+	immediate={
+		random_demesne_province={
+			province_event={ id=SAN.51 }
 		}
 	}
 }
 
 #Natural Disaster
-province_event = {
-	id = SAN.51
+province_event={
+	id=SAN.51
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 
-	hide_window = yes
+	hide_window=yes
 	
-	immediate = {
-		owner = {
-			character_event = { id = SAN.52 }
+	immediate={
+		owner={
+			character_event={ id=SAN.52 }
 		}
 	}
 }
 
 #Natural Disaster
-character_event = {
-	id = SAN.52
-	title = EVTTITLE_SAN.52
-	picture = GFX_evt_longships_at_sea_oldgods
-	desc = {
-		text = EVTDESCA_SAN.52
-		trigger = {
-			FROM = {
-				OR = {
-					terrain = plains
-					terrain = farmlands
-					terrain = desert
+character_event={
+	id=SAN.52
+	title=EVTTITLE_SAN.52
+	picture=GFX_evt_longships_at_sea_oldgods
+	desc={
+		text=EVTDESCA_SAN.52
+		trigger={
+			FROM={
+				OR={
+					terrain=plains
+					terrain=farmlands
+					terrain=desert
 				}
 			}
 		}
 	}
-	desc = {
-		text = EVTDESCB_SAN.52
-		trigger = {
-			FROM = {
-				OR = {
-					terrain = forest
-					terrain = hills
-					terrain = steppe
-					terrain = jungle
+	desc={
+		text=EVTDESCB_SAN.52
+		trigger={
+			FROM={
+				OR={
+					terrain=forest
+					terrain=hills
+					terrain=steppe
+					terrain=jungle
 				}
 			}
 		}
 	}
-	desc = {
-		text = EVTDESCC_SAN.52
-		trigger = {
-			FROM = {
-				terrain = mountain
+	desc={
+		text=EVTDESCC_SAN.52
+		trigger={
+			FROM={
+				terrain=mountain
 			}
 		}
 	}
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	option = {
-		name = ACCEPT
+	option={
+		name=ACCEPT
 		
-		trigger = {
-			wealth = 50
+		trigger={
+			wealth=50
 		}
 		
-		custom_tooltip = { text = TOOLTIPaidrequest_a }
+		custom_tooltip={ text=TOOLTIPaidrequest_a }
 		
-		wealth = -50
+		wealth=-50
 
-		hidden_tooltip = {
-			FROM = {
-				random_list = {
-					50 = {
-						add_province_modifier = {
-							name = natural_disaster
-							duration = 30
+		hidden_tooltip={
+			FROM={
+				random_list={
+					50={
+						add_province_modifier={
+							name=natural_disaster
+							duration=30
 						}
 					}
-					50 = {
-						add_province_modifier = {
-							name = natural_disaster
-							duration = 60
+					50={
+						add_province_modifier={
+							name=natural_disaster
+							duration=60
 						}
 					}
 				}
-				add_province_modifier = {
-					name = peasants_protected
-					duration = 900
+				add_province_modifier={
+					name=peasants_protected
+					duration=900
 				}
 			}
 		}
 	}
 	
-	option = {
-		name = OH
+	option={
+		name=OH
 		
-		trigger = {
-			NOT = { wealth = 50 }
+		trigger={
+			NOT={ wealth=50 }
 		}
 		
-		custom_tooltip = { text = TOOLTIPaidrequest_b }
+		custom_tooltip={ text=TOOLTIPaidrequest_b }
 		
-		prestige = -10
+		prestige=-10
 		
-		hidden_tooltip = {
-			FROM = {
-				add_province_modifier = {
-					name = natural_disaster
-					duration = 365
+		hidden_tooltip={
+			FROM={
+				add_province_modifier={
+					name=natural_disaster
+					duration=365
 				}
 			}
 		}
 	}
 	
-	option = {
-		name = REFUSE
+	option={
+		name=REFUSE
 		
-		trigger = {
-			wealth = 50
+		trigger={
+			wealth=50
 		}
 		
-		custom_tooltip = { text = TOOLTIPaidrequest_c }
+		custom_tooltip={ text=TOOLTIPaidrequest_c }
 		
-		hidden_tooltip = {
-			FROM = {
-				add_province_modifier = {
-					name = natural_disaster
-					duration = 365
+		hidden_tooltip={
+			FROM={
+				add_province_modifier={
+					name=natural_disaster
+					duration=365
 				}
-				add_province_modifier = {
-					name = peasant_unrest
-					duration = 365
+				add_province_modifier={
+					name=peasant_unrest
+					duration=365
 				}
 			}
 		}
@@ -3522,346 +3552,348 @@ character_event = {
 }
 
 #Seek Refuge
-character_event = {
-	id = SAN.53
+character_event={
+	id=SAN.53
 	
-	is_triggered_only = yes
+	hide_window=yes
 	
-	immediate = {
-		if = {
-			limit = {
-				liege = {
-					capital_scope = {
-						region = world_china_bing
+	is_triggered_only=yes
+	
+	immediate={
+		if={
+			limit={
+				liege={
+					capital_scope={
+						region=world_china_bing
 					}
 				}
 			}
-			set_character_flag = refuge_bing
+			set_character_flag=refuge_bing
 		}
-		if = {
-			limit = {
-				liege = {
-					capital_scope = {
-						region = world_china_ji
+		if={
+			limit={
+				liege={
+					capital_scope={
+						region=world_china_ji
 					}
 				}
 			}
-			set_character_flag = refuge_ji
+			set_character_flag=refuge_ji
 		}
-		if = {
-			limit = {
-				liege = {
-					capital_scope = {
-						region = world_china_jiaozhi
+		if={
+			limit={
+				liege={
+					capital_scope={
+						region=world_china_jiaozhi
 					}
 				}
 			}
-			set_character_flag = refuge_jiaozhi
+			set_character_flag=refuge_jiaozhi
 		}
-		if = {
-			limit = {
-				liege = {
-					capital_scope = {
-						region = world_china_jing
+		if={
+			limit={
+				liege={
+					capital_scope={
+						region=world_china_jing
 					}
 				}
 			}
-			set_character_flag = refuge_jing
+			set_character_flag=refuge_jing
 		}
-		if = {
-			limit = {
-				liege = {
-					capital_scope = {
-						region = world_china_liang
+		if={
+			limit={
+				liege={
+					capital_scope={
+						region=world_china_liang
 					}
 				}
 			}
-			set_character_flag = refuge_liang
+			set_character_flag=refuge_liang
 		}
-		if = {
-			limit = {
-				liege = {
-					capital_scope = {
-						region = world_china_qing
+		if={
+			limit={
+				liege={
+					capital_scope={
+						region=world_china_qing
 					}
 				}
 			}
-			set_character_flag = refuge_qing
+			set_character_flag=refuge_qing
 		}
-		if = {
-			limit = {
-				liege = {
-					capital_scope = {
-						region = world_china_sili
+		if={
+			limit={
+				liege={
+					capital_scope={
+						region=world_china_sili
 					}
 				}
 			}
-			set_character_flag = refuge_sili
+			set_character_flag=refuge_sili
 		}
-		if = {
-			limit = {
-				liege = {
-					capital_scope = {
-						region = world_china_xu
+		if={
+			limit={
+				liege={
+					capital_scope={
+						region=world_china_xu
 					}
 				}
 			}
-			set_character_flag = refuge_xu
+			set_character_flag=refuge_xu
 		}
-		if = {
-			limit = {
-				liege = {
-					capital_scope = {
-						region = world_china_yan
+		if={
+			limit={
+				liege={
+					capital_scope={
+						region=world_china_yan
 					}
 				}
 			}
-			set_character_flag = refuge_yan
+			set_character_flag=refuge_yan
 		}
-		if = {
-			limit = {
-				liege = {
-					capital_scope = {
-						region = world_china_yang
+		if={
+			limit={
+				liege={
+					capital_scope={
+						region=world_china_yang
 					}
 				}
 			}
-			set_character_flag = refuge_yang
+			set_character_flag=refuge_yang
 		}
-		if = {
-			limit = {
-				liege = {
-					capital_scope = {
-						region = world_china_yi
+		if={
+			limit={
+				liege={
+					capital_scope={
+						region=world_china_yi
 					}
 				}
 			}
-			set_character_flag = refuge_yi
+			set_character_flag=refuge_yi
 		}
-		if = {
-			limit = {
-				liege = {
-					capital_scope = {
-						region = world_china_you
+		if={
+			limit={
+				liege={
+					capital_scope={
+						region=world_china_you
 					}
 				}
 			}
-			set_character_flag = refuge_you
+			set_character_flag=refuge_you
 		}
-		if = {
-			limit = {
-				liege = {
-					capital_scope = {
-						region = world_china_yu
+		if={
+			limit={
+				liege={
+					capital_scope={
+						region=world_china_yu
 					}
 				}
 			}
-			set_character_flag = refuge_yu
+			set_character_flag=refuge_yu
 		}
 		
 		###
 		
-		add_trait = refuge
+		add_trait=refuge
 		
 		###
 		
-		c_penglai = {
-			holder_scope = {
-				ROOT = {
-					move_character = PREV
+		c_penglai={
+			holder_scope={
+				ROOT={
+					move_character=PREV
 				}
 			}
 		}
 	}
 }
 
-character_event = {
-	id = SAN.54
-	desc = EVTDESC_SAN.54
-	title = EVTTITLE_SAN.54
-	picture = GFX_evt_emissary
+character_event={
+	id=SAN.54
+	desc=EVTDESC_SAN.54
+	title=EVTTITLE_SAN.54
+	picture=GFX_evt_emissary
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	option = {
-		name = EXCELLENT
+	option={
+		name=EXCELLENT
 
-		if = {
-			limit = {
-				has_character_flag = create_default
+		if={
+			limit={
+				has_character_flag=create_default
 			}
-			create_character = {
-				random_traits = yes
-				dynasty = none
-				religion = ROOT
-				culture = ROOT
-				age = 20
+			create_character={
+				random_traits=yes
+				dynasty=none
+				religion=ROOT
+				culture=ROOT
+				age=20
 				female=no
 			}
-			clr_character_flag = create_default
-			break = yes
+			clr_character_flag=create_default
+			break=yes
 		}
-		if = {
-			limit = {
-				has_character_flag = create_diplomat
+		if={
+			limit={
+				has_character_flag=create_diplomat
 			}
-			create_random_diplomat = {
-				random_traits = yes
-				dynasty = none
-				religion = ROOT
-				culture = ROOT
-				age = 30
+			create_random_diplomat={
+				random_traits=yes
+				dynasty=none
+				religion=ROOT
+				culture=ROOT
+				age=30
 				female=no
 			}
-			clr_character_flag = create_diplomat
-			break = yes
+			clr_character_flag=create_diplomat
+			break=yes
 		}
-		if = {
-			limit = {
-				has_character_flag = create_soldier
+		if={
+			limit={
+				has_character_flag=create_soldier
 			}
-			create_random_soldier = {
-				random_traits = yes
-				dynasty = none
-				religion = ROOT
-				culture = ROOT
-				age = 30
+			create_random_soldier={
+				random_traits=yes
+				dynasty=none
+				religion=ROOT
+				culture=ROOT
+				age=30
 				female=no
 			}
-			clr_character_flag = create_soldier
-			break = yes
+			clr_character_flag=create_soldier
+			break=yes
 		}
-		if = {
-			limit = {
-				has_character_flag = create_steward
+		if={
+			limit={
+				has_character_flag=create_steward
 			}
-			create_random_steward = {
-				random_traits = yes
-				dynasty = none
-				religion = ROOT
-				culture = ROOT
-				age = 30
+			create_random_steward={
+				random_traits=yes
+				dynasty=none
+				religion=ROOT
+				culture=ROOT
+				age=30
 				female=no
 			}
-			clr_character_flag = create_steward
-			break = yes
+			clr_character_flag=create_steward
+			break=yes
 		}
-		if = {
-			limit = {
-				has_character_flag = create_intriguer
+		if={
+			limit={
+				has_character_flag=create_intriguer
 			}
-			create_random_intriguer = {
-				random_traits = yes
-				dynasty = none
-				religion = ROOT
-				culture = ROOT
-				age = 30
+			create_random_intriguer={
+				random_traits=yes
+				dynasty=none
+				religion=ROOT
+				culture=ROOT
+				age=30
 				female=no
 			}
-			clr_character_flag = create_intriguer
-			break = yes
+			clr_character_flag=create_intriguer
+			break=yes
 		}
-		if = {
-			limit = {
-				has_character_flag = create_priest
+		if={
+			limit={
+				has_character_flag=create_priest
 			}
-			create_random_priest = {
-				random_traits = yes
-				dynasty = none
-				religion = ROOT
-				culture = ROOT
-				age = 30
+			create_random_priest={
+				random_traits=yes
+				dynasty=none
+				religion=ROOT
+				culture=ROOT
+				age=30
 				female=no
 			}
-			clr_character_flag = create_priest
-			break = yes
+			clr_character_flag=create_priest
+			break=yes
 		}
 	}
 }
 
 #Empires at WAR
-character_event = { 
-	id = SAN.55
-	desc = EVTDESC_SAN.55
-	title = EVTTITLE_SAN.55
-	picture = GFX_evt_civil_war
+character_event={ 
+	id=SAN.55
+	desc=EVTDESC_SAN.55
+	title=EVTTITLE_SAN.55
+	picture=GFX_evt_civil_war
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	only_playable = yes
-	only_independent = yes
-	prisoner = no
+	only_playable=yes
+	only_independent=yes
+	prisoner=no
 	
-	trigger = {
-		year = 220
-		higher_tier_than = DUKE
-		capital_scope = {
-			region = world_china
+	trigger={
+		year=220
+		higher_tier_than=DUKE
+		capital_scope={
+			region=world_china
 		}
-		any_independent_ruler = {
-			higher_tier_than = DUKE
-			capital_scope = {
-				region = world_china
+		any_independent_ruler={
+			higher_tier_than=DUKE
+			capital_scope={
+				region=world_china
 			}
-			count = 3
+			count=3
 		}
 	}
 	
-	weight_multiplier = {
-		days = 1
+	weight_multiplier={
+		days=1
 		
-		modifier = {
-			factor = 0.25
+		modifier={
+			factor=0.25
 		}
 	}
 	
-	option = {
-		name = EXCELLENT
+	option={
+		name=EXCELLENT
 		
-		any_claim = {
-			limit = {
-				higher_tier_than = DUKE
-				any_realm_province = {
-					any_neighbor_province = {
-						any_province_lord = {
-							OR = {
-								character = ROOT
-								any_liege = { character = ROOT }
+		any_claim={
+			limit={
+				higher_tier_than=DUKE
+				any_realm_province={
+					any_neighbor_province={
+						any_province_lord={
+							OR={
+								character=ROOT
+								any_liege={ character=ROOT }
 							}
 						}
 					}
 				}
-				holder_scope = {
-					NOR = {
-						character = ROOT
-						war_with = ROOT
-						has_truce = ROOT
-						is_close_relative = ROOT
-						is_friend = ROOT
-						is_lover = ROOT
+				holder_scope={
+					NOR={
+						character=ROOT
+						war_with=ROOT
+						has_truce=ROOT
+						is_close_relative=ROOT
+						is_friend=ROOT
+						is_lover=ROOT
 					}
 				}
 			}
-			reverse_war = { target = ROOT casus_belli = invasion }
+			reverse_war={ target=ROOT casus_belli=invasion }
 		}
 		
-		ai_chance = {
-			factor = 1
+		ai_chance={
+			factor=1
 		}
 	}
 	
-	option = {
-		name = REFUSE
+	option={
+		name=REFUSE
 		
-		prestige = -1000
+		prestige=-1000
 		
-		ai_chance = {
-			factor = 0
+		ai_chance={
+			factor=0
 		}
 	}
 }
 
-#	k_germany = {
+#	k_germany={
 #		set_name=""
 #		adjective=""
 #	}

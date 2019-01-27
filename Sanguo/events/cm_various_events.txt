@@ -98,7 +98,7 @@ character_event = {
 				AND = {
 					OR = {
 						culture_group = yue
-						culture_group = tibetan
+						culture_group = tibetan_group
 						culture_group = man
 					}
 					liege = { religion = ROOT }
@@ -127,7 +127,7 @@ character_event = {
 					AND = {
 						OR = {
 							culture_group = yue
-							culture_group = tibetan
+							culture_group = tibetan_group
 							culture_group = man
 						}
 						liege = { religion = ROOT }

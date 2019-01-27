@@ -4,75 +4,83 @@ EVTOPTA_MAIMED;I am a cripple!;Je suis un infirme !;;;;;;;;;;;;x
 EVTDESC_BLIND;Your age is finally starting to get to you and your eyes are no longer what they used to be, as the days go by your vision fades more and more until you can see nothing.;;;;;;;;;;;;;x;,,,,
 EVTOPTA_BLIND;My Eyes!;Mes yeux !;;;;;;;;;;;;x
 # RTK - Campaign
-EVTTITLE_RTK.130000;Rise of the Yellow Turbans;;;;;;;;;;;;;x
-EVTDESC_RTK.130000;All across the empire, peasants and disenfranchised officials have risen up against the Han Empire. They come adorned with yellow turbans around their heads, arms, and necks. The empire has been thrown into crisis.\n\n As long as the Yellow Turbans exist, more and more people will use their cause as an excuse to rebel as well. If not extinguished quickly, this could very well spell the end of the empire.;;;;;;;;;;;;;x
-EVTTITLE_RTK.130001;Rise of the Liang Rebellion;;;;;;;;;;;;;x
-EVTDESC_RTK.130001;Local Liang provincial leaders have taken advantage of the Qiang and Di raids to start a major rebellion. This rebellion threatens to sweep all of Liang away from the Empire's clutches...;;;;;;;;;;;;;x
-EVTTITLE_RTK.130002;Confrontation with the Yellow Gates;;;;;;;;;;;;;x
-EVTDESC_RTK.130002;The power held by the corrupt Ten Eunuchs has grown too much for the loyalists at court. With the death of Emperor Ling of the Han Dynasty, the eunuchs have set up a new emperor as their puppet. With the armies of the loyalists preparing to fight the Ten Eunuchs and the Yellow Gates, an elite army established by the Emperor as a counter to the growing power of He Jin. The coming battle inside the Yellow Gates will surely affect all under Heaven.;;;;;;;;;;;;;x,,,
-EVTTITLE_RTK.130003;Test;;;;;;;;;;;;;x
-EVTDESC_RTK.130003;Test;;;;;;;;;;;;;x
-EVTTITLE_RTK.130004;Liang Rebellion Ends;;;;;;;;;;;;;x
-EVTDESC_RTK.130004;The Liang Rebellion which once caused the Imperial Court to consider abandoning the entire province has finally been put down.;;;;;;;;;;;;;x
-EVTTITLE_RTK.130005;Executing the Eunuchs;;;;;;;;;;;;;x
-EVTDESC_RTK.130005;The Eunuchs have openly revolted against He Jin. The time has come for us to aid our ally and stamp out the eunuch plague once and for all.;;;;;;;;;;;;;x
-EVTTITLE_RTK.130006;Coming of Dong Zhuo;;;;;;;;;;;;;x
-EVTDESC_RTK.130006;With the eunuchs growing more and more arrogant, the bureaucrats at court have called for the frontier armies of Dong Zhuo and Ding Yuan to come rescue the Emperor.;;;;;;;;;;;;;x
-EVTTITLE_RTK.130007;Test;;;;;;;;;;;;;x
-EVTDESC_RTK.130007;Test;;;;;;;;;;;;;x
-EVTTITLE_RTK.130008;Devil in Luoyang;;;;;;;;;;;;;x
-EVTDESC_RTK.130008;Dong Zhuo's abrupt arrival at the capital sent the eunuchs into flight. Their forces were scattered while He Jin's army was absorbed into Dong Zhuo's forces. He now controls the Emperor, the court, and the largest military in the world.;;;;;;;;;;;;;x,,,
-EVTTITLE_RTK.130009;Balance of Power;;;;;;;;;;;;;x
-EVTDESC_RTK.130009;The scales of power have been weighed in our favor. As such, the other lords of the realm eye our domain with jealousy and greed. They plot and convene against us. At any moment, they could sally against us. We must prepare for their eventual assault.;;;;;;;;;;;;;x,,,
-EVTTITLE_RTK.130010;Coalition Called;;;;;;;;;;;;;x
-EVTDESC_RTK.130010;An honorable lord of the realm calls for you to join them in breaking the monopoly held by one overly powerful indvidual.;;;;;;;;;;;;;x
-EVTTITLE_RTK.130011;Coalition War Begins;;;;;;;;;;;;;x
-EVTDESC_RTK.130011;The time for war has come. May our enemies suffer harsh defeat at our hands.;;;;;;;;;;;;;x
-EVTTITLE_RTK.130012;Coalition War Begins;;;;;;;;;;;;;x
-EVTDESC_RTK.130012;The time for war has come. The coalition's armies have already assembled against the enemy. The time for us to join battle has come.;;;;;;;;;;;;;x
-EVTTITLE_RTK.130013;Coalition Fails;;;;;;;;;;;;;x
-EVTDESC_RTK.130013;The Heavens have cursed us. The coalition has fallen apart from internal strife while our enemy remains safely in power.;;;;;;;;;;;;;x
-EVTTITLE_RTK.130014;Coalition Fails;;;;;;;;;;;;;x
-EVTDESC_RTK.130014;The Heavens have cursed the grand coalition. The coalition has fallen apart from internal strife while their enemy remains safely in power.;;;;;;;;;;;;;x
-EVTTITLE_RTK.130015;Coalition Victory;;;;;;;;;;;;;x
-EVTDESC_RTK.130015;The Heavens have granted us victory. Our foe has retreated in the face of our awesome power. Their vassals are now cut free from the tyrant's control.;;;;;;;;;;;;;x
-EVTTITLE_RTK.130016;Rebel Victory;;;;;;;;;;;;;x
-EVTDESC_RTK.130016;The Heavens have cursed our forces. We have been defeated again and again by the combined armies of the rebelling lords of the realm. We must withdraw. For now...;;;;;;;;;;;;;x
-EVTTITLE_RTK.130017;Coalition Victory;;;;;;;;;;;;;x
-EVTDESC_RTK.130017;The Heavens have granted the coalition victory. The coalition has smashed through all obstacles. Our enemy is defeated.;;;;;;;;;;;;;x
-EVTTITLE_RTK.130018;Coalition Victory;;;;;;;;;;;;;x
-EVTDESC_RTK.130018;The Heavens have granted the coalition victory. Any would-be masters of the realm will think twice before tackling such ambitions again.;;;;;;;;;;;;;x
-EVTTITLE_RTK.130019;Rebel Victory;;;;;;;;;;;;;x
-EVTDESC_RTK.130019;The rebels have annhilated us in the field and captured much of our territory. We have no other choice than to surrender.;;;;;;;;;;;;;x
-EVTTITLE_RTK.130020;Dong Zhuo Retreats;;;;;;;;;;;;;x
-EVTDESC_RTK.130020;The vile Dong Zhuo has been beaten. His forces have withdrawn into the west, abandoning Luoyang and all lands east of Changan.;;;;;;;;;;;;;x
-EVTTITLE_RTK.130021;Dong Zhuo Survives;;;;;;;;;;;;;x
-EVTDESCA_RTK.130021;The court has settled into Changan. Dong Zhuo has taken the Emperor to the Western capital. What can we do now?;;;;;;;;;;;;;x
-EVTDESCB_RTK.130021;We have managed to escape the rebels and establish ourselves in the ancient capital of Changan. Maybe we can have some peace now.;;;;;;;;;;;;;x
-EVTDESCC_RTK.130021;Some commotion has taken place in the Han Imperial Court. Perhaps now is a good time to attack?;;;;;;;;;;;;;x
-EVTTITLE_RTK.130025;Dong Zhuo Slain;;;;;;;;;;;;;x
-EVTDESCA_RTK.130025;Wang Yun has taken over the Imperial Court at Changan. Using some clever scheme, Wang Yun and Lü Bu successfully slew the villain Dong Zhuo, sending Dong Zhuo's followers scrambling into the foothills of the West.;;;;;;;;;;;;;x
-EVTDESCB_RTK.130025;Dong Zhuo has been slain by his adoptive son Lü Bu. Wang Yun now brands Dong Zhuo's loyalists traitors to the Han.;;;;;;;;;;;;;x
-EVTDESCC_RTK.130025;Apparently another coup has rocked the Han Imperial Court. Their instability and weakness could be our opportunity.;;;;;;;;;;;;;x
-EVTTITLE_RTK.130026;Chaos in Changan;;;;;;;;;;;;;x
-EVTDESC_RTK.130026;When Dong Zhuo died, his generals and armies fled. They eventually returned hoping for amnesty, but Wang Yun was either too proud or too dogmatic to accept them. So the generals invaded, slew Wang Yun and his family, and put Lü Bu to flight. The shadow of Dong Zhuo hangs over the Empire once again.;;;;;;;;;;;;;x
-EVTTITLE_RTK.130027;Wrath of Cao;;;;;;;;;;;;;x
-EVTDESC_RTK.130027;The warlord Cao Cao has called for vengeance against Tao Qian. It seems Tao Qian tasked his man Zhang Kai to escort Cao Cao's father Cao Song through Xu. Instead, Zhang Kai slew Cao Song, stole his valuables, and fled. Cao Cao swears Tao Qian will pay.;;;;;;;;;;;;;x
-EVTTITLE_RTK.130028;The Rise of Lü Bu;;;;;;;;;;;;;x
-EVTDESC_RTK.130028;After bloodying himself in battle after battle for the sakes of other lords, Lü Bu has finally seized upon his ambition for independence. The Province of Yan is now his! What will Cao Cao do?;;;;;;;;;;;;;x
-EVTTITLE_RTK.130029;The Rise of Liu Bei;;;;;;;;;;;;;x
-EVTDESC_RTK.130029;From humble beginnings as a sandalweaver, Liu Bei has made quite a name for himself. With Tao Qian's passing, Liu Bei has managed to gain the province of Xu through charisma alone.;;;;;;;;;;;;;x
-EVTTITLE_RTK.130030;Northern Unification;;;;;;;;;;;;;x
-EVTDESC_RTK.130030;Yuan Shao and Gongsun Zan have fought numerous battles before. But now they are intent on destroying each other. Both clans speak of total annihilation. May Heaven have mercy on the North.;;;;;;;;;;;;;x
-EVTTITLE_RTK.130031;Showdown in Changan;;;;;;;;;;;;;x
-EVTDESC_RTK.130031;The world breathed a sigh of relief when Dong Zhuo was felled. However, since then the Western capital has only suffered greater and greater destabilization under the chaotic rule of Li Jue and Guo Si. Now these two warlords are at each others throats, turning Changan into a battlefield. The Emperor and the Imperial court are in danger...;;;;;;;;;;;;;x
-EVTTITLE_RTK.130032;Imperial Escape;;;;;;;;;;;;;x
-EVTDESC_RTK.130032;Through Heavenly fate, the Emperor and much of his entourage have managed to escape the chaos of Changan. Li Jue and Guo Si seem to have temporarily set their differences aside while they attempt to hunt the Emperor back down.;;;;;;;;;;;;;x
-EVTTITLE_RTK.130033;The Rise of Cao Cao;;;;;;;;;;;;;x
-EVTDESC_RTK.130033;Though many spoke of loyalty, it was Cao Cao who reached out and saved the Emperor. Cao Cao now controls the Son of Heaven. His ambitions are known, and the whole world fears his judgement.;;;;;;;;;;;;;x
-EVTTITLE_RTK.130034;Liu Bei's Kindness;;;;;;;;;;;;;x
-EVTDESC_RTK.130034;Lü Bu's takeover of Yan was completely undone within a few years. Once again without a land to call home, Lü Bu eagerly accepted Liu Bei's kindness in the form of the county of Xiao.;;;;;;;;;;;;;x
-EVTTITLE_RTK.130035;Lü Bu's Betrayal;;;;;;;;;;;;;x
-EVTDESC_RTK.130035;While Liu Bei was out campaigning, Lü Bu used a pretext to takeover Liu Bei's territory. Once Liu Bei returned, Lü Bu granted the former the county of Xiao... As repayment for Liu Bei's previous kindness.;;;;;;;;;;;;;x
-EVTTITLE_RTK.130040;End of the Yellow Turbans;;;;;;;;;;;;;x
-EVTDESC_RTK.130040;Even though bandits and rebels still periodically stir up trouble in the land. They no longer proclaim themselves as furthering the creation of a yellow heaven. The Yellow Turban rebellion is finally over.;;;;;;;;;;;;;x
+EVTTITLE_RTK.1;Rise of the Yellow Turbans;;;;;;;;;;;;;x
+EVTDESC_RTK.1;All across the empire, peasants and disenfranchised officials have risen up against the Han Empire. They come adorned with yellow turbans around their heads, arms, and necks. The empire has been thrown into crisis.\n\n As long as the Yellow Turbans exist, more and more people will use their cause as an excuse to rebel as well. If not extinguished quickly, this could very well spell the end of the empire.;;;;;;;;;;;;;x
+EVTTITLE_RTK.2;Rise of the Liang Rebellion;;;;;;;;;;;;;x
+EVTDESC_RTK.2;Local Liang provincial leaders have taken advantage of the Qiang and Di raids to start a major rebellion. This rebellion threatens to sweep all of Liang away from the Empire's clutches...;;;;;;;;;;;;;x
+EVTTITLE_RTK.3;Confrontation with the Yellow Gates;;;;;;;;;;;;;x
+EVTDESC_RTK.3;The power held by the corrupt Ten Eunuchs has grown too much for the loyalists at court. With the death of Emperor Ling of the Han Dynasty, the eunuchs have set up a new emperor as their puppet. With the armies of the loyalists preparing to fight the Ten Eunuchs and the Yellow Gates, an elite army established by the Emperor as a counter to the growing power of He Jin. The coming battle inside the Yellow Gates will surely affect all under Heaven.;;;;;;;;;;;;;x,,,
+EVTTITLE_RTK.4;Test;;;;;;;;;;;;;x
+EVTDESC_RTK.4;Test;;;;;;;;;;;;;x
+EVTTITLE_RTK.5;Liang Rebellion Ends;;;;;;;;;;;;;x
+EVTDESC_RTK.5;The Liang Rebellion which once caused the Imperial Court to consider abandoning the entire province has finally been put down.;;;;;;;;;;;;;x
+EVTTITLE_RTK.6;Executing the Eunuchs;;;;;;;;;;;;;x
+EVTDESC_RTK.6;The Eunuchs have openly revolted against He Jin. The time has come for us to aid our ally and stamp out the eunuch plague once and for all.;;;;;;;;;;;;;x
+EVTTITLE_RTK.7;Coming of Dong Zhuo;;;;;;;;;;;;;x
+EVTDESC_RTK.7;With the eunuchs growing more and more arrogant, the bureaucrats at court have called for the frontier armies of Dong Zhuo and Ding Yuan to come rescue the Emperor.;;;;;;;;;;;;;x
+EVTTITLE_RTK.8;Test;;;;;;;;;;;;;x
+EVTDESC_RTK.8;Test;;;;;;;;;;;;;x
+EVTTITLE_RTK.9;Devil in Luoyang;;;;;;;;;;;;;x
+EVTDESC_RTK.9;Dong Zhuo's abrupt arrival at the capital sent the eunuchs into flight. Their forces were scattered while He Jin's army was absorbed into Dong Zhuo's forces. He now controls the Emperor, the court, and the largest military in the world.;;;;;;;;;;;;;x,,,
+EVTTITLE_RTK.10;Balance of Power;;;;;;;;;;;;;x
+EVTDESC_RTK.10;The scales of power have been weighed in our favor. As such, the other lords of the realm eye our domain with jealousy and greed. They plot and convene against us. At any moment, they could sally against us. We must prepare for their eventual assault.;;;;;;;;;;;;;x,,,
+EVTTITLE_RTK.11;Coalition Called;;;;;;;;;;;;;x
+EVTDESC_RTK.11;An honorable lord of the realm calls for you to join them in breaking the monopoly held by one overly powerful indvidual.;;;;;;;;;;;;;x
+EVTTITLE_RTK.12;Coalition War Begins;;;;;;;;;;;;;x
+EVTDESC_RTK.12;The time for war has come. May our enemies suffer harsh defeat at our hands.;;;;;;;;;;;;;x
+EVTTITLE_RTK.13;Coalition War Begins;;;;;;;;;;;;;x
+EVTDESC_RTK.13;The time for war has come. The coalition's armies have already assembled against the enemy. The time for us to join battle has come.;;;;;;;;;;;;;x
+EVTTITLE_RTK.14;Coalition Fails;;;;;;;;;;;;;x
+EVTDESC_RTK.14;The Heavens have cursed us. The coalition has fallen apart from internal strife while our enemy remains safely in power.;;;;;;;;;;;;;x
+EVTTITLE_RTK.15;Coalition Fails;;;;;;;;;;;;;x
+EVTDESC_RTK.15;The Heavens have cursed the grand coalition. The coalition has fallen apart from internal strife while their enemy remains safely in power.;;;;;;;;;;;;;x
+EVTTITLE_RTK.16;Coalition Victory;;;;;;;;;;;;;x
+EVTDESC_RTK.16;The Heavens have granted us victory. Our foe has retreated in the face of our awesome power. Their vassals are now cut free from the tyrant's control.;;;;;;;;;;;;;x
+EVTTITLE_RTK.17;Rebel Victory;;;;;;;;;;;;;x
+EVTDESC_RTK.17;The Heavens have cursed our forces. We have been defeated again and again by the combined armies of the rebelling lords of the realm. We must withdraw. For now...;;;;;;;;;;;;;x
+EVTTITLE_RTK.18;Coalition Victory;;;;;;;;;;;;;x
+EVTDESC_RTK.18;The Heavens have granted the coalition victory. The coalition has smashed through all obstacles. Our enemy is defeated.;;;;;;;;;;;;;x
+EVTTITLE_RTK.19;Coalition Victory;;;;;;;;;;;;;x
+EVTDESC_RTK.19;The Heavens have granted the coalition victory. Any would-be masters of the realm will think twice before tackling such ambitions again.;;;;;;;;;;;;;x
+EVTTITLE_RTK.20;Rebel Victory;;;;;;;;;;;;;x
+EVTDESC_RTK.20;The rebels have annhilated us in the field and captured much of our territory. We have no other choice than to surrender.;;;;;;;;;;;;;x
+EVTTITLE_RTK.21;Dong Zhuo Retreats;;;;;;;;;;;;;x
+EVTDESC_RTK.21;The vile Dong Zhuo has been beaten. His forces have withdrawn into the west, abandoning Luoyang and all lands east of Changan.;;;;;;;;;;;;;x
+EVTTITLE_RTK.22;Dong Zhuo Survives;;;;;;;;;;;;;x
+EVTDESCA_RTK.22;The court has settled into Changan. Dong Zhuo has taken the Emperor to the Western capital. What can we do now?;;;;;;;;;;;;;x
+EVTDESCB_RTK.22;We have managed to escape the rebels and establish ourselves in the ancient capital of Changan. Maybe we can have some peace now.;;;;;;;;;;;;;x
+EVTDESCC_RTK.22;Some commotion has taken place in the Han Imperial Court. Perhaps now is a good time to attack?;;;;;;;;;;;;;x
+EVTTITLE_RTK.26;Dong Zhuo Slain;;;;;;;;;;;;;x
+EVTDESCA_RTK.26;Wang Yun has taken over the Imperial Court at Changan. Using some clever scheme, Wang Yun and Lü Bu successfully slew the villain Dong Zhuo, sending Dong Zhuo's followers scrambling into the foothills of the West.;;;;;;;;;;;;;x
+EVTDESCB_RTK.26;Dong Zhuo has been slain by his adoptive son Lü Bu. Wang Yun now brands Dong Zhuo's loyalists traitors to the Han.;;;;;;;;;;;;;x
+EVTDESCC_RTK.26;Apparently another coup has rocked the Han Imperial Court. Their instability and weakness could be our opportunity.;;;;;;;;;;;;;x
+EVTTITLE_RTK.27;Chaos in Changan;;;;;;;;;;;;;x
+EVTDESC_RTK.27;When Dong Zhuo died, his generals and armies fled. They eventually returned hoping for amnesty, but Wang Yun was either too proud or too dogmatic to accept them. So the generals invaded, slew Wang Yun and his family, and put Lü Bu to flight. The shadow of Dong Zhuo hangs over the Empire once again.;;;;;;;;;;;;;x
+EVTTITLE_RTK.28;Wrath of Cao;;;;;;;;;;;;;x
+EVTDESC_RTK.28;The warlord Cao Cao has called for vengeance against Tao Qian. It seems Tao Qian tasked his man Zhang Kai to escort Cao Cao's father Cao Song through Xu. Instead, Zhang Kai slew Cao Song, stole his valuables, and fled. Cao Cao swears Tao Qian will pay.;;;;;;;;;;;;;x
+EVTTITLE_RTK.29;The Rise of Lü Bu;;;;;;;;;;;;;x
+EVTDESC_RTK.29;After bloodying himself in battle after battle for the sakes of other lords, Lü Bu has finally seized upon his ambition for independence. The Province of Yan is now his! What will Cao Cao do?;;;;;;;;;;;;;x
+EVTTITLE_RTK.30;The Rise of Liu Bei;;;;;;;;;;;;;x
+EVTDESC_RTK.30;From humble beginnings as a sandalweaver, Liu Bei has made quite a name for himself. With Tao Qian's passing, Liu Bei has managed to gain the province of Xu through charisma alone.;;;;;;;;;;;;;x
+EVTTITLE_RTK.31;Northern Unification;;;;;;;;;;;;;x
+EVTDESC_RTK.31;Yuan Shao and Gongsun Zan have fought numerous battles before. But now they are intent on destroying each other. Both clans speak of total annihilation. May Heaven have mercy on the North.;;;;;;;;;;;;;x
+EVTTITLE_RTK.32;Showdown in Changan;;;;;;;;;;;;;x
+EVTDESC_RTK.32;The world breathed a sigh of relief when Dong Zhuo was felled. However, since then the Western capital has only suffered greater and greater destabilization under the chaotic rule of Li Jue and Guo Si. Now these two warlords are at each others throats, turning Changan into a battlefield. The Emperor and the Imperial court are in danger...;;;;;;;;;;;;;x
+EVTTITLE_RTK.33;Imperial Escape;;;;;;;;;;;;;x
+EVTDESC_RTK.33;Through Heavenly fate, the Emperor and much of his entourage have managed to escape the chaos of Changan. Li Jue and Guo Si seem to have temporarily set their differences aside while they attempt to hunt the Emperor back down.;;;;;;;;;;;;;x
+EVTTITLE_RTK.34;The Rise of Cao Cao;;;;;;;;;;;;;x
+EVTDESC_RTK.34;Though many spoke of loyalty, it was Cao Cao who reached out and saved the Emperor. Cao Cao now controls the Son of Heaven. His ambitions are known, and the whole world fears his judgement.;;;;;;;;;;;;;x
+EVTTITLE_RTK.35;Liu Bei's Kindness;;;;;;;;;;;;;x
+EVTDESC_RTK.35;Lü Bu's takeover of Yan was completely undone within a few years. Once again without a land to call home, Lü Bu eagerly accepted Liu Bei's kindness in the form of the county of Xiao.;;;;;;;;;;;;;x
+EVTTITLE_RTK.36;Lü Bu's Betrayal;;;;;;;;;;;;;x
+EVTDESC_RTK.36;While Liu Bei was out campaigning, Lü Bu used a pretext to takeover Liu Bei's territory. Once Liu Bei returned, Lü Bu granted him the former the county of Xiao... As repayment for Liu Bei's previous kindness.;;;;;;;;;;;;;x
+EVTTITLE_RTK.37;Liu Bei Returns;;;;;;;;;;;;;x
+EVTDESC_RTK.37;Liu Bei and Cao Cao have allied to destroy Lü Bu. Lü Bu has finally been cut down.;;;;;;;;;;;;;x
+EVTTITLE_RTK.38;Liu Bei's Ambition;;;;;;;;;;;;;x
+EVTDESC_RTK.38;Liu Bei, unable to remain under Cao Cao's shadow, has struck out and reclaimed the province of Xu. Cao Cao is already on the war path.;;;;;;;;;;;;;x
+EVTTITLE_RTK.40;End of the Yellow Turbans;;;;;;;;;;;;;x
+EVTDESC_RTK.40;Even though bandits and rebels still periodically stir up trouble in the land. They no longer proclaim themselves as furthering the creation of a yellow heaven. The Yellow Turban rebellion is finally over.;;;;;;;;;;;;;x
+EVTTITLE_RTK.50;Rise of Shu;;;;;;;;;;;;;x
+EVTDESC_RTK.50;In a bid for Imperial supremacy, Liu Bei has declared his own Shu Dynasty!;;;;;;;;;;;;;x
+EVTTITLE_RTK.51;Rise of Wu;;;;;;;;;;;;;x
+EVTDESC_RTK.51;In a bid for Imperial supremacy, Sun Quan has declared his own Wu Dynasty!;;;;;;;;;;;;;x

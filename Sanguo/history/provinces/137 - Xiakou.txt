@@ -13,6 +13,7 @@ b_xiakou = castle
 # Misc
 culture = shanyue
 religion = animist
+terrain = hills
 
 #History
 214.1.1={

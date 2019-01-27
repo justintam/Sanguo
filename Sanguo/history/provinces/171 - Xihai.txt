@@ -13,5 +13,6 @@ b_bingdo = tribal
 # Misc
 culture = qiang
 religion = baishi
+terrain = desert
 
 #History

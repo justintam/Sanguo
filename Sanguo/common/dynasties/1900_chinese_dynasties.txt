@@ -17,6 +17,13 @@
 1904 = {
 	name="Liu" #Liu Huan - RAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 1 0 0 0 			}
+		religion="confucian"
+	}
 }
 1905 = {
 	name="Jian" #Jian Suo - RAN
@@ -29,6 +36,13 @@
 1907 = {
 	name="Wu" #Wu Xing - RAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 12 0 0 0 			}
+		religion="confucian"
+	}
 }
 1908 = {
 	name="Zi" #Zi Ding - RAN
@@ -37,6 +51,13 @@
 1909 = {
 	name="Xu" #Xu Kang - RAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 12 0 0 0 			}
+		religion="confucian"
+	}
 }
 1910 = {
 	name="Zhuang" #Zhuang Miao - RAN
@@ -45,14 +66,35 @@
 1911 = {
 	name="Li" #Li Ju - RAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="confucian"
+	}
 }
 1912 = {
 	name="Li" #Li Kai - RAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="confucian"
+	}
 }
 1913 = {
 	name="Xu" #Xu Jian - RAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 12 0 0 0 			}
+		religion="confucian"
+	}
 }
 1914 = {
 	name="Kou" #Kou Mian - RAN

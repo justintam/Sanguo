@@ -402,16 +402,6 @@ targetted_decisions = {
 					abdicate_to = ROOT
 				}
 			}
-			if = {
-				limit = { is_married=yes }
-				spouse = {
-					c_empress = {
-						holder_scope = {
-							abdicate_to = PREVPREV
-						}
-					}
-				}
-			}
 			character_event = { id = DYN.1 }
 			if = {
 				limit = { NOT = { religion = confucian } }

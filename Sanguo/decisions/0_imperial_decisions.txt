@@ -1,677 +1,705 @@
-decisions = {
+decisions={
 
-	invite_emperor = {
-		is_high_prio = yes
-		potential = {
-			NOT = { has_character_flag = invited_emperor }
-			independent = yes
-			is_landed = yes
-			is_feudal = yes
-			prisoner = no
-			k_confucian = {
-				holder_scope = {
-					NOT = { demesne_size = 1 }
-					religion = ROOT
-					culture = ROOT
-					prisoner = no
-					NOT = {
-						reverse_has_opinion_modifier = {
-							who = ROOT  modifier = opinion_refused_guardianship
+	invite_emperor={
+		is_high_prio=yes
+		potential={
+			NOT={ has_character_flag=invited_emperor }
+			independent=yes
+			is_landed=yes
+			is_feudal=yes
+			prisoner=no
+			k_confucian={
+				holder_scope={
+					NOT={ demesne_size=1 }
+					religion=ROOT
+					culture=ROOT
+					prisoner=no
+					NOT={
+						reverse_has_opinion_modifier={
+							who=ROOT  modifier=opinion_refused_guardianship
 						}
 					}
 				}
 			}
-			OR = {
-				AND = {
-					real_tier = EMPEROR
-					realm_size = 50
+			OR={
+				AND={
+					real_tier=EMPEROR
+					realm_size=50
 				}
-				AND = {
-					real_tier = KING
-					realm_size = 30
+				AND={
+					real_tier=KING
+					realm_size=30
 				}
-				AND = {
-					real_tier = DUKE
-					realm_size = 20
+				AND={
+					real_tier=DUKE
+					realm_size=20
 				}
 			}
-			prestige = 1000
-			piety = 500
+			prestige=1000
+			piety=500
 		}
-		allow = {
-			war = no
-			capital_scope = {
-				any_province_holding = {
-					holding_type = temple
-					holder_scope = {
-						character = ROOT
+		allow={
+			war=no
+			capital_scope={
+				any_province_holding={
+					holding_type=temple
+					holder_scope={
+						character=ROOT
 					}
 				}
 			}
 		}
-		effect = {
-			custom_tooltip = {
-				text = emperor_invited
-				hidden_tooltip = {
-					set_character_flag = invited_emperor
-					save_event_target_as = target_inviter
-					capital_scope = {
-						random_province_holding = {
-							limit = {
-								holding_type = temple
-								holder_scope = {
-									character = ROOT
+		effect={
+			custom_tooltip={
+				text=emperor_invited
+				hidden_tooltip={
+					set_character_flag=invited_emperor
+					save_event_target_as=target_inviter
+					capital_scope={
+						random_province_holding={
+							limit={
+								holding_type=temple
+								holder_scope={
+									character=ROOT
 								}
 							}
-							save_event_target_as = target_palace
+							save_event_target_as=target_palace
 						}
 					}
-					k_confucian = {
-						holder_scope = {
-							character_event = { id = EMP.22 }
+					k_confucian={
+						holder_scope={
+							character_event={ id=EMP.22 }
 						}
 					}
 				}
 			}
 		}
-		ai_will_do = {
-			factor = 1
+		ai_will_do={
+			factor=1
 		}
 	}
 	
-	force_abdication = {
-		is_high_prio = yes
+	force_abdication={
+		is_high_prio=yes
 		
-		potential = {
-			is_adult = yes
-			is_playable = yes
-			independent = yes
-			NOT = { has_landed_title = k_confucian }
-			primary_title = {
-				real_tier = emperor
+		potential={
+			is_adult=yes
+			is_playable=yes
+			independent=yes
+			NOT={ has_landed_title=k_confucian }
+			primary_title={
+				real_tier=emperor
 			}
-			k_confucian = {
-				holder_scope = {
-					religion = ROOT
-					culture = ROOT
+			k_confucian={
+				holder_scope={
+					religion=ROOT
+					culture=ROOT
 				}
 			}
-			k_confucian = {
-				holder_scope = {
-					OR = {
-						is_landed = no
-						any_demesne_title = {
-							de_jure_liege_or_above = ROOT
+			k_confucian={
+				holder_scope={
+					OR={
+						is_landed=no
+						any_demesne_title={
+							de_jure_liege_or_above=ROOT
 						}
-						capital_scope = {
-							owner = {
-								top_liege = {
-									character = ROOT
+						capital_scope={
+							owner={
+								top_liege={
+									character=ROOT
 								}
 							}
 						}
 					}
 				}
 			}
-			is_feudal = yes
-			war = no
+			is_feudal=yes
+			war=no
 		}
 		
-		allow = {
-			OR = {
-				k_confucian = {
-					holder_scope = {
-						NOT = { religion_group = ROOT }
+		allow={
+			OR={
+				k_confucian={
+					holder_scope={
+						NOT={ religion_group=ROOT }
 					}
 				}
-				piety = 1000
+				piety=1000
 			}
 		}
 		
-		effect = {
-			custom_tooltip = { text = form_new_empire_tooltip }
+		effect={
+			custom_tooltip={ text=form_new_empire_tooltip }
 			
 			#Allow for change of Dynasty
 			
-			hidden_tooltip = {
-				set_character_flag = founded_empire
-				set_global_flag = founded_empire_flag
+			hidden_tooltip={
+				piety=-1000
+				add_trait=tyrant
 				
-				piety = -1000
-				add_trait = tyrant
-				
-				if = {
-					limit = {
-						k_confucian = {
-							holder_scope = {
-								primary_title = {
-									NOT = { title = k_confucian }
+				if={
+					limit={
+						k_confucian={
+							holder_scope={
+								primary_title={
+									NOT={ title=k_confucian }
 								}
 							}
 						}
 					}
-					k_confucian = {
-						holder_scope = {
-							primary_title = {
-								activate_title = { title = THIS status = no }
-								unsafe_destroy_landed_title = THIS
-								set_title_flag = last_empire
+					k_confucian={
+						holder_scope={
+							primary_title={
+								activate_title={ title=THIS status=no }
+								unsafe_destroy_landed_title=THIS
+								set_title_flag=last_empire
 							}
 						}
 					}
 				}
-				k_confucian = {
-					holder_scope = {
-						if = {
-							limit = { has_artifact = imperial_seal }
-							remove_artifact = imperial_seal
-							ROOT = { add_artifact = imperial_seal }
+				k_confucian={
+					holder_scope={
+						if={
+							limit={ has_artifact=imperial_seal }
+							random_artifact={
+								limit={
+									artifact_type=imperial_seal
+								}
+								transfer_artifact={
+									from=PREV to=ROOT
+								}
+							}
 						}
-						abdicate_to = ROOT
+						abdicate_to=ROOT
 					}
 				}
-				if = {
-					limit = { is_married=yes }
-					spouse = {
-						grant_title_no_opinion = c_empress
-					}
-				}
-				if = {
-					limit = {
-						primary_title = {
-							OR = {
-								AND = {
-									real_tier = emperor
-									OR = {
-										has_title_flag = premier_title
-										NOT = {
-											any_previous_holder = { is_close_relative = ROOT }
+				if={
+					limit={
+						primary_title={
+							OR={
+								AND={
+									real_tier=emperor
+									OR={
+										has_title_flag=premier_title
+										NOT={
+											any_previous_holder={ is_close_relative=ROOT }
 										}
 									}
 								}
-								NOT = { real_tier = emperor }
+								NOT={ real_tier=emperor }
 							}
 						}
 					}
-					character_event = { id = DYN.1 }
+					character_event={ id=DYN.1 }
 				}
-				if = {
-					limit = {
-						NOT = { religion = confucian }
-						any_vassal = { religion = confucian }
+				if={
+					limit={
+						NOT={ religion=confucian }
+						any_vassal={ religion=confucian }
 					}
-					character_event = { id = EMP.9 }
+					character_event={ id=EMP.9 }
 				}
 			}
 		}
 		
-		ai_will_do = {
-			factor = 1
+		ai_will_do={
+			factor=1
 			
-			modifier = {
-				factor = 0.25 #Reduce chance of call
+			modifier={
+				factor=0.25 #Reduce chance of call
 			}
-			modifier = {
-				factor = 100
-				has_character_flag = destiny
+			modifier={
+				factor=100
+				has_character_flag=destiny
 			}
-			modifier = {
-				factor = 1.5 #Everyone hates the player!
-				any_playable_ruler = {
-					has_character_flag = coalition_target
-					ai = no
+			modifier={
+				factor=1.5 #Everyone hates the player!
+				any_playable_ruler={
+					has_character_flag=coalition_target
+					ai=no
 				}
 			}
-			modifier = {
-				factor = 1.25
-				NOT = { culture = han }
+			modifier={
+				factor=1.25
+				NOT={ culture=han }
 			}
-			modifier = {
-				factor = 1.25
-				NOT = { religion = confucian }
+			modifier={
+				factor=1.25
+				NOT={ religion=confucian }
 			}
-			modifier = {
-				factor = 1.25
-				trait = fate_lead
+			modifier={
+				factor=1.25
+				trait=fate_lead
 			}
-			modifier = {
-				factor = 1.1
-				trait = ambitious
+			modifier={
+				factor=1.1
+				trait=ambitious
 			}
-			modifier = {
-				factor = 0.25
-				trait = zealous
+			modifier={
+				factor=0.25
+				trait=zealous
 			}
-			modifier = {
-				factor = 0.25
-				trait = chivalrous
+			modifier={
+				factor=0.25
+				trait=chivalrous
 			}
-			modifier = {
-				factor = 0.25
-				trait = honorable
+			modifier={
+				factor=0.25
+				trait=honorable
 			}
-			modifier = {
-				factor = 0.25
-				trait = content
+			modifier={
+				factor=0.25
+				trait=content
 			}
-			modifier = {
-				factor = 1.05
-				trait = envious
+			modifier={
+				factor=1.05
+				trait=envious
 			}
-			modifier = {
-				factor = 1.05
-				trait = greedy
+			modifier={
+				factor=1.05
+				trait=greedy
 			}
-			modifier = {
-				factor = 1.05
-				trait = ruthless
+			modifier={
+				factor=1.05
+				trait=ruthless
 			}
-			modifier = {
-				factor = 1.05
-				trait = dishonorable
+			modifier={
+				factor=1.05
+				trait=dishonorable
 			}
-			modifier = {
-				factor = 1.05
-				trait = selfish
+			modifier={
+				factor=1.05
+				trait=selfish
 			}
-			modifier = {
-				factor = 1.025
-				demesne_size = 5
+			modifier={
+				factor=1.025
+				demesne_size=5
 			}
-			modifier = {
-				factor = 1.05
-				demesne_size = 10
+			modifier={
+				factor=1.05
+				demesne_size=10
 			}
-			modifier = {
-				factor = 1.1
-				demesne_size = 15
+			modifier={
+				factor=1.1
+				demesne_size=15
 			}
-			modifier = {
-				factor = 0.25
-				k_confucian = {
-					holder_scope = {
-						is_close_relative = ROOT
+			modifier={
+				factor=1.1
+				ruled_years=10
+			}
+			modifier={
+				factor=1.25
+				ruled_years=20
+			}
+			modifier={
+				factor=0.25
+				k_confucian={
+					holder_scope={
+						is_close_relative=ROOT
 					}
 				}
 			}
-			modifier = {
-				factor = 0.25
-				k_confucian = {
-					holder_scope = {
-						is_father = ROOT
+			modifier={
+				factor=0.25
+				k_confucian={
+					holder_scope={
+						is_father=ROOT
 					}
 				}
 			}
-			modifier = {
-				factor = 0.25
-				k_confucian = {
-					holder_scope = {
-						is_friend = ROOT
+			modifier={
+				factor=0.25
+				k_confucian={
+					holder_scope={
+						is_friend=ROOT
 					}
 				}
 			}
-			modifier = {
-				factor = 0
-				k_confucian = {
-					holder_scope = {
-						is_lover = ROOT
+			modifier={
+				factor=0
+				k_confucian={
+					holder_scope={
+						is_lover=ROOT
 					}
 				}
 			}
-			modifier = {
-				factor = 5
-				k_confucian = {
-					holder_scope = {
-						is_foe = ROOT
+			modifier={
+				factor=5
+				k_confucian={
+					holder_scope={
+						is_foe=ROOT
 					}
 				}
 			}
 		}
 	}
 	
-	restore_china = { #Make this restore the dethroned Emperor
-		is_high_prio = yes
-		potential = {
-			always = no
-			higher_tier_than = DUKE
-			OR = {
-				NOT = { tier = EMPEROR }
-				primary_title = { has_title_flag = warlord_flag }
+	restore_china={ #Make this restore the dethroned Emperor
+		is_high_prio=yes
+		potential={
+			always=no
+			higher_tier_than=DUKE
+			OR={
+				NOT={ tier=EMPEROR }
+				primary_title={ has_title_flag=warlord_flag }
 			}
-			NOT = { has_character_flag = founded_empire }
-			NOT = { has_claim = k_confucian }
-			any_realm_character = {
-				has_claim = k_confucian
+			NOT={ has_character_flag=founded_empire }
+			NOT={ has_claim=k_confucian }
+			any_realm_character={
+				has_claim=k_confucian
 			}
-			k_confucian = {
-				has_holder = no
+			k_confucian={
+				has_holder=no
 			}
-			has_landed_title = c_henan
-			prestige = 1000
+			has_landed_title=c_henan
+			prestige=1000
 		}
-		allow = {
-			war = no
-			NOT = { trait = in_hiding }
+		allow={
+			war=no
+			NOT={ trait=in_hiding }
 		}
-		effect = {
-			prestige = 1000
-			piety = 1000
-			hidden_tooltip = {
-				set_character_flag = chancellor
-				any_realm_character = {
-					limit = {
-						has_claim = k_confucian
+		effect={
+			prestige=1000
+			piety=1000
+			hidden_tooltip={
+				set_character_flag=chancellor
+				any_realm_character={
+					limit={
+						has_claim=k_confucian
 					}
-					set_character_flag = founded_empire
-					character_event = { id = DYN.1 }
-					break = yes
+					character_event={ id=DYN.1 }
+					break=yes
 				}
 			}
 		}
-		revoke_allowed = {
-			always = no
+		revoke_allowed={
+			always=no
 		}
-		ai_will_do = {
-			factor = 1
+		ai_will_do={
+			factor=1
 			
-			modifier = {
-				factor = 0
-				AND = {
-					real_tier = EMPEROR
-					has_landed_title = k_confucian
-				}
+			modifier={
+				factor=0
+				real_tier=EMPEROR
+				has_landed_title=k_confucian
 			}
 		}		
 	}
 	
-	make_luoyang_capital = {
-		is_high_prio = yes
-		potential = {
-			NOT = { has_character_flag = capital_flag }
-			real_tier = EMPEROR
-			primary_title = {
-				NOT = { has_title_flag = warlord_flag }
+	make_luoyang_capital={
+		is_high_prio=yes
+		potential={
+			NOT={ has_character_flag=capital_flag }
+			real_tier=EMPEROR
+			primary_title={
+				NOT={ has_title_flag=warlord_flag }
 			}
-			capital_scope = {
-				NOR = {
-					province_id = 1
-					province_id = 20
-					any_province_holding = {
-						holder_scope = {
-							has_landed_title = k_confucian
+			capital_scope={
+				NOR={
+					province_id=1
+					province_id=20
+					any_province_holding={
+						holder_scope={
+							has_landed_title=k_confucian
 						}
 					}
 				}
 			}
-			any_realm_lord = {
-				ai = yes
-				has_landed_title = c_henan
+			any_realm_lord={
+				ai=yes
+				religion=ROOT
+				has_landed_title=c_henan
 			}
-			any_realm_lord = {
-				ai = yes
-				has_landed_title = b_luoyang
+			any_realm_lord={
+				ai=yes
+				religion=ROOT
+				has_landed_title=b_luoyang
 			}
 		}
-		allow = {
-			war = no
+		allow={
+			war=no
 		}
-		effect = {
-			custom_tooltip = {
-				text = luoyang_capital
-				hidden_tooltip = {
-					set_character_flag = capital_flag
-					b_luoyang = { province_capital = yes }
-					ROOT = {
-						b_luoyang = {
-							usurp_title = PREV
+		effect={
+			custom_tooltip={
+				text=luoyang_capital
+				hidden_tooltip={
+					set_character_flag=capital_flag
+					b_luoyang={ province_capital=yes }
+					ROOT={
+						b_luoyang={
+							usurp_title=PREV
 						}
 					}
-					b_luoyang = {
-						ROOT = { capital = PREV }
+					b_luoyang={
+						ROOT={ capital=PREV }
 					}
 				}
 			}
 		}
-		ai_will_do = {
-			factor = 1
+		ai_will_do={
+			factor=1
 		}
 	}
 	
-	make_changan_capital = {
-		is_high_prio = yes
-		potential = {
-			NOT = { has_character_flag = capital_flag }
-			real_tier = EMPEROR
-			primary_title = {
-				NOT = { has_title_flag = warlord_flag }
+	make_changan_capital={
+		is_high_prio=yes
+		potential={
+			NOT={ has_character_flag=capital_flag }
+			real_tier=EMPEROR
+			primary_title={
+				NOT={ has_title_flag=warlord_flag }
 			}
-			capital_scope = {
-				NOR = {
-					province_id = 1
-					province_id = 20
-					any_province_holding = {
-						holder_scope = {
-							has_landed_title = k_confucian
+			capital_scope={
+				NOR={
+					province_id=1
+					province_id=20
+					any_province_holding={
+						holder_scope={
+							has_landed_title=k_confucian
 						}
 					}
 				}
 			}
-			NOT = { has_landed_title = c_henan }
-			any_realm_lord = {
-				ai = yes
-				has_landed_title = c_changan
+			NOT={ has_landed_title=c_henan }
+			any_realm_lord={
+				ai=yes
+				religion=ROOT
+				has_landed_title=c_changan
 			}
-			any_realm_lord = {
-				ai = yes
-				has_landed_title = b_changan
+			any_realm_lord={
+				ai=yes
+				religion=ROOT
+				has_landed_title=b_changan
 			}
 		}
-		allow = {
-			war = no
+		allow={
+			war=no
 		}
-		effect = {
-			custom_tooltip = {
-				text = changan_capital
-				hidden_tooltip = {
-					set_character_flag = capital_flag
-					b_changan = { province_capital = yes }
-					ROOT = {
-						b_changan = {
-							usurp_title = PREV
+		effect={
+			custom_tooltip={
+				text=changan_capital
+				hidden_tooltip={
+					set_character_flag=capital_flag
+					b_changan={ province_capital=yes }
+					ROOT={
+						b_changan={
+							usurp_title=PREV
 						}
 					}
-					b_changan = {
-						ROOT = { capital = PREV }
+					b_changan={
+						ROOT={ capital=PREV }
 					}
 				}
 			}
 		}
-		ai_will_do = {
-			factor = 1
+		ai_will_do={
+			factor=1
 		}
 	}
 	
-	make_imperial_capital = {
-		is_high_prio = no
-		potential = {
-			real_tier = EMPEROR
-			NOT = { has_landed_title = k_confucian }
-			primary_title = {
-				NOT = { has_title_flag = warlord_flag }
+	make_imperial_capital={
+		is_high_prio=no
+		potential={
+			real_tier=EMPEROR
+			NOT={ has_landed_title=k_confucian }
+			primary_title={
+				NOT={ has_title_flag=warlord_flag }
 			}
-			capital_scope = {
-				NOT = {
-					any_province_holding = {
-						holder_scope = {
-							has_landed_title = k_confucian
+			capital_scope={
+				NOT={
+					any_province_holding={
+						holder_scope={
+							has_landed_title=k_confucian
 						}
 					}
 				}
 			}
-			any_realm_lord = {
-				ai = yes
-				capital_scope = {
-					any_province_holding = {
-						holder_scope = {
-							has_landed_title = k_confucian
+			any_realm_lord={
+				ai=yes
+				capital_scope={
+					any_province_holding={
+						holder_scope={
+							has_landed_title=k_confucian
 						}
 					}
 				}
 			}
 		}
-		allow = {
-			war = no
+		allow={
+			war=no
 		}
-		effect = {
-			custom_tooltip = {
-				text = imperial_capital
-				hidden_tooltip = {
-					any_realm_lord = {
-						limit = {
-							ai = yes
-							capital_scope = {
-								any_province_holding = {
-									holder_scope = {
-										has_landed_title = k_confucian
+		effect={
+			custom_tooltip={
+				text=imperial_capital
+				hidden_tooltip={
+					any_realm_lord={
+						limit={
+							ai=yes
+							capital_scope={
+								any_province_holding={
+									holder_scope={
+										has_landed_title=k_confucian
 									}
 								}
 							}
 						}
-						capital_holding = {
-							save_event_target_as = target_capital
+						capital_holding={
+							save_event_target_as=target_capital
 						}
 					}
-					ROOT = {
-						event_target:target_capital = {
-							usurp_title = PREV
+					ROOT={
+						event_target:target_capital={
+							usurp_title=PREV
 						}
 					}
-					event_target:target_capital = {
-						ROOT = { capital = PREV }
+					event_target:target_capital={
+						ROOT={ capital=PREV }
 					}
 				}
 			}
 		}
-		ai_will_do = {
-			factor = 0
+		ai_will_do={
+			factor=0
 		}
 	}
 	
-	call_exam = {
-		is_high_prio = yes	
-		potential = {
-			has_landed_title = k_confucian
-			NOT = { has_global_flag = exam_called }
-			any_playable_ruler = {
-				any_realm_character = {
-					is_ruler = no
-					prisoner = no
-					in_command = no
-					is_adult = yes
-					is_female = no
-					has_epidemic = no
-					NOT = { trait = kinslayer }
-					has_character_flag = exam_candidate
+	call_exam={
+		is_high_prio=yes	
+		potential={
+			has_landed_title=k_confucian
+			NOT={ has_global_flag=exam_called }
+			any_playable_ruler={
+				any_realm_character={
+					is_ruler=no
+					prisoner=no
+					in_command=no
+					is_adult=yes
+					is_female=no
+					has_epidemic=no
+					NOT={ trait=kinslayer }
+					has_character_flag=exam_candidate
 				}
 			}
 		}
-		allow = {
-			wealth = 1000
-			war = no
+		allow={
+			wealth=1000
+			war=no
 		}
-		effect = {
-			wealth = -1000
+		effect={
+			wealth=-1000
 			
-			set_global_flag = exam_called
+			set_global_flag=exam_called
 			
-			hidden_tooltip = {
-				any_playable_ruler = {
-					limit = {
-						religion_head = { has_landed_title = k_confucian }
-						NOT = { tier = EMPEROR }
+			hidden_tooltip={
+				any_playable_ruler={
+					limit={
+						religion_head={ has_landed_title=k_confucian }
+						NOT={ tier=EMPEROR }
 					}
-					character_event = { id = EMP.11 }
+					character_event={ id=EMP.11 }
 				}
 			}
 		}
-		ai_will_do = { 
-			factor = 1
+		ai_will_do={ 
+			factor=1
 			
-			modifier = {
-				factor = 0.5 #Reduce chance of call
+			modifier={
+				factor=0.5 #Reduce chance of call
 			}
-			modifier = {
-				factor = 1.05
-				culture = han
+			modifier={
+				factor=1.05
+				culture=han
 			}
-			modifier = {
-				factor = 1.05
-				religion = confucian
+			modifier={
+				factor=1.05
+				religion=confucian
 			}
-			modifier = {
-				factor = 1.1
-				trait = fate_lead
+			modifier={
+				factor=1.1
+				trait=fate_lead
 			}
-			modifier = {
-				factor = 1.1
-				trait = fate_admin
+			modifier={
+				factor=1.1
+				trait=fate_admin
 			}
-			modifier = {
-				factor = 1.05
-				trait = ambitious
+			modifier={
+				factor=1.05
+				trait=ambitious
 			}
-			modifier = {
-				factor = 1.05
-				trait = zealous
+			modifier={
+				factor=1.05
+				trait=zealous
 			}
-			modifier = {
-				factor = 1.05
-				trait = chivalrous
+			modifier={
+				factor=1.05
+				trait=chivalrous
 			}
-			modifier = {
-				factor = 1.05
-				trait = honorable
+			modifier={
+				factor=1.05
+				trait=honorable
 			}
-			modifier = {
-				factor = 1.05
-				trait = just
+			modifier={
+				factor=1.05
+				trait=just
 			}
-			modifier = {
-				factor = 1.05
-				trait = genius
+			modifier={
+				factor=1.05
+				trait=genius
 			}
-			modifier = {
-				factor = 1.05
-				trait = quick
+			modifier={
+				factor=1.05
+				trait=quick
 			}
-			modifier = {
-				factor = 1.05
-				trait = honest
+			modifier={
+				factor=1.05
+				trait=honest
 			}
-			modifier = {
-				factor = 1.05
-				trait = administrator
+			modifier={
+				factor=1.05
+				trait=administrator
 			}
-			modifier = {
-				factor = 1.5
-				realm_size = 25
+			modifier={
+				factor=1.5
+				realm_size=25
 			}
-			modifier = {
-				factor = 2
-				realm_size = 50
+			modifier={
+				factor=2
+				realm_size=50
 			}
-			modifier = {
-				factor = 2.5
-				realm_size = 100
+			modifier={
+				factor=2.5
+				realm_size=100
 			}
-			modifier = {
-				factor = 5
-				realm_size = 200
+			modifier={
+				factor=5
+				realm_size=200
 			}
-			modifier = {
-				factor = 10
-				realm_size = 400
+			modifier={
+				factor=10
+				realm_size=400
 			}
+		}
+	}
+	
+	call_ladies={
+		is_high_prio=yes
+		potential={
+			has_landed_title=c_empress
+			NOT={ has_landed_title=k_confucian }
+			liege={ has_landed_title=k_confucian }
+			any_realm_character={
+				trait=inner_court
+				NOT={age=30}
+				NOT={liege={character=ROOT}}
+			}
+		}
+		effect={
+			hidden_tooltip={
+				character_event={id=MAN.50}
+			}
+		}
+		ai_will_do={
+			factor=1
 		}
 	}
 }

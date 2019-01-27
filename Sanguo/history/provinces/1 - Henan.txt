@@ -17,6 +17,7 @@ b_huangchao = castle
 # Misc
 culture = han
 religion = confucian
+terrain = plains
 
 #History
 190.4.9={

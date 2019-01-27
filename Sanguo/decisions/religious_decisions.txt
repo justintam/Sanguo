@@ -25,13 +25,11 @@ decisions = {
 						character = ROOT
 						is_liege_or_above = ROOT
 					}
-					AND = {
-						ROOT = { religion = confucian }
-						k_confucian = {
-							holder_scope = {
-								NOT = { character = PREVPREV }
-								NOT = { is_vassal_or_below = PREVPREV }
-							}
+					ROOT = { religion = confucian }
+					k_confucian = {
+						holder_scope = {
+							NOT = { character = PREVPREV }
+							NOT = { is_vassal_or_below = PREVPREV }
 						}
 					}
 				}
@@ -59,10 +57,8 @@ decisions = {
 			}
 			if = {
 				limit = {
-					AND = {
-						religion = confucian
-						NOT = { has_character_flag = restored_emperor_in_luoyang }
-					}
+					religion = confucian
+					NOT = { has_character_flag = restored_emperor_in_luoyang }
 				}
 				k_confucian = {
 					holder_scope = {

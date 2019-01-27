@@ -14,5 +14,6 @@ b_wuyuan = castle
 # Misc
 culture = han
 religion = confucian
+terrain = steppe
 
 #History

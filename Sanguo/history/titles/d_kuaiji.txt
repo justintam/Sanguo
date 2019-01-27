@@ -7,6 +7,12 @@
 	liege=k_yang
 	vice_royalty=yes
 }
+90.1.1={
+	holder=4466 #Zhang Ba
+}
+100.1.1={
+	holder=0 #None
+}
 150.1.1={
 	holder=1270 #Tang Mao
 }
@@ -29,9 +35,10 @@
 217.1.1={
 	holder=556 #Chunyu Shi
 }
+
 #223 Wu Can
 #250s Puyang Xing
-
+#Yu Chen - 3rd Cent Jin Dynasty
 
 
 #Incomplete

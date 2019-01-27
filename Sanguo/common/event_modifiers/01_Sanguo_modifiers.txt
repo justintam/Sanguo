@@ -11,6 +11,10 @@ force_trained = {
 training_son = {
 	icon = 1
 }
+holding_court = {
+	monthly_character_piety = 0.01
+	icon = 16
+}
 
 #Clan
 sacrifice_ancestor = {

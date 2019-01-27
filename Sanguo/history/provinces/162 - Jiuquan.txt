@@ -14,5 +14,6 @@ b_jiuquan = castle
 # Misc
 culture = han
 religion = confucian
+terrain = desert
 
 #History

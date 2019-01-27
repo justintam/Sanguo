@@ -15,6 +15,7 @@ b_lantian = castle
 # Misc
 culture = han
 religion = confucian
+terrain = forest
 
 #History
 210.1.1={

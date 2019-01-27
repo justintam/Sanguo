@@ -15,6 +15,7 @@ b_luju = city
 # Misc
 culture = minyue
 religion = animist
+terrain = mountain
 
 #History
 194.1.1={

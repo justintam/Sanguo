@@ -13,10 +13,7 @@
 	holder=720 #Yuan Peng
 }
 184.1.1={
-	holder=1823 #Du Huo
-}
-190.1.1={
-	holder=4306 #Random
+	holder=4485 #Chang Hong
 }
 200.1.1={
 	holder=1279 #Zhao Yao
@@ -33,12 +30,18 @@
 #Zhang Cun claim
 214.1.1={
 	holder=616 #Xiahou Zuan
-}	#Served by Gu Pu, Qin Mi, Wang Pu
-#She Jian until 220
-#Deng Zhi
-#Zhang Yi 221
+}	#Served by Gu Pu, Qin Mi, Wang Pu - TBD
+215.1.1={
+	holder=655 #She Jian
+}
+217.1.1={
+	holder=660 #Deng Zhi
+}
 223.6.10={
-	holder=0 #Yao Zhou
+	holder=661 #Yao Zhou
+}
+225.1.1={
+	holder=3640 #Zhang Yi
 }
 #Luo Meng
 #Ma Qi until 234

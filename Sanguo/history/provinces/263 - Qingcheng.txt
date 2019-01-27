@@ -12,7 +12,8 @@ b_qingcheng = castle
 #b_xinmin = castle
 
 # Misc
-culture = han
-religion = confucian
+culture = bandunman
+religion = baihu
+terrain = mountain
 
 #History

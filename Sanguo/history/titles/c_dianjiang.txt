@@ -6,12 +6,9 @@
 1.1.1={
 	liege=d_ba
 }
-50.1.1={
-	holder=3753 #Cao Min
-}
-60.1.1={
-	holder=0 #None
+150.1.1={
+	holder=4477 #Wang Zhi
 }
 184.1.1={
-	holder=1825 #Yuan Yue
+	holder=1324 #Wu Mengjie
 }

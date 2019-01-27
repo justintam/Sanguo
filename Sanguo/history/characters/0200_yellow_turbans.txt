@@ -10,7 +10,7 @@
 	name="Jiao"
 	dynasty=148
 	dna="fzgqrculerw"
-	properties="ae00bc00000"
+	prp="ae0nbn000000000000"
     diplomacy=9
     martial=8
     stewardship=10
@@ -21,6 +21,7 @@
 	father=203
 	mother=204
     trait="mastermind_theologian"
+	trait="heresiarch"
 	trait="mystic"
     trait="genius"
     trait="deceitful"
@@ -57,6 +58,7 @@
 	father=203
 	mother=204
     trait="skilled_tactician"
+	trait="heresiarch"
 	trait="duelist"
     trait="duel_poor_warrior"
     trait="wroth"
@@ -68,6 +70,7 @@
     trait="brave"
     trait="zealous"
     trait="cruel"
+    trait="trickster"
     trait="holy_warrior"
 	143.1.1={
 		birth=yes
@@ -95,6 +98,7 @@
 	father=203
 	mother=204
     trait="charismatic_negotiator"
+	trait="heresiarch"
     trait="deceitful"
     trait="temperate"
     trait="diligent"
@@ -551,9 +555,6 @@
 	}
 	184.4.1={
 		employer=242 #Liang Boning
-	}
-	184.10.1={
-		employer=0 #None
 	}
 	188.7.1={
 		employer=226 #Liu Pi
@@ -1256,5 +1257,22 @@
 	}
 	180.1.1={
 		death=yes
+	}
+}
+253 = {
+	name="Huan"
+	dynasty=2003 #Wu
+    religion="taiping"
+	culture="han"
+    trait="tough_soldier"
+    trait="duel_trained_warrior"
+    165.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer = 207 #He Yi
+	}
+	200.1.1={
+		death={death_reason=death_battle killer=10556}
 	}
 }

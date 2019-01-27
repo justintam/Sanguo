@@ -9,14 +9,7 @@ technology = {
 		d_youfufeng
 		d_zuopingyi
 		d_taiyuan
-		d_dingxiang
-		d_shang
 		d_shangdang
-		d_shuofang
-		d_wuyuan
-		d_xihe
-		d_yanmen
-		d_yunzhong
 		d_anping
 		d_bohai
 		d_changshan
@@ -28,11 +21,7 @@ technology = {
 		d_zhongshan
 		d_cangwu
 		d_hepu
-		d_jiaozhi
-		d_jiuzhen
 		d_nanhai
-		d_rinan
-		d_yulin
 		d_nanyang
 		d_changsha
 		d_guiyang
@@ -42,16 +31,9 @@ technology = {
 		d_wuling
 		d_hanyang
 		d_anding
-		d_beidi
 		d_dunhuang
 		d_jincheng
 		d_jiuquan
-		d_longxi
-		d_wudu
-		d_wuwei
-		d_juyan
-		d_xihai
-		d_zhangye
 		d_beihai
 		d_donglai
 		d_jinan
@@ -84,19 +66,7 @@ technology = {
 		d_hanzhong
 		d_jianwei
 		d_shuyong
-		d_yizhou
-		d_yongchang
-		d_yuexi
-		d_zangke
-		d_zhuti
 		d_guangyang
-		d_dai
-		d_daifang
-		d_lelang
-		d_liaodong
-		d_liaoxi
-		d_shanggu
-		d_xuantu
 		d_youbeiping
 		d_yuyang
 		d_zhuo
@@ -107,6 +77,11 @@ technology = {
 		d_pei
 		d_yingchuan
 	}
+	1 = {
+		military = 0.0
+		economy = 1.0
+		culture = 1.0
+	}
 	184 = {
 		military = 2.0
 		economy = 2.0
@@ -116,5 +91,10 @@ technology = {
 		military = 4.0
 		economy = 4.0
 		culture = 4.0
+	}
+	800 = {
+		military = 8.0
+		economy = 8.0
+		culture = 8.0
 	}
 }

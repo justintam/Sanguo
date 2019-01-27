@@ -14,5 +14,6 @@ b_zhuwu = tribal
 # Misc
 culture = nanyue
 religion = animist
+terrain = plains
 
 #History

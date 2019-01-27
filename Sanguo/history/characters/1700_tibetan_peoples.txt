@@ -89,7 +89,7 @@
 }
 1706 = {
 	name="Agui"
-	dynasty=406
+	dynasty=409
 	religion="baima"
 	culture="di"
 	160.1.1={
@@ -101,13 +101,27 @@
 }
 1707 = {
 	name="Qianwan"
-	dynasty=408
+	dynasty=411
 	religion="baima"
 	culture="di"
 	160.1.1={
 		birth=yes
 	}
+	184.1.1={
+		employer=1706
+	}
+	214.11.1={
+		employer=4000
+		add_trait = "refuge"
+		effect = {
+			set_character_flag = refuge_liang
+		}
+	}
 	230.1.1={
+		remove_trait = "refuge"
+		effect = {
+			clr_character_flag = refuge_liang
+		}
 		death=yes
 	}
 }
@@ -208,6 +222,22 @@
 	}
 	240.1.1={
 		death=yes
+	}
+}
+1717 = {
+	name="Doumao"
+	dynasty=400
+	religion="baima"
+	culture="di"
+	trait="skilled_tactician"
+	trait="brave"
+	trait="organizer"
+	trait="inspiring_leader"
+	160.1.1={
+		birth=yes
+	}
+	215.6.1={
+		death={death_reason=death_battle killer=400}
 	}
 }
 

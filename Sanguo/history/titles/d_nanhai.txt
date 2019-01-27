@@ -15,9 +15,12 @@
 	holder=1003 #Shi Wu
 }
 200.1.1={
-	liege=e_china
+	liege=0
 	holder=3405 #Ni Xiaode - Supported Cao and received Xu Jing
 }
 211.1.1={
 	liege=k_jiaozhi
 }
+
+
+#TBD - Served Cao later?

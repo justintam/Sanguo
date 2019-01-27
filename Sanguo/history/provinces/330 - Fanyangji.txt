@@ -14,5 +14,6 @@ b_fanyangbing = castle
 # Misc
 culture = wuhuan
 religion = confucian
+terrain = mountain
 
 #History

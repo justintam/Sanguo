@@ -14,5 +14,6 @@ b_lingbo = tribal
 # Misc
 culture = qiang
 religion = baishi
+terrain = mountain
 
 #History

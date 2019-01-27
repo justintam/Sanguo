@@ -25,18 +25,21 @@
 	vice_royalty = yes
 }
 #Zhang Xian - served magistrate in lingling/guiyang
+#Zhang Yi maintained independence after his father but failed
 199.1.1={
 	holder=3410 #Liu Pan
 }
 208.9.1={
+	liege=0
 	holder=144 #Han Xuan
 }
 209.3.1={
+	liege=k_jing
 	holder=620 #Liao Li
 }
 215.1.1={
 	holder=601 #Guan Yu
 }
-220.1.1={
+220.2.1={
 	holder=3322 #Lu Xun
 }

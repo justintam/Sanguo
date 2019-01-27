@@ -49,16 +49,18 @@
 	holder=48 #Liu Biao
 }
 196.1.1={
+	liege=0
+	set_tribute_suzerain = { who=k_jing percentage=0.1 type=permanent }
 	holder=325 #Zhang Xiu
 }
-207.4.1={
-	holder=48 #Liu Biao
+199.12.1={
+	liege=k_sili
+	clear_tribute_suzerain=k_jing
 }
-208.8.1={
-	holder=53 #Liu Cong
+207.4.1={
+	holder=1380 #Li Fengzhu
 }
 208.9.1={
-	liege=k_sili
 	holder=4240 #Yang Jun
 }
 213.6.1={
@@ -66,6 +68,7 @@
 }
 #Dongli Gun by 218
 #Tian Yu 219
+#Yang Jun disgraced
 
 
 

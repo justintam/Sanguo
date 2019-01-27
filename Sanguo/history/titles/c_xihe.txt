@@ -7,10 +7,10 @@
 	liege=d_xihe
 }
 184.1.1={
-	liege=0 #Independent
+	liege=d_white
 	holder=1504 #Random Gudu
 }
 187.1.1={
 	liege=d_xihe
-	holder=1522 #Random
+	holder=1512 #Random
 }

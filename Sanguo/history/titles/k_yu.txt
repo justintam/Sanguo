@@ -80,5 +80,6 @@
 	holder=20485 #Jia Kui
 }
 228.12.1={
+#Man Chong
 	holder=0 #Death
 }

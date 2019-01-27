@@ -14,5 +14,6 @@ b_yunzhong = castle
 # Misc
 culture = xiongnu
 religion = tengri_pagan
+terrain = mountain
 
 #History

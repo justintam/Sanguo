@@ -63,6 +63,26 @@ e_gongsun = {
 	religion = confucian
 	culture = han
 }
+k_ping = {
+	color={ 225 190 235 }
+	color2={ 255 255 255 }
+	
+	allow = { always = no }
+	
+	title = "LORD"
+	title_female = "LADY"
+	title_queen_mother_female = "LADY"
+	title_prince = "LORD"
+	title_prince_female = "LADY"
+	
+	dignity = 25
+	
+	primary = yes
+	short_name = yes
+	
+	religion = confucian
+	culture = han
+}
 d_gongsun = {
 	color={ 255 255 255 }
 	color2={ 255 255 255 }

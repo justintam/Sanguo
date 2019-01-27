@@ -8,18 +8,11 @@
 	vice_royalty = yes
 }
 184.1.1={
-	holder=116 #Que Jian
-}
-188.8.1={
-	holder=3359 #Gao Shun
-}
-189.1.1={
-	vice_royalty = no
-	holder=50 #Liu Yan
-}
-194.4.1={
-	holder=80 #Liu Zhang	
+	holder=4196 #Random - TBD not this obv
 }
 214.1.1={
+	holder=650 #Huo Jun
+}
+217.8.1={
 	holder=4196 #Random
 }

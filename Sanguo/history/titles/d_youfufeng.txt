@@ -7,6 +7,12 @@
 	liege=k_sili
 	vice_royalty = yes
 }
+120.1.1={
+	holder=4473 #Wang Tang
+}
+130.1.1={
+	holder=0 #None
+}
 155.1.1={
 	holder=1287 #Yang Bing
 }
@@ -25,7 +31,7 @@
 188.1.1={
 	holder=3480 #Song Yi
 }
-#189 Qu Mao Hanan (Hanxing)
+#189 Qu Mao Hanan (Hanxing) #TBD
 192.5.22={
 	liege=e_china
 }

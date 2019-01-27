@@ -15,6 +15,7 @@ b_langxi = city
 # Misc
 culture = bandunman
 religion = baihu
+terrain = plains
 
 #History
 194.1.1={

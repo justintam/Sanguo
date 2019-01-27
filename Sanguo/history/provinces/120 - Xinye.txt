@@ -15,5 +15,6 @@ b_xinye = castle
 # Misc
 culture = han
 religion = taiping
+terrain = plains
 
 #History

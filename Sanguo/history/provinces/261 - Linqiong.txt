@@ -15,5 +15,6 @@ b_linqiong = castle
 # Misc
 culture = han
 religion = confucian
+terrain = plains
 
 #History

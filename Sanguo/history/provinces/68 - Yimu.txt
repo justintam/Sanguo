@@ -14,5 +14,6 @@ b_hua = city
 # Misc
 culture = han
 religion = taiping
+terrain = plains
 
 #History

@@ -7,7 +7,7 @@
 	liege=d_yuyang
 }
 184.1.1={
-	holder=3542 #Random
+	holder=1317 #Ding Kai
 }
 193.1.1={
 	holder=909 #Zou Dan

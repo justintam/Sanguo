@@ -26,6 +26,9 @@
 	}
 	184.1.1={
 		add_spouse=908
+		effect={
+			add_friend=600
+		}
 	}
 	188.4.1={
 		effect={
@@ -34,6 +37,7 @@
 	}
 	191.1.1={
 		effect={
+			wealth=100
 			add_rival=700
 		}
 	}
@@ -42,8 +46,13 @@
 			add_rival=1604
 		}
 	}
-	199.1.1={
-		death=yes
+	194.1.1={
+		effect={
+			add_friend=915
+		}
+	}
+	199.3.1={
+		death={death_reason=death_suicide}
 	}
 }
 901 = {
@@ -92,7 +101,7 @@
 	184.1.1={
 		employer=900
 	}
-	199.1.1={
+	199.3.1={
 		death=yes
 	}
 }
@@ -216,7 +225,7 @@
 		birth=yes
 	}
 	195.1.1={
-		death=yes
+		death={death_reason=death_battle killer=3444}
 	}
 }
 910 = {
@@ -235,7 +244,7 @@
 	160.1.1={
 		birth=yes
 	}
-	199.1.1={
+	199.3.1={
 		death=yes
 	}
 }
@@ -296,6 +305,49 @@
 		death=yes
 	}
 }
+915 = {
+	name="Hedang"
+	dynasty=2019 #Yue
+	religion="confucian"
+	culture="han"
+	trait="fortune_builder"
+	trait="brave"
+	trait="shrewd"
+	trait="diligent"
+	trait="just"
+	162.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=4000
+		add_trait="refuge"
+		effect={
+			set_character_flag=refuge_you
+		}
+	}
+	194.1.1={
+		employer=900
+		remove_trait="refuge"
+		effect={
+			add_friend=900
+			clr_character_flag=refuge_you
+		}
+	}
+	199.3.1={
+		employer=4000
+		add_trait="refuge"
+		effect={
+			set_character_flag=refuge_you
+		}
+	}
+	240.1.1={
+		remove_trait="refuge"
+		effect={
+			clr_character_flag=refuge_you
+		}
+		death=yes
+	}
+}
 
 ### 970-999  ###
 ### Gongsun  ###
@@ -353,6 +405,9 @@
 	180.1.1={
 		birth=yes
 	}
+	184.1.1={
+		employer=971
+	}
 	220.1.1={
 		death=yes
 	}
@@ -375,6 +430,15 @@
 	183.1.1={
 		birth=yes
 	}
+	184.1.1={
+		employer=971
+	}
+	204.1.1={
+		employer=972 #Gongsun Kang
+	}
+	228.1.1={
+		employer=974 #Gongsun Yuan
+	}
 	250.1.1={
 		death=yes
 	}
@@ -394,9 +458,16 @@
     trait="temperate"
 	200.1.1={
 		birth=yes
+		employer=971
 	}
-	238.1.1={
-		death=yes
+	204.1.1={
+		employer=972 #Gongsun Kang
+	}
+	220.1.1={
+		employer=973 #Gongsun Gong
+	}
+	238.8.1={
+		death={death_reason=death_execution killer=5000}
 	}
 }
 975 = {
@@ -406,7 +477,7 @@
 	culture="han"
 	father=972
     trait="detached_priest"
-    trait="honest"
+    trait="envious"
     trait="ambitious"
     trait="patient"
 	trait="cynical"
@@ -414,9 +485,19 @@
     trait="temperate"
 	198.1.1={
 		birth=yes
+		employer=971
 	}
-	238.1.1={
-		death=yes
+	204.1.1={
+		employer=972 #Gongsun Kang
+	}
+	220.1.1={
+		employer=973 #Gongsun Gong
+	}
+	228.1.1={
+		employer=974 #Gongsun Yuan
+	}
+	238.8.1={
+		death={death_reason=death_execution killer=5000}
 	}
 }
 976 = {
@@ -427,10 +508,98 @@
 	father=974
 	225.1.1={
 		birth=yes
+		employer=973 #Gongsun Gong
 	}
-	238.1.1={
+	228.1.1={
+		employer=974 #Gongsun Yuan
+	}
+	238.8.1={
+		death={death_reason=death_execution killer=5000}
+	}
+}
+977 = {
+	name="Bao"
+	dynasty=1441
+	religion="confucian"
+	culture="han"
+	father=970
+	156.1.1={
+		birth=yes
+	}
+	184.1.1={
 		death=yes
 	}
 }
-
-#Yue Hedang - Merchant friend
+978 = {
+	name="Mo"
+	dynasty=1441
+	religion="confucian"
+	culture="han"
+	father=977
+	trait="skilled_tactician"
+	trait="duel_trained_warrior"
+	trait="brave"
+	trait="diligent"
+	trait="zealous"
+	trait="siege_leader"
+	trait="holy_warrior"
+	180.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=971
+	}
+	204.1.1={
+		employer=972 #Gongsun Kang
+	}
+	238.8.1={
+		employer=4000
+		add_trait="refuge"
+		effect={
+			set_character_flag=refuge_you
+		}
+	}
+	250.1.1={
+		remove_trait="refuge"
+		effect={
+			clr_character_flag=refuge_you
+		}
+		death=yes
+	}
+}
+979 = {
+	name="Chang"
+	dynasty=2020 #Zhang
+	religion="confucian"
+	culture="han"
+	trait="skilled_tactician"
+	trait="duel_trained_warrior"
+	trait="brave"
+	trait="diligent"
+	trait="zealous"
+	trait="inspiring_leader"
+	trait="holy_warrior"
+	180.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=971
+	}
+	204.1.1={
+		employer=972 #Gongsun Kang
+	}
+	238.8.1={
+		employer=4000
+		add_trait="refuge"
+		effect={
+			set_character_flag=refuge_you
+		}
+	}
+	250.1.1={
+		remove_trait="refuge"
+		effect={
+			clr_character_flag=refuge_you
+		}
+		death=yes
+	}
+}

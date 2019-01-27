@@ -13,6 +13,9 @@
 150.1.1={
 	holder=0 #None
 }
+180.1.1={
+	holder=113 #Qin Jie
+}
 184.1.1={
 	holder=3412 #Liu Xiang
 }
@@ -44,6 +47,6 @@
 219.12.1={
 	holder=529 #Sun Huan
 }
-220.1.1={
+220.2.1={
 	liege=k_jing
 }

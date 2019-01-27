@@ -22,7 +22,7 @@
 189.1.1={
 	holder=516 #Bing Zhi
 }
-192.1.1={
+190.1.1={
 	holder=150 #Sheng Xian
 }
 193.6.1={
@@ -34,6 +34,7 @@
 197.1.1={
 	liege=k_sun
 }
+#Taishi Xiang
 211.1.1={
 	liege=e_sun
 }

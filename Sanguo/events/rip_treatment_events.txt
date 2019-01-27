@@ -476,6 +476,7 @@ character_event = {
 		clr_character_flag = developing_illness
 		clr_character_flag = got_flu
 		clr_character_flag = manifest_flu
+		scrying_omen_fulfilled_by_removing_disease_effect = yes
 		hidden_tooltip = {
 			remove_treatment_modifiers_effect = yes
 		}
@@ -562,6 +563,7 @@ character_event = {
 		clr_character_flag = developing_illness
 		clr_character_flag = got_dysentery
 		clr_character_flag = manifest_dysentery
+		scrying_omen_fulfilled_by_removing_disease_effect = yes
 		hidden_tooltip = {
 			remove_treatment_modifiers_effect = yes
 		}
@@ -606,6 +608,7 @@ character_event = {
 		clr_character_flag = developing_illness
 		clr_character_flag = got_gout
 		clr_character_flag = manifest_gout
+		scrying_omen_fulfilled_by_removing_disease_effect = yes
 		hidden_tooltip = {
 			remove_treatment_modifiers_effect = yes
 		}
@@ -649,6 +652,7 @@ character_event = {
 		clr_character_flag = developing_illness
 		clr_character_flag = got_food_poisoning
 		clr_character_flag = manifest_food_poisoning
+		scrying_omen_fulfilled_by_removing_disease_effect = yes
 		hidden_tooltip = {
 			remove_treatment_modifiers_effect = yes
 		}
@@ -689,9 +693,11 @@ character_event = {
 		name = EVTOPTA_RIP_11001
 		remove_trait = rabies
 		clear_disease_level_effect = yes
+
 		clr_character_flag = developing_illness
 		clr_character_flag = got_rabies
 		clr_character_flag = manifest_rabies
+		scrying_omen_fulfilled_by_removing_disease_effect = yes
 		hidden_tooltip = {
 			remove_treatment_modifiers_effect = yes
 		}
@@ -735,6 +741,7 @@ character_event = {
 		clr_character_flag = developing_illness
 		clr_character_flag = got_cancer
 		clr_character_flag = manifest_cancer
+		scrying_omen_fulfilled_by_removing_disease_effect = yes
 		hidden_tooltip = {
 			remove_treatment_modifiers_effect = yes
 		}
@@ -800,6 +807,7 @@ character_event = {
 		clr_character_flag = developing_illness
 		clr_character_flag = got_pneumonia
 		clr_character_flag = manifest_pneumonia
+		scrying_omen_fulfilled_by_removing_disease_effect = yes
 		hidden_tooltip = {
 			remove_treatment_modifiers_effect = yes
 		}
@@ -911,6 +919,7 @@ character_event = {
 		clr_character_flag = got_tuberculosis
 		clr_character_flag = manifest_tuberculosis
 		set_character_flag = immune_tuberculosis
+		scrying_omen_fulfilled_by_removing_disease_effect = yes
 		hidden_tooltip = {
 			remove_treatment_modifiers_effect = yes
 		}
@@ -999,6 +1008,7 @@ character_event = {
 		clr_character_flag = got_typhoid_fever
 		clr_character_flag = manifest_typhoid_fever
 		set_character_flag = immune_typhoid_fever
+		scrying_omen_fulfilled_by_removing_disease_effect = yes
 		hidden_tooltip = {
 			remove_treatment_modifiers_effect = yes
 		}
@@ -1087,6 +1097,7 @@ character_event = {
 		clr_character_flag = got_typhus
 		clr_character_flag = manifest_typhus
 		set_character_flag = immune_typhus
+		scrying_omen_fulfilled_by_removing_disease_effect = yes
 		hidden_tooltip = {
 			remove_treatment_modifiers_effect = yes
 		}
@@ -1174,6 +1185,7 @@ character_event = {
 		clr_character_flag = got_bubonic_plague
 		clr_character_flag = manifest_bubonic_plague
 		set_character_flag = immune_bubonic_plague
+		scrying_omen_fulfilled_by_removing_disease_effect = yes
 		hidden_tooltip = {
 			remove_treatment_modifiers_effect = yes
 			if = {
@@ -1268,6 +1280,7 @@ character_event = {
 		clr_character_flag = got_measles
 		clr_character_flag = manifest_measles
 		set_character_flag = immune_measles
+		scrying_omen_fulfilled_by_removing_disease_effect = yes
 		hidden_tooltip = {
 			remove_treatment_modifiers_effect = yes
 		}
@@ -1356,11 +1369,13 @@ character_event = {
 		clr_character_flag = got_smallpox
 		clr_character_flag = manifest_small_pox
 		set_character_flag = immune_smallpox
+		scrying_omen_fulfilled_by_removing_disease_effect = yes
 		hidden_tooltip = {
 			remove_treatment_modifiers_effect = yes
 		}
 	}
 }
+
 
 ######################################################################################
 # Diagnosis events
@@ -2041,7 +2056,7 @@ character_event = {
 			character_event = { id = RIP.11040 days = 3 }
 		}
 	}
-	
+
 	# Mystic treatment
 	option = {
 		name = EVTOPTE_RIP_11035
@@ -2966,7 +2981,7 @@ character_event = {
 			if = { limit = { trait = food_poisoning } remove_trait = food_poisoning }
 			if = { limit = { trait = rabies } remove_trait = rabies }
 			if = { limit = { trait = cancer } remove_trait = cancer }
-			if = { limit = { trait = pneumonic } remove_trait = pneumonic }   
+			if = { limit = { trait = pneumonic } remove_trait = pneumonic }
 			if = { limit = { trait = has_tuberculosis } remove_trait = has_tuberculosis set_character_flag = immune_tuberculosis }
 			if = { limit = { trait = has_typhoid_fever } remove_trait = has_typhoid_fever set_character_flag = immune_typhoid_fever}
 			if = { limit = { trait = has_typhus } remove_trait = has_typhus set_character_flag = immune_typhus}
@@ -4436,7 +4451,6 @@ character_event = {
 			has_character_flag = EVTDESC_RIP_11045_has_small_pox_flag_uncertain
 		}
 	}
-
 	desc = {
 		text = EVTDESC_RIP_11045_flu
 		trigger = {
@@ -4653,8 +4667,6 @@ character_event = {
 			has_character_flag = EVTDESC_RIP_11045_has_pneumonia_flag_uncertain
 		}
 	}
-
-
 	desc = {
 		text = EVTDESC_RIP_11045_not_serious
 		trigger = {
@@ -7196,13 +7208,30 @@ character_event = {
 	border = GFX_event_normal_frame_religion
 
 	is_triggered_only = yes
-	trigger = { NOT = { has_character_modifier = relative_treatment_reaction_timer } }
+	trigger = {
+		OR = {
+			ai = yes
+			AND = {
+				multiplayer = no
+				war = no
+				random = 75 # 25% chance
+			}
+		}
+		NOT = {
+			has_character_modifier = relative_treatment_reaction_timer 
+		}
+		FROMFROMFROM = {
+			NOT = {
+				character = ROOT_FROM
+			}
+		}
+	}
 
 	immediate = { 
-		add_character_modifier = { 
-			modifier = relative_treatment_reaction_timer 
+		add_character_modifier = {
+			modifier = relative_treatment_reaction_timer
 			days = 30
-			hidden = yes 
+			hidden = yes
 		}
 	}
 	
@@ -7296,7 +7325,7 @@ character_event = {
 	}
 }
 
-#Physician cured your close of kin
+#Physician cured your close kin
 character_event = {
 	id = RIP.11061
 	picture = GFX_evt_recovery
@@ -7304,14 +7333,23 @@ character_event = {
 	border = GFX_event_normal_frame_religion
 
 	is_triggered_only = yes
+	trigger = {
+		OR = {
+			ai = yes
+			AND = {
+				multiplayer = no
+				war = no
+				random = 75 # 25% chance
+			}
+		}
+		NOT = { has_character_modifier = relative_treatment_reaction_timer }
+	}
 
-	trigger = { NOT = { has_character_modifier = relative_treatment_reaction_timer } }
-
-	immediate = { 
+	immediate = {
 		add_character_modifier = { 
 			modifier = relative_treatment_reaction_timer 
 			days = 30
-			hidden = yes 
+			hidden = yes
 		}
 	}
 	
@@ -7457,7 +7495,7 @@ character_event = {
 	border = GFX_event_normal_frame_religion
 
 	is_triggered_only = yes
-	hide_from = yes
+	portrait = physician_portrait
 	
 	immediate = {
 		FROMFROMFROM = { 
@@ -7468,12 +7506,10 @@ character_event = {
 
 	option = {
 		name = EXCELLENT
-
 		FROMFROMFROM = { 
 			save_event_target_as = physician_portrait
 			#add_trait = physician
-
-		}
+		}		
 	}
 }
 
@@ -7494,6 +7530,12 @@ character_event = {
 	border = GFX_event_normal_frame_religion
 
 	is_triggered_only = yes
+	
+	trigger = {
+		event_target:sickly_infant = { 
+			is_alive = yes 
+		}
+	}
 
 	#Treat them!
 	option = {
@@ -7501,6 +7543,9 @@ character_event = {
 		custom_tooltip = { text = EVTOPTA_RIP_11067_TOOLTIP }
 
 		hidden_tooltip = { FROM = { character_event = { id = RIP.11068 days = 20 } } }
+		event_target:sickly_infant = {
+			show_portrait = yes
+		}
 
 		ai_chance = {
 			factor = 10
@@ -7736,7 +7781,6 @@ character_event = {
 
 	option = {
 		name = EVTOPTA_RIP_11073
-		custom_tooltip = { text = EVTOPTA_RIP_11073_TOOLTIP }
 
 		FROM = { death = { death_reason = death_trait } }
 	}

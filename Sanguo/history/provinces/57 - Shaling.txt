@@ -14,5 +14,6 @@ b_shaling = tribal
 # Misc
 culture = xiongnu
 religion = tengri_pagan
+terrain = mountain
 
 #History

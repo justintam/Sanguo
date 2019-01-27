@@ -3,22 +3,57 @@
 1100 = {
 	name="Zhang"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 1101 = {
 	name="Zhang"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 1102 = {
 	name="Liu"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 1 0 0 0 			}
+		religion="confucian"
+	}
 }
 1103 = {
 	name="Wang"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 2 0 0 0 			}
+		religion="confucian"
+	}
 }
 1104 = {
 	name="Sun"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 3 0 0 0 			}
+		religion="confucian"
+	}
 }
 1105 = {
 	name="Cao"
@@ -27,14 +62,35 @@
 1106 = {
 	name="Chen"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 10 0 0 0 			}
+		religion="confucian"
+	}
 }
 1107 = {
 	name="Yang"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 11 0 0 0 			}
+		religion="confucian"
+	}
 }
 1108 = {
 	name="Li"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="confucian"
+	}
 }
 1109 = {
 	name="Lü"
@@ -47,10 +103,24 @@
 1111 = {
 	name="Wu"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 12 0 0 0 			}
+		religion="confucian"
+	}
 }
 1112 = {
 	name="Xu"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 12 0 0 0 			}
+		religion="confucian"
+	}
 }
 1113 = {
 	name="Lu"
@@ -63,6 +133,13 @@
 1115 = {
 	name="Xiahou"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 9 0 0 0 			}
+		religion="confucian"
+	}
 }
 1116 = {
 	name="Yan"
@@ -579,6 +656,13 @@
 1244 = {
 	name="Liu"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 1 0 0 0 			}
+		religion="confucian"
+	}
 }
 1245 = {
 	name="Shih"
@@ -587,6 +671,13 @@
 1246 = {
 	name="Chen"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 10 0 0 0 			}
+		religion="confucian"
+	}
 }
 1247 = {
 	name="Bu"
@@ -611,6 +702,13 @@
 1252 = {
 	name="Li"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="confucian"
+	}
 }
 1253 = {
 	name="Han"
@@ -627,10 +725,24 @@
 1256 = {
 	name="Li"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="confucian"
+	}
 }
 1257 = {
 	name="Wang"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 2 0 0 0 			}
+		religion="confucian"
+	}
 }
 1258 = {
 	name="Zhu"
@@ -647,14 +759,35 @@
 1261 = {
 	name="Zhang"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 1262 = {
 	name="Wang"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 2 0 0 0 			}
+		religion="confucian"
+	}
 }
 1263 = {
 	name="Wang"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 2 0 0 0 			}
+		religion="confucian"
+	}
 }
 1264 = {
 	name="Guo"
@@ -663,6 +796,13 @@
 1265 = {
 	name="Zhang"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 1266 = {
 	name="Kong"
@@ -671,6 +811,13 @@
 1267 = {
 	name="Wang"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 2 0 0 0 			}
+		religion="confucian"
+	}
 }
 1268 = {
 	name="Yan"
@@ -683,14 +830,35 @@
 1270 = {
 	name="Sun"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 3 0 0 0 			}
+		religion="confucian"
+	}
 }
 1271 = {
 	name="Wang"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 2 0 0 0 			}
+		religion="confucian"
+	}
 }
 1272 = {
 	name="Chen"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 10 0 0 0 			}
+		religion="confucian"
+	}
 }
 1273 = {
 	name="Qu"
@@ -699,26 +867,68 @@
 1274 = {
 	name="Zhang"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 1275 = {
 	name="Sun"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 3 0 0 0 			}
+		religion="confucian"
+	}
 }
 1276 = {
 	name="Zhang"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 1277 = {
 	name="Yang"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 11 0 0 0 			}
+		religion="confucian"
+	}
 }
 1278 = {
 	name="Zhang"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 1279 = {
 	name="Zhang"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 1280 = {
 	name="Huang"
@@ -751,10 +961,24 @@
 1287 = {
 	name="Liu"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 1 0 0 0 			}
+		religion="confucian"
+	}
 }
 1288 = {
 	name="Li"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="confucian"
+	}
 }
 1289 = {
 	name="He"
@@ -763,6 +987,13 @@
 1290 = {
 	name="Li"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="confucian"
+	}
 }
 1291 = {
 	name="Han"
@@ -771,6 +1002,13 @@
 1292 = {
 	name="Yang"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 11 0 0 0 			}
+		religion="confucian"
+	}
 }
 1293 = {
 	name="Zhu"
@@ -779,6 +1017,13 @@
 1294 = {
 	name="Xu"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 12 0 0 0 			}
+		religion="confucian"
+	}
 }
 1295 = {
 	name="Gongsun"
@@ -787,6 +1032,13 @@
 1296 = {
 	name="Zhang"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 1297 = {
 	name="Ying"
@@ -795,10 +1047,24 @@
 1298 = {
 	name="Zhang"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 1299 = {
 	name="Yang"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 11 0 0 0 			}
+		religion="confucian"
+	}
 }
 1300 = {
 	name="Di"
@@ -819,6 +1085,13 @@
 1304 = {
 	name="Zhang"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 1305 = {
 	name="Xing"
@@ -847,6 +1120,13 @@
 1311 = {
 	name="Chen"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 10 0 0 0 			}
+		religion="confucian"
+	}
 }
 1312 = {
 	name="Zou"
@@ -867,10 +1147,24 @@
 1316 = {
 	name="Yang"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 11 0 0 0 			}
+		religion="confucian"
+	}
 }
 1317 = {
 	name="Yang"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 11 0 0 0 			}
+		religion="confucian"
+	}
 }
 1318 = {
 	name="Lu"
@@ -879,22 +1173,57 @@
 1319 = {
 	name="Wu"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 12 0 0 0 			}
+		religion="confucian"
+	}
 }
 1320 = {
 	name="Li"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="confucian"
+	}
 }
 1321 = {
 	name="Zhang"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 1322 = {
 	name="Xu"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 12 0 0 0 			}
+		religion="confucian"
+	}
 }
 1323 = {
 	name="Wang"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 2 0 0 0 			}
+		religion="confucian"
+	}
 }
 1324 = {
 	name="Cheng"
@@ -903,10 +1232,24 @@
 1325 = {
 	name="Wang"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 2 0 0 0 			}
+		religion="confucian"
+	}
 }
 1326 = {
 	name="Wang"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 2 0 0 0 			}
+		religion="confucian"
+	}
 }
 1327 = {
 	name="Chang"
@@ -915,10 +1258,24 @@
 1328 = {
 	name="Sun"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 3 0 0 0 			}
+		religion="confucian"
+	}
 }
 1329 = {
 	name="Wu"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 12 0 0 0 			}
+		religion="confucian"
+	}
 }
 1330 = {
 	name="Yin"
@@ -927,6 +1284,13 @@
 1331 = {
 	name="Zhang"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 1332 = {
 	name="Zhao"
@@ -943,6 +1307,13 @@
 1335 = {
 	name="Zhang"
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 1336 = {
 	name="Dong"
@@ -955,6 +1326,13 @@
 1338 = {
 	name="Sun" 
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 3 0 0 0 			}
+		religion="confucian"
+	}
 }
 1339 = {
 	name="Zhen" 

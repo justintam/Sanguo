@@ -13,6 +13,10 @@ character_event = {
 	
 	is_triggered_only = yes
 	
+	immediate = {
+		character_event = { id = FAT.11 }
+	}
+	
 	option = {
 		name = "EVTOPTADUELOUTPUT1"
 		
@@ -133,58 +137,6 @@ character_event = {
 				character_event = { id = 61229 days = 1 }
 			}
 			clr_character_flag = duelist_courtier
-		}
-		
-		###Tourney rival drama duel
-		if = {
-			limit = { has_character_flag = tourney_duel_challenger }
-			character_event = { id = 70065 days = 1 }
-			clr_character_flag = tourney_duel_challenger 
-			FROM = { 
-				clr_character_flag = tourney_duel_target
-				character_event = { id = 70068 days = 1 }
-			}
-			hidden_tooltip = {
-				top_liege = {
-					if = {
-						limit = {
-							reverse_has_opinion_modifier = { who = ROOT modifier = opinion_attending_tournament }
-						}
-						character_event = { id = 70071 } 
-					}
-					any_realm_lord = {
-						limit = {
-							reverse_has_opinion_modifier = { who = ROOT modifier = opinion_attending_tournament }
-						}	
-						character_event = { id = 70071 } 
-					}	
-				}
-			}
-		}
-		if = {
-			limit = { has_character_flag = tourney_duel_target }
-			character_event = { id = 70070 days = 1 }
-			clr_character_flag = tourney_duel_target
-			FROM = { 
-				clr_character_flag = tourney_duel_challenger
-				character_event = { id = 70067 days = 1 }
-			}
-			hidden_tooltip = {
-				top_liege = {
-					if = {
-						limit = {
-							reverse_has_opinion_modifier = { who = ROOT modifier = opinion_attending_tournament }
-						}
-						character_event = { id = 70073 } 
-					}
-					any_realm_lord = {
-						limit = {
-							reverse_has_opinion_modifier = { who = ROOT modifier = opinion_attending_tournament }
-						}	
-						character_event = { id = 70073 } 
-					}	
-				}
-			}
 		}
 		
 		###Way of Life Focus Duel

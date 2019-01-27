@@ -13,5 +13,6 @@ b_sanggan = tribal
 # Misc
 culture = wuhuan
 religion = tengri_pagan
+terrain = steppe
 
 #History

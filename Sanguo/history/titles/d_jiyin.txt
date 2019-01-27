@@ -7,7 +7,12 @@
 	liege=k_yan
 	vice_royalty = yes
 }
-
+130.1.1={
+	holder=4488 #Du Gen
+}
+165.1.1={
+	holder=0 #None
+}
 184.1.1={
 	holder=3400 #Hu Hao
 }
@@ -31,3 +36,7 @@
 212.1.1={
 	#Liu Xi, son of Xian enfeoffed
 }
+
+
+
+#TBD

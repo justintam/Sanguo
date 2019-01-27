@@ -218,7 +218,7 @@
 	}
 }
 2315 = {
-	name="Eum-u"
+	name="Eumu"
 	dynasty=2212
 	religion="shamanist"
 	culture="joseon"
@@ -234,7 +234,7 @@
 	dynasty=2212
 	religion="shamanist"
 	culture="joseon"
-	father=2318
+	father=2315
 	225.1.1={
 		birth=yes
 

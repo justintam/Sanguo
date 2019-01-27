@@ -13,5 +13,6 @@ b_qiangjiao = temple
 # Misc
 culture = qiang
 religion = baishi
+terrain = steppe
 
 #History

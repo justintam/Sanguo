@@ -6,6 +6,12 @@
 1.1.1={
 	liege=d_zuopingyi
 }
+79.1.1={
+	holder=4549 #Zheng Zhong
+}
+81.1.1={
+	holder=0 #None
+}
 110.1.1={
 	holder=5001 #Sima Jun
 }
@@ -20,4 +26,10 @@
 }
 196.1.1={
 	holder=142 #Han Bin
+}
+212.1.1={
+	holder=4555 #Zheng Hun
+}
+213.6.1={
+	holder=3448 #Deng Dao
 }

@@ -41,6 +41,9 @@
 192.5.1={
 	holder=709 #Yuan Tan
 }
+196.1.1={
+	holder=4120 #Random
+}
 200.4.1={
 	holder=4225 #He Kui
 }
@@ -48,5 +51,5 @@
 	holder=754 #Guan Tong
 }
 205.2.1={
-	holder=4120 #Random
+	holder=1395 #Zhang Fucheng
 }

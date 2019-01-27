@@ -7,17 +7,24 @@
 	liege=k_yi
 	vice_royalty = yes
 }
+180.1.1={
+	holder=4485 #Chang Hong
+}
 184.1.1={
 	holder=125 #Su Gu
 }
 190.1.1={
 	liege=k_five
 	vice_royalty = no
+	name="d_hanning"
+	adjective="d_hanning_adj"
 	holder=1009 #Zhang Lu
 }
-215.11.1={
+216.1.1={
 	liege=k_yong
 	vice_royalty = yes
+	reset_name = yes
+	reset_adjective = yes
 	holder=406 #Granted to Xiahou Yuan
 }
 219.6.1={

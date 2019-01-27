@@ -10,15 +10,16 @@
 	liege=d_white #White Wave Bandits
 	holder=2603 #Hu Cai
 }
-197.1.1={
+195.6.1={
 	liege=d_hedong
+}
+197.1.1={
 	holder=3800 #You Chu
 }
-211.10.1={
-	holder=10486 #Du Ji
-}
 #208 Ji Mao
-#211 Zhu Nan
+211.10.1={
+	holder=30405 #Zhu Nan
+}
 
 
 # Incomplete

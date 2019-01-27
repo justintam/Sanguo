@@ -13,7 +13,8 @@ b_zishi = city
 #b_zhongti = city
 
 # Misc
-culture = han
-religion = confucian
+culture = jie
+religion = tengri_pagan
+terrain = mountain
 
 #History

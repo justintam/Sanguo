@@ -1,4 +1,4 @@
-800 = {
+800={
 	name="Boyu"
 	dynasty=147
 	religion="confucian"
@@ -16,7 +16,7 @@
 		death=yes
 	}
 }
-801 = {
+801={
 	name="Wenhou"
 	dynasty=910
 	religion="confucian"
@@ -37,7 +37,7 @@
 		death=yes
 	}
 }
-802 = {
+802={
 	name="Yan"
 	dynasty=909
 	religion="confucian"
@@ -56,7 +56,7 @@
 		death=yes
 	}
 }
-803 = {
+803={
 	name="Zhang"
 	dynasty=902
     diplomacy=6
@@ -84,7 +84,7 @@
 		death=yes
 	}
 }
-804 = {
+804={
 	name="Dianyu"
 	dynasty=205
     diplomacy=6
@@ -109,7 +109,7 @@
 		death=yes
 	}
 }
-805 = {
+805={
 	name="Guo"
 	dynasty=911
     diplomacy=8
@@ -139,7 +139,7 @@
 		death=yes
 	}
 }
-806 = {
+806={
 	name="Xiangru"
 	dynasty=1661
 	religion="confucian"
@@ -158,7 +158,7 @@
 		death=yes
 	}
 }
-807 = {
+807={
 	name="Zhong"
 	dynasty=913
 	religion="confucian"
@@ -175,7 +175,7 @@
 		death=yes
 	}
 }
-808 = {
+808={
 	name="Sui"
 	dynasty=914
     diplomacy=8
@@ -204,19 +204,17 @@
 		effect={
 			add_friend=822
 			
-			any_realm_character = {
-				limit = {
-					OR = {
-						character = 822
-					}
+			any_realm_character={
+				limit={
+					character=822
 				}
-				opinion = {
-					modifier = opinion_loyalty
-					who = ROOT
+				opinion={
+					modifier=opinion_loyalty
+					who=ROOT
 				}
-				reverse_opinion = {
-					modifier = opinion_loyalty
-					who = ROOT
+				reverse_opinion={
+					modifier=opinion_loyalty
+					who=ROOT
 				}
 			}
 		}
@@ -228,7 +226,7 @@
 		death=yes
 	}
 }
-809 = {
+809={
 	name="Teng"
 	dynasty=10
     diplomacy=9
@@ -281,7 +279,7 @@
 		death={death_reason=death_execution killer=400}
 	}
 }
-810 = {
+810={
 	name="Jian"
 	dynasty=1008
     diplomacy=9
@@ -313,7 +311,7 @@
 		death=yes
 	}
 }
-811 = {
+811={
 	name="Yan"
 	dynasty=962
 	religion="confucian"
@@ -321,11 +319,20 @@
 	160.1.1={
 		birth=yes
 	}
+	184.1.1={
+		employer=803
+	}
+	184.11.1={
+		religion="folk"
+	}
+	196.1.1={
+		employer=10486 #Du Ji
+	}
 	220.1.1={
 		death=yes
 	}
 }
-812 = {
+812={
 	name="Shi"
 	dynasty=963
 	religion="confucian"
@@ -334,13 +341,25 @@
 		birth=yes
 	}
 	184.1.1={
+		employer=803
+	}
+	184.11.1={
+		religion="folk"
+	}
+	187.1.1={
+		employer=811
+	}
+	196.1.1={
+		employer=10486 #Du Ji
+	}
+	205.1.1={
 		employer=811
 	}
 	220.1.1={
 		death=yes
 	}
 }
-813 = {
+813={
 	name="Ping"
 	dynasty=10
 	religion="confucian"
@@ -352,6 +371,7 @@
     trait="ambitious"
     trait="wroth"
     trait="brave"
+	trait="humble"
     trait="diligent"
     trait="temperate"
     trait="organizer"
@@ -367,7 +387,7 @@
 		death=yes
 	}
 }
-814 = {
+814={
 	name="Zi"
 	female=yes
 	religion="confucian"
@@ -384,7 +404,7 @@
 		death=yes
 	}
 }
-815 = {
+815={
 	name="Chao"
 	dynasty=10
     diplomacy=8
@@ -413,10 +433,23 @@
 		birth=yes
 	}
 	184.1.1={
-		employer=809
+		employer=114 #Zuo Chang
+	}
+	184.12.1={
+		employer=1230 #Song Nie
+	}
+	185.1.1={
+		employer=1231 #Yang Yong
+	}
+	186.1.1={
+		employer=1229 #Geng Bi
 	}
 	187.4.1={
 		religion="folk"
+		employer=806 #Li Xiangru
+	}
+	189.5.1={
+		employer=809
 	}
 	213.9.1={
 		employer=1009
@@ -428,14 +461,11 @@
 		employer=600
 		religion="confucian"
 	}
-	221.1.1={
-		add_claim=k_liang
-	}
 	222.6.1={
 		death=yes
 	}
 }
-816 = {
+816={
 	name="Shi"
 	dynasty=10
     diplomacy=6
@@ -451,16 +481,32 @@
 		birth=yes
 	}
 	184.1.1={
-		employer=809
+		employer=114 #Zuo Chang
+	}
+	184.12.1={
+		employer=1230 #Song Nie
+	}
+	185.1.1={
+		employer=1231 #Yang Yong
+	}
+	186.1.1={
+		employer=1229 #Geng Bi
 	}
 	187.4.1={
 		religion="folk"
+		employer=806 #Li Xiangru
+	}
+	189.5.1={
+		employer=809
+	}
+	208.1.1={
+		employer=400
 	}
 	212.6.1={
 		death={death_reason=death_execution killer=400}
 	}
 }
-817 = {
+817={
 	name="Dai"
 	dynasty=10
     diplomacy=7
@@ -488,10 +534,26 @@
 		birth=yes
 	}
 	184.1.1={
-		employer=809
+		employer=114 #Zuo Chang
+	}
+	184.12.1={
+		employer=1230 #Song Nie
+	}
+	185.1.1={
+		employer=1231 #Yang Yong
+	}
+	186.1.1={
+		employer=1229 #Geng Bi
 	}
 	187.4.1={
 		religion="folk"
+		employer=806 #Li Xiangru
+	}
+	189.5.1={
+		employer=809
+	}
+	208.1.1={
+		employer=815
 	}
 	213.9.1={
 		employer=1009
@@ -503,11 +565,14 @@
 		employer=600
 		religion="confucian"
 	}
+	223.6.10={
+		employer=610
+	}
 	236.6.1={
 		death=yes
 	}
 }
-818 = {
+818={
 	name="Xiu"
 	dynasty=10
 	religion="confucian"
@@ -517,10 +582,23 @@
 		birth=yes
 	}
 	184.1.1={
-		employer=809
+		employer=114 #Zuo Chang
+	}
+	184.12.1={
+		employer=1230 #Song Nie
+	}
+	185.1.1={
+		employer=1231 #Yang Yong
+	}
+	186.1.1={
+		employer=1229 #Geng Bi
 	}
 	187.4.1={
 		religion="folk"
+		employer=806 #Li Xiangru
+	}
+	189.5.1={
+		employer=809
 	}
 	208.1.1={
 		employer=400 #Cao Cao
@@ -529,7 +607,7 @@
 		death={death_reason=death_execution killer=400}
 	}
 }
-819 = {
+819={
 	name="Tie"
 	dynasty=10
 	religion="confucian"
@@ -539,10 +617,23 @@
 		birth=yes
 	}
 	184.1.1={
-		employer=809
+		employer=114 #Zuo Chang
+	}
+	184.12.1={
+		employer=1230 #Song Nie
+	}
+	185.1.1={
+		employer=1231 #Yang Yong
+	}
+	186.1.1={
+		employer=1229 #Geng Bi
 	}
 	187.4.1={
 		religion="folk"
+		employer=806 #Li Xiangru
+	}
+	189.5.1={
+		employer=809
 	}
 	208.1.1={
 		employer=400 #Cao Cao
@@ -551,7 +642,7 @@
 		death={death_reason=death_execution killer=400}
 	}
 }
-820 = {
+820={
 	name="Cheng"
 	dynasty=10
 	religion="folk"
@@ -574,11 +665,14 @@
 		employer=600
 		religion="confucian"
 	}
+	223.6.10={
+		employer=610
+	}
 	250.1.1={
 		death=yes
 	}
 }
-821 = {
+821={
 	name="Qiu"
 	dynasty=10
 	religion="folk"
@@ -598,7 +692,7 @@
 		death={death_reason=death_murder killer=1009}
 	}
 }
-822 = {
+822={
 	name="Ying"
 	dynasty=2000 # Chenggong
 	religion="confucian"
@@ -616,6 +710,8 @@
     trait="inspiring_leader"
 	172.1.1={
 		birth=yes
+	}
+	184.1.1={
 		employer=808
 	}
 	186.5.1={
@@ -631,7 +727,7 @@
 		employer=3872 # Su Ze
 	}
 	220.10.1={
-		add_trait = ill
+		add_trait=ill
 		death={death_reason=death_trait}
 	}
 }

@@ -170,6 +170,20 @@ selfish_pattern_against = {
 				hidden_tooltip = {
 					AND = {
 						is_landed = no
+						OR = {
+							is_female = no
+							liege = {
+								OR = {
+									primary_title = {
+										has_law = status_of_women_4
+									}
+									has_game_rule = {
+										name = gender
+										value = all
+									}
+								}
+							}
+						}
 						FROMFROM = {
 							is_landed = yes
 						}

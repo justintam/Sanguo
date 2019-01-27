@@ -14,5 +14,6 @@ b_luguo = castle
 # Misc
 culture = han
 religion = confucian
+terrain = plains
 
 #History

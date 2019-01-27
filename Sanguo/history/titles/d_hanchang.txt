@@ -1,17 +1,18 @@
 1.1.1={
-	active = no
-	law = agnatic_succession
-	law = succ_gavelkind
+	active=no
+	law=agnatic_succession
+	law=succ_gavelkind
 }
 211.1.1={
-	active = yes
+	active=yes
 	liege=e_sun
-	vice_royalty = yes
+	vice_royalty=yes
 	holder=521 #Lu Su
 }
 217.6.1={
 	holder=570 #Lu Meng
 }
-220.1.1={
+220.2.1={
+	liege=k_jing
 	holder=577 #Puyang Yi
 }

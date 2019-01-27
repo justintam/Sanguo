@@ -14,5 +14,6 @@ b_tuqiuju = temple
 # Misc
 culture = han
 religion = taiping
+terrain = forest
 
 #History

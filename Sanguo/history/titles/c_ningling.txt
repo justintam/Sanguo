@@ -10,6 +10,9 @@
 	liege=d_xihuang
 	holder=208 #Bian Xi
 }
+184.10.1={
+	liege=d_zhonghuang
+}
 200.1.1={
 	liege=d_liang
 	holder=1278 #Zhao Yan

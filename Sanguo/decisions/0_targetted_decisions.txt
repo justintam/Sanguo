@@ -1,216 +1,225 @@
 # Targetted decisions are possible vs _all_ other characters and shown are in the Diplomacy View, not the Intrigue View. The taker is in the FROM scope.
 #
-# ai_target_filter = [self/court/home_court/vassals/sub_realm/realm/dynasty/all] (which characters for which the AI evaluates the decision.)
+# ai_target_filter=[self/court/home_court/vassals/sub_realm/realm/dynasty/all] (which characters for which the AI evaluates the decision.)
 #	court: all characters in the AI's host court, including prisoners, and characters currently away (wards, prisoners, etc)
 #	home_court: all characters in the AI's home court, including prisoners, and characters currently away (wards, prisoners, etc)
 #	vassals: direct vassal rulers of the AI's employer
 #	sub_realm: all characters below the AI's employer
 #	realm: all characters in the same top realm as the AI
 #	dynasty: all members of the same dynasty
-#	rivals: your rivals plus any character you have an opinion modifier with 'crime = yes' set (the same set of characters the 'is_foe' trigger evaluates)
+#	rivals: your rivals plus any character you have an opinion modifier with 'crime=yes' set (the same set of characters the 'is_foe' trigger evaluates)
 #	all: all living characters (Avoid if possible. VERY CPU-HEAVY!)
 #	
 
-targetted_decisions = {
-	send_eunuch = {
-		ai_target_filter = home_court	
-		filter = home_court
-		is_high_prio = yes
+targetted_decisions={
+	send_eunuch={
+		ai_target_filter=home_court	
+		filter=home_court
+		is_high_prio=yes
 		
-		from_potential = {
-			is_ruler = yes
-			religion_head = { has_landed_title = k_confucian }
+		from_potential={
+			is_ruler=yes
+			religion_head={ has_landed_title=k_confucian }
 		}
 	
-		potential = {
-			prisoner = no
-			trait = eunuch
-			is_ruler = no
-			host = { character = FROM }
-			liege = { character = FROM }
-			age = 10
-			c_eunuch = { has_holder = yes }
+		potential={
+			prisoner=no
+			trait=eunuch
+			is_ruler=no
+			host={ character=FROM }
+			liege={ character=FROM }
+			age=10
+			c_eunuch={ has_holder=yes }
 		}
-		allow = {
-			FROM = {
-				OR = {
-					has_regent = no
-					regent = { 
-						OR = {
-							trait = just
-							NOT = { opinion = { who = ROOT value = 25 } }
+		allow={
+			FROM={
+				OR={
+					has_regent=no
+					regent={ 
+						OR={
+							trait=just
+							NOT={ opinion={ who=ROOT value=25 } }
 						}
 					}
 				}
-				religion_head = { NOT = { has_landed_title = c_eunuch } }
+				religion_head={ NOT={ has_landed_title=c_eunuch } }
 			}
 		}
-		effect = {
-			FROM = {
-				piety = 20
-				add_favor = ROOT
+		effect={
+			FROM={
+				piety=20
+				add_favor=ROOT
 			}
-			c_eunuch = {
-				holder_scope = {
-					ROOT = { move_character = PREV }
+			c_eunuch={
+				holder_scope={
+					ROOT={ move_character=PREV }
 				}
 			}
-		}
-		revoke_allowed = {
-			always = no
-		}
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				factor = 0.9 # Less likely to do it
-			}
-			modifier = {
-				factor = 0
-				trait = destined
-			}
-			modifier = {
-				factor = 0.25
-				is_councillor = yes
-			}
-			modifier = {
-				factor = 0.25
-				has_minor_title = title_commander
-			}
-			modifier = {
-				factor = 1.5
-				FROM = {
-					OR = {
-						trait = zealous
-						trait = ambitious
+			k_confucian={
+				holder_scope={
+					opinion={
+						modifier=opinion_generous_donation
+						who=ROOT
+						years=5
 					}
 				}
 			}
-			modifier = {
-				factor = 0.25
-				is_friend = FROM
+		}
+		revoke_allowed={
+			always=no
+		}
+		ai_will_do={
+			factor=1
+			
+			modifier={
+				factor=0.9 # Less likely to do it
 			}
-			modifier = {
-				factor = 0
-				is_lover = FROM
+			modifier={
+				factor=0
+				trait=destined
 			}
-			modifier = {
-				factor = 1.5
-				dynasty = none
+			modifier={
+				factor=0.25
+				is_councillor=yes
 			}
-			modifier = {
-				factor = 4
-				any_claim = { holder_scope = { character = FROM } }
+			modifier={
+				factor=0.25
+				has_minor_title=title_commander
 			}
-			modifier = {
-				factor = 0.5
-				independent = yes
+			modifier={
+				factor=1.5
+				FROM={
+					OR={
+						trait=zealous
+						trait=ambitious
+					}
+				}
 			}
-			modifier = {
-				factor = 0.25
-				top_liege = {
-					NOR = {
-						has_landed_title = k_confucian
-						OR = {
-							AND = {
-								has_landed_title = e_china
-								e_han = { has_holder = yes }
+			modifier={
+				factor=0.25
+				is_friend=FROM
+			}
+			modifier={
+				factor=0
+				is_lover=FROM
+			}
+			modifier={
+				factor=1.5
+				dynasty=none
+			}
+			modifier={
+				factor=4
+				any_claim={ holder_scope={ character=FROM } }
+			}
+			modifier={
+				factor=0.5
+				independent=yes
+			}
+			modifier={
+				factor=0.25
+				top_liege={
+					NOR={
+						has_landed_title=k_confucian
+						OR={
+							AND={
+								has_landed_title=e_china
+								e_han={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_chen
-								e_chen = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_chen
+								e_chen={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_chu
-								e_chu = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_chu
+								e_chu={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_dai
-								e_dai = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_dai
+								e_dai={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_han
-								e_han = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_han
+								e_han={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_jin
-								e_jin = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_jin
+								e_jin={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_liang
-								e_liang = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_liang
+								e_liang={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_liao
-								e_liao = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_liao
+								e_liao={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_min
-								e_min = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_min
+								e_min={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_qi
-								e_qi = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_qi
+								e_qi={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_qin
-								e_qin = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_qin
+								e_qin={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_qing
-								e_qing = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_qing
+								e_qing={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_shu
-								e_shu = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_shu
+								e_shu={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_song
-								e_song = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_song
+								e_song={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_sui
-								e_sui = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_sui
+								e_sui={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_tan
-								e_tan = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_tan
+								e_tan={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_tang
-								e_tang = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_tang
+								e_tang={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_wei
-								e_wei = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_wei
+								e_wei={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_wu
-								e_wu = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_wu
+								e_wu={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_wuyue
-								e_wuyue = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_wuyue
+								e_wuyue={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_xia
-								e_xia = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_xia
+								e_xia={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_yan
-								e_yan = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_yan
+								e_yan={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_zhao
-								e_zhao = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_zhao
+								e_zhao={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_zhong
-								e_zhong = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_zhong
+								e_zhong={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_zhou
-								e_zhou = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_zhou
+								e_zhou={ has_holder=yes }
 							}
 						}
 					}
@@ -219,250 +228,251 @@ targetted_decisions = {
 		}
 	}
 	
-	send_lady = {
-		ai_target_filter = home_court	
-		filter = home_court
-		is_high_prio = yes
+	send_lady={
+		ai_target_filter=home_court	
+		filter=home_court
+		is_high_prio=yes
 		
-		from_potential = {
-			is_ruler = yes
-			religion_head = { has_landed_title = k_confucian }
-			NOT = {
-				has_landed_title = c_empress
+		from_potential={
+			is_ruler=yes
+			religion_head={ has_landed_title=k_confucian }
+			NOT={
+				has_landed_title=c_empress
 			}
 		}
 	
-		potential = {
-			prisoner = no
-			is_married = no
-			is_consort = no
-			is_ruler = no
-			host = { character = FROM }
-			liege = { character = FROM }
-			is_female = yes
-			age = 12
-			NOT = { age = 17 }
-			NOT = { has_character_flag = tribute_lady }
-			c_empress = { has_holder = yes }
-			OR = {
-				trait = tall
-				trait = fair
-				trait = quick
-				trait = genius
-				trait = strong
-				trait = fertile
+		potential={
+			prisoner=no
+			is_married=no
+			is_consort=no
+			is_ruler=no
+			host={ character=FROM }
+			liege={ character=FROM }
+			is_female=yes
+			age=12
+			NOT={ age=17 }
+			NOT={ has_character_flag=tribute_lady }
+			c_empress={ has_holder=yes }
+			OR={
+				trait=tall
+				trait=fair
+				trait=quick
+				trait=genius
+				trait=strong
+				trait=fertile
 			}
-			OR = {
-				trait = kind
-				trait = poet
-				trait = proud
-				trait = chaste
-				trait = humble
-				trait = content
-				trait = erudite
-				trait = lustful
-				trait = patient
-				trait = zealous
-				trait = diligent
-				trait = gardener
-				trait = hedonist
-				trait = scholar
-				trait = seducer
-				trait = seductress
-				trait = socializer
-				trait = theologian
+			OR={
+				trait=kind
+				trait=poet
+				trait=proud
+				trait=chaste
+				trait=humble
+				trait=content
+				trait=erudite
+				trait=lustful
+				trait=patient
+				trait=zealous
+				trait=diligent
+				trait=gardener
+				trait=hedonist
+				trait=scholar
+				trait=seducer
+				trait=seductress
+				trait=socializer
+				trait=theologian
 			}
 		}
-		allow = {
-			FROM = {
-				OR = {
-					has_regent = no
-					regent = {
-						OR = {
-							trait = zealous
-							NOT = { opinion = { who = ROOT value = 25 } }
+		allow={
+			FROM={
+				OR={
+					has_regent=no
+					regent={
+						OR={
+							trait=zealous
+							NOT={ opinion={ who=ROOT value=25 } }
 						}
 					}
 				}
 			}
 		}
-		effect = {
-			hidden_tooltip = {
-				FROM = { add_favor = ROOT }
-				character_event = { id = EMP.5 months = 3 }
+		effect={
+			hidden_tooltip={
+				set_character_flag=tribute_lady
+				FROM={ add_favor=ROOT }
+				character_event={ id=EMP.5 months=3 }
 			}
 		}
-		revoke_allowed = {
-			always = no
+		revoke_allowed={
+			always=no
 		}
-		ai_will_do = {
-			factor = 1
+		ai_will_do={
+			factor=1
 			
-			modifier = {
-				factor = 0.9 # Less likely to do it
+			modifier={
+				factor=0.9 # Less likely to do it
 			}
-			modifier = {
-				factor = 0
-				trait = destined
+			modifier={
+				factor=0
+				trait=destined
 			}
-			modifier = {
-				factor = 0.25
-				is_councillor = yes
+			modifier={
+				factor=0.25
+				is_councillor=yes
 			}
-			modifier = {
-				factor = 0.25
-				has_minor_title = title_commander
+			modifier={
+				factor=0.25
+				has_minor_title=title_commander
 			}
-			modifier = {
-				factor = 1.5
-				FROM = {
-					OR = {
-						trait = zealous
-						trait = ambitious
+			modifier={
+				factor=1.5
+				FROM={
+					OR={
+						trait=zealous
+						trait=ambitious
 					}
 				}
 			}
-			modifier = {
-				factor = 1.5
-				NOT = { dynasty = none }
+			modifier={
+				factor=1.5
+				NOT={ dynasty=none }
 			}
-			modifier = {
-				factor = 0.5
-				is_child_of = FROM
+			modifier={
+				factor=0.25
+				is_child_of=FROM
 			}
-			modifier = {
-				factor = 0.25
-				is_primary_heir = yes
+			modifier={
+				factor=0.25
+				is_primary_heir=yes
 			}
-			modifier = {
-				factor = 0.5
-				is_friend = FROM
+			modifier={
+				factor=0.25
+				is_friend=FROM
 			}
-			modifier = {
-				factor = 0
-				is_lover = FROM
+			modifier={
+				factor=0
+				is_lover=FROM
 			}
-			modifier = {
-				factor = 0.25
-				is_foe = FROM
+			modifier={
+				factor=0.25
+				is_foe=FROM
 			}
-			modifier = {
-				factor = 2
-				dynasty = FROM
+			modifier={
+				factor=2
+				dynasty=FROM
 			}
-			modifier = {
-				factor = 4
-				any_claim = { holder_scope = { character = FROM } }
+			modifier={
+				factor=4
+				any_claim={ holder_scope={ character=FROM } }
 			}
-			modifier = {
-				factor = 0.5
-				independent = yes
+			modifier={
+				factor=0.5
+				independent=yes
 			}
-			modifier = {
-				factor = 0.25
-				top_liege = {
-					NOR = {
-						has_landed_title = k_confucian
-						OR = {
-							AND = {
-								has_landed_title = e_china
-								e_han = { has_holder = yes }
+			modifier={
+				factor=0.25
+				top_liege={
+					NOR={
+						has_landed_title=k_confucian
+						OR={
+							AND={
+								has_landed_title=e_china
+								e_han={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_chen
-								e_chen = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_chen
+								e_chen={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_chu
-								e_chu = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_chu
+								e_chu={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_dai
-								e_dai = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_dai
+								e_dai={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_han
-								e_han = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_han
+								e_han={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_jin
-								e_jin = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_jin
+								e_jin={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_liang
-								e_liang = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_liang
+								e_liang={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_liao
-								e_liao = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_liao
+								e_liao={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_min
-								e_min = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_min
+								e_min={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_qi
-								e_qi = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_qi
+								e_qi={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_qin
-								e_qin = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_qin
+								e_qin={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_qing
-								e_qing = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_qing
+								e_qing={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_shu
-								e_shu = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_shu
+								e_shu={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_song
-								e_song = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_song
+								e_song={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_sui
-								e_sui = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_sui
+								e_sui={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_tan
-								e_tan = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_tan
+								e_tan={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_tang
-								e_tang = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_tang
+								e_tang={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_wei
-								e_wei = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_wei
+								e_wei={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_wu
-								e_wu = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_wu
+								e_wu={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_wuyue
-								e_wuyue = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_wuyue
+								e_wuyue={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_xia
-								e_xia = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_xia
+								e_xia={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_yan
-								e_yan = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_yan
+								e_yan={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_zhao
-								e_zhao = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_zhao
+								e_zhao={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_zhong
-								e_zhong = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_zhong
+								e_zhong={ has_holder=yes }
 							}
-							AND = {
-								has_landed_title = e_k_zhou
-								e_zhou = { has_holder = yes }
+							AND={
+								has_landed_title=e_k_zhou
+								e_zhou={ has_holder=yes }
 							}
 						}
 					}
@@ -471,577 +481,825 @@ targetted_decisions = {
 		}
 	}
 	
-	send_exam = {
-		ai_target_filter = home_court	
-		filter = home_court
-		from_potential = {
-			is_ruler = yes
-			top_liege = {
-				real_tier = emperor
-				OR = {
-					primary_title = {
-						has_title_flag = premier_title
+	send_exam={
+		ai_target_filter=home_court	
+		filter=home_court
+		from_potential={
+			is_ruler=yes
+			top_liege={
+				real_tier=emperor
+				OR={
+					primary_title={
+						has_title_flag=premier_title
 					}
-					has_landed_title = k_confucian
+					has_landed_title=k_confucian
 				}
 			}
-			religion_head = { has_landed_title = k_confucian }
+			religion_head={ has_landed_title=k_confucian }
 		}
 	
-		potential = {
-			is_ruler = no
-			prisoner = no
-			in_command = no
-			is_adult = yes
-			is_female = no
-			has_epidemic = no
-			NOT = { dynasty = none }
-			host = { character = FROM }
-			liege = { character = FROM }
-			NOT = { has_character_flag = exam_candidate }
-			NOR = {
-				trait = gentleman_0
-				trait = gentleman_1
-				trait = gentleman_2
-				trait = gentleman_3
+		potential={
+			is_ruler=no
+			prisoner=no
+			in_command=no
+			is_adult=yes
+			is_female=no
+			has_epidemic=no
+			NOT={ dynasty=none }
+			host={ character=FROM }
+			liege={ character=FROM }
+			NOT={ has_character_flag=exam_candidate }
+			NOR={
+				trait=gentleman_0
+				trait=gentleman_1
+				trait=gentleman_2
+				trait=gentleman_3
 			}
 		}
-		allow = {
-			FROM = {
-				has_regent = no
-				wealth = 25
+		allow={
+			FROM={
+				has_regent=no
+				wealth=25
 			}
-			NOT = { trait = kinslayer }
-			top_liege = {
-				real_tier = emperor
-				OR = {
-					primary_title = {
-						has_title_flag = premier_title
+			NOT={ trait=kinslayer }
+			top_liege={
+				real_tier=emperor
+				OR={
+					primary_title={
+						has_title_flag=premier_title
 					}
-					has_landed_title = k_confucian
+					has_landed_title=k_confucian
 				}
 			}
 		}
-		effect = {
-			FROM = {
-				wealth = -25
-				add_favor = ROOT
+		effect={
+			FROM={
+				wealth=-25
+				add_favor=ROOT
 			}
-			opinion = {
-				who = FROM
-				modifier = opinion_sponsored_exam
+			opinion={
+				who=FROM
+				modifier=opinion_sponsored_exam
 			}
-			set_character_flag = exam_candidate
+			set_character_flag=exam_candidate
 		}
-		revoke_allowed = {
-			always = no
+		revoke_allowed={
+			always=no
 		}
-		ai_will_do = {
-			factor = 1
+		ai_will_do={
+			factor=1
 			
-			modifier = {
-				factor = 0.5 # Less likely to do it
+			modifier={
+				factor=0.5 # Less likely to do it
 			}
-			modifier = {
-				factor = 0
-				trait = destined
+			modifier={
+				factor=0
+				trait=destined
 			}
-			modifier = {
-				factor = 0.25
-				is_councillor = yes
+			modifier={
+				factor=0.25
+				is_councillor=yes
 			}
-			modifier = {
-				factor = 0.25
-				has_minor_title = title_commander
+			modifier={
+				factor=0.25
+				has_minor_title=title_commander
 			}
-			modifier = {
-				factor = 0.5
-				is_child_of = FROM
+			modifier={
+				factor=0.5
+				is_child_of=FROM
 			}
-			modifier = {
-				factor = 0.25
-				is_primary_heir = yes
+			modifier={
+				factor=0.25
+				is_primary_heir=yes
 			}
-			modifier = {
-				factor = 1.5
-				FROM = { 
-					OR = {
-						trait = zealous
-						trait = ambitious
+			modifier={
+				factor=1.5
+				FROM={ 
+					OR={
+						trait=zealous
+						trait=ambitious
 					}
 				}
 			}
-			modifier = {
-				factor = 0.5
-				ROOT = {
-					is_friend = FROM
+			modifier={
+				factor=0.5
+				ROOT={
+					is_friend=FROM
 				}
 			}
-			modifier = {
-				factor = 0.25
-				ROOT = {
-					is_foe = FROM
+			modifier={
+				factor=0.25
+				ROOT={
+					is_foe=FROM
 				}
 			}
-			modifier = {
-				factor = 2
-				dynasty = FROM
+			modifier={
+				factor=2
+				dynasty=FROM
 			}
-			modifier = {
-				factor = 1.5
-				FROM = { 
-					trait = scholarly_theologian
+			modifier={
+				factor=1.5
+				FROM={ 
+					trait=scholarly_theologian
 				}
 			}
-			modifier = {
-				factor = 2
-				FROM = { 
-					trait = mastermind_theologian
+			modifier={
+				factor=2
+				FROM={ 
+					trait=mastermind_theologian
 				}
 			}
-			modifier = {
-				factor = 4
-				any_claim = { holder_scope = { character = FROM } }
+			modifier={
+				factor=4
+				any_claim={ holder_scope={ character=FROM } }
 			}
 		}
 	}
 	
-	take_prisoner_as_wife = {
-		ai_target_filter = home_court
-		filter = home_court
-		from_potential = {
-			is_ruler = yes
-			is_married = no
-			age = 14				
+	take_prisoner_as_wife={
+		ai_target_filter=home_court
+		filter=home_court
+		from_potential={
+			is_ruler=yes
+			is_married=no
+			age=14				
 		}
-		potential = {
-			prisoner = yes
-			host = { character = FROM }
-			#can_marry = FROM
-			OR = {
-				AND = {
-					FROM = { is_female = no }
-					is_female = yes
+		potential={
+			prisoner=yes
+			host={ character=FROM }
+			#can_marry=FROM
+			OR={
+				AND={
+					FROM={ is_female=no }
+					is_female=yes
 				}
-				AND = {
-					FROM = {
-						is_female = yes
-						OR = {
-							trait = strong
-							trait = tall
-							trait = duel_skilled_warrior
-							trait = duel_master_warrior
+				AND={
+					FROM={
+						is_female=yes
+						OR={
+							trait=strong
+							trait=tall
+							trait=duel_skilled_warrior
+							trait=duel_master_warrior
 						}
 					}
-					is_female = no 
-					NOT = {
-						OR = {
-							trait = strong
-							trait = tall
-							trait = duel_skilled_warrior
-							trait = duel_master_warrior
-						}
-					}
-				}
-			}
-		}
-		allow = {
-			FROM = {
-				is_married = no
-				age = 14
-				NOT = { trait = celibate }
-				NOT = { trait = kind }
-				NOT = { trait = honorable }
-				NOT = { trait = incapable }
-			}
-			prisoner = yes
-			age = 8
-			is_married = no
-			NOT = { trait = incapable }
-		}
-		effect = {
-			if = {
-				limit = { FROM = { is_female = no } }
-				add_spouse = FROM
-			}
-			if = {
-				limit = { FROM = { is_female = yes } }
-				add_spouse_matrilineal = FROM
-			}
-			opinion = {
-				who = FROM
-				modifier = opinion_forced_marriage
-			}
-			prisoner = no
-			FROM = {
-				if = {
-					limit = { NOT = { trait = cruel } }
-					random = {
-						chance = 25
-						add_trait = cruel
-						hidden_tooltip = {
-							character_event = { id = 38259 }
+					is_female=no 
+					NOT={
+						OR={
+							trait=strong
+							trait=tall
+							trait=duel_skilled_warrior
+							trait=duel_master_warrior
 						}
 					}
 				}
-				piety = -50
 			}
-			hidden_tooltip = {
-				father = { opinion = { who = FROM modifier = opinion_forced_marriage_child } }
-				mother = { opinion = { who = FROM modifier = opinion_forced_marriage_child } }
-				any_dynasty_member = {
-					limit = {
-						is_close_relative = ROOT
-						NOT = { any_child = { character = ROOT } } 
+		}
+		allow={
+			FROM={
+				is_married=no
+				age=14
+				NOT={ trait=celibate }
+				NOT={ trait=kind }
+				NOT={ trait=honorable }
+				NOT={ trait=incapable }
+			}
+			prisoner=yes
+			age=8
+			is_married=no
+			NOT={ trait=incapable }
+		}
+		effect={
+			if={
+				limit={ FROM={ is_female=no } }
+				add_spouse=FROM
+			}
+			if={
+				limit={ FROM={ is_female=yes } }
+				add_spouse_matrilineal=FROM
+			}
+			opinion={
+				who=FROM
+				modifier=opinion_forced_marriage
+			}
+			prisoner=no
+			FROM={
+				if={
+					limit={ NOT={ trait=cruel } }
+					random={
+						chance=25
+						add_trait=cruel
+						hidden_tooltip={
+							character_event={ id=38259 }
+						}
 					}
-					opinion = { who = FROM modifier = opinion_forced_marriage_kin }
 				}
-				FROM = {
-					remove_opinion = { who = ROOT modifier = opinion_traitor }
-					remove_opinion = { who = ROOT modifier = opinion_rebel_traitor }
-					remove_opinion = { who = ROOT modifier = opinion_dishonorable }
-					remove_opinion = { who = ROOT modifier = opinion_joined_rebellion }
-					remove_opinion = { who = ROOT modifier = devious_plotter }
-					remove_opinion = { who = ROOT modifier = attempted_kidnapping }
-					remove_opinion = { who = ROOT modifier = attempted_kidnapping_of_kin }
-					remove_opinion = { who = ROOT modifier = attempted_kidnapping_of_vassal }
-					remove_opinion = { who = ROOT modifier = attempted_murder_of_close_kin }
-					remove_opinion = { who = ROOT modifier = killed_vassal }
-					remove_opinion = { who = ROOT modifier = opinion_vengeance }
-					remove_opinion = { who = ROOT modifier = attempted_murder_of_sibling }
-					remove_opinion = { who = ROOT modifier = attempted_murder_of_parent }
+				piety=-50
+			}
+			hidden_tooltip={
+				father={ opinion={ who=FROM modifier=opinion_forced_marriage_child } }
+				mother={ opinion={ who=FROM modifier=opinion_forced_marriage_child } }
+				any_dynasty_member={
+					limit={
+						is_close_relative=ROOT
+						NOT={ any_child={ character=ROOT } } 
+					}
+					opinion={ who=FROM modifier=opinion_forced_marriage_kin }
+				}
+				FROM={
+					remove_opinion={ who=ROOT modifier=opinion_traitor }
+					remove_opinion={ who=ROOT modifier=opinion_rebel_traitor }
+					remove_opinion={ who=ROOT modifier=opinion_dishonorable }
+					remove_opinion={ who=ROOT modifier=devious_plotter }
+					remove_opinion={ who=ROOT modifier=attempted_kidnapping }
+					remove_opinion={ who=ROOT modifier=attempted_kidnapping_of_kin }
+					remove_opinion={ who=ROOT modifier=attempted_kidnapping_of_vassal }
+					remove_opinion={ who=ROOT modifier=attempted_murder_of_close_kin }
+					remove_opinion={ who=ROOT modifier=killed_vassal }
+					remove_opinion={ who=ROOT modifier=opinion_vengeance }
+					remove_opinion={ who=ROOT modifier=attempted_murder_of_sibling }
+					remove_opinion={ who=ROOT modifier=attempted_murder_of_parent }
 				}
 			}
 		}
-		ai_will_do = {
-			factor = 1
+		ai_will_do={
+			factor=1
 			
-			modifier = {
-				factor = 0.02 # Less likely to do it
+			modifier={
+				factor=0.02 # Less likely to do it
 			}
-			modifier = { #AI motives
-				factor = 0
-				OR = {
-					reverse_opinion = { who = FROM value = 40 } 
-					age = 35
-					NOT = { 
-						OR = {
+			modifier={ #AI motives
+				factor=0
+				OR={
+					reverse_opinion={ who=FROM value=40 } 
+					age=35
+					NOT={ 
+						OR={
 							#Target has a title or claim that is equal or higher to FROM's rank
-							NOT = { lower_tier_than = FROM }
-							any_heir_title = { NOT = { lower_tier_than = FROM } }
-							any_claim = { NOT = { lower_tier_than = FROM } }
-							AND = { #Horny bastard
-								trait = fair
-								FROM = { trait = lustful }
+							NOT={ lower_tier_than=FROM }
+							any_heir_title={ NOT={ lower_tier_than=FROM } }
+							any_claim={ NOT={ lower_tier_than=FROM } }
+							AND={ #Horny bastard
+								trait=fair
+								FROM={ trait=lustful }
 							}
 						}
 					}
 				}
 			}
-			modifier = {
-				factor = 0
-				FROM = { trait = just }
+			modifier={
+				factor=0
+				FROM={ trait=just }
 			}
-			modifier = {
-				factor = 0 #Is your enemy and can enforce a victory
-				FROM = {
-					any_current_enemy = {
-						character = ROOT
+			modifier={
+				factor=0 #Is your enemy and can enforce a victory
+				FROM={
+					any_current_enemy={
+						character=ROOT
 					}
 				}
 			}
 		}
 	}
 	
-	adopt_character = {
-		ai_target_filter = home_court
-		filter = sub_realm
-		from_potential = {
-			is_ruler = yes
-			is_theocracy = no
-			OR = {
-				ai = no
-				num_of_children = 0
-				NOT = { any_child = { is_female = no } }
+	adopt_character={
+		ai_target_filter=home_court
+		filter=sub_realm
+		from_potential={
+			is_ruler=yes
+			is_theocracy=no
+			OR={
+				ai=no
+				num_of_children=0
+				NOT={ any_child={ is_female=no } }
 			}
 		}
-		potential = {
-			is_liege_or_above = FROM
-			NOT = { is_married = FROM }
-			NOT = { is_consort = FROM }
-			NOT = { is_close_relative = FROM }
+		potential={
+			is_liege_or_above=FROM
+			NOT={ is_married=FROM }
+			NOT={ is_consort=FROM }
+			NOT={ is_close_relative=FROM }
 		}
-		allow = {
-			age_diff = { who = FROM years = 14 }
-			NOT = { age = 25 }
-			OR = {
-				trait = strong
-				trait = tall
-				trait = fair
-				trait = quick
-				trait = genius
+		allow={
+			age_diff={ who=FROM years=14 }
+			NOT={ age=25 }
+			OR={
+				trait=strong
+				trait=tall
+				trait=fair
+				trait=quick
+				trait=genius
 			}
-			custom_tooltip = {
-				text = TOOLTIPADOPTIONLOWBORN
-				hidden_tooltip = { dynasty = 0 }
+			custom_tooltip={
+				text=TOOLTIPADOPTIONLOWBORN
+				hidden_tooltip={ dynasty=0 }
 			}
-			NOT = { any_spouse = { is_close_relative = FROM } }
-			FROM = { is_older_than = ROOT }
-			opinion = { who = FROM value = 0 }
-			prisoner = no
-			NOT = { trait = incapable }
-			NOT = { trait = eunuch }		
-			NOT = { trait = blinded }
-			NOT = { trait = crippled }
-			NOT = { trait = dwarf }
-			NOT = { trait = weak }
-			NOT = { trait = inbred }
-			NOT = { trait = imbecile }
-			NOT = { trait = slow }	
-			NOT = { trait = ugly }				
-			NOT = { trait = clubfooted }
-			NOT = { trait = hunchback }
+			NOT={ any_spouse={ is_close_relative=FROM } }
+			FROM={ is_older_than=ROOT }
+			opinion={ who=FROM value=0 }
+			prisoner=no
+			NOT={ trait=incapable }
+			NOT={ trait=eunuch }		
+			NOT={ trait=blinded }
+			NOT={ trait=crippled }
+			NOT={ trait=dwarf }
+			NOT={ trait=weak }
+			NOT={ trait=inbred }
+			NOT={ trait=imbecile }
+			NOT={ trait=slow }	
+			NOT={ trait=ugly }				
+			NOT={ trait=clubfooted }
+			NOT={ trait=hunchback }
 		}
-		effect = {
-			hidden_tooltip = {
-				father = { ROOT = { set_real_father = PREV } }
-				set_mother = 0
+		effect={
+			hidden_tooltip={
+				father={ ROOT={ set_real_father=PREV } }
+				set_mother=0
 			}
-			set_father = FROM
-			dynasty = FROM
-			add_trait = adopted
-			hidden_tooltip = {
-				any_child = {
-					limit = { dynasty = 0 }
-					dynasty = ROOT
-					any_child = {
-						limit = { dynasty = 0 }
-						dynasty = ROOT
-						any_child = {
-							limit = { dynasty = 0 }
-							dynasty = ROOT
+			set_father=FROM
+			dynasty=FROM
+			add_trait=adopted
+			hidden_tooltip={
+				any_child={
+					limit={ dynasty=0 }
+					dynasty=ROOT
+					any_child={
+						limit={ dynasty=0 }
+						dynasty=ROOT
+						any_child={
+							limit={ dynasty=0 }
+							dynasty=ROOT
 						}
 					}
 				}
 			}
-			if = {
-				limit = { FROM = { tier = EMPEROR } }
-				prestige = 200
+			if={
+				limit={ FROM={ tier=EMPEROR } }
+				prestige=200
 			}
-			if = {
-				limit = { FROM = { tier = KING } }
-				prestige = 100
+			if={
+				limit={ FROM={ tier=KING } }
+				prestige=100
 			}
-			if = {
-				limit = { FROM = { tier = DUKE } }
-				prestige = 50
+			if={
+				limit={ FROM={ tier=DUKE } }
+				prestige=50
 			}
-			if = {
-				limit = { FROM = { tier = COUNT } }
-				prestige = 25
+			if={
+				limit={ FROM={ tier=COUNT } }
+				prestige=25
 			}
-			if = {
-				limit = { FROM = { tier = BARON } }
-				prestige = 10
+			if={
+				limit={ FROM={ tier=BARON } }
+				prestige=10
 			}
-			opinion = { who = FROM modifier = opinion_adopted_me }
-			FROM = {
-				any_child = {
-					limit = {
-						is_female = no
-						is_alive = yes
-						NOT = { character = ROOT }
-						NOT = { trait = eunuch }
-						NOT = { trait = bastard }
-						age = 15
+			opinion={ who=FROM modifier=opinion_adopted_me }
+			FROM={
+				any_child={
+					limit={
+						is_female=no
+						is_alive=yes
+						NOT={ character=ROOT }
+						NOT={ trait=eunuch }
+						NOT={ trait=bastard }
+						age=15
 					}
-					opinion = { who = PREV modifier = opinion_adopted_a_son }
+					opinion={ who=PREV modifier=opinion_adopted_a_son }
 				}
-				any_spouse = {
-					limit = { 
-						is_alive = yes 
-						NOT = { any_child = { character = ROOT } }
+				any_spouse={
+					limit={ 
+						is_alive=yes 
+						NOT={ any_child={ character=ROOT } }
 					}
-					opinion = { who = PREV modifier = opinion_adopted_a_son }
+					opinion={ who=PREV modifier=opinion_adopted_a_son }
 				}
-				recalc_succession = yes
+				recalc_succession=yes
 			}
 		}
-		ai_will_do = {
-			factor = 0.25
+		ai_will_do={
+			factor=0.25
 			
-			modifier = {
-				factor = 2
-				trait = eunuch
+			modifier={
+				factor=2
+				trait=eunuch
 			}
-			modifier = {
-				factor = 0.5
-				ROOT = {
-					is_friend = FROM
+			modifier={
+				factor=0.5
+				ROOT={
+					is_friend=FROM
 				}
 			}
-			modifier = {
-				factor = 1.5
-				ROOT = {
-					is_foe = FROM
+			modifier={
+				factor=1.5
+				ROOT={
+					is_foe=FROM
 				}
 			}
-			modifier = {
-				factor = 2
-				dynasty = FROM
+			modifier={
+				factor=2
+				dynasty=FROM
 			}
-			modifier = {
-				factor = 0
-				OR = {
-					NOT = { reverse_opinion = { who = FROM value = 0 } }
-					trait = celibate
-					is_ill = yes
-					trait = maimed
-					trait = infirm
-					spouse = { is_married_matrilineally = yes }
+			modifier={
+				factor=0
+				OR={
+					NOT={ reverse_opinion={ who=FROM value=0 } }
+					trait=celibate
+					is_ill=yes
+					trait=maimed
+					trait=infirm
+					spouse={ is_married_matrilineally=yes }
 				}
 			}
-			modifier = {
-				factor = 0
-				FROM = {
-					any_child = {
-						is_alive = yes
-						age = 15
-						is_female = no
-						OR = {
-							trait = strong
-							trait = tall
-							trait = fair
+			modifier={
+				factor=0
+				FROM={
+					any_child={
+						is_alive=yes
+						age=15
+						is_female=no
+						OR={
+							trait=strong
+							trait=tall
+							trait=fair
 						}
-						NOT = { trait = eunuch }
-						NOT = { trait = blinded }
-						NOT = { trait = crippled }
-						NOT = { trait = bastard }
+						NOT={ trait=eunuch }
+						NOT={ trait=blinded }
+						NOT={ trait=crippled }
+						NOT={ trait=bastard }
 					}
 				}
 			}
 		}
 	}
 	
-	make_noble = {
-		ai_target_filter = home_court
-		filter = home_court
-		from_potential = {
-			ai = no 
-			NOT = { culture = qiang}
-			NOT = { culture = di }
-			NOT = { culture = xianbei }
-			NOT = { culture = xiongnu }
-			NOT = { culture = wuhuan }
+	make_noble={
+		ai_target_filter=home_court
+		filter=home_court
+		from_potential={
+			ai=no 
+			NOT={ culture=qiang}
+			NOT={ culture=di }
+			NOT={ culture=xianbei }
+			NOT={ culture=xiongnu }
+			NOT={ culture=wuhuan }
 		}
-		potential = {			
-			dynasty = 0
-			is_ruler = no
-			liege = { character = FROM }
+		potential={			
+			dynasty=0
+			is_ruler=no
+			liege={ character=FROM }
 		}
-		allow = {
-			FROM = { 
-				custom_tooltip = {
-					text = TOOLTIPMINORDECISIONALLOWWEALTH
-					hidden_tooltip = {
-						OR = {
-							AND = {
-								tier = COUNT
-								treasury = 20
+		allow={
+			FROM={ 
+				custom_tooltip={
+					text=TOOLTIPMINORDECISIONALLOWWEALTH
+					hidden_tooltip={
+						OR={
+							AND={
+								tier=COUNT
+								treasury=20
 							}
-							AND = {
-								tier = DUKE
-								treasury = 40
+							AND={
+								tier=DUKE
+								treasury=40
 							}
-							AND = {
-								higher_tier_than = DUKE
-								treasury = 80
+							AND={
+								higher_tier_than=DUKE
+								treasury=80
 							}
 						}
 					}
 				}
 			}
-			prisoner = no
-			is_female = no
-			is_theocracy = no	
+			prisoner=no
+			is_female=no
+			is_theocracy=no	
 		}
-		effect = {
-			FROM = {
-				add_favor = ROOT
-				if = {
-					limit = { higher_tier_than = DUKE }
-					wealth = -80
-					ROOT = {
-						wealth = 80
-						prestige = 80
+		effect={
+			FROM={
+				add_favor=ROOT
+				if={
+					limit={ higher_tier_than=DUKE }
+					wealth=-80
+					ROOT={
+						wealth=80
+						prestige=80
 					}
 				}
-				if = {
-					limit = { tier = DUKE }
-					wealth = -40
-					ROOT = {
-						wealth = 40
-						prestige = 40
+				if={
+					limit={ tier=DUKE }
+					wealth=-40
+					ROOT={
+						wealth=40
+						prestige=40
 					}
 				}
-				if = {
-					limit = { tier = COUNT }
-					wealth = -20
-					ROOT = {
-						wealth = 20
-						prestige = 20
+				if={
+					limit={ tier=COUNT }
+					wealth=-20
+					ROOT={
+						wealth=20
+						prestige=20
 					}
 				}
 			}
-			custom_tooltip = {
-				text = TOOLTIPmake_noble
-				hidden_tooltip = {
-					random_independent_ruler = { #this so they get an interesting name, rather than 'of <place name>'
-						limit = {
-							any_realm_lord = {
-								is_feudal = yes
-								tier = BARON 
-								NOT = { demesne_size = 2 }
+			custom_tooltip={
+				text=TOOLTIPmake_noble
+				hidden_tooltip={
+					random_independent_ruler={ #this so they get an interesting name, rather than 'of <place name>'
+						limit={
+							any_realm_lord={
+								is_feudal=yes
+								tier=BARON 
+								NOT={ demesne_size=2 }
 							}
 						}
-						random_realm_lord = {
-							limit = { 
-								is_feudal = yes
-								tier = BARON 
-								NOT = { demesne_size = 2 }
+						random_realm_lord={
+							limit={ 
+								is_feudal=yes
+								tier=BARON 
+								NOT={ demesne_size=2 }
 							}
-							abdicate_to = ROOT
-							ROOT = { abdicate_to = PREV }
-							primary_title = { remove_claim = ROOT }
+							abdicate_to=ROOT
+							ROOT={ abdicate_to=PREV }
+							primary_title={ remove_claim=ROOT }
 						}
 					}
-					move_character = FROM				
+					move_character=FROM				
 				}
 			}
-			opinion = {
-				who = FROM
-				modifier = opinion_raised_to_nobility
+			opinion={
+				who=FROM
+				modifier=opinion_raised_to_nobility
 			}
 				
 		}
-		ai_will_do = {
-			factor = 0.1
+		ai_will_do={
+			factor=0.1
 			
-			modifier = {
-				factor = 2.5
-				prestige = 125
+			modifier={
+				factor=2.5
+				prestige=125
 			}
-			modifier = {
-				factor = 5
-				prestige = 250
+			modifier={
+				factor=5
+				prestige=250
 			}
-			modifier = {
-				factor = 7.5
-				prestige = 500
+			modifier={
+				factor=7.5
+				prestige=500
 			}
-			modifier = {
-				factor = 15
-				prestige = 1000
+			modifier={
+				factor=15
+				prestige=1000
+			}
+		}
+	}
+	
+	marry_lady={
+		is_high_prio=yes
+		ai_target_filter=all
+		filter=all
+		
+		from_potential={
+			is_ruler=yes
+			k_confucian={
+				has_holder=yes
+				holder_scope={
+					OR={
+						is_married=no
+						spouse={ NOT={ has_landed_title=c_empress } }
+					}
+					OR={
+						age=14
+						AND={
+							is_female=yes
+							age=12
+						}
+					}
+				}
+			}
+			OR={
+				has_landed_title=k_confucian
+				AND={
+					NOT={
+						has_landed_title=k_confucian
+					}
+					primary_title={
+						has_title_flag=premier_title
+					}
+					has_global_flag=influence_emp_1
+					k_confucian={
+						holder_scope={
+							NOR={
+								is_landed=no
+								any_demesne_title={
+									de_jure_liege_or_above=ROOT
+								}
+								capital_scope={
+									owner={
+										top_liege={
+											character=ROOT
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	
+		potential={
+			prisoner=no
+			OR={
+				k_confucian={
+					holder_scope={
+						OR={
+							is_married=ROOT
+							is_consort=ROOT
+						}
+					}
+				}
+				AND={
+					liege={
+						OR={
+							has_landed_title=k_confucian
+							has_landed_title=c_empress
+						}
+					}
+					trait=inner_court
+				}
+			}
+			OR={
+				AND={
+					FROM={
+						is_female=no
+					}
+					is_female=yes
+					age=12
+				}
+				AND={
+					FROM={
+						is_female=yes
+					}
+					is_female=no
+					age=14
+				}
+			}
+		}
+		allow={
+			FROM={
+				has_regent=no
+				wealth=500
+			}
+		}
+		effect={
+			FROM={
+				wealth=-500
+			}
+			if={
+				limit={trait=inner_court}
+				remove_trait=inner_court
+			}
+			k_confucian={
+				holder_scope={
+					save_event_target_as=target_emperor
+				}
+			}
+			if={
+				limit={
+					event_target:target_emperor={
+						is_married=yes
+						NOT={ is_married=ROOT }
+					}
+				}
+				event_target:target_emperor={
+					spouse={ save_event_target_as=target_wife }
+				}
+				event_target:target_wife={
+					opinion={ modifier=opinion_divorced who=FROM }
+					remove_spouse=yes
+					add_consort=event_target:target_emperor
+				}
+			}
+			add_spouse=event_target:target_emperor
+			hidden_tooltip={
+				if={
+					limit={
+						has_global_flag=influence_ems_3
+						c_empress={ has_holder=yes }
+					}
+					c_empress={
+						holder_scope={
+							character_event={ id=MAN.1 }
+						}
+					}
+					break=yes
+				}
+				character_event={ id=MAN.2 }
+				opinion={
+					modifier=opinion_ennobled
+					who=FROM
+				}
+			}
+		}
+		revoke_allowed={
+			always=no
+		}
+		ai_will_do={
+			factor=1
+			
+			modifier={
+				factor=0.9 # Less likely to do it
+			}
+			modifier={
+				factor=0.1
+				age=35
+			}
+			modifier={
+				factor=0.25
+				age=25
+			}
+			modifier={
+				factor=2
+				NOT={ age=20 }
+			}
+			modifier={
+				factor=5
+				trait=destined
+			}
+			modifier={
+				factor=2
+				is_councillor=yes
+			}
+			modifier={
+				factor=2
+				has_minor_title=title_commander
+			}
+			modifier={
+				factor=1.5
+				OR={
+					trait=zealous
+					trait=ambitious
+				}
+			}
+			modifier={
+				factor=2
+				reverse_opinion={
+					who=FROM value=75
+				}
+			}
+			modifier={
+				factor=5
+				reverse_opinion={
+					who=FROM value=100
+				}
+			}
+			modifier={
+				factor=1.5
+				NOT={ dynasty=none }
+			}
+			modifier={
+				factor=5
+				is_friend=FROM
+			}
+			modifier={
+				factor=10
+				is_lover=FROM
+			}
+			modifier={
+				factor=0
+				is_foe=FROM
+			}
+			modifier={
+				factor=0
+				FROM={ has_landed_title=k_confucian }
+				dynasty=FROM
+			}
+			modifier={
+				factor=0
+				FROM={ has_landed_title=k_confucian }
+				is_child_of=FROM
+			}
+			modifier={
+				factor=0
+				FROM={ has_landed_title=k_confucian }
+				is_close_relative=FROM
+			}
+			modifier={
+				factor=10
+				NOT={ FROM={ has_landed_title=k_confucian } }
+				dynasty=FROM
+			}
+			modifier={
+				factor=5
+				NOT={ FROM={ has_landed_title=k_confucian } }
+				is_child_of=FROM
+			}
+			modifier={
+				factor=2
+				NOT={ FROM={ has_landed_title=k_confucian } }
+				is_close_relative=FROM
 			}
 		}
 	}

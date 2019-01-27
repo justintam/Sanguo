@@ -6,6 +6,12 @@
 1.1.1={
 	liege=d_wei
 }
+120.1.1={
+	holder=11301 #Tan Yilu
+}
+150.1.1={
+	holder=0 #None
+}
 170.1.1={
 	holder=3471 #Wang Hong
 }

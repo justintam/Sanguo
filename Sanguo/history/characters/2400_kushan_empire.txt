@@ -56,7 +56,7 @@
 	}
 }
 2404 = {   ### 5th Emperor
-	name="Kanishka I"
+	name="Kanishka"
 	dynasty=1000
 	religion="buddhist"
 	culture="yuezhi"
@@ -95,7 +95,7 @@
 	}
 }
 2407 = {   ### 8th Emperor
-	name="Vasudeva I"
+	name="Vasudeva"
 	dynasty=1000
 	religion="buddhist"
 	culture="yuezhi"
@@ -108,7 +108,7 @@
 	}
 }
 2408 = {   ### 9th Emperor
-	name="Kanishka II"
+	name="Kanishka"
 	dynasty=1000
 	religion="buddhist"
 	culture="yuezhi"
@@ -134,7 +134,7 @@
 	}
 }
 2410 = {   ### 11th Emperor
-	name="Kanishka III"
+	name="Kanishka"
 	dynasty=1000
 	religion="buddhist"
 	culture="yuezhi"
@@ -147,7 +147,7 @@
 	}
 }
 2411 = {   ### 12th Emperor
-	name="Vasudeva II"
+	name="Vasudeva"
 	dynasty=1000
 	religion="buddhist"
 	culture="yuezhi"
@@ -160,7 +160,7 @@
 	}
 }
 2412 = {
-	name="Vasudeva III"
+	name="Vasudeva"
 	dynasty=1000
 	religion="buddhist"
 	culture="yuezhi"
@@ -173,28 +173,28 @@
 	}
 }
 2413 = {
-	name="Vasudeva IV"
+	name="Vasudeva"
 	dynasty=1000
 	religion="buddhist"
 	culture="yuezhi"
-	father=2411
-	275.1.1={
+	father=2412
+	290.1.1={
 		birth=yes
 	}
-	335.1.1={
+	350.1.1={
 		death=yes
 	}
 }
 2414 = {
-	name="Vasudeva of Kabul"
+	name="Vasudeva"
 	dynasty=1000
 	religion="buddhist"
 	culture="yuezhi"
-	father=2411
-	275.1.1={
+	father=2413
+	315.1.1={
 		birth=yes
 	}
-	335.1.1={
+	390.1.1={
 		death=yes
 	}
 }
@@ -212,7 +212,7 @@
 	}
 }
 2416 = {   ### 14th Emperor
-	name="Shaka I"
+	name="Shaka"
 	dynasty=1000
 	religion="buddhist"
 	culture="yuezhi"
@@ -237,11 +237,9 @@
 		death=yes
 	}
 }
-#2418 Monk
-#2419 Monk
-2420 = {
+2418 = {
 	name="Shaka"
-	dynasty=1004
+	dynasty=1002
 	religion="buddhist"
 	culture="yuezhi"
 	160.1.1={
@@ -263,7 +261,55 @@
 		death=yes
 	}
 }
+#2419 Monk - UNUSED
+2420 = {
+	name="Lokaksema"
+	dynasty=1003
+	religion="buddhist"
+	culture="yuezhi"
+	trait="mastermind_theologian"
+	147.1.1={
+		birth=yes
+	}
+	178.1.1={
+		employer=30
+	}
+	189.5.13={
+		employer=2406
+	}
+	190.1.1={
+		employer=2407
+	}
+	210.1.1={
+		death = yes
+	}
+}
 2421 = {
+	name="Yao"
+	dynasty=1009
+	religion="buddhist"
+	culture="yuezhi"
+	trait="scholarly_theologian"
+	156.1.1={
+		birth=yes
+	}
+	178.1.1={
+		employer=30
+	}
+	189.5.13={
+		employer=33
+	}
+	189.9.28={
+		employer=34 #Xian
+	}
+	220.12.10={
+		employer=10400 #Cao Pi
+	}
+	226.1.1={
+		death=yes
+	}
+}
+2422 = {
 	name="Deva"
 	religion="tengri_pagan"
 	culture="yuezhi"
@@ -271,6 +317,120 @@
 		birth=yes
 	}
 	240.1.1={
+		death=yes
+	}
+}
+
+### 2425 - 2499 ### Jie People
+
+2425 = {
+	name="Xie"
+	dynasty=1010
+	religion="tengri_pagan"
+	culture="jie"
+	152.1.1={
+		birth=yes
+	}
+	209.1.1={
+		death=yes
+	}
+}
+2426 = {
+	name="Yeyiyu"
+	dynasty=1010
+	religion="tengri_pagan"
+	culture="jie"
+	father=2425
+	180.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=2425
+	}
+	249.1.1={
+		death=yes
+	}
+}
+2427 = {
+	name="Zhouhezhu"
+	dynasty=1010
+	religion="tengri_pagan"
+	culture="jie"
+	father=2426
+	236.1.1={
+		birth=yes
+		employer=2426
+	}
+	249.1.1={
+		employer=2428
+	}
+	304.1.1={
+		death=yes
+	}
+}
+2428 = {
+	name="Beixie"
+	dynasty=1010
+	religion="tengri_pagan"
+	culture="jie"
+	father=2425
+	207.1.1={
+		birth=yes
+		employer=2425
+	}
+	209.1.1={
+		employer=2426
+	}
+	270.1.1={
+		death=yes
+	}
+}
+2429 = {
+	name="Koumi"
+	dynasty=1010
+	religion="tengri_pagan"
+	culture="jie"
+	father=2428
+	260.1.1={
+		birth=yes
+		employer=2428
+	}
+	270.1.1={
+		employer=2427
+	}
+	314.1.1={
+		death=yes
+	}
+}
+2430 = {
+	name="Bei"
+	dynasty=1010
+	religion="tengri_pagan"
+	culture="jie"
+	father=2427
+	trait="brilliant_strategist"
+	274.1.1={
+		birth=yes
+		employer=2427
+	}
+	304.8.1={
+		name="Le"
+	}
+	333.1.1={
+		death=yes
+	}
+}
+2431 = {
+	name="Hu"
+	dynasty=1010
+	religion="tengri_pagan"
+	culture="jie"
+	father=2429
+	295.1.1={
+		birth=yes
+		employer=2427
+	}
+	349.1.1={
 		death=yes
 	}
 }

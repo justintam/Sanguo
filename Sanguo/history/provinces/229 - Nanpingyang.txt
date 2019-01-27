@@ -14,5 +14,6 @@ b_luqiuting = temple
 # Misc
 culture = han
 religion = taiping
+terrain = plains
 
 #History

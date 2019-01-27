@@ -12,6 +12,12 @@
 25.1.1={
 	holder=0 #None
 }
+108.11.1={
+	holder=4518 #Deng Zhi
+}
+111.1.1={
+	holder=0 #None
+}
 140.1.1={
 	holder=4404 #Zhao Jie
 }
@@ -20,6 +26,12 @@
 }
 160.1.1={
 	holder=1287 #Yang Bing
+}
+162.1.1={
+	holder=4531 #Deng Wanshi
+}
+165.1.1={
+	holder=0 #None
 }
 166.1.1={
 	holder=4283 #Zhou Jing
@@ -30,7 +42,10 @@
 169.1.1={
 	holder=0 #None
 }
-178.1.1={
+178.3.1={
+	holder=3641 #Zhang Hao
+}
+178.10.1={
 	holder=4297 #Qiao Xuan
 }
 179.1.1={

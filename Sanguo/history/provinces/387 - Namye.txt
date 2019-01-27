@@ -13,5 +13,6 @@ b_namye = tribal
 # Misc
 culture = samhan
 religion = shamanist
+terrain = hills
 
 #History

@@ -12,144 +12,1092 @@
 #                                         #
 ###########################################
 
-namespace = FIN
+namespace=FIN
 
 # Mohe in Goguryeo
-# Xiongnu in North
-# Yuezhi in West
 # Nanyue in South
+# Xiongnu in North
 # Roman legion?
 
-# Rise of the North
-narrative_event = {
-	id = FIN.1
-	desc = EVTDESC_FIN.1
-	title = EVTTITLE_FIN.1
-	picture = GFX_evt_mongols_rise
+# Wu Hu Uprising
+narrative_event={
+	id=FIN.1
+	desc=EVTDESC_FIN.1
+	title=EVTTITLE_FIN.1
+	picture=GFX_evt_mongols_rise
 
 	#Fast event triggers
-	ai = no
+	ai=no
 
-	major = yes
+	major=yes
 	
-	trigger = {
-		year = 300
-		NOT = { year = 600 }
-		any_playable_ruler = {
-			culture_group = mongol
+	trigger={
+		year=304
+		NOT={ year=440 }
+		any_playable_ruler={
+			ai=yes
+			OR={
+				culture=xianbei
+				culture=xiongnu
+				culture=qiang
+				culture=di
+				culture=jie
+			}
 		}
-		NOT = { culture_group = mongol }
-		NOT = { has_global_flag = mongol_rise }
-		NOT = { has_global_flag = mongol_end }
+		OR={
+			k_confucian={
+				has_holder=yes
+			}
+			any_independent_ruler={
+				tier=EMPEROR
+				realm_size=125
+			}
+		}
+		NOT={ has_global_flag=wuhu_rise }
+		NOT={ has_global_flag=wuhu_end }
 	}
 	
-	mean_time_to_happen = {
-		days = 1
+	mean_time_to_happen={
+		days=15
 	}
 	
-	immediate = {
-		set_global_flag = mongol_rise
-		chronicle = {
-			entry = CHRONICLE_MONGOL_RISE
-			portrait = [Root.GetID]
+	immediate={
+		set_global_flag=wuhu_rise
+		chronicle={
+			entry=CHRONICLE_WUHU_RISE
+			portrait=[Root.GetID]
 		}
+		character_event={ id=FIN.3 }
 	}
 	
-	option = {
-		name = "OHNO"
-		trigger = {
-			region = world_china
-		}
+	option={
+		name="OHNO"
 	}
 }
 
-#End of the Mongols
-narrative_event = {
-	id = FIN.2
-	desc = EVTDESC_FIN.2
-	title = EVTTITLE_FIN.2
-	picture = GFX_evt_mongols_end
+#End of the Wuhu
+narrative_event={
+	id=FIN.2
+	desc=EVTDESC_FIN.2
+	title=EVTTITLE_FIN.2
+	picture=GFX_evt_mongols_end
 
 	#Fast event triggers
-	ai = no
+	ai=no
 
-	major = yes
+	major=yes
 	
-	trigger = {
-		has_global_flag = mongol_rise
-		OR = {
-			year = 600
-			NOT ={
-				any_playable_ruler = {
-					culture_group = mongol
+	trigger={
+		has_global_flag=wuhu_rise
+		OR={
+			year=440
+			NOT={
+				any_playable_ruler={
+					ai=yes
+					OR={
+						culture=xianbei
+						culture=xiongnu
+						culture=qiang
+						culture=di
+						culture=jie
+					}
 				}
 			}
 		}
-		NOT = { culture_group = mongol }
-		NOT = { has_global_flag = mongol_end }
+		NOT={ has_global_flag=wuhu_end }
 	}
 	
-	mean_time_to_happen = {
-		days = 1
+	mean_time_to_happen={
+		days=5
 	}
 	
-	immediate = {
-		set_global_flag = mongol_end
-		clr_global_flag = mongol_rise
-		chronicle = {
-			entry = CHRONICLE_MONGOL_END
-			portrait = [Root.GetID]
+	immediate={
+		set_global_flag=wuhu_end
+		clr_global_flag=wuhu_rise
+		chronicle={
+			entry=CHRONICLE_WUHU_END
+			portrait=[Root.GetID]
 		}
 	}
 	
-	option = {
-		name = "EXCELLENT"
-		trigger = {
-			region = world_china
+	option={
+		name="EXCELLENT"
+	}
+}
+
+#Spawn Mongols
+character_event={
+	id=FIN.3
+	
+	hide_window=yes
+	
+	is_triggered_only=yes
+	
+	ai=no
+	
+	trigger={
+		has_global_flag=wuhu_rise
+		NOT={ has_global_flag=wuhu_end }
+	}
+	
+	weight_multiplier={
+		days=1
+	}
+	
+	immediate={
+		random_playable_ruler={
+			limit={
+				ai=yes
+				is_landed=yes
+				culture=xianbei
+				NOT={
+					has_character_flag=wuhu_horde
+				}
+			}
+			character_event={ id=FIN.4 }
+		}
+		hidden_tooltip={}
+		random_playable_ruler={
+			limit={
+				ai=yes
+				is_landed=yes
+				culture=xiongnu
+				NOT={
+					has_character_flag=wuhu_horde
+				}
+			}
+			character_event={ id=FIN.4 }
+		}
+		hidden_tooltip={}
+		random_playable_ruler={
+			limit={
+				ai=yes
+				is_landed=yes
+				culture=qiang
+				NOT={
+					has_character_flag=wuhu_horde
+				}
+			}
+			character_event={ id=FIN.4 }
+		}
+		hidden_tooltip={}
+		random_playable_ruler={
+			limit={
+				ai=yes
+				is_landed=yes
+				culture=di
+				NOT={
+					has_character_flag=wuhu_horde
+				}
+			}
+			character_event={ id=FIN.4 }
+		}
+		hidden_tooltip={}
+		random_playable_ruler={
+			limit={
+				ai=yes
+				is_landed=yes
+				culture=jie
+				NOT={
+					has_character_flag=wuhu_horde
+				}
+			}
+			character_event={ id=FIN.4 }
 		}
 	}
 }
 
 #Spawn Mongols
-character_event = {
-	id = FIN.3
+character_event={
+	id=FIN.4
 	
-	hide_window = yes
+	hide_window=yes
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	only_playable = yes
-	only_independent = yes
-	culture_group = mongol
-	
-	trigger = {
-		has_global_flag = mongol_rise
-	}
-	
-	immediate = {
-		capital_scope = {
-			owner = {
-				spawn_unit = {
-					province = PREV
-					home = PREV
-					owner = THIS
-					troops = {
-						knights = { 500 500 }
-						light_infantry = { 2000 2000 }
-						heavy_infantry = { 2000 2000 }
-						light_cavalry = { 1000 1000 }
-						horse_archers = { 1000 1000 }
-						archers = { 2000 2000 }
-						pikemen = { 2500 2500 }
+	trigger={
+		has_global_flag=wuhu_rise
+		NOT={ has_global_flag=wuhu_end }
+		NOT={ has_character_flag=wuhu_horde }
+		OR={
+			k_confucian={
+				has_holder=yes
+				holder_scope={
+					NAND={
+						war_with=ROOT
+						is_primary_war_defender=yes
 					}
-					attrition = 1.0
+				}
+			}
+			any_independent_ruler={
+				tier=EMPEROR
+				realm_size=125
+				NAND={
+					war_with=ROOT
+					is_primary_war_defender=yes
 				}
 			}
 		}
-		k_confucian = {
-			reverse_war = {
-				target = ROOT
-				casus_belli = invasion
+	}
+	
+	immediate={
+		if={
+			limit={ is_tributary=yes }
+			suzerain={ remove_tributary=ROOT }
+		}
+		if={
+			limit={
+				independent=no
+			}
+			set_defacto_liege=THIS
+		}
+		if={
+			limit={
+				is_nomadic=no
+			}
+			set_government_type=nomadic_government
+		}
+		if={
+			limit={
+				OR={
+					culture_group=mongol
+					culture=jie
+				}
+				NOT={ religion=tengri_pagan }
+			}
+			religion=tengri_pagan
+		}
+		if={
+			limit={
+				culture=qiang
+				NOT={ religion=baishi }
+			}
+			religion=baishi
+		}
+		if={
+			limit={
+				culture=di
+				NOT={ religion=baima }
+			}
+			religion=baima
+		}
+		set_character_flag=wuhu_horde
+		population=15000
+		manpower=5000
+		if={
+			limit={
+				culture_group=mongol
+			}
+			spawn_mongol_army_effect=yes
+		}
+		if={
+			limit={
+				NOT={culture_group=mongol}
+			}
+			spawn_tibetan_army_effect=yes
+		}
+		if={
+			limit={
+				k_confucian={
+					has_holder=yes
+					holder_scope={
+						NAND={
+							war_with=ROOT
+							is_primary_war_defender=yes
+						}
+					}
+				}
+			}
+			k_confucian={
+				holder_scope={
+					save_event_target_as=target_war
+				}
+			}
+		}
+		if={
+			limit={
+				k_confucian={
+					has_holder=no
+				}
+				any_independent_ruler={
+					tier=EMPEROR
+					realm_size=125
+					NAND={
+						war_with=ROOT
+						is_primary_war_defender=yes
+					}
+					shares_realm_border_with=ROOT
+				}
+			}
+			random_independent_ruler={
+				limit={
+					tier=EMPEROR
+					realm_size=125
+					NAND={
+						war_with=ROOT
+						is_primary_war_defender=yes
+					}
+					shares_realm_border_with=ROOT
+				}
+				save_event_target_as=target_war
+			}
+		}
+		if={
+			limit={
+				k_confucian={
+					has_holder=no
+				}
+				NOT={
+					any_independent_ruler={
+						tier=EMPEROR
+						realm_size=125
+						NAND={
+							war_with=ROOT
+							is_primary_war_defender=yes
+						}
+						shares_realm_border_with=ROOT
+					}
+				}
+			}
+			random_independent_ruler={
+				limit={
+					tier=EMPEROR
+					realm_size=125
+					NAND={
+						war_with=ROOT
+						is_primary_war_defender=yes
+					}
+				}
+				save_event_target_as=target_war
+			}
+		}
+		event_target:target_war={
+			primary_title={
+				reverse_war={
+					target=ROOT
+					casus_belli=nomad_invasion
+					thirdparty_title=THIS
+				}
+			}
+		}
+	}
+}
+
+#Khu Lien
+narrative_event={
+	id=FIN.5
+	desc=EVTDESC_FIN.5
+	title=EVTTITLE_FIN.5
+	picture=GFX_evt_yue_rise
+	
+	ai=no
+	
+	major=yes
+	
+	trigger={
+		year=248
+		NOT={ year=250 }
+		any_playable_ruler={
+			ai=yes
+			culture=nanyue
+			NOT={
+				has_character_flag=yue_horde
+			}
+		}
+		OR={
+			e_sun={
+				has_holder=yes
+			}
+			k_confucian={
+				has_holder=yes
+			}
+			any_independent_ruler={
+				tier=EMPEROR
+				realm_size=125
+			}
+		}
+		NOT={ has_global_flag=yue_rise }
+		NOT={ has_global_flag=yue_end }
+	}
+	
+	mean_time_to_happen={
+		days=15
+	}
+	
+	immediate={
+		set_global_flag=yue_rise
+		chronicle={
+			entry=CHRONICLE_YUE_RISE
+			portrait=[Root.GetID]
+		}
+		if={
+			limit={
+				any_playable_ruler={
+					character=1902
+				}
+			}
+			random_playable_ruler={
+				limit={ character=1902 }
+				save_event_target_as=target_yue
+			}
+		}
+		if={
+			limit={
+				NOT={
+					any_playable_ruler={
+						character=1902
+					}
+				}
+			}
+			random_playable_ruler={
+				limit={
+					ai=yes
+					culture=nanyue
+				}
+				save_event_target_as=target_yue
+			}
+		}
+		event_target:target_yue={
+			character_event={ id=FIN.7 }
+		}
+	}
+	
+	option={
+		name="OHNO"
+	}
+}
+
+#End of the Yue
+narrative_event={
+	id=FIN.6
+	desc=EVTDESC_FIN.6
+	title=EVTTITLE_FIN.6
+	picture=GFX_evt_mongols_end
+
+	#Fast event triggers
+	ai=no
+
+	major=yes
+	
+	trigger={
+		year=250
+		has_global_flag=yue_rise
+		NOT={
+			any_playable_ruler={
+				ai=yes
+				culture=nanyue
+				war=yes
+			}
+		}
+		NOT={ has_global_flag=yue_end }
+	}
+	
+	mean_time_to_happen={
+		days=5
+	}
+	
+	immediate={
+		set_global_flag=yue_end
+		clr_global_flag=yue_rise
+		chronicle={
+			entry=CHRONICLE_YUE_END
+			portrait=[Root.GetID]
+		}
+	}
+	
+	option={
+		name="EXCELLENT"
+	}
+}
+
+#Spawn Yue
+character_event={
+	id=FIN.7
+	
+	hide_window=yes
+	
+	is_triggered_only=yes
+	
+	trigger={
+		has_global_flag=yue_rise
+		NOT={ has_global_flag=yue_end }
+		NOT={ has_character_flag=yue_horde }
+	}
+	
+	immediate={
+		if={
+			limit={ is_tributary=yes }
+			suzerain={ remove_tributary=ROOT }
+		}
+		if={
+			limit={
+				culture=nanyue
+				NOT={ religion=animist }
+			}
+			religion=animist
+		}
+		if={
+			limit={
+				independent=no
+			}
+			set_defacto_liege=THIS
+		}
+		set_character_flag=yue_horde
+		if={
+			limit={
+				e_sun={
+					has_holder=yes
+					NAND={
+						war_with=ROOT
+						is_primary_war_defender=yes
+					}
+				}
+			}
+			e_sun={
+				holder_scope={
+					save_event_target_as=target_war
+				}
+			}
+		}
+		if={
+			limit={
+				e_sun={
+					has_holder=no
+				}
+				k_confucian={
+					has_holder=yes
+					holder_scope={
+						NAND={
+							war_with=ROOT
+							is_primary_war_defender=yes
+						}
+					}
+				}
+			}
+			k_confucian={
+				holder_scope={
+					save_event_target_as=target_war
+				}
+			}
+		}
+		if={
+			limit={
+				e_sun={
+					has_holder=no
+				}
+				k_confucian={
+					has_holder=no
+				}
+				any_independent_ruler={
+					tier=EMPEROR
+					realm_size=125
+					NAND={
+						war_with=ROOT
+						is_primary_war_defender=yes
+					}
+					shares_realm_border_with=ROOT
+				}
+			}
+			random_independent_ruler={
+				limit={
+					tier=EMPEROR
+					realm_size=125
+					NAND={
+						war_with=ROOT
+						is_primary_war_defender=yes
+					}
+					shares_realm_border_with=ROOT
+				}
+				save_event_target_as=target_war
+			}
+		}
+		if={
+			limit={
+				e_sun={
+					has_holder=no
+				}
+				k_confucian={
+					has_holder=no
+				}
+				NOT={
+					any_independent_ruler={
+						tier=EMPEROR
+						realm_size=125
+						NAND={
+							war_with=ROOT
+							is_primary_war_defender=yes
+						}
+						shares_realm_border_with=ROOT
+					}
+				}
+			}
+			random_independent_ruler={
+				limit={
+					tier=EMPEROR
+					realm_size=125
+					NAND={
+						war_with=ROOT
+						is_primary_war_defender=yes
+					}
+				}
+				save_event_target_as=target_war
+			}
+		}
+		spawn_unit={
+			province=117
+			home=117
+			owner=ROOT
+			troops={
+				light_infantry={ 8000 8000 }
+				heavy_infantry={ 6000 6000 }
+				archers={ 4000 4000 }
+				pikemen={ 5000 5000 }
+				war_elephants={ 2000 2000 }
+			}
+			attrition=0
+			disband_on_peace=yes
+		}
+		create_random_soldier={
+			random_traits=yes
+			dynasty=none
+			religion=ROOT
+			culture=ROOT
+			female=yes
+			age=30
+			trait=skilled_tactician
+			trait=duel_skilled_warrior
+			trait=unyielding_leader
+			trait=war_elephant_leader
+		}
+		create_random_soldier={
+			random_traits=yes
+			dynasty=none
+			religion=ROOT
+			culture=ROOT
+			female=no
+			age=23
+			trait=tough_soldier
+			trait=duel_skilled_warrior
+			trait=organizer
+		}
+		create_random_soldier={
+			random_traits=yes
+			dynasty=none
+			religion=ROOT
+			culture=ROOT
+			female=yes
+			age=23
+			trait=tough_soldier
+			trait=duel_skilled_warrior
+			trait=siege_leader
+		}
+		event_target:target_war={
+			primary_title={
+				reverse_war={
+					target=ROOT
+					casus_belli=invasion
+					thirdparty_title=THIS
+				}
+			}
+		}
+	}
+}
+
+#Goguryeo
+narrative_event={
+	id=FIN.8
+	desc=EVTDESC_FIN.8
+	title=EVTTITLE_FIN.8
+	picture=GFX_evt_korean_rise
+	
+	ai=no
+	
+	major=yes
+	
+	trigger={
+		year=240
+		NOT={ year=666 }
+		any_playable_ruler={
+			ai=yes
+			culture=joseon
+			is_adult=yes
+			OR={
+				has_landed_title=k_goguryeo
+				has_landed_title=e_korea
+			}
+			NOT={
+				has_character_flag=korean_horde
+			}
+		}
+		OR={
+			k_ping={
+				has_holder=yes
+			}
+			k_confucian={
+				has_holder=yes
+			}
+			any_independent_ruler={
+				tier=EMPEROR
+				realm_size=125
+			}
+		}
+		NOT={ has_global_flag=korean_rise }
+		NOT={ has_global_flag=korean_end }
+	}
+	
+	mean_time_to_happen={
+		days=15
+	}
+	
+	immediate={
+		set_global_flag=korean_rise
+		chronicle={
+			entry=CHRONICLE_KOREAN_RISE
+			portrait=[Root.GetID]
+		}
+		character_event={ id=FIN.10 }
+	}
+	
+	option={
+		name="OHNO"
+	}
+}
+
+#End of the Koreans
+narrative_event={
+	id=FIN.9
+	desc=EVTDESC_FIN.9
+	title=EVTTITLE_FIN.9
+	picture=GFX_evt_mongols_end
+
+	#Fast event triggers
+	ai=no
+
+	major=yes
+	
+	trigger={
+		year=666
+		has_global_flag=korean_rise
+		NOT={
+			any_playable_ruler={
+				ai=yes
+				culture=joseon
+				OR={
+					has_landed_title=k_goguryeo
+					has_landed_title=e_korea
+				}
+				war=yes
+			}
+		}
+		NOT={ has_global_flag=korean_end }
+	}
+	
+	mean_time_to_happen={
+		days=5
+	}
+	
+	immediate={
+		set_global_flag=korean_end
+		clr_global_flag=korean_rise
+		chronicle={
+			entry=CHRONICLE_KOREAN_END
+			portrait=[Root.GetID]
+		}
+	}
+	
+	option={
+		name="EXCELLENT"
+	}
+}
+
+#Spawn Koreans
+character_event={
+	id=FIN.10
+	
+	hide_window=yes
+	
+	ai=no
+	
+	trigger={
+		has_global_flag=korean_rise
+		NOT={ has_global_flag=korean_end }
+	}
+	
+	mean_time_to_happen={
+		years=100
+		modifier={
+			factor=2
+			any_playable_ruler={
+				ai=yes
+				is_landed=yes
+				culture=joseon
+				is_adult=yes
+				OR={
+					has_landed_title=k_goguryeo
+					has_landed_title=e_korea
+				}
+				NOT={ has_character_flag=korean_horde }
+				trait=ambitious
+			}
+		}
+		modifier={
+			factor=2
+			any_playable_ruler={
+				ai=yes
+				is_landed=yes
+				culture=joseon
+				is_adult=yes
+				OR={
+					has_landed_title=k_goguryeo
+					has_landed_title=e_korea
+				}
+				NOT={ has_character_flag=korean_horde }
+				trait=zealous
+			}
+		}
+		modifier={
+			factor=0.5
+			any_playable_ruler={
+				ai=yes
+				is_landed=yes
+				culture=joseon
+				is_adult=yes
+				OR={
+					has_landed_title=k_goguryeo
+					has_landed_title=e_korea
+				}
+				NOT={ has_character_flag=korean_horde }
+				trait=arbitrary
+			}
+		}
+		modifier={
+			factor=0.5
+			any_playable_ruler={
+				ai=yes
+				is_landed=yes
+				culture=joseon
+				is_adult=yes
+				OR={
+					has_landed_title=k_goguryeo
+					has_landed_title=e_korea
+				}
+				NOT={ has_character_flag=korean_horde }
+				trait=content
+			}
+		}
+	}
+	
+	immediate={
+		random_playable_ruler={
+			limit={
+				ai=yes
+				is_landed=yes
+				culture=joseon
+				is_adult=yes
+				OR={
+					has_landed_title=k_goguryeo
+					has_landed_title=e_korea
+				}
+				NOT={ has_character_flag=korean_horde }
+			}
+			character_event={ id=FIN.11 }
+		}
+	}
+}
+
+#Spawn Koreans
+character_event={
+	id=FIN.11
+	
+	hide_window=yes
+	
+	is_triggered_only=yes
+	
+	trigger={
+		has_global_flag=korean_rise
+		NOT={ has_global_flag=korean_end }
+		NOT={ has_character_flag=korean_horde }
+	}
+	
+	immediate={
+		if={
+			limit={ is_tributary=yes }
+			suzerain={ remove_tributary=ROOT }
+		}
+		if={
+			limit={
+				culture=joseon
+				NOT={ religion=shamanist }
+			}
+			religion=shamanist
+		}
+		if={
+			limit={
+				independent=no
+			}
+			set_defacto_liege=THIS
+		}
+		set_character_flag=korean_horde
+		if={
+			limit={
+				k_ping={
+					has_holder=yes
+					holder_scope={
+						NAND={
+							war_with=ROOT
+							is_primary_war_defender=yes
+						}
+					}
+				}
+			}
+			k_ping={
+				holder_scope={
+					liege={
+						save_event_target_as=target_war
+					}
+				}
+			}
+		}
+		if={
+			limit={
+				k_ping={
+					has_holder=no
+				}
+				k_confucian={
+					has_holder=yes
+					holder_scope={
+						NAND={
+							war_with=ROOT
+							is_primary_war_defender=yes
+						}
+					}
+				}
+			}
+			k_confucian={
+				holder_scope={
+					save_event_target_as=target_war
+				}
+			}
+		}
+		if={
+			limit={
+				k_ping={
+					has_holder=no
+				}
+				k_confucian={
+					has_holder=no
+				}
+				any_independent_ruler={
+					tier=EMPEROR
+					realm_size=125
+					NAND={
+						war_with=ROOT
+						is_primary_war_defender=yes
+					}
+					shares_realm_border_with=ROOT
+				}
+			}
+			random_independent_ruler={
+				limit={
+					tier=EMPEROR
+					realm_size=125
+					NAND={
+						war_with=ROOT
+						is_primary_war_defender=yes
+					}
+					shares_realm_border_with=ROOT
+				}
+				save_event_target_as=target_war
+			}
+		}
+		if={
+			limit={
+				k_ping={
+					has_holder=no
+				}
+				k_confucian={
+					has_holder=no
+				}
+				NOT={
+					any_independent_ruler={
+						tier=EMPEROR
+						realm_size=125
+						NAND={
+							war_with=ROOT
+							is_primary_war_defender=yes
+						}
+						shares_realm_border_with=ROOT
+					}
+				}
+			}
+			random_independent_ruler={
+				limit={
+					tier=EMPEROR
+					realm_size=125
+					NAND={
+						war_with=ROOT
+						is_primary_war_defender=yes
+					}
+				}
+				save_event_target_as=target_war
+			}
+		}
+		spawn_unit={
+			province=377 #Goguryeo
+			home=377 #Goguryeo
+			owner=ROOT
+			troops={
+				knights={ 1000 1000 }
+				light_infantry={ 8000 8000 }
+				heavy_infantry={ 6000 6000 }
+				light_cavalry={ 2000 2000 }
+				archers={ 4000 4000 }
+				pikemen={ 4000 4000 }
+			}
+			attrition=0
+			disband_on_peace=yes
+		}
+		create_random_soldier={
+			random_traits=yes
+			dynasty=none
+			religion=ROOT
+			culture=ROOT
+			female=no
+			age=30
+			trait=skilled_tactician
+			trait=duel_skilled_warrior
+			trait=unyielding_leader
+			trait=siege_leader
+		}
+		create_random_soldier={
+			random_traits=yes
+			dynasty=none
+			religion=ROOT
+			culture=ROOT
+			female=no
+			age=23
+			trait=tough_soldier
+			trait=duel_skilled_warrior
+			trait=organizer
+		}
+		create_random_soldier={
+			random_traits=yes
+			dynasty=none
+			religion=ROOT
+			culture=ROOT
+			female=no
+			age=23
+			trait=tough_soldier
+			trait=duel_skilled_warrior
+			trait=inspiring_leader
+		}
+		event_target:target_war={
+			primary_title={
+				reverse_war={
+					target=ROOT
+					casus_belli=invasion
+					thirdparty_title=THIS
+				}
 			}
 		}
 	}

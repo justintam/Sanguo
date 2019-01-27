@@ -7,8 +7,14 @@
 	liege=k_yan
 	vice_royalty = yes
 }
+140.1.1={
+	holder=4274 #Cen Xi
+}
+170.1.1={
+	holder=0 #None
+}
 184.1.1={
-	holder=3509 #Random
+	holder=1340 #Shih Dongjie
 }
 189.9.1={
 	holder=134 #Qiao Mao

@@ -14,5 +14,6 @@ b_dacheng = tribal
 # Misc
 culture = xiongnu
 religion = tengri_pagan
+terrain = steppe
 
 #History

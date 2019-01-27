@@ -13,5 +13,6 @@ b_bodaojiao = temple
 # Misc
 culture = bandunman
 religion = baihu
+terrain = hills
 
 #History

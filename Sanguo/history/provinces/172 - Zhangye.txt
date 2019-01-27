@@ -13,5 +13,6 @@ b_zhanma = tribal
 # Misc
 culture = qiang
 religion = baishi
+terrain = mountain
 
 #History

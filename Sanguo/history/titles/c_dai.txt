@@ -9,3 +9,9 @@
 184.1.1={
 	holder=2705 #KaiserBeer
 }
+209.10.3={
+	holder=2706 #KaiserBeer
+}
+225.11.30={
+	holder=0 #TBD
+}

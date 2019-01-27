@@ -15,5 +15,6 @@ b_huating = city
 # Misc
 culture = han
 religion = confucian
+terrain = plains
 
 #History

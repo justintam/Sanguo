@@ -16,5 +16,6 @@ b_yanga = temple
 # Misc
 culture = han
 religion = confucian
+terrain = mountain
 
 #History

@@ -15,6 +15,7 @@ b_xiaguixian = city
 # Misc
 culture = han
 religion = confucian
+terrain = plains
 
 #History
 210.1.1={

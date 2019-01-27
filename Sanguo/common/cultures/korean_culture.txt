@@ -1,10 +1,12 @@
 korean = {
-		graphical_cultures = { koreangfx easterngfx }
+	graphical_cultures = { koreangfx easterngfx }
 
 	joseon = {
 		graphical_cultures = { koreangfx easterngfx }
 		
 		color = { 0.45 0.55 0.15 }
+		
+		dynasty_name_first = yes
 		
 		male_names = {
 			Aeru Ahan Amul An Anjang Anwon Aranbul
@@ -42,8 +44,8 @@ korean = {
 			Maereuk Maeseuk Mahyu Mamul Man Manchun
 			Mangnae Mangniji Manhwa Mari Maryeo Mayeo
 			Micheon Minjung Mobon Mojeom Mosu Mosuri
-			Mu Muhyul Mun Mundeok Munhyu Munja Munju
-			Munye Muryeong Museo Muye
+			Mu Muhyul Mulli Mun Mundeok Munhyu Munja
+			Munju Munye Muryeong Museo Muye
 			Nahyu Namgeon Nammu Namsaeng Namsan Nanga
 			Nanwu Naun Noeul Noja Nuri
 			O Oi Onjo Orumun Osa
@@ -71,6 +73,7 @@ korean = {
 		female_names = {
 			Baek Baekjo Binna Bitna Bora Boram Buyong
 			Chamsae Chi Chihui
+			Gwahun
 			Habaek Hana Haneul Hwa Hwahui He Hui Hweonhwa Hye Hyo
 			Iseul
 			Jayeon Jeonghye Jeonghyo
@@ -97,12 +100,16 @@ korean = {
 		mother_name_chance = 0
 
 		modifier = default_culture_modifier
+		
+		allow_looting = yes
 	}
 	
 	samhan = {
 		graphical_cultures = { koreangfx easterngfx }
 		
 		color = { 0.65 0.35 0.8 }
+		
+		dynasty_name_first = yes
 		
 		male_names = {
 			Adalla Ado Aejang Agung Ajagae
@@ -192,6 +199,10 @@ korean = {
 		
 		founder_named_dynasties = no
 		
+		dynasty_title_names = no
+		
+		from_dynasty_prefix = ""
+		
 		# Chance of male children being named after their paternal or maternal grandfather, or their father. Sum must not exceed 100.
 		pat_grf_name_chance = 0
 		mat_grf_name_chance = 0
@@ -203,5 +214,7 @@ korean = {
 		mother_name_chance = 0
 
 		modifier = default_culture_modifier
+		
+		allow_looting = yes
 	}
 }

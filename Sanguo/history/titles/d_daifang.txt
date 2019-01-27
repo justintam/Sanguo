@@ -1,7 +1,7 @@
 # e_china
 1.1.1={
-	law = agnatic_succession
-	law = succ_gavelkind
+	law=agnatic_succession
+	law=succ_gavelkind
 }
 1.1.1={
 	liege=k_you
@@ -10,14 +10,22 @@
 	holder=0 #Not created
 }
 204.1.1={
-	holder=971 #Gongsun Kang
+	liege=k_ping
+	holder=972 #Gongsun Kang
 }
 210.1.1={
-	holder=972 #Gongsun Gong
+	holder=979 #Zhang Chang
 }
-213.6.1={
+238.8.1={
 	liege=k_ji
+	#holder=0 #Cao Rui
 }
-228.1.1={
-	holder=973 #Gongsun Yuan
+313.10.1={
+	holder=0
+	active=no
 }
+
+
+
+
+#TBD

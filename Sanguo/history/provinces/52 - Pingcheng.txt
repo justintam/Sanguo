@@ -15,5 +15,6 @@ b_baideng = castle
 # Misc
 culture = xiongnu
 religion = tengri_pagan
+terrain = steppe
 
 #History

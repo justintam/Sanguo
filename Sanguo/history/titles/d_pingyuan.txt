@@ -38,13 +38,11 @@
 192.5.1={
 	holder=709 #Yuan Tan
 }
-195.1.1={
+196.1.1={
 	liege=k_qing
-}
-204.1.1={
-	holder=4118 #Random
+	holder=1397 #Shih Jinwei
 }
 
 
 
-#Incomplete
+#TBD

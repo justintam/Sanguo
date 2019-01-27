@@ -34,7 +34,7 @@ targetted_decisions = {
 				FROM = {
 					OR = {
 						culture_group = yue
-						culture_group = tibetan
+						culture_group = tibetan_group
 						culture_group = man
 						culture_group = mongol
 					}

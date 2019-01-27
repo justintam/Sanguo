@@ -653,7 +653,16 @@ decisions = {
 						break = yes
 					}
 				}
-				### Nothing
+				
+				random_current_enemy = {
+					random_army = {
+						limit = {
+							unit_is_in_combat = yes
+							at_location = ROOT
+						}
+						morale = -0.1
+					}
+				}
 				character_event = { id = challenge.5 }
 			}
 		}
@@ -796,9 +805,10 @@ decisions = {
 				AND = {
 					is_female = yes
 					OR = {
+						in_command = yes
 						culture_group = mongol
 						culture_group = yue
-						culture_group = tibetan
+						culture_group = tibetan_group
 						culture_group = man
 					}
 				}
@@ -844,9 +854,10 @@ decisions = {
 													AND = {
 														is_female = yes
 														OR = {
+															in_command = yes
 															culture_group = mongol
 															culture_group = yue
-															culture_group = tibetan
+															culture_group = tibetan_group
 															culture_group = man
 														}
 													}
@@ -868,9 +879,10 @@ decisions = {
 													AND = {
 														is_female = yes
 														OR = {
+															in_command = yes
 															culture_group = mongol
 															culture_group = yue
-															culture_group = tibetan
+															culture_group = tibetan_group
 															culture_group = man
 														}
 													}
@@ -899,9 +911,10 @@ decisions = {
 													AND = {
 														is_female = yes
 														OR = {
+															in_command = yes
 															culture_group = mongol
 															culture_group = yue
-															culture_group = tibetan
+															culture_group = tibetan_group
 															culture_group = man
 														}
 													}
@@ -923,9 +936,10 @@ decisions = {
 													AND = {
 														is_female = yes
 														OR = {
+															in_command = yes
 															culture_group = mongol
 															culture_group = yue
-															culture_group = tibetan
+															culture_group = tibetan_group
 															culture_group = man
 														}
 													}
@@ -982,107 +996,167 @@ decisions = {
 						}
 					}
 				}
-				
 				if = {
-					limit = { siege = { is_attacker = yes } }
-					if = {
-						limit = { war = yes }
-						random_current_enemy = {
-							limit = {
-								ROOT = {
-									location = {
-										controlled_by = PREVPREV
-									}
-								}
-							}
-							if = {
-								limit = {
-									at_location = ROOT
-									OR = {
-										is_female = no
-										AND = {
-											is_female = yes
-											OR = {
-												culture_group = mongol
-												culture_group = yue
-												culture_group = tibetan
-												culture_group = man
-											}
-										}
-									}
-									is_adult = yes
-									prisoner = no
-									is_alive = yes
-									NOT = { in_battle = yes }
-									NOT = { has_character_modifier = battlefield_fight }
-									OR = {
-										NOT = { has_character_flag = flag_battlefield_duel }
-										had_character_flag = { flag = flag_battlefield_duel days = 10 }
-									}
-								}
-								character_event = { id = challenge.2 }
-								break = yes
-							}
-							random_realm_character = {
-								limit = {
-									OR = {
-										at_location = ROOT
-										AND = {
-											in_command = no
-											is_councillor = no
-											is_landed = no
-										}
-									}
-									OR = {
-										is_female = no
-										AND = {
-											is_female = yes
-											OR = {
-												culture_group = mongol
-												culture_group = yue
-												culture_group = tibetan
-												culture_group = man
-											}
-										}
-									}
-									is_adult = yes
-									prisoner = no
-									is_alive = yes
-									NOT = { in_battle = yes }
-									NOT = { has_character_modifier = battlefield_fight }
-									OR = {
-										NOT = { has_character_flag = flag_battlefield_duel }
-										had_character_flag = { flag = flag_battlefield_duel days = 10 }
-									}
-								}
-								character_event = { id = challenge.2 }
-								break = yes
-							}
-						}
-					}
-					if = {
-						limit = { any_liege = { war = yes } }
-						any_liege = {
-							limit = { war = yes }
-							random_current_enemy = {
-								limit = {
-									ROOT = {
-										location = {
-											controlled_by = PREVPREV
-										}
-									}
-								}
-								if = {
-									limit = {
+					limit = {
+						siege = {
+							enemy = {
+								leader = {
+									any_realm_character = {
 										at_location = ROOT
 										OR = {
+											has_job_title = job_marshal
+											has_minor_title = title_commander
 											is_female = no
 											AND = {
 												is_female = yes
 												OR = {
 													culture_group = mongol
 													culture_group = yue
-													culture_group = tibetan
+													culture_group = tibetan_group
+													culture_group = man
+												}
+											}
+										}
+										is_adult = yes
+										prisoner = no
+										is_alive = yes
+										NOT = { in_battle = yes }
+										NOT = { has_character_modifier = battlefield_fight }
+										OR = {
+											NOT = { has_character_flag = flag_battlefield_duel }
+											had_character_flag = { flag = flag_battlefield_duel days = 10 }
+										}
+									}
+								}
+							}
+						}
+					}
+					siege = {
+						enemy = {
+							leader = {
+								random_realm_character = {
+									limit = {
+										at_location = ROOT
+										OR = {
+											has_job_title = job_marshal
+											has_minor_title = title_commander
+											is_female = no
+											AND = {
+												is_female = yes
+												OR = {
+													culture_group = mongol
+													culture_group = yue
+													culture_group = tibetan_group
+													culture_group = man
+												}
+											}
+										}
+										is_adult = yes
+										prisoner = no
+										is_alive = yes
+										NOT = { in_battle = yes }
+										NOT = { has_character_modifier = battlefield_fight }
+										OR = {
+											NOT = { has_character_flag = flag_battlefield_duel }
+											had_character_flag = { flag = flag_battlefield_duel days = 10 }
+										}
+									}
+									character_event = { id = challenge.2 }
+									break = yes
+								}
+							}
+						}
+					}
+				}
+				
+				if = {
+					limit = { siege = { is_attacker = yes } }
+					siege = {
+						enemy = {
+							leader = {
+								any_liege = {
+									limit = {
+										war_with = ROOT
+										NOT = {
+											has_landed_title = e_rebels
+										}
+									}
+									random_realm_character = {
+										limit = {
+											at_location = ROOT
+											OR = {
+												has_job_title = job_marshal
+												has_minor_title = title_commander
+												is_female = no
+												AND = {
+													is_female = yes
+													OR = {
+														culture_group = mongol
+														culture_group = yue
+														culture_group = tibetan_group
+														culture_group = man
+													}
+												}
+											}
+											is_adult = yes
+											prisoner = no
+											is_alive = yes
+											NOT = { in_battle = yes }
+											NOT = { has_character_modifier = battlefield_fight }
+											OR = {
+												NOT = { has_character_flag = flag_battlefield_duel }
+												had_character_flag = { flag = flag_battlefield_duel days = 10 }
+											}
+										}
+										character_event = { id = challenge.2 }
+										break = yes
+									}
+									random_realm_character = {
+										limit = {
+											in_command = no
+											is_councillor = no
+											is_landed = no
+											OR = {
+												has_job_title = job_marshal
+												has_minor_title = title_commander
+												is_female = no
+												AND = {
+													is_female = yes
+													OR = {
+														culture_group = mongol
+														culture_group = yue
+														culture_group = tibetan_group
+														culture_group = man
+													}
+												}
+											}
+											is_adult = yes
+											prisoner = no
+											is_alive = yes
+											NOT = { in_battle = yes }
+											NOT = { has_character_modifier = battlefield_fight }
+											OR = {
+												NOT = { has_character_flag = flag_battlefield_duel }
+												had_character_flag = { flag = flag_battlefield_duel days = 10 }
+											}
+										}
+										character_event = { id = challenge.2 }
+										break = yes
+									}
+								}
+								random_realm_character = {
+									limit = {
+										at_location = ROOT
+										OR = {
+											has_job_title = job_marshal
+											has_minor_title = title_commander
+											is_female = no
+											AND = {
+												is_female = yes
+												OR = {
+													culture_group = mongol
+													culture_group = yue
+													culture_group = tibetan_group
 													culture_group = man
 												}
 											}
@@ -1102,22 +1176,19 @@ decisions = {
 								}
 								random_realm_character = {
 									limit = {
+										in_command = no
+										is_councillor = no
+										is_landed = no
 										OR = {
-											at_location = ROOT
-											AND = {
-												in_command = no
-												is_councillor = no
-												is_landed = no
-											}
-										}
-										OR = {
+											has_job_title = job_marshal
+											has_minor_title = title_commander
 											is_female = no
 											AND = {
 												is_female = yes
 												OR = {
 													culture_group = mongol
 													culture_group = yue
-													culture_group = tibetan
+													culture_group = tibetan_group
 													culture_group = man
 												}
 											}
@@ -1138,19 +1209,38 @@ decisions = {
 							}
 						}
 					}
-					location = {
-						owner = {
+					if = {
+						limit = { war = yes }
+						random_current_enemy = {
 							if = {
 								limit = {
 									at_location = ROOT
+									is_adult = yes
+									prisoner = no
+									is_alive = yes
+									NOT = { in_battle = yes }
+									NOT = { has_character_modifier = battlefield_fight }
 									OR = {
+										NOT = { has_character_flag = flag_battlefield_duel }
+										had_character_flag = { flag = flag_battlefield_duel days = 10 }
+									}
+								}
+								character_event = { id = challenge.2 }
+								break = yes
+							}
+							random_realm_character = {
+								limit = {
+									at_location = ROOT
+									OR = {
+										has_job_title = job_marshal
+										has_minor_title = title_commander
 										is_female = no
 										AND = {
 											is_female = yes
 											OR = {
 												culture_group = mongol
 												culture_group = yue
-												culture_group = tibetan
+												culture_group = tibetan_group
 												culture_group = man
 											}
 										}
@@ -1164,30 +1254,25 @@ decisions = {
 										NOT = { has_character_flag = flag_battlefield_duel }
 										had_character_flag = { flag = flag_battlefield_duel days = 10 }
 									}
-									capital_holding = { controller = { character = PREVPREV } }
-									capital_scope = { ROOT = { at_location = PREV } }
 								}
 								character_event = { id = challenge.2 }
 								break = yes
 							}
 							random_realm_character = {
 								limit = {
+									in_command = no
+									is_councillor = no
+									is_landed = no
 									OR = {
-										at_location = ROOT
-										AND = {
-											in_command = no
-											is_councillor = no
-											is_landed = no
-										}
-									}
-									OR = {
+										has_job_title = job_marshal
+										has_minor_title = title_commander
 										is_female = no
 										AND = {
 											is_female = yes
 											OR = {
 												culture_group = mongol
 												culture_group = yue
-												culture_group = tibetan
+												culture_group = tibetan_group
 												culture_group = man
 											}
 										}
@@ -1207,14 +1292,230 @@ decisions = {
 							}
 						}
 					}
+					if = {
+						limit = {
+							any_liege = {
+								war = yes
+							}
+						}
+						any_liege = {
+							limit = { war = yes }
+							random_current_enemy = {
+								if = {
+									limit = {
+										at_location = ROOT
+										is_adult = yes
+										prisoner = no
+										is_alive = yes
+										NOT = { in_battle = yes }
+										NOT = { has_character_modifier = battlefield_fight }
+										OR = {
+											NOT = { has_character_flag = flag_battlefield_duel }
+											had_character_flag = { flag = flag_battlefield_duel days = 10 }
+										}
+									}
+									character_event = { id = challenge.2 }
+									break = yes
+								}
+								random_realm_character = {
+									limit = {
+										at_location = ROOT
+										OR = {
+											has_job_title = job_marshal
+											has_minor_title = title_commander
+											is_female = no
+											AND = {
+												is_female = yes
+												OR = {
+													culture_group = mongol
+													culture_group = yue
+													culture_group = tibetan_group
+													culture_group = man
+												}
+											}
+										}
+										is_adult = yes
+										prisoner = no
+										is_alive = yes
+										NOT = { in_battle = yes }
+										NOT = { has_character_modifier = battlefield_fight }
+										OR = {
+											NOT = { has_character_flag = flag_battlefield_duel }
+											had_character_flag = { flag = flag_battlefield_duel days = 10 }
+										}
+									}
+									character_event = { id = challenge.2 }
+									break = yes
+								}
+								random_realm_character = {
+									limit = {
+										in_command = no
+										is_councillor = no
+										is_landed = no
+										OR = {
+											has_job_title = job_marshal
+											has_minor_title = title_commander
+											is_female = no
+											AND = {
+												is_female = yes
+												OR = {
+													culture_group = mongol
+													culture_group = yue
+													culture_group = tibetan_group
+													culture_group = man
+												}
+											}
+										}
+										is_adult = yes
+										prisoner = no
+										is_alive = yes
+										NOT = { in_battle = yes }
+										NOT = { has_character_modifier = battlefield_fight }
+										OR = {
+											NOT = { has_character_flag = flag_battlefield_duel }
+											had_character_flag = { flag = flag_battlefield_duel days = 10 }
+										}
+									}
+									character_event = { id = challenge.2 }
+									break = yes
+								}
+							}
+						}
+					}
+					if = {
+						limit = {
+							location = {
+								owner = {
+									OR = {
+										war_with = ROOT
+										any_liege = {
+											war_with = ROOT
+										}
+									}
+								}
+							}
+						}
+						location = {
+							owner = {
+								if = {
+									limit = {
+										at_location = ROOT
+										is_adult = yes
+										prisoner = no
+										is_alive = yes
+										NOT = { in_battle = yes }
+										NOT = { has_character_modifier = battlefield_fight }
+										OR = {
+											NOT = { has_character_flag = flag_battlefield_duel }
+											had_character_flag = { flag = flag_battlefield_duel days = 10 }
+										}
+										capital_holding = { controller = { character = PREVPREV } }
+										capital_scope = { ROOT = { at_location = PREV } }
+									}
+									character_event = { id = challenge.2 }
+									break = yes
+								}
+								random_realm_character = {
+									limit = {
+										at_location = ROOT
+										OR = {
+											has_job_title = job_marshal
+											has_minor_title = title_commander
+											is_female = no
+											AND = {
+												is_female = yes
+												OR = {
+													culture_group = mongol
+													culture_group = yue
+													culture_group = tibetan_group
+													culture_group = man
+												}
+											}
+										}
+										is_adult = yes
+										prisoner = no
+										is_alive = yes
+										NOT = { in_battle = yes }
+										NOT = { has_character_modifier = battlefield_fight }
+										OR = {
+											NOT = { has_character_flag = flag_battlefield_duel }
+											had_character_flag = { flag = flag_battlefield_duel days = 10 }
+										}
+									}
+									character_event = { id = challenge.2 }
+									break = yes
+								}
+								random_realm_character = {
+									limit = {
+										in_command = no
+										is_councillor = no
+										is_landed = no
+										OR = {
+											has_job_title = job_marshal
+											has_minor_title = title_commander
+											is_female = no
+											AND = {
+												is_female = yes
+												OR = {
+													culture_group = mongol
+													culture_group = yue
+													culture_group = tibetan_group
+													culture_group = man
+												}
+											}
+										}
+										is_adult = yes
+										prisoner = no
+										is_alive = yes
+										NOT = { in_battle = yes }
+										NOT = { has_character_modifier = battlefield_fight }
+										OR = {
+											NOT = { has_character_flag = flag_battlefield_duel }
+											had_character_flag = { flag = flag_battlefield_duel days = 10 }
+										}
+									}
+									character_event = { id = challenge.2 }
+									break = yes
+								}
+							}
+						}
+					}
 				}
 				if = {
 					limit = {
-						any_demesne_province = {
-							any_province_holding = {
-								has_siege = yes
+						OR = {
+							any_current_enemy = {
+								any_realm_province = {
+									any_province_holding = {
+										has_siege = yes
+										controlled_by = ROOT
+									}
+									ROOT = {
+										OR = {
+											at_location = PREV
+											AND = {
+												in_command = no
+												is_councillor = no
+											}
+										}
+									}
+								}
 							}
-							ROOT = { at_location = PREV }
+							any_realm_province = {
+								any_province_holding = {
+									has_siege = yes
+									NOT = { controlled_by = ROOT }
+								}
+								ROOT = {
+									OR = {
+										at_location = PREV
+										AND = {
+											in_command = no
+											is_councillor = no
+										}
+									}
+								}
+							}
 						}
 					}
 					if = {
@@ -1222,15 +1523,26 @@ decisions = {
 						random_current_enemy = {
 							if = {
 								limit = {
-									at_location = ROOT
 									OR = {
+										at_location = ROOT
+										AND = {
+											in_command = no
+											is_councillor = no
+											location = {
+												controlled_by = ROOT
+											}
+										}
+									}
+									OR = {
+										has_job_title = job_marshal
+										has_minor_title = title_commander
 										is_female = no
 										AND = {
 											is_female = yes
 											OR = {
 												culture_group = mongol
 												culture_group = yue
-												culture_group = tibetan
+												culture_group = tibetan_group
 												culture_group = man
 											}
 										}
@@ -1252,13 +1564,49 @@ decisions = {
 								limit = {
 									at_location = ROOT
 									OR = {
+										has_job_title = job_marshal
+										has_minor_title = title_commander
 										is_female = no
 										AND = {
 											is_female = yes
 											OR = {
 												culture_group = mongol
 												culture_group = yue
-												culture_group = tibetan
+												culture_group = tibetan_group
+												culture_group = man
+											}
+										}
+									}
+									is_adult = yes
+									prisoner = no
+									is_alive = yes
+									NOT = { in_battle = yes }
+									NOT = { has_character_modifier = battlefield_fight }
+									OR = {
+										NOT = { has_character_flag = flag_battlefield_duel }
+										had_character_flag = { flag = flag_battlefield_duel days = 10 }
+									}
+								}
+								character_event = { id = challenge.2 }
+								break = yes
+							}
+							random_realm_character = {
+								limit = {
+									in_command = no
+									is_councillor = no
+									location = {
+										controlled_by = ROOT
+									}
+									OR = {
+										has_job_title = job_marshal
+										has_minor_title = title_commander
+										is_female = no
+										AND = {
+											is_female = yes
+											OR = {
+												culture_group = mongol
+												culture_group = yue
+												culture_group = tibetan_group
 												culture_group = man
 											}
 										}
@@ -1279,19 +1627,32 @@ decisions = {
 						}
 					}
 					any_liege = {
-						limit = { war = yes }
+						limit = {
+							war = yes
+						}
 						random_current_enemy = {
 							if = {
 								limit = {
-									at_location = ROOT
 									OR = {
+										at_location = ROOT
+										AND = {
+											in_command = no
+											is_councillor = no
+											location = {
+												controlled_by = ROOT
+											}
+										}
+									}
+									OR = {
+										has_job_title = job_marshal
+										has_minor_title = title_commander
 										is_female = no
 										AND = {
 											is_female = yes
 											OR = {
 												culture_group = mongol
 												culture_group = yue
-												culture_group = tibetan
+												culture_group = tibetan_group
 												culture_group = man
 											}
 										}
@@ -1313,13 +1674,49 @@ decisions = {
 								limit = {
 									at_location = ROOT
 									OR = {
+										has_job_title = job_marshal
+										has_minor_title = title_commander
 										is_female = no
 										AND = {
 											is_female = yes
 											OR = {
 												culture_group = mongol
 												culture_group = yue
-												culture_group = tibetan
+												culture_group = tibetan_group
+												culture_group = man
+											}
+										}
+									}
+									is_adult = yes
+									prisoner = no
+									is_alive = yes
+									NOT = { in_battle = yes }
+									NOT = { has_character_modifier = battlefield_fight }
+									OR = {
+										NOT = { has_character_flag = flag_battlefield_duel }
+										had_character_flag = { flag = flag_battlefield_duel days = 10 }
+									}
+								}
+								character_event = { id = challenge.2 }
+								break = yes
+							}
+							random_realm_character = {
+								limit = {
+									in_command = no
+									is_councillor = no
+									location = {
+										controlled_by = ROOT
+									}
+									OR = {
+										has_job_title = job_marshal
+										has_minor_title = title_commander
+										is_female = no
+										AND = {
+											is_female = yes
+											OR = {
+												culture_group = mongol
+												culture_group = yue
+												culture_group = tibetan_group
 												culture_group = man
 											}
 										}
@@ -1341,6 +1738,11 @@ decisions = {
 					}
 				}
 				
+				siege = {
+					enemy = {
+						morale = -0.1
+					}
+				}
 				character_event = { id = challenge.5 }
 			}
 		}

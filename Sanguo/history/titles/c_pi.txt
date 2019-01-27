@@ -7,5 +7,14 @@
 	liege=d_shu
 }
 184.1.1={
-	holder=4123 #Random
+	holder=4484 #Chang Gao
+}
+214.1.1={
+	holder=660 #Deng Zhi
+}
+217.1.1={
+	holder=670 #Ma Su
+}
+225.8.1={
+	holder=3588 #Random
 }

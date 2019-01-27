@@ -25,7 +25,7 @@ character_event = {
 		NOT = { has_character_flag = end_of_days }
 	}
 
-	immediate = { # TODO These events need modifiers and triggers to block them
+	immediate = {
 		random_list = {
 			20 = {
 				narrative_event = { id = RIP.14001 } #Doomsday
@@ -596,9 +596,6 @@ character_event = {
 	#that snake
 	option = {
 		name = EVTOPTA_RIP_14014
-		custom_tooltip = {
-			text = EVTOPTA_RIP_14014_TOOLTIP
-		}
 		opinion = {
 			who = FROMFROM
 			modifier = opinion_charge_slanderer
@@ -892,7 +889,6 @@ character_event = {
 	}
 
 	option = {
-		name = EVTOPTA_RIP_15099
 		character_event = { id = RIP.15100 }
 	}
 }
@@ -1085,8 +1081,6 @@ letter_event = {
 
 	#I should write a letter expressing my concern!
 	option = {
-		name = EVTOPTA_RIP_15102
-		
 		hidden_tooltip = {
 			FROM = {
 				character_event = { id = RIP.15103 days = 10 }
@@ -1586,7 +1580,6 @@ character_event = {
 
 	#Oh noes!
 	option = {
-		name = EVTOPTA_RIP_15112
 	}
 }
 
@@ -1660,7 +1653,6 @@ character_event = {
 
 	#send event
 	option = {
-		name = EVTOPTB_RIP_15114
 		character_event = { id = RIP.15107 days = 10 }
 	}
 }
@@ -2414,5 +2406,3 @@ character_event = {
 
 	}
 }
-
-

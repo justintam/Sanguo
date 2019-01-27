@@ -12,172 +12,458 @@
 #                                         #
 ###########################################
 
-namespace = DYN
+namespace=DYN
 
 ### NEW DYNASTY ###
-character_event = {
-	id = DYN.1
-	desc = EVTDESC_DYN
-	title = EVTTITLE_DYN.1
-	picture = GFX_evt_throne_room_byzantine
+character_event={
+	id=DYN.1
+	desc=EVTDESC_DYN
+	title=EVTTITLE_DYN.1
+	picture=GFX_evt_throne_room_byzantine
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	option = {
-		name = EVTOPT_DYN.CHEN
+	immediate={
+		set_character_flag=founded_empire
+		set_global_flag=founded_empire_flag
+		if={
+			limit={
+				k_confucian={ has_holder=no }
+			}
+			k_confucian={
+				activate_title={ title=THIS status=yes }
+			}
+		}
+		if={
+			limit={
+				NOR={
+					has_claim=k_confucian
+					has_landed_title=k_confucian
+				}
+			}
+			add_claim=k_confucian
+		}
+	}
+	
+	option={
+		name=EVTOPT_DYN.CHEN
 		
-		trigger = {
-			e_chen = { has_holder=no }
+		trigger={
+			e_chen={ has_holder=no }
 		}
 		
-		e_chen = {
-			activate_title = { title = e_chen status = yes }
-			grant_title = ROOT
-			copy_title_laws = e_china
+		e_chen={
+			activate_title={ title=e_chen status=yes }
+			grant_title=ROOT
+			copy_title_laws=e_china
 			
-			hidden_tooltip = {
-				save_event_target_as = target_empire
-				ROOT = { character_event = { id = MAN.3 } }
+			hidden_tooltip={
+				save_event_target_as=target_empire
+				ROOT={ character_event={ id=MAN.3 } }
 			}
 		}
 		
-		ai_chance = {
-			factor = 0.5
+		ai_chance={
+			factor=0.5
 			
-			modifier = {
-				factor = 10
-				e_chen = {
-					capital_scope = {
-						owner = { character = ROOT }
+			modifier={
+				factor=10
+				e_chen={
+					capital_scope={
+						owner={ character=ROOT }
 					}
 				}
 			}
 			
-			modifier = {
-				factor = 0
-				OR = {
-					dynasty = 2
-					dynasty = 4
-					dynasty = 5
-					dynasty = 22
-					dynasty = 29
-					dynasty = 130
-					dynasty = 971
+			modifier={
+				factor=100
+				dynasty=2005
+			}
+			
+			modifier={
+				factor=0
+				OR={
+					dynasty=2
+					dynasty=4
+					dynasty=5
+					dynasty=22
+					dynasty=29
+					dynasty=130
+					dynasty=508
+					dynasty=511
+					dynasty=801
+					dynasty=802
+					dynasty=826
+					dynasty=971
+					dynasty=1010
 				}
 			}
 		}
 	}
 	
-	option = {
-		name = EVTOPT_DYN.CHU
+	option={
+		name=EVTOPT_DYN.CHU
 		
-		trigger = {
-			e_chu = { has_holder=no }
+		trigger={
+			e_chu={ has_holder=no }
 		}
 		
-		e_chu = {
-			activate_title = { title = e_chu status = yes }
-			grant_title = ROOT
-			copy_title_laws = e_china
+		e_chu={
+			activate_title={ title=e_chu status=yes }
+			grant_title=ROOT
+			copy_title_laws=e_china
 			
-			hidden_tooltip = {
-				save_event_target_as = target_empire
-				ROOT = { character_event = { id = MAN.3 } }
+			hidden_tooltip={
+				save_event_target_as=target_empire
+				ROOT={ character_event={ id=MAN.3 } }
 			}
 		}
 		
-		ai_chance = {
-			factor = 0.5
+		ai_chance={
+			factor=0.5
 			
-			modifier = {
-				factor = 10
-				e_chu = {
-					capital_scope = {
-						owner = { character = ROOT }
+			modifier={
+				factor=10
+				e_chu={
+					capital_scope={
+						owner={ character=ROOT }
 					}
 				}
 			}
 			
-			modifier = {
-				factor = 0
-				OR = {
-					dynasty = 2
-					dynasty = 4
-					dynasty = 5
-					dynasty = 22
-					dynasty = 29
-					dynasty = 130
-					dynasty = 971
+			modifier={
+				factor=0
+				OR={
+					dynasty=2
+					dynasty=4
+					dynasty=5
+					dynasty=22
+					dynasty=29
+					dynasty=130
+					dynasty=508
+					dynasty=511
+					dynasty=801
+					dynasty=802
+					dynasty=826
+					dynasty=971
+					dynasty=1010
+					dynasty=2005
 				}
 			}
 		}
 	}
 	
-	option = {
-		name = EVTOPT_DYN.DAI
+	option={
+		name=EVTOPT_DYN.DAI
 		
-		trigger = {
-			e_dai = { has_holder=no }
+		trigger={
+			e_dai={ has_holder=no }
 		}
 		
-		e_dai = {
-			activate_title = { title = e_dai status = yes }
-			grant_title = ROOT
-			copy_title_laws = e_china
+		e_dai={
+			activate_title={ title=e_dai status=yes }
+			grant_title=ROOT
+			copy_title_laws=e_china
 			
-			hidden_tooltip = {
-				save_event_target_as = target_empire
-				ROOT = { character_event = { id = MAN.3 } }
+			hidden_tooltip={
+				save_event_target_as=target_empire
+				ROOT={ character_event={ id=MAN.3 } }
 			}
 		}
 		
-		ai_chance = {
-			factor = 0.5
+		ai_chance={
+			factor=0.5
 			
-			modifier = {
-				factor = 10
-				e_dai = {
-					capital_scope = {
-						owner = { character = ROOT }
+			modifier={
+				factor=10
+				e_dai={
+					capital_scope={
+						owner={ character=ROOT }
 					}
 				}
 			}
 			
-			modifier = {
-				factor = 0
-				OR = {
-					dynasty = 2
-					dynasty = 4
-					dynasty = 5
-					dynasty = 22
-					dynasty = 29
-					dynasty = 130
-					dynasty = 971
+			modifier={
+				factor=0
+				OR={
+					dynasty=2
+					dynasty=4
+					dynasty=5
+					dynasty=22
+					dynasty=29
+					dynasty=130
+					dynasty=508
+					dynasty=511
+					dynasty=801
+					dynasty=802
+					dynasty=826
+					dynasty=971
+					dynasty=1010
+					dynasty=2005
 				}
 			}
 		}
 	}
 	
-	option = {
-		name = EVTOPT_DYN.NONE
+	option={
+		name=EVTOPT_DYN.NONE
 		
-		hidden_tooltip = {
-			character_event = { id = DYN.2 }
+		hidden_tooltip={
+			character_event={ id=DYN.2 }
 		}
 		
-		ai_chance = {
-			factor = 0.5
+		ai_chance={
+			factor=0.5
 			
-			modifier = {
-				factor = 100
-				OR = {
-					dynasty = 2
-					dynasty = 4
-					dynasty = 5
-					dynasty = 22
-					dynasty = 29
-					dynasty = 130
-					dynasty = 971
+			modifier={
+				factor=100
+				OR={
+					dynasty=2
+					dynasty=4
+					dynasty=5
+					dynasty=22
+					dynasty=29
+					dynasty=130
+					dynasty=508
+					dynasty=511
+					dynasty=801
+					dynasty=802
+					dynasty=826
+					dynasty=971
+					dynasty=1010
+				}
+			}
+			
+			modifier={
+				factor=0
+				dynasty=2005
+			}
+		}
+	}
+}
+
+
+
+### NEW DYNASTY ###
+character_event={
+	id=DYN.2
+	desc=EVTDESC_DYN
+	title=EVTTITLE_DYN.2
+	picture=GFX_evt_throne_room_byzantine
+	
+	is_triggered_only=yes
+	
+	option={
+		name=EVTOPT_DYN.HAN
+		
+		trigger={
+			e_han={ has_holder=no }
+		}
+		
+		e_han={
+			activate_title={ title=e_han status=yes }
+			grant_title=ROOT
+			copy_title_laws=e_china
+			
+			hidden_tooltip={
+				save_event_target_as=target_empire
+				ROOT={ character_event={ id=MAN.3 } }
+			}
+		}
+		
+		ai_chance={
+			factor=0.5
+			
+			modifier={
+				factor=10
+				e_han={
+					capital_scope={
+						owner={ character=ROOT }
+					}
+				}
+			}
+			
+			modifier={
+				factor=100
+				dynasty=2
+				NOR={
+					character=600
+					is_close_relative=600
+				}
+			}
+			
+			modifier={
+				factor=0
+				OR={
+					character=600
+					is_close_relative=600
+					dynasty=4
+					dynasty=5
+					dynasty=22
+					dynasty=29
+					dynasty=130
+					dynasty=508
+					dynasty=511
+					dynasty=801
+					dynasty=802
+					dynasty=826
+					dynasty=971
+					dynasty=1010
+					dynasty=2005
+				}
+			}
+		}
+	}
+	
+	option={
+		name=EVTOPT_DYN.JIN
+		
+		trigger={
+			e_jin={ has_holder=no }
+		}
+		
+		e_jin={
+			activate_title={ title=e_jin status=yes }
+			grant_title=ROOT
+			copy_title_laws=e_china
+			
+			hidden_tooltip={
+				save_event_target_as=target_empire
+				ROOT={ character_event={ id=MAN.3 } }
+			}
+		}
+		
+		ai_chance={
+			factor=0.5
+			
+			modifier={
+				factor=10
+				e_jin={
+					capital_scope={
+						owner={ character=ROOT }
+					}
+				}
+			}
+			
+			modifier={
+				factor=100
+				dynasty=22
+			}
+			
+			modifier={
+				factor=0
+				OR={
+					dynasty=2
+					dynasty=4
+					dynasty=5
+					dynasty=29
+					dynasty=130
+					dynasty=508
+					dynasty=511
+					dynasty=801
+					dynasty=802
+					dynasty=826
+					dynasty=971
+					dynasty=1010
+					dynasty=2005
+				}
+			}
+		}
+	}
+	
+	option={
+		name=EVTOPT_DYN.LIANG
+		
+		trigger={
+			e_liang={ has_holder=no }
+		}
+		
+		e_liang={
+			activate_title={ title=e_liang status=yes }
+			grant_title=ROOT
+			copy_title_laws=e_china
+			
+			hidden_tooltip={
+				save_event_target_as=target_empire
+				ROOT={ character_event={ id=MAN.3 } }
+			}
+		}
+		
+		ai_chance={
+			factor=0.5
+			
+			modifier={
+				factor=10
+				e_liang={
+					capital_scope={
+						owner={ character=ROOT }
+					}
+				}
+			}
+			
+			modifier={
+				factor=0
+				OR={
+					dynasty=2
+					dynasty=4
+					dynasty=5
+					dynasty=22
+					dynasty=29
+					dynasty=130
+					dynasty=508
+					dynasty=511
+					dynasty=801
+					dynasty=802
+					dynasty=826
+					dynasty=971
+					dynasty=1010
+					dynasty=2005
+				}
+			}
+		}
+	}
+	
+	option={
+		name=EVTOPT_DYN.NONE
+		
+		hidden_tooltip={
+			character_event={ id=DYN.3 }
+		}
+		
+		ai_chance={
+			factor=0.5
+			
+			modifier={
+				factor=100
+				OR={
+					character=600
+					is_close_relative=600
+					dynasty=4
+					dynasty=5
+					dynasty=22
+					dynasty=130
+					dynasty=508
+					dynasty=511
+					dynasty=801
+					dynasty=802
+					dynasty=826
+					dynasty=971
+					dynasty=1010
+					dynasty=2005
+				}
+			}
+			
+			modifier={
+				factor=0
+				OR={
+					AND={
+						NOR={
+							character=600
+							is_close_relative=600
+						}
+						dynasty=2
+					}
+					dynasty=22
 				}
 			}
 		}
@@ -187,188 +473,197 @@ character_event = {
 
 
 ### NEW DYNASTY ###
-character_event = {
-	id = DYN.2
-	desc = EVTDESC_DYN
-	title = EVTTITLE_DYN.2
-	picture = GFX_evt_throne_room_byzantine
+character_event={
+	id=DYN.3
+	desc=EVTDESC_DYN
+	title=EVTTITLE_DYN.3
+	picture=GFX_evt_throne_room_byzantine
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	option = {
-		name = EVTOPT_DYN.HAN
+	option={
+		name=EVTOPT_DYN.LIAO
 		
-		trigger = {
-			e_han = { has_holder=no }
+		trigger={
+			e_liao={ has_holder=no }
 		}
 		
-		e_han = {
-			activate_title = { title = e_han status = yes }
-			grant_title = ROOT
-			copy_title_laws = e_china
+		e_liao={
+			activate_title={ title=e_liao status=yes }
+			grant_title=ROOT
+			copy_title_laws=e_china
 			
-			hidden_tooltip = {
-				save_event_target_as = target_empire
-				ROOT = { character_event = { id = MAN.3 } }
+			hidden_tooltip={
+				save_event_target_as=target_empire
+				ROOT={ character_event={ id=MAN.3 } }
 			}
 		}
 		
-		ai_chance = {
-			factor = 0.5
+		ai_chance={
+			factor=0.5
 			
-			modifier = {
-				factor = 10
-				e_han = {
-					capital_scope = {
-						owner = { character = ROOT }
+			modifier={
+				factor=10
+				e_liao={
+					capital_scope={
+						owner={ character=ROOT }
 					}
 				}
 			}
 			
-			modifier = {
-				factor = 100
-				dynasty = 2
-				NOT = {
-					is_close_relative = 600
-				}
-			}
-			
-			modifier = {
-				factor = 0
-				OR = {
-					character = 600
-					dynasty = 4
-					dynasty = 5
-					dynasty = 22
-					dynasty = 29
-					dynasty = 130
-					dynasty = 971
+			modifier={
+				factor=0
+				OR={
+					dynasty=2
+					dynasty=4
+					dynasty=5
+					dynasty=22
+					dynasty=29
+					dynasty=130
+					dynasty=508
+					dynasty=511
+					dynasty=801
+					dynasty=802
+					dynasty=826
+					dynasty=971
+					dynasty=1010
+					dynasty=2005
 				}
 			}
 		}
 	}
 	
-	option = {
-		name = EVTOPT_DYN.JIN
+	option={
+		name=EVTOPT_DYN.MIN
 		
-		trigger = {
-			e_jin = { has_holder=no }
+		trigger={
+			e_min={ has_holder=no }
 		}
 		
-		e_jin = {
-			activate_title = { title = e_jin status = yes }
-			grant_title = ROOT
-			copy_title_laws = e_china
+		e_min={
+			activate_title={ title=e_min status=yes }
+			grant_title=ROOT
+			copy_title_laws=e_china
 			
-			hidden_tooltip = {
-				save_event_target_as = target_empire
-				ROOT = { character_event = { id = MAN.3 } }
+			hidden_tooltip={
+				save_event_target_as=target_empire
+				ROOT={ character_event={ id=MAN.3 } }
 			}
 		}
 		
-		ai_chance = {
-			factor = 0.5
+		ai_chance={
+			factor=0.5
 			
-			modifier = {
-				factor = 10
-				e_jin = {
-					capital_scope = {
-						owner = { character = ROOT }
+			modifier={
+				factor=10
+				e_min={
+					capital_scope={
+						owner={ character=ROOT }
 					}
 				}
 			}
 			
-			modifier = {
-				factor = 100
-				dynasty = 22
-			}
-			
-			modifier = {
-				factor = 0
-				OR = {
-					dynasty = 2
-					dynasty = 4
-					dynasty = 5
-					dynasty = 29
-					dynasty = 130
-					dynasty = 971
+			modifier={
+				factor=0
+				OR={
+					dynasty=2
+					dynasty=4
+					dynasty=5
+					dynasty=22
+					dynasty=29
+					dynasty=130
+					dynasty=508
+					dynasty=511
+					dynasty=801
+					dynasty=802
+					dynasty=826
+					dynasty=971
+					dynasty=1010
+					dynasty=2005
 				}
 			}
 		}
 	}
 	
-	option = {
-		name = EVTOPT_DYN.LIANG
+	option={
+		name=EVTOPT_DYN.QI
 		
-		trigger = {
-			e_liang = { has_holder=no }
+		trigger={
+			e_qi={ has_holder=no }
 		}
 		
-		e_liang = {
-			activate_title = { title = e_liang status = yes }
-			grant_title = ROOT
-			copy_title_laws = e_china
+		e_qi={
+			activate_title={ title=e_qi status=yes }
+			grant_title=ROOT
+			copy_title_laws=e_china
 			
-			hidden_tooltip = {
-				save_event_target_as = target_empire
-				ROOT = { character_event = { id = MAN.3 } }
+			hidden_tooltip={
+				save_event_target_as=target_empire
+				ROOT={ character_event={ id=MAN.3 } }
 			}
 		}
 		
-		ai_chance = {
-			factor = 0.5
+		ai_chance={
+			factor=0.5
 			
-			modifier = {
-				factor = 10
-				e_liang = {
-					capital_scope = {
-						owner = { character = ROOT }
+			modifier={
+				factor=10
+				e_qi={
+					capital_scope={
+						owner={ character=ROOT }
 					}
 				}
 			}
 			
-			modifier = {
-				factor = 0
-				OR = {
-					dynasty = 2
-					dynasty = 4
-					dynasty = 5
-					dynasty = 22
-					dynasty = 29
-					dynasty = 130
-					dynasty = 971
+			modifier={
+				factor=0
+				OR={
+					dynasty=2
+					dynasty=4
+					dynasty=5
+					dynasty=22
+					dynasty=29
+					dynasty=130
+					dynasty=508
+					dynasty=511
+					dynasty=801
+					dynasty=802
+					dynasty=826
+					dynasty=971
+					dynasty=1010
+					dynasty=2005
 				}
 			}
 		}
 	}
 	
-	option = {
-		name = EVTOPT_DYN.NONE
+	option={
+		name=EVTOPT_DYN.NONE
 		
-		hidden_tooltip = {
-			character_event = { id = DYN.3 }
+		hidden_tooltip={
+			character_event={ id=DYN.4 }
 		}
 		
-		ai_chance = {
-			factor = 0.5
+		ai_chance={
+			factor=0.5
 			
-			modifier = {
-				factor = 100
-				OR = {
-					character = 600
-					dynasty = 4
-					dynasty = 5
-					dynasty = 22
-					dynasty = 130
-					dynasty = 971
-				}
-			}
-			
-			modifier = {
-				factor = 0
-				OR = {
-					dynasty = 2
-					dynasty = 22
+			modifier={
+				factor=100
+				OR={
+					dynasty=2
+					dynasty=4
+					dynasty=5
+					dynasty=22
+					dynasty=29
+					dynasty=130
+					dynasty=508
+					dynasty=511
+					dynasty=801
+					dynasty=802
+					dynasty=826
+					dynasty=971
+					dynasty=1010
+					dynasty=2005
 				}
 			}
 		}
@@ -378,169 +673,219 @@ character_event = {
 
 
 ### NEW DYNASTY ###
-character_event = {
-	id = DYN.3
-	desc = EVTDESC_DYN
-	title = EVTTITLE_DYN.3
-	picture = GFX_evt_throne_room_byzantine
+character_event={
+	id=DYN.4
+	desc=EVTDESC_DYN
+	title=EVTTITLE_DYN.4
+	picture=GFX_evt_throne_room_byzantine
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	option = {
-		name = EVTOPT_DYN.LIAO
+	option={
+		name=EVTOPT_DYN.QIN
 		
-		trigger = {
-			e_liao = { has_holder=no }
+		trigger={
+			e_qin={ has_holder=no }
 		}
 		
-		e_liao = {
-			activate_title = { title = e_liao status = yes }
-			grant_title = ROOT
-			copy_title_laws = e_china
+		e_qin={
+			activate_title={ title=e_qin status=yes }
+			grant_title=ROOT
+			copy_title_laws=e_china
 			
-			hidden_tooltip = {
-				save_event_target_as = target_empire
-				ROOT = { character_event = { id = MAN.3 } }
+			hidden_tooltip={
+				save_event_target_as=target_empire
+				ROOT={ character_event={ id=MAN.3 } }
 			}
 		}
 		
-		ai_chance = {
-			factor = 0.5
+		ai_chance={
+			factor=0.5
 			
-			modifier = {
-				factor = 10
-				e_liao = {
-					capital_scope = {
-						owner = { character = ROOT }
+			modifier={
+				factor=10
+				e_qin={
+					capital_scope={
+						owner={ character=ROOT }
 					}
 				}
 			}
 			
-			modifier = {
-				factor = 0
-				OR = {
-					dynasty = 2
-					dynasty = 4
-					dynasty = 5
-					dynasty = 22
-					dynasty = 29
-					dynasty = 130
-					dynasty = 971
+			modifier={
+				factor=0
+				OR={
+					dynasty=2
+					dynasty=4
+					dynasty=5
+					dynasty=22
+					dynasty=29
+					dynasty=130
+					dynasty=508
+					dynasty=511
+					dynasty=801
+					dynasty=802
+					dynasty=826
+					dynasty=971
+					dynasty=1010
+					dynasty=2005
 				}
 			}
 		}
 	}
 	
-	option = {
-		name = EVTOPT_DYN.MIN
+	option={
+		name=EVTOPT_DYN.QING
 		
-		trigger = {
-			e_min = { has_holder=no }
+		trigger={
+			e_qing={ has_holder=no }
 		}
 		
-		e_min = {
-			activate_title = { title = e_min status = yes }
-			grant_title = ROOT
-			copy_title_laws = e_china
+		e_qing={
+			activate_title={ title=e_qing status=yes }
+			grant_title=ROOT
+			copy_title_laws=e_china
 			
-			hidden_tooltip = {
-				save_event_target_as = target_empire
-				ROOT = { character_event = { id = MAN.3 } }
+			hidden_tooltip={
+				save_event_target_as=target_empire
+				ROOT={ character_event={ id=MAN.3 } }
 			}
 		}
 		
-		ai_chance = {
-			factor = 0.5
+		ai_chance={
+			factor=0.5
 			
-			modifier = {
-				factor = 10
-				e_min = {
-					capital_scope = {
-						owner = { character = ROOT }
+			modifier={
+				factor=10
+				e_qing={
+					capital_scope={
+						owner={ character=ROOT }
 					}
 				}
 			}
 			
-			modifier = {
-				factor = 0
-				OR = {
-					dynasty = 2
-					dynasty = 4
-					dynasty = 5
-					dynasty = 22
-					dynasty = 29
-					dynasty = 130
-					dynasty = 971
+			modifier={
+				factor=0
+				OR={
+					dynasty=2
+					dynasty=4
+					dynasty=5
+					dynasty=22
+					dynasty=29
+					dynasty=130
+					dynasty=508
+					dynasty=511
+					dynasty=801
+					dynasty=802
+					dynasty=826
+					dynasty=971
+					dynasty=1010
+					dynasty=2005
 				}
 			}
 		}
 	}
 	
-	option = {
-		name = EVTOPT_DYN.QI
+	option={
+		name=EVTOPT_DYN.SHU
 		
-		trigger = {
-			e_qi = { has_holder=no }
+		trigger={
+			e_shu={ has_holder=no }
 		}
 		
-		e_qi = {
-			activate_title = { title = e_qi status = yes }
-			grant_title = ROOT
-			copy_title_laws = e_china
+		e_shu={
+			activate_title={ title=e_shu status=yes }
+			grant_title=ROOT
+			copy_title_laws=e_china
 			
-			hidden_tooltip = {
-				save_event_target_as = target_empire
-				ROOT = { character_event = { id = MAN.3 } }
+			hidden_tooltip={
+				save_event_target_as=target_empire
+				ROOT={ character_event={ id=MAN.3 } }
 			}
 		}
 		
-		ai_chance = {
-			factor = 0.5
+		ai_chance={
+			factor=0.5
 			
-			modifier = {
-				factor = 10
-				e_qi = {
-					capital_scope = {
-						owner = { character = ROOT }
+			modifier={
+				factor=10
+				e_shu={
+					capital_scope={
+						owner={ character=ROOT }
 					}
 				}
 			}
 			
-			modifier = {
-				factor = 0
-				OR = {
-					dynasty = 2
-					dynasty = 4
-					dynasty = 5
-					dynasty = 22
-					dynasty = 29
-					dynasty = 130
-					dynasty = 971
+			modifier={
+				factor=100
+				OR={
+					character=600
+					is_close_relative=600
+				}
+			}
+			
+			modifier={
+				factor=0
+				OR={
+					AND={
+						NOR={
+							character=600
+							is_close_relative=600
+						}
+						dynasty=2
+					}
+					dynasty=4
+					dynasty=5
+					dynasty=22
+					dynasty=29
+					dynasty=130
+					dynasty=508
+					dynasty=511
+					dynasty=801
+					dynasty=802
+					dynasty=826
+					dynasty=971
+					dynasty=1010
+					dynasty=2005
 				}
 			}
 		}
 	}
 	
-	option = {
-		name = EVTOPT_DYN.NONE
+	option={
+		name=EVTOPT_DYN.NONE
 		
-		hidden_tooltip = {
-			character_event = { id = DYN.4 }
+		hidden_tooltip={
+			character_event={ id=DYN.5 }
 		}
 		
-		ai_chance = {
-			factor = 0.5
+		ai_chance={
+			factor=0.5
 			
-			modifier = {
-				factor = 100
-				OR = {
-					dynasty = 2
-					dynasty = 4
-					dynasty = 5
-					dynasty = 22
-					dynasty = 29
-					dynasty = 130
-					dynasty = 971
+			modifier={
+				factor=100
+				OR={
+					dynasty=2
+					dynasty=4
+					dynasty=5
+					dynasty=22
+					dynasty=29
+					dynasty=130
+					dynasty=508
+					dynasty=511
+					dynasty=801
+					dynasty=802
+					dynasty=826
+					dynasty=971
+					dynasty=1010
+					dynasty=2005
+				}
+			}
+			
+			modifier={
+				factor=0
+				OR={
+					character=600
+					is_close_relative=600
 				}
 			}
 		}
@@ -550,368 +895,211 @@ character_event = {
 
 
 ### NEW DYNASTY ###
-character_event = {
-	id = DYN.4
-	desc = EVTDESC_DYN
-	title = EVTTITLE_DYN.4
-	picture = GFX_evt_throne_room_byzantine
+character_event={
+	id=DYN.5
+	desc=EVTDESC_DYN
+	title=EVTTITLE_DYN.5
+	picture=GFX_evt_throne_room_byzantine
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	option = {
-		name = EVTOPT_DYN.QIN
+	option={
+		name=EVTOPT_DYN.SONG
 		
-		trigger = {
-			e_qin = { has_holder=no }
+		trigger={
+			e_song={ has_holder=no }
 		}
 		
-		e_qin = {
-			activate_title = { title = e_qin status = yes }
-			grant_title = ROOT
-			copy_title_laws = e_china
+		e_song={
+			activate_title={ title=e_song status=yes }
+			grant_title=ROOT
+			copy_title_laws=e_china
 			
-			hidden_tooltip = {
-				save_event_target_as = target_empire
-				ROOT = { character_event = { id = MAN.3 } }
+			hidden_tooltip={
+				save_event_target_as=target_empire
+				ROOT={ character_event={ id=MAN.3 } }
 			}
 		}
 		
-		ai_chance = {
-			factor = 0.5
+		ai_chance={
+			factor=0.5
 			
-			modifier = {
-				factor = 10
-				e_qin = {
-					capital_scope = {
-						owner = { character = ROOT }
+			modifier={
+				factor=10
+				e_song={
+					capital_scope={
+						owner={ character=ROOT }
 					}
 				}
 			}
 			
-			modifier = {
-				factor = 0
-				OR = {
-					dynasty = 2
-					dynasty = 4
-					dynasty = 5
-					dynasty = 22
-					dynasty = 29
-					dynasty = 130
-					dynasty = 971
+			modifier={
+				factor=0
+				OR={
+					dynasty=2
+					dynasty=4
+					dynasty=5
+					dynasty=22
+					dynasty=29
+					dynasty=130
+					dynasty=508
+					dynasty=511
+					dynasty=801
+					dynasty=802
+					dynasty=826
+					dynasty=971
+					dynasty=1010
+					dynasty=2005
 				}
 			}
 		}
 	}
 	
-	option = {
-		name = EVTOPT_DYN.QING
+	option={
+		name=EVTOPT_DYN.SUI
 		
-		trigger = {
-			e_qing = { has_holder=no }
+		trigger={
+			e_sui={ has_holder=no }
 		}
 		
-		e_qing = {
-			activate_title = { title = e_qing status = yes }
-			grant_title = ROOT
-			copy_title_laws = e_china
+		e_sui={
+			activate_title={ title=e_sui status=yes }
+			grant_title=ROOT
+			copy_title_laws=e_china
 			
-			hidden_tooltip = {
-				save_event_target_as = target_empire
-				ROOT = { character_event = { id = MAN.3 } }
+			hidden_tooltip={
+				save_event_target_as=target_empire
+				ROOT={ character_event={ id=MAN.3 } }
 			}
 		}
 		
-		ai_chance = {
-			factor = 0.5
+		ai_chance={
+			factor=0.5
 			
-			modifier = {
-				factor = 10
-				e_qing = {
-					capital_scope = {
-						owner = { character = ROOT }
+			modifier={
+				factor=10
+				e_sui={
+					capital_scope={
+						owner={ character=ROOT }
 					}
 				}
 			}
 			
-			modifier = {
-				factor = 0
-				OR = {
-					dynasty = 2
-					dynasty = 4
-					dynasty = 5
-					dynasty = 22
-					dynasty = 29
-					dynasty = 130
-					dynasty = 971
+			modifier={
+				factor=100
+				dynasty=971
+			}
+			
+			modifier={
+				factor=0
+				OR={
+					dynasty=2
+					dynasty=4
+					dynasty=5
+					dynasty=22
+					dynasty=29
+					dynasty=130
+					dynasty=508
+					dynasty=511
+					dynasty=801
+					dynasty=802
+					dynasty=826
+					dynasty=1010
+					dynasty=2005
 				}
 			}
 		}
 	}
 	
-	option = {
-		name = EVTOPT_DYN.SHU
+	option={
+		name=EVTOPT_DYN.TAN
 		
-		trigger = {
-			e_shu = { has_holder=no }
+		trigger={
+			e_tan={ has_holder=no }
 		}
 		
-		e_shu = {
-			activate_title = { title = e_shu status = yes }
-			grant_title = ROOT
-			copy_title_laws = e_china
+		e_tan={
+			activate_title={ title=e_tan status=yes }
+			grant_title=ROOT
+			copy_title_laws=e_china
 			
-			hidden_tooltip = {
-				save_event_target_as = target_empire
-				ROOT = { character_event = { id = MAN.3 } }
+			hidden_tooltip={
+				save_event_target_as=target_empire
+				ROOT={ character_event={ id=MAN.3 } }
 			}
 		}
 		
-		ai_chance = {
-			factor = 0.5
+		ai_chance={
+			factor=0.5
 			
-			modifier = {
-				factor = 10
-				e_shu = {
-					capital_scope = {
-						owner = { character = ROOT }
+			modifier={
+				factor=10
+				e_tan={
+					capital_scope={
+						owner={ character=ROOT }
 					}
 				}
 			}
 			
-			modifier = {
-				factor = 100
-				is_close_relative = 600
+			modifier={
+				factor=100
+				dynasty=130
 			}
 			
-			modifier = {
-				factor = 0
-				OR = {
-					AND = {
-						NOT = { character = 600 }
-						dynasty = 2
-					}
-					dynasty = 4
-					dynasty = 5
-					dynasty = 22
-					dynasty = 29
-					dynasty = 130
-					dynasty = 971
+			modifier={
+				factor=0
+				OR={
+					dynasty=2
+					dynasty=4
+					dynasty=5
+					dynasty=22
+					dynasty=29
+					dynasty=508
+					dynasty=511
+					dynasty=801
+					dynasty=802
+					dynasty=826
+					dynasty=971
+					dynasty=1010
+					dynasty=2005
 				}
 			}
 		}
 	}
 	
-	option = {
-		name = EVTOPT_DYN.NONE
+	option={
+		name=EVTOPT_DYN.NONE
 		
-		hidden_tooltip = {
-			character_event = { id = DYN.5 }
+		hidden_tooltip={
+			character_event={ id=DYN.6 }
 		}
 		
-		ai_chance = {
-			factor = 0.5
+		ai_chance={
+			factor=0.5
 			
-			modifier = {
-				factor = 100
-				OR = {
-					dynasty = 2
-					dynasty = 4
-					dynasty = 5
-					dynasty = 22
-					dynasty = 29
-					dynasty = 130
-					dynasty = 971
+			modifier={
+				factor=100
+				OR={
+					dynasty=2
+					dynasty=4
+					dynasty=5
+					dynasty=22
+					dynasty=29
+					dynasty=508
+					dynasty=511
+					dynasty=801
+					dynasty=802
+					dynasty=826
+					dynasty=1010
+					dynasty=2005
 				}
 			}
 			
-			modifier = {
-				factor = 0
-				character = 600
-			}
-		}
-	}
-}
-
-
-
-### NEW DYNASTY ###
-character_event = {
-	id = DYN.5
-	desc = EVTDESC_DYN
-	title = EVTTITLE_DYN.5
-	picture = GFX_evt_throne_room_byzantine
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = EVTOPT_DYN.SONG
-		
-		trigger = {
-			e_song = { has_holder=no }
-		}
-		
-		e_song = {
-			activate_title = { title = e_song status = yes }
-			grant_title = ROOT
-			copy_title_laws = e_china
-			
-			hidden_tooltip = {
-				save_event_target_as = target_empire
-				ROOT = { character_event = { id = MAN.3 } }
-			}
-		}
-		
-		ai_chance = {
-			factor = 0.5
-			
-			modifier = {
-				factor = 10
-				e_song = {
-					capital_scope = {
-						owner = { character = ROOT }
-					}
-				}
-			}
-			
-			modifier = {
-				factor = 0
-				OR = {
-					dynasty = 2
-					dynasty = 4
-					dynasty = 5
-					dynasty = 22
-					dynasty = 29
-					dynasty = 130
-					dynasty = 971
-				}
-			}
-		}
-	}
-	
-	option = {
-		name = EVTOPT_DYN.SUI
-		
-		trigger = {
-			e_sui = { has_holder=no }
-		}
-		
-		e_sui = {
-			activate_title = { title = e_sui status = yes }
-			grant_title = ROOT
-			copy_title_laws = e_china
-			
-			hidden_tooltip = {
-				save_event_target_as = target_empire
-				ROOT = { character_event = { id = MAN.3 } }
-			}
-		}
-		
-		ai_chance = {
-			factor = 0.5
-			
-			modifier = {
-				factor = 10
-				e_sui = {
-					capital_scope = {
-						owner = { character = ROOT }
-					}
-				}
-			}
-			
-			modifier = {
-				factor = 100
-				dynasty = 971
-			}
-			
-			modifier = {
-				factor = 0
-				OR = {
-					dynasty = 2
-					dynasty = 4
-					dynasty = 5
-					dynasty = 22
-					dynasty = 29
-					dynasty = 130
-				}
-			}
-		}
-	}
-	
-	option = {
-		name = EVTOPT_DYN.TAN
-		
-		trigger = {
-			e_tan = { has_holder=no }
-		}
-		
-		e_tan = {
-			activate_title = { title = e_tan status = yes }
-			grant_title = ROOT
-			copy_title_laws = e_china
-			
-			hidden_tooltip = {
-				save_event_target_as = target_empire
-				ROOT = { character_event = { id = MAN.3 } }
-			}
-		}
-		
-		ai_chance = {
-			factor = 0.5
-			
-			modifier = {
-				factor = 10
-				e_tan = {
-					capital_scope = {
-						owner = { character = ROOT }
-					}
-				}
-			}
-			
-			modifier = {
-				factor = 100
-				dynasty = 130
-			}
-			
-			modifier = {
-				factor = 0
-				OR = {
-					dynasty = 2
-					dynasty = 4
-					dynasty = 5
-					dynasty = 22
-					dynasty = 29
-					dynasty = 971
-				}
-			}
-		}
-	}
-	
-	option = {
-		name = EVTOPT_DYN.NONE
-		
-		hidden_tooltip = {
-			character_event = { id = DYN.6 }
-		}
-		
-		ai_chance = {
-			factor = 0.5
-			
-			modifier = {
-				factor = 100
-				OR = {
-					dynasty = 2
-					dynasty = 4
-					dynasty = 5
-					dynasty = 22
-					dynasty = 29
-				}
-			}
-			
-			modifier = {
-				factor = 0
-				OR = {
-					dynasty = 130
-					dynasty = 971
+			modifier={
+				factor=0
+				OR={
+					dynasty=130
+					dynasty=971
 				}
 			}
 		}
@@ -921,183 +1109,213 @@ character_event = {
 
 
 ### NEW DYNASTY ###
-character_event = {
-	id = DYN.6
-	desc = EVTDESC_DYN
-	title = EVTTITLE_DYN.6
-	picture = GFX_evt_throne_room_byzantine
+character_event={
+	id=DYN.6
+	desc=EVTDESC_DYN
+	title=EVTTITLE_DYN.6
+	picture=GFX_evt_throne_room_byzantine
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	option = {
-		name = EVTOPT_DYN.TANG
+	option={
+		name=EVTOPT_DYN.TANG
 		
-		trigger = {
-			e_tang = { has_holder=no }
+		trigger={
+			e_tang={ has_holder=no }
 		}
 		
-		e_tang = {
-			activate_title = { title = e_tang status = yes }
-			grant_title = ROOT
-			copy_title_laws = e_china
+		e_tang={
+			activate_title={ title=e_tang status=yes }
+			grant_title=ROOT
+			copy_title_laws=e_china
 			
-			hidden_tooltip = {
-				save_event_target_as = target_empire
-				ROOT = { character_event = { id = MAN.3 } }
+			hidden_tooltip={
+				save_event_target_as=target_empire
+				ROOT={ character_event={ id=MAN.3 } }
 			}
 		}
 		
-		ai_chance = {
-			factor = 0.5
+		ai_chance={
+			factor=0.5
 			
-			modifier = {
-				factor = 10
-				e_tang = {
-					capital_scope = {
-						owner = { character = ROOT }
+			modifier={
+				factor=10
+				e_tang={
+					capital_scope={
+						owner={ character=ROOT }
 					}
 				}
 			}
 			
-			modifier = {
-				factor = 0
-				OR = {
-					dynasty = 2
-					dynasty = 4
-					dynasty = 5
-					dynasty = 22
-					dynasty = 29
-					dynasty = 130
-					dynasty = 971
+			modifier={
+				factor=0
+				OR={
+					dynasty=2
+					dynasty=4
+					dynasty=5
+					dynasty=22
+					dynasty=29
+					dynasty=130
+					dynasty=508
+					dynasty=511
+					dynasty=801
+					dynasty=802
+					dynasty=826
+					dynasty=971
+					dynasty=1010
+					dynasty=2005
 				}
 			}
 		}
 	}
 	
-	option = {
-		name = EVTOPT_DYN.WEI
+	option={
+		name=EVTOPT_DYN.WEI
 		
-		trigger = {
-			e_wei = { has_holder=no }
+		trigger={
+			e_wei={ has_holder=no }
 		}
 		
-		e_wei = {
-			activate_title = { title = e_wei status = yes }
-			grant_title = ROOT
-			copy_title_laws = e_china
+		e_wei={
+			activate_title={ title=e_wei status=yes }
+			grant_title=ROOT
+			copy_title_laws=e_china
 			
-			hidden_tooltip = {
-				save_event_target_as = target_empire
-				ROOT = { character_event = { id = MAN.3 } }
+			hidden_tooltip={
+				save_event_target_as=target_empire
+				ROOT={ character_event={ id=MAN.3 } }
 			}
 		}
 		
-		ai_chance = {
-			factor = 0.5
+		ai_chance={
+			factor=0.5
 			
-			modifier = {
-				factor = 10
-				e_wei = {
-					capital_scope = {
-						owner = { character = ROOT }
+			modifier={
+				factor=10
+				e_wei={
+					capital_scope={
+						owner={ character=ROOT }
 					}
 				}
 			}
 			
-			modifier = {
-				factor = 100
-				dynasty = 5
+			modifier={
+				factor=100
+				OR={
+					dynasty=5
+					dynasty=802
+					dynasty=826
+				}
 			}
 			
-			modifier = {
-				factor = 0
-				OR = {
-					dynasty = 2
-					dynasty = 4
-					dynasty = 22
-					dynasty = 29
-					dynasty = 130
-					dynasty = 971
+			modifier={
+				factor=0
+				OR={
+					dynasty=2
+					dynasty=4
+					dynasty=22
+					dynasty=29
+					dynasty=130
+					dynasty=508
+					dynasty=511
+					dynasty=801
+					dynasty=971
+					dynasty=1010
+					dynasty=2005
 				}
 			}
 		}
 	}
 	
-	option = {
-		name = EVTOPT_DYN.WU
+	option={
+		name=EVTOPT_DYN.WU
 		
-		trigger = {
-			e_wu = { has_holder=no }
+		trigger={
+			e_wu={ has_holder=no }
 		}
 		
-		e_wu = {
-			activate_title = { title = e_wu status = yes }
-			grant_title = ROOT
-			copy_title_laws = e_china
+		e_wu={
+			activate_title={ title=e_wu status=yes }
+			grant_title=ROOT
+			copy_title_laws=e_china
 			
-			hidden_tooltip = {
-				save_event_target_as = target_empire
-				ROOT = { character_event = { id = MAN.3 } }
+			hidden_tooltip={
+				save_event_target_as=target_empire
+				ROOT={ character_event={ id=MAN.3 } }
 			}
 		}
 		
-		ai_chance = {
-			factor = 0.5
+		ai_chance={
+			factor=0.5
 			
-			modifier = {
-				factor = 10
-				e_wu = {
-					capital_scope = {
-						owner = { character = ROOT }
+			modifier={
+				factor=10
+				e_wu={
+					capital_scope={
+						owner={ character=ROOT }
 					}
 				}
 			}
 			
-			modifier = {
-				factor = 100
-				dynasty = 4
+			modifier={
+				factor=100
+				dynasty=4
 			}
 			
-			modifier = {
-				factor = 0
-				OR = {
-					dynasty = 2
-					dynasty = 5
-					dynasty = 22
-					dynasty = 29
-					dynasty = 130
-					dynasty = 971
+			modifier={
+				factor=0
+				OR={
+					dynasty=2
+					dynasty=5
+					dynasty=22
+					dynasty=29
+					dynasty=130
+					dynasty=508
+					dynasty=511
+					dynasty=801
+					dynasty=802
+					dynasty=826
+					dynasty=971
+					dynasty=1010
+					dynasty=2005
 				}
 			}
 		}
 	}
 	
-	option = {
-		name = EVTOPT_DYN.NONE
+	option={
+		name=EVTOPT_DYN.NONE
 		
-		hidden_tooltip = {
-			character_event = { id = DYN.7 }
+		hidden_tooltip={
+			character_event={ id=DYN.7 }
 		}
 		
-		ai_chance = {
-			factor = 0.5
+		ai_chance={
+			factor=0.5
 			
-			modifier = {
-				factor = 100
-				OR = {
-					dynasty = 2
-					dynasty = 22
-					dynasty = 29
-					dynasty = 130
-					dynasty = 971
+			modifier={
+				factor=100
+				OR={
+					dynasty=2
+					dynasty=22
+					dynasty=29
+					dynasty=130
+					dynasty=508
+					dynasty=511
+					dynasty=801
+					dynasty=971
+					dynasty=1010
+					dynasty=2005
 				}
 			}
 			
-			modifier = {
-				factor = 0
-				OR = {
-					dynasty = 4
-					dynasty = 5
+			modifier={
+				factor=0
+				OR={
+					dynasty=4
+					dynasty=5
+					dynasty=802
+					dynasty=826
 				}
 			}
 		}
@@ -1107,169 +1325,212 @@ character_event = {
 
 
 ### NEW DYNASTY ###
-character_event = {
-	id = DYN.7
-	desc = EVTDESC_DYN
-	title = EVTTITLE_DYN.7
-	picture = GFX_evt_throne_room_byzantine
+character_event={
+	id=DYN.7
+	desc=EVTDESC_DYN
+	title=EVTTITLE_DYN.7
+	picture=GFX_evt_throne_room_byzantine
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	option = {
-		name = EVTOPT_DYN.WUYUE
+	option={
+		name=EVTOPT_DYN.WUYUE
 		
-		trigger = {
-			e_wuyue = { has_holder=no }
+		trigger={
+			e_wuyue={ has_holder=no }
 		}
 		
-		e_wuyue = {
-			activate_title = { title = e_wuyue status = yes }
-			grant_title = ROOT
-			copy_title_laws = e_china
+		e_wuyue={
+			activate_title={ title=e_wuyue status=yes }
+			grant_title=ROOT
+			copy_title_laws=e_china
 			
-			hidden_tooltip = {
-				save_event_target_as = target_empire
-				ROOT = { character_event = { id = MAN.3 } }
+			hidden_tooltip={
+				save_event_target_as=target_empire
+				ROOT={ character_event={ id=MAN.3 } }
 			}
 		}
 		
-		ai_chance = {
-			factor = 0.5
+		ai_chance={
+			factor=0.5
 			
-			modifier = {
-				factor = 10
-				e_wuyue = {
-					capital_scope = {
-						owner = { character = ROOT }
+			modifier={
+				factor=10
+				e_wuyue={
+					capital_scope={
+						owner={ character=ROOT }
 					}
 				}
 			}
 			
-			modifier = {
-				factor = 0
-				OR = {
-					dynasty = 2
-					dynasty = 4
-					dynasty = 5
-					dynasty = 22
-					dynasty = 29
-					dynasty = 130
-					dynasty = 971
+			modifier={
+				factor=0
+				OR={
+					dynasty=2
+					dynasty=4
+					dynasty=5
+					dynasty=22
+					dynasty=29
+					dynasty=130
+					dynasty=508
+					dynasty=511
+					dynasty=801
+					dynasty=802
+					dynasty=826
+					dynasty=971
+					dynasty=1010
+					dynasty=2005
 				}
 			}
 		}
 	}
 	
-	option = {
-		name = EVTOPT_DYN.XIA
+	option={
+		name=EVTOPT_DYN.XIA
 		
-		trigger = {
-			e_xia = { has_holder=no }
+		trigger={
+			e_xia={ has_holder=no }
 		}
 		
-		e_xia = {
-			activate_title = { title = e_xia status = yes }
-			grant_title = ROOT
-			copy_title_laws = e_china
+		e_xia={
+			activate_title={ title=e_xia status=yes }
+			grant_title=ROOT
+			copy_title_laws=e_china
 			
-			hidden_tooltip = {
-				save_event_target_as = target_empire
-				ROOT = { character_event = { id = MAN.3 } }
+			hidden_tooltip={
+				save_event_target_as=target_empire
+				ROOT={ character_event={ id=MAN.3 } }
 			}
 		}
 		
-		ai_chance = {
-			factor = 0.5
+		ai_chance={
+			factor=0.5
 			
-			modifier = {
-				factor = 10
-				e_xia = {
-					capital_scope = {
-						owner = { character = ROOT }
+			modifier={
+				factor=10
+				e_xia={
+					capital_scope={
+						owner={ character=ROOT }
 					}
 				}
 			}
 			
-			modifier = {
-				factor = 0
-				OR = {
-					dynasty = 2
-					dynasty = 4
-					dynasty = 5
-					dynasty = 22
-					dynasty = 29
-					dynasty = 130
-					dynasty = 971
+			modifier={
+				factor=100
+				dynasty=508
+			}
+			
+			modifier={
+				factor=0
+				OR={
+					dynasty=2
+					dynasty=4
+					dynasty=5
+					dynasty=22
+					dynasty=29
+					dynasty=130
+					dynasty=511
+					dynasty=801
+					dynasty=802
+					dynasty=826
+					dynasty=971
+					dynasty=1010
+					dynasty=2005
 				}
 			}
 		}
 	}
 	
-	option = {
-		name = EVTOPT_DYN.YAN
+	option={
+		name=EVTOPT_DYN.YAN
 		
-		trigger = {
-			e_yan = { has_holder=no }
+		trigger={
+			e_yan={ has_holder=no }
 		}
 		
-		e_yan = {
-			activate_title = { title = e_yan status = yes }
-			grant_title = ROOT
-			copy_title_laws = e_china
+		e_yan={
+			activate_title={ title=e_yan status=yes }
+			grant_title=ROOT
+			copy_title_laws=e_china
 			
-			hidden_tooltip = {
-				save_event_target_as = target_empire
-				ROOT = { character_event = { id = MAN.3 } }
+			hidden_tooltip={
+				save_event_target_as=target_empire
+				ROOT={ character_event={ id=MAN.3 } }
 			}
 		}
 		
-		ai_chance = {
-			factor = 0.5
+		ai_chance={
+			factor=0.5
 			
-			modifier = {
-				factor = 10
-				e_yan = {
-					capital_scope = {
-						owner = { character = ROOT }
+			modifier={
+				factor=10
+				e_yan={
+					capital_scope={
+						owner={ character=ROOT }
 					}
 				}
 			}
 			
-			modifier = {
-				factor = 0
-				OR = {
-					dynasty = 2
-					dynasty = 4
-					dynasty = 5
-					dynasty = 22
-					dynasty = 29
-					dynasty = 130
-					dynasty = 971
+			modifier={
+				factor=100
+				dynasty=801
+			}
+			
+			modifier={
+				factor=0
+				OR={
+					dynasty=2
+					dynasty=4
+					dynasty=5
+					dynasty=22
+					dynasty=29
+					dynasty=130
+					dynasty=508
+					dynasty=511
+					dynasty=802
+					dynasty=826
+					dynasty=971
+					dynasty=1010
+					dynasty=2005
 				}
 			}
 		}
 	}
 	
-	option = {
-		name = EVTOPT_DYN.NONE
+	option={
+		name=EVTOPT_DYN.NONE
 		
-		hidden_tooltip = {
-			character_event = { id = DYN.8 }
+		hidden_tooltip={
+			character_event={ id=DYN.8 }
 		}
 		
-		ai_chance = {
-			factor = 0.5
+		ai_chance={
+			factor=0.5
 			
-			modifier = {
-				factor = 100
-				OR = {
-					dynasty = 2
-					dynasty = 4
-					dynasty = 5
-					dynasty = 22
-					dynasty = 29
-					dynasty = 130
-					dynasty = 971
+			modifier={
+				factor=100
+				OR={
+					dynasty=2
+					dynasty=4
+					dynasty=5
+					dynasty=22
+					dynasty=29
+					dynasty=130
+					dynasty=511
+					dynasty=801
+					dynasty=802
+					dynasty=826
+					dynasty=971
+					dynasty=1010
+					dynasty=2005
+				}
+			}
+			
+			modifier={
+				factor=0
+				OR={
+					dynasty=508
+					dynasty=801
 				}
 			}
 		}
@@ -1279,179 +1540,213 @@ character_event = {
 
 
 ### NEW DYNASTY ###
-character_event = {
-	id = DYN.8
-	desc = EVTDESC_DYN
-	title = EVTTITLE_DYN.8
-	picture = GFX_evt_throne_room_byzantine
+character_event={
+	id=DYN.8
+	desc=EVTDESC_DYN
+	title=EVTTITLE_DYN.8
+	picture=GFX_evt_throne_room_byzantine
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	option = {
-		name = EVTOPT_DYN.ZHAO
+	option={
+		name=EVTOPT_DYN.ZHAO
 		
-		trigger = {
-			e_zhao = { has_holder=no }
+		trigger={
+			e_zhao={ has_holder=no }
 		}
 		
-		e_zhao = {
-			activate_title = { title = e_zhao status = yes }
-			grant_title = ROOT
-			copy_title_laws = e_china
+		e_zhao={
+			activate_title={ title=e_zhao status=yes }
+			grant_title=ROOT
+			copy_title_laws=e_china
 			
-			hidden_tooltip = {
-				save_event_target_as = target_empire
-				ROOT = { character_event = { id = MAN.3 } }
+			hidden_tooltip={
+				save_event_target_as=target_empire
+				ROOT={ character_event={ id=MAN.3 } }
 			}
 		}
 		
-		ai_chance = {
-			factor = 0.5
+		ai_chance={
+			factor=0.5
 			
-			modifier = {
-				factor = 10
-				e_zhao = {
-					capital_scope = {
-						owner = { character = ROOT }
+			modifier={
+				factor=10
+				e_zhao={
+					capital_scope={
+						owner={ character=ROOT }
 					}
 				}
 			}
 			
-			modifier = {
-				factor = 0
-				OR = {
-					dynasty = 2
-					dynasty = 4
-					dynasty = 5
-					dynasty = 22
-					dynasty = 29
-					dynasty = 130
-					dynasty = 971
+			modifier={
+				factor=100
+				OR={
+					dynasty=511
+					dynasty=1010
+				}
+			}
+			
+			modifier={
+				factor=0
+				OR={
+					dynasty=2
+					dynasty=4
+					dynasty=5
+					dynasty=22
+					dynasty=29
+					dynasty=130
+					dynasty=508
+					dynasty=802
+					dynasty=826
+					dynasty=971
+					dynasty=2005
 				}
 			}
 		}
 	}
 			
 			
-	option = {
-		name = EVTOPT_DYN.ZHONG
+	option={
+		name=EVTOPT_DYN.ZHONG
 		
-		trigger = {
-			e_zhong = { has_holder=no }
+		trigger={
+			e_zhong={ has_holder=no }
 		}
 		
-		e_zhong = {
-			activate_title = { title = e_zhong status = yes }
-			grant_title = ROOT
-			copy_title_laws = e_china
+		e_zhong={
+			activate_title={ title=e_zhong status=yes }
+			grant_title=ROOT
+			copy_title_laws=e_china
 			
-			hidden_tooltip = {
-				save_event_target_as = target_empire
-				ROOT = { character_event = { id = MAN.3 } }
+			hidden_tooltip={
+				save_event_target_as=target_empire
+				ROOT={ character_event={ id=MAN.3 } }
 			}
 		}
 		
-		ai_chance = {
-			factor = 0.5
+		ai_chance={
+			factor=0.5
 			
-			modifier = {
-				factor = 10
-				e_zhong = {
-					capital_scope = {
-						owner = { character = ROOT }
+			modifier={
+				factor=10
+				e_zhong={
+					capital_scope={
+						owner={ character=ROOT }
 					}
 				}
 			}
 			
-			modifier = {
-				factor = 100
-				dynasty = 29
+			modifier={
+				factor=100
+				dynasty=29
 			}
 			
-			modifier = {
-				factor = 0
-				OR = {
-					dynasty = 2
-					dynasty = 4
-					dynasty = 5
-					dynasty = 22
-					dynasty = 130
-					dynasty = 971
+			modifier={
+				factor=0
+				OR={
+					dynasty=2
+					dynasty=4
+					dynasty=5
+					dynasty=22
+					dynasty=130
+					dynasty=508
+					dynasty=511
+					dynasty=801
+					dynasty=802
+					dynasty=826
+					dynasty=971
+					dynasty=1010
+					dynasty=2005
 				}
 			}
 		}
 	}
 	
-	option = {
-		name = EVTOPT_DYN.ZHOU
+	option={
+		name=EVTOPT_DYN.ZHOU
 		
-		trigger = {
-			e_zhou = { has_holder=no }
+		trigger={
+			e_zhou={ has_holder=no }
 		}
 		
-		e_zhou = {
-			activate_title = { title = e_zhou status = yes }
-			grant_title = ROOT
-			copy_title_laws = e_china
+		e_zhou={
+			activate_title={ title=e_zhou status=yes }
+			grant_title=ROOT
+			copy_title_laws=e_china
 			
-			hidden_tooltip = {
-				save_event_target_as = target_empire
-				ROOT = { character_event = { id = MAN.3 } }
+			hidden_tooltip={
+				save_event_target_as=target_empire
+				ROOT={ character_event={ id=MAN.3 } }
 			}
 		}
 		
-		ai_chance = {
-			factor = 0.5
+		ai_chance={
+			factor=0.5
 			
-			modifier = {
-				factor = 10
-				e_zhou = {
-					capital_scope = {
-						owner = { character = ROOT }
+			modifier={
+				factor=10
+				e_zhou={
+					capital_scope={
+						owner={ character=ROOT }
 					}
 				}
 			}
 			
-			modifier = {
-				factor = 0
-				OR = {
-					dynasty = 2
-					dynasty = 4
-					dynasty = 5
-					dynasty = 22
-					dynasty = 29
-					dynasty = 130
-					dynasty = 971
+			modifier={
+				factor=0
+				OR={
+					dynasty=2
+					dynasty=4
+					dynasty=5
+					dynasty=22
+					dynasty=29
+					dynasty=130
+					dynasty=508
+					dynasty=511
+					dynasty=801
+					dynasty=802
+					dynasty=826
+					dynasty=971
+					dynasty=1010
+					dynasty=2005
 				}
 			}
 		}
 	}
 	
-	option = {
-		name = EVTOPT_DYN.NONE
+	option={
+		name=EVTOPT_DYN.NONE
 		
-		hidden_tooltip = {
-			character_event = { id = DYN.1 }
+		hidden_tooltip={
+			character_event={ id=DYN.1 }
 		}
 		
-		ai_chance = {
-			factor = 0.5
+		ai_chance={
+			factor=0.5
 			
-			modifier = {
-				factor = 100
-				OR = {
-					dynasty = 2
-					dynasty = 4
-					dynasty = 5
-					dynasty = 22
-					dynasty = 130
-					dynasty = 971
+			modifier={
+				factor=100
+				OR={
+					dynasty=2
+					dynasty=4
+					dynasty=5
+					dynasty=22
+					dynasty=130
+					dynasty=508
+					dynasty=802
+					dynasty=826
+					dynasty=971
+					dynasty=2005
 				}
 			}
 			
-			modifier = {
-				factor = 0
-				dynasty = 29
+			modifier={
+				factor=0
+				OR={
+					dynasty=29
+					dynasty=511
+					dynasty=1010
+				}
 			}
 		}
 	}

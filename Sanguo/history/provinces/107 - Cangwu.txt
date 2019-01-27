@@ -17,6 +17,7 @@ b_muandu = city
 # Misc
 culture = han
 religion = confucian
+terrain = hills
 
 #History
 194.1.1={

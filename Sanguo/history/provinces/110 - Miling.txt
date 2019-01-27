@@ -14,5 +14,6 @@ b_milingjiao = temple
 # Misc
 culture = nanyue
 religion = animist
+terrain = hills
 
 #History

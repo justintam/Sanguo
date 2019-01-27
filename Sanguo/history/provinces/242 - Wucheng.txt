@@ -12,8 +12,9 @@ b_wucheng = castle
 #b_songjian = castle
 
 # Misc
-culture = han
-religion = confucian
+culture = shanyue
+religion = animist
+terrain = plains
 
 #History
 190.1.1={

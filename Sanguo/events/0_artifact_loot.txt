@@ -1,450 +1,432 @@
 ### Looting Events
 
-namespace = artifact
+namespace=artifact
 
 #Duel inheritance
-character_event = {
-	id = artifact.1
+character_event={
+	id=artifact.1
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 
-	hide_window = yes
+	hide_window=yes
 	
-	immediate = {
-		if = {
-			limit = { has_artifact = horse_firestar }
-			random = {
-				chance = 50
-				modifier = {
-					factor = 0.2
-					has_character_flag = flag_duel_friendly
+	immediate={
+		if={
+			limit={ has_artifact=horse_firestar }
+			random={
+				chance=50
+				modifier={
+					factor=0.2
+					has_character_flag=flag_duel_friendly
 				}
-				remove_artifact = horse_firestar
-				set_character_flag = sword_lost
-				FROMFROM = { set_character_flag = horse_firestar }
+				set_character_flag=artifact_lost
+				random_artifact={
+					limit={
+						artifact_type=horse_firestar
+					}
+					save_event_target_as=target_artifact
+				}
 			}
 		}
-		if = {
-			limit = { has_artifact = horse_greylightning }
-			random = {
-				chance = 50
-				modifier = {
-					factor = 0.2
-					has_character_flag = flag_duel_friendly
+		if={
+			limit={ has_artifact=horse_greylightning }
+			random={
+				chance=50
+				modifier={
+					factor=0.2
+					has_character_flag=flag_duel_friendly
 				}
-				remove_artifact = horse_greylightning
-				set_character_flag = sword_lost
-				FROMFROM = { set_character_flag = horse_greylightning }
+				set_character_flag=artifact_lost
+				random_artifact={
+					limit={
+						artifact_type=horse_greylightning
+					}
+					save_event_target_as=target_artifact
+				}
 			}
 		}
-		if = {
-			limit = { has_artifact = horse_hexmark }
-			random = {
-				chance = 50
-				modifier = {
-					factor = 0.2
-					has_character_flag = flag_duel_friendly
+		if={
+			limit={ has_artifact=horse_hexmark }
+			random={
+				chance=50
+				modifier={
+					factor=0.2
+					has_character_flag=flag_duel_friendly
 				}
-				remove_artifact = horse_hexmark
-				set_character_flag = sword_lost
-				FROMFROM = { set_character_flag = horse_hexmark }
+				set_character_flag=artifact_lost
+				random_artifact={
+					limit={
+						artifact_type=horse_hexmark
+					}
+					save_event_target_as=target_artifact
+				}
 			}
 		}
-		if = {
-			limit = { has_artifact = horse_redhare }
-			random = {
-				chance = 50
-				modifier = {
-					factor = 0.2
-					has_character_flag = flag_duel_friendly
+		if={
+			limit={ has_artifact=horse_redhare }
+			random={
+				chance=50
+				modifier={
+					factor=0.2
+					has_character_flag=flag_duel_friendly
 				}
-				remove_artifact = horse_redhare
-				set_character_flag = sword_lost
-				FROMFROM = { set_character_flag = horse_redhare }
+				set_character_flag=artifact_lost
+				random_artifact={
+					limit={
+						artifact_type=horse_redhare
+					}
+					save_event_target_as=target_artifact
+				}
 			}
 		}
-		if = {
-			limit = { has_artifact = horse_shadowrunner }
-			random = {
-				chance = 50
-				modifier = {
-					factor = 0.2
-					has_character_flag = flag_duel_friendly
+		if={
+			limit={ has_artifact=horse_shadowrunner }
+			random={
+				chance=50
+				modifier={
+					factor=0.2
+					has_character_flag=flag_duel_friendly
 				}
-				remove_artifact = horse_shadowrunner
-				set_character_flag = sword_lost
-				FROMFROM = { set_character_flag = horse_shadowrunner }
+				set_character_flag=artifact_lost
+				random_artifact={
+					limit={
+						artifact_type=horse_shadowrunner
+					}
+					save_event_target_as=target_artifact
+				}
 			}
 		}
-		if = {
-			limit = { has_artifact = weapon_ancestralsword }
-			random = {
-				chance = 50
-				modifier = {
-					factor = 0.2
-					has_character_flag = flag_duel_friendly
+		if={
+			limit={ has_artifact=weapon_ancestralsword }
+			random={
+				chance=50
+				modifier={
+					factor=0.2
+					has_character_flag=flag_duel_friendly
 				}
-				remove_artifact = weapon_ancestralsword
-				set_character_flag = sword_lost
-				FROMFROM = { set_character_flag = weapon_ancestralsword }
+				set_character_flag=artifact_lost
+				random_artifact={
+					limit={
+						artifact_type=weapon_ancestralsword
+					}
+					save_event_target_as=target_artifact
+				}
 			}
 		}
-		if = {
-			limit = { has_artifact = weapon_flail }
-			random = {
-				chance = 50
-				modifier = {
-					factor = 0.2
-					has_character_flag = flag_duel_friendly
+		if={
+			limit={ has_artifact=weapon_flail }
+			random={
+				chance=50
+				modifier={
+					factor=0.2
+					has_character_flag=flag_duel_friendly
 				}
-				remove_artifact = weapon_flail
-				set_character_flag = sword_lost
-				FROMFROM = { set_character_flag = weapon_flail }
+				set_character_flag=artifact_lost
+				random_artifact={
+					limit={
+						artifact_type=weapon_flail
+					}
+					save_event_target_as=target_artifact
+				}
 			}
 		}
-		if = {
-			limit = { has_artifact = weapon_flyingsword }
-			random = {
-				chance = 50
-				modifier = {
-					factor = 0.2
-					has_character_flag = flag_duel_friendly
+		if={
+			limit={ has_artifact=weapon_flyingsword }
+			random={
+				chance=50
+				modifier={
+					factor=0.2
+					has_character_flag=flag_duel_friendly
 				}
-				remove_artifact = weapon_flyingsword
-				set_character_flag = sword_lost
-				FROMFROM = { set_character_flag = weapon_flyingsword }
+				set_character_flag=artifact_lost
+				random_artifact={
+					limit={
+						artifact_type=weapon_flyingsword
+					}
+					save_event_target_as=target_artifact
+				}
 			}
 		}
-		if = {
-			limit = { has_artifact = weapon_greataxe }
-			random = {
-				chance = 50
-				modifier = {
-					factor = 0.2
-					has_character_flag = flag_duel_friendly
+		if={
+			limit={ has_artifact=weapon_greataxe }
+			random={
+				chance=50
+				modifier={
+					factor=0.2
+					has_character_flag=flag_duel_friendly
 				}
-				remove_artifact = weapon_greataxe
-				set_character_flag = sword_lost
-				FROMFROM = { set_character_flag = weapon_greataxe }
+				set_character_flag=artifact_lost
+				random_artifact={
+					limit={
+						artifact_type=weapon_greataxe
+					}
+					save_event_target_as=target_artifact
+				}
 			}
 		}
-		if = {
-			limit = { has_artifact = weapon_greendragon }
-			random = {
-				chance = 50
-				modifier = {
-					factor = 0.2
-					has_character_flag = flag_duel_friendly
+		if={
+			limit={ has_artifact=weapon_greendragon }
+			random={
+				chance=50
+				modifier={
+					factor=0.2
+					has_character_flag=flag_duel_friendly
 				}
-				remove_artifact = weapon_greendragon
-				set_character_flag = sword_lost
-				FROMFROM = { set_character_flag = weapon_greendragon }
+				set_character_flag=artifact_lost
+				random_artifact={
+					limit={
+						artifact_type=weapon_greendragon
+					}
+					save_event_target_as=target_artifact
+				}
 			}
 		}
-		if = {
-			limit = { has_artifact = weapon_handspear }
-			random = {
-				chance = 50
-				modifier = {
-					factor = 0.2
-					has_character_flag = flag_duel_friendly
+		if={
+			limit={ has_artifact=weapon_handspear }
+			random={
+				chance=50
+				modifier={
+					factor=0.2
+					has_character_flag=flag_duel_friendly
 				}
-				remove_artifact = weapon_handspear
-				set_character_flag = sword_lost
-				FROMFROM = { set_character_flag = weapon_handspear }
+				set_character_flag=artifact_lost
+				random_artifact={
+					limit={
+						artifact_type=weapon_handspear
+					}
+					save_event_target_as=target_artifact
+				}
 			}
 		}
-		if = {
-			limit = { has_artifact = weapon_scimitarsword }
-			random = {
-				chance = 50
-				modifier = {
-					factor = 0.2
-					has_character_flag = flag_duel_friendly
+		if={
+			limit={ has_artifact=weapon_scimitarsword }
+			random={
+				chance=50
+				modifier={
+					factor=0.2
+					has_character_flag=flag_duel_friendly
 				}
-				remove_artifact = weapon_scimitarsword
-				set_character_flag = sword_lost
-				FROMFROM = { set_character_flag = weapon_scimitarsword }
+				set_character_flag=artifact_lost
+				random_artifact={
+					limit={
+						artifact_type=weapon_scimitarsword
+					}
+					save_event_target_as=target_artifact
+				}
 			}
 		}
-		if = {
-			limit = { has_artifact = weapon_serpentspear }
-			random = {
-				chance = 50
-				modifier = {
-					factor = 0.2
-					has_character_flag = flag_duel_friendly
+		if={
+			limit={ has_artifact=weapon_serpentspear }
+			random={
+				chance=50
+				modifier={
+					factor=0.2
+					has_character_flag=flag_duel_friendly
 				}
-				remove_artifact = weapon_serpentspear
-				set_character_flag = sword_lost
-				FROMFROM = { set_character_flag = weapon_serpentspear }
+				set_character_flag=artifact_lost
+				random_artifact={
+					limit={
+						artifact_type=weapon_serpentspear
+					}
+					save_event_target_as=target_artifact
+				}
 			}
 		}
-		if = {
-			limit = { has_artifact = weapon_serpentspear2 }
-			random = {
-				chance = 50
-				modifier = {
-					factor = 0.2
-					has_character_flag = flag_duel_friendly
+		if={
+			limit={ has_artifact=weapon_serpentspear2 }
+			random={
+				chance=50
+				modifier={
+					factor=0.2
+					has_character_flag=flag_duel_friendly
 				}
-				remove_artifact = weapon_serpentspear2
-				set_character_flag = sword_lost
-				FROMFROM = { set_character_flag = weapon_serpentspear2 }
+				set_character_flag=artifact_lost
+				random_artifact={
+					limit={
+						artifact_type=weapon_serpentspear2
+					}
+					save_event_target_as=target_artifact
+				}
 			}
 		}
-		if = {
-			limit = { has_artifact = weapon_shootingstar }
-			random = {
-				chance = 50
-				modifier = {
-					factor = 0.2
-					has_character_flag = flag_duel_friendly
+		if={
+			limit={ has_artifact=weapon_shootingstar }
+			random={
+				chance=50
+				modifier={
+					factor=0.2
+					has_character_flag=flag_duel_friendly
 				}
-				remove_artifact = weapon_shootingstar
-				set_character_flag = sword_lost
-				FROMFROM = { set_character_flag = weapon_shootingstar }
+				set_character_flag=artifact_lost
+				random_artifact={
+					limit={
+						artifact_type=weapon_shootingstar
+					}
+					save_event_target_as=target_artifact
+				}
 			}
 		}
-		if = {
-			limit = { has_artifact = weapon_skypiercer }
-			random = {
-				chance = 50
-				modifier = {
-					factor = 0.2
-					has_character_flag = flag_duel_friendly
+		if={
+			limit={ has_artifact=weapon_skypiercer }
+			random={
+				chance=50
+				modifier={
+					factor=0.2
+					has_character_flag=flag_duel_friendly
 				}
-				remove_artifact = weapon_skypiercer
-				set_character_flag = sword_lost
-				FROMFROM = { set_character_flag = weapon_skypiercer }
+				set_character_flag=artifact_lost
+				random_artifact={
+					limit={
+						artifact_type=weapon_skypiercer
+					}
+					save_event_target_as=target_artifact
+				}
 			}
 		}
-		if = {
-			limit = { has_artifact = weapon_sevenstar }
-			random = {
-				chance = 50
-				modifier = {
-					factor = 0.2
-					has_character_flag = flag_duel_friendly
+		if={
+			limit={ has_artifact=weapon_sevenstar }
+			random={
+				chance=50
+				modifier={
+					factor=0.2
+					has_character_flag=flag_duel_friendly
 				}
-				remove_artifact = weapon_sevenstar
-				set_character_flag = sword_lost
-				FROMFROM = { set_character_flag = weapon_sevenstar }
+				set_character_flag=artifact_lost
+				random_artifact={
+					limit={
+						artifact_type=weapon_sevenstar
+					}
+					save_event_target_as=target_artifact
+				}
 			}
 		}
-		if = {
-			limit = { has_artifact = weapon_swordfate }
-			random = {
-				chance = 50
-				modifier = {
-					factor = 0.2
-					has_character_flag = flag_duel_friendly
+		if={
+			limit={ has_artifact=weapon_swordfate }
+			random={
+				chance=50
+				modifier={
+					factor=0.2
+					has_character_flag=flag_duel_friendly
 				}
-				remove_artifact = weapon_swordfate
-				set_character_flag = sword_lost
-				FROMFROM = { set_character_flag = weapon_swordfate }
+				set_character_flag=artifact_lost
+				random_artifact={
+					limit={
+						artifact_type=weapon_swordfate
+					}
+					save_event_target_as=target_artifact
+				}
 			}
 		}
-		if = {
-			limit = { has_artifact = weapon_swordheaven }
-			random = {
-				chance = 50
-				modifier = {
-					factor = 0.2
-					has_character_flag = flag_duel_friendly
+		if={
+			limit={ has_artifact=weapon_swordheaven }
+			random={
+				chance=50
+				modifier={
+					factor=0.2
+					has_character_flag=flag_duel_friendly
 				}
-				remove_artifact = weapon_swordheaven
-				set_character_flag = sword_lost
-				FROMFROM = { set_character_flag = weapon_swordheaven }
+				set_character_flag=artifact_lost
+				random_artifact={
+					limit={
+						artifact_type=weapon_swordheaven
+					}
+					save_event_target_as=target_artifact
+				}
 			}
 		}
-		if = {
-			limit = { has_artifact = weapon_swordlight }
-			random = {
-				chance = 50
-				modifier = {
-					factor = 0.2
-					has_character_flag = flag_duel_friendly
+		if={
+			limit={ has_artifact=weapon_swordlight }
+			random={
+				chance=50
+				modifier={
+					factor=0.2
+					has_character_flag=flag_duel_friendly
 				}
-				remove_artifact = weapon_swordlight
-				set_character_flag = sword_lost
-				FROMFROM = { set_character_flag = weapon_swordlight }
+				set_character_flag=artifact_lost
+				random_artifact={
+					limit={
+						artifact_type=weapon_swordlight
+					}
+					save_event_target_as=target_artifact
+				}
 			}
 		}
-		if = {
-			limit = { has_artifact = weapon_thornmace }
-			random = {
-				chance = 50
-				modifier = {
-					factor = 0.2
-					has_character_flag = flag_duel_friendly
+		if={
+			limit={ has_artifact=weapon_thornmace }
+			random={
+				chance=50
+				modifier={
+					factor=0.2
+					has_character_flag=flag_duel_friendly
 				}
-				remove_artifact = weapon_thornmace
-				set_character_flag = sword_lost
-				FROMFROM = { set_character_flag = weapon_thornmace }
+				set_character_flag=artifact_lost
+				random_artifact={
+					limit={
+						artifact_type=weapon_thornmace
+					}
+					save_event_target_as=target_artifact
+				}
 			}
 		}
-		if = {
-			limit = { has_artifact = weapon_trident }
-			random = {
-				chance = 50
-				modifier = {
-					factor = 0.2
-					has_character_flag = flag_duel_friendly
+		if={
+			limit={ has_artifact=weapon_trident }
+			random={
+				chance=50
+				modifier={
+					factor=0.2
+					has_character_flag=flag_duel_friendly
 				}
-				remove_artifact = weapon_trident
-				set_character_flag = sword_lost
-				FROMFROM = { set_character_flag = weapon_trident }
+				set_character_flag=artifact_lost
+				random_artifact={
+					limit={
+						artifact_type=weapon_trident
+					}
+					save_event_target_as=target_artifact
+				}
 			}
 		}
-		if = {
-			limit = { has_artifact = weapon_twincrescent }
-			random = {
-				chance = 50
-				modifier = {
-					factor = 0.2
-					has_character_flag = flag_duel_friendly
+		if={
+			limit={ has_artifact=weapon_twincrescent }
+			random={
+				chance=50
+				modifier={
+					factor=0.2
+					has_character_flag=flag_duel_friendly
 				}
-				remove_artifact = weapon_twincrescent
-				set_character_flag = sword_lost
-				FROMFROM = { set_character_flag = weapon_twincrescent }
+				set_character_flag=artifact_lost
+				random_artifact={
+					limit={
+						artifact_type=weapon_twincrescent
+					}
+					save_event_target_as=target_artifact
+				}
 			}
 		}
 		
-		if = {			
-			limit = { has_character_flag = sword_lost }
-			clr_character_flag = sword_lost
-			
-			FROMFROM = { character_event = { id = artifact.2 } }
+		if={			
+			limit={ has_character_flag=artifact_lost }
+			clr_character_flag=artifact_lost
+			event_target:target_artifact={
+				transfer_artifact={
+					from=ROOT to=FROMFROM
+				}
+			}
+			FROMFROM={
+				character_event={ id=artifact.2 }
+			}
 		}
 	}
 }
 
 #Duel inheritance
-character_event = {
-	id = artifact.2
-	desc = "EVTDESC_artifact.2"
-	picture = "GFX_evt_weapon"
+character_event={
+	id=artifact.2
+	desc="EVTDESC_artifact.2"
+	picture="GFX_evt_weapon"
 	
-	is_triggered_only = yes
+	is_triggered_only=yes
 	
-	option = {
-		name = "EXCELLENT"
-		
-		if = {
-			limit = { has_character_flag = horse_firestar }
-			add_artifact = horse_firestar
-			clr_character_flag = horse_firestar
-		}
-		if = {
-			limit = { has_character_flag = horse_greylightning }
-			add_artifact = horse_greylightning
-			clr_character_flag = horse_greylightning
-		}
-		if = {
-			limit = { has_character_flag = horse_hexmark }
-			add_artifact = horse_hexmark
-			clr_character_flag = horse_hexmark
-		}
-		if = {
-			limit = { has_character_flag = horse_redhare }
-			add_artifact = horse_redhare
-			clr_character_flag = horse_redhare
-		}
-		if = {
-			limit = { has_character_flag = horse_shadowrunner }
-			add_artifact = horse_shadowrunner
-			clr_character_flag = horse_shadowrunner
-		}
-		if = {
-			limit = { has_character_flag = weapon_ancestralsword }
-			add_artifact = weapon_ancestralsword
-			clr_character_flag = weapon_ancestralsword
-		}
-		if = {
-			limit = { has_character_flag = weapon_flail }
-			add_artifact = weapon_flail
-			clr_character_flag = weapon_flail
-		}
-		if = {
-			limit = { has_character_flag = weapon_flyingsword }
-			add_artifact = weapon_flyingsword
-			clr_character_flag = weapon_flyingsword
-		}
-		if = {
-			limit = { has_character_flag = weapon_greataxe }
-			add_artifact = weapon_greataxe
-			clr_character_flag = weapon_greataxe
-		}
-		if = {
-			limit = { has_character_flag = weapon_greendragon }
-			add_artifact = weapon_greendragon
-			clr_character_flag = weapon_greendragon
-		}
-		if = {
-			limit = { has_character_flag = weapon_handspear }
-			add_artifact = weapon_handspear
-			clr_character_flag = weapon_handspear
-		}
-		if = {
-			limit = { has_character_flag = weapon_scimitarsword }
-			add_artifact = weapon_scimitarsword
-			clr_character_flag = weapon_scimitarsword
-		}
-		if = {
-			limit = { has_character_flag = weapon_serpentspear }
-			add_artifact = weapon_serpentspear
-			clr_character_flag = weapon_serpentspear
-		}
-		if = {
-			limit = { has_character_flag = weapon_serpentspear2 }
-			add_artifact = weapon_serpentspear2
-			clr_character_flag = weapon_serpentspear2
-		}
-		if = {
-			limit = { has_character_flag = weapon_sevenstar }
-			add_artifact = weapon_sevenstar
-			clr_character_flag = weapon_sevenstar
-		}
-		if = {
-			limit = { has_character_flag = weapon_shootingstar }
-			add_artifact = weapon_shootingstar
-			clr_character_flag = weapon_shootingstar
-		}
-		if = {
-			limit = { has_character_flag = weapon_skypiercer }
-			add_artifact = weapon_skypiercer
-			clr_character_flag = weapon_skypiercer
-		}
-		if = {
-			limit = { has_character_flag = weapon_swordfate }
-			add_artifact = weapon_swordfate
-			clr_character_flag = weapon_swordfate
-		}
-		if = {
-			limit = { has_character_flag = weapon_swordheaven }
-			add_artifact = weapon_swordheaven
-			clr_character_flag = weapon_swordheaven
-		}
-		if = {
-			limit = { has_character_flag = weapon_swordlight }
-			add_artifact = weapon_swordlight
-			clr_character_flag = weapon_swordlight
-		}
-		if = {
-			limit = { has_character_flag = weapon_thornmace }
-			add_artifact = weapon_thornmace
-			clr_character_flag = weapon_thornmace
-		}
-		if = {
-			limit = { has_character_flag = weapon_trident }
-			add_artifact = weapon_trident
-			clr_character_flag = weapon_trident
-		}
-		if = {
-			limit = { has_character_flag = weapon_twincrescent }
-			add_artifact = weapon_twincrescent
-			clr_character_flag = weapon_twincrescent
-		}
+	option={
+		name="EXCELLENT"
 	}
 }

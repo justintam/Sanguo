@@ -16,5 +16,6 @@ b_yangguan = castle
 # Misc
 culture = han
 religion = confucian
+terrain = plains
 
 #History

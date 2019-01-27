@@ -16,5 +16,6 @@ b_yangfeng = tribal
 # Misc
 culture = qiang
 religion = baishi
+terrain = mountain
 
 #History

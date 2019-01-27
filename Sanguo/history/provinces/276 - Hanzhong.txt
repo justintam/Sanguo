@@ -6,21 +6,22 @@ title = c_hanzhong
 # Settlements
 max_settlements = 6
 
-b_hanzhong = castle
+b_nanzheng = castle
 b_baocheng = city
 b_mianyang = temple
-b_nanxiang = city
-b_nanzheng = city
+b_dingyuan = city
+b_chenggu = city
 #b_yangduo = temple
 
 # Misc
 culture = han
 religion = tianshi
+terrain = mountain
 
 #History
-214.1.1={
-	remove_settlement = b_nanzheng
+215.11.1={
+	remove_settlement = b_chenggu
 }
 219.1.1={
-	remove_settlement = b_nanxiang
+	remove_settlement = b_dingyuan
 }

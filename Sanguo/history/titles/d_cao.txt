@@ -1,6 +1,6 @@
 1.1.1={
 	active=no
-	effect = {
+	effect={
 		set_title_flag = warlord_flag
 	}
 }
@@ -23,6 +23,6 @@
 	liege=k_ji
 }
 191.4.1={
-	holder=0 #None
+	holder=0
 	active=no
 }

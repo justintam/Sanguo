@@ -14,5 +14,6 @@ b_lichengji = city
 # Misc
 culture = han
 religion = confucian
+terrain = plains
 
 #History

@@ -1,10 +1,10 @@
 # k_liangzei
 1.1.1={
-	law = succ_feudal_elective
-	law = agnatic_succession
+	law=succ_feudal_elective
+	law=agnatic_succession
 }
 184.1.1={
-	holder = 0 #None
+	holder=0
 }
 184.10.1={
 	holder=800 #Beigong Boyu
@@ -19,6 +19,6 @@
 	holder=807 #Yan Zhong
 }
 189.9.1={
-	holder=0 #None
-	active = no
+	holder=0
+	active=no
 }

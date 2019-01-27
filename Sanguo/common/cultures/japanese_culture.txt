@@ -1,43 +1,60 @@
 japanese = {
-		graphical_cultures = { koreangfx easterngfx }
+	graphical_cultures = { japanesegfx easterngfx }
 
 	wa = {
-		graphical_cultures = { koreangfx easterngfx }
+		graphical_cultures = { japanesegfx easterngfx }
 		
 		color = { 0.15 0.15 0.15 }
 		
+		dynasty_name_first = yes
+		
 		male_names = {
-			Akio Akira Aoi Anaho Anko Annei Arata Asazuma Ayumu
-			Chuai
+			Abo Akechi Akio Akira Akihito Aoi Anaho
+			Anko Annei Arata Asazuma Awakatsu Ayumu
+			Chisato Chuai
 			Daichi Daiki Daisuke
+			Eiji
 			Futoni
-			Genma
-			Hanzei Hito
+			Genma Goro
+			Hanzei Hikami Hito
 			Ikume Ingyo Inie Irihiko Isachi Isaho
 			Itoku Iwarebiko
-			Jimmu
-			Kaeshine Kaika Keiko Koan Kogen Korei
-			Kosho Kuni Kunioshi Kuru
+			Jimmu Junda
+			Kaeshine Kaika Keiko Kiyotari Koan Kogen
+			Korei Kosho Kuni Kunioshi Kuru Kusama
+			Makoto Moriya Motokato
 			Nakatsuhiko Nekohiko Nintoku Nobu
-			O Ojin Oshi Oyama
+			O Oama Oba Ojin Osabe Oshi Otomo Otondo
+			Ototsugu Oyama
 			Richu
-			Sazaki Seimu Shino Suinin Suizei Sujin
-			Sukitomo
-			Takagi Takashi Tamademi Tarasi Tarasihiko
-			Tatsu
-			Toyotomi
+			Sawara Sazaki Seimu Shima Shino Shioyaki
+			Shirakabe Shotoku Sugiyama Suinin Suizei
+			Sujin Sukitomo
+			Takagi Takashi Takesuke Tamademi Tarasi
+			Tarasihiko Tatsu Toshi Toudou Toyotomi
+			Unara
 			Waka Wake Wakugo
+			Yamabe Yokota Yoshi Yoshitori Yoshitoshi
+			Yukihira
 		}
 		female_names = {
-			Ai Aiko Aimi Aina Airi Akane Akemi Aki Akiko Akira Ami Aoi Asuka Atsuko Aya Ayaka Ayako Ayame Ayane
-			Chihiro Chika Chikako Chinatsu Chiyo Chiyoko Chouko
+			Aguchi Ai Aiko Aimi Aina Airi Akane Akemi
+			Aki Akiko Akira Ami Aoi Asomi Asuka Atsuko
+			Aya Ayaka Ayako Ayame Ayane
+			Chihiro Chika Chikako Chinatsu Chiyo
+			Chiyoko Chouko
 			Emi
+			Fujiko Fuwa
 			Genmei Genmyo Gensho
 			Himiko
-			Jingu
-			Michiko Mimiko
+			Ikumi Inoe Ito
+			Jingu Junko
+			Kaguya Kaho Kana Kaori Kyoko
+			Machi Machiko Madoka Maho Michiko Miko
+			Mimiko Minamiko Motoko
+			Niigasa
 			Okinaga
-			Suki
+			Sakahito Suki Suiko
 			Tamayori Tarashihime Toyotama
 			Yoko Yorozu
 		}
@@ -55,5 +72,8 @@ japanese = {
 		mother_name_chance = 0
 
 		modifier = default_culture_modifier
+		
+		allow_looting = yes
+		seafarer = yes
 	}
 }

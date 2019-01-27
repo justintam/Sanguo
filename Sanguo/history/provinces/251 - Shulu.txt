@@ -14,5 +14,6 @@ b_tongxiang = city
 # Misc
 culture = shanyue
 religion = animist
+terrain = hills
 
 #History

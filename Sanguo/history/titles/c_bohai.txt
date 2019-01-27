@@ -19,11 +19,5 @@
 	holder=902 #Gongsun Fan
 }
 195.1.1={
-	holder=3552 #Random
-}
-204.1.1={
-	holder=709 #Yuan Tan
-}
-205.2.1={
-	holder=3552 #Random
+	holder=1313 #Tan Zhihan
 }

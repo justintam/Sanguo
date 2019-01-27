@@ -12,6 +12,9 @@
 190.3.1={
 	liege=k_shi
 }
+226.1.1={
+	liege=k_jiaozhi
+}
 
 
 

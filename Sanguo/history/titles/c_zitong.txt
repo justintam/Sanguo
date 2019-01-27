@@ -7,13 +7,13 @@
 	liege=d_guanghanyong
 }
 184.1.1={
-	holder=1010 #Zhang Xiu
+	holder=1826 #Che
 }
 188.1.1={
-	holder=1009 #Zhang Lu
+	holder=3637 #Gao Yi
 }
-190.1.1={
-	holder=4113 #Random
+196.1.1={
+	holder=1351 #He Xialong
 }
 214.1.1={
 	holder=618 #Liu Yan

@@ -12,7 +12,8 @@ b_shangfanggu = castle
 #b_jinjizhen = castle
 
 # Misc
-culture = han
-religion = confucian
+culture = di
+religion = baima
+terrain = mountain
 
 #History

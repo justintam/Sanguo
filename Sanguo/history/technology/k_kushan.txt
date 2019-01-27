@@ -3,14 +3,24 @@ technology = {
 	titles = {
 		d_turpan
 	}
+	1 = {
+		military = 1.0
+		economy = 0.0
+		culture = 1.0
+	}
 	184 = {
 		military = 2.0
 		economy = 2.0
 		culture = 2.0
 	}
 	300 = {
-		military = 4.0
-		economy = 4.0
-		culture = 4.0
+		military = 3.0
+		economy = 3.0
+		culture = 3.0
+	}
+	800 = {
+		military = 8.0
+		economy = 8.0
+		culture = 8.0
 	}
 }

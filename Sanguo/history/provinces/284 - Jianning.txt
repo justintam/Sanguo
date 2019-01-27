@@ -13,5 +13,6 @@ b_jianzhou = temple
 # Misc
 culture = nanman
 religion = huojiao
+terrain = forest
 
 #History

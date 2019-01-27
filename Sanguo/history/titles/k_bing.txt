@@ -1,11 +1,11 @@
 # e_china
 1.1.1={
-	law = agnatic_succession
-	law = succ_gavelkind
+	law=agnatic_succession
+	law=succ_gavelkind
 }
 1.1.1={
 	liege=e_china
-	vice_royalty = yes
+	vice_royalty=yes
 }
 150.1.1={
 	holder=20441 #Pei Ye
@@ -16,11 +16,16 @@
 169.1.1={
 	holder=0 #Proscriptions
 }
+178.1.1={
+	holder=300 #Dong Zhuo
+}
 184.1.1={
 	holder=115 #Ding Yuan
 }
-#Zhang Yi - Died 188?
-189.10.1={
+188.1.1={
+	holder=4480 #Zhang Yi
+}
+188.12.1={
 	holder=300 #Dong Zhuo
 }
 192.5.22={
@@ -32,26 +37,25 @@
 }
 206.1.1={
 	liege=0 #Independent
-	vice_royalty = no
+	vice_royalty=no
 }
 206.6.1={
 	liege=e_china
-	vice_royalty = yes
+	vice_royalty=yes
 	holder=20450 #Liang Xi
 }
-207.2.1={
-	holder=20466 #Zhang Zhi
-}
 213.6.1={
+	holder=0
 	active=no
-	holder=0 #None
 }
 220.12.10={
 	active=yes
 	liege=e_wei
 	holder=20450 #Liang Xi
 }
+228.1.1={
+	holder=20466 #Zhang Zhi - was actually also Inspector in 207
+}
 
 
-
-#Incomplete
+#JINDYNASTY

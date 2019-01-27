@@ -10,6 +10,9 @@
 	liege=d_xihuang
 	holder=226 #Liu Pi
 }
+184.10.1={
+	liege=d_zhonghuang
+}
 201.2.1={
 	liege=d_liang
 	holder=3532 #Random

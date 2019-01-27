@@ -76,10 +76,6 @@
 #			trait = pneumonic
 #		}
 #		modifier = {
-#			factor = 0.8
-#			trait = syphilitic
-#		}
-#		modifier = {
 #			factor = 0.5
 #			trait = leper
 #		}
@@ -337,6 +333,7 @@ character_event = {
 		is_tributary = no
 		is_nomadic = no
 		any_dynasty_member = {
+			is_offmap_ruler = no
 			is_landed = no
 			is_incapable = no
 			is_adult = yes
@@ -419,6 +416,7 @@ character_event = {
 	immediate = {
 		random_dynasty_member = {
 			limit = {
+				is_offmap_ruler = no
 				is_landed = no
 				is_liege_or_above = ROOT
 				is_incapable = no

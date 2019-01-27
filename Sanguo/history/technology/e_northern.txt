@@ -1,20 +1,45 @@
 #NORTHERN
 technology = {
 	titles = {
+		#Northern
 		d_zhongbei
 		d_dongbei
 		d_xibei
 		d_nanbei
 		d_xiongnunan
+		d_shuofang
+		d_dingxiang
+		d_shang
+		d_wuyuan
+		d_xihe
+		d_yanmen
+		d_yunzhong
+		d_daifang
+		d_lelang
+		d_xuantu
+		d_liaodong
+		d_liaoxi
+		d_shanggu
+		d_dai
+	}
+	1 = {
+		military = 1.0
+		economy = 0.0
+		culture = 0.0
 	}
 	184 = {
-		military = 1.0
+		military = 1.5
 		economy = 1.0
 		culture = 1.0
 	}
 	300 = {
 		military = 3.0
-		economy = 3.0
-		culture = 3.0
+		economy = 2.0
+		culture = 2.0
+	}
+	800 = {
+		military = 8.0
+		economy = 6.0
+		culture = 7.0
 	}
 }

@@ -40,14 +40,14 @@ emperor_bactrian;Emperor;;;;;;;;;;;;;x
 emperor_female_bactrian;Empress;;;;;;;;;;;;;x
 emperor_foa_bactrian;My King of Kings;;;;;;;;;;;;;x
 emperor_foa_female_bactrian;My Queen of Queens;;;;;;;;;;;;;x
-empire_chinese;Empire;;;;;;;;;;;;;x
-empire_of_chinese;Empire of;;;;;;;;;;;;;x
-emperor_chinese;Emperor;;;;;;;;;;;;;x
+empire_chinese_group;Empire;;;;;;;;;;;;;x
+empire_of_chinese_group;Empire of;;;;;;;;;;;;;x
+emperor_chinese_group;Emperor;;;;;;;;;;;;;x
 emperor_prince;Lord;;;;;;;;;;;;;x
 emperor_prince_female;Lady;;;;;;;;;;;;;x
-emperor_female_chinese;Empress;;;;;;;;;;;;;x
-emperor_foa_chinese;Your Imperial Majesty;;;;;;;;;;;;;x
-emperor_foa_female_chinese;Your Imperial Highness;;;;;;;;;;;;;x
+emperor_female_chinese_group;Empress;;;;;;;;;;;;;x
+emperor_foa_chinese_group;Your Imperial Majesty;;;;;;;;;;;;;x
+emperor_foa_female_chinese_group;Your Imperial Highness;;;;;;;;;;;;;x
 empire_korean;Empire;;;;;;;;;;;;;x
 empire_of_korean;Empire of;;;;;;;;;;;;;x
 emperor_korean;Emperor;;;;;;;;;;;;;x
@@ -66,12 +66,12 @@ emperor_mongol;Khagan;;;;;;;;;;;;;x
 emperor_female_mongol;Khatun;;;;;;;;;;;;;x
 emperor_foa_mongol;Your Highness;;;;;;;;;;;;;x
 emperor_foa_female_mongol;Your Highness;;;;;;;;;;;;;x
-empire_tibetan;Empire;;;;;;;;;;;;;x
-empire_of_tibetan;Empire;;;;;;;;;;;;;x
-emperor_tibetan;Emperor;;;;;;;;;;;;;x
-emperor_female_tibetan;Empress;;;;;;;;;;;;;x
-emperor_foa_tibetan;Your Highness;;;;;;;;;;;;;x
-emperor_foa_female_tibetan;Your Highness;;;;;;;;;;;;;x
+empire_tibetan_group;Empire;;;;;;;;;;;;;x
+empire_of_tibetan_group;Empire;;;;;;;;;;;;;x
+emperor_tibetan_group;Emperor;;;;;;;;;;;;;x
+emperor_female_tibetan_group;Empress;;;;;;;;;;;;;x
+emperor_foa_tibetan_group;Your Highness;;;;;;;;;;;;;x
+emperor_foa_female_tibetan_group;Your Highness;;;;;;;;;;;;;x
 empire_yue;Empire;;;;;;;;;;;;;x
 empire_of_yue;Empire;;;;;;;;;;;;;x
 emperor_yue;Emperor;;;;;;;;;;;;;x
@@ -82,19 +82,19 @@ emperor_foa_female_yue;Your Highness;;;;;;;;;;;;;x
 king_title_prince;Lord;;;;;;;;;;;;;x
 king_title_prince_female;Lady;;;;;;;;;;;;;x
 king_title_queen_mother_female;Lady;;;;;;;;;;;;;x
-king_title_queen_mother_female_chinese;Lady;;;;;;;;;;;;;x
+king_title_queen_mother_female_chinese_group;Lady;;;;;;;;;;;;;x
 kingdom_bactrian;Empire;;;;;;;;;;;;;x
 kingdom_of_bactrian;Empire of;;;;;;;;;;;;;x
 king_bactrian;Emperor;;;;;;;;;;;;;x
 king_female_bactrian;Empress;;;;;;;;;;;;;x
 king_foa_bactrian;My King of Kings;;;;;;;;;;;;;x
 king_foa_female_bactrian;My Queen of Queens;;;;;;;;;;;;;x
-kingdom_chinese;Province;;;;;;;;;;;;;x
-kingdom_of_chinese;Province of;;;;;;;;;;;;;x
-king_chinese;Governor;;;;;;;;;;;;;x
-king_female_chinese;Lady;;;;;;;;;;;;;x
-king_foa_chinese;Your Lordship;;;;;;;;;;;;;x
-king_foa_female_chinese;Your Ladyship;;;;;;;;;;;;;x
+kingdom_chinese_group;Province;;;;;;;;;;;;;x
+kingdom_of_chinese_group;Province of;;;;;;;;;;;;;x
+king_chinese_group;Governor;;;;;;;;;;;;;x
+king_female_chinese_group;Lady;;;;;;;;;;;;;x
+king_foa_chinese_group;Your Lordship;;;;;;;;;;;;;x
+king_foa_female_chinese_group;Your Ladyship;;;;;;;;;;;;;x
 kingdom_korean;Kingdom;;;;;;;;;;;;;x
 kingdom_of_korean;Kingdom of;;;;;;;;;;;;;x
 king_korean;King;;;;;;;;;;;;;x
@@ -113,12 +113,12 @@ king_mongol;Khagan;;;;;;;;;;;;;x
 king_female_mongol;Khatun;;;;;;;;;;;;;x
 king_foa_mongol;Your Highness;;;;;;;;;;;;;x
 king_foa_female_mongol;Your Highness;;;;;;;;;;;;;x
-kingdom_tibetan;Kingdom;;;;;;;;;;;;;x
-kingdom_of_tibetan;Kingdom;;;;;;;;;;;;;x
-king_tibetan;King;;;;;;;;;;;;;x
-king_female_tibetan;Queen;;;;;;;;;;;;;x
-king_foa_tibetan;Your Highness;;;;;;;;;;;;;x
-king_foa_female_tibetan;Your Highness;;;;;;;;;;;;;x
+kingdom_tibetan_group;Kingdom;;;;;;;;;;;;;x
+kingdom_of_tibetan_group;Kingdom;;;;;;;;;;;;;x
+king_tibetan_group;King;;;;;;;;;;;;;x
+king_female_tibetan_group;Queen;;;;;;;;;;;;;x
+king_foa_tibetan_group;Your Highness;;;;;;;;;;;;;x
+king_foa_female_tibetan_group;Your Highness;;;;;;;;;;;;;x
 kingdom_yue;Kingdom;;;;;;;;;;;;;x
 kingdom_of_yue;Kingdom;;;;;;;;;;;;;x
 king_yue;King;;;;;;;;;;;;;x
@@ -140,12 +140,12 @@ duke_bactrian;Governor;;;;;;;;;;;;;x
 duke_female_bactrian;Governess;;;;;;;;;;;;;x
 duke_foa_bactrian;My Lord;;;;;;;;;;;;;x
 duke_foa_female_bactrian;My Lady;;;;;;;;;;;;;x
-duchy_chinese;Commandery;;;;;;;;;;;;;x
-duchy_of_chinese;Commandery of;;;;;;;;;;;;;x
-duke_chinese;Administrator;;;;;;;;;;;;;x
-duke_female_chinese;Lady;;;;;;;;;;;;;x
-duke_foa_chinese;Your Lordship;;;;;;;;;;;;;x
-duke_foa_female_chinese;Your Ladyship;;;;;;;;;;;;;x
+duchy_chinese_group;Commandery;;;;;;;;;;;;;x
+duchy_of_chinese_group;Commandery of;;;;;;;;;;;;;x
+duke_chinese_group;Administrator;;;;;;;;;;;;;x
+duke_female_chinese_group;Lady;;;;;;;;;;;;;x
+duke_foa_chinese_group;Your Lordship;;;;;;;;;;;;;x
+duke_foa_female_chinese_group;Your Ladyship;;;;;;;;;;;;;x
 duchy_korean;High Chiefdom;;;;;;;;;;;;;x
 duchy_of_korean;High Chiefdom of;;;;;;;;;;;;;x
 duke_korean;High Chief;;;;;;;;;;;;;x
@@ -164,12 +164,12 @@ duke_mongol;Khagan;;;;;;;;;;;;;x
 duke_female_mongol;Khatun;;;;;;;;;;;;;x
 duke_foa_mongol;My Chieftain;;;;;;;;;;;;;x
 duke_foa_female_mongol;My Chieftain;;;;;;;;;;;;;x
-duchy_tibetan;High Chiefdom;;;;;;;;;;;;;x
-duchy_of_tibetan;High Chiefdom;;;;;;;;;;;;;x
-duke_tibetan;High Chief;;;;;;;;;;;;;x
-duke_female_tibetan;High Chieftess;;;;;;;;;;;;;x
-duke_foa_tibetan;My Chieftain;;;;;;;;;;;;;x
-duke_foa_female_tibetan;My Chieftess;;;;;;;;;;;;;x
+duchy_tibetan_group;High Chiefdom;;;;;;;;;;;;;x
+duchy_of_tibetan_group;High Chiefdom;;;;;;;;;;;;;x
+duke_tibetan_group;High Chief;;;;;;;;;;;;;x
+duke_female_tibetan_group;High Chieftess;;;;;;;;;;;;;x
+duke_foa_tibetan_group;My Chieftain;;;;;;;;;;;;;x
+duke_foa_female_tibetan_group;My Chieftess;;;;;;;;;;;;;x
 duchy_yue;High Chiefdom;;;;;;;;;;;;;x
 duchy_of_yue;High Chiefdom;;;;;;;;;;;;;x
 duke_yue;High Chief;;;;;;;;;;;;;x
@@ -191,12 +191,12 @@ count_bactrian;Administrator;;;;;;;;;;;;;x
 count_female_bactrian;Administrator;;;;;;;;;;;;;x
 count_foa_bactrian;My Lord;;;;;;;;;;;;;x
 count_foa_female_bactrian;My Lady;;;;;;;;;;;;;x
-county_chinese;County;;;;;;;;;;;;;x
-county_of_chinese;County of;;;;;;;;;;;;;x
-count_chinese;Magistrate;;;;;;;;;;;;;x
-count_female_chinese;Lady;;;;;;;;;;;;;x
-count_foa_chinese;Your Lordship;;;;;;;;;;;;;x
-count_foa_female_chinese;Your Ladyship;;;;;;;;;;;;;x
+county_chinese_group;County;;;;;;;;;;;;;x
+county_of_chinese_group;County of;;;;;;;;;;;;;x
+count_chinese_group;Magistrate;;;;;;;;;;;;;x
+count_female_chinese_group;Lady;;;;;;;;;;;;;x
+count_foa_chinese_group;Your Lordship;;;;;;;;;;;;;x
+count_foa_female_chinese_group;Your Ladyship;;;;;;;;;;;;;x
 county_korean;Chiefdom;;;;;;;;;;;;;x
 county_of_korean;Chiefdom of;;;;;;;;;;;;;x
 count_korean;Chief;;;;;;;;;;;;;x
@@ -215,12 +215,12 @@ count_mongol;Khagan;;;;;;;;;;;;;x
 count_female_mongol;Khatun;;;;;;;;;;;;;x
 count_foa_mongol;My Chieftain;;;;;;;;;;;;;x
 count_foa_female_mongol;My Chieftess;;;;;;;;;;;;;x
-county_tibetan;Chiefdom;;;;;;;;;;;;;x
-county_of_tibetan;Chiefdom of;;;;;;;;;;;;;x
-count_tibetan;Chief;;;;;;;;;;;;;x
-count_female_tibetan;Chieftess;;;;;;;;;;;;;x
-count_foa_tibetan;My Chieftain;;;;;;;;;;;;;x
-count_foa_female_tibetan;My Chieftess;;;;;;;;;;;;;x
+county_tibetan_group;Chiefdom;;;;;;;;;;;;;x
+county_of_tibetan_group;Chiefdom of;;;;;;;;;;;;;x
+count_tibetan_group;Chief;;;;;;;;;;;;;x
+count_female_tibetan_group;Chieftess;;;;;;;;;;;;;x
+count_foa_tibetan_group;My Chieftain;;;;;;;;;;;;;x
+count_foa_female_tibetan_group;My Chieftess;;;;;;;;;;;;;x
 county_yue;Chiefdom;;;;;;;;;;;;;x
 county_of_yue;Chiefdom of;;;;;;;;;;;;;x
 count_yue;Chief;;;;;;;;;;;;;x
@@ -241,12 +241,12 @@ baron_bactrian;Magistrate;;;;;;;;;;;;;x
 baron_female_bactrian;Magistrate;;;;;;;;;;;;;x
 baron_foa_bactrian;My Lord;;;;;;;;;;;;;x
 baron_foa_female_bactrian;My Lady;;;;;;;;;;;;;x
-barony_chinese;District;;;;;;;;;;;;;x
-barony_of_chinese;District of;;;;;;;;;;;;;x
-baron_chinese;Sheriff;;;;;;;;;;;;;x
-baron_female_chinese;Lady;;;;;;;;;;;;;x
-baron_foa_chinese;Your Lordship;;;;;;;;;;;;;x
-baron_foa_female_chinese;Your Ladyship;;;;;;;;;;;;;x
+barony_chinese_group;District;;;;;;;;;;;;;x
+barony_of_chinese_group;District of;;;;;;;;;;;;;x
+baron_chinese_group;Sheriff;;;;;;;;;;;;;x
+baron_female_chinese_group;Lady;;;;;;;;;;;;;x
+baron_foa_chinese_group;Your Lordship;;;;;;;;;;;;;x
+baron_foa_female_chinese_group;Your Ladyship;;;;;;;;;;;;;x
 barony_korean;Tribe;;;;;;;;;;;;;x
 barony_of_korean;Tribe of;;;;;;;;;;;;;x
 baron_korean;Lesser Chief;;;;;;;;;;;;;x
@@ -265,12 +265,12 @@ baron_mongol;Khagan;;;;;;;;;;;;;x
 baron_female_mongol;Khatun;;;;;;;;;;;;;x
 baron_foa_mongol;My Chieftain;;;;;;;;;;;;;x
 baron_foa_female_mongol;My Chieftess;;;;;;;;;;;;;x
-barony_tibetan;Tribe;;;;;;;;;;;;;x
-barony_of_tibetan;Tribe of;;;;;;;;;;;;;x
-baron_tibetan;Lesser Chief;;;;;;;;;;;;;x
-baron_female_tibetan;Lesser Chieftess;;;;;;;;;;;;;x
-baron_foa_tibetan;My Chieftain;;;;;;;;;;;;;x
-baron_foa_female_tibetan;My Chieftess;;;;;;;;;;;;;x
+barony_tibetan_group;Tribe;;;;;;;;;;;;;x
+barony_of_tibetan_group;Tribe of;;;;;;;;;;;;;x
+baron_tibetan_group;Lesser Chief;;;;;;;;;;;;;x
+baron_female_tibetan_group;Lesser Chieftess;;;;;;;;;;;;;x
+baron_foa_tibetan_group;My Chieftain;;;;;;;;;;;;;x
+baron_foa_female_tibetan_group;My Chieftess;;;;;;;;;;;;;x
 barony_yue;Tribe;;;;;;;;;;;;;x
 barony_of_yue;Tribe of;;;;;;;;;;;;;x
 baron_yue;Lesser Chief;;;;;;;;;;;;;x

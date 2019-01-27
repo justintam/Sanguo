@@ -11,7 +11,7 @@
 	holder=3753 #Cao Min
 }
 184.1.1={
-	holder=4174 # Random
+	holder=1348 #Teng Daguzhang
 }
 194.1.1={
 	liege=k_yong
@@ -21,6 +21,9 @@
 }
 215.1.1={
 	liege=k_yong
+}
+220.1.1={
+	holder=4174 #Random
 }
 220.8.1={
 	liege=k_liang

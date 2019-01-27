@@ -22,7 +22,7 @@
 	holder=58 #Liu Yao
 } #Xue Li?
 195.6.1={
-	holder=508 #Sun Ce
+	holder=10562 #Xu Kun
 }
 197.1.1={
 	holder=517 #Wu Jing

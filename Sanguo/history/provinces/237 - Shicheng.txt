@@ -14,5 +14,6 @@ b_niuzhu = city
 # Misc
 culture = shanyue
 religion = animist
+terrain = hills
 
 #History

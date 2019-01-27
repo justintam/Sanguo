@@ -140,7 +140,7 @@ character_event = {
 		trigger = { 
 			NOT = { age = 15 }
 			NOT = { trait = tall }
-			NOT = { trait = strong }
+			NOT = { is_strong_trigger = yes }
 		}
 	}
 	
@@ -170,7 +170,7 @@ character_event = {
 			FROMFROM = {
 				NOT = { age = 15 }
 				NOT = { trait = tall }
-				NOT = { trait = strong }
+				NOT = { is_strong_trigger = yes }
 			}
 		}
 	}
@@ -180,7 +180,7 @@ character_event = {
 		
 		trigger = {
 			trait = fate_duel
-			trait = strong
+			is_strong_trigger = yes
 		}
 		
 		set_character_flag = duel_attack_e
@@ -217,7 +217,7 @@ character_event = {
 		trigger = {
 			NAND = {
 				trait = fate_duel
-				trait = strong
+				is_strong_trigger = yes
 			}
 		}
 		
@@ -461,7 +461,7 @@ character_event = {
 		trigger = { 
 			NOT = { age = 15 }
 			NOT = { trait = tall }
-			NOT = { trait = strong }
+			NOT = { is_strong_trigger = yes }
 		}
 	}
 	
@@ -491,7 +491,7 @@ character_event = {
 			FROM = {
 				NOT = { age = 15 }
 				NOT = { trait = tall }
-				NOT = { trait = strong }
+				NOT = { is_strong_trigger = yes }
 			}
 		}
 	}
@@ -501,7 +501,7 @@ character_event = {
 		
 		trigger = {
 			trait = fate_duel
-			trait = strong
+			is_strong_trigger = yes
 		}
 		
 		set_character_flag = duel_attack_e
@@ -538,7 +538,7 @@ character_event = {
 		trigger = {
 			NAND = {
 				trait = fate_duel
-				trait = strong
+				is_strong_trigger = yes
 			}
 		}
 		
@@ -779,7 +779,7 @@ character_event = {
 				}
 			}
 			modifier = {
-				factor = 8
+				factor = 4
 				FROMFROM = {
 					OR = {
 						has_character_flag = duel_attack_e
@@ -794,7 +794,7 @@ character_event = {
 				}
 			}
 			modifier = {
-				factor = 4
+				factor = 2.5
 				FROMFROM = {
 					has_character_flag = duel_attack_g
 				}
@@ -803,7 +803,7 @@ character_event = {
 				}
 			}
 			modifier = {
-				factor = 4
+				factor = 2.5
 				FROMFROM = {
 					has_character_flag = duel_attack_b
 				}
@@ -812,7 +812,7 @@ character_event = {
 				}
 			}
 			modifier = {
-				factor = 4
+				factor = 3
 				FROMFROM = {
 					has_character_flag = duel_attack_c
 				}
@@ -842,7 +842,7 @@ character_event = {
 				}
 			}
 			modifier = {
-				factor = 4
+				factor = 2.5
 				FROMFROM = {
 					has_character_flag = duel_defend_b
 				}
@@ -851,7 +851,7 @@ character_event = {
 				}
 			}
 			modifier = {
-				factor = 4
+				factor = 2.5
 				FROMFROM = {
 					has_character_flag = duel_defend_c
 				}
@@ -874,7 +874,7 @@ character_event = {
 			
 			# Fate Effects
 			modifier = {
-				factor = 4
+				factor = 2.5
 				FROMFROM = { trait = destined }
 			}
 			
@@ -884,15 +884,15 @@ character_event = {
 				FROMFROM = { trait = duel_poor_warrior }
 			}
 			modifier = {
-				factor = 3
+				factor = 2
 				FROMFROM = { trait = duel_trained_warrior }
 			}
 			modifier = {
-				factor = 6
+				factor = 3
 				FROMFROM = { trait = duel_skilled_warrior }
 			}
 			modifier = {
-				factor = 9
+				factor = 5
 				FROMFROM = { trait = duel_master_warrior }
 			}
 			
@@ -1026,7 +1026,7 @@ character_event = {
 				}
 			}
 			modifier = {
-				factor = 4
+				factor = 2.5
 				FROMFROM = {
 					has_artifact = horse_redhare
 				}
@@ -1058,13 +1058,13 @@ character_event = {
 				}
 			}
 			modifier = {
-				factor = 3
+				factor = 2
 				FROMFROM = {
 					trait = pet_tiger
 				}
 			}
 			modifier = {
-				factor = 3
+				factor = 2
 				FROMFROM = {
 					trait = pet_elephant
 				}
@@ -1073,43 +1073,35 @@ character_event = {
 			# Physical Strength Effects
 			modifier = {
 				factor = 2
-				FROMFROM = { trait = strong }
+				FROMFROM = { is_strong_trigger = yes }
 			}
 			modifier = {
 				factor = 2
-				FROM = { trait = weak }
+				FROM = { is_weak_trigger = yes }
 			}
 			
 			# Cunning/Intelligence Effects
 			modifier = {
 				factor = 2
-				FROMFROM = { trait = genius }
-			}
-			modifier = {
-				factor = 1.5
-				FROMFROM = { trait = quick }
+				FROMFROM = { is_smart_trigger = yes }
 			}
 			modifier = {
 				factor = 2
-				FROM = { trait = imbecile }
-			}
-			modifier = {
-				factor = 1.5
-				FROM = { trait = slow }
+				FROM = { is_dumb_trigger = yes }
 			}
 			
 			# Personality Effects
 			modifier = {
-				factor = 2
+				factor = 1.5
 				FROMFROM = { trait = brave }
 			}
 			modifier = {
-				factor = 2
+				factor = 1.5
 				FROMFROM = { trait = wroth }
 				FROM = { NOT = { trait = patient } }
 			}
 			modifier = {
-				factor = 0.5
+				factor = 0.75
 				FROMFROM = { trait = wroth }
 				FROM = { trait = patient }
 			}
@@ -1136,11 +1128,11 @@ character_event = {
 				FROM = { trait = wounded }
 			}
 			modifier = {
-				factor = 4
+				factor = 2.5
 				FROM = { trait = maimed }
 			}
 			modifier = {
-				factor = 100
+				factor = 10
 				FROM = { 
 					OR = {
 						trait = incapable 
@@ -1155,15 +1147,15 @@ character_event = {
 				FROM = { is_ill = yes }
 			}
 			modifier = {
-				factor = 4
+				factor = 2.5
 				FROM = { trait = infirm }
 			}
 			modifier = {
-				factor = 6
+				factor = 2.5
 				FROM = { has_epidemic = yes }
 			}
 			modifier = {
-				factor = 30
+				factor = 4
 				FROM = {
 					OR = {
 						trait = blinded
@@ -1174,19 +1166,19 @@ character_event = {
 			
 			# Body Shape Effects
 			modifier = {
-				factor = 4
+				factor = 2.5
 				FROMFROM = { trait = tall }
 			}
 			modifier = {
-				factor = 4
+				factor = 2.5
 				FROM = { trait = hunchback }
 			}
 			modifier = {
-				factor = 4
+				factor = 2.5
 				FROM = { trait = dwarf }
 			}
 			modifier = {
-				factor = 4
+				factor = 2.5
 				FROM = { trait = clubfooted }
 			}
 			
@@ -1215,7 +1207,11 @@ character_event = {
 			}
 			modifier = {
 				factor = 1.5
-				FROMFROM = { has_character_modifier = wol_war_fit }
+				FROMFROM = { has_character_modifier = wol_warrior }
+			}
+			modifier = {
+				factor = 2
+				FROMFROM = { has_character_modifier = wol_great_warrior }
 			}
 		}
 		FROMFROM = { character_event = { id = duel.5 } }
@@ -1256,7 +1252,7 @@ character_event = {
 				}
 			}
 			modifier = {
-				factor = 8
+				factor = 4
 				FROM = {
 					OR = {
 						has_character_flag = duel_attack_e
@@ -1271,7 +1267,7 @@ character_event = {
 				}
 			}
 			modifier = {
-				factor = 4
+				factor = 2.5
 				FROM = {
 					has_character_flag = duel_attack_g
 				}
@@ -1280,7 +1276,7 @@ character_event = {
 				}
 			}
 			modifier = {
-				factor = 4
+				factor = 2.5
 				FROM = {
 					has_character_flag = duel_attack_b
 				}
@@ -1289,7 +1285,7 @@ character_event = {
 				}
 			}
 			modifier = {
-				factor = 4
+				factor = 2.5
 				FROM = {
 					has_character_flag = duel_attack_c
 				}
@@ -1298,7 +1294,7 @@ character_event = {
 				}
 			}
 			modifier = {
-				factor = 2
+				factor = 3
 				FROM = {
 					has_character_flag = duel_attack_d
 				}
@@ -1319,7 +1315,7 @@ character_event = {
 				}
 			}
 			modifier = {
-				factor = 4
+				factor = 2.5
 				FROM = {
 					has_character_flag = duel_defend_b
 				}
@@ -1328,7 +1324,7 @@ character_event = {
 				}
 			}
 			modifier = {
-				factor = 4
+				factor = 2.5
 				FROM = {
 					has_character_flag = duel_defend_c
 				}
@@ -1351,7 +1347,7 @@ character_event = {
 			
 			# Fate Effects
 			modifier = {
-				factor = 4
+				factor = 2.5
 				FROM = { trait = destined }
 			}
 			
@@ -1361,15 +1357,15 @@ character_event = {
 				FROM = { trait = duel_poor_warrior }
 			}
 			modifier = {
-				factor = 3
+				factor = 2
 				FROM = { trait = duel_trained_warrior }
 			}
 			modifier = {
-				factor = 6
+				factor = 3
 				FROM = { trait = duel_skilled_warrior }
 			}
 			modifier = {
-				factor = 9
+				factor = 5
 				FROM = { trait = duel_master_warrior }
 			}
 			
@@ -1503,7 +1499,7 @@ character_event = {
 				}
 			}
 			modifier = {
-				factor = 4
+				factor = 2.5
 				FROM = {
 					has_artifact = horse_redhare
 				}
@@ -1519,17 +1515,29 @@ character_event = {
 			modifier = {
 				factor = 1.5
 				FROM = {
+					trait = pet_boar
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROM = {
+					trait = pet_wolf
+				}
+			}
+			modifier = {
+				factor = 1.5
+				FROM = {
 					trait = pet_eagle
 				}
 			}
 			modifier = {
-				factor = 3
+				factor = 2
 				FROM = {
 					trait = pet_tiger
 				}
 			}
 			modifier = {
-				factor = 3
+				factor = 2
 				FROM = {
 					trait = pet_elephant
 				}
@@ -1538,29 +1546,21 @@ character_event = {
 			# Physical Strength Effects
 			modifier = {
 				factor = 2
-				FROM = { trait = strong }
+				FROM = { is_strong_trigger = yes }
 			}
 			modifier = {
 				factor = 2
-				FROMFROM = { trait = weak }
+				FROMFROM = { is_weak_trigger = yes }
 			}
 			
 			# Cunning/Intelligence Effects
 			modifier = {
 				factor = 2
-				FROM = { trait = genius }
-			}
-			modifier = {
-				factor = 1.5
-				FROM = { trait = quick }
+				FROM = { is_smart_trigger = yes }
 			}
 			modifier = {
 				factor = 2
-				FROMFROM = { trait = imbecile }
-			}
-			modifier = {
-				factor = 1.5
-				FROMFROM = { trait = slow }
+				FROMFROM = { is_dumb_trigger = yes }
 			}
 			
 			# Personality Effects
@@ -1574,7 +1574,7 @@ character_event = {
 				FROMFROM = { NOT = { trait = patient } }
 			}
 			modifier = {
-				factor = 0.5
+				factor = 0.75
 				FROM = { trait = wroth }
 				FROMFROM = { trait = patient }
 			}
@@ -1601,11 +1601,11 @@ character_event = {
 				FROMFROM = { trait = wounded }
 			}
 			modifier = {
-				factor = 4
+				factor = 2.5
 				FROMFROM = { trait = maimed }
 			}
 			modifier = {
-				factor = 100
+				factor = 10
 				FROMFROM = {
 					OR = {
 						trait = incapable 
@@ -1620,15 +1620,15 @@ character_event = {
 				FROMFROM = { is_ill = yes }
 			}
 			modifier = {
-				factor = 4
+				factor = 2.5
 				FROMFROM = { trait = infirm }
 			}
 			modifier = {
-				factor = 6
+				factor = 2.5
 				FROMFROM = { has_epidemic = yes }
 			}
 			modifier = {
-				factor = 30
+				factor = 4
 				FROMFROM = { 
 					OR = {
 						trait = blinded
@@ -1639,19 +1639,19 @@ character_event = {
 			
 			# Body Shape Effects
 			modifier = {
-				factor = 4
+				factor = 2.5
 				FROM = { trait = tall }
 			}
 			modifier = {
-				factor = 4
+				factor = 2.5
 				FROMFROM = { trait = hunchback }
 			}
 			modifier = {
-				factor = 4
+				factor = 2.5
 				FROMFROM = { trait = dwarf }
 			}
 			modifier = {
-				factor = 4
+				factor = 2.5
 				FROMFROM = { trait = clubfooted }
 			}
 			
@@ -1680,7 +1680,11 @@ character_event = {
 			}
 			modifier = {
 				factor = 1.5
-				FROM = { has_character_modifier = wol_war_fit }
+				FROM = { has_character_modifier = wol_warrior }
+			}
+			modifier = {
+				factor = 2
+				FROM = { has_character_modifier = wol_great_warrior }
 			}
 		}
 		FROM = { character_event = { id = duel.5 } }
@@ -2865,6 +2869,11 @@ character_event = {
 			clr_character_flag = duel_attack_e
 			clr_character_flag = duel_attack_f
 			clr_character_flag = duel_attack_g
+			clr_character_flag = duel_defend_a
+			clr_character_flag = duel_defend_b
+			clr_character_flag = duel_defend_c
+			clr_character_flag = duel_defend_d
+			clr_character_flag = duel_defend_e
 			
 			if = {	limit = { has_character_flag = flag_battlefield_duel }
 				if = {
@@ -2942,6 +2951,11 @@ character_event = {
 			clr_character_flag = duel_attack_e
 			clr_character_flag = duel_attack_f
 			clr_character_flag = duel_attack_g
+			clr_character_flag = duel_defend_a
+			clr_character_flag = duel_defend_b
+			clr_character_flag = duel_defend_c
+			clr_character_flag = duel_defend_d
+			clr_character_flag = duel_defend_e
 			
 			if = {	limit = { has_character_flag = flag_battlefield_duel }
 				if = {
@@ -3187,10 +3201,28 @@ character_event = {
 					is_foe = FROM
 				}
 			}
-			
 			modifier = {
 				factor = 3
 				FROMFROM = { trait = honorable }
+			}
+			modifier = {
+				factor = 5
+				FROM = { trait = destined }
+			}
+			modifier = {
+				factor = 2
+				FROM = {
+					OR = {
+						trait = fate_admin
+						trait = fate_duel
+						trait = fate_lead
+						trait = fate_loved
+						trait = fate_plot
+						trait = fate_strat
+						trait = fate_teach
+						trait = fate_war
+					}
+				}
 			}
 		}
 	}
@@ -3282,35 +3314,11 @@ character_event = {
 				factor = 0.2
 				trait = wroth
 			}
-			modifier = {
-				factor = 5
-				FROM = { trait = destined }
-			}
-			modifier = {
-				factor = 2
-				FROM = {
-					OR = {
-						trait = fate_admin
-						trait = fate_duel
-						trait = fate_lead
-						trait = fate_loved
-						trait = fate_plot
-						trait = fate_strat
-						trait = fate_teach
-						trait = fate_war
-					}
-				}
-			}
 		}
 	}
 	
 	option = {
-		name = {
-			text = "EVTOPTBDUEL106"
-			trigger = {
-				has_character_flag = flag_duel_to_the_death
-			}
-		}
+		name = "EVTOPTBDUEL106"
 		character_event = { id = duel.110 tooltip = "EVTTOOLTIPDUEL110" }
 		ai_chance = { factor = 100 }
 	}
@@ -3872,7 +3880,7 @@ character_event = {
 character_event = {
 	id = duel.10700
 	desc = "EVTDESCDUEL10700"
-	picture = GFX_evt_duelcivil_war
+	picture = "GFX_evt_duel"
 	border = "GFX_event_normal_frame_war"
 	is_triggered_only = yes
 	
@@ -4248,13 +4256,9 @@ character_event = {
 character_event = {
 	id = duel.203
 	desc = "EVTDESCDUEL203"
-	picture = GFX_evt_kingslayer
+	picture = GFX_evt_ten_eunuchs_chaos
 	border = "GFX_event_normal_frame_war"
 	is_triggered_only = yes
-	
-	immediate = {
-		character_event = { id = FAT.11 }
-	}
 	
 	option = {
 		name = "EVTOPTADUEL203"

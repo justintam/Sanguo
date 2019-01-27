@@ -125,7 +125,7 @@
 	{
 		data=
 		{
-0 3 0 119 0 0 0 			}
+0 2 0 119 0 0 0 			}
 		religion="confucian"
 	}
 }
@@ -142,7 +142,7 @@
 	culture = han
 }
 134 = {
-	name="Yong"
+	name="Yong" #Unused
 	culture = han
 }
 135 = {
@@ -184,6 +184,13 @@
 144 = {
 	name="Liu" #Non-Imperial Liu
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 1 0 0 0 			}
+		religion="confucian"
+	}
 }
 145 = {
 	name="Shih"
@@ -200,10 +207,24 @@
 148 = {
 	name="Zhang" #Zhang Clan - YT
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="taiping"
+	}
 }
 149 = {
 	name="Zhang" #Western Zhang
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 150 = {
 	name="Ba"
@@ -232,10 +253,24 @@
 156 = {
 	name="Zhang" #Zhang Miao, Zhang Chao
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 157 = {
 	name="Zhang" #Zhang Niujiao, Zhang Yan
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 158 = {
 	name="He" #He Huan
@@ -244,6 +279,13 @@
 159 = {
 	name="Chen" #Chen Yi
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 10 0 0 0 			}
+		religion="confucian"
+	}
 }
 160 = {
 	name="He" #Special
@@ -256,6 +298,13 @@
 162 = {
 	name="Wang" #Special
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 2 0 0 0 			}
+		religion="confucian"
+	}
 }
 163 = {
 	name="Ding" #Special
@@ -264,10 +313,24 @@
 164 = {
 	name="Li" #Special
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="confucian"
+	}
 }
 165 = {
 	name="Liu" #Special
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 1 0 0 0 			}
+		religion="confucian"
+	}
 }
 166 = {
 	name="Guo" #Special
@@ -280,6 +343,13 @@
 168 = {
 	name="Wang" #Wang Kang
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 2 0 0 0 			}
+		religion="confucian"
+	}
 }
 169 = {
 	name="Dong" #Dong Fu
@@ -290,7 +360,7 @@
 	culture = han
 }
 171 = {
-	name="Zhu" #West
+	name="Zhu" #Unused
 	culture = han
 }
 172 = {
@@ -336,6 +406,13 @@
 182 = {
 	name="Liu" #Common
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 1 0 0 0 			}
+		religion="confucian"
+	}
 }
 183 = {
 	name="Guo" #Guo Dian
@@ -372,6 +449,13 @@
 191 = {
 	name="Xu" #Xu He - YT
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 12 0 0 0 			}
+		religion="confucian"
+	}
 }
 192 = {
 	name="Sima" #Sima Juhe - YT
@@ -388,13 +472,20 @@
 195 = {
 	name="Liu" #Liu Pi - YT
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 1 0 0 0 			}
+		religion="confucian"
+	}
 }
 196 = {
 	name="Qin" #Qin Man - YT
 	culture = han
 }
 197 = {
-	name="Gao" #Common
+	name="Gao" #Unused
 	culture = han
 }
 198 = {

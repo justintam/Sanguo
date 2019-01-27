@@ -13,6 +13,7 @@ b_shaxian = castle
 # Misc
 culture = han
 religion = confucian
+terrain = plains
 
 #History
 214.1.1={

@@ -9,6 +9,13 @@
 1502 = {
 	name="Wu" #Wu Ba
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 12 0 0 0 			}
+		religion="confucian"
+	}
 }
 1503 = {
 	name="Liang" #Liang Boning, Zhongning
@@ -21,22 +28,57 @@
 1505 = {
 	name="Wang" #Wang Rao
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 2 0 0 0 			}
+		religion="confucian"
+	}
 }
 1506 = {
 	name="Chen" #Chen Gong ie Lu Bu
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 10 0 0 0 			}
+		religion="confucian"
+	}
 }
 1507 = {
 	name="Chen" #Chen He, Jing, Ying
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 10 0 0 0 			}
+		religion="confucian"
+	}
 }
 1508 = {
 	name="Li" #Li Tong
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="confucian"
+	}
 }
 1509 = {
 	name="Li" #Li Qian
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="confucian"
+	}
 }
 1510 = {
 	name="Shen" #Shen Cheng
@@ -61,6 +103,13 @@
 1515 = {
 	name="Li" #Li Kan
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="confucian"
+	}
 }
 1516 = {
 	name="Sui" #Sui Gu
@@ -77,6 +126,13 @@
 1519 = {
 	name="Wang" #Wang Sheng
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 2 0 0 0 			}
+		religion="confucian"
+	}
 }
 1520 = {
 	name="Ni" #Ni Xiaode
@@ -89,14 +145,35 @@
 1522 = {
 	name="Wang" #Special Wang
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 2 0 0 0 			}
+		religion="confucian"
+	}
 }
 1523 = {
 	name="Li" #Li Le
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="confucian"
+	}
 }
 1524 = {
 	name="Sun" #Sun Qian
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 3 0 0 0 			}
+		religion="confucian"
+	}
 }
 1525 = {
 	name="Huang" #Huang Zhong
@@ -105,6 +182,13 @@
 1526 = {
 	name="Zhang" #Zhang Shiping
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 1527 = {
 	name="Hao" #Hao Pu
@@ -133,14 +217,35 @@
 1533 = {
 	name="Chen" #Chen Gong the bandit
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 10 0 0 0 			}
+		religion="confucian"
+	}
 }
 1534 = {
 	name="Chen" #Chen Fan, Yi
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 10 0 0 0 			}
+		religion="confucian"
+	}
 }
 1535 = {
 	name="Li" #Li Can
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="confucian"
+	}
 }
 1536 = {
 	name="Jian" #Jian Shuo
@@ -149,10 +254,24 @@
 1537 = {
 	name="Zhang" #Zhang Rang
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 1538 = {
 	name="Li" #Li Song
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="confucian"
+	}
 }
 1539 = {
 	name="Duan" #Duan Gui
@@ -169,6 +288,13 @@
 1542 = {
 	name="Zhang" #Zhang Gong
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 1543 = {
 	name="Han" #Han Li
@@ -185,6 +311,13 @@
 1546 = {
 	name="Sun" #Sun Zhang
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 3 0 0 0 			}
+		religion="confucian"
+	}
 }
 1547 = {
 	name="Bi" #Bi Lan
@@ -197,6 +330,13 @@
 1549 = {
 	name="Zhang" #Zhang Ji
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 1550 = {
 	name="Su" #Su Dai
@@ -209,6 +349,13 @@
 1552 = {
 	name="Li" #Li Min
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="confucian"
+	}
 }
 1553 = {
 	name="Guo" #Guo Zu
@@ -225,6 +372,13 @@
 1556 = {
 	name="Wang" #Wang Fen
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 2 0 0 0 			}
+		religion="confucian"
+	}
 }
 1557 = {
 	name="Xianyu" #Xianyu Fu
@@ -253,6 +407,13 @@
 1563 = {
 	name="Yang" #Yang Zan
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 11 0 0 0 			}
+		religion="confucian"
+	}
 }
 1564 = {
 	name="Shisun" #Shisun Rui
@@ -261,6 +422,13 @@
 1565 = {
 	name="Wu" #Wu Qiong
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 12 0 0 0 			}
+		religion="confucian"
+	}
 }
 1566 = {
 	name="He" #He Yong
@@ -285,10 +453,24 @@
 1571 = {
 	name="Wang" #Wang Bi
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 2 0 0 0 			}
+		religion="confucian"
+	}
 }
 1572 = {
 	name="Wu" #Wu Zi
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 12 0 0 0 			}
+		religion="confucian"
+	}
 }
 1573 = {
 	name="Wei" #Wei Duan, Kang, Dan
@@ -365,18 +547,46 @@
 1591 = {
 	name="Chen" #Chen Lin
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 10 0 0 0 			}
+		religion="confucian"
+	}
 }
 1592 = {
 	name="Liu" #Liu Zhen
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 1 0 0 0 			}
+		religion="confucian"
+	}
 }
 1593 = {
 	name="Wang" #Wang Can
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 2 0 0 0 			}
+		religion="confucian"
+	}
 }
 1594 = {
 	name="Wu" #Wu Xi
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 12 0 0 0 			}
+		religion="confucian"
+	}
 }
 1595 = {
 	name="Duan" #Duan Wei
@@ -393,6 +603,13 @@
 1598 = {
 	name="Zhang" #Zhang Ji
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 1599 = {
 	name="He" #He Luan

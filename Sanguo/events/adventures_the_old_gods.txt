@@ -37,7 +37,7 @@ character_event = {
 			liege = {
 				OR = {
 					culture_group = yue
-					culture_group = tibetan
+					culture_group = tibetan_group
 					culture_group = man
 				}
 				religion = ROOT
@@ -696,7 +696,7 @@ character_event = {
 #			log = "TOG.1202: [Root.GetBestName] starts claim adventure for [This.GetName]"
 			
 			holder_scope = {
-				reverse_war = {
+				reverse_unsafe_war = {
 					target = ROOT
 					casus_belli = claim
 					thirdparty_title = PREV
@@ -788,7 +788,7 @@ character_event = {
 			liege = {
 				OR = {
 					culture_group = yue
-					culture_group = tibetan
+					culture_group = tibetan_group
 					culture_group = man
 				}
 				religion = ROOT
@@ -806,7 +806,7 @@ character_event = {
 		NOT = { trait = craven }
 		
 		OR = { # Only these for now
-			culture_group = chinese
+			culture_group = chinese_group
 			culture_group = mongol
 			has_character_flag = demon_child_non_pagan
 		}
@@ -957,9 +957,10 @@ character_event = {
 							NOT = {
 								distance = {
 									who = ROOT
-									value = 800
+									value = 500
 								}
 							}
+							is_island = NO
 						}
 						any_neighbor_province = {
 							owner = {
@@ -987,9 +988,10 @@ character_event = {
 							NOT = {
 								distance = {
 									who = ROOT
-									value = 800
+									value = 500
 								}
 							}
+							is_island = NO
 						}
 						any_neighbor_province = {
 							owner = {
@@ -1089,6 +1091,7 @@ character_event = {
 						ROOT = {
 							NOT = { culture_group = mongol }
 						}
+						is_island = NO
 					}
 					any_neighbor_province = {
 						owner = {

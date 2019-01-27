@@ -14,5 +14,6 @@ b_sanguan = castle
 # Misc
 culture = di
 religion = baima
+terrain = mountain
 
 #History

@@ -24,6 +24,12 @@
 179.1.1={
 	holder=85 #Liu Gai
 }
+204.10.1={
+	liege=k_qing
+}
+205.2.1={
+	liege=k_ji
+}
 220.12.10={
 	vice_royalty = yes
 	holder=1339 #Shih Dongkai

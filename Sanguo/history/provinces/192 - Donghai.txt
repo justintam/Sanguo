@@ -14,5 +14,6 @@ b_feihai = city
 # Misc
 culture = han
 religion = confucian
+terrain = plains
 
 #History

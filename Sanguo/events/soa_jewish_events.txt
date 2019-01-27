@@ -11,7 +11,7 @@ namespace = SoA
 character_event = {
 	id = SoA.105
 	desc = EVTDESC_SoA_105
-	picture = GFX_evt_buddhist_market
+	picture = GFX_evt_jewish_market
 	border = GFX_event_normal_frame_religion
 	
 	is_triggered_only = yes
@@ -38,7 +38,7 @@ character_event = {
 character_event = {
 	id = SoA.106
 	desc = EVTDESC_SoA_106
-	picture = GFX_evt_buddhist_market
+	picture = GFX_evt_jewish_market
 	border = GFX_event_normal_frame_religion
 	
 	is_triggered_only = yes
@@ -60,7 +60,7 @@ character_event = {
 character_event = {
 	id = SoA.566
 	desc = EVTDESC_SoA_566
-	picture = GFX_evt_buddhist_market
+	picture = GFX_evt_jewish_market
 	border = GFX_event_normal_frame_religion
 
 	only_playable = yes
@@ -95,7 +95,7 @@ character_event = {
 character_event = {
 	id = SoA.107
 	desc = EVTDESC_SoA_107
-	picture = GFX_evt_buddhist_market
+	picture = GFX_evt_jewish_market
 	border = GFX_event_normal_frame_religion
 	
 	is_triggered_only = yes
@@ -119,7 +119,7 @@ character_event = {
 character_event = {
 	id = SoA.108
 	desc = EVTDESC_SoA_108
-	picture = GFX_evt_buddhist_market
+	picture = GFX_evt_jewish_market
 	border = GFX_event_normal_frame_religion
 	
 	is_triggered_only = yes
@@ -129,9 +129,9 @@ character_event = {
 	}
 }
 
-### Bewish Court Events
+### Buddhist Court Events
 
-# Bewish Diplomat Appears at Court
+# Buddhist Diplomat Appears at Court
 character_event = {
 	id = SoA.200
 	desc = EVTDESC_SoA_200
@@ -149,6 +149,7 @@ character_event = {
 		NOT = { has_character_modifier = expelled_buddhist }
 		NOT = { trait = incapable }
 		NOT = { is_inaccessible_trigger = yes }
+		neighbor_has_buddhists_trigger = yes
 	}
 	
 	mean_time_to_happen = {
@@ -224,6 +225,7 @@ character_event = {
 		NOT = { has_character_modifier = expelled_buddhist }
 		NOT = { trait = incapable }
 		NOT = { is_inaccessible_trigger = yes }
+		neighbor_has_buddhists_trigger = yes
 	}
 	
 	mean_time_to_happen = {
@@ -299,6 +301,7 @@ character_event = {
 		NOT = { has_character_modifier = expelled_buddhist }
 		NOT = { trait = incapable }
 		NOT = { is_inaccessible_trigger = yes }
+		neighbor_has_buddhists_trigger = yes
 	}
 	
 	mean_time_to_happen = {
@@ -376,6 +379,7 @@ character_event = {
 			trait = incapable
 		}
 		NOT = { is_inaccessible_trigger = yes }
+		neighbor_has_buddhists_trigger = yes
 	}
 	
 	mean_time_to_happen = {
@@ -453,6 +457,7 @@ character_event = {
 			trait = incapable
 		}
 		NOT = { is_inaccessible_trigger = yes }
+		neighbor_has_buddhists_trigger = yes
 	}
 	
 	mean_time_to_happen = {
@@ -530,6 +535,7 @@ character_event = {
 			trait = incapable
 		}
 		NOT = { is_inaccessible_trigger = yes }
+		neighbor_has_buddhists_trigger = yes
 	}
 	
 	mean_time_to_happen = {
@@ -702,7 +708,7 @@ character_event = {
 character_event = {
 	id = SoA.561
 	desc = EVTDESC_SoA_561
-	picture = GFX_evt_buddhist_market
+	picture = GFX_evt_jewish_market
 	border = GFX_event_normal_frame_religion
 	
 	is_triggered_only = yes
@@ -752,7 +758,7 @@ character_event = {
 character_event = {
 	id = SoA.563
 	desc = EVTDESC_SoA_563
-	picture = GFX_evt_buddhist_market
+	picture = GFX_evt_jewish_market
 	border = GFX_event_normal_frame_religion
 	
 	is_triggered_only = yes
@@ -802,7 +808,7 @@ character_event = {
 character_event = {
 	id = SoA.565
 	desc = EVTDESC_SoA_565
-	picture = GFX_evt_buddhist_market
+	picture = GFX_evt_jewish_market
 	border = GFX_event_normal_frame_religion
 	
 	is_triggered_only = yes

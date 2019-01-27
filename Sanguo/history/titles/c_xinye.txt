@@ -23,8 +23,15 @@
 186.1.1={
 	holder=4194 #Random
 }
+199.12.1={
+	liege=d_nan
+}
 200.9.1={
+	liege=d_liu
 	holder=600 #Liu Bei
+}
+208.8.1={
+	liege=d_nanyang
 }
 208.9.1={
 	holder=20401 #Yu Jin

@@ -1,5 +1,2357 @@
-#1 = {
-#   title=c_henan
-#   max_settlements=7
-#   terrain=arctic
-#}
+1 = {
+   title=c_henan
+   max_settlements=7
+   terrain=plains
+}
+2 = {
+   title=c_fanshui
+   max_settlements=5
+   terrain=plains
+}
+3 = {
+   title=c_hulao
+   max_settlements=5
+   terrain=plains
+}
+4 = {
+   title=c_qiguan
+   max_settlements=5
+   terrain=plains
+}
+5 = {
+   title=c_shenchi
+   max_settlements=5
+   terrain=plains
+}
+6 = {
+   title=c_yongning
+   max_settlements=5
+   terrain=plains
+}
+7 = {
+   title=c_hongnong
+   max_settlements=5
+   terrain=plains
+}
+8 = {
+   title=c_hanguguan
+   max_settlements=5
+   terrain=hills
+}
+9 = {
+   title=c_lushi
+   max_settlements=3
+   terrain=hills
+}
+10 = {
+   title=c_anyi
+   max_settlements=6
+   terrain=plains
+}
+11 = {
+   title=c_dongyuan
+   max_settlements=5
+   terrain=plains
+}
+12 = {
+   title=c_pishi
+   max_settlements=5
+   terrain=plains
+}
+13 = {
+   title=c_wenxi
+   max_settlements=5
+   terrain=forest
+}
+14 = {
+   title=c_yang
+   max_settlements=5
+   terrain=hills
+}
+15 = {
+   title=c_huai
+   max_settlements=6
+   terrain=plains
+}
+16 = {
+   title=c_chaoge
+   max_settlements=5
+   terrain=plains
+}
+17 = {
+   title=c_liyang
+   max_settlements=5
+   terrain=plains
+}
+18 = {
+   title=c_shanyangyi
+   max_settlements=5
+   terrain=plains
+}
+19 = {
+   title=c_yanjing
+   max_settlements=5
+   terrain=plains
+}
+20 = {
+   title=c_changan
+   max_settlements=7
+   terrain=forest
+}
+21 = {
+   title=c_baling
+   max_settlements=5
+   terrain=mountain
+}
+22 = {
+   title=c_duling
+   max_settlements=5
+   terrain=mountain
+}
+23 = {
+   title=c_lantian
+   max_settlements=5
+   terrain=forest
+}
+24 = {
+   title=c_xinping
+   max_settlements=6
+   terrain=forest
+}
+25 = {
+   title=c_youfufeng
+   max_settlements=5
+   terrain=forest
+}
+26 = {
+   title=c_chencang
+   max_settlements=5
+   terrain=forest
+}
+27 = {
+   title=c_wuzhang
+   max_settlements=4
+   terrain=forest
+}
+28 = {
+   title=c_zuopingyi
+   max_settlements=5
+   terrain=forest
+}
+29 = {
+   title=c_wannian
+   max_settlements=5
+   terrain=plains
+}
+30 = {
+   title=c_jinyang
+   max_settlements=6
+   terrain=forest
+}
+31 = {
+   title=c_jiexu
+   max_settlements=6
+   terrain=plains
+}
+32 = {
+   title=c_yangyi
+   max_settlements=6
+   terrain=plains
+}
+33 = {
+   title=c_zhongdu
+   max_settlements=5
+   terrain=mountain
+}
+34 = {
+   title=c_dingxiang
+   max_settlements=4
+   terrain=steppe
+}
+35 = {
+   title=c_tongguo
+   max_settlements=3
+   terrain=steppe
+}
+36 = {
+   title=c_zhongling
+   max_settlements=3
+   terrain=steppe
+}
+37 = {
+   title=c_shang
+   max_settlements=5
+   terrain=steppe
+}
+38 = {
+   title=c_fushi
+   max_settlements=4
+   terrain=steppe
+}
+39 = {
+   title=c_zhenlin
+   max_settlements=3
+   terrain=steppe
+}
+40 = {
+   title=c_shangdang
+   max_settlements=6
+   terrain=mountain
+}
+41 = {
+   title=c_gaodou
+   max_settlements=4
+   terrain=mountain
+}
+42 = {
+   title=c_zhan
+   max_settlements=5
+   terrain=mountain
+}
+43 = {
+   title=c_shuofang
+   max_settlements=4
+   terrain=steppe
+}
+44 = {
+   title=c_dacheng
+   max_settlements=4
+   terrain=steppe
+}
+45 = {
+   title=c_sanfeng
+   max_settlements=4
+   terrain=steppe
+}
+46 = {
+   title=c_wuyuan
+   max_settlements=4
+   terrain=steppe
+}
+47 = {
+   title=c_jiuyuan
+   max_settlements=4
+   terrain=mountain
+}
+48 = {
+   title=c_xianyang
+   max_settlements=4
+   terrain=steppe
+}
+49 = {
+   title=c_xihe
+   max_settlements=4
+   terrain=mountain
+}
+50 = {
+   title=c_gaolang
+   max_settlements=4
+   terrain=steppe
+}
+51 = {
+   title=c_meiji
+   max_settlements=4
+   terrain=mountain
+}
+52 = {
+   title=c_pingcheng
+   max_settlements=5
+   terrain=steppe
+}
+53 = {
+   title=c_guangwu
+   max_settlements=4
+   terrain=steppe
+}
+54 = {
+   title=c_mayi
+   max_settlements=4
+   terrain=mountain
+}
+55 = {
+   title=c_yunzhong
+   max_settlements=4
+   terrain=mountain
+}
+56 = {
+   title=c_dingxiangyun
+   max_settlements=4
+   terrain=steppe
+}
+57 = {
+   title=c_shaling
+   max_settlements=4
+   terrain=mountain
+}
+58 = {
+   title=c_anping
+   max_settlements=6
+   terrain=plains
+}
+59 = {
+   title=c_fucheng
+   max_settlements=5
+   terrain=plains
+}
+60 = {
+   title=c_nangong
+   max_settlements=5
+   terrain=plains
+}
+61 = {
+   title=c_tangyang
+   max_settlements=5
+   terrain=plains
+}
+62 = {
+   title=c_wusui
+   max_settlements=4
+   terrain=plains
+}
+63 = {
+   title=c_xindou
+   max_settlements=4
+   terrain=plains
+}
+64 = {
+   title=c_qinghe
+   max_settlements=5
+   terrain=plains
+}
+65 = {
+   title=c_beiqiu
+   max_settlements=5
+   terrain=plains
+}
+66 = {
+   title=c_dongwucheng
+   max_settlements=4
+   terrain=plains
+}
+67 = {
+   title=c_ganling
+   max_settlements=4
+   terrain=plains
+}
+68 = {
+   title=c_yimu
+   max_settlements=4
+   terrain=plains
+}
+69 = {
+   title=c_bohai
+   max_settlements=7
+   terrain=plains
+}
+70 = {
+   title=c_chonghe
+   max_settlements=5
+   terrain=plains
+}
+71 = {
+   title=c_fuyangsi
+   max_settlements=5
+   terrain=plains
+}
+72 = {
+   title=c_gaocheng
+   max_settlements=5
+   terrain=plains
+}
+73 = {
+   title=c_nanpi
+   max_settlements=5
+   terrain=plains
+}
+74 = {
+   title=c_yangxin
+   max_settlements=5
+   terrain=plains
+}
+75 = {
+   title=c_zhending
+   max_settlements=6
+   terrain=hills
+}
+76 = {
+   title=c_fangzi
+   max_settlements=5
+   terrain=plains
+}
+77 = {
+   title=c_jiumen
+   max_settlements=5
+   terrain=plains
+}
+78 = {
+   title=c_luancheng
+   max_settlements=5
+   terrain=plains
+}
+79 = {
+   title=c_puwu
+   max_settlements=4
+   terrain=mountain
+}
+80 = {
+   title=c_yuanshi
+   max_settlements=4
+   terrain=plains
+}
+81 = {
+   title=c_hejian
+   max_settlements=5
+   terrain=plains
+}
+82 = {
+   title=c_gaoyang
+   max_settlements=5
+   terrain=plains
+}
+83 = {
+   title=c_mao
+   max_settlements=4
+   terrain=plains
+}
+84 = {
+   title=c_shuzhou
+   max_settlements=4
+   terrain=plains
+}
+85 = {
+   title=c_yi
+   max_settlements=4
+   terrain=plains
+}
+86 = {
+   title=c_julu
+   max_settlements=5
+   terrain=plains
+}
+87 = {
+   title=c_guangping
+   max_settlements=5
+   terrain=plains
+}
+88 = {
+   title=c_guangzong
+   max_settlements=5
+   terrain=plains
+}
+89 = {
+   title=c_nanhe
+   max_settlements=4
+   terrain=plains
+}
+90 = {
+   title=c_qiao
+   max_settlements=4
+   terrain=plains
+}
+91 = {
+   title=c_xiaquyang
+   max_settlements=4
+   terrain=plains
+}
+92 = {
+   title=c_yingtao
+   max_settlements=4
+   terrain=plains
+}
+93 = {
+   title=c_wei
+   max_settlements=5
+   terrain=plains
+}
+94 = {
+   title=c_chiqiu
+   max_settlements=5
+   terrain=plains
+}
+95 = {
+   title=c_qingyuan
+   max_settlements=5
+   terrain=plains
+}
+96 = {
+   title=c_sha
+   max_settlements=4
+   terrain=plains
+}
+97 = {
+   title=c_ye
+   max_settlements=7
+   terrain=plains
+}
+98 = {
+   title=c_yuancheng
+   max_settlements=5
+   terrain=plains
+}
+99 = {
+   title=c_handan
+   max_settlements=7
+   terrain=plains
+}
+100 = {
+   title=c_yiyang
+   max_settlements=5
+   terrain=plains
+}
+101 = {
+   title=c_zhongqiu
+   max_settlements=5
+   terrain=plains
+}
+102 = {
+   title=c_zhongshan
+   max_settlements=4
+   terrain=plains
+}
+103 = {
+   title=c_anxi
+   max_settlements=4
+   terrain=plains
+}
+104 = {
+   title=c_beiping
+   max_settlements=7
+   terrain=hills
+}
+105 = {
+   title=c_shangquyang
+   max_settlements=4
+   terrain=plains
+}
+106 = {
+   title=c_xinshi
+   max_settlements=4
+   terrain=hills
+}
+107 = {
+   title=c_cangwu
+   max_settlements=7
+   terrain=hills
+}
+108 = {
+   title=c_longbian
+   max_settlements=5
+   terrain=hills
+}
+109 = {
+   title=c_leilou
+   max_settlements=4
+   terrain=plains
+}
+110 = {
+   title=c_miling
+   max_settlements=4
+   terrain=hills
+}
+111 = {
+   title=c_quyang
+   max_settlements=3
+   terrain=mountain
+}
+112 = {
+   title=c_zhugou
+   max_settlements=3
+   terrain=mountain
+}
+113 = {
+   title=c_hepu
+   max_settlements=5
+   terrain=plains
+}
+114 = {
+   title=c_anguan
+   max_settlements=3
+   terrain=hills
+}
+115 = {
+   title=c_xupu
+   max_settlements=3
+   terrain=plains
+}
+116 = {
+   title=c_panyu
+   max_settlements=3
+   terrain=hills
+}
+117 = {
+   title=c_zhuwu
+   max_settlements=4
+   terrain=plains
+}
+118 = {
+   title=c_bushan
+   max_settlements=3
+   terrain=plains
+}
+119 = {
+   title=c_wan
+   max_settlements=7
+   terrain=plains
+}
+120 = {
+   title=c_xinye
+   max_settlements=5
+   terrain=plains
+}
+121 = {
+   title=c_shunyang
+   max_settlements=5
+   terrain=mountain
+}
+122 = {
+   title=c_luyang
+   max_settlements=5
+   terrain=plains
+}
+123 = {
+   title=c_sui
+   max_settlements=5
+   terrain=hills
+}
+124 = {
+   title=c_fuyang
+   max_settlements=5
+   terrain=plains
+}
+125 = {
+   title=c_changsha
+   max_settlements=5
+   terrain=hills
+}
+126 = {
+   title=c_anfu
+   max_settlements=5
+   terrain=hills
+}
+127 = {
+   title=c_hanshou
+   max_settlements=4
+   terrain=plains
+}
+128 = {
+   title=c_baqiu
+   max_settlements=4
+   terrain=hills
+}
+129 = {
+   title=c_xiangtan
+   max_settlements=4
+   terrain=plains
+}
+130 = {
+   title=c_youxian
+   max_settlements=4
+   terrain=mountain
+}
+131 = {
+   title=c_guiyang
+   max_settlements=5
+   terrain=mountain
+}
+132 = {
+   title=c_leiyang
+   max_settlements=4
+   terrain=hills
+}
+133 = {
+   title=c_jingling
+   max_settlements=6
+   terrain=hills
+}
+134 = {
+   title=c_nanxinshi
+   max_settlements=4
+   terrain=plains
+}
+135 = {
+   title=c_shaxian
+   max_settlements=3
+   terrain=plains
+}
+136 = {
+   title=c_chibi
+   max_settlements=3
+   terrain=hills
+}
+137 = {
+   title=c_xiakou
+   max_settlements=3
+   terrain=hills
+}
+138 = {
+   title=c_lingling
+   max_settlements=5
+   terrain=plains
+}
+139 = {
+   title=c_guiling
+   max_settlements=4
+   terrain=mountain
+}
+140 = {
+   title=c_hengyang
+   max_settlements=4
+   terrain=hills
+}
+141 = {
+   title=c_yingdao
+   max_settlements=5
+   terrain=plains
+}
+142 = {
+   title=c_zhaoling
+   max_settlements=5
+   terrain=mountain
+}
+143 = {
+   title=c_zhenyang
+   max_settlements=4
+   terrain=plains
+}
+144 = {
+   title=c_jiangling
+   max_settlements=4
+   terrain=plains
+}
+145 = {
+   title=c_fanjing
+   max_settlements=3
+   terrain=plains
+}
+146 = {
+   title=c_ruo
+   max_settlements=4
+   terrain=mountain
+}
+147 = {
+   title=c_xiangyang
+   max_settlements=4
+   terrain=plains
+}
+148 = {
+   title=c_wuling
+   max_settlements=4
+   terrain=hills
+}
+149 = {
+   title=c_gongan
+   max_settlements=4
+   terrain=hills
+}
+150 = {
+   title=c_wuxi
+   max_settlements=3
+   terrain=hills
+}
+151 = {
+   title=c_tianshui
+   max_settlements=5
+   terrain=mountain
+}
+152 = {
+   title=c_shangfanggu
+   max_settlements=4
+   terrain=mountain
+}
+153 = {
+   title=c_yicheng
+   max_settlements=4
+   terrain=mountain
+}
+154 = {
+   title=c_anding
+   max_settlements=4
+   terrain=steppe
+}
+155 = {
+   title=c_beidi
+   max_settlements=4
+   terrain=steppe
+}
+156 = {
+   title=c_chidi
+   max_settlements=4
+   terrain=steppe
+}
+157 = {
+   title=c_baidi
+   max_settlements=4
+   terrain=steppe
+}
+158 = {
+   title=c_dunhuang
+   max_settlements=4
+   terrain=desert
+}
+159 = {
+   title=c_jincheng
+   max_settlements=4
+   terrain=mountain
+}
+160 = {
+   title=c_linqiang
+   max_settlements=5
+   terrain=mountain
+}
+161 = {
+   title=c_xiping
+   max_settlements=4
+   terrain=mountain
+}
+162 = {
+   title=c_jiuquan
+   max_settlements=4
+   terrain=desert
+}
+163 = {
+   title=c_lintao
+   max_settlements=7
+   terrain=mountain
+}
+164 = {
+   title=c_beiyuan
+   max_settlements=6
+   terrain=mountain
+}
+165 = {
+   title=c_wudu
+   max_settlements=4
+   terrain=mountain
+}
+166 = {
+   title=c_xiabian
+   max_settlements=4
+   terrain=mountain
+}
+167 = {
+   title=c_wuwei
+   max_settlements=4
+   terrain=desert
+}
+168 = {
+   title=c_longyou
+   max_settlements=4
+   terrain=desert
+}
+169 = {
+   title=c_lianju
+   max_settlements=4
+   terrain=desert
+}
+170 = {
+   title=c_juyan
+   max_settlements=3
+   terrain=desert
+}
+171 = {
+   title=c_xihai
+   max_settlements=3
+   terrain=desert
+}
+172 = {
+   title=c_zhangye
+   max_settlements=3
+   terrain=mountain
+}
+173 = {
+   title=c_xijun
+   max_settlements=3
+   terrain=mountain
+}
+174 = {
+   title=c_beihai
+   max_settlements=6
+   terrain=plains
+}
+175 = {
+   title=c_chunyu
+   max_settlements=4
+   terrain=plains
+}
+176 = {
+   title=c_duchang
+   max_settlements=4
+   terrain=plains
+}
+177 = {
+   title=c_pingchang
+   max_settlements=3
+   terrain=hills
+}
+178 = {
+   title=c_pingshou
+   max_settlements=4
+   terrain=plains
+}
+179 = {
+   title=c_xiami
+   max_settlements=4
+   terrain=plains
+}
+180 = {
+   title=c_donglai
+   max_settlements=6
+   terrain=hills
+}
+181 = {
+   title=c_jinan
+   max_settlements=4
+   terrain=plains
+}
+182 = {
+   title=c_dongpingling
+   max_settlements=5
+   terrain=plains
+}
+183 = {
+   title=c_licheng
+   max_settlements=4
+   terrain=plains
+}
+184 = {
+   title=c_lean
+   max_settlements=4
+   terrain=plains
+}
+185 = {
+   title=c_bocheng
+   max_settlements=5
+   terrain=plains
+}
+186 = {
+   title=c_pingyuan
+   max_settlements=5
+   terrain=plains
+}
+187 = {
+   title=c_zhoua
+   max_settlements=5
+   terrain=plains
+}
+188 = {
+   title=c_qi
+   max_settlements=5
+   terrain=plains
+}
+189 = {
+   title=c_pengcheng
+   max_settlements=5
+   terrain=plains
+}
+190 = {
+   title=c_guangqi
+   max_settlements=4
+   terrain=plains
+}
+191 = {
+   title=c_peifeng
+   max_settlements=3
+   terrain=plains
+}
+192 = {
+   title=c_donghai
+   max_settlements=4
+   terrain=plains
+}
+193 = {
+   title=c_jiqiu
+   max_settlements=4
+   terrain=plains
+}
+194 = {
+   title=c_lanling
+   max_settlements=4
+   terrain=plains
+}
+195 = {
+   title=c_qu
+   max_settlements=4
+   terrain=plains
+}
+196 = {
+   title=c_yinping
+   max_settlements=4
+   terrain=plains
+}
+197 = {
+   title=c_jiangdu
+   max_settlements=4
+   terrain=plains
+}
+198 = {
+   title=c_langye
+   max_settlements=4
+   terrain=plains
+}
+199 = {
+   title=c_ju
+   max_settlements=5
+   terrain=forest
+}
+200 = {
+   title=c_yangdu
+   max_settlements=4
+   terrain=plains
+}
+201 = {
+   title=c_zeng
+   max_settlements=4
+   terrain=forest
+}
+202 = {
+   title=c_xiapi
+   max_settlements=5
+   terrain=plains
+}
+203 = {
+   title=c_xiaqiu
+   max_settlements=4
+   terrain=plains
+}
+204 = {
+   title=c_chenliu
+   max_settlements=6
+   terrain=plains
+}
+205 = {
+   title=c_changyuan
+   max_settlements=5
+   terrain=plains
+}
+206 = {
+   title=c_jiyu
+   max_settlements=5
+   terrain=plains
+}
+207 = {
+   title=c_pingqiu
+   max_settlements=6
+   terrain=plains
+}
+208 = {
+   title=c_xiangyi
+   max_settlements=4
+   terrain=plains
+}
+209 = {
+   title=c_yongqiu
+   max_settlements=5
+   terrain=plains
+}
+210 = {
+   title=c_dongwuyang
+   max_settlements=3
+   terrain=plains
+}
+211 = {
+   title=c_dunqiu
+   max_settlements=5
+   terrain=plains
+}
+212 = {
+   title=c_fanyan
+   max_settlements=5
+   terrain=plains
+}
+213 = {
+   title=c_puyang
+   max_settlements=5
+   terrain=plains
+}
+214 = {
+   title=c_weigong
+   max_settlements=5
+   terrain=plains
+}
+215 = {
+   title=c_yan
+   max_settlements=6
+   terrain=plains
+}
+216 = {
+   title=c_zhang
+   max_settlements=6
+   terrain=forest
+}
+217 = {
+   title=c_shouzhang
+   max_settlements=5
+   terrain=plains
+}
+218 = {
+   title=c_jibei
+   max_settlements=6
+   terrain=forest
+}
+219 = {
+   title=c_lu
+   max_settlements=7
+   terrain=plains
+}
+220 = {
+   title=c_sheqiu
+   max_settlements=4
+   terrain=forest
+}
+221 = {
+   title=c_chengwu
+   max_settlements=5
+   terrain=plains
+}
+222 = {
+   title=c_dingtao
+   max_settlements=4
+   terrain=plains
+}
+223 = {
+   title=c_juancheng
+   max_settlements=4
+   terrain=plains
+}
+224 = {
+   title=c_linqiu
+   max_settlements=5
+   terrain=plains
+}
+225 = {
+   title=c_rencheng
+   max_settlements=6
+   terrain=plains
+}
+226 = {
+   title=c_changyi
+   max_settlements=5
+   terrain=plains
+}
+227 = {
+   title=c_fangyu
+   max_settlements=5
+   terrain=plains
+}
+228 = {
+   title=c_gaoping
+   max_settlements=4
+   terrain=forest
+}
+229 = {
+   title=c_nanpingyang
+   max_settlements=4
+   terrain=plains
+}
+230 = {
+   title=c_bo
+   max_settlements=5
+   terrain=forest
+}
+231 = {
+   title=c_fei
+   max_settlements=4
+   terrain=mountain
+}
+232 = {
+   title=c_liangfu
+   max_settlements=4
+   terrain=forest
+}
+233 = {
+   title=c_nanwuyang
+   max_settlements=4
+   terrain=forest
+}
+234 = {
+   title=c_jianye
+   max_settlements=7
+   terrain=plains
+}
+235 = {
+   title=c_danyang
+   max_settlements=4
+   terrain=plains
+}
+236 = {
+   title=c_jingxian
+   max_settlements=4
+   terrain=mountain
+}
+237 = {
+   title=c_shicheng
+   max_settlements=4
+   terrain=hills
+}
+238 = {
+   title=c_wu
+   max_settlements=5
+   terrain=plains
+}
+239 = {
+   title=c_fuchun
+   max_settlements=4
+   terrain=plains
+}
+240 = {
+   title=c_jiaxing
+   max_settlements=4
+   terrain=plains
+}
+241 = {
+   title=c_qiantang
+   max_settlements=4
+   terrain=hills
+}
+242 = {
+   title=c_wucheng
+   max_settlements=4
+   terrain=plains
+}
+243 = {
+   title=c_shouchun
+   max_settlements=5
+   terrain=plains
+}
+244 = {
+   title=c_xiacai
+   max_settlements=4
+   terrain=plains
+}
+245 = {
+   title=c_yutai
+   max_settlements=4
+   terrain=plains
+}
+246 = {
+   title=c_kuaiji
+   max_settlements=4
+   terrain=mountain
+}
+247 = {
+   title=c_wenzhou
+   max_settlements=4
+   terrain=mountain
+}
+248 = {
+   title=c_lujiang
+   max_settlements=6
+   terrain=plains
+}
+249 = {
+   title=c_hefei
+   max_settlements=5
+   terrain=plains
+}
+250 = {
+   title=c_juchao
+   max_settlements=4
+   terrain=plains
+}
+251 = {
+   title=c_shulu
+   max_settlements=4
+   terrain=hills
+}
+252 = {
+   title=c_nanchang
+   max_settlements=6
+   terrain=hills
+}
+253 = {
+   title=c_poyang
+   max_settlements=6
+   terrain=hills
+}
+254 = {
+   title=c_luling
+   max_settlements=5
+   terrain=hills
+}
+255 = {
+   title=c_linchuang
+   max_settlements=4
+   terrain=plains
+}
+256 = {
+   title=c_nankang
+   max_settlements=5
+   terrain=hills
+}
+257 = {
+   title=c_chengdu
+   max_settlements=7
+   terrain=plains
+}
+258 = {
+   title=c_deyang
+   max_settlements=5
+   terrain=mountain
+}
+259 = {
+   title=c_fanshu
+   max_settlements=5
+   terrain=mountain
+}
+260 = {
+   title=c_jiangyuan
+   max_settlements=5
+   terrain=plains
+}
+261 = {
+   title=c_linqiong
+   max_settlements=5
+   terrain=plains
+}
+262 = {
+   title=c_pi
+   max_settlements=4
+   terrain=plains
+}
+263 = {
+   title=c_qingcheng
+   max_settlements=4
+   terrain=mountain
+}
+264 = {
+   title=c_jiangzhou
+   max_settlements=6
+   terrain=mountain
+}
+265 = {
+   title=c_langzhong
+   max_settlements=4
+   terrain=mountain
+}
+266 = {
+   title=c_yongan
+   max_settlements=4
+   terrain=mountain
+}
+267 = {
+   title=c_dianjiang
+   max_settlements=5
+   terrain=mountain
+}
+268 = {
+   title=c_linjiang
+   max_settlements=5
+   terrain=forest
+}
+269 = {
+   title=c_zhi
+   max_settlements=4
+   terrain=mountain
+}
+270 = {
+   title=c_guanghan
+   max_settlements=4
+   terrain=mountain
+}
+271 = {
+   title=c_mianzhu
+   max_settlements=3
+   terrain=plains
+}
+272 = {
+   title=c_xindu
+   max_settlements=3
+   terrain=plains
+}
+273 = {
+   title=c_yangquan
+   max_settlements=3
+   terrain=hills
+}
+274 = {
+   title=c_zitong
+   max_settlements=4
+   terrain=mountain
+}
+275 = {
+   title=c_baishui
+   max_settlements=3
+   terrain=mountain
+}
+276 = {
+   title=c_hanzhong
+   max_settlements=6
+   terrain=mountain
+}
+277 = {
+   title=c_shangyong
+   max_settlements=5
+   terrain=mountain
+}
+278 = {
+   title=c_wuyang
+   max_settlements=4
+   terrain=plains
+}
+279 = {
+   title=c_bodao
+   max_settlements=3
+   terrain=hills
+}
+280 = {
+   title=c_nanan
+   max_settlements=4
+   terrain=mountain
+}
+281 = {
+   title=c_shuyong
+   max_settlements=4
+   terrain=plains
+}
+282 = {
+   title=c_dianchi
+   max_settlements=4
+   terrain=mountain
+}
+283 = {
+   title=c_cun
+   max_settlements=3
+   terrain=hills
+}
+284 = {
+   title=c_jianning
+   max_settlements=3
+   terrain=forest
+}
+285 = {
+   title=c_yuyuan
+   max_settlements=3
+   terrain=mountain
+}
+286 = {
+   title=c_buwei
+   max_settlements=4
+   terrain=mountain
+}
+287 = {
+   title=c_ailao
+   max_settlements=3
+   terrain=mountain
+}
+288 = {
+   title=c_bisu
+   max_settlements=3
+   terrain=mountain
+}
+289 = {
+   title=c_bonan
+   max_settlements=3
+   terrain=mountain
+}
+290 = {
+   title=c_nanfu
+   max_settlements=3
+   terrain=forest
+}
+291 = {
+   title=c_suitang
+   max_settlements=3
+   terrain=forest
+}
+292 = {
+   title=c_yongshou
+   max_settlements=3
+   terrain=mountain
+}
+293 = {
+   title=c_anshang
+   max_settlements=3
+   terrain=mountain
+}
+294 = {
+   title=c_beishui
+   max_settlements=3
+   terrain=plains
+}
+295 = {
+   title=c_huiwu
+   max_settlements=3
+   terrain=mountain
+}
+296 = {
+   title=c_qiongdu
+   max_settlements=3
+   terrain=mountain
+}
+297 = {
+   title=c_tanzhi
+   max_settlements=3
+   terrain=mountain
+}
+298 = {
+   title=c_qielan
+   max_settlements=3
+   terrain=forest
+}
+299 = {
+   title=c_wulian
+   max_settlements=3
+   terrain=mountain
+}
+300 = {
+   title=c_yelang
+   max_settlements=3
+   terrain=hills
+}
+301 = {
+   title=c_zhuti
+   max_settlements=3
+   terrain=mountain
+}
+302 = {
+   title=c_nanchangzhu
+   max_settlements=3
+   terrain=mountain
+}
+303 = {
+   title=c_guangyang
+   max_settlements=4
+   terrain=hills
+}
+304 = {
+   title=c_changping
+   max_settlements=3
+   terrain=plains
+}
+305 = {
+   title=c_ji
+   max_settlements=3
+   terrain=plains
+}
+306 = {
+   title=c_jundu
+   max_settlements=3
+   terrain=plains
+}
+307 = {
+   title=c_zhuo
+   max_settlements=5
+   terrain=plains
+}
+308 = {
+   title=c_beixincheng
+   max_settlements=4
+   terrain=hills
+}
+309 = {
+   title=c_fanyang
+   max_settlements=3
+   terrain=plains
+}
+310 = {
+   title=c_guan
+   max_settlements=4
+   terrain=forest
+}
+311 = {
+   title=c_qiu
+   max_settlements=3
+   terrain=plains
+}
+312 = {
+   title=c_wanchengzhuo
+   max_settlements=4
+   terrain=hills
+}
+313 = {
+   title=c_dai
+   max_settlements=5
+   terrain=steppe
+}
+314 = {
+   title=c_beipingyi
+   max_settlements=3
+   terrain=steppe
+}
+315 = {
+   title=c_pingshu
+   max_settlements=4
+   terrain=steppe
+}
+316 = {
+   title=c_sanggan
+   max_settlements=3
+   terrain=steppe
+}
+317 = {
+   title=c_daifang
+   max_settlements=5
+   terrain=hills
+}
+318 = {
+   title=c_lelang
+   max_settlements=6
+   terrain=hills
+}
+319 = {
+   title=c_xiangping
+   max_settlements=5
+   terrain=steppe
+}
+320 = {
+   title=c_liaosui
+   max_settlements=4
+   terrain=hills
+}
+321 = {
+   title=c_liaoyong
+   max_settlements=3
+   terrain=plains
+}
+322 = {
+   title=c_lingzhi
+   max_settlements=5
+   terrain=plains
+}
+323 = {
+   title=c_yangle
+   max_settlements=4
+   terrain=mountain
+}
+324 = {
+   title=c_haiyang
+   max_settlements=3
+   terrain=plains
+}
+325 = {
+   title=c_linyu
+   max_settlements=4
+   terrain=hills
+}
+326 = {
+   title=c_shanggu
+   max_settlements=3
+   terrain=mountain
+}
+327 = {
+   title=c_xuantu
+   max_settlements=3
+   terrain=forest
+}
+328 = {
+   title=c_youbeiping
+   max_settlements=4
+   terrain=plains
+}
+329 = {
+   title=c_tuyin
+   max_settlements=3
+   terrain=mountain
+}
+330 = {
+   title=c_fanyangji
+   max_settlements=4
+   terrain=mountain
+}
+331 = {
+   title=c_wuzhong
+   max_settlements=4
+   terrain=plains
+}
+332 = {
+   title=c_yuyuang
+   max_settlements=3
+   terrain=plains
+}
+333 = {
+   title=c_pingyu
+   max_settlements=7
+   terrain=plains
+}
+334 = {
+   title=c_anyang
+   max_settlements=5
+   terrain=plains
+}
+335 = {
+   title=c_yangan
+   max_settlements=5
+   terrain=plains
+}
+336 = {
+   title=c_shansang
+   max_settlements=5
+   terrain=plains
+}
+337 = {
+   title=c_xincai
+   max_settlements=6
+   terrain=plains
+}
+338 = {
+   title=c_xipingru
+   max_settlements=5
+   terrain=plains
+}
+339 = {
+   title=c_chengfu
+   max_settlements=5
+   terrain=plains
+}
+340 = {
+   title=c_chenguo
+   max_settlements=4
+   terrain=plains
+}
+341 = {
+   title=c_ku
+   max_settlements=4
+   terrain=plains
+}
+342 = {
+   title=c_xinpingchen
+   max_settlements=4
+   terrain=plains
+}
+343 = {
+   title=c_liangguo
+   max_settlements=4
+   terrain=plains
+}
+344 = {
+   title=c_ningling
+   max_settlements=4
+   terrain=plains
+}
+345 = {
+   title=c_gexiang
+   max_settlements=4
+   terrain=plains
+}
+346 = {
+   title=c_suiyang
+   max_settlements=5
+   terrain=plains
+}
+347 = {
+   title=c_yu
+   max_settlements=5
+   terrain=plains
+}
+348 = {
+   title=c_luguo
+   max_settlements=4
+   terrain=plains
+}
+349 = {
+   title=c_bian
+   max_settlements=4
+   terrain=forest
+}
+350 = {
+   title=c_feng
+   max_settlements=4
+   terrain=forest
+}
+351 = {
+   title=c_peiguo
+   max_settlements=4
+   terrain=plains
+}
+352 = {
+   title=c_qipei
+   max_settlements=4
+   terrain=plains
+}
+353 = {
+   title=c_xiao
+   max_settlements=4
+   terrain=plains
+}
+354 = {
+   title=c_xuchang
+   max_settlements=6
+   terrain=plains
+}
+355 = {
+   title=c_dingling
+   max_settlements=5
+   terrain=plains
+}
+356 = {
+   title=c_changshe
+   max_settlements=5
+   terrain=plains
+}
+357 = {
+   title=c_lunshi
+   max_settlements=5
+   terrain=plains
+}
+358 = {
+   title=c_yangcheng
+   max_settlements=5
+   terrain=plains
+}
+359 = {
+   title=c_yangdi
+   max_settlements=6
+   terrain=plains
+}
+360 = {
+   title=c_yingyang
+   max_settlements=5
+   terrain=plains
+}
+361 = {
+   title=c_qinghaixi
+   max_settlements=4
+   terrain=mountain
+}
+362 = {
+   title=c_qinghaidong
+   max_settlements=3
+   terrain=steppe
+}
+363 = {
+   title=c_turpan
+   max_settlements=4
+   terrain=desert
+}
+364 = {
+   title=c_murong
+   max_settlements=4
+   terrain=desert
+}
+365 = {
+   title=c_kezui
+   max_settlements=3
+   terrain=steppe
+}
+366 = {
+   title=c_queju
+   max_settlements=3
+   terrain=desert
+}
+367 = {
+   title=c_luoluo
+   max_settlements=3
+   terrain=desert
+}
+368 = {
+   title=c_tuiyan
+   max_settlements=3
+   terrain=desert
+}
+369 = {
+   title=c_yanliyou
+   max_settlements=3
+   terrain=desert
+}
+370 = {
+   title=c_mijia
+   max_settlements=3
+   terrain=steppe
+}
+371 = {
+   title=c_queji
+   max_settlements=3
+   terrain=steppe
+}
+372 = {
+   title=c_suli
+   max_settlements=3
+   terrain=steppe
+}
+373 = {
+   title=c_xiongnudong
+   max_settlements=3
+   terrain=steppe
+}
+374 = {
+   title=c_xiongnuxi
+   max_settlements=3
+   terrain=desert
+}
+375 = {
+   title=c_wuhuandong
+   max_settlements=3
+   terrain=steppe
+}
+376 = {
+   title=c_wuhuanxi
+   max_settlements=3
+   terrain=mountain
+}
+377 = {
+   title=c_goguryeo
+   max_settlements=4
+   terrain=forest
+}
+378 = {
+   title=c_dongye
+   max_settlements=3
+   terrain=hills
+}
+379 = {
+   title=c_baekje
+   max_settlements=6
+   terrain=hills
+}
+380 = {
+   title=c_mahan
+   max_settlements=3
+   terrain=hills
+}
+381 = {
+   title=c_buyeo
+   max_settlements=3
+   terrain=hills
+}
+382 = {
+   title=c_dongbuyeo
+   max_settlements=3
+   terrain=forest
+}
+383 = {
+   title=c_byeonhan
+   max_settlements=4
+   terrain=forest
+}
+384 = {
+   title=c_okjeo
+   max_settlements=4
+   terrain=mountain
+}
+385 = {
+   title=c_bukokjeo
+   max_settlements=3
+   terrain=hills
+}
+386 = {
+   title=c_jinhan
+   max_settlements=6
+   terrain=hills
+}
+387 = {
+   title=c_namye
+   max_settlements=3
+   terrain=hills
+}
+388 = {
+   title=c_tsushima
+   max_settlements=1
+   terrain=hills
+}
+389 = {
+   title=c_zhuya
+   max_settlements=3
+   terrain=plains
+}
+390 = {
+   max_settlements=7
+   terrain=coastal_desert
+}
+391 = {
+   max_settlements=7
+   terrain=coastal_desert
+}
+392 = {
+   max_settlements=7
+   terrain=coastal_desert
+}
+393 = {
+   max_settlements=7
+   terrain=coastal_desert
+}
+394 = {
+   max_settlements=7
+   terrain=coastal_desert
+}
+395 = {
+   max_settlements=7
+   terrain=coastal_desert
+}
+396 = {
+   max_settlements=7
+   terrain=coastal_desert
+}
+397 = {
+   max_settlements=7
+   terrain=coastal_desert
+}
+398 = {
+   max_settlements=7
+   terrain=coastal_desert
+}
+399 = {
+   max_settlements=7
+   terrain=coastal_desert
+}
+400 = {
+   max_settlements=7
+   terrain=coastal_desert
+}
+401 = {
+   max_settlements=7
+   terrain=coastal_desert
+}
+402 = {
+   max_settlements=7
+   terrain=inland_ocean
+}
+403 = {
+   max_settlements=7
+   terrain=inland_ocean
+}
+404 = {
+   max_settlements=7
+   terrain=inland_ocean
+}
+405 = {
+   max_settlements=7
+   terrain=inland_ocean
+}
+406 = {
+   max_settlements=7
+   terrain=inland_ocean
+}
+407 = {
+   max_settlements=7
+   terrain=inland_ocean
+}
+408 = {
+   max_settlements=7
+   terrain=inland_ocean
+}
+409 = {
+   max_settlements=7
+   terrain=inland_ocean
+}
+410 = {
+   max_settlements=7
+   terrain=inland_ocean
+}
+411 = {
+   max_settlements=7
+   terrain=inland_ocean
+}
+412 = {
+   max_settlements=7
+   terrain=inland_ocean
+}
+413 = {
+   max_settlements=7
+   terrain=inland_ocean
+}
+414 = {
+   max_settlements=7
+   terrain=inland_ocean
+}
+415 = {
+   max_settlements=7
+   terrain=inland_ocean
+}
+416 = {
+   max_settlements=7
+   terrain=inland_ocean
+}
+417 = {
+   max_settlements=7
+   terrain=inland_ocean
+}
+418 = {
+   max_settlements=7
+   terrain=inland_ocean
+}
+419 = {
+   max_settlements=7
+   terrain=inland_ocean
+}
+420 = {
+   max_settlements=7
+   terrain=inland_ocean
+}
+421 = {
+   max_settlements=7
+   terrain=inland_ocean
+}
+422 = {
+   max_settlements=7
+   terrain=inland_ocean
+}
+423 = {
+   max_settlements=7
+   terrain=inland_ocean
+}
+424 = {
+   max_settlements=7
+   terrain=inland_ocean
+}
+425 = {
+   max_settlements=7
+   terrain=inland_ocean
+}
+426 = {
+   max_settlements=7
+   terrain=inland_ocean
+}
+427 = {
+   max_settlements=7
+   terrain=inland_ocean
+}
+428 = {
+   max_settlements=7
+   terrain=inland_ocean
+}
+429 = {
+   max_settlements=7
+   terrain=inland_ocean
+}
+430 = {
+   max_settlements=7
+   terrain=inland_ocean
+}
+431 = {
+   max_settlements=7
+   terrain=inland_ocean
+}
+432 = {
+   max_settlements=7
+   terrain=inland_ocean
+}
+433 = {
+   max_settlements=7
+   terrain=inland_ocean
+}
+434 = {
+   max_settlements=7
+   terrain=inland_ocean
+}
+435 = {
+   max_settlements=7
+   terrain=inland_ocean
+}
+436 = {
+   max_settlements=7
+   terrain=inland_ocean
+}
+437 = {
+   max_settlements=7
+   terrain=ocean
+}
+438 = {
+   max_settlements=7
+   terrain=ocean
+}
+439 = {
+   max_settlements=7
+   terrain=ocean
+}
+440 = {
+   max_settlements=7
+   terrain=ocean
+}
+441 = {
+   max_settlements=7
+   terrain=ocean
+}
+442 = {
+   max_settlements=7
+   terrain=ocean
+}
+443 = {
+   max_settlements=7
+   terrain=ocean
+}
+444 = {
+   max_settlements=7
+   terrain=ocean
+}
+445 = {
+   max_settlements=7
+   terrain=ocean
+}
+446 = {
+   max_settlements=7
+   terrain=ocean
+}
+447 = {
+   max_settlements=7
+   terrain=ocean
+}
+448 = {
+   max_settlements=7
+   terrain=ocean
+}
+449 = {
+   max_settlements=7
+   terrain=ocean
+}
+450 = {
+   max_settlements=7
+   terrain=ocean
+}
+451 = {
+   max_settlements=7
+   terrain=ocean
+}
+452 = {
+   max_settlements=7
+   terrain=ocean
+}
+453 = {
+   max_settlements=7
+   terrain=ocean
+}
+454 = {
+   max_settlements=7
+   terrain=ocean
+}
+455 = {
+   max_settlements=7
+   terrain=ocean
+}
+456 = {
+   max_settlements=7
+   terrain=ocean
+}
+457 = {
+   max_settlements=7
+   terrain=ocean
+}
+458 = {
+   max_settlements=7
+   terrain=ocean
+}
+459 = {
+   max_settlements=7
+   terrain=ocean
+}
+460 = {
+   max_settlements=7
+   terrain=ocean
+}
+461 = {
+   max_settlements=7
+   terrain=ocean
+}
+462 = {
+   max_settlements=7
+   terrain=ocean
+}
+463 = {
+   max_settlements=7
+   terrain=ocean
+}
+464 = {
+   max_settlements=7
+   terrain=ocean
+}
+465 = {
+   max_settlements=7
+   terrain=ocean
+}
+466 = {
+   max_settlements=7
+   terrain=ocean
+}
+467 = {
+   max_settlements=7
+   terrain=ocean
+}
+468 = {
+   max_settlements=7
+   terrain=ocean
+}
+469 = {
+   max_settlements=7
+   terrain=ocean
+}
+470 = {
+   max_settlements=7
+   terrain=ocean
+}
+471 = {
+   max_settlements=7
+   terrain=ocean
+}
+472 = {
+   max_settlements=7
+   terrain=ocean
+}
+473 = {
+   max_settlements=7
+   terrain=ocean
+}
+474 = {
+   max_settlements=7
+   terrain=ocean
+}
+475 = {
+   max_settlements=7
+   terrain=ocean
+}
+476 = {
+   max_settlements=7
+   terrain=ocean
+}
+477 = {
+   max_settlements=7
+   terrain=ocean
+}
+478 = {
+   max_settlements=7
+   terrain=ocean
+}
+479 = {
+   max_settlements=7
+   terrain=ocean
+}
+480 = {
+   max_settlements=7
+   terrain=ocean
+}
+481 = {
+   max_settlements=7
+   terrain=ocean
+}
+482 = {
+   max_settlements=7
+   terrain=ocean
+}
+483 = {
+   max_settlements=7
+   terrain=ocean
+}
+484 = {
+   max_settlements=7
+   terrain=ocean
+}
+485 = {
+   max_settlements=7
+   terrain=steppe
+}
+486 = {
+   max_settlements=7
+   terrain=desert
+}
+487 = {
+   max_settlements=7
+   terrain=steppe
+}
+488 = {
+   max_settlements=7
+   terrain=forest
+}
+489 = {
+   max_settlements=7
+   terrain=hills
+}
+490 = {
+   max_settlements=7
+   terrain=forest
+}
+491 = {
+   max_settlements=7
+   terrain=hills
+}
+492 = {
+   max_settlements=7
+   terrain=steppe
+}

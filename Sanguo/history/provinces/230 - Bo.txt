@@ -15,5 +15,6 @@ b_xiahuanting = city
 # Misc
 culture = han
 religion = confucian
+terrain = forest
 
 #History

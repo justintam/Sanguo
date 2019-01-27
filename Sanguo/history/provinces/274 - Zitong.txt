@@ -14,5 +14,9 @@ b_shiguan = castle
 # Misc
 culture = bandunman
 religion = baihu
+terrain = mountain
 
 #History
+188.1.1={
+	b_zitong=castle
+}

@@ -12,7 +12,8 @@ b_puwu = castle
 #b_fudai = castle
 
 # Misc
-culture = han
-religion = confucian
+culture = jie
+religion = tengri_pagan
+terrain = mountain
 
 #History

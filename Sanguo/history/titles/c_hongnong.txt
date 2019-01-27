@@ -28,6 +28,9 @@
 	holder=33 # Shao
 }
 190.1.1={
+	holder=312 #Niu Fu
+}
+192.6.1={
 	holder=310 # Zhang Ji
 }
 196.1.1={
@@ -43,5 +46,5 @@
 	holder=20485 #Jia Kui
 }
 213.9.1={
-	holder=1348 #Teng Daguzhang
+	holder=30407 #Shen Gu
 }

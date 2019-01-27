@@ -16,5 +16,6 @@ b_pyongyang = castle
 # Misc
 culture = han
 religion = confucian
+terrain = hills
 
 #History

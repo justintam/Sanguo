@@ -3,7 +3,7 @@ name = "2nd Northern Unification"
 casus_belli={
 	actor=900
 	recipient=700
-	casus_belli=seize_big
+	casus_belli=claim
 	landed_title=k_ji
 	date=193.1.1
 }

@@ -13,5 +13,6 @@ b_xiongnujiao = temple
 # Misc
 culture = xiongnu
 religion = tengri_pagan
+terrain = desert
 
 #History

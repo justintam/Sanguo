@@ -1,17 +1,144 @@
-# Definitions for nanman culture holding graphics
-spriteTypes = {
+# Definitions for chinese culture holding graphics
+### Sanguo
 
+spriteTypes = {
+	spriteType = {
+		name = "GFX_settlement_temple_nanmangfx_chinesesgfx"
+		texturefile = "gfx\\interface\\placeholder_temple_west_african.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_nanmangfx_chinesesgfx_looted"
+		texturefile = "gfx\\interface\\placeholder_temple_west_african_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_nanmangfx_japanesegfx"
+		texturefile = "gfx\\interface\\placeholder_temple_west_african.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_nanmangfx_japanesegfx_looted"
+		texturefile = "gfx\\interface\\placeholder_temple_west_african_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_nanmangfx_khitangfx"
+		texturefile = "gfx\\interface\\placeholder_temple_west_african.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_nanmangfx_khitangfx_looted"
+		texturefile = "gfx\\interface\\placeholder_temple_west_african_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_nanmangfx_koreangfx"
+		texturefile = "gfx\\interface\\placeholder_temple_west_african.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_nanmangfx_koreangfx_looted"
+		texturefile = "gfx\\interface\\placeholder_temple_west_african_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_nanmangfx_kushangfx"
+		texturefile = "gfx\\interface\\placeholder_temple_west_african.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_nanmangfx_kushangfx_looted"
+		texturefile = "gfx\\interface\\placeholder_temple_west_african_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_nanmangfx_tibetangfx"
+		texturefile = "gfx\\interface\\placeholder_temple_west_african.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_nanmangfx_tibetanfx_looted"
+		texturefile = "gfx\\interface\\placeholder_temple_west_african_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+
+### Frame
+	spriteType = {
+		name = "GFX_province_settlement_frame_nanmangfx"
+		texturefile = "gfx\\interface\\province_settlement_frame_westafricangfx.tga"
+	}
+
+	spriteType = {
+		name = "GFX_province_capital_settlement_frame_nanmangfx"
+		texturefile = "gfx\\interface\\province_capital_settlement_frame_westafricangfx.tga"
+	}
+	
 ### Castle
 	spriteType = {
 		name = "GFX_settlement_castle_nanmangfx"
-		texturefile = "gfx\\interface\\placeholder_castle_norse.tga"
+		texturefile = "gfx\\interface\\placeholder_castle_west_african.tga"
 		noOfFrames = 1
 		norefcount = yes
 	}
 
 	spriteType = {
 		name = "GFX_settlement_castle_nanmangfx_looted"
-		texturefile = "gfx\\interface\\placeholder_castle_norse_looted.tga"
+		texturefile = "gfx\\interface\\placeholder_castle_west_african_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+### Tribal
+	spriteType = {
+		name = "GFX_settlement_tribal_nanmangfx"
+		texturefile = "gfx\\interface\\placeholder_tribal_west_african.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_tribal_empty_nanmangfx"
+		texturefile = "gfx\\interface\\placeholder_empty_tribal_westafrican.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_tribal_nanmangfx_looted"
+		texturefile = "gfx\\interface\\placeholder_tribal_west_african_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+### Nomad
+
+	spriteType = {
+		name = "GFX_settlement_nomad_empty_nanmangfx"
+		texturefile = "gfx\\interface\\placeholder_empty_nomad_westafrican.dds"
 		noOfFrames = 1
 		norefcount = yes
 	}
@@ -19,14 +146,14 @@ spriteTypes = {
 ### City
 	spriteType = {
 		name = "GFX_settlement_city_nanmangfx"
-		texturefile = "gfx\\interface\\placeholder_city_norse.tga"
+		texturefile = "gfx\\interface\\placeholder_city_west_african.tga"
 		noOfFrames = 1
 		norefcount = yes
 	}
 
 	spriteType = {
 		name = "GFX_settlement_city_nanmangfx_looted"
-		texturefile = "gfx\\interface\\placeholder_city_norse_looted.tga"
+		texturefile = "gfx\\interface\\placeholder_city_west_african_looted.tga"
 		noOfFrames = 1
 		norefcount = yes
 	}
@@ -36,14 +163,14 @@ spriteTypes = {
 	# Christian temples
 	spriteType = {
 		name = "GFX_settlement_temple_nanmangfx_westerngfx"
-		texturefile = "gfx\\interface\\placeholder_temple_norse.tga"
+		texturefile = "gfx\\interface\\placeholder_temple_west_african.tga"
 		noOfFrames = 1
 		norefcount = yes
 	}
 
 	spriteType = {
 		name = "GFX_settlement_temple_nanmangfx_westerngfx_looted"
-		texturefile = "gfx\\interface\\placeholder_temple_norse_looted.tga"
+		texturefile = "gfx\\interface\\placeholder_temple_west_african_looted.tga"
 		noOfFrames = 1
 		norefcount = yes
 	}
@@ -51,33 +178,210 @@ spriteTypes = {
 	# Muslim temples
 	spriteType = {
 		name = "GFX_settlement_temple_nanmangfx_muslimgfx"
-		texturefile = "gfx\\interface\\placeholder_temple_norse.tga"
+		texturefile = "gfx\\interface\\placeholder_temple_west_african.tga"
 		noOfFrames = 1
 		norefcount = yes
 	}
 
 	spriteType = {
 		name = "GFX_settlement_temple_nanmangfx_muslimgfx_looted"
-		texturefile = "gfx\\interface\\placeholder_temple_norse_looted.tga"
+		texturefile = "gfx\\interface\\placeholder_temple_west_african_looted.tga"
 		noOfFrames = 1
 		norefcount = yes
 	}
-	
-	# Tengri temples
+
+	# Norse temples
 	spriteType = {
 		name = "GFX_settlement_temple_nanmangfx_norsegfx"
-		texturefile = "gfx\\interface\\placeholder_temple_norse.tga"
+		texturefile = "gfx\\interface\\placeholder_temple_west_african.tga"
 		noOfFrames = 1
 		norefcount = yes
 	}
 
 	spriteType = {
 		name = "GFX_settlement_temple_nanmangfx_norsegfx_looted"
-		texturefile = "gfx\\interface\\placeholder_temple_norse_looted.tga"
+		texturefile = "gfx\\interface\\placeholder_temple_west_african_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	# Tengri temples
+	spriteType = {
+		name = "GFX_settlement_temple_nanmangfx_mongolgfx"
+		texturefile = "gfx\\interface\\placeholder_temple_west_african.tga"
 		noOfFrames = 1
 		norefcount = yes
 	}
 
+	spriteType = {
+		name = "GFX_settlement_temple_nanmangfx_mongolgfx_looted"
+		texturefile = "gfx\\interface\\placeholder_temple_west_african_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	# Tibetan temples
+	
+	spriteType = {
+		name = "GFX_settlement_temple_nanmangfx_bodpagfx"
+		texturefile = "gfx\\interface\\placeholder_temple_west_african.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_nanmangfx_bodpagfx_looted"
+		texturefile = "gfx\\interface\\placeholder_temple_west_african_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+
+	# Aztec temples
+	spriteType = {
+		name = "GFX_settlement_temple_nanmangfx_mesoamericangfx"
+		texturefile = "gfx\\interface\\placeholder_temple_west_african.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_settlement_temple_nanmangfx_mesoamericangfx_looted"
+		texturefile = "gfx\\interface\\placeholder_temple_west_african_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+
+	# Zoroastrian temples
+	spriteType = {
+		name = "GFX_settlement_temple_nanmangfx_persiangfx"
+		texturefile = "gfx\\interface\\placeholder_temple_west_african.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_settlement_temple_nanmangfx_persiangfx_looted"
+		texturefile = "gfx\\interface\\placeholder_temple_west_african_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+
+	# African temples
+	spriteType = {
+		name = "GFX_settlement_temple_nanmangfx_westafricangfx"
+		texturefile = "gfx\\interface\\placeholder_temple_west_african.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_settlement_temple_nanmangfx_westafricangfx_looted"
+		texturefile = "gfx\\interface\\placeholder_temple_west_african_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+
+	# Jewish temples
+	spriteType = {
+		name = "GFX_settlement_temple_nanmangfx_jewishgfx"
+		texturefile = "gfx\\interface\\placeholder_temple_west_african.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_settlement_temple_nanmangfx_jewishgfx_looted"
+		texturefile = "gfx\\interface\\placeholder_temple_west_african_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+
+	# Indian temples
+	spriteType = {
+		name = "GFX_settlement_temple_nanmangfx_indiangfx"
+		texturefile = "gfx\\interface\\placeholder_temple_west_african.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_settlement_temple_nanmangfx_southindiangfx"
+		texturefile = "gfx\\interface\\placeholder_temple_west_african.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_nanmangfx_indiangfx_looted"
+		texturefile = "gfx\\interface\\placeholder_temple_west_african_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_nanmangfx_southindiangfx_looted"
+		texturefile = "gfx\\interface\\placeholder_temple_west_african_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	# Forts
+	
+	spriteType = {
+		name = "GFX_settlement_fort_nanmangfx"
+		texturefile = "gfx\\interface\\placeholder_fort_westafrican.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_fort_nanmangfx"
+		texturefile = "gfx\\interface\\fort_westafrican.dds"
+		noOfFrames = 3
+		clicksound = generic_click_02
+	}
+	
+	# Hospitals
+	
+	spriteType = {
+		name = "GFX_settlement_hospital_nanmangfx"
+		texturefile = "gfx\\interface\\placeholder_hospital_west_african.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_hospital_nanmangfx"
+		texturefile = "gfx\\interface\\hospital_west_african.dds"
+		noOfFrames = 4
+		clicksound = generic_click_02
+	}
+	
+	# Trade Posts
+	
+	spriteType = {
+		name = "GFX_trade_post_nanmangfx"
+		texturefile = "gfx\\interface\\trade_post.dds"
+		noOfFrames = 3
+		clicksound = generic_click_02
+	}
+	
+	# Land Trade Posts
+	
+	spriteType = {
+		name = "GFX_trade_post_nanmangfx_land"
+		texturefile = "gfx\\interface\\trade_post_land_westafrican.dds"
+		noOfFrames = 3
+		clicksound = generic_click_02
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_trade_post_nanmangfx_land"
+		texturefile = "gfx\\interface\\trade_post_land_westafrican_large_frame.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
 	# New buildings
 	spriteType = {
 		name = "GFX_settlement_new_nanmangfx"

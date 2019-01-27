@@ -14,5 +14,6 @@ b_dunhuang = castle
 # Misc
 culture = yuezhi
 religion = buddhist
+terrain = desert
 
 #History

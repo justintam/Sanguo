@@ -15,7 +15,7 @@
 204.1.1={
 	holder=972 #Gongsun Kang
 }
-210.1.1={
+220.1.1={
 	holder=973 #Gongsun Gong
 }
 228.1.1={

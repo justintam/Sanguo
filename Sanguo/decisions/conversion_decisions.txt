@@ -188,6 +188,15 @@ targetted_decisions = {
 			capital_scope = {
 				reverse_culture = ROOT
 			}
+			hidden_tooltip = {
+				any_child = {
+					limit = {
+						is_ruler = no
+						liege = { character = ROOT }
+					}
+					culture = ROOT
+				}
+			}
 		}
 		revoke_allowed = {
 			always = no
@@ -867,6 +876,7 @@ decisions = {
 	# Weak or unreformed religions are allowed to convert to the attacker's religion when under Holy War
 	convert_to_attacker_religion = {
 		only_playable = yes
+		ai_check_interval = 6
 		
 		is_high_prio = yes
 		
@@ -879,6 +889,7 @@ decisions = {
 					NOT = { religion_authority = 0.4 }
 				}
 				NOT = { religion_authority = 0.3 }
+				is_nomadic = yes
 			}
 			controls_religion = no
 			

@@ -14,6 +14,7 @@ b_baohan = temple
 # Misc
 culture = han
 religion = confucian
+terrain = mountain
 
 #History
 194.1.1={

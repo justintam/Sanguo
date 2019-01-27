@@ -18,10 +18,3 @@
 209.2.1={
 	liege=d_wuling
 }
-215.1.1={
-	liege=d_xiling
-}
-219.5.1={
-	liege=d_wuling
-	holder=4303 #Random
-}

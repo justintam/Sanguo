@@ -8,7 +8,10 @@
 }
 184.1.1={
 	liege=d_white #White Wave Bandits
-	holder=2602 #Yang Feng
+	holder=2600 #Guo Da
+}
+189.1.1={
+	holder=2606 #Li Le
 }
 195.6.1={
 	liege=d_hedong

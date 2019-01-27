@@ -14,6 +14,7 @@ b_lingsi = tribal
 # Misc
 culture = shanyue
 religion = animist
+terrain = hills
 
 #History
 204.1.1={

@@ -35,5 +35,14 @@
 	holder=309 #Lu Bu
 }
 196.4.1={
-	holder=4185 #Random
+	holder=4186 #Random
 }
+199.6.1={
+	holder=601 #Guan Yu
+}
+200.3.1={
+	holder=1308 #Ding Zhiguo
+}
+
+
+#TBD

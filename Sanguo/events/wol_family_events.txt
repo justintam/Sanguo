@@ -1011,6 +1011,7 @@ character_event = {
 		save_event_target_as = target_initiator
 		random_dynasty_member = {
 			limit = {
+				is_offmap_ruler = no
 				is_adult = yes
 				is_alive = yes
 				NOT = { trait = incapable }
@@ -1056,6 +1057,7 @@ character_event = {
 	immediate = {
 		random_dynasty_member = {
 			limit = {
+				is_offmap_ruler = no
 				is_adult = yes
 				is_alive = yes
 				NOT = { trait = incapable }

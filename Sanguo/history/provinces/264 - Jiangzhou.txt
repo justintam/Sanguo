@@ -7,14 +7,15 @@ title = c_jiangzhou
 max_settlements = 6
 
 b_jiangzhou = castle
-b_peiling = city
+b_badong = city
 b_hanning = city
 #b_luomi = castle
 #b_jiangbei = city
 #b_jiulong = temple
 
 # Misc
-culture = han
-religion = confucian
+culture = bandunman
+religion = baihu
+terrain = mountain
 
 #History

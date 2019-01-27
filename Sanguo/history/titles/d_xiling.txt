@@ -1,10 +1,10 @@
 1.1.1={
-	active = no
-	law = agnatic_succession
-	law = succ_gavelkind
+	active=no
+	law=agnatic_succession
+	law=succ_gavelkind
 }
 215.1.1={
-	active = yes
+	active=yes
 	liege=e_sun
 	vice_royalty=yes
 	holder=580 #Gan Ning

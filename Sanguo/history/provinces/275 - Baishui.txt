@@ -13,5 +13,6 @@ b_yangpingguan = castle
 # Misc
 culture = bandunman
 religion = baihu
+terrain = mountain
 
 #History

@@ -7,12 +7,20 @@
 	liege=k_yi
 	vice_royalty = yes
 }
+170.1.1={
+	holder=4483 #Chang Yuan
+}
 184.1.1={
 	holder=181 #Liu Chong
 }
 193.1.1={
 	holder=1805 #Zhu Bao
 }
+#214+ Fei Shi
 222.1.1={
 	liege=k_man
+}
+223.6.1={
+	liege=k_yi
+	holder=662 #Xiang Lang
 }

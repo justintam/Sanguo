@@ -13,7 +13,8 @@ b_fan = castle
 #b_deyuan = city
 
 # Misc
-culture = han
-religion = confucian
+culture = bandunman
+religion = baihu
+terrain = mountain
 
 #History

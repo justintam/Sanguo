@@ -15,5 +15,6 @@ b_beizhongju = city
 # Misc
 culture = han
 religion = taiping
+terrain = plains
 
 #History

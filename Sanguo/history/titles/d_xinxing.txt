@@ -1,12 +1,12 @@
 1.1.1={
-	active = no
-	law = agnatic_succession
-	law = succ_gavelkind
+	active=no
+	law=agnatic_succession
+	law=succ_gavelkind
 }
 215.1.1={
-	active = yes
+	active=yes
 	liege=k_ji
-	vice_royalty = yes
+	vice_royalty=yes
 	holder=3488 #Wang Hong
 }
 220.12.10={

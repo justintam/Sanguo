@@ -14,5 +14,6 @@ b_mei = city
 # Misc
 culture = han
 religion = confucian
+terrain = forest
 
 #History

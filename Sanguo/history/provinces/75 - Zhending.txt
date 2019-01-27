@@ -16,5 +16,6 @@ b_nanxingtang = city
 # Misc
 culture = han
 religion = confucian
+terrain = hills
 
 #History

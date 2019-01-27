@@ -17,6 +17,7 @@ b_xiliu = city
 # Misc
 culture = han
 religion = confucian
+terrain = forest
 
 #History
 191.1.1={

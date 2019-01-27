@@ -7,13 +7,13 @@
 	dynasty=1413
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=100
+		employer=1306
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -22,13 +22,13 @@
 	dynasty=1414
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=100
+		employer=1306
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -37,13 +37,13 @@
 	dynasty=1415 #Pang
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=100
+		employer=1306
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -52,13 +52,13 @@
 	dynasty=1416
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=100
+		employer=1306
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -67,13 +67,13 @@
 	dynasty=1417
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=100
+		employer=1306
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -82,13 +82,13 @@
 	dynasty=1418
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=100
+		employer=1306
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -97,13 +97,13 @@
 	dynasty=1419
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=100
+		employer=1300
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -112,13 +112,13 @@
 	dynasty=1420
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=100
+		employer=1300
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -127,13 +127,13 @@
 	dynasty=1421
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=100
+		employer=1367
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -142,13 +142,13 @@
 	dynasty=1422
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=100
+		employer=1367
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -157,13 +157,13 @@
 	dynasty=1423
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=100
+		employer=1367
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -172,13 +172,13 @@
 	dynasty=1424
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=100
+		employer=1367
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -187,13 +187,13 @@
 	dynasty=1425
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=100
+		employer=1367
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -202,13 +202,13 @@
 	dynasty=1426
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=100
+		employer=1367
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -217,13 +217,13 @@
 	dynasty=1427
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=100
+		employer=1367
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -232,13 +232,13 @@
 	dynasty=1428
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=100
+		employer=1367
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -247,16 +247,21 @@
 	dynasty=1429
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	trait="tough_soldier"
+	trait="strong"
+	trait="duel_skilled_warrior"
+	trait="just"
+	trait="chivalrous"
+	trait="honorable"
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=100
 		effect = {
 			set_character_flag = guard_chosen
 		}
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -264,13 +269,18 @@
 	name="Jin"
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	trait="tough_soldier"
+	trait="duel_skilled_warrior"
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
 		employer=3516
+		effect = {
+			set_character_flag = guard_chosen
+		}
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -278,13 +288,18 @@
 	name="Ming"
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	trait="tough_soldier"
+	trait="duel_skilled_warrior"
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
 		employer=3516
+		effect = {
+			set_character_flag = guard_chosen
+		}
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -292,13 +307,18 @@
 	name="Po"
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	trait="tough_soldier"
+	trait="duel_skilled_warrior"
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
 		employer=3516
+		effect = {
+			set_character_flag = guard_chosen
+		}
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -306,13 +326,18 @@
 	name="Feng"
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	trait="tough_soldier"
+	trait="duel_skilled_warrior"
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
 		employer=3516
+		effect = {
+			set_character_flag = guard_chosen
+		}
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -321,13 +346,27 @@
 	female=yes
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	trait="fair"
+	trait=inner_court
+	172.1.1={
 		birth=yes
 	}
 	184.1.1={
 		employer=31
 	}
-	240.1.1={
+	189.9.1={
+		employer=34
+	}
+	195.1.1={
+		employer=3906 #Fu Shou
+	}
+	214.1.1={
+		employer=3930 #Cao Jie
+	}
+#	221.12.10={
+#		holder=0 - Someone else
+#	}
+	260.1.1={
 		death=yes
 	}
 }
@@ -336,13 +375,27 @@
 	female=yes
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	trait="fair"
+	trait=inner_court
+	172.1.1={
 		birth=yes
 	}
 	184.1.1={
 		employer=31
 	}
-	240.1.1={
+	189.9.1={
+		employer=34
+	}
+	195.1.1={
+		employer=3906 #Fu Shou
+	}
+	214.1.1={
+		employer=3930 #Cao Jie
+	}
+#	221.12.10={
+#		holder=0 - Someone else
+#	}
+	260.1.1={
 		death=yes
 	}
 }
@@ -351,13 +404,27 @@
 	female=yes
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	trait="fair"
+	trait=inner_court
+	172.1.1={
 		birth=yes
 	}
 	184.1.1={
 		employer=31
 	}
-	240.1.1={
+	189.9.1={
+		employer=34
+	}
+	195.1.1={
+		employer=3906 #Fu Shou
+	}
+	214.1.1={
+		employer=3930 #Cao Jie
+	}
+#	221.12.10={
+#		holder=0 - Someone else
+#	}
+	260.1.1={
 		death=yes
 	}
 }
@@ -366,28 +433,58 @@
 	female=yes
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	trait="fair"
+	trait=inner_court
+	172.1.1={
 		birth=yes
 	}
 	184.1.1={
 		employer=31
 	}
-	240.1.1={
+	189.9.1={
+		employer=34
+	}
+	195.1.1={
+		employer=3906 #Fu Shou
+	}
+	214.1.1={
+		employer=3930 #Cao Jie
+	}
+#	221.12.10={
+#		holder=0 - Someone else
+#	}
+	260.1.1={
 		death=yes
 	}
 }
 3525 = {
 	name="Weiwei"
 	female=yes
+	dna="vokpicbomub"
+	prp="jasfgk000000000000"
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	trait="fair"
+	trait=inner_court
+	172.1.1={
 		birth=yes
 	}
 	184.1.1={
 		employer=31
 	}
-	240.1.1={
+	189.9.1={
+		employer=34
+	}
+	195.1.1={
+		employer=3906 #Fu Shou
+	}
+	214.1.1={
+		employer=3930 #Cao Jie
+	}
+#	221.12.10={
+#		holder=0 - Someone else
+#	}
+	260.1.1={
 		death=yes
 	}
 }
@@ -396,11 +493,8 @@
 	dynasty=1430
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
-	}
-	193.1.1={
-		employer=1003
 	}
 	193.1.1={
 		employer=1003
@@ -408,7 +502,7 @@
 	200.1.1={
 		employer=1000
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -417,13 +511,13 @@
 	dynasty=1431
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=100
+		employer=1396
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -432,13 +526,13 @@
 	dynasty=1432
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
-	197.1.1={
-		employer=3809
+	184.1.1={
+		employer=1396
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -447,7 +541,7 @@
 	dynasty=1433
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
@@ -459,7 +553,7 @@
 	194.1.1={
 		employer=20456
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -468,13 +562,13 @@
 	dynasty=1434
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=100
+		employer=1396
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -483,13 +577,13 @@
 	dynasty=1440
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=100
+		employer=1396
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -498,13 +592,13 @@
 	dynasty=1462
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=100
+		employer=1396
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -513,13 +607,13 @@
 	dynasty=1463
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=100
+		employer=1396
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -528,13 +622,13 @@
 	dynasty=1464
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=100
+		employer=1396
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -543,13 +637,13 @@
 	dynasty=1476
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=3886 #Xue Fang
+		employer=1328
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -558,13 +652,13 @@
 	dynasty=1477
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=100
+		employer=1328
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -573,13 +667,13 @@
 	dynasty=1478
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=100
+		employer=1328
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -588,13 +682,13 @@
 	dynasty=1479
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=100
+		employer=1328
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -603,13 +697,13 @@
 	dynasty=1481
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=100
+		employer=1328
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -618,13 +712,13 @@
 	dynasty=1486
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
 		employer=166
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -633,13 +727,13 @@
 	dynasty=1487
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=100
+		employer=1328
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -648,11 +742,14 @@
 	dynasty=1499
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	193.1.1={
-		death={death_reason=death_murder killer=909}
+		employer=3443
+	}
+	260.1.1={
+		death=yes
 	}
 }
 3543 = {
@@ -660,7 +757,7 @@
 	dynasty=1602 #Bei Gong
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
@@ -669,7 +766,7 @@
 	187.1.1={
 		employer=900
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -678,13 +775,16 @@
 	dynasty=1603 #Luo An
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=3793
+		employer=11303 #Chu Weikang
 	}
-	240.1.1={
+	230.1.1={
+		employer=11304 #Chu Zang
+	}
+	260.1.1={
 		death=yes
 	}
 }
@@ -693,13 +793,16 @@
 	dynasty=1604 #Ren Ao
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=3793
+		employer=11303 #Chu Weikang
 	}
-	240.1.1={
+	230.1.1={
+		employer=11304 #Chu Zang
+	}
+	260.1.1={
 		death=yes
 	}
 }
@@ -708,13 +811,16 @@
 	dynasty=1605 #Tian Dai
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=3793
+		employer=11303 #Chu Weikang
 	}
-	240.1.1={
+	230.1.1={
+		employer=11304 #Chu Zang
+	}
+	260.1.1={
 		death=yes
 	}
 }
@@ -723,13 +829,16 @@
 	dynasty=1606 #Deng Kai
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=3793
+		employer=11303 #Chu Weikang
 	}
-	240.1.1={
+	230.1.1={
+		employer=11304 #Chu Zang
+	}
+	260.1.1={
 		death=yes
 	}
 }
@@ -738,13 +847,16 @@
 	dynasty=1607 #Pan Yi
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=3473
+		employer=11303 #Chu Weikang
 	}
-	240.1.1={
+	230.1.1={
+		employer=11304 #Chu Zang
+	}
+	260.1.1={
 		death=yes
 	}
 }
@@ -753,13 +865,16 @@
 	dynasty=1608 #Li Mo
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=64
+		employer=11303 #Chu Weikang
 	}
-	240.1.1={
+	230.1.1={
+		employer=11304 #Chu Zang
+	}
+	260.1.1={
 		death=yes
 	}
 }
@@ -768,13 +883,16 @@
 	dynasty=1609 #Zu Heng
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=3793
+		employer=11303 #Chu Weikang
 	}
-	240.1.1={
+	230.1.1={
+		employer=11304 #Chu Zang
+	}
+	260.1.1={
 		death=yes
 	}
 }
@@ -783,13 +901,22 @@
 	dynasty=1610 #Bao Tai
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
 		employer=900
 	}
-	240.1.1={
+	199.3.1={
+		employer=700
+	}
+	202.6.28={
+		employer=709 #Yuan Tan
+	}
+	205.2.1={
+		employer=1355
+	}
+	260.1.1={
 		death=yes
 	}
 }
@@ -798,7 +925,7 @@
 	dynasty=1611 #Gan De
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
@@ -813,7 +940,10 @@
 	202.6.28={
 		employer=709 #Yuan Tan
 	}
-	240.1.1={
+	205.2.1={
+		employer=1355
+	}
+	260.1.1={
 		death=yes
 	}
 }
@@ -822,7 +952,7 @@
 	dynasty=1612 #Mu Zi
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
@@ -837,7 +967,10 @@
 	202.6.28={
 		employer=709 #Yuan Tan
 	}
-	240.1.1={
+	205.2.1={
+		employer=1355
+	}
+	260.1.1={
 		death=yes
 	}
 }
@@ -846,13 +979,13 @@
 	dynasty=1616 #Ru Bin
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
 		employer=85
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -861,13 +994,13 @@
 	dynasty=1617 #Wen Du
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
 		employer=85
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -876,13 +1009,13 @@
 	dynasty=1619 #Bu Ying
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=3563
+		employer=1324
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -891,13 +1024,13 @@
 	dynasty=1620 #Wang Ding
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=3563
+		employer=1324
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -906,13 +1039,13 @@
 	dynasty=1621 #Yin Pu
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=3563
+		employer=1324
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -921,13 +1054,13 @@
 	dynasty=1622 #Ban Mao
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=3563
+		employer=1324
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -936,13 +1069,13 @@
 	dynasty=1623 #Gu Rei
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=3563
+		employer=1324
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -951,13 +1084,13 @@
 	dynasty=1624 #Hu Gao
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=3563
+		employer=1324
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -966,13 +1099,13 @@
 	dynasty=1625 #Bi Pang
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=3563
+		employer=1324
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -981,10 +1114,10 @@
 	dynasty=1626 #Mi Dang
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -993,13 +1126,13 @@
 	dynasty=1627 #Ji Wang
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=3563
+		employer=1324
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -1008,13 +1141,13 @@
 	dynasty=1628 #Yu Wu
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=3563
+		employer=1324
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -1023,13 +1156,13 @@
 	dynasty=1629 #Xin You
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
-		employer=3563
+		employer=1324
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -1038,13 +1171,13 @@
 	dynasty=1631 #Lou Ban
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
 		employer=186
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -1053,13 +1186,13 @@
 	dynasty=1632 #Pan Bei
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
 		employer=186
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -1068,7 +1201,7 @@
 	dynasty=1642 #Dian Di
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
@@ -1080,7 +1213,7 @@
 	207.1.1={
 		employer=3306 #Liu Kai
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -1089,7 +1222,7 @@
 	dynasty=1649 #Tian Tai
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
@@ -1098,7 +1231,7 @@
 	189.1.1={
 		employer=2601
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -1107,10 +1240,10 @@
 	dynasty=1651 #Wan
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -1119,10 +1252,10 @@
 	dynasty=1652 #Chen
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -1131,7 +1264,7 @@
 	dynasty=1653 #Xin
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
@@ -1143,7 +1276,7 @@
 	191.5.20={
 		employer=511 #Sun Ben
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -1152,7 +1285,7 @@
 	dynasty=1664 #Yan
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
@@ -1161,7 +1294,7 @@
 	189.8.22={
 		employer=133 #Kong Zhou
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -1170,7 +1303,7 @@
 	dynasty=1665 #Jin
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
@@ -1179,7 +1312,7 @@
 	189.8.22={
 		employer=133 #Kong Zhou
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -1188,7 +1321,7 @@
 	dynasty=1666 #Ban
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
@@ -1197,7 +1330,7 @@
 	189.8.22={
 		employer=133 #Kong Zhou
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -1206,7 +1339,7 @@
 	dynasty=1667 #Hu
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
@@ -1218,7 +1351,7 @@
 	190.8.1={
 		employer=3576 #Random
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -1227,7 +1360,7 @@
 	dynasty=1668 #Mi
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
@@ -1239,7 +1372,7 @@
 	190.8.1={
 		employer=3576 #Random
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -1248,13 +1381,16 @@
 	dynasty=1669 #Ding Feng
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
 		employer=3853 #Luo Jun
 	}
-	240.1.1={
+	197.1.1={
+		employer=4143 #Random
+	}
+	260.1.1={
 		death=yes
 	}
 }
@@ -1263,13 +1399,13 @@
 	dynasty=1671 #Bei Jin
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
 		employer=147 #He Xun
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -1278,13 +1414,13 @@
 	dynasty=1672 #Man Ding
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
 		employer=147 #He Xun
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -1293,7 +1429,7 @@
 	dynasty=1673 #Guan Song
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
@@ -1305,7 +1441,7 @@
 	191.1.1={
 		employer=315 # Duan Wei
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -1314,7 +1450,7 @@
 	dynasty=1674 #Mian Ju
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
@@ -1323,7 +1459,7 @@
 	199.1.1={
 		employer=10494 #Li Tong
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -1332,7 +1468,7 @@
 	dynasty=1675 #Fen Bu
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
@@ -1341,7 +1477,7 @@
 	199.1.1={
 		employer=10494 #Li Tong
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -1350,7 +1486,7 @@
 	dynasty=1676 #Xu Dian
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
@@ -1359,7 +1495,7 @@
 	199.1.1={
 		employer=10494 #Li Tong
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -1368,7 +1504,7 @@
 	dynasty=1678 #Bin Zhou
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
@@ -1377,7 +1513,7 @@
 	199.1.1={
 		employer=10494 #Li Tong
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -1386,7 +1522,7 @@
 	dynasty=1679 #Bao Ming
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
@@ -1395,7 +1531,7 @@
 	188.1.1={
 		employer=163 #Fan Min
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -1404,7 +1540,7 @@
 	dynasty=1681 #Xu Gan
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
@@ -1413,7 +1549,7 @@
 	194.1.1={
 		employer=550 #Gu Yong
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -1422,7 +1558,7 @@
 	dynasty=1682 #Jin He
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
@@ -1431,7 +1567,7 @@
 	194.1.1={
 		employer=550 #Gu Yong
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -1440,7 +1576,7 @@
 	dynasty=1683 #Min Jie
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
@@ -1449,7 +1585,7 @@
 	194.1.1={
 		employer=550 #Gu Yong
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -1458,7 +1594,7 @@
 	dynasty=1692 #Ding
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
@@ -1467,7 +1603,7 @@
 	190.1.1={
 		employer=157 #Yang Xuan
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -1476,13 +1612,13 @@
 	dynasty=1693 #Yang
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
 		employer=1014 #Independent
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -1491,13 +1627,13 @@
 	dynasty=1696 #Jin
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
 		employer=1014 #Independent
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -1506,13 +1642,13 @@
 	dynasty=1701 #Jian
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
 		employer=71 #Random
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -1521,13 +1657,13 @@
 	dynasty=1702 #Fu
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
 		employer=1250 #Song Hong
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -1536,13 +1672,13 @@
 	dynasty=1703 #Hu
 	religion="confucian"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
 		employer=1250 #Song Hong
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -1551,13 +1687,13 @@
 	dynasty=1704 #Zhao
 	religion="taiping"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
 		employer=2611 #Zhang Yan
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -1566,13 +1702,13 @@
 	dynasty=1705 #Hao
 	religion="taiping"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
 		employer=2611 #Zhang Yan
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }
@@ -1581,13 +1717,13 @@
 	dynasty=1706 #Gong
 	religion="taiping"
 	culture="han"
-	160.1.1={
+	168.1.1={
 		birth=yes
 	}
 	184.1.1={
 		employer=2611 #Zhang Yan
 	}
-	240.1.1={
+	260.1.1={
 		death=yes
 	}
 }

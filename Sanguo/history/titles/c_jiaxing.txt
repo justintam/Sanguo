@@ -6,6 +6,12 @@
 1.1.1={
 	liege=d_wu
 }
+170.1.1={
+	holder=3741 #Zang Min
+}
+175.1.1={
+	holder=0 #None
+}
 184.1.1={
 	holder=1276 #Jing Shao
 }

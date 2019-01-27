@@ -14,6 +14,7 @@ b_xianyang = tribal
 # Misc
 culture = xiongnu
 religion = tengri_pagan
+terrain = steppe
 
 #History
 194.1.1={

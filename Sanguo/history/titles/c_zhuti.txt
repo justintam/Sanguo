@@ -10,5 +10,5 @@
 	holder=1800 #Shamoke
 }
 222.1.1={
-	holder=1801 #Meng Huo
+	holder=1803 #Gao Ding
 }

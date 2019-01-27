@@ -954,10 +954,14 @@ character_event = {
 			}
 		}
 	}
+
+	immediate = {
+		add_trait = pregnant
+	}
 	
 	option = {
 		name = OK
-		add_trait = pregnant
+		tooltip = { add_trait = pregnant }
 		prestige = 10
 		
 		if = {
@@ -1053,9 +1057,13 @@ character_event = {
 		}
 	}
 	
+	immediate = {
+		add_trait = pregnant
+	}
+	
 	option = {
 		name = EVTOPTA402
-		add_trait = pregnant
+		tooltip = { add_trait = pregnant }
 		
 #		log = "402: [Root.GetTitledName], wife of [Root.Spouse.GetTitledName] in [Root.Employer.PrimaryTitle.GetName] gets pregnant with [Root.FatherOfUnborn.GetTitledName]."
 		
@@ -1098,6 +1106,7 @@ character_event = {
 				father_of_unborn_known = yes
 				father_of_unborn = {
 					NOT = { character = ROOT }
+					NOT = { trait = fate_plot }
 				}
 			}
 		}
@@ -2020,9 +2029,13 @@ character_event = {
 		}
 	}
 	
+	immediate = {
+		add_trait = pregnant
+	}
+	
 	option = {
 		name = ALAS
-		add_trait = pregnant
+		tooltip = { add_trait = pregnant }
 		prestige = 10
 		
 		if = {
@@ -2084,9 +2097,13 @@ character_event = {
 		}
 	}
 	
+	immediate = {
+		add_trait = pregnant
+	}
+	
 	option = {
 		name = EVTOPTA412
-		add_trait = pregnant
+		tooltip = { add_trait = pregnant }
 		consort = { character_event = { id = 404 tooltip = EVTTOOLTIP404 } }
 	}
 }

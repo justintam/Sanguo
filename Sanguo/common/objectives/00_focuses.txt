@@ -164,6 +164,7 @@ focus_seduction = {
 		is_adult = yes
 		NOT = { trait = incapable }
 		NOT = { trait = celibate }
+		NOT = { is_ascetic_trigger = yes }
 		NOT = { trait = eunuch }
 		custom_tooltip = {
 			text = is_not_ascetic
@@ -398,6 +399,7 @@ focus_intrigue = {
 	
 	# MODIFIERS
 	intrigue = 3
+	plot_power_modifier = 0.05
 }
 
 focus_hunting = {
@@ -571,7 +573,6 @@ focus_carousing = {
 		NOT = { trait = incapable }
 		prisoner = no
 		OR = {
-			trait = decadent
 			trait = hedonist
 			trait = drunkard
 		}

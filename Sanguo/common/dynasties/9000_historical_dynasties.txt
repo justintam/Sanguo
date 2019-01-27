@@ -1,6 +1,13 @@
 9000 = {
 	name="Zhang" #Zhang Xing - Zhen Wenzhao's Mother
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 9001 = {
 	name="Chu" #Chu Yan - Later Zhang Yan

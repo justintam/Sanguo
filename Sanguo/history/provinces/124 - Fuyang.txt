@@ -15,5 +15,6 @@ b_youju = city
 # Misc
 culture = han
 religion = confucian
+terrain = plains
 
 #History

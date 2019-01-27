@@ -1,11 +1,52 @@
 silk_road = {
-	wealth = 100			# Total base wealth of silk route
+	wealth = 200			# Total base wealth of silk route
+	trade_post_display_trigger = {
+		OR = {
+			province_id = 1 #Henan
+			province_id = 20 #Changan
+			province_id = 69 #Bohai
+			province_id = 107 #Cangwu
+			province_id = 108 #Longbian
+			province_id = 110 #Miling
+			province_id = 117 #Zhuwu
+			province_id = 151 #Tianshui
+			province_id = 158 #Dunhuang
+			province_id = 159 #Jincheng
+			province_id = 160 #Linqiang
+			province_id = 162 #Jiuquan
+			province_id = 167 #Wuwei
+			province_id = 170 #Juyan
+			province_id = 172 #Zhangye
+			province_id = 174 #Beihai
+			province_id = 180 #Donglai
+			province_id = 215 #Yan
+			province_id = 219 #Lu
+			province_id = 234 #Jianye
+			province_id = 238 #Wu
+			province_id = 246 #Kuaiji
+			province_id = 257 #Chengdu
+			province_id = 276 #Hanzhong
+			province_id = 286 #Buwei
+			province_id = 318 #Lelang
+			province_id = 322 #Lingzhi
+			province_id = 333 #Pingyu
+			province_id = 337 #Xincai
+			province_id = 354 #Xuchang
+			province_id = 363 #Turpan
+			province_id = 379 #Baekje
+			province_id = 386 #Jinhan
+			province_id = 388 #Tsushima
+		}
+	}
 
 	modifier = {			# How the trade route modifies the provinces it passes
-		castle_tax_modifier = 0.1
-		city_tax_modifier = 0.1
-		temple_tax_modifier = 0.1
-		trade_route_value = 1
+		castle_tax_modifier = 0.10
+		city_tax_modifier = 0.10
+		temple_tax_modifier = 0.10
+		tribal_tax_modifier = 0.10
+		trade_route_value = 15
+		local_movement_speed = 0.20
+		tech_growth_modifier = 0.20
 		icon = 4
 	}
 
@@ -15,23 +56,23 @@ silk_road = {
 	
 	# Northern Silk Route
 	
-	path = {	# Henan Fanshui Shenchi Hongnong Hanguguan Duling Changan
-		1 2 5 7 8 22 20
+	path = {	# Henan Shenchi Hongnong Hanguguan Lantian Changan
+		1 5 7 8 23 20
 	}
-	path = {	# Changan Lantian Youfufeng Wuzhang Tianshui Yicheng Linqiang Jincheng Wuwei Zhangye Xijun Xihai Jiuquan Dunhuang Turpan
-		20 23 25 27 151 153 160 159 167 172 173 171 162 158 363
+	path = {	# Changan Youfufeng Wuzhang Tianshui Yicheng Linqiang Jincheng Wuwei Zhangye Xijun Xihai Jiuquan Dunhuang Turpan
+		20 25 27 151 153 160 159 167 172 173 171 170 162 158 363
 	}
 	
 	# Southwestern Trade Route
 	
-	path = {	# Changan Lantian Chencang Hanzhong Guanghan Baishui Zitong Deyang Chengdu Pi Shuyong Anshang Qiongdu Jianning Buwei Suitang
-		20 23 26 276 270 275 274 258 257 262 281 293 296 284 286 291
+	path = {	# Changan Chencang Hanzhong Guanghan Baishui Zitong Deyang Chengdu Pi Shuyong Anshang Qiongdu Jianning Buwei Suitang
+		20 26 276 270 275 274 258 257 262 281 293 296 284 286 291
 	}
 	
 	# Southern Trade Route
 	
-	path = {	# Henan Changshe Xuchang Yingyang Pingyu Yangan Xincai Hefei Shouchun Yutai Jianye
-		1 356 354 360 333 339 337 249 243 245 234
+	path = {	# Henan Fanshui Changshe Xuchang Yingyang Pingyu Chengfu Xincai Hefei Shouchun Yutai Jianye
+		1 2 356 354 360 333 339 337 249 243 245 234
 	}
 	path = {	# Jianye Wu Kuaiji Panyu Cangwu Hepu Miling Longbian Leilou Zhuwu
 		234 238 246 116 107 113 110 108 109 117
@@ -39,8 +80,8 @@ silk_road = {
 	
 	# Northern Trade Route
 	
-	path = {	# Henan Hulao Changyuan Chenliu Dongwuyang Yan Weigong Lu Zhoua Licheng
-		1 3 205 204 210 215 214 219 187 183
+	path = {	# Henan Qiguan Dunqiu Yan Weigong Lu Zhoua Licheng
+		1 4 211 215 214 219 187 183
 	}
 	path = {	#  Licheng Lean Gaocheng Bohai Lingzhi Liaosui Lelang Okjeo Goguryeo
 		183 184 72 69 322 320 318 384 377
@@ -48,7 +89,7 @@ silk_road = {
 	
 	# Northeastern Trade Route
 	
-	path = {	#  Licheng Bocheng Beihai Donglai Daifang Baekje Jinhan Byeonhan
-		183 185 174 180 317 379 386 383
+	path = {	#  Licheng Bocheng Beihai Donglai Daifang Baekje Jinhan Byeonhan Tsushima
+		183 185 174 180 317 379 386 383 388
 	}
 }

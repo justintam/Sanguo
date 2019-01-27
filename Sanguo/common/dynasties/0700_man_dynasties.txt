@@ -66,6 +66,34 @@
 	name="Ren"
 	culture = nanman
 }
+717 = {
+	name="Dong"
+	culture = nanman
+}
+718 = {
+	name="Fu"
+	culture = nanman
+}
+719 = {
+	name="Long"
+	culture = nanman
+}
+720 = {
+	name="Yong"
+	culture = nanman
+}
+721 = {
+	name="Yin"
+	culture = nanman
+}
+722 = {
+	name="Gao"
+	culture = nanman
+}
+723 = {
+	name="Zhu"
+	culture = nanman
+}
 
 ##### Bandunman #####
 

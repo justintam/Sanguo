@@ -13,5 +13,6 @@ b_fancheng = castle
 # Misc
 culture = han
 religion = confucian
+terrain = plains
 
 #History

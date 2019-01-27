@@ -37,4 +37,6 @@
 	holder=4106 #Random
 }
 #Shi Miao 209 # Recalled in 213 and died in 240s 
-#225 Quan Zong
+225.1.1={
+	holder=10574 #Quan Zong
+}

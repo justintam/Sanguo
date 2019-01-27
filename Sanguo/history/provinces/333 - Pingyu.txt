@@ -17,5 +17,6 @@ b_gepo = city
 # Misc
 culture = han
 religion = confucian
+terrain = plains
 
 #History

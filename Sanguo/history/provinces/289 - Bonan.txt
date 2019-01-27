@@ -13,5 +13,6 @@ b_bonan = tribal
 # Misc
 culture = nanman
 religion = huojiao
+terrain = mountain
 
 #History

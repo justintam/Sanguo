@@ -14,5 +14,6 @@ b_yicheng = castle
 # Misc
 culture = han
 religion = confucian
+terrain = mountain
 
 #History

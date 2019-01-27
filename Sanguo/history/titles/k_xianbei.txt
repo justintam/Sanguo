@@ -1,13 +1,13 @@
 # e_northern
 1.1.1={
-	historical_nomad = yes
-	active = no
+	historical_nomad=yes
+	active=no
 }
 1.1.1={
 	liege=e_northern
 }
 49.1.1={
-	active = yes
+	active=yes
 	holder=1401 #Bianhe
 }
 54.1.1={
@@ -30,5 +30,6 @@
 	holder=1400 #Budugen
 }
 233.1.1={
-	active = no
+	holder=0
+	active=no
 }

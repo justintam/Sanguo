@@ -16,5 +16,15 @@
 	holder=3355 #Fan Jin
 }
 186.1.1={
+	holder=165 #Fu Xie
+}
+187.4.1={
+	#He Xun
+	holder=155 #Jin Xuan
+}
+#188.10.1={
+#	holder=155 #Jin Xuan
+#}
+199.1.1={
 	holder=3580 #Random
 }

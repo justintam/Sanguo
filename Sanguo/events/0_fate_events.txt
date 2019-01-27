@@ -1315,6 +1315,10 @@ character_event = {
 		num_of_friends = 3
 	}
 	
+	mean_time_to_happen={
+		days=1
+	}
+	
 	immediate = {
 		add_trait = fate_loved
 	}
@@ -1496,6 +1500,10 @@ character_event = {
 	
 	immediate = {
 		add_trait = fate_admin
+	}
+	
+	mean_time_to_happen={
+		days=1
 	}
 	
 	option = {

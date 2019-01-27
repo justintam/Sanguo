@@ -17,3 +17,9 @@
 189.9.1={
 	holder=3528 #Random
 }
+215.1.1={
+	liege=d_guiyang
+}
+220.1.1={
+	liege=d_changsha
+}

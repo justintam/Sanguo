@@ -12,11 +12,13 @@ casus_belli={
 194.4.1 = {
 	add_defender = 80 #Liu Zhang
 	add_attacker = 48 #Liu Biao
+	add_attacker = 307 #Li Jue
 }
 
 195.1.1={
-	rem_defender = 80 #Liu Zhang
 	rem_attacker = 48 #Liu Biao
+	rem_attacker = 307 #Li Jue
+	rem_defender = 80 #Liu Zhang
 }
 
    

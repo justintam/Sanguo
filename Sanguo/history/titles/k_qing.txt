@@ -7,6 +7,9 @@
 	liege=e_china
 	vice_royalty = yes
 }
+60.1.1={
+	holder=11300 #Tan Rongming
+}
 120.1.1={
 	holder=1365 #Tan Yisun
 }
@@ -43,6 +46,9 @@
 196.1.1={
 	liege=e_yuan
 	holder=709 #Yuan Tan
+}
+202.10.1={
+	liege=0
 }
 205.2.1={
 	liege=e_china

@@ -294,6 +294,7 @@ narrative_event = {
 	}
 
 	option = {
+		tooltip_info = gardener
 		trigger = {
 			trait = gardener
 		}
@@ -553,7 +554,7 @@ character_event = {
 		random_courtier = {
 			limit = {
 				OR = {
-					trait = gluttonous 
+					trait = gluttonous
 					trait = hedonist
 				}
 				has_character_modifier = in_seclusion
@@ -565,7 +566,7 @@ character_event = {
 				name = greedy_food_shortage
 				duration = -1
 			}
-			save_event_target_as = target_greedy_courtier
+			save_event_target_as = target_greedy_courtier 
 			set_character_flag = stole_food
 		}
 	}
@@ -681,9 +682,14 @@ character_event = {
 			}
 		}
 		event_target:target_greedy_courtier = {			
-			death = {
-				death_reason = death_execution_eaten
-				killer = ROOT
+			tooltip = {
+				death = {
+					death_reason = death_execution_eaten
+					killer = ROOT
+				}
+			}
+			hidden_effect = {
+				death = { death_reason = death_execution_eaten }
 			}
 		}
 		change_variable = { which = remaining_food value = 1 }
@@ -745,9 +751,14 @@ character_event = {
 				NOT = { is_child_of = ROOT }
 				has_character_modifier = in_seclusion
 			}
-			death = {
-				death_reason = death_execution_eaten
-				killer = ROOT
+			tooltip = {
+				death = {
+					death_reason = death_execution_eaten
+					killer = ROOT
+				}
+			}
+			hidden_effect = {
+				death = { death_reason = death_execution_eaten }
 			}
 		}
 		change_variable = { which = remaining_food value = 1 }
@@ -859,7 +870,7 @@ character_event = {
 			has_character_modifier = greedy_food_shortage
 		}
 	}
-
+	
 	immediate = {
 		if = {
 			limit = {
@@ -1218,7 +1229,7 @@ character_event = {
 				years = 5
 			}
 		}
-		event_target:lower_two = {
+		event_target:lover_two = {
 			opinion = {
 				who = ROOT
 				modifier = opinion_angry
@@ -1923,7 +1934,6 @@ character_event = {
 
 character_event = {
 	id = RIP.12031
-
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -2010,7 +2020,6 @@ character_event = {
 #Child goes and finds lover
 character_event = {
 	id = RIP.12033
-
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -2068,7 +2077,7 @@ character_event = {
 			limit = { has_character_flag = seclusion_child_kicked_out } 
 			character_event =  { id = RIP.12035 days = 7 } 	
 			character_event = { id = RIP.12037 } 
-		}		
+		}
 	}
 }
 
@@ -2180,7 +2189,6 @@ character_event = {
 #Banished child decides to marry lover or not
 character_event = {
 	id = RIP.12035
-
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -2264,7 +2272,6 @@ character_event = {
 #If lover is ill, child also gets ill
 character_event = {
 	id = RIP.12037
-
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -2284,7 +2291,6 @@ character_event = {
 #Ping sneaky child
 character_event = {
 	id = RIP.12038
-
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -2610,6 +2616,7 @@ character_event = {
 			}
 		}
 		event_target:captured_sneaker = {
+
 			random_list = {
 				10 = {
 					modifier = {
@@ -3151,7 +3158,7 @@ character_event = {
 		change_martial = 1
 		add_character_modifier = {
 			name = crusched_rebels_from_seclusion
-			duration = -1
+			duration = 730
 		}
 
 		if = {
@@ -3337,7 +3344,7 @@ narrative_event = {
 	border = GFX_event_narrative_frame_religion
 	
 	only_rulers = yes
-
+	
 	desc = { 
 		text = EVTDESC_RIP_12070_A # PIOUS - will prio over benevolent_trigger
 		trigger = {
@@ -3374,6 +3381,7 @@ narrative_event = {
 
 	immediate = {
 		set_character_flag = seclusion_events_on
+		
 		random_courtier = {
 				limit = {
 					is_adult = yes
@@ -3670,7 +3678,6 @@ character_event = {
 # Hidden event - strangers among us
 character_event = {
 	id = RIP.12072
-	
 	hide_window = yes
 	is_triggered_only = yes
 	
@@ -3931,7 +3938,6 @@ character_event = {
 # Ping event for setting the frame in the right corner
 character_event = {
 	id = RIP.12082
-
 	hide_window = yes
 	is_triggered_only = yes
 
@@ -5009,6 +5015,7 @@ narrative_event = {
 			name = seizing_the_day
 			duration = 1825
 		}
+
 		hidden_tooltip = { # Death leaves court and becomes random person
 			event_target:partying_stranger = { 
 				leave_court_effect = yes
@@ -5020,6 +5027,7 @@ narrative_event = {
 				clr_character_flag = immune_bubonic_plague
 			}
 		}
+		
 		clr_character_flag = good_outcome_C
 
 		trigger = {
@@ -5034,6 +5042,7 @@ narrative_event = {
 			name = lucky_to_be_alive
 			duration = 1825
 		}
+		
 		hidden_tooltip = { # Death leaves court and becomes random person
 			event_target:partying_stranger = { 
 				leave_court_effect = yes
@@ -5060,6 +5069,7 @@ narrative_event = {
 			name = lucky_to_be_alive
 			duration = 1825
 		}
+		
 		hidden_tooltip = { # Death leaves court and becomes random person
 			event_target:partying_stranger = { 
 				leave_court_effect = yes
@@ -5446,7 +5456,6 @@ character_event = {
 		clr_character_flag = seclusion_events_on
 		clr_character_flag = do_not_disturb
 		remove_character_modifier = in_seclusion
-		set_character_flag = DEBUG_RIP.12098 #TODO
 	}
 }
 
@@ -5466,7 +5475,7 @@ character_event = {
 #		text = EVTDESC_RIP_12099_A
 #	}
 #	desc = {
-#		trigger = { reverse_opinion = { who = FROM value = 0 } }
+#		trigger = { reverse_opinion = { who = FROM value = 0 } }	
 #		text = EVTDESC_RIP_12099_B
 #	}
 

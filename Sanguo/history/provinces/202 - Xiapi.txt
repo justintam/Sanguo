@@ -15,6 +15,7 @@ b_tutang = city
 # Misc
 culture = han
 religion = confucian
+terrain = plains
 
 #History
 192.1.1={

@@ -5,26 +5,68 @@
 1401 = {
 	name="Zhang" #Zhang Bao - DZ
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 1402 = {
 	name="Zhang" #Zhang Long - DZ
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 1403 = {
 	name="Wang" #Wang Kai - LB
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 2 0 0 0 			}
+		religion="confucian"
+	}
 }
 1404 = {
 	name="Xu" #Xu Si - LB
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 12 0 0 0 			}
+		religion="confucian"
+	}
 }
 1405 = {
 	name="Liu" #Liu Jing - DZ
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 1 0 0 0 			}
+		religion="confucian"
+	}
 }
 1406 = {
 	name="Liu" #Liu Hong
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 1 0 0 0 			}
+		religion="confucian"
+	}
 }
 1407 = {
 	name="Si" #Si Li - YT
@@ -49,6 +91,13 @@
 1412 = {
 	name="Xu" #Xu Gong - IND
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 12 0 0 0 			}
+		religion="confucian"
+	}
 }
 1413 = {
 	name="Guang" #Guang Ping - RAN
@@ -69,6 +118,13 @@
 1417 = {
 	name="Zhang" #Zhang Hao - RAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 1418 = {
 	name="Du" #Du Shing - RAN
@@ -105,6 +161,13 @@
 1426 = {
 	name="Li" #Li Peng - RAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="confucian"
+	}
 }
 1427 = {
 	name="Fu" #Fu Ren - RAN
@@ -145,6 +208,13 @@
 1436 = {
 	name="Wu" #Wu Ju - LBO
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 12 0 0 0 			}
+		religion="confucian"
+	}
 }
 1437 = {
 	name="Handan" #Handan Shang - Han
@@ -153,6 +223,13 @@
 1438 = {
 	name="Zhang" #Zhang Mu - Han
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 1439 = {
 	name="Zang" #Zang Hong - YS
@@ -196,22 +273,57 @@
 	name="Wang" #Wife of Emperor
 	culture = han
 	used_for_random=no
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 2 0 0 0 			}
+		religion="confucian"
+	}
 }
 1449 = {
 	name="Zhang" #Zhang Hong - WU
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 1450 = {
 	name="Zhang" #Zhang Zhao - WU
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 1451 = {
 	name="Wang" #Wang - Special
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 2 0 0 0 			}
+		religion="confucian"
+	}
 }
 1452 = {
 	name="Wu" #Wu - Special
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 12 0 0 0 			}
+		religion="confucian"
+	}
 }
 1453 = {
 	name="De" #De - Special
@@ -268,10 +380,24 @@
 1466 = {
 	name="Li" #Li Si - SHU
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="confucian"
+	}
 }
 1467 = {
 	name="Li" #Li Yi - SHU
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="confucian"
+	}
 }
 1468 = {
 	name="Pang" #Pang Yue - SHU
@@ -280,6 +406,13 @@
 1469 = {
 	name="Zhang" #Zhang Song - SHU
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 1470 = {
 	name="Meng" #Meng Da - SHU
@@ -296,14 +429,35 @@
 1473 = {
 	name="Chen" #Chen Tiao - HAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 10 0 0 0 			}
+		religion="confucian"
+	}
 }
 1474 = {
 	name="Chen" #Chen Clan - HAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 10 0 0 0 			}
+		religion="confucian"
+	}
 }
 1475 = {
 	name="Chen" #Chen Rong - YS
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 10 0 0 0 			}
+		religion="confucian"
+	}
 }
 1476 = {
 	name="Muo" #Muo Li - RAN
@@ -324,6 +478,13 @@
 1480 = {
 	name="Zhang" #Zhang Liao - WEI
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 1481 = {
 	name="Ding" #Ding Yan - RAN
@@ -332,18 +493,46 @@
 1482 = {
 	name="Liu" #Liu Yi - HAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 1 0 0 0 			}
+		religion="confucian"
+	}
 }
 1483 = {
 	name="Tan" #Tan Clan - Special
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 10 0 0 0 			}
+		religion="confucian"
+	}
 }
 1484 = {
 	name="Wang" #Wang Si - WEI
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 2 0 0 0 			}
+		religion="confucian"
+	}
 }
 1485 = {
 	name="Liu" #Liu Xun - WEI
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 1 0 0 0 			}
+		religion="confucian"
+	}
 }
 1486 = {
 	name="Qin" #Qin Bian - RAN
@@ -356,6 +545,13 @@
 1488 = {
 	name="Li" #Li Yi - WEI
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="confucian"
+	}
 }
 1489 = {
 	name="Yan" #Yan Gan - WEI
@@ -368,6 +564,13 @@
 1491 = {
 	name="Li" #Li Li - WEI
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="confucian"
+	}
 }
 1492 = {
 	name="Qin" #Qin Yilu - LB
@@ -396,6 +599,13 @@
 1498 = {
 	name="Lü" #Lü Qian - HAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 6 0 0 0 			}
+		religion="confucian"
+	}
 }
 1499 = {
 	name="Rao" #Rao Bin - RAN

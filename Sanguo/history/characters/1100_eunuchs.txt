@@ -4,7 +4,7 @@
 ########### IMPERIAL #############
 ##################################
 
-1100 = {
+1100={
 	name="Shuo"
     dynasty=1536
 	diplomacy=8
@@ -27,13 +27,13 @@
 		birth=yes
 	}
 	189.1.1={
-		death = {
-		   death_reason = death_murder
-		   killer = 100
+		death={
+		   death_reason=death_murder
+		   killer=100
 		}
 	}
 }
-1101 = {
+1101={
 	name="Rang"
     dynasty=1537
     diplomacy=10
@@ -59,13 +59,13 @@
 		employer=1100
 	}
 	189.9.1={
-		death = {
-		   death_reason = death_murder
-		   killer = 300
+		death={
+		   death_reason=death_murder
+		   killer=300
 		}
 	}
 }
-1102 = {
+1102={
 	name="Zhong"
 	dynasty=908
     diplomacy=6
@@ -89,13 +89,13 @@
 		employer=1100
 	}
 	189.9.1={
-		death = {
-		   death_reason = death_murder
-		   killer = 300
+		death={
+		   death_reason=death_murder
+		   killer=705
 		}
 	}
 }
-1103 = {
+1103={
 	name="Song"
     dynasty=1538
     diplomacy=5
@@ -118,13 +118,13 @@
 		employer=1100
 	}
 	189.9.1={
-		death = {
-		   death_reason = death_murder
-		   killer = 300
+		death={
+		   death_reason=death_murder
+		   killer=300
 		}
 	}
 }
-1104 = {
+1104={
 	name="Gui"
     dynasty=1539
     diplomacy=5
@@ -147,13 +147,13 @@
 		employer=1100
 	}
 	189.9.1={
-		death = {
-		   death_reason = death_murder
-		   killer = 300
+		death={
+		   death_reason=death_murder
+		   killer=158
 		}
 	}
 }
-1105 = {
+1105={
 	name="Wang"
 	dynasty=1540
 	religion="confucian"
@@ -166,13 +166,13 @@
 		employer=1100
 	}
 	189.9.1={
-		death = {
-		   death_reason = death_murder
-		   killer = 300
+		death={
+		   death_reason=death_murder
+		   killer=300
 		}
 	}
 }
-1106 = {
+1106={
 	name="Sheng"
 	dynasty=1541
 	religion="confucian"
@@ -185,10 +185,13 @@
 		employer=1100
 	}
 	189.9.1={
-		death=yes
+		death={
+		   death_reason=death_murder
+		   killer=705
+		}
 	}
 }
-1107 = {
+1107={
 	name="Gong"
 	dynasty=1542
 	religion="confucian"
@@ -204,7 +207,7 @@
 		death=yes
 	}
 }
-1108 = {
+1108={
 	name="Li"
 	dynasty=1543
 	religion="confucian"
@@ -220,7 +223,7 @@
 		death=yes
 	}
 }
-1109 = {
+1109={
 	name="Dian"
 	dynasty=1544
 	religion="confucian"
@@ -236,7 +239,7 @@
 		death=yes
 	}
 }
-1110 = {
+1110={
 	name="Yun"
 	dynasty=1545
 	religion="confucian"
@@ -249,10 +252,13 @@
 		employer=1100
 	}
 	189.9.1={
-		death=yes
+		death={
+		   death_reason=death_murder
+		   killer=705
+		}
 	}
 }
-1111 = {
+1111={
 	name="Zhang"
 	dynasty=1546
 	religion="confucian"
@@ -268,7 +274,7 @@
 		death=yes
 	}
 }
-1112 = {
+1112={
 	name="Lan"
 	dynasty=1547
 	religion="confucian"
@@ -286,4 +292,99 @@
 		death=yes
 	}
 }
-
+1113={
+	name="Kuang"
+	dynasty=2016 #Cheng
+	religion="confucian"
+	culture="han"
+    trait="eunuch"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=1100
+	}
+	189.9.1={
+		death={
+		   death_reason=death_murder
+		   killer=705
+		}
+	}
+}
+1114={
+	name="Qiang"
+	dynasty=2043 #Lu
+	religion="confucian"
+	culture="han"
+    trait="eunuch"
+	140.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=1100
+	}
+	189.9.1={
+		death={
+		   death_reason=death_murder
+		   killer=705
+		}
+	}
+}
+1115={
+	name="Feng"
+	dynasty=2052 #Zhang
+	religion="confucian"
+	culture="han"
+	father=4482
+    trait="eunuch"
+	148.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=1100
+	}
+	189.9.1={
+		death={
+		   death_reason=death_murder
+		   killer=705
+		}
+	}
+}
+1116={
+	name="Bin"
+	dynasty=2068 #Zhou
+	religion="confucian"
+	culture="han"
+	trait="intricate_webweaver"
+	trait="paranoid"
+    trait="eunuch"
+	trait="diligent"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=1100
+	}
+	189.9.1={
+		death={ death_reason=death_murder_unknown }
+	}
+}
+1117={
+	name="Fu"
+	dynasty=2069 #Wang
+	religion="confucian"
+	culture="han"
+    trait="eunuch"
+	trait="temperate"
+	trait="diligent"
+	trait="zealous"
+	160.1.1={
+		birth=yes
+	}
+	184.1.1={
+		employer=1100
+	}
+	189.9.1={
+		death={ death_reason=death_murder_unknown }
+	}
+}

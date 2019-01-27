@@ -13,5 +13,6 @@ b_tuiyan = tribal
 # Misc
 culture = xianbei
 religion = tengri_pagan
+terrain = desert
 
 #History

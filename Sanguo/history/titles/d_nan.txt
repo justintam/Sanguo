@@ -38,11 +38,15 @@
 	liege=k_jing
 	holder=602 #Zhang Fei
 }
-216.1.1={
+214.1.1={
 	holder=626 #Mi Fang
 }
 220.1.1={
+	liege=e_sun
 	holder=537 #Zhuge Jin
+}
+220.2.1={
+	liege=k_jing
 }
 241.1.1={
 	holder=10553 #Zhang Xuan

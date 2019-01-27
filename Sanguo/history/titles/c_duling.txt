@@ -7,25 +7,11 @@
 	liege=d_jingzhao
 }
 184.1.1={
-	holder=171 #Dong Chong
+	holder=10486 #Du Ji
 }
 189.8.22={
-	holder=4191 #Random
+	holder=1307 #Ding Zhiren
 }
-192.5.22={
-	holder=309 #Lv Bu
-}
-192.7.1={
-	liege=d_hongnong
-	holder=308 #Guo Si
-}
-197.10.1={
-	liege=d_jingzhao
-	holder=307 #Li Jue
-}
-198.6.1={
-	holder=3791 #Li Yi
-}
-213.1.1={
-	holder=4191 #Random
+207.1.1={
+	holder=4187 #Random
 }

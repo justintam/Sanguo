@@ -17,7 +17,7 @@ obj_become_council_member = {
 	}
 
 	allow = {
-		liege = { independent = yes }
+		#liege = { independent = yes }
 		NOT = {
 			liege = { spouse = { character = ROOT } }
 		}
@@ -25,6 +25,7 @@ obj_become_council_member = {
 		prisoner = no
 		is_adult = yes
 		is_councillor = no
+		is_landed = yes
 		OR = {
 			can_hold_title = job_chancellor
 			can_hold_title = job_marshal
@@ -100,17 +101,16 @@ obj_become_council_member = {
 	}
 	abort = {
 		OR = {
-			liege = { spouse = { character = ROOT } }
-			is_inaccessible_trigger = yes
 			independent = yes
 			trait = incapable
-			NOR = { 
+			NOR = {
 				can_hold_title = job_chancellor
 				can_hold_title = job_marshal
 				can_hold_title = job_treasurer
 				can_hold_title = job_spymaster
 				can_hold_title = job_spiritual
 			}
+			is_landed = no
 		}
 	}
 	abort_effect = {
@@ -119,7 +119,7 @@ obj_become_council_member = {
 		opinion = {
 			who = liege
 			modifier = opinion_ambition_fulfilled
-			months = 24
+			years = 5
 		}
 	}
 	
@@ -141,7 +141,7 @@ obj_land_for_son = {
 	}
 
 	allow = {
-		liege = { independent = yes }
+		#liege = { independent = yes }
 		has_dlc = "Zeus"
 		prisoner = no
 		is_adult = yes
@@ -157,6 +157,7 @@ obj_land_for_son = {
 			prisoner = no
 			NOR = {
 				trait = incapable
+				is_ascetic_trigger = yes
 				trait = eunuch
 			}
 			liege = {
@@ -428,6 +429,7 @@ obj_groom_an_heir = {
 					trait = eunuch
 					trait = celibate
 					trait = incapable
+					is_ascetic_trigger = yes
 				}
 				OR = {
 					is_female = no
@@ -496,6 +498,7 @@ obj_groom_an_heir = {
 				trait = eunuch
 				trait = celibate
 				trait = incapable
+				is_ascetic_trigger = yes
 			}
 			OR = {
 				is_female = no
@@ -523,6 +526,7 @@ obj_groom_an_heir = {
 							trait = eunuch
 							trait = celibate
 							trait = incapable
+							is_ascetic_trigger = yes
 						}
 						OR = {
 							is_female = no

@@ -13,7 +13,13 @@
 	liege=d_xihuang
 	holder=214 #Ma Xiang
 }
-189.1.1={
+188.12.1={
 	liege=d_guanghan
-	holder=4108 #Random
+	holder=159 #Zhu Gui
+}
+202.3.1={
+	holder=4448 #Liang Xiu
+}
+222.1.1={
+	holder=4113 #Random
 }

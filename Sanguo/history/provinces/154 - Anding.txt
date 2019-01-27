@@ -14,5 +14,6 @@ b_shichengding = city
 # Misc
 culture = qiang
 religion = confucian
+terrain = steppe
 
 #History

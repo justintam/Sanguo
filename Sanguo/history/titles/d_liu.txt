@@ -1,7 +1,7 @@
 1.1.1={
 	active=no
-	effect = {
-		set_title_flag = warlord_flag
+	effect={
+		set_title_flag=warlord_flag
 	}
 }
 184.1.1={
@@ -36,7 +36,7 @@
 	liege=e_yuan
 	holder=600 #Liu Bei
 }
-201.8.1={
+200.9.1={
 	liege=k_jing
 }
 208.8.1={

@@ -10,6 +10,9 @@
 	holder=116 #Que Jian
 }
 188.8.1={
+	holder=214 #Ma Xiang
+}
+188.12.1={
 	holder=50 #Liu Yan
 }
 194.4.1={
@@ -17,4 +20,7 @@
 }
 214.1.1={
 	holder=600 #Liu Bei
+}
+223.6.10={
+	holder=610 #Liu Shan
 }

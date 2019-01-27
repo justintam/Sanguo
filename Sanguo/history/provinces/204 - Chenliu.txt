@@ -16,5 +16,6 @@ b_xiancheng = city
 # Misc
 culture = han
 religion = confucian
+terrain = plains
 
 #History

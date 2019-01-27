@@ -9,14 +9,35 @@
 1802 = {
 	name="Li" #Li Miao - SHU
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="confucian"
+	}
 }
 1803 = {
 	name="Xu" #Xu Jing - SHU
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 12 0 0 0 			}
+		religion="confucian"
+	}
 }
 1804 = {
 	name="Li" #Li Yan - SHU
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="confucian"
+	}
 }
 1805 = {
 	name="He" #He Zong - SHU
@@ -25,10 +46,24 @@
 1806 = {
 	name="Xiahou" #Xiahou Zuan - SHU
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 9 0 0 0 			}
+		religion="confucian"
+	}
 }
 1807 = {
 	name="Zhang" #Zhang Su, Song - SHU
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 1808 = {
 	name="Fa" #Fa Zheng - SHU
@@ -37,18 +72,46 @@
 1809 = {
 	name="Li" #Li Xie - HAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="confucian"
+	}
 }
 1810 = {
 	name="Wang" #Wang Yi - HAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 2 0 0 0 			}
+		religion="confucian"
+	}
 }
 1811 = {
 	name="Wang" #Wang Xian - HAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 2 0 0 0 			}
+		religion="confucian"
+	}
 }
 1812 = {
 	name="Xu" #Xu Miao - WEI
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 12 0 0 0 			}
+		religion="confucian"
+	}
 }
 1813 = {
 	name="Huang" #Huang Chengyan - HAN
@@ -57,6 +120,13 @@
 1814 = {
 	name="Wang" #Wang Xiu - HAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 2 0 0 0 			}
+		religion="confucian"
+	}
 }
 1815 = {
 	name="Zhao" #Zhao Clan - HAN
@@ -73,6 +143,13 @@
 1818 = {
 	name="Wang" #Wang Bi - HAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 2 0 0 0 			}
+		religion="confucian"
+	}
 }
 1819 = {
 	name="Su" #Su Ze - HAN
@@ -97,6 +174,13 @@
 1824 = {
 	name="Zhang" #Zhang Jin - HAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 1825 = {
 	name="Xin" #Xin Ji - HAN
@@ -113,10 +197,24 @@
 1828 = {
 	name="Sun" #Sun Shao - HAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 3 0 0 0 			}
+		religion="confucian"
+	}
 }
 1829 = {
 	name="Li" #Li Feng - HAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="confucian"
+	}
 }
 1830 = {
 	name="Xue" #Xue Clan - HAN
@@ -129,10 +227,24 @@
 1832 = {
 	name="Li" #Li Cheng - YS
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="confucian"
+	}
 }
 1833 = {
 	name="Li" #Li Pan - YS
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="confucian"
+	}
 }
 1834 = {
 	name="Jiang" #Jiang Xu - Han
@@ -149,10 +261,24 @@
 1837 = {
 	name="Wu" #Wu Zhi - WEI
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 12 0 0 0 			}
+		religion="confucian"
+	}
 }
 1838 = {
 	name="Xu" #Xu Yi - Han
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 12 0 0 0 			}
+		religion="confucian"
+	}
 }
 1839 = {
 	name="Cao" #Cao Bao - Han
@@ -161,6 +287,13 @@
 1840 = {
 	name="Liu" #Liu Kui - Han
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 1 0 0 0 			}
+		religion="confucian"
+	}
 }
 1841 = {
 	name="Liao" #Liao Li - SHU
@@ -189,6 +322,13 @@
 1847 = {
 	name="Liu" #Liu Xun - Han
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 1 0 0 0 			}
+		religion="confucian"
+	}
 }
 1848 = {
 	name="Jia" #Jia Kui - WEI
@@ -197,6 +337,13 @@
 1849 = {
 	name="Liu" #Liu Fu - WEI
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 1 0 0 0 			}
+		religion="confucian"
+	}
 }
 1850 = {
 	name="Lai" #Lai Gong - LB
@@ -221,6 +368,13 @@
 1855 = {
 	name="Xu" #Xu Xuan - HAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 12 0 0 0 			}
+		religion="confucian"
+	}
 }
 1856 = {
 	name="Hu" #Hu Cheer - DZ
@@ -229,6 +383,13 @@
 1857 = {
 	name="Yang" #Yang Jun - HAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 11 0 0 0 			}
+		religion="confucian"
+	}
 }
 1858 = {
 	name="Gan" #Gan Ning - WU
@@ -245,6 +406,13 @@
 1861 = {
 	name="Wang" #Wang Bi - WEI
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 2 0 0 0 			}
+		religion="confucian"
+	}
 }
 1862 = {
 	name="Qin" #Qin Jie - HAN
@@ -257,6 +425,13 @@
 1864 = {
 	name="Zhang" #Zhang Zhi - WEI
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 1865 = {
 	name="Shi" #Shi Clan adopted into Zhu Ran - WU
@@ -309,6 +484,13 @@
 1877 = {
 	name="Xu" #Xu Chu - WEI
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 12 0 0 0 			}
+		religion="confucian"
+	}
 }
 1878 = {
 	name="Zhou" #Zhou Ang - IND
@@ -325,10 +507,24 @@
 1881 = {
 	name="Zhang" #Zhang He - WEI
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 1882 = {
 	name="Xu" #Xu Shu - WEI
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 12 0 0 0 			}
+		religion="confucian"
+	}
 }
 1883 = {
 	name="Shi" #Shi Tao - WEI
@@ -365,10 +561,24 @@
 1891 = {
 	name="Wang" #Wang Chun - HAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 2 0 0 0 			}
+		religion="confucian"
+	}
 }
 1892 = {
 	name="Zhang" #Zhang Gong - HAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 1893 = {
 	name="Lü" #Lü Fan - WU
@@ -389,6 +599,13 @@
 1897 = {
 	name="Xu" #Xu Xi - WEI
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 12 0 0 0 			}
+		religion="confucian"
+	}
 }
 1898 = {
 	name="Cang" #Cang Ci - WEI
@@ -397,4 +614,11 @@
 1899 = {
 	name="Xu" #Xu Gan - WEI
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 12 0 0 0 			}
+		religion="confucian"
+	}
 }

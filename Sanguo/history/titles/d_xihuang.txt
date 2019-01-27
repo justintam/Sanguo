@@ -1,6 +1,6 @@
 1.1.1={
-	law = agnatic_succession
-	law = succ_gavelkind
+	law=agnatic_succession
+	law=succ_gavelkind
 }
 184.1.1={
 	holder=236 #Zhang Bo
@@ -9,27 +9,12 @@
 	holder=242 #Liang Boning
 }
 184.10.1={
-	holder=0 #None
+	holder=0
 }
 188.7.1={
 	holder=214 #Ma Xiang
 }
 188.12.1={
-	holder=226 #Liu Pi
-}
-191.1.1={
-	liege=k_yu
-}
-193.1.1={
-	liege=0
-}
-196.4.1={
-	liege=k_yan
-}
-200.9.1={
-	liege=0
-}
-201.2.1={
-	holder=0 #None
+	holder=0
 	active=no
 }

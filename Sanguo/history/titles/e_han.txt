@@ -1,10 +1,10 @@
 1.1.1={
-	law = succ_primogeniture
-	law = agnatic_succession
-	law = imperial_administration
-	law = vice_royalty_3
-	law = crown_authority_0
-	law = centralization_0
+	law=succ_primogeniture
+	law=agnatic_succession
+	law=imperial_administration
+	law=vice_royalty_3
+	law=crown_authority_0
+	law=centralization_0
 }
 
 #Han Dynasty

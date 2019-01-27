@@ -13,5 +13,6 @@ b_wuxi = castle
 # Misc
 culture = bandunman
 religion = baihu
+terrain = hills
 
 #History

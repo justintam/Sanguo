@@ -1,6 +1,6 @@
 1.1.1={
 	active=no
-	effect = {
+	effect={
 		set_title_flag = warlord_flag
 	}
 }

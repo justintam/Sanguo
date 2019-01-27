@@ -9,6 +9,12 @@
 40.1.1={
 	holder=1280 #Yang Mao
 }
+90.1.1={
+	holder=4466 #Zhang Ba
+}
+100.1.1={
+	holder=0 #None
+}
 150.1.1={
 	holder=1270 #Tang Mao
 }

@@ -16,5 +16,6 @@ b_geling = city
 # Misc
 culture = han
 religion = confucian
+terrain = plains
 
 #History

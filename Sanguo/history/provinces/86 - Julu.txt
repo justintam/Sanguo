@@ -15,6 +15,7 @@ b_julu = castle
 # Misc
 culture = han
 religion = confucian
+terrain = plains
 
 #History
 194.1.1={

@@ -13,5 +13,6 @@ b_dongbuyeo = tribal
 # Misc
 culture = joseon
 religion = shamanist
+terrain = forest
 
 #History

@@ -1,14 +1,16 @@
 man = {
-		graphical_cultures = { nanmangfx muslimgfx }
+	graphical_cultures = { nanmangfx muslimgfx }
 	
 	nanman = {
 		graphical_cultures = { nanmangfx muslimgfx }
 		
 		color = { 0.1 0.8 0.3 }
 		
+		dynasty_name_first = yes
+		
 		male_names = {
 			Ahuinan An
-			Che Chi Chiyou
+			Che Chi Chiyou Chu
 			Dalaidongzhu Damu Dong Dongcan Dongtuna Dulu Duosi
 			Ehuan
 			Feng Fengli
@@ -22,10 +24,10 @@ man = {
 			Piluo Piluoge
 			Ren Rengui Renmin
 			Sanjie Shamoke
-			Timieling
+			Tian Tiao Timieling
 			Wan Wentong Wutugu
 			Xi Xia Xian Xianli Xin Xinuluo
-			Yanchang Yan Yilang You
+			Yanchang Yan Yilang You Youtiao
 		}
 		female_names = {
 			Ai
@@ -37,7 +39,7 @@ man = {
 			Ran Ranman Rong
 			Sang Song Sua
 			Xia
-			Yi
+			Yi Yu You
 			Zhu Zhurong
 		}
 		
@@ -55,12 +57,16 @@ man = {
 		mother_name_chance = 25
 
 		modifier = nanman_culture_modifier
+		
+		allow_looting = yes
 	}
 	
 	bandunman = {
 		graphical_cultures = { nanmangfx muslimgfx }
 		
 		color = { 1.00 0.2 0.7 }
+		
+		dynasty_name_first = yes
 		
 		male_names = {
 			Ai
@@ -78,11 +84,11 @@ man = {
 			Qi Qian Qinnijian Quren Qu Quzhi
 			Ren
 			Sheru Shi Shiwen Shixin Shou Sun Suo
-			Tannijian Tao Te Tuan
+			Tannijian Tanrong Tao Te Tuan
 			Wen Wu Wutugu Wuxiang
-			Xiang Xini Xiong Xiu Xuan Xuanxiu
+			Xiang Xini Xiong Xiu Xuan Xuanxiu Xusheng
 			Yang Yangsun Yao Yei You Yougong Yuan Yuanyue Yue
-			Zai Zhan Zhanshan Zhao Zhaowen Zhong Zhongyao
+			Zai Zhan Zhanshan Zhao Zhaowen Zhi Zhong Zhongyao
 		}
 		female_names = {
 			Chan
@@ -117,5 +123,7 @@ man = {
 		mother_name_chance = 25
 
 		modifier = bandunman_culture_modifier
+		
+		allow_looting = yes
 	}
 }

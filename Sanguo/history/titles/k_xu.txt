@@ -28,14 +28,19 @@
 	liege=e_xu
 	holder=309 #Lu Bu
 }
+198.2.1={
+	liege=0
+}
 199.2.7={
 	liege=e_china
 	holder=20451 #Che Zhou
 }
 199.6.1={
+	liege=0
 	holder=600 #Liu Bei
 }
 200.3.1={
+	liege=e_china
 	holder=10491 #Dong Zhao
 }
 204.9.13={

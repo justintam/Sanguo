@@ -13,6 +13,12 @@
 52.1.1={
 	holder=0 #Transferred
 }
+130.1.1={
+	holder=4473 #Wang Tang
+}
+135.1.1={
+	holder=0 #None
+}
 184.1.1={
 	holder=3431 #Chen Yi
 }
@@ -24,5 +30,13 @@
 	liege=k_yu
 	holder=3464 #Bi Chen
 }
-#212? Sun Li
-#221 Sima Kui
+212.1.1={
+	holder=30400 #Sun Li
+}
+220.12.10={
+	holder=5007 #Sima Kui
+}
+
+
+
+#TBD

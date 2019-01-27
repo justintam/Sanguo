@@ -14,5 +14,6 @@ b_yangping = city
 # Misc
 culture = han
 religion = confucian
+terrain = plains
 
 #History

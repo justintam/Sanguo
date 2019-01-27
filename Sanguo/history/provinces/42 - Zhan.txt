@@ -7,14 +7,15 @@ title = c_zhan
 max_settlements = 5
 
 b_zhan = castle
-b_eyuju = city
+b_eyuju = tribal
 #b_kelan = city
 #b_xinbao = castle
 #b_zhancheng = city
 
 # Misc
-culture = han
-religion = confucian
+culture = jie
+religion = tengri_pagan
+terrain = mountain
 
 #History
 210.1.1={

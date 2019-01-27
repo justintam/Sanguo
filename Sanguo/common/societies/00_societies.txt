@@ -273,7 +273,6 @@ monastic_order_buddhist = {
 		}
 		age = 16
 		religion = buddhist
-		is_priest = yes
 		custom_tooltip = {
 			text = did_not_betray_society
 			NOT = { has_character_flag = betrayed_monastic_order_buddhist }
@@ -285,7 +284,10 @@ monastic_order_buddhist = {
 	}
 
 	show_society = {
-		religion = buddhist
+		OR = {
+			religion = buddhist
+			society_member_of = monastic_order_buddhist
+		}
 	}
 
 	potential = { religion = buddhist }
@@ -333,7 +335,7 @@ monastic_order_buddhist = {
 		}
 	}
 
-	society_rank = { #todo add counselling power
+	society_rank = {
 		level = 4
 		limit = 5
 		startup_limit = 1
@@ -552,6 +554,7 @@ the_satanists = {
 		limit = 100 
 		startup_limit = 10
 		decisions = {
+			decision_abduct
 			prisoner_dark_sacrifice #Available Decision: Sacrifice Prisoner
 			#Over time, lose virtues, gain vices. A Soul Corruption-effect is on a yearly pulse (with a chance to do nothing)
 		}

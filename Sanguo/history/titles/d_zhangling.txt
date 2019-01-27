@@ -1,12 +1,12 @@
 1.1.1={
-	active = no
-	law = agnatic_succession
-	law = succ_gavelkind
+	active=no
+	law=agnatic_succession
+	law=succ_gavelkind
 }
 191.5.20={
-	active = yes
+	active=yes
 	liege=k_jing
-	vice_royalty = yes
+	vice_royalty=yes
 	holder=4242 #Huang She
 }
 199.1.1={
@@ -18,5 +18,5 @@
 }
 213.6.1={
 	liege=k_yu
-	holder=4195 #Random
+	holder=20493 #Shi Tao
 }

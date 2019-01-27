@@ -2,7 +2,7 @@
 
 2000 = {
 	name="Baihu"
-	dynasty=354
+	dynasty=364
 	diplomacy=4
 	martial=7
 	stewardship=3
@@ -28,7 +28,7 @@
 }
 2001 = {
 	name="Zhan"
-	dynasty=350
+	dynasty=360
 	religion="animist"
 	culture="shanyue"
 	165.1.1={
@@ -43,7 +43,7 @@
 }
 2002 = {
 	name="Lin"
-	dynasty=352
+	dynasty=362
 	religion="animist"
 	culture="shanyue"
 	180.1.1={
@@ -58,7 +58,7 @@
 }
 2003 = {
 	name="Longluo" #Huang
-	dynasty=351
+	dynasty=361
 	religion="animist"
 	culture="shanyue"
 	father=2021
@@ -74,7 +74,7 @@
 }
 2004 = {
 	name="Lang"
-	dynasty=356
+	dynasty=366
 	religion="animist"
 	culture="shanyue"
 	father=2019
@@ -96,7 +96,7 @@
 }
 2005 = {
 	name="Shan"
-	dynasty=356
+	dynasty=366
 	diplomacy=3
 	martial=5
 	stewardship=3
@@ -124,7 +124,7 @@
 }
 2006 = {
 	name="Fuwu"
-	dynasty=354
+	dynasty=364
 	religion="animist"
 	culture="shanyue"
 	120.1.1={
@@ -139,7 +139,7 @@
 }
 2007 = {
 	name="Dahu"
-	dynasty=354
+	dynasty=364
 	religion="animist"
 	culture="shanyue"
 	father=2006
@@ -155,7 +155,7 @@
 }
 2008 = {
 	name="Yu"
-	dynasty=354
+	dynasty=364
 	religion="animist"
 	culture="shanyue"
 	father=2007
@@ -174,7 +174,7 @@
 }
 2009 = {
 	name="Rang"
-	dynasty=351 #Huang
+	dynasty=361 #Huang
 	diplomacy=4
 	martial=5
 	stewardship=3
@@ -197,7 +197,7 @@
 }
 2010 = {
 	name="Matun"
-	dynasty=354
+	dynasty=364
 	religion="animist"
 	culture="shanyue"
 	father=2017
@@ -210,7 +210,7 @@
 }
 2011 = {
 	name="Baotun"
-	dynasty=354
+	dynasty=364
 	religion="animist"
 	culture="shanyue"
 	father=2017
@@ -223,7 +223,7 @@
 }
 2012 = {
 	name="Pu"
-	dynasty=357
+	dynasty=367
 	diplomacy=3
 	martial=5
 	stewardship=3
@@ -252,7 +252,7 @@
 }
 2013 = {
 	name="Mu"
-	dynasty=357
+	dynasty=367
 	diplomacy=4
 	martial=4
 	stewardship=3
@@ -279,7 +279,7 @@
 }
 2014 = {
 	name="Yi"
-	dynasty=355
+	dynasty=365
 	religion="animist"
 	culture="shanyue"
 	father=2022
@@ -290,16 +290,24 @@
 	168.1.1={
 		birth=yes
 	}
-	184.1.1={
-		employer=2015
+	190.1.1={
+		employer=4000
+		add_trait="refuge"
+		effect={
+			set_character_flag=refuge_jing
+		}
 	}
 	218.1.1={
+		remove_trait="refuge"
+		effect={
+			clr_character_flag=refuge_jing
+		}
 		death=yes
 	}
 }
 2015 = {
 	name="Bopo"
-	dynasty=358
+	dynasty=368
 	religion="animist"
 	culture="shanyue"
     trait="flamboyant_schemer"
@@ -309,13 +317,24 @@
 	160.1.1={
 		birth=yes
 	}
+	190.1.1={
+		employer=4000
+		add_trait="refuge"
+		effect={
+			set_character_flag=refuge_jing
+		}
+	}
 	240.1.1={
+		remove_trait="refuge"
+		effect={
+			clr_character_flag=refuge_jing
+		}
 		death=yes
 	}
 }
 2016 = {
 	name="Ye"
-	dynasty=359
+	dynasty=369
 	religion="animist"
 	culture="shanyue"
     trait="tough_soldier"
@@ -325,13 +344,24 @@
 	160.1.1={
 		birth=yes
 	}
+	190.1.1={
+		employer=4000
+		add_trait="refuge"
+		effect={
+			set_character_flag=refuge_jing
+		}
+	}
 	240.1.1={
+		remove_trait="refuge"
+		effect={
+			clr_character_flag=refuge_jing
+		}
 		death=yes
 	}
 }
 2017 = {
 	name="En"
-	dynasty=354
+	dynasty=364
 	religion="animist"
 	culture="shanyue"
 	father=2006
@@ -347,7 +377,7 @@
 }
 2018 = {
 	name="Ye"
-	dynasty=360
+	dynasty=370
 	religion="animist"
 	culture="shanyue"
 	160.1.1={
@@ -359,7 +389,7 @@
 }
 2019 = {
 	name="Fei"
-	dynasty=356
+	dynasty=366
 	religion="animist"
 	culture="shanyue"
 	130.1.1={
@@ -371,7 +401,7 @@
 }
 2020 = {
 	name="Fei"
-	dynasty=357
+	dynasty=367
 	religion="animist"
 	culture="shanyue"
 	145.1.1={
@@ -386,7 +416,7 @@
 }
 2021 = {
 	name="Fei"
-	dynasty=351
+	dynasty=361
 	religion="animist"
 	culture="shanyue"
 	140.1.1={
@@ -398,7 +428,7 @@
 }
 2022 = {
 	name="Rao"
-	dynasty=355
+	dynasty=365
 	religion="animist"
 	culture="shanyue"
 	140.1.1={
@@ -410,7 +440,7 @@
 }
 2023 = {
 	name="Bo"
-	dynasty=355
+	dynasty=365
 	religion="animist"
 	culture="shanyue"
 	father=2022

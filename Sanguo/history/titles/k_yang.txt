@@ -7,6 +7,12 @@
 	liege=e_china
 	vice_royalty = yes
 }
+170.1.1={
+	holder=3741 #Zang Min
+}
+175.1.1={
+	holder=0 #None
+}
 180.1.1={
 	holder=138 #Ba Zhi
 }
@@ -51,3 +57,6 @@
 	liege=e_wei
 }
 #Yue Lin, son of Yue Jin
+228.1.1={
+	holder=30410 #Man Chong
+}

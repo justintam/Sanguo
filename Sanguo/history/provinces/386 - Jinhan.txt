@@ -16,5 +16,6 @@ b_yeomhae = temple
 # Misc
 culture = samhan
 religion = shamanist
+terrain = hills
 
 #History

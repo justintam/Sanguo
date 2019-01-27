@@ -13,5 +13,6 @@ b_liaoyong = tribal
 # Misc
 culture = wuhuan
 religion = confucian
+terrain = plains
 
 #History

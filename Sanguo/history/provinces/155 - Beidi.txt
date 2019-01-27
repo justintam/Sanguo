@@ -14,5 +14,6 @@ b_xiheng = tribal
 # Misc
 culture = di
 religion = baima
+terrain = steppe
 
 #History

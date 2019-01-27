@@ -89,8 +89,6 @@ c_chengdu;Chengdu;Chengdu;Chengdu;;Chengdu;;;;;;;;;x
 c_chengdu_adj;Chengdian;;chengder;;;;;;;;;;;x
 c_chengfu;Chengfu;Chengfu;Chengfu;;Chengfu;;;;;;;;;x
 c_chengfu_adj;Chengfian;;chengfer;;;;;;;;;;;x
-c_chenggu;Chenggu;Chenggu;Chenggu;;Chenggu;;;;;;;;;x
-c_chenggu_adj;Chenggian;;chengger;;;;;;;;;;;x
 c_chenguo;Chenguo;Chenguo;Chenguo;;Chenguo;;;;;;;;;x
 c_chenguo_adj;Chengian;;chenger;;;;;;;;;;;x
 c_chengwu;Chengwu;Chengwu;Chengwu;;Chengwu;;;;;;;;;x
@@ -513,6 +511,8 @@ c_shanggu;Shanggu;Shanggu;Shanggu;;Shanggu;;;;;;;;;x
 c_shanggu_adj;Shanggian;;shangger;;;;;;;;;;;x
 c_shangquyang;Shangquyang;Shangquyang;Shangquyang;;Shangquyang;;;;;;;;;x
 c_shangquyang_adj;Shangquyangian;;shangquyanger;;;;;;;;;;;x
+c_shangyong;Shangyong;;;;;;;;;;;;;x
+c_shangyong_adj;Shangyong County;;;;;;;;;;;;;x
 c_shansang;Shansang;Shansang;Shansang;;Shansang;;;;;;;;;x
 c_shansang_adj;Shansangian;;shansanger;;;;;;;;;;;x
 c_shanyangyi;Shanyangyi;Shanyangyi;Shanyangyi;;Shanyangyi;;;;;;;;;x
@@ -555,6 +555,8 @@ c_tianshui;Tianshui;Tianshui;Tianshui;;Tianshui;;;;;;;;;x
 c_tianshui_adj;Tianshian;;tiansher;;;;;;;;;;;x
 c_tongguo;Tongguo;Tongguo;Tongguo;;Tongguo;;;;;;;;;x
 c_tongguo_adj;Tonggian;;tongger;;;;;;;;;;;x
+c_tsushima;Tsushima;Tsushima;Tsushima;;Tsushima;;;;;;;;;x
+c_tsushima_adj;Tsushiman;;tsushiman;;;;;;;;;;;x
 c_tuiyan;Tuiyan;Tuiyan;Tuiyan;;Tuiyan;;;;;;;;;x
 c_tuiyan_adj;Tuiyanian;;tuiyaner;;;;;;;;;;;x
 c_turpan;Turpan;Turpan;Turpan;;Turpan;;;;;;;;;x
@@ -769,6 +771,8 @@ c_zhuti;Zhuti;Zhuti;Zhuti;;Zhuti;;;;;;;;;x
 c_zhuti_adj;Zhutian;;zhuter;;;;;;;;;;;x
 c_zhuwu;Zhuwu;Zhuwu;Zhuwu;;Zhuwu;;;;;;;;;x
 c_zhuwu_adj;Zhuwian;;zhuwer;;;;;;;;;;;x
+c_zhuya;Zhuya;Zhuya;Zhuya;;Zhuya;;;;;;;;;x
+c_zhuya_adj;Zhuyan;;zhuyan;;;;;;;;;;;x
 c_zitong;Zitong;Zitong;Zitong;;Zitong;;;;;;;;;x
 c_zitong_adj;Zitongian;;zitonger;;;;;;;;;;;x
 c_zuopingyi;Zuopingyi;Zuopingyi;Zuopingyi;;Zuopingyi;;;;;;;;;x

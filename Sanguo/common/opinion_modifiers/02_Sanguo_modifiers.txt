@@ -278,7 +278,7 @@ opinion_ask_tax = {
 }
 opinion_ask_trib = {
 	opinion = 5
-	months = 60
+	months = 12
 }
 opinion_ask_none = {
 	opinion = 5

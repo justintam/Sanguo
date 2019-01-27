@@ -13,5 +13,6 @@ b_bukokjeo = tribal
 # Misc
 culture = joseon
 religion = shamanist
+terrain = hills
 
 #History

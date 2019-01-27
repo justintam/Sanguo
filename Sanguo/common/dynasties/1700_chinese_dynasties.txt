@@ -77,6 +77,13 @@
 1719 = {
 	name="Liu" #Liu Yan - WEI
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 1 0 0 0 			}
+		religion="confucian"
+	}
 }
 1720 = {
 	name="Jin" #Jin Dang - RAN
@@ -121,6 +128,13 @@
 1730 = {
 	name="Li" #Li Gu - RAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="confucian"
+	}
 }
 1731 = {
 	name="Tu" #Tu Pian - RAN
@@ -153,10 +167,24 @@
 1738 = {
 	name="Wu" #Wu Pao - RAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 12 0 0 0 			}
+		religion="confucian"
+	}
 }
 1739 = {
 	name="Xu" #Xu Fang - RAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 12 0 0 0 			}
+		religion="confucian"
+	}
 }
 1740 = {
 	name="Ming" #Ming Zhu - RAN
@@ -173,10 +201,24 @@
 1743 = {
 	name="Li" #Li Mizhi - RAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="confucian"
+	}
 }
 1744 = {
 	name="Li" #Li Hou - RAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="confucian"
+	}
 }
 1745 = {
 	name="Duan" #Duan Zuo - RAN
@@ -189,10 +231,24 @@
 1747 = {
 	name="Li" #Li Aiguo - RAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="confucian"
+	}
 }
 1748 = {
 	name="Li" #Li Zhumiao - RAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="confucian"
+	}
 }
 1749 = {
 	name="Tian" #Tian Ding - RAN
@@ -225,6 +281,13 @@
 1756 = {
 	name="Zhang" #Zhang Deng - RAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 1757 = {
 	name="Wen" #Wen Jie - RAN
@@ -233,6 +296,13 @@
 1758 = {
 	name="Li" #Li Jiang - RAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="confucian"
+	}
 }
 1759 = {
 	name="Du" #Du Tong - RAN
@@ -269,14 +339,35 @@
 1767 = {
 	name="Xu" #Xu Mai - RAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 12 0 0 0 			}
+		religion="confucian"
+	}
 }
 1768 = {
 	name="Li" #Li Men - RAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="confucian"
+	}
 }
 1769 = {
 	name="Zhang" #Zhang Wu - RAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 1770 = {
 	name="Zhu" #Zhu Bianzhi - RAN
@@ -285,10 +376,24 @@
 1771 = {
 	name="Li" #Li Wu - RAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="confucian"
+	}
 }
 1772 = {
 	name="Li" #Li Hong - RAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="confucian"
+	}
 }
 1773 = {
 	name="Ma" #Ma Xian - RAN
@@ -305,6 +410,13 @@
 1776 = {
 	name="Xu" #Xu Ben - RAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 12 0 0 0 			}
+		religion="confucian"
+	}
 }
 1777 = {
 	name="Gao" #Gao Jin - RAN
@@ -349,6 +461,13 @@
 1787 = {
 	name="Xu" #Xu Shen - RAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 12 0 0 0 			}
+		religion="confucian"
+	}
 }
 1788 = {
 	name="Deng" #Deng Xiaoping - RAN

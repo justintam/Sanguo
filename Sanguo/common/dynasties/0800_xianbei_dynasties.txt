@@ -99,7 +99,7 @@
 	culture = xianbei
 }
 825 = {
-	name="Yujiuliu"
+	name="Yujiulü"
 	culture = xianbei
 }
 826 = {
@@ -116,5 +116,33 @@
 }
 829 = {
 	name="Zhejue"
+	culture = xianbei
+}
+830 = {
+	name="Helan"
+	culture = xianbei
+}
+831 = {
+	name="Ge"
+	culture = xianbei
+}
+832 = {
+	name="Gedouling"
+	culture = xianbei
+}
+833 = {
+	name="Hu"
+	culture = xianbei
+}
+834 = {
+	name="Lou"
+	culture = xianbei
+}
+835 = {
+	name="Moqi"
+	culture = xianbei
+}
+836 = {
+	name="Xianyu"
 	culture = xianbei
 }

@@ -18,6 +18,345 @@ a-thammasak for his beautiful wallpaper
 Henry Lai for Resurrection of the Dragon Soundtrack
 Yoshihiro Ike for Romance of the Three Kingdoms X Soundtrack
 
+§CRUSADER KINGS II: HOLY FURY
+
+§CREATIVE DIRECTOR
+Johan Andersson
+§
+§GAME DIRECTOR
+Henrik Fåhraeus
+§
+§PRODUCER
+Linda Tiger
+
+§ASSOCIATE PRODUCER
+Daniel Moore
+
+§DESIGN
+Alexander Oltner
+
+§PROGRAMMERS
+Joel Hansson
+Magne Skjæran
+Ola Enberg
+Jimmy Selling
+
+§ARTISTS 2D
+Bjarne Hallberg
+Anton Hultdin
+Deric North
+
+§ARTISTS 3D
+David Horler
+Joacim Carlberg
+
+§ANIMATION
+Niklas Tammpere
+
+§CONTENT DESIGN LEAD
+Milla Isaksson
+
+§CONTENT DESIGN
+Milla Isaksson
+Flavio Verna
+Joachim Holmsen
+Bianca Savazzi
+Olga Shcherbak
+
+§EMBEDDED QA TESTERS
+Arthur Bialecki
+Daniel Moore
+Olga Shcherbak
+Daniel Teige
+
+§ADDITIONAL CONTENT
+Alexander Oltner
+Arthur Bialecki
+Daniel Moore
+Emil Tisander
+
+§ADDITIONAL PROGRAMMERS
+Matthew Clohessy
+Bianca Savazzi
+Milla Isaksson
+
+§ADDITIONAL ART
+Arthur Bialecki
+Alexander Oltner
+Daniel Moore
+Emil Tisander
+Flavio Verna
+Wastelands
+5518
+
+§LOCALIZATION MANAGER
+Sara Wendel-Örtqvist
+
+§LOCALIZERS
+Xavier Zimmermann (French)
+Kai Bagehorn (German)
+Jaime Ortega (Spanish)
+
+§SOUND
+Björn Iversen
+Franco Freda
+
+§HEAD OF MUSIC
+Tobias Gustavsson
+
+§ORIGINAL MUSIC
+Electric Lodge Music AB
+
+§MANUAL
+Troy GoodFellow
+Jorunn Grasmyr
+
+§QA TEAM LEAD
+Filippa Gannholm Kirsten
+
+§QA PROJECT COORDINATOR
+Tegan Harris
+
+§QA TESTERS
+Albin Wallin
+Ewan Cowhig Croft
+Jesper Norberg
+Joseph Gardener
+Tegan Harris
+William Riggott
+
+§COMMUNITY QA
+Carsten ‘t Mannetje
+
+§QLOC
+
+§QA TEAM LEADER
+Marcin Jankowski
+Karolina Jagnyziak
+
+§QA TESTERS
+Bartosz Maciejewski
+Gabriel Urban
+Jan Starosz
+Maksymilian Szczepaczyk
+Oskar Nowak
+Uroš Rudolf
+Bartlomiej Wyciszkiewicz
+Filip Bezon
+Grzegorz Nowicki
+Jakub Potapczyk
+Arkadiusz Majewski
+Maciej Bartnik
+Stanislaw Szczerbik
+
+§ROYAL THANKS
+Harm Kramer
+Oliver Mountjoy
+Jay Shah
+David Wallin
+Nicolas Ritter
+Jonathan Nash
+Martin Faulkner
+Ryan Snopek
+Luiz L. S. Neto
+Daniel O Delaney
+Guillaume Guidon
+Matthew Hall
+Alfred Frendo-Cumbo Jr
+Sampo Haarlaa
+iron0037
+Garrett Ivy
+Pedro González Núñez
+
+§PRODUCT MANAGER
+Gustav Groth
+
+§PRODUCT MARKETING MANAGERS
+Filip Sirc
+Christian Daflos
+
+§PARTNER ACCOUNT MANAGER
+Viktor Stadler
+
+§DATA SCIENTIST
+Steacy McIlwham
+
+§COMMUNITY MANAGERS
+Rodrigue Delrue
+Björn Blomberg
+
+§MARKETING PRODUCER
+Max Collin
+
+§PERFORMANCE MARKETING MANAGER
+Michiel van Loo
+
+§USER RESEARCHER
+Tobias Viklund
+
+§CONTENT DESIGN MANAGER
+Brad Lansford
+Pernilla Sparrhult
+
+§PROGRAMMING MANAGER
+John Wordsworth
+
+§ART MANAGER
+Adrian Banninga
+
+§ART PRODUCER
+Anton Wittberg Letoff
+
+§QA MANAGER
+Felix Gladitz
+
+
+§CRUSADER KINGS II: JADE DRAGON
+
+§CREATIVE DIRECTOR
+Johan Andersson
+§
+§GAME DIRECTOR
+Henrik Fåhraeus
+§
+§PRODUCERS
+Anna Norrevik
+Linda Tiger
+
+§DESIGN
+Alexander Oltner
+
+§PROGRAMMERS
+Gwenael Tranvouez
+Magne Skjæran
+Jimmy Selling
+
+§ARTISTS 2D
+Bjarne Hallberg
+Deric North
+
+§ARTISTS 3D
+Joacim Carlberg
+Carlos Lundhall
+
+§CONTENT DESIGN
+Mathilda Bjarnehed
+Milla Isaksson
+Drikus Kuiper
+Joel Hansson
+Matthew Clohessy
+
+§EMBEDDED QA TESTERS
+Arthur Bialecki
+Daniel Moore
+
+§2D ART MANAGER
+Pontus Olofsson
+
+§CONTENT DESIGN MANAGER
+Brad Lansford
+
+§ADDITIONAL CONTENT
+Alexander Oltner
+Arthur Bialecki
+Daniel Moore
+Magne Skjæran
+Dee Majek
+Emil Tisander
+
+§ADDITIONAL PROGRAMMERS
+Joel Hansson
+
+§DLC MANAGER
+Pernilla Sparrhult
+
+§ASSOCIATE PRODUCER
+Sara Wendel-Örtqvist
+
+§ADDITIONAL ART
+Arthur Bialecki
+Alexander Oltner
+Volta
+5518
+Wastelands Interactive
+
+§LOCALIZERS
+Xavier Zimmermann (French)
+Kai Bagehorn (German)
+Jaime Ortega (Spanish)
+
+§SOUND
+Björn Iversen
+David Schlein-Andersen
+
+§ORIGINAL MUSIC
+Audinity
+
+§MANUAL
+Troy Goodfellow
+Jorunn / An Ordinary Day
+
+§USERMOD COORDINATOR
+Joel Hansson
+
+§QA MANAGER
+Felix Gladitz
+
+§QA TEAM LEAD
+Filippa Gannholm
+
+§ADDITIONAL QA
+Erik Elgerot
+Kimberly Stinson
+Niklas Ivarsson
+Pontus Anehäll
+Artur Foxander
+Roeland Weckx
+Alexander Oltner
+Emil Tisander
+
+§QA TESTERS
+Albin Wallin
+Daniel Sjöberg
+Emil Tisander
+Eva Mayer
+Jesper Norberg
+Matthew Frary
+Sebastian Borg
+Tegan Harris
+
+§COMMUNITY QA
+Carsten ‘t Mannetje
+
+§ROYAL THANKS
+Alfred Frendo-Cumbo Jr.
+Ivan Vuk
+Deric North
+Nicolas Ritter
+Will Campbell
+Paul Howell
+Martin Faulkner
+Ryan Bachand
+Garrett Ivy
+Anton Panas
+Pedro González Núñez
+Sampo Haarlaa
+Zdenek Novak
+cybrxkhan
+FryZ
+
+§QLOC
+
+§QA TEAM LEADER
+Marcin Jankowski
+
+§QA TESTERS
+Bartosz Maciejewski
+Oskar Nowak
+Uroš Rudolf
+Jan Starosz
+Maksymilian Szczepanczyk
+Gabriel Urban
 
 
 §CRUSADER KINGS II: MONKS AND MYSTICS

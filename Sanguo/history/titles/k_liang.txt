@@ -1,11 +1,17 @@
 # e_china
 1.1.1={
-	law = agnatic_succession
-	law = succ_gavelkind
+	law=agnatic_succession
+	law=succ_gavelkind
 }
 1.1.1={
 	liege=e_china
-	vice_royalty = yes
+	vice_royalty=yes
+}
+24.1.1={
+	holder=4548 #Zheng Xing
+}
+25.6.1={
+	holder=0 #None
 }
 150.1.1={
 	holder=4297 #Qiao Xuan
@@ -14,7 +20,7 @@
 	holder=3363 #Zhao Zhongtai
 }
 158.1.1={
-	holder=0 #None
+	holder=0
 }
 184.1.1={
 	holder=114 #Zuo Chang
@@ -35,7 +41,7 @@
 	holder=105 #Huangfu Song
 }
 189.10.1={
-	vice_royalty = no
+	vice_royalty=no
 	holder=300 #Dong Zhuo
 }
 192.5.22={
@@ -44,22 +50,23 @@
 }
 192.7.1={
 	liege=e_china
-}
-196.1.1={
-	holder=2606 #Li Le
-}
-199.1.1={
 	holder=3461 #Wei Duan
 }
+196.1.1={
+	liege=0
+}
+199.1.1={
+	liege=e_china
+}
 209.1.1={
-	vice_royalty = yes
+	vice_royalty=yes
 	holder=20494 #Meng Jian
 }
 210.1.1={
 	holder=3462 #Wei Kang
 }
 213.6.1={
-	holder=0 #None
+	holder=0
 	active=no
 }
 220.8.1={
@@ -78,3 +85,8 @@
 223.6.1={
 	holder=20469 #Xu Miao
 }
+
+
+
+
+#TBD

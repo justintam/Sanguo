@@ -9,6 +9,9 @@
 52.1.1={
 	holder=4244 #Liu Xing
 }
+60.1.1={
+	holder=11300 #Tan Rongming
+}
 64.1.1={
 	holder=4245 #Liu Mu
 }

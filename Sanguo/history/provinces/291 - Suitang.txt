@@ -13,5 +13,6 @@ b_suitang = tribal
 # Misc
 culture = nanman
 religion = huojiao
+terrain = forest
 
 #History

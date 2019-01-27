@@ -175,6 +175,138 @@ decisions = {
 		}
 	}
 	
+	ally_wako = {
+		potential = {
+			is_adult = yes
+			is_ruler = yes
+			independent = yes
+			has_regent = no
+			prisoner = no
+			war = no
+			NOR = {
+				trait = incapable
+				trait = sick_incapable
+			}
+			
+			NOT = {
+				demesne_size = 4
+			}
+			
+			NOT = {
+				any_demesne_title = {
+					has_title_flag = warlord_flag
+				}
+			}
+			
+			NOT = { has_landed_title = k_yamatai }
+			k_yamatai = {
+				has_holder = yes
+				holder_scope = {
+					war = no
+					NOT = {
+						is_allied_with = ROOT
+					}
+					is_within_diplo_range = ROOT
+					opinion = {
+						who = ROOT
+						value = 50
+					}
+				}
+			}
+		}
+		allow = {
+			k_yamatai = {
+				holder_scope = {
+					opinion = {
+						who = ROOT
+						value = 100
+					}
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = {
+				text="TOOLTIPally_wako"
+				hidden_tooltip = {
+					k_yamatai = {
+						holder_scope = {
+							add_alliance = {
+								who = ROOT
+								years = 1
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	form_wako_band = {
+		potential = {
+			wealth = 100
+			has_landed_title = k_yamatai
+			NOT = { has_earmarked_regiments = wako_band }
+		}
+		allow = {
+			wealth = 100
+			piety = 500
+		}
+		effect = {
+			custom_tooltip = {
+				text="TOOLTIPform_wako"
+				hidden_tooltip = {
+					wealth = -100
+					piety = -500
+					capital_scope = {
+						save_event_target_as = target_province
+					}
+					spawn_unit = {
+						province = event_target:target_province
+						home = event_target:target_province
+						owner = ROOT
+						leader = ROOT
+						reinforces = yes
+						troops = {
+							light_infantry={ 500 500 }
+							heavy_infantry = { 100 100 }
+							archers = { 200 200 }
+							pikemen = { 200 200 }
+						}
+						attrition = 1.00
+						cannot_inherit = yes
+						earmark = wako_band
+						is_looter = yes
+						can_toggle_looting = no
+					}
+					spawn_fleet = {
+						province = closest
+						owner = ROOT
+						cannot_inherit = yes
+						earmark = wako_ship
+						troops =
+						{
+							galleys = { 10 10 }
+						}
+					}
+				}
+			}
+		}
+		revoke_allowed = {
+			always = no
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 1.5
+				trait = wroth
+			}
+			modifier = {
+				factor = 5
+				trait = ambitious
+			}
+		}
+	}
+	
 	form_clan_army = {
 		potential = {
 			ai = no
@@ -325,7 +457,7 @@ decisions = {
 				AND = {
 					OR = {
 						culture_group = yue
-						culture_group = tibetan
+						culture_group = tibetan_group
 						culture_group = man
 					}
 					liege = { religion = ROOT }
@@ -417,6 +549,7 @@ decisions = {
 			NOR = {
 				trait = incapable
 				trait = sick_incapable
+				has_character_modifier = holding_court
 			}
 			any_demesne_province = {
 				OR = {
@@ -450,6 +583,10 @@ decisions = {
 		}
 		effect = {
 			hidden_tooltip = {
+				add_character_modifier = {
+					name = holding_court
+					duration = 15
+				}
 				any_demesne_province = {
 					limit = {
 						OR = {
@@ -599,7 +736,12 @@ decisions = {
 					any_realm_province = {
 						NOT = { hospital_level = 1 }
 						count = 3
-						NOT = { count = 5 }
+					}
+					NOT = {
+						any_realm_province = {
+							NOT = { hospital_level = 1 }
+							count = 5
+						}
 					}
 				}
 				AND = {
@@ -607,7 +749,12 @@ decisions = {
 					any_realm_province = {
 						NOT = { hospital_level = 1 }
 						count = 5
-						NOT = { count = 10 }
+					}
+					NOT = {
+						any_realm_province = {
+							NOT = { hospital_level = 1 }
+							count = 10
+						}
 					}
 				}
 				AND = {
@@ -615,7 +762,12 @@ decisions = {
 					any_realm_province = {
 						NOT = { hospital_level = 1 }
 						count = 10
-						NOT = { count = 20 }
+					}
+					NOT = {
+						any_realm_province = {
+							NOT = { hospital_level = 1 }
+							count = 20
+						}
 					}
 				}
 				AND = {
@@ -623,7 +775,12 @@ decisions = {
 					any_realm_province = {
 						NOT = { hospital_level = 1 }
 						count = 20
-						NOT = { count = 30 }
+					}
+					NOT = {
+						any_realm_province = {
+							NOT = { hospital_level = 1 }
+							count = 30
+						}
 					}
 				}
 				AND = {
@@ -631,7 +788,12 @@ decisions = {
 					any_realm_province = {
 						NOT = { hospital_level = 1 }
 						count = 30
-						NOT = { count = 40 }
+					}
+					NOT = {
+						any_realm_province = {
+							NOT = { hospital_level = 1 }
+							count = 40
+						}
 					}
 				}
 				AND = {
@@ -639,7 +801,12 @@ decisions = {
 					any_realm_province = {
 						NOT = { hospital_level = 1 }
 						count = 40
-						NOT = { count = 50 }
+					}
+					NOT = {
+						any_realm_province = {
+							NOT = { hospital_level = 1 }
+							count = 50
+						}
 					}
 				}
 				AND = {
@@ -647,7 +814,12 @@ decisions = {
 					any_realm_province = {
 						NOT = { hospital_level = 1 }
 						count = 50
-						NOT = { count = 75 }
+					}
+					NOT = {
+						any_realm_province = {
+							NOT = { hospital_level = 1 }
+							count = 75
+						}
 					}
 				}
 				AND = {
@@ -655,7 +827,12 @@ decisions = {
 					any_realm_province = {
 						NOT = { hospital_level = 1 }
 						count = 75
-						NOT = { count = 100 }
+					}
+					NOT = {
+						any_realm_province = {
+							NOT = { hospital_level = 1 }
+							count = 100
+						}
 					}
 				}
 				AND = {
@@ -663,7 +840,12 @@ decisions = {
 					any_realm_province = {
 						NOT = { hospital_level = 1 }
 						count = 100
-						NOT = { count = 150 }
+					}
+					NOT = {
+						any_realm_province = {
+							NOT = { hospital_level = 1 }
+							count = 150
+						}
 					}
 				}
 				AND = {
@@ -671,7 +853,6 @@ decisions = {
 					any_realm_province = {
 						NOT = { hospital_level = 1 }
 						count = 150
-						NOT = { count = 200 }
 					}
 				}
 			}
@@ -683,7 +864,12 @@ decisions = {
 					any_realm_province = {
 						NOT = { hospital_level = 1 }
 						count = 3
-						NOT = { count = 5 }
+					}
+					NOT = {
+						any_realm_province = {
+							NOT = { hospital_level = 1 }
+							count = 5
+						}
 					}
 				}
 				AND = {
@@ -691,7 +877,12 @@ decisions = {
 					any_realm_province = {
 						NOT = { hospital_level = 1 }
 						count = 5
-						NOT = { count = 10 }
+					}
+					NOT = {
+						any_realm_province = {
+							NOT = { hospital_level = 1 }
+							count = 10
+						}
 					}
 				}
 				AND = {
@@ -699,7 +890,12 @@ decisions = {
 					any_realm_province = {
 						NOT = { hospital_level = 1 }
 						count = 10
-						NOT = { count = 20 }
+					}
+					NOT = {
+						any_realm_province = {
+							NOT = { hospital_level = 1 }
+							count = 20
+						}
 					}
 				}
 				AND = {
@@ -707,7 +903,12 @@ decisions = {
 					any_realm_province = {
 						NOT = { hospital_level = 1 }
 						count = 20
-						NOT = { count = 30 }
+					}
+					NOT = {
+						any_realm_province = {
+							NOT = { hospital_level = 1 }
+							count = 30
+						}
 					}
 				}
 				AND = {
@@ -715,7 +916,12 @@ decisions = {
 					any_realm_province = {
 						NOT = { hospital_level = 1 }
 						count = 30
-						NOT = { count = 40 }
+					}
+					NOT = {
+						any_realm_province = {
+							NOT = { hospital_level = 1 }
+							count = 40
+						}
 					}
 				}
 				AND = {
@@ -723,7 +929,12 @@ decisions = {
 					any_realm_province = {
 						NOT = { hospital_level = 1 }
 						count = 40
-						NOT = { count = 50 }
+					}
+					NOT = {
+						any_realm_province = {
+							NOT = { hospital_level = 1 }
+							count = 50
+						}
 					}
 				}
 				AND = {
@@ -731,7 +942,12 @@ decisions = {
 					any_realm_province = {
 						NOT = { hospital_level = 1 }
 						count = 50
-						NOT = { count = 75 }
+					}
+					NOT = {
+						any_realm_province = {
+							NOT = { hospital_level = 1 }
+							count = 75
+						}
 					}
 				}
 				AND = {
@@ -739,7 +955,12 @@ decisions = {
 					any_realm_province = {
 						NOT = { hospital_level = 1 }
 						count = 75
-						NOT = { count = 100 }
+					}
+					NOT = {
+						any_realm_province = {
+							NOT = { hospital_level = 1 }
+							count = 100
+						}
 					}
 				}
 				AND = {
@@ -747,7 +968,12 @@ decisions = {
 					any_realm_province = {
 						NOT = { hospital_level = 1 }
 						count = 100
-						NOT = { count = 150 }
+					}
+					NOT = {
+						any_realm_province = {
+							NOT = { hospital_level = 1 }
+							count = 150
+						}
 					}
 				}
 				AND = {
@@ -755,7 +981,6 @@ decisions = {
 					any_realm_province = {
 						NOT = { hospital_level = 1 }
 						count = 150
-						NOT = { count = 200 }
 					}
 				}
 			}
@@ -766,101 +991,110 @@ decisions = {
 					limit = {
 						any_realm_province = {
 							NOT = { hospital_level = 1 }
-							count = 3
-							NOT = { count = 5 }
-						}
-					}
-					wealth = -250
-				}
-				if = {
-					limit = {
-						any_realm_province = {
-							NOT = { hospital_level = 1 }
-							count = 5
-							NOT = { count = 10 }
-						}
-					}
-					wealth = -500
-				}
-				if = {
-					limit = {
-						any_realm_province = {
-							NOT = { hospital_level = 1 }
-							count = 10
-							NOT = { count = 20 }
-						}
-					}
-					wealth = -1000
-				}
-				if = {
-					limit = {
-						any_realm_province = {
-							NOT = { hospital_level = 1 }
-							count = 20
-							NOT = { count = 30 }
-						}
-					}
-					wealth = -2000
-				}
-				if = {
-					limit = {
-						any_realm_province = {
-							NOT = { hospital_level = 1 }
-							count = 30
-							NOT = { count = 40 }
-						}
-					}
-					wealth = -3000
-				}
-				if = {
-					limit = {
-						any_realm_province = {
-							NOT = { hospital_level = 1 }
-							count = 40
-							NOT = { count = 50 }
-						}
-					}
-					wealth = -4000
-				}
-				if = {
-					limit = {
-						any_realm_province = {
-							NOT = { hospital_level = 1 }
-							count = 50
-							NOT = { count = 75 }
-						}
-					}
-					wealth = -5000
-				}
-				if = {
-					limit = {
-						any_realm_province = {
-							NOT = { hospital_level = 1 }
-							count = 75
-							NOT = { count = 100 }
-						}
-					}
-					wealth = -6000
-				}
-				if = {
-					limit = {
-						any_realm_province = {
-							NOT = { hospital_level = 1 }
-							count = 100
-							NOT = { count = 150 }
-						}
-					}
-					wealth = -7500
-				}
-				if = {
-					limit = {
-						any_realm_province = {
-							NOT = { hospital_level = 1 }
 							count = 150
-							NOT = { count = 200 }
 						}
 					}
 					wealth = -10000
+					set_character_flag = build_hospital_flag
+				}
+				if = {
+					limit = {
+						NOT = { has_character_flag = build_hospital_flag }
+						any_realm_province = {
+							NOT = { hospital_level = 1 }
+							count = 100
+						}
+					}
+					wealth = -7500
+					set_character_flag = build_hospital_flag
+				}
+				if = {
+					limit = {
+						NOT = { has_character_flag = build_hospital_flag }
+						any_realm_province = {
+							NOT = { hospital_level = 1 }
+							count = 75
+						}
+					}
+					wealth = -6000
+					set_character_flag = build_hospital_flag
+				}
+				if = {
+					limit = {
+						NOT = { has_character_flag = build_hospital_flag }
+						any_realm_province = {
+							NOT = { hospital_level = 1 }
+							count = 50
+						}
+					}
+					wealth = -5000
+					set_character_flag = build_hospital_flag
+				}
+				if = {
+					limit = {
+						NOT = { has_character_flag = build_hospital_flag }
+						any_realm_province = {
+							NOT = { hospital_level = 1 }
+							count = 40
+						}
+					}
+					wealth = -4000
+					set_character_flag = build_hospital_flag
+				}
+				if = {
+					limit = {
+						NOT = { has_character_flag = build_hospital_flag }
+						any_realm_province = {
+							NOT = { hospital_level = 1 }
+							count = 30
+						}
+					}
+					wealth = -3000
+					set_character_flag = build_hospital_flag
+				}
+				if = {
+					limit = {
+						NOT = { has_character_flag = build_hospital_flag }
+						any_realm_province = {
+							NOT = { hospital_level = 1 }
+							count = 20
+						}
+					}
+					wealth = -2000
+					set_character_flag = build_hospital_flag
+				}
+				if = {
+					limit = {
+						NOT = { has_character_flag = build_hospital_flag }
+						any_realm_province = {
+							NOT = { hospital_level = 1 }
+							count = 10
+						}
+					}
+					wealth = -1000
+					set_character_flag = build_hospital_flag
+				}
+				if = {
+					limit = {
+						NOT = { has_character_flag = build_hospital_flag }
+						any_realm_province = {
+							NOT = { hospital_level = 1 }
+							count = 5
+						}
+					}
+					wealth = -500
+					set_character_flag = build_hospital_flag
+				}
+				if = {
+					limit = {
+						NOT = { has_character_flag = build_hospital_flag }
+						any_realm_province = {
+							NOT = { hospital_level = 1 }
+							count = 3
+						}
+					}
+					wealth = -250
+					set_character_flag = build_hospital_flag
 				}
 				any_realm_province = {
 					limit = {
@@ -872,6 +1106,7 @@ decisions = {
 						holder = event_target:target_owner
 					}
 				}
+				clr_character_flag = build_hospital_flag
 			}
 		}
 		revoke_allowed = {

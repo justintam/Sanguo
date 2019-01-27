@@ -27,13 +27,20 @@
 192.7.1={
 	holder=307 #Li Jue
 }
+195.4.1={
+	liege=e_china
+}
+196.1.1={
+	liege=k_sili
+}
 198.6.1={
+	liege=d_jingzhao
 	holder=10496 #Zhong Yao
 }
-211.1.1={
-	holder=20478 #Xu Yi
+213.6.1={
+	holder=3506 # Random
 }
-211.10.1={
+213.9.1={
 	holder=20418 #Zhang Ji
 }
 224.1.1={

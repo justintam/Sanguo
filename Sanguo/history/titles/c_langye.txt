@@ -25,5 +25,5 @@
 	holder=3390 #Liu Rong
 }
 193.1.1={
-	holder=3534 #Random
+	holder=1317 #Ding Kai
 }

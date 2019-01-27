@@ -15,6 +15,9 @@
 	}
 	184.1.1={
 		employer=3471
+		effect={
+			health=2
+		}
 	}
 	189.9.1={
 		employer=300
@@ -46,6 +49,9 @@
 	}
 	184.1.1={
 		employer=3471
+		effect={
+			health=2
+		}
 	}
 	189.9.1={
 		employer=300
@@ -94,7 +100,7 @@
 		birth=yes
 	}
 	184.1.1={
-		employer=3803
+		employer=500
 	}
 	208.1.1={
 		employer=509
@@ -227,6 +233,7 @@
 		add_trait = "refuge"
 		effect = {
 			set_character_flag = refuge_yang
+			health=4
 		}
 	}
 	197.1.1={
@@ -257,7 +264,21 @@
 	160.1.1={
 		birth=yes
 	}
-	240.1.1={
+	197.4.1={
+		effect={ e_china={ holder_scope={ reverse_imprison=ROOT } } }
+	}
+	198.1.1={
+		employer=4000
+		add_trait = "refuge"
+		effect = {
+			set_character_flag = refuge_sili
+		}
+	}
+	230.1.1={
+		remove_trait = "refuge"
+		effect = {
+			clr_character_flag = refuge_jing
+		}
 		death=yes
 	}
 }
@@ -542,20 +563,19 @@
 	}
 }
 3831 = {
-	name="Mao"
+	name="Miao"
 	dynasty=2
 	religion="confucian"
 	culture="han"
 	father=34
 	trait="born_in_the_purple"
-	197.1.1={
+	trait="child_of_consort"
+	200.1.1={
 		birth=yes
+		employer=3906
 	}
-	197.1.1={
-		employer=34
-	}
-	220.12.10={
-		employer=10400
+	214.1.1={
+		employer=3930
 	}
 	260.1.1={
 		death=yes
@@ -1141,7 +1161,7 @@
 	dynasty=1815 #Zhao
 	religion="confucian"
 	culture="han"
-	trait="master_theologian"
+	trait="mastermind_theologian"
 	trait="scholar"
 	120.1.1={
 		birth=yes
@@ -1156,7 +1176,7 @@
 	religion="confucian"
 	culture="han"
 	father=3864
-	trait="skilled_theologian"
+	trait="scholarly_theologian"
 	trait="scholar"
 	trait="brave"
 	trait="humble"
@@ -1332,7 +1352,7 @@
 		employer=10486 #Du Ji
 	}
 	215.1.1={
-		employer=3871 #Guangqiu Xing
+		employer=3870 #Guangqiu Xing
 	}
 	260.1.1={
 		death=yes
@@ -1570,7 +1590,6 @@
 	}
 	220.3.15={
 		employer=10400 #Cao Pi
-		add_claim=d_jiuquan
 	}
 	260.1.1={
 		death=yes

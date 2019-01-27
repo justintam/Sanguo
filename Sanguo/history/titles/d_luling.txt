@@ -1,8 +1,8 @@
 # e_china
 1.1.1={
 	active=no
-	law = agnatic_succession
-	law = succ_gavelkind
+	law=agnatic_succession
+	law=succ_gavelkind
 }
 198.1.1={
 	active=yes
@@ -11,7 +11,7 @@
 }
 199.5.1={
 	liege=k_sun
-	vice_royalty = yes
+	vice_royalty=yes
 	holder=512 #Sun Fu
 }
 211.1.1={

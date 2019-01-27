@@ -1835,6 +1835,8 @@ e_china = {
 			c_cangwu = { # 107
 				color={ 136 75 55 }
 				
+				holy_site = shinto
+				
 				b_guangxin = {
 				}
 				b_muandu = {
@@ -2051,6 +2053,28 @@ e_china = {
 				}
 			}
 		}
+		d_zhuya = {
+			color={ 15 55 41 }
+			
+			allow = {
+				OR = {
+					lower_tier_than = KING
+					any_demesne_province = { OR = { province_id = 389 } }
+				}
+			}
+			capital = 389 # c_zhuya
+			
+			c_zhuya = { # 389
+				color={ 15 55 41 }
+				
+				b_sanya = {
+				}
+				b_wuzhishan = {
+				}
+				b_dongfang = {
+				}
+			}
+		}
 	}
 	k_jing = {
 		color={ 202 162 83 }
@@ -2112,7 +2136,7 @@ e_china = {
 				}
 				b_fumeng = {
 				}
-				b_numai = {
+				b_nanxiang = {
 				}
 				b_tongbai = {
 				}
@@ -4092,6 +4116,7 @@ e_china = {
 				color={ 210 37 27 }
 				
 				holy_site = animist
+				holy_site = shinto
 				
 				b_jianye = {
 				}
@@ -4595,7 +4620,7 @@ e_china = {
 				
 				b_jiangzhou = {
 				}
-				b_peiling = {
+				b_badong = {
 				}
 				b_hanning = {
 				}
@@ -4606,10 +4631,34 @@ e_china = {
 				b_jiulong = {
 				}
 			}
-			c_dianjiang = { # 265
-				color={ 80 150 80 }
+			c_langzhong = { # 265
+				color={ 75 150 78 }
 				
 				holy_site = baihu
+				
+				b_bazhong = {
+				}
+				b_nanjiang = {
+				}
+				b_yuning = {
+				}
+				b_haihai = {
+				}
+			}
+			c_yongan = { # 266
+				color={ 80 150 80 }
+				
+				b_yongan = {
+				}
+				b_peiling = {
+				}
+				b_kuiguan = {
+				}
+				b_bandundi = {
+				}
+			}
+			c_dianjiang = { # 267
+				color={ 92 150 71 }
 				
 				b_dianjiang = {
 				}
@@ -4622,19 +4671,7 @@ e_china = {
 				b_yinglong = {
 				}
 			}
-			c_langzhong = { # 267
-				color={ 75 150 78 }
-				
-				b_langzhong = {
-				}
-				b_nanjiang = {
-				}
-				b_yuning = {
-				}
-				b_haihai = {
-				}
-			}
-			c_linjiang = { # 266
+			c_linjiang = { # 268
 				color={ 70 150 66 }
 				
 				holy_site = baihu
@@ -4648,18 +4685,6 @@ e_china = {
 				b_binghe = {
 				}
 				b_longqiao = {
-				}
-			}
-			c_yongan = { # 268
-				color={ 92 150 71 }
-				
-				b_yongan = {
-				}
-				b_kuiguan = {
-				}
-				b_badong = {
-				}
-				b_bandundi = {
 				}
 			}
 			c_zhi = { # 269
@@ -4779,31 +4804,31 @@ e_china = {
 				
 				holy_site = tianshi
 				
-				b_hanzhong = {
+				b_nanzheng = {
 				}
 				b_baocheng = {
 				}
 				b_mianyang = {
 				}
-				b_nanxiang = {
+				b_dingyuan = {
 				}
-				b_nanzheng = {
+				b_chenggu = {
 				}
 				b_yangduo = {
 				}
 			}
-			c_chenggu = { # 277
+			c_shangyong = { # 277
 				color={ 65 121 53 }
 				
-				b_chenggu = {
+				b_shangyong = {
 				}
-				b_dingyuan = {
+				b_fangling = {
 				}
-				b_guixu = {
+				b_xunyang = {
 				}
-				b_mangdan = {
+				b_zhangli = {
 				}
-				b_laohufu = {
+				b_yixiang = {
 				}
 			}
 		}
@@ -5264,6 +5289,8 @@ e_china = {
 			c_pingshu = { # 315
 				color={ 67 105 215 }
 				
+				holy_site = shinto
+				
 				b_pingshu = {
 				}
 				b_liuqiuxian = {
@@ -5710,18 +5737,18 @@ e_china = {
 				b_sanqiao = {
 				}
 			}
-			c_chengfu = { # 335
-				color={ 209 192 220 }
+			c_yangan = { # 335
+				color={ 189 192 238 }
 				
-				b_chengfu = {
+				b_yangan = {
 				}
-				b_zhanghuatai = {
+				b_daoting = {
 				}
-				b_bancheng = {
+				b_yangqianyi = {
 				}
-				b_xiongli = {
+				b_luodian = {
 				}
-				b_jinpu = {
+				b_wanggan = {
 				}
 			}
 			c_shansang = { # 336
@@ -5768,18 +5795,18 @@ e_china = {
 				b_jucheng = {
 				}
 			}
-			c_yangan = { # 339
-				color={ 189 192 238 }
+			c_chengfu = { # 339
+				color={ 209 192 220 }
 				
-				b_yangan = {
+				b_chengfu = {
 				}
-				b_daoting = {
+				b_zhanghuatai = {
 				}
-				b_yangqianyi = {
+				b_bancheng = {
 				}
-				b_luodian = {
+				b_xiongli = {
 				}
-				b_wanggan = {
+				b_jinpu = {
 				}
 			}
 		}
@@ -6128,11 +6155,15 @@ e_korea = {
 	capital = 377 # c_goguryeo
 	culture = joseon
 	
+	allow = { culture_group = korean }
+	
 	k_goguryeo = {
 		color={ 104 128 146 }
 		
 		capital = 377 # c_goguryeo
 		culture = joseon
+	
+		allow = { culture = joseon }
 		
 		confucian = 300
 		
@@ -6190,6 +6221,8 @@ e_korea = {
 		
 		capital = 379 # c_baekje
 		culture = samhan
+	
+		allow = { culture = samhan }
 		
 		d_baekje = {
 			color={ 48 139 222 }
@@ -6251,6 +6284,8 @@ e_korea = {
 		
 		capital = 381 # c_buyeo
 		culture = joseon
+	
+		allow = { culture = joseon }
 		
 		d_buyeo = {
 			color={ 134 33 198 }
@@ -6302,6 +6337,8 @@ e_korea = {
 		
 		capital = 383 # c_byeonhan
 		culture = samhan
+	
+		allow = { culture = samhan }
 		
 		d_byeonhan = {
 			color={ 100 118 222 }
@@ -6335,6 +6372,8 @@ e_korea = {
 		
 		capital = 384 # c_okjeo
 		culture = joseon
+	
+		allow = { culture = joseon }
 		
 		d_okjeo = {
 			color={ 146 19 199 }
@@ -6390,6 +6429,8 @@ e_korea = {
 		
 		capital = 386 # c_jinhan
 		culture = samhan
+	
+		allow = { culture = samhan }
 		
 		d_jinhan = {
 			color={ 56 68 232 }
@@ -6406,6 +6447,7 @@ e_korea = {
 				color={ 46 78 227 }
 				
 				holy_site = shamanist
+				holy_site = shinto
 				
 				b_silla = {
 				}
@@ -6452,11 +6494,15 @@ e_northern = {
 	capital = 364 # c_murong
 	culture = xianbei
 	
+	allow = { culture_group = mongol }
+	
 	k_xianbei = {
 		color={ 159 99 33 }
 		
 		capital = 364 # c_murong
 		culture = xianbei
+	
+		allow = { culture = xianbei }
 		
 		confucian = 500
 		
@@ -6596,6 +6642,8 @@ e_northern = {
 		
 		capital = 375 # c_wuhuandong
 		culture = wuhuan
+	
+		allow = { culture = wuhuan }
 		
 		confucian = 500
 		
@@ -6639,6 +6687,8 @@ e_northern = {
 		
 		capital = 373 # c_xiongnudong
 		culture = xiongnu
+	
+		allow = { culture = xiongnu }
 		
 		confucian = 500
 		
@@ -6691,6 +6741,13 @@ k_kushan = {
 		
 	confucian = 300
 	
+	dynasty_title_names = no
+	
+	can_be_claimed = no
+	can_be_usurped = no
+	
+	extra_ai_eval_troops = 10000
+	
 	d_turpan = {
 		color={ 128 106 191 }
 		
@@ -6723,6 +6780,8 @@ k_qiang = {
 	
 	capital = 361 # c_qinghaixi
 	culture = qiang
+	
+	allow = { culture = qiang }
 		
 	confucian = 300
 	
@@ -6761,6 +6820,36 @@ k_qiang = {
 			b_qiangjiao = {
 			}
 			b_qiangjue = {
+			}
+		}
+	}
+}
+k_yamatai = {
+	color={ 230 30 210 }
+	color2={ 255 255 255 }
+	
+	capital = 361 # c_qinghaixi
+	culture = wa
+	
+	allow = { culture = wa }
+	
+	d_tsushima = {
+		color={ 67 42 42 }
+		
+		allow = {
+			OR = {
+				lower_tier_than = KING
+				any_demesne_province = { OR = { province_id = 388 } }
+			}
+		}
+		capital = 388 # c_tsushima
+		
+		c_tsushima = { # 388
+			color={ 67 42 42 }
+				
+			holy_site = shinto
+			
+			b_tsushima = {
 			}
 		}
 	}

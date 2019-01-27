@@ -5,6 +5,13 @@
 1601 = {
 	name="Zhang" #Zhang Nan - WEI
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 1602 = {
 	name="Bei" #Bei Gong - RAN
@@ -33,6 +40,13 @@
 1608 = {
 	name="Li" #Li Mo - RAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="confucian"
+	}
 }
 1609 = {
 	name="Zu" #Zu Heng - RAN
@@ -53,10 +67,24 @@
 1613 = {
 	name="Li" #Li Tiao - BAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="confucian"
+	}
 }
 1614 = {
 	name="Yang" #Yang Ping - WEI
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 11 0 0 0 			}
+		religion="confucian"
+	}
 }
 1615 = {
 	name="Luo" #Luo Ye - WEI
@@ -81,6 +109,13 @@
 1620 = {
 	name="Wang" #Wang Ding - RAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 2 0 0 0 			}
+		religion="confucian"
+	}
 }
 1621 = {
 	name="Yin" #Yin Pu - RAN
@@ -121,6 +156,13 @@
 1630 = {
 	name="Liu" #Liu Jingzong - Han
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 1 0 0 0 			}
+		religion="confucian"
+	}
 }
 1631 = {
 	name="Lou" #Lou Ban - RAN
@@ -141,6 +183,13 @@
 1635 = {
 	name="Zhang" #Zhang Shi - WEI
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 0 0 0 0 			}
+		religion="confucian"
+	}
 }
 1636 = {
 	name="Yan" #Yan Fei - WEI
@@ -153,6 +202,13 @@
 1638 = {
 	name="Liu" #Liu Jun - HAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 1 0 0 0 			}
+		religion="confucian"
+	}
 }
 1639 = {
 	name="Zhao" #Zhao Fan - LB
@@ -189,6 +245,13 @@
 1647 = {
 	name="Xu" #Xu Ying - HAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 12 0 0 0 			}
+		religion="confucian"
+	}
 }
 1648 = {
 	name="Pan" #Pan Jing - RAN
@@ -209,6 +272,13 @@
 1652 = {
 	name="Chen" #Chen Peng - RAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 10 0 0 0 			}
+		religion="confucian"
+	}
 }
 1653 = {
 	name="Xin" #Xin Qi - RAN
@@ -245,6 +315,13 @@
 1661 = {
 	name="Li" #Li Xiangru - LNG
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="confucian"
+	}
 }
 1662 = {
 	name="Jia" #Jia Long - IND
@@ -253,6 +330,13 @@
 1663 = {
 	name="Liu" #Liu Heng - HAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 1 0 0 0 			}
+		religion="confucian"
+	}
 }
 1664 = {
 	name="Yan" #Yan Yi - RAN
@@ -305,10 +389,24 @@
 1676 = {
 	name="Xu" #Xu Dian - RAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 12 0 0 0 			}
+		religion="confucian"
+	}
 }
 1677 = {
 	name="Wu" #Wu Mo - RAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 12 0 0 0 			}
+		religion="confucian"
+	}
 }
 1678 = {
 	name="Bin" #Bin Zhou - RAN
@@ -325,6 +423,13 @@
 1681 = {
 	name="Xu" #Xu Gan - RAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 12 0 0 0 			}
+		religion="confucian"
+	}
 }
 1682 = {
 	name="Jin" #Jin He - RAN
@@ -337,6 +442,13 @@
 1684 = {
 	name="Li" #Li Shu - WU
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 5 0 0 0 			}
+		religion="confucian"
+	}
 }
 1685 = {
 	name="Yan" #Yan Xiang - WEI
@@ -345,10 +457,24 @@
 1686 = {
 	name="Liu" #Liu Fu - WEI
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 1 0 0 0 			}
+		religion="confucian"
+	}
 }
 1687 = {
 	name="Chen" #Chen Ji - YS
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 10 0 0 0 			}
+		religion="confucian"
+	}
 }
 1688 = {
 	name="Zhu" #Zhu Zhi - WU
@@ -373,6 +499,13 @@
 1693 = {
 	name="Yang" #Yang Zan - RAN
 	culture = han
+	coat_of_arms=
+	{
+		data=
+		{
+0 2 0 11 0 0 0 			}
+		religion="confucian"
+	}
 }
 1694 = {
 	name="Zhu" #Zhu Guang - WEI

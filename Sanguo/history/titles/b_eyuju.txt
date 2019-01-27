@@ -1,0 +1,19 @@
+# e_china
+1.1.1={
+	liege=c_zhan
+}
+184.1.1={
+	holder=2425 #Shi Xie
+}
+209.1.1={
+	holder=2426 #Shi Yeyiyu
+}
+249.1.1={
+	holder=2428 #Shi Beixie
+}
+270.1.1={
+	holder=2427 #Shi Zhouhezhu
+}
+304.1.1={
+	holder=2430 #Shi Le
+}

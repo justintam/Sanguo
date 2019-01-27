@@ -1,0 +1,20 @@
+# c_yangan
+
+# County Title
+title = c_yangan
+
+# Settlements
+max_settlements = 5
+
+b_yangan = castle
+b_daoting = temple
+#b_yangqianyi = temple
+#b_luodian = castle
+#b_wanggan = city
+
+# Misc
+culture = han
+religion = confucian
+terrain = plains
+
+#History

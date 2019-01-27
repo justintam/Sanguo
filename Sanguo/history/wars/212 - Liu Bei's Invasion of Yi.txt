@@ -1,0 +1,18 @@
+name = "Liu Bei's Invasion of Yi"
+
+casus_belli={
+	actor=600
+	recipient=80
+	casus_belli=invasion
+	landed_title=k_yi
+	date=212.3.1
+}
+
+212.3.1 = {
+	add_defender = 80 #Liu Zhang
+	add_attacker = 600 #Liu Bei
+}
+214.1.1={
+	rem_defender = 80 #Liu Zhang
+	rem_attacker = 600 #Liu Bei
+}

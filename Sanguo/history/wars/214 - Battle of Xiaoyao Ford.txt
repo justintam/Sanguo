@@ -1,0 +1,18 @@
+name = "2nd Battle of Hefei"
+
+casus_belli={
+	actor=509
+	recipient=400
+	casus_belli=invasion
+	landed_title=e_china
+	date=214.6.1
+}
+
+214.6.1 = {
+	add_defender = 400 #Cao Cao
+	add_attacker = 509 #Sun Quan
+}
+215.1.1={
+	rem_defender = 400 #Cao Cao
+	rem_attacker = 509 #Sun Quan
+}

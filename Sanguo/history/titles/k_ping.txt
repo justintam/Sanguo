@@ -1,0 +1,35 @@
+1.1.1={
+	active=no
+	effect={
+		set_title_flag=warlord_flag
+	}
+}
+189.9.1={
+	active=yes
+	liege=k_you
+	holder=971 #Gongsun Du
+}
+190.1.1={
+	liege=0
+}
+204.1.1={
+	holder=972 #Gongsun Kang
+}
+207.11.1={
+	set_tribute_suzerain={ who=e_china percentage=0.1 type=permanent }
+}
+220.1.1={
+	holder=973 #Gongsun Gong
+}
+220.12.10={
+	clear_tribute_suzerain=e_china
+	set_tribute_suzerain={ who=e_wei percentage=0.1 type=permanent }
+}
+228.1.1={
+	clear_tribute_suzerain=e_wei
+	holder=974 #Gongsun Yuan
+}
+238.8.1={
+	holder=0
+	active=no
+}

@@ -1,0 +1,1324 @@
+##### Seize CB
+
+seize = {
+	name = CB_NAME_SEIZE
+	war_name = WAR_NAME_SEIZE
+	sprite = 1
+	truce_days = 90
+	hostile_against_others = yes
+	is_permanent = yes
+	can_ask_to_join_war = yes
+	can_call_allies = yes
+	can_call_vassals = yes
+
+	infamy_modifier = 1.0
+
+	can_use_gui = {
+		ROOT = { piety = 50 }
+	}
+	
+	on_add = {
+		ROOT = { piety = -50 }
+	}
+	
+	can_use = {
+		ROOT = {
+			OR = {
+				religion_group = chinese_religion
+				religion_group = tao
+			}
+			NOR = {
+				pays_tribute_to = FROM
+				any_liege = {
+					OR = {
+						pays_tribute_to = FROM
+						FROM = {
+							pays_tribute_to = PREV
+						}
+					}
+				}
+			}
+			OR = {
+				real_tier = COUNT
+				real_tier = DUKE
+				AND = {
+					mercenary = yes
+					NOT = {
+						num_of_titles = 2
+					}
+				}
+				AND = {
+					holy_order = yes
+					NOT = {
+						num_of_titles = 2
+					}
+				}
+				AND = {
+					primary_title = {
+						has_title_flag = warlord_flag
+					}
+					NOT = {
+						num_of_titles = 2
+					}
+				}
+			}
+			OR = {
+				independent = yes
+				top_liege = {
+					NOR = {
+						is_close_relative = FROM
+						is_friend = FROM
+						is_lover = FROM
+					}
+				}
+			}
+		}
+		FROM = {
+			OR = {
+				real_tier = COUNT
+				real_tier = DUKE
+				AND = {
+					real_tier = KING
+					ROOT = {
+						has_ambition = obj_become_king
+						capital_holding = {
+							kingdom = {
+								FROM = {
+									capital_holding = {
+										kingdom = {
+											title = PREVPREVPREV
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			primary_title = {
+				OR = {
+					is_titular = no
+					AND = {
+						is_titular = yes
+						OR = {
+							NOR = {
+								has_title_flag = noble_mark
+								has_title_flag = noble_duke
+								has_title_flag = noble_king
+								has_title_flag = warlord_flag
+							}
+							FROM = { dynasty = ROOT }
+						}
+						FROM = { is_liege_of = ROOT }
+					}
+				}
+			}
+		}
+		# The attacker needs at least one county in the target kingdom, or a border, or be only two sea zones away from one of your counties
+		OR = {
+			ROOT = {
+				primary_title = {
+					has_title_flag = warlord_flag
+				}
+			}
+			FROM = {
+				in_revolt = no
+				is_nomadic = no
+				controls_religion = no
+				holy_order = no
+				religion = ROOT
+				shares_realm_border_with = ROOT
+			}
+		}
+	}
+	
+	is_valid = {
+		FROM = {
+			is_landed = yes
+		}
+	}
+
+	on_success_title = {
+		hidden_tooltip = {
+			ROOT = {
+				clr_character_flag = claimant_adventurer
+			}
+		}
+	
+		usurp_title_plus_barony_if_unlanded = { target = ROOT type = claim }
+		
+		if = {
+			limit = {
+				higher_tier_than = BARON
+				NOT = { culture = ROOT }
+			}
+			hidden_tooltip = { conquest_culture = ROOT }
+		}
+		
+		any_attacker = {
+			limit = { character = ROOT }
+			participation_scaled_prestige = 100
+			participation_scaled_piety = -200
+		}
+		any_attacker = {
+			limit = { NOT = { character = ROOT } }
+			hidden_tooltip = {
+				participation_scaled_prestige = 100
+			}
+		}
+		
+		FROM = {
+			prestige = -100
+		}
+	}
+
+	on_fail_title = {
+		ROOT = {
+			prestige = -100
+			hidden_tooltip = {
+				disband_event_forces = yes
+				clr_character_flag = claimant_adventurer
+			}
+		}
+		any_defender = {
+			limit = { character = FROM }
+			participation_scaled_prestige = 100
+		}
+		any_defender = {
+			limit = { NOT = { character = FROM } }
+			hidden_tooltip = { participation_scaled_prestige = 100 }
+		}
+	}
+
+	on_reverse_demand = {
+		ROOT = {
+			prestige = -150
+			transfer_scaled_wealth = {
+				to = FROM
+				value = 4.0
+			}
+		}
+		if = {
+			limit = {
+				ROOT = { has_character_flag = claimant_adventurer }
+			}
+			ROOT = { imprison = FROM }
+		}
+		any_defender = {
+			limit = { character = FROM }
+			participation_scaled_prestige = 150
+		}
+		any_defender = {
+			limit = { NOT = { character = FROM } }
+			hidden_tooltip = { participation_scaled_prestige = 150 }
+		}
+	}
+
+	on_reverse_demand_title = {
+		ROOT = {
+			remove_claim = PREV
+			hidden_tooltip = {
+				disband_event_forces = yes
+				clr_character_flag = claimant_adventurer
+			}
+		}
+	}
+	
+	on_attacker_leader_death = {
+		if = {
+			limit = {
+				ROOT = { has_character_flag = claimant_adventurer }
+			}
+			ROOT = {
+				hidden_tooltip = {
+					disband_event_forces = yes
+					clr_character_flag = claimant_adventurer
+				}
+			}
+			end_war = invalid
+		}
+	}
+
+	attacker_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 100
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+	
+	ai_will_do = { 
+		factor = 1
+		
+		modifier = {
+			factor = 0.9 # Prefer using CB's without on_add costs
+		}
+		modifier = {
+			factor = 5
+			ROOT = { NOT = { opinion = { who = FROM value = 0 } } }
+		}
+		modifier = {
+			factor = 1.05
+			ROOT = { trait = ambitious }
+		}
+		modifier = {
+			factor = 1.05
+			ROOT = { trait = dishonorable }
+		}
+		modifier = {
+			factor = 1.05
+			ROOT = { trait = envious }
+		}
+		modifier = {
+			factor = 1.05
+			ROOT = { trait = greedy }
+		}
+		modifier = {
+			factor = 1.05
+			ROOT = { trait = ruthless }
+		}
+		modifier = {
+			factor = 1.05
+			ROOT = { trait = selfish }
+		}
+		modifier = {
+			factor = 0.85
+			ROOT = { trait = arbitrary }
+		}
+		modifier = {
+			factor = 0.85
+			ROOT = { trait = chivalrous }
+		}
+		modifier = {
+			factor = 0.85
+			ROOT = { trait = content }
+		}
+		modifier = {
+			factor = 0.85
+			ROOT = { trait = craven }
+		}
+		modifier = {
+			factor = 0.85
+			ROOT = { trait = gluttonous }
+		}
+		modifier = {
+			factor = 0.85
+			ROOT = { trait = honorable }
+		}
+		modifier = {
+			factor = 0.85
+			ROOT = { trait = kind }
+		}
+	}
+}
+
+seize_big = {
+	name = CB_NAME_SEIZE
+	war_name = WAR_NAME_SEIZE
+	sprite = 1
+	truce_days = 90
+	hostile_against_others = yes
+	is_permanent = yes
+	can_ask_to_join_war = yes
+	can_call_allies = yes
+	can_call_vassals = yes
+	
+	can_use_gui = {
+		ROOT = { piety = 100 }
+	}
+	
+	on_add = {
+		ROOT = {
+			add_character_modifier = { 
+				name = launched_subjugation
+				days = 900
+				hidden = yes
+			}
+			piety = -100
+		}
+	}
+	
+	can_use = {
+		ROOT = {
+			OR = {
+				religion_group = chinese_religion
+				religion_group = tao
+			}
+			NOT = { has_character_modifier = launched_subjugation }	
+			NOR = {
+				pays_tribute_to = FROM
+				any_liege = {
+					OR = {
+						pays_tribute_to = FROM
+						FROM = {
+							pays_tribute_to = PREV
+						}
+					}
+				}
+			}
+			OR = {
+				real_tier = KING
+				real_tier = EMPEROR
+			}
+		}
+		
+		FROM = {
+			OR = {
+				real_tier = KING
+				real_tier = EMPEROR
+			}
+			primary_title = {
+				is_titular = no
+			}
+			in_revolt = no
+			is_nomadic = no
+			controls_religion = no
+			holy_order = no
+			religion = ROOT
+			shares_realm_border_with = ROOT
+		}
+	}
+	
+	is_valid = {
+		FROM = {
+			primary_title = {
+				is_titular = no
+			}
+			is_landed = yes
+		}
+	}
+
+	on_success_title = {
+		hidden_tooltip = {
+			ROOT = {
+				clr_character_flag = claimant_adventurer
+			}
+		}
+	
+		usurp_title_plus_barony_if_unlanded = { target = ROOT type = claim }
+		
+		if = {
+			limit = {
+				higher_tier_than = BARON
+				NOT = { culture = ROOT }
+			}
+			hidden_tooltip = { conquest_culture = ROOT }
+		}
+		
+		any_attacker = {
+			limit = { character = ROOT }
+			participation_scaled_prestige = 150
+			participation_scaled_piety = -200
+		}
+		any_attacker = {
+			limit = { NOT = { character = ROOT } }
+			hidden_tooltip = {
+				participation_scaled_prestige = 150
+			}
+		}
+		
+		FROM = {
+			prestige = -150
+		}
+	}
+
+	on_fail_title = {
+		ROOT = {
+			prestige = -150
+			hidden_tooltip = {
+				disband_event_forces = yes
+				clr_character_flag = claimant_adventurer
+			}
+		}
+		any_defender = {
+			limit = { character = FROM }
+			participation_scaled_prestige = 150
+		}
+		any_defender = {
+			limit = { NOT = { character = FROM } }
+			hidden_tooltip = { participation_scaled_prestige = 150 }
+		}
+	}
+
+	on_reverse_demand = {
+		ROOT = {
+			prestige = -300
+			transfer_scaled_wealth = {
+				to = FROM
+				value = 4.0
+			}
+		}
+		if = {
+			limit = {
+				ROOT = { has_character_flag = claimant_adventurer }
+			}
+			ROOT = { imprison = FROM }
+		}
+		any_defender = {
+			limit = { character = FROM }
+			participation_scaled_prestige = 150
+		}
+		any_defender = {
+			limit = { NOT = { character = FROM } }
+			hidden_tooltip = { participation_scaled_prestige = 150 }
+		}
+	}
+
+	on_reverse_demand_title = {
+		ROOT = {
+			remove_claim = PREV
+			hidden_tooltip = {
+				disband_event_forces = yes
+				clr_character_flag = claimant_adventurer
+			}
+		}
+	}
+	
+	on_attacker_leader_death = {
+		if = {
+			limit = {
+				ROOT = { has_character_flag = claimant_adventurer }
+			}
+			ROOT = {
+				hidden_tooltip = {
+					disband_event_forces = yes
+					clr_character_flag = claimant_adventurer
+				}
+			}
+			end_war = invalid
+		}
+	}
+
+	attacker_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 100
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+	
+	ai_will_do = { 
+		factor = 1
+		
+		modifier = {
+			factor = 0.9 # Prefer using CB's without on_add costs
+		}
+		modifier = {
+			factor = 5
+			ROOT = { NOT = { opinion = { who = FROM value = 0 } } }
+		}
+		modifier = {
+			factor = 1.05
+			ROOT = { trait = ambitious }
+		}
+		modifier = {
+			factor = 1.05
+			ROOT = { trait = dishonorable }
+		}
+		modifier = {
+			factor = 1.05
+			ROOT = { trait = envious }
+		}
+		modifier = {
+			factor = 1.05
+			ROOT = { trait = greedy }
+		}
+		modifier = {
+			factor = 1.05
+			ROOT = { trait = ruthless }
+		}
+		modifier = {
+			factor = 1.05
+			ROOT = { trait = selfish }
+		}
+		modifier = {
+			factor = 0.85
+			ROOT = { trait = arbitrary }
+		}
+		modifier = {
+			factor = 0.85
+			ROOT = { trait = chivalrous }
+		}
+		modifier = {
+			factor = 0.85
+			ROOT = { trait = content }
+		}
+		modifier = {
+			factor = 0.85
+			ROOT = { trait = craven }
+		}
+		modifier = {
+			factor = 0.85
+			ROOT = { trait = gluttonous }
+		}
+		modifier = {
+			factor = 0.85
+			ROOT = { trait = honorable }
+		}
+		modifier = {
+			factor = 0.85
+			ROOT = { trait = kind }
+		}
+		modifier = {
+			factor = 0.85
+			ROOT = { trait = slothful }
+		}
+	}
+}
+
+coalition = {
+	name = CB_NAME_COALITION
+	war_name = WAR_NAME_COALITION
+	sprite = 7
+	truce_days = 300
+	hostile_against_others = yes
+	can_ask_to_join_war = no
+	
+	can_use = {
+		ROOT = {
+			mercenary = no
+			NOR = {
+				pays_tribute_to = FROM
+				any_liege = {
+					OR = {
+						pays_tribute_to = FROM
+						FROM = {
+							pays_tribute_to = PREV
+						}
+					}
+				}
+			}
+		}
+		
+		FROM = {
+			OR = {
+				real_tier = KING
+				real_tier = EMPEROR
+			}
+		}
+	}
+	
+	can_use_title = {
+	}
+			
+	is_valid_title = {
+		OR = {
+			FROM = {
+				has_landed_title = PREV
+			}
+			holder_scope = {
+				is_liege_or_above = FROM
+			}
+		}
+	}
+
+	on_success = {
+		ROOT = {
+			prestige = 200
+		}
+		any_attacker = {
+			limit = { character = ROOT }
+			participation_scaled_prestige = 200
+		}
+		hidden_tooltip = {
+			any_attacker = {
+				limit = { NOT = { character = ROOT } }
+				participation_scaled_prestige = 200
+			}
+			if = {
+				limit = { FROM = { has_landed_title = k_confucian } }
+				FROM = { character_event = { id = MAN.44 } }
+			}
+			ROOT = {
+				occupy_minors_of_occupied_settlements = FROM
+				gain_all_occupied_titles = FROM
+			}
+		}
+		
+		FROM = {
+			prestige = -200
+		}
+	}
+
+	on_success_title = {
+		custom_tooltip = {
+			text = invasion_succ_tip
+			hidden_tooltip = {
+				usurp_title_plus_barony_if_unlanded = { target = ROOT type = invasion }
+				FROM = { set_defacto_liege = ROOT }
+				if = {
+					limit = {
+						FROM = { is_liege_or_above = ROOT }
+					}
+					FROM = { imprison = ROOT }
+				}
+				if = {
+					limit = {
+						PREV = {
+							tier = EMPEROR
+							NOT = { has_title_flag = premier_title }
+						}
+					}
+					PREV = {
+						activate_title = { title = THIS status = no }
+						unsafe_destroy_landed_title = THIS
+					}
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				higher_tier_than = BARON
+				NOT = { culture = ROOT }
+			}
+			hidden_tooltip = { conquest_culture = ROOT }
+		}
+	}
+
+	on_fail = {
+		ROOT = {
+			prestige = -200
+		}
+		FROM = {
+			prestige = 100
+		}
+		any_defender = {
+			limit = { character = FROM }
+			participation_scaled_prestige = 100
+		}
+		any_defender = {
+			limit = { NOT = { character = FROM } }
+			hidden_tooltip = { participation_scaled_prestige = 100 }
+		}
+	}
+
+	on_reverse_demand = {
+		ROOT = {
+			prestige = -200
+			transfer_scaled_wealth = {
+				to = FROM
+				value = 8.0
+			}
+		}
+		FROM = {
+			prestige = 200
+		}
+		any_defender = {
+			limit = { character = FROM }
+			participation_scaled_prestige = 200
+		}
+		any_defender = {
+			limit = { NOT = { character = FROM } }
+			hidden_tooltip = { participation_scaled_prestige = 200 }
+		}
+	}
+
+	on_reverse_demand_title = {
+		ROOT = {
+			remove_claim = PREV
+		}
+	}
+
+	on_attacker_leader_death = {
+		hidden_tooltip = {
+			any_defender = {
+				letter_event = {
+					id = 251
+				}
+			}
+		}
+
+		end_war = whitepeace
+	}
+
+	attacker_ai_victory_worth = {
+		factor = 150
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 100
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+}
+
+manhunt = {
+	name = CB_NAME_MANHUNT
+	war_name = WAR_NAME_MANHUNT
+	sprite = 7
+	truce_days = 300
+	hostile_against_others = no
+	can_ask_to_join_war = no
+	
+	can_use = {
+		always = no
+		ROOT = {
+			mercenary = no
+			NOR = {
+				pays_tribute_to = FROM
+				any_liege = {
+					OR = {
+						pays_tribute_to = FROM
+						FROM = {
+							pays_tribute_to = PREV
+						}
+					}
+				}
+			}
+		}
+		
+		FROM = {
+			OR = {
+				has_character_flag = manhunt_flag
+				any_realm_character = {
+					has_character_flag = manhunt_flag
+				}
+			}
+		}
+	}
+
+	on_success = {
+		ROOT = {
+			prestige = 200
+		}
+		any_attacker = {
+			limit = { character = ROOT }
+			participation_scaled_prestige = 200
+		}
+		any_attacker = {
+			limit = { NOT = { character = ROOT } }
+			hidden_tooltip = { participation_scaled_prestige = 200 }
+		}
+		
+		hidden_tooltip = {
+			ROOT = {
+				occupy_minors_of_occupied_settlements = FROM
+				gain_all_occupied_titles = FROM
+			}
+		}
+		
+		FROM = {
+			prestige = -200
+		}
+	}
+
+	on_success_title = {
+		custom_tooltip = {
+			text = invasion_succ_tip
+			hidden_tooltip = {
+				usurp_title_plus_barony_if_unlanded = { target = ROOT type = invasion }
+				FROM = { set_defacto_liege = ROOT }
+				if = {
+					limit = {
+						FROM = { is_liege_or_above = ROOT }
+					}
+					FROM = { imprison = ROOT }
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				higher_tier_than = BARON
+				NOT = { culture = ROOT }
+			}
+			hidden_tooltip = { conquest_culture = ROOT }
+		}
+	}
+
+	on_fail = {
+		ROOT = {
+			prestige = -200
+		}
+		FROM = {
+			prestige = 100
+		}
+		any_defender = {
+			limit = { character = FROM }
+			participation_scaled_prestige = 100
+		}
+		any_defender = {
+			limit = { NOT = { character = FROM } }
+			hidden_tooltip = { participation_scaled_prestige = 100 }
+		}
+	}
+
+	on_reverse_demand = {
+		ROOT = {
+			prestige = -200
+			transfer_scaled_wealth = {
+				to = FROM
+				value = 8.0
+			}
+		}
+		FROM = {
+			prestige = 200
+		}
+		any_defender = {
+			limit = { character = FROM }
+			participation_scaled_prestige = 200
+		}
+		any_defender = {
+			limit = { NOT = { character = FROM } }
+			hidden_tooltip = { participation_scaled_prestige = 200 }
+		}
+	}
+
+	on_reverse_demand_title = {
+		ROOT = {
+			remove_claim = PREV
+		}
+	}
+
+	on_attacker_leader_death = {
+		hidden_tooltip = {
+			any_defender = {
+				letter_event = {
+					id = 251
+				}
+			}
+		}
+
+		end_war = whitepeace
+	}
+
+	attacker_ai_victory_worth = {
+		factor = 150
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 100
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+}
+
+restoration = {
+	name = CB_NAME_RESTORATION
+	war_name = WAR_NAME_RESTORATION
+	sprite = 5
+	truce_days = 90
+	is_permanent = yes
+	can_ask_to_join_war = yes
+	is_claim_all = yes
+
+	allowed_to_target_tributaries = no
+
+	infamy_modifier = 0.5
+	
+	can_use = {
+		ROOT = {
+			total_claims = {
+				who = FROM
+				strong = yes # Count only strong claims
+				value = 2
+			}
+			has_claim = k_confucian
+			OR = {
+				is_female = no
+				NOT = { religion_group = tao }
+				NOT = { succ_law_title = { has_law = agnatic_succession } }
+			}
+			OR = {
+				is_ruler = no
+				primary_title = {
+					OR = {
+						is_primary_type_title = no # Static Mercs, the Pope, Holy Orders, etc
+						higher_tier_than = PREVPREV
+						tier = PREVPREV
+					}
+				}
+			}
+		}
+		
+		NOT = {
+			any_war = { # when used in title scope, checks all wars for that title
+				attacker = {
+					character = ROOT
+				}
+			}
+		}
+	}
+
+	is_valid = {
+		ROOT = {
+			total_claims = {
+				who = FROM
+				strong = yes # Count only strong claims
+				value = 1 # must have at least one claim left
+			}
+		}
+	}
+
+	on_add = {
+		ROOT = {
+			any_claim = {
+				limit = {
+					holder_scope = {
+						OR = {
+							character = FROM
+							is_liege_or_above = FROM
+						}
+					}
+					ROOT = { has_strong_claim = PREV }
+				}
+				press_claim = ROOT
+			}
+		}
+	}
+
+	on_success = {
+		ROOT = {
+			any_claim = {
+				limit = {
+					holder_scope = {
+						OR = {
+							character = FROM
+							is_liege_or_above = FROM
+						}
+					}
+					ROOT = { has_strong_claim = PREV }
+				}
+				usurp_title = { target = ROOT type = claim }
+				if = {
+					limit = {
+						higher_tier_than = BARON
+						NOT = { culture = ROOT }
+					}
+					hidden_tooltip = { conquest_culture = ROOT }
+				}
+				if = {
+					limit = {
+						NOT = { higher_tier_than = BARON }
+						dejure_liege_title = {
+							holder_scope = { character = FROM }
+						}
+					}
+					dejure_liege_title = {
+						grant_title_no_opinion = PREVPREVPREV
+					}
+				}
+			}
+		}
+		hidden_tooltip = {
+			ROOT = {
+				opinion = {
+					modifier = pressed_my_claim 
+					who = PREV
+					multiplier = 2
+				}
+			}
+			FROM = {
+				transfer_scaled_wealth = {
+					to = ROOT
+					value = 2
+				}
+			}
+		}
+		any_attacker = {
+			limit = { character = ROOT }
+			participation_scaled_prestige = 200
+		}
+		any_attacker = {
+			limit = { NOT = { character = ROOT } }
+			hidden_tooltip = { participation_scaled_prestige = 200 }
+		}
+		FROM = {
+			prestige = -200
+		}
+	}
+
+	on_fail_title = {
+		hidden_tooltip = {
+			ROOT = {
+				abdicate_to = FROM
+			}
+		}
+		ROOT = {
+			prestige = -200
+		}
+		FROM = {
+			FROM = {
+				prestige = -200
+			}
+		}
+		
+		any_defender = {
+			limit = { character = FROM }
+			participation_scaled_prestige = 200
+		}
+		any_defender = {
+			limit = { NOT = { character = FROM } }
+			hidden_tooltip = { participation_scaled_prestige = 200 }
+		}
+	}
+
+	on_reverse_demand = {
+		hidden_tooltip = {
+			ROOT = {
+				abdicate_to = FROM
+			}
+		}
+		prestige = -300
+		transfer_scaled_wealth = {
+			to = FROM
+			value = 4.0
+		}
+		ROOT = {
+			prestige = -300
+			imprison = FROM
+		}
+		any_defender = {
+			limit = { character = FROM }
+			participation_scaled_prestige = 300
+		}
+		any_defender = {
+			limit = { NOT = { character = FROM } }
+			hidden_tooltip = { participation_scaled_prestige = 300 }
+		}
+	}
+
+	on_reverse_demand_title = {
+		any_claim = {
+			remove_claim = ROOT
+		}
+	}
+
+	attacker_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 100
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+}
+
+install_chancellor_war = { # Started from faction
+	name = CB_NAME_INSTALL_CHANCELLOR
+	war_name = WAR_NAME_INSTALL_CHANCELLOR
+	sprite = 6
+	truce_days = 900
+	can_call_allies = no
+	can_ask_to_join_war = no
+	major_revolt = yes
+	
+	can_use = {
+		ROOT = {
+			vassal_of = FROM
+		}
+	}
+	
+	can_use_title = {
+		higher_tier_than = BARON
+		is_primary_holder_title = yes
+	}
+	
+	is_valid = {
+		FROM = {
+			in_revolt = no
+			has_character_flag = install_chancellor_target
+		}
+		ROOT = {
+			OR = {
+				liege = {
+					character = PREV # either independent
+				}
+				liege = {
+					FROM = {
+						is_liege_or_above = PREV # or have shared liege
+					}
+				}
+			}
+		}
+	}
+
+	on_success = {
+		any_attacker = {
+			participation_scaled_prestige = 100
+			hidden_tooltip = {
+				disband_event_forces = faction_revolters
+			}
+		}
+		FROM = { hidden_tooltip = { disband_event_forces = faction_loyalists } }
+		ROOT = {
+			character_event = { id = CHA.10 }
+			save_event_target_as = new_title_holder
+			hidden_tooltip = {
+				any_attacker = {
+					limit = { NOT = { character = PREV } }
+					set_character_flag = helped_win_war
+				}
+			}
+			character_event = { id = 8226 days = 1 }
+			letter_event={ id=CHA.9 }
+		}
+	}
+
+	on_success_title = { #This is the target title of the faction
+		increase_council_power_effect = yes
+		increase_vassal_freedom_effect = yes
+		increase_vassal_freedom_effect = yes
+		if = {
+			limit = { has_law = succession_voting_power_0 }
+			add_law_w_cooldown = succession_voting_power_1
+		}
+		custom_tooltip = {
+			text = overthrow_text
+			hidden_tooltip = {
+				if = {
+					limit = { 
+						NOT = { has_law = succ_feudal_elective }
+						has_law = law_voting_power_1
+						has_law = banish_voting_power_1
+						has_law = execution_voting_power_1
+						has_law = revoke_title_voting_power_1
+						has_law = grant_title_voting_power_1
+						has_law = imprison_voting_power_1
+						has_law = war_voting_power_1						
+					}
+					add_law_w_cooldown = succ_feudal_elective
+				}
+				if = {
+					limit = {
+						NOT = { has_law = succ_gavelkind }
+						NOT = { has_law = succ_feudal_elective }
+						NAND = {
+							has_law = succ_feudal_elective
+							has_law = law_voting_power_1
+							has_law = banish_voting_power_1
+							has_law = execution_voting_power_1
+							has_law = revoke_title_voting_power_1
+							has_law = grant_title_voting_power_1
+							has_law = imprison_voting_power_1
+							has_law = war_voting_power_1						
+						}
+					}
+					add_law_w_cooldown = succ_gavelkind
+				}
+			}
+		}
+		holder_scope = {
+			clr_character_flag = install_chancellor_target
+		}
+	}
+
+	on_fail = {
+		ROOT = {
+			prestige = -100
+		}
+		
+		any_defender = {
+			limit = { character = FROM }
+			participation_scaled_prestige = 50
+		}
+		any_defender = {
+			limit = { NOT = { character = FROM } }
+			hidden_tooltip = { participation_scaled_prestige = 50 }
+		}
+		
+		hidden_tooltip = {
+			any_attacker = {
+				disband_event_forces = faction_revolters
+				add_character_modifier = {
+					name = faction_install_chancellor_ultimatum_timer
+					hidden = yes
+					duration = 900
+				}
+			}
+		}
+		FROM = { 
+			hidden_tooltip = { 
+				disband_event_forces = faction_loyalists
+				clr_character_flag = install_chancellor_target
+			}
+		}
+	}
+
+	on_reverse_demand = {
+		ROOT = {
+			prestige = -200
+			prisoner = FROM
+		}
+		
+		any_defender = {
+			limit = { character = FROM }
+			participation_scaled_prestige = 100
+		}
+		any_defender = {
+			limit = { NOT = { character = FROM } }
+			hidden_tooltip = { participation_scaled_prestige = 100 }
+		}
+		
+		hidden_tooltip = {
+			any_attacker = {
+				limit = { liege = { character = FROM } }
+				prisoner = FROM
+				disband_event_forces = faction_revolters
+				add_character_modifier = {
+					name = faction_install_chancellor_ultimatum_timer
+					hidden = yes
+					duration = 900
+				}
+			}
+		}
+		FROM = {
+			hidden_tooltip = { 
+				disband_event_forces = faction_loyalists
+				clr_character_flag = install_chancellor_target
+			}
+		}
+	}
+
+	attacker_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	attacker_ai_defeat_worth = {
+		factor = 100
+	}
+
+	defender_ai_victory_worth = {
+		factor = -1 # always accept
+	}
+	
+	defender_ai_defeat_worth = {
+		factor = 100
+	}
+}

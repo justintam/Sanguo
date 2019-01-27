@@ -1,0 +1,135 @@
+spawn_mongol_army_effect = {
+	spawn_unit = {
+		province = ROOT
+		home = ROOT
+		owner = THIS
+		#leader = THIS
+		troops = {
+			knights = { 6000 6000 }
+			light_infantry = { 6000 6000 }
+			heavy_infantry = { 6000 6000 }
+			light_cavalry = { 6000 6000 }
+			horse_archers = { 9000 9000 }
+			archers = { 6000 6000 }
+			pikemen = { 6000 6000 }
+		}
+		attrition = 0
+		disband_on_peace = yes
+	}
+	create_random_soldier = {
+		random_traits = yes
+		dynasty = none
+		religion = THIS
+		culture = THIS
+		female = no
+		age = 50
+		trait = brilliant_strategist
+		trait = duel_skilled_warrior
+		trait = back_seat_leader
+		trait = cavalry_leader
+		trait = organizer
+	}
+	create_random_soldier = {
+		random_traits = yes
+		dynasty = none
+		religion = THIS
+		culture = THIS
+		female = no
+		age = 30
+		trait = skilled_tactician
+		trait = duel_skilled_warrior
+		trait = aggressive_leader
+		trait = cavalry_leader
+	}
+	create_random_soldier = {
+		random_traits = yes
+		dynasty = none
+		religion = THIS
+		culture = THIS
+		female = no
+		age = 23
+		trait = tough_soldier
+		trait = duel_skilled_warrior
+		trait = aggressive_leader
+		trait = cavalry_leader
+	}
+	create_random_soldier = {
+		random_traits = yes
+		dynasty = none
+		religion = THIS
+		culture = THIS
+		female = no
+		age = 23
+		trait = tough_soldier
+		trait = duel_skilled_warrior
+		trait = aggressive_leader
+		trait = cavalry_leader
+	}
+}
+
+spawn_tibetan_army_effect = {
+	spawn_unit = {
+		province = ROOT
+		home = ROOT
+		owner = THIS
+		#leader = THIS
+		troops = {
+			light_infantry = { 13000 13000 }
+			heavy_infantry = { 8000 8000 }
+			light_cavalry = { 8000 8000 }
+			horse_archers = { 8000 8000 }
+			archers = { 8000 8000 }
+		}
+		attrition = 0
+		disband_on_peace = yes
+	}
+	create_random_soldier = {
+		random_traits = yes
+		dynasty = none
+		religion = THIS
+		culture = THIS
+		female = no
+		age = 50
+		trait = brilliant_strategist
+		trait = duel_skilled_warrior
+		trait = back_seat_leader
+		trait = cavalry_leader
+		trait = trickster
+	}
+	create_random_soldier = {
+		random_traits = yes
+		dynasty = none
+		religion = THIS
+		culture = THIS
+		female = no
+		age = 30
+		trait = skilled_tactician
+		trait = duel_skilled_warrior
+		trait = trickster
+		trait = cavalry_leader
+	}
+	create_random_soldier = {
+		random_traits = yes
+		dynasty = none
+		religion = THIS
+		culture = THIS
+		female = no
+		age = 23
+		trait = tough_soldier
+		trait = duel_skilled_warrior
+		trait = trickster
+		trait = cavalry_leader
+	}
+	create_random_soldier = {
+		random_traits = yes
+		dynasty = none
+		religion = THIS
+		culture = THIS
+		female = no
+		age = 23
+		trait = tough_soldier
+		trait = duel_skilled_warrior
+		trait = trickster
+		trait = cavalry_leader
+	}
+}

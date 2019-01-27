@@ -1,0 +1,816 @@
+decisions={
+
+	ask_emp_pay={
+		is_high_prio=yes
+
+		potential={
+			k_confucian={
+				has_holder=yes
+				holder_scope={
+					wealth=300
+					NOT={
+						ROOT={has_opinion_modifier={ who=PREV modifier=opinion_ask_trib }}
+					}
+				}
+			}
+			OR={
+				has_landed_title=c_empress
+				has_landed_title=c_eunuch
+			}
+			has_regent=no
+			prisoner=no
+		}
+		allow={
+			war=no
+		}
+		effect={
+			hidden_tooltip={
+				k_confucian={
+					holder_scope={
+						reverse_opinion={
+							who=ROOT
+							modifier=opinion_ask_trib
+						}
+						character_event={ id=EMP.25 }
+					}
+				}
+			}
+		}
+		ai_will_do={
+			factor=1
+			modifier={
+				factor=5
+				k_confucian={
+					holder_scope={
+						wealth=1000
+					}
+				}
+			}
+			modifier={
+				factor=1.5
+				trait=greedy
+			}
+			modifier={
+				factor=1.5
+				trait=selfish
+			}
+			modifier={
+				factor=1.5
+				trait=ambitious
+			}
+		}
+	}
+
+	check_influence={
+		is_high_prio=yes
+		potential={
+			ai=no
+			OR={
+				AND={
+					real_tier=EMPEROR
+					primary_title={ has_title_flag=premier_title }
+				}
+				has_landed_title=k_confucian
+				has_landed_title=c_empress
+				has_landed_title=c_eunuch
+			}
+			has_regent=no
+			prisoner=no
+			k_confucian={
+				has_holder=yes
+			}
+		}
+		allow={
+			war=no
+		}
+		effect={
+			hidden_tooltip={
+				character_event={ id=INF.2 }
+			}
+		}
+		ai_will_do={
+			factor=1
+		}
+	}
+
+	forge_imperial_claim={
+		is_high_prio=yes
+		potential={
+			any_independent_ruler={
+				tier=EMPEROR
+				primary_title={
+					has_title_flag=premier_title
+				}
+				any_realm_lord={
+					tier=COUNT
+					is_landed=yes
+					war=no
+				}
+			}
+			k_confucian={ has_holder=yes }
+			OR={
+				AND={
+					has_landed_title=k_confucian
+					has_global_flag=influence_emp_3
+				}
+				AND={
+					liege={ has_landed_title=k_confucian }
+					has_landed_title=c_empress
+					has_global_flag=influence_ems_3
+				}
+				AND={
+					liege={ has_landed_title=k_confucian }
+					has_landed_title=c_eunuch
+					has_global_flag=influence_eun_3
+				}
+			}
+			has_regent=no
+			prisoner=no
+			war=no
+			has_earmarked_regiments=imperial_army
+		}
+		allow={
+			wealth=500
+		}
+		effect={
+			wealth=-500
+			piety=-100
+			hidden_tooltip={
+				k_confucian={
+					holder_scope={
+						capital_holding={
+							dejure_liege_title={
+								dejure_liege_title={
+									save_event_target_as=target_duchy
+								}
+							}
+						}
+					}
+				}
+				random_playable_ruler={
+					limit={
+						tier=COUNT
+						is_landed=yes
+						NOT={num_of_titles=2}
+						top_liege={
+							tier=EMPEROR
+							primary_title={
+								has_title_flag=premier_title
+							}
+						}
+						war=no
+						de_jure_liege=event_target:target_duchy
+					}
+					set_defacto_liege=THIS
+					primary_title={
+						add_claim=ROOT
+						reverse_war={
+							target=ROOT
+							casus_belli=claim
+						}
+					}
+					character_event={ id=INF.5 }
+				}
+				random_independent_ruler={
+					limit={
+						tier=EMPEROR
+						primary_title={
+							has_title_flag=premier_title
+						}
+					}
+					opinion={ who=ROOT modifier=opinion_revoked_a_title }
+				}
+			}
+		}
+		ai_will_do={
+			factor=1
+			modifier={
+				factor=0.25
+			}
+			modifier={
+				factor=0.5
+				is_landed=yes
+			}
+			modifier={
+				factor=1.5
+				trait=ambitious
+			}
+		}
+	}
+
+	hire_private_army={
+		is_high_prio=yes
+		potential={
+			OR={
+				AND={
+					has_landed_title=k_confucian
+					has_global_flag=influence_emp_3
+				}
+				AND={
+					has_landed_title=c_empress
+					has_global_flag=influence_ems_3
+				}
+				AND={
+					has_landed_title=c_eunuch
+					has_global_flag=influence_eun_3
+				}
+			}
+			has_regent=no
+			prisoner=no
+			NOT={ has_earmarked_regiments=imperial_army }
+		}
+		allow={
+			wealth=1000
+		}
+		effect={
+			hidden_tooltip={
+				wealth=-1000
+				liege={
+					capital_scope={
+						save_event_target_as=target_province
+					}
+				}
+				spawn_unit={
+					province=event_target:target_province
+					home=event_target:target_province
+					owner=ROOT
+					leader=ROOT
+					reinforces=yes
+					troops={
+						knights={ 200 200 }
+						light_infantry={ 600 600 }
+						heavy_infantry={ 300 300 }
+						light_cavalry={ 300 300 }
+						archers={ 300 300 }
+						pikemen={ 300 300 }
+					}
+					attrition=0.25
+					earmark=imperial_army
+				}
+			}
+		}
+		ai_will_do={
+			factor=1
+			modifier={
+				factor=0.5
+			}
+			modifier={
+				factor=1.5
+				trait=ambitious
+			}
+		}
+	}
+
+	inc_emp_inf={
+		potential={
+			NOT={ has_global_flag=influence_emp_3 }
+			OR={
+				AND={
+					real_tier=EMPEROR
+					primary_title={ has_title_flag=premier_title }
+				}
+				has_landed_title=k_confucian
+				has_landed_title=c_empress
+				has_landed_title=c_eunuch
+			}
+			has_regent=no
+			prisoner=no
+			k_confucian={
+				has_holder=yes
+			}
+		}
+		allow={
+			war=no
+			wealth=500
+		}
+		effect={
+			wealth=-500
+			hidden_tooltip={
+				k_confucian={
+					holder_scope={
+						save_event_target_as=target_influence
+					}
+				}
+				random_list={
+					50={
+						if={
+							limit={ has_global_flag=influence_emp_1 }
+							clr_global_flag=influence_emp_1
+							set_global_flag=influence_emp_2
+						}
+						if={
+							limit={ has_global_flag=influence_emp_2 }
+							clr_global_flag=influence_emp_2
+							set_global_flag=influence_emp_3
+						}
+						character_event={ id=INF.3 }
+					}
+					50={
+						character_event={ id=INF.4 }
+					}
+				}
+			}
+		}
+		ai_will_do={
+			factor=1
+			modifier={
+				factor=0
+				NOT={ has_landed_title=k_confucian }
+			}
+			modifier={
+				factor=0
+				NOT={ opinion={ who=event_target:target_influence value=80 } }
+			}
+			modifier={
+				factor=0.25
+				primary_title={ has_title_flag=premier_title }
+			}
+			modifier={
+				factor=1.25
+				k_confucian={
+					holder_scope={
+						dynasty=ROOT
+					}
+				}
+			}
+			modifier={
+				factor=1.5
+				trait=ambitious
+			}
+		}
+	}
+
+	dec_emp_inf={
+		potential={
+			NOT={ has_global_flag=influence_emp_1 }
+			OR={
+				AND={
+					real_tier=EMPEROR
+					primary_title={ has_title_flag=premier_title }
+				}
+				has_landed_title=c_empress
+				has_landed_title=c_eunuch
+			}
+			has_regent=no
+			prisoner=no
+			k_confucian={
+				has_holder=yes
+			}
+		}
+		allow={
+			war=no
+			wealth=500
+		}
+		effect={
+			wealth=-500
+			hidden_tooltip={
+				k_confucian={
+					holder_scope={
+						save_event_target_as=target_influence
+					}
+				}
+				random_list={
+					50={
+						if={
+							limit={ has_global_flag=influence_emp_3 }
+							clr_global_flag=influence_emp_3
+							set_global_flag=influence_emp_2
+						}
+						if={
+							limit={ has_global_flag=influence_emp_2 }
+							clr_global_flag=influence_emp_2
+							set_global_flag=influence_emp_1
+						}
+						character_event={ id=INF.3 }
+					}
+					50={
+						character_event={ id=INF.4 }
+					}
+				}
+			}
+		}
+		ai_will_do={
+			factor=1
+			modifier={
+				factor=0
+				opinion={ who=event_target:target_influence value=80 }
+			}
+			modifier={
+				factor=0.25
+				k_confucian={
+					holder_scope={
+						dynasty=ROOT
+					}
+				}
+			}
+			modifier={
+				factor=1.5
+				has_global_flag=influence_emp_3
+			}
+			modifier={
+				factor=1.5
+				trait=ambitious
+			}
+			modifier={
+				factor=1.5
+				trait=cruel
+			}
+			modifier={
+				factor=1.5
+				trait=dishonorable
+			}
+		}
+	}
+
+	inc_ems_inf={
+		potential={
+			NOT={ has_global_flag=influence_ems_3 }
+			OR={
+				AND={
+					real_tier=EMPEROR
+					primary_title={ has_title_flag=premier_title }
+				}
+				has_landed_title=k_confucian
+				has_landed_title=c_empress
+				has_landed_title=c_eunuch
+			}
+			has_regent=no
+			prisoner=no
+			c_empress={
+				has_holder=yes
+			}
+		}
+		allow={
+			war=no
+			wealth=500
+		}
+		effect={
+			wealth=-500
+			hidden_tooltip={
+				c_empress={
+					holder_scope={
+						save_event_target_as=target_influence
+					}
+				}
+				random_list={
+					50={
+						if={
+							limit={ has_global_flag=influence_ems_1 }
+							clr_global_flag=influence_ems_1
+							set_global_flag=influence_ems_2
+						}
+						if={
+							limit={ has_global_flag=influence_ems_2 }
+							clr_global_flag=influence_ems_2
+							set_global_flag=influence_ems_3
+						}
+						character_event={ id=INF.3 }
+					}
+					50={
+						character_event={ id=INF.4 }
+					}
+				}
+			}
+		}
+		ai_will_do={
+			factor=1
+			modifier={
+				factor=0
+				NOT={ has_landed_title=c_empress }
+			}
+			modifier={
+				factor=0
+				NOT={ opinion={ who=event_target:target_influence value=80 } }
+			}
+			modifier={
+				factor=0.25
+				primary_title={ has_title_flag=premier_title }
+			}
+			modifier={
+				factor=1.25
+				c_empress={
+					holder_scope={
+						dynasty=ROOT
+					}
+				}
+			}
+			modifier={
+				factor=1.5
+				trait=ambitious
+			}
+		}
+	}
+
+	dec_ems_inf={
+		potential={
+			NOT={ has_global_flag=influence_ems_1 }
+			OR={
+				AND={
+					real_tier=EMPEROR
+					primary_title={ has_title_flag=premier_title }
+				}
+				has_landed_title=k_confucian
+				has_landed_title=c_eunuch
+			}
+			has_regent=no
+			prisoner=no
+			c_empress={
+				has_holder=yes
+			}
+		}
+		allow={
+			war=no
+			wealth=500
+		}
+		effect={
+			wealth=-500
+			hidden_tooltip={
+				c_empress={
+					holder_scope={
+						save_event_target_as=target_influence
+					}
+				}
+				random_list={
+					50={
+						if={
+							limit={ has_global_flag=influence_ems_3 }
+							clr_global_flag=influence_ems_3
+							set_global_flag=influence_ems_2
+						}
+						if={
+							limit={ has_global_flag=influence_ems_2 }
+							clr_global_flag=influence_ems_2
+							set_global_flag=influence_ems_1
+						}
+						character_event={ id=INF.3 }
+					}
+					50={
+						character_event={ id=INF.4 }
+					}
+				}
+			}
+		}
+		ai_will_do={
+			factor=1
+			modifier={
+				factor=0
+				opinion={ who=event_target:target_influence value=80 }
+			}
+			modifier={
+				factor=0.25
+				primary_title={ has_title_flag=premier_title }
+			}
+			modifier={
+				factor=0.25
+				c_empress={
+					holder_scope={
+						dynasty=ROOT
+					}
+				}
+			}
+			modifier={
+				factor=1.5
+				has_global_flag=influence_ems_3
+			}
+			modifier={
+				factor=1.5
+				trait=ambitious
+			}
+			modifier={
+				factor=1.5
+				trait=cruel
+			}
+			modifier={
+				factor=1.5
+				trait=dishonorable
+			}
+		}
+	}
+
+	inc_eun_inf={
+		potential={
+			NOT={ has_global_flag=influence_eun_3 }
+			OR={
+				AND={
+					real_tier=EMPEROR
+					primary_title={ has_title_flag=premier_title }
+				}
+				has_landed_title=k_confucian
+				has_landed_title=c_empress
+				has_landed_title=c_eunuch
+			}
+			has_regent=no
+			prisoner=no
+			c_eunuch={
+				has_holder=yes
+			}
+		}
+		allow={
+			war=no
+			wealth=500
+		}
+		effect={
+			wealth=-500
+			hidden_tooltip={
+				c_eunuch={
+					holder_scope={
+						save_event_target_as=target_influence
+					}
+				}
+				random_list={
+					50={
+						if={
+							limit={ has_global_flag=influence_eun_1 }
+							clr_global_flag=influence_eun_1
+							set_global_flag=influence_eun_2
+						}
+						if={
+							limit={ has_global_flag=influence_eun_2 }
+							clr_global_flag=influence_eun_2
+							set_global_flag=influence_eun_3
+						}
+						character_event={ id=INF.3 }
+					}
+					50={
+						character_event={ id=INF.4 }
+					}
+				}
+			}
+		}
+		ai_will_do={
+			factor=1
+			modifier={
+				factor=0
+				NOT={ has_landed_title=c_eunuch }
+			}
+			modifier={
+				factor=0
+				NOT={ opinion={ who=event_target:target_influence value=80 } }
+			}
+			modifier={
+				factor=0.25
+				primary_title={ has_title_flag=premier_title }
+			}
+			modifier={
+				factor=1.25
+				c_eunuch={
+					holder_scope={
+						dynasty=ROOT
+					}
+				}
+			}
+			modifier={
+				factor=1.5
+				trait=ambitious
+			}
+		}
+	}
+
+	dec_eun_inf={
+		potential={
+			NOT={ has_global_flag=influence_eun_1 }
+			OR={
+				AND={
+					real_tier=EMPEROR
+					primary_title={ has_title_flag=premier_title }
+				}
+				has_landed_title=k_confucian
+				has_landed_title=c_empress
+			}
+			has_regent=no
+			prisoner=no
+			c_eunuch={
+				has_holder=yes
+			}
+		}
+		allow={
+			war=no
+			wealth=500
+		}
+		effect={
+			wealth=-500
+			hidden_tooltip={
+				c_eunuch={
+					holder_scope={
+						save_event_target_as=target_influence
+					}
+				}
+				random_list={
+					50={
+						if={
+							limit={ has_global_flag=influence_eun_3 }
+							clr_global_flag=influence_eun_3
+							set_global_flag=influence_eun_2
+						}
+						if={
+							limit={ has_global_flag=influence_eun_2 }
+							clr_global_flag=influence_eun_2
+							set_global_flag=influence_eun_1
+						}
+						character_event={ id=INF.3 }
+					}
+					50={
+						character_event={ id=INF.4 }
+					}
+				}
+			}
+		}
+		ai_will_do={
+			factor=1
+			modifier={
+				factor=0
+				opinion={ who=event_target:target_influence value=80 }
+			}
+			modifier={
+				factor=0.25
+				primary_title={ has_title_flag=premier_title }
+			}
+			modifier={
+				factor=0.25
+				c_eunuch={
+					holder_scope={
+						dynasty=ROOT
+					}
+				}
+			}
+			modifier={
+				factor=1.5
+				has_global_flag=influence_eun_3
+			}
+			modifier={
+				factor=1.5
+				trait=ambitious
+			}
+			modifier={
+				factor=1.5
+				trait=cruel
+			}
+			modifier={
+				factor=1.5
+				trait=dishonorable
+			}
+		}
+	}
+
+	rebuild_eunuch={
+		potential={
+			has_landed_title=k_confucian
+			has_global_flag=influence_emp_1
+			has_regent=no
+			prisoner=no
+			any_courtier={
+				trait=eunuch
+			}
+			c_eunuch={ active=no }
+		}
+		allow={
+			war=no
+			wealth=1500
+		}
+		effect={
+			wealth=-1500
+			hidden_tooltip={
+				activate_title={ title=c_eunuch status=yes }
+				random_courtier={
+					limit={ trait=eunuch }
+					c_eunuch={ grant_title=PREV }
+				}
+				character_event={ id=MAN.41 }
+			}
+		}
+		ai_will_do={
+			factor=1
+			modifier={
+				factor=0.1
+			}
+			modifier={
+				factor=2.5
+				trait=hedonist
+			}
+			modifier={
+				factor=1.5
+				trait=content
+			}
+			modifier={
+				factor=1.5
+				trait=gluttonous
+			}
+			modifier={
+				factor=1.5
+				trait=lustful
+			}
+			modifier={
+				factor=1.5
+				trait=paranoid
+			}
+			modifier={
+				factor=1.5
+				trait=slothful
+			}
+			modifier={
+				factor=1.5
+				trait=shy
+			}
+		}
+	}
+}

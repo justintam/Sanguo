@@ -1,0 +1,8 @@
+neighbor_has_buddhists_trigger={
+	any_neighbor_independent_ruler={
+		any_courtier={
+			culture=yuezhi
+			religion=buddhist
+		}
+	}
+}

@@ -1,0 +1,63 @@
+1000 = {
+	name="Kushan"
+	culture=yuezhi
+}
+1001 = {
+	name="Ki"
+	culture=yuezhi
+}
+1002 = {
+	name="Zhu"
+	culture=yuezhi
+}
+1003 = {
+	name="Zhi"
+	culture=yuezhi
+}
+1004 = {
+	name="Xiumi"
+	culture=yuezhi
+}
+1005 = {
+	name="Shuangmi"
+	culture=yuezhi
+}
+1006 = {
+	name="Xidun"
+	culture=yuezhi
+}
+1007 = {
+	name="Dumi"
+	culture=yuezhi
+}
+1008 = {
+	name="Song"
+	culture=yuezhi
+}
+1009 = {
+	name="Zhi"
+	culture=yuezhi
+}
+
+# Jie
+
+1010 = {
+	name="Shi"
+	culture=jie
+}
+1011 = {
+	name="Zhi"
+	culture=jie
+}
+1012 = {
+	name="Kang"
+	culture=jie
+}
+1013 = {
+	name="Bai"
+	culture=jie
+}
+1014 = {
+	name="Sun"
+	culture=jie
+}

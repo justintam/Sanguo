@@ -1,0 +1,13 @@
+1.1.1={
+	active=no
+}
+184.1.1={
+	active=yes
+	liege=d_gongsun
+}
+191.7.1={
+	liege=e_gongsun
+}
+199.1.1={
+	liege=0
+}

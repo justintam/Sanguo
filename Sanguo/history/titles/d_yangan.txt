@@ -1,0 +1,22 @@
+1.1.1={
+	active=no
+	law=agnatic_succession
+	law=succ_gavelkind
+}
+198.1.1={
+	active=yes
+	liege=k_yan
+	vice_royalty=yes
+	holder=10494 #Li Tong
+}
+199.1.1={
+	liege=k_yu
+}
+209.1.1={
+	holder=3586 #Random
+}
+
+
+
+
+#TBD

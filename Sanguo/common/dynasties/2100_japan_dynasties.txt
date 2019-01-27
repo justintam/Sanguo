@@ -1,0 +1,150 @@
+#Dynasties for Randomly Generated Characters
+
+###  Yayoi   ###
+### 2100-2149 ### 
+###			  ###
+
+2100 = {
+	name="Yamato"
+	culture=wa
+}
+2101 = {
+	name="Abe"
+	culture=wa
+}
+2102 = {
+	name="Haji"
+	culture=wa
+}
+2103 = {
+	name="Hata"
+	culture=wa
+}
+2104 = {
+	name="Heguri"
+	culture=wa
+}
+2105 = {
+	name="Hozumi"
+	culture=wa
+}
+2106 = {
+	name="Kamo"
+	culture=wa
+}
+2107 = {
+	name="Kasuga"
+	culture=wa
+}
+2108 = {
+	name="Katsuragi"
+	culture=wa
+}
+2109 = {
+	name="Kawachinofumi"
+	culture=wa
+}
+2110 = {
+	name="Ki"
+	culture=wa
+}
+2111 = {
+	name="Kiyohara"
+	culture=wa
+}
+2112 = {
+	name="Koremune"
+	culture=wa
+}
+2113 = {
+	name="Kose"
+	culture=wa
+}
+2114 = {
+	name="Hattori"
+	culture=wa
+}
+2115 = {
+	name="Fujiwara"
+	culture=wa
+}
+2116 = {
+	name="Inukai"
+	culture=wa
+}
+2117 = {
+	name="Ishikawa"
+	culture=wa
+}
+2118 = {
+	name="Minamoto"
+	culture=wa
+}
+2119 = {
+	name="Mononobe"
+	culture=wa
+}
+2120 = {
+	name="Nakahara"
+	culture=wa
+}
+2121 = {
+	name="Nakatomi"
+	culture=wa
+}
+2122 = {
+	name="Ono"
+	culture=wa
+}
+2123 = {
+	name="Ooe"
+	culture=wa
+}
+2124 = {
+	name="Ootomo"
+	culture=wa
+}
+2125 = {
+	name="Owari"
+	culture=wa
+}
+2126 = {
+	name="Sakanoue"
+	culture=wa
+}
+2127 = {
+	name="Shitori"
+	culture=wa
+}
+2128 = {
+	name="Soga"
+	culture=wa
+}
+2129 = {
+	name="Sugawara"
+	culture=wa
+}
+2130 = {
+	name="Tachibana"
+	culture=wa
+}
+2131 = {
+	name="Taira"
+	culture=wa
+}
+2132 = {
+	name="Tsukishine"
+	culture=wa
+}
+2133 = {
+	name="Yamatonoaya"
+	culture=wa
+}
+2134 = {
+	name="Yazume"
+	culture=wa
+}
+2135 = {
+	name="Yuge"
+	culture=wa
+}

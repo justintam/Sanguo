@@ -1,0 +1,20 @@
+# c_linjiang
+
+# County Title
+title = c_linjiang
+
+# Settlements
+max_settlements = 5
+
+b_linjiang = castle
+b_suiding = city
+b_dangqu = city
+#b_binghe = castle
+#b_longqiao = city
+
+# Misc
+culture = han
+religion = confucian
+terrain = forest
+
+#History

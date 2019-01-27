@@ -1,0 +1,18 @@
+name = "4th Northern Unification"
+
+casus_belli={
+	actor=709
+	recipient=400
+	casus_belli=seize_big
+	landed_title=k_qing
+	date=204.10.1
+}
+
+204.10.1={
+	add_defender = 709 #Yuan Tan
+	add_attacker = 400 #Cao Cao
+}
+205.2.1={
+	rem_defender = 709 #Yuan Tan
+	rem_attacker = 400 #Cao Cao
+}

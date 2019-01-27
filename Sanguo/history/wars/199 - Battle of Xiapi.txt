@@ -1,0 +1,20 @@
+name = "Battle of Xiapi"
+
+casus_belli={
+	actor=400
+	recipient=309
+	casus_belli=invasion
+	landed_title=k_xu
+	date=199.1.1
+}
+
+199.1.1 = {
+	add_defender = 309 #Lu Bu
+	add_attacker = 400 #Cao Cao
+	add_attacker = 600 #Liu Bei
+}
+199.2.7={
+	rem_defender = 309 #Lu Bu
+	rem_attacker = 400 #Cao Cao
+	rem_attacker = 600 #Liu Bei
+}

@@ -1,0 +1,20 @@
+name = "Battle of Liyang"
+
+casus_belli={
+	actor=400
+	recipient=709
+	casus_belli=invasion
+	landed_title=k_qing
+	date=202.10.1
+}
+
+202.10.1={
+	add_defender = 709 #Yuan Tan
+	add_defender = 707 #Yuan Shang
+	add_attacker = 400 #Cao Cao
+}
+203.6.1={
+	rem_defender = 709 #Yuan Tan
+	rem_defender = 707 #Yuan Shang
+	rem_attacker = 400 #Cao Cao
+}

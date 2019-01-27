@@ -1,0 +1,20 @@
+1.1.1={
+	active=no
+}
+195.6.1={
+	active=yes
+	liege=k_yuan
+	holder=2601 #Han Xian
+}
+197.1.1={
+	liege=e_zhong
+}
+197.6.1={
+	liege=e_xu
+}
+197.11.1={
+	liege=0
+}
+#197.12.1={
+#	Han Xian dead
+#}

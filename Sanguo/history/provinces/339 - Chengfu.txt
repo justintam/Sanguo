@@ -1,0 +1,20 @@
+# c_chengfu
+
+# County Title
+title = c_chengfu
+
+# Settlements
+max_settlements = 5
+
+b_chengfu = castle
+b_zhanghuatai = city
+#b_bancheng = temple
+#b_xiongli = castle
+#b_jinpu = city
+
+# Misc
+culture = han
+religion = confucian
+terrain = plains
+
+#History

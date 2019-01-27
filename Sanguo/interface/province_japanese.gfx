@@ -1,0 +1,400 @@
+# Definitions for chinese culture holding graphics
+### Sanguo
+	
+spriteTypes = {
+	spriteType = {
+		name = "GFX_settlement_temple_japanesegfx_chinesesgfx"
+		texturefile = "gfx\\interface\\placeholder_temple_mongol.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_japanesegfx_chinesesgfx_looted"
+		texturefile = "gfx\\interface\\placeholder_temple_mongol_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_japanesegfx_khitangfx"
+		texturefile = "gfx\\interface\\placeholder_temple_mongol.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_japanesegfx_khitangfx_looted"
+		texturefile = "gfx\\interface\\placeholder_temple_mongol_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_japanesegfx_koreangfx"
+		texturefile = "gfx\\interface\\placeholder_temple_mongol.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_japanesegfx_koreangfx_looted"
+		texturefile = "gfx\\interface\\placeholder_temple_mongol_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_japanesegfx_kushangfx"
+		texturefile = "gfx\\interface\\placeholder_temple_mongol.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_japanesegfx_kushangfx_looted"
+		texturefile = "gfx\\interface\\placeholder_temple_mongol_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_japanesegfx_nanmangfx"
+		texturefile = "gfx\\interface\\placeholder_temple_mongol.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_japanesegfx_nanmangfx_looted"
+		texturefile = "gfx\\interface\\placeholder_temple_mongol_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_japanesegfx_tibetangfx"
+		texturefile = "gfx\\interface\\placeholder_temple_mongol.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_japanesegfx_tibetangfx_looted"
+		texturefile = "gfx\\interface\\placeholder_temple_mongol_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+
+### Frame
+	spriteType = {
+		name = "GFX_province_settlement_frame_japanesegfx"
+		texturefile = "gfx\\interface\\province_settlement_frame_chinesegfx.dds"
+	}
+
+	spriteType = {
+		name = "GFX_province_capital_settlement_frame_japanesegfx"
+		texturefile = "gfx\\interface\\province_capital_settlement_frame_china.dds"
+	}
+	
+### Castle
+	spriteType = {
+		name = "GFX_settlement_castle_japanesegfx"
+		texturefile = "gfx\\interface\\placeholder_castle_china.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_settlement_castle_japanesegfx_looted"
+		texturefile = "gfx\\interface\\placeholder_castle_china_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+### Tribal
+	spriteType = {
+		name = "GFX_settlement_tribal_japanesegfx"
+		texturefile = "gfx\\interface\\placeholder_tribal_mongol.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_tribal_empty_japanesegfx"
+		texturefile = "gfx\\interface\\placeholder_empty_tribal_mongol.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_tribal_japanesegfx_looted"
+		texturefile = "gfx\\interface\\placeholder_tribal_mongol_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+### Nomad
+
+	spriteType = {
+		name = "GFX_settlement_nomad_empty_japanesegfx"
+		texturefile = "gfx\\interface\\placeholder_empty_nomad_mongol.dds"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+### City
+	spriteType = {
+		name = "GFX_settlement_city_japanesegfx"
+		texturefile = "gfx\\interface\\placeholder_city_china.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_settlement_city_japanesegfx_looted"
+		texturefile = "gfx\\interface\\placeholder_city_china_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+
+### Temple
+
+	# Christian temples
+	spriteType = {
+		name = "GFX_settlement_temple_japanesegfx_westerngfx"
+		texturefile = "gfx\\interface\\placeholder_temple_china.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_settlement_temple_japanesegfx_westerngfx_looted"
+		texturefile = "gfx\\interface\\placeholder_temple_china_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	# Muslim temples
+	spriteType = {
+		name = "GFX_settlement_temple_japanesegfx_muslimgfx"
+		texturefile = "gfx\\interface\\placeholder_temple_china.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_settlement_temple_japanesegfx_muslimgfx_looted"
+		texturefile = "gfx\\interface\\placeholder_temple_china_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+
+	# Norse temples
+	spriteType = {
+		name = "GFX_settlement_temple_japanesegfx_norsegfx"
+		texturefile = "gfx\\interface\\placeholder_temple_china.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_settlement_temple_japanesegfx_norsegfx_looted"
+		texturefile = "gfx\\interface\\placeholder_temple_china_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	# Tengri temples
+	spriteType = {
+		name = "GFX_settlement_temple_japanesegfx_mongolgfx"
+		texturefile = "gfx\\interface\\placeholder_temple_china.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_settlement_temple_japanesegfx_mongolgfx_looted"
+		texturefile = "gfx\\interface\\placeholder_temple_china_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	# Tibetan temples
+	
+	spriteType = {
+		name = "GFX_settlement_temple_japanesegfx_bodpagfx"
+		texturefile = "gfx\\interface\\placeholder_temple_china.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_japanesegfx_bodpagfx_looted"
+		texturefile = "gfx\\interface\\placeholder_temple_china_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+
+	# Aztec temples
+	spriteType = {
+		name = "GFX_settlement_temple_japanesegfx_mesoamericangfx"
+		texturefile = "gfx\\interface\\placeholder_temple_china.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_settlement_temple_japanesegfx_mesoamericangfx_looted"
+		texturefile = "gfx\\interface\\placeholder_temple_china_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+
+	# Zoroastrian temples
+	spriteType = {
+		name = "GFX_settlement_temple_japanesegfx_persiangfx"
+		texturefile = "gfx\\interface\\placeholder_temple_china.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_settlement_temple_japanesegfx_persiangfx_looted"
+		texturefile = "gfx\\interface\\placeholder_temple_china_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+
+	# African temples
+	spriteType = {
+		name = "GFX_settlement_temple_japanesegfx_westafricangfx"
+		texturefile = "gfx\\interface\\placeholder_temple_china.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_settlement_temple_japanesegfx_westafricangfx_looted"
+		texturefile = "gfx\\interface\\placeholder_temple_china_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+
+	# Jewish temples
+	spriteType = {
+		name = "GFX_settlement_temple_japanesegfx_jewishgfx"
+		texturefile = "gfx\\interface\\placeholder_temple_china.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_settlement_temple_japanesegfx_jewishgfx_looted"
+		texturefile = "gfx\\interface\\placeholder_temple_china_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+
+	# Indian temples
+	spriteType = {
+		name = "GFX_settlement_temple_japanesegfx_indiangfx"
+		texturefile = "gfx\\interface\\placeholder_temple_china.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+
+	spriteType = {
+		name = "GFX_settlement_temple_japanesegfx_southindiangfx"
+		texturefile = "gfx\\interface\\placeholder_temple_china.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_japanesegfx_indiangfx_looted"
+		texturefile = "gfx\\interface\\placeholder_temple_china_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_temple_japanesegfx_southindiangfx_looted"
+		texturefile = "gfx\\interface\\placeholder_temple_china_looted.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	# Forts
+	
+	spriteType = {
+		name = "GFX_settlement_fort_japanesegfx"
+		texturefile = "gfx\\interface\\placeholder_fort_mongol.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_fort_japanesegfx"
+		texturefile = "gfx\\interface\\fort_mongol.dds"
+		noOfFrames = 3
+		clicksound = generic_click_02
+	}
+	
+	# Hospitals
+	
+	spriteType = {
+		name = "GFX_settlement_hospital_japanesegfx"
+		texturefile = "gfx\\interface\\placeholder_hospital_mongol.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	spriteType = {
+		name = "GFX_hospital_japanesegfx"
+		texturefile = "gfx\\interface\\hospital_mongol.dds"
+		noOfFrames = 4
+		clicksound = generic_click_02
+	}
+	
+	# Trade Posts
+	
+	spriteType = {
+		name = "GFX_trade_post_japanesegfx"
+		texturefile = "gfx\\interface\\trade_post.dds"
+		noOfFrames = 3
+		clicksound = generic_click_02
+	}
+	
+	# Land Trade Posts
+	
+	spriteType = {
+		name = "GFX_trade_post_japanesegfx_land"
+		texturefile = "gfx\\interface\\trade_post_land_mongol.dds"
+		noOfFrames = 3
+		clicksound = generic_click_02
+	}
+	
+	spriteType = {
+		name = "GFX_settlement_trade_post_japanesegfx_land"
+		texturefile = "gfx\\interface\\trade_post_land_mongol_large_frame.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+	# New buildings
+	spriteType = {
+		name = "GFX_settlement_new_japanesegfx"
+		texturefile = "gfx\\interface\\province_new_settlement_china.tga"
+		noOfFrames = 1
+		norefcount = yes	
+	}
+
+	spriteType = {
+		name = "GFX_settlement_building_japanesegfx"
+		texturefile = "gfx\\interface\\placeholder_building_settlement_china.tga"
+		noOfFrames = 1
+		norefcount = yes
+	}
+	
+}

@@ -1,0 +1,23 @@
+# c_shangyong
+
+# County Title
+title = c_shangyong
+
+# Settlements
+max_settlements = 5
+
+b_shangyong = castle
+b_fangling = city
+b_xunyang = city
+#b_zhangli = castle
+#b_yixiang = city
+
+# Misc
+culture = bandunman
+religion = tianshi
+terrain = mountain
+
+#History
+214.1.1={
+	remove_settlement = b_xunyang
+}

@@ -1,0 +1,2936 @@
+# The choice is made based on a weighted random, but the first factor that evaluates to >= 100 will be automatically chosen
+# Two passes are done when choosing properties; first from lowest to highest, then from highest to lowest. Be aware of this if you reference other properties, as the old properties will still be active in the first pass
+# hide_layers is interpreted from bottom to top. Hidden layers won't hide other layers, but if a lower layer hides a higher layer, the higher layer won't be rechecked, so it might still be hiding other layers despite being hidden itself
+
+# p0 background
+0 = {
+	0 = { # castle 1
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { religion_group = chinese_religion }
+		}
+		modifier = {
+			factor = 0
+			is_nomadic = yes
+		}
+	}
+
+	1 = { #throne room
+		factor = 50
+		modifier = {
+			factor = 0
+			NOT = { real_tier = king }
+			NOT = { real_tier = emperor }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				is_nomadic = yes
+				is_tribal = yes
+			}
+		}
+	}
+
+	2 = { # dungeon
+		factor = 100
+		modifier = {
+			factor = 0
+			prisoner = no
+			NOT = { death_reason = death_dungeon }
+		}
+	}
+
+	3 = { # forest
+		factor = 1
+		modifier = {
+			factor = 0.01
+			is_nomadic = yes
+		}
+		modifier = {
+			factor = 10
+			is_tribal = yes
+		}
+	}
+
+	4 = { # bed
+		factor = 100
+		modifier = {
+			factor = 0
+			is_alive = yes
+			NOT = { trait = incapable }
+			NOT = { trait = infirm }
+		}
+		modifier = {
+			factor = 0.001
+			OR = {
+				death_sacrificed_trigger = yes
+				death_reason = death_battle
+				death_execution_trigger = yes
+				death_reason = death_dungeon
+			}
+		}
+		modifier = {
+			factor = 0.02
+			trait = infirm
+			is_alive = yes
+		}
+	}
+	
+	5 = { # tavern
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = { 
+				OR = {
+					trait = drunkard
+					trait = hedonist
+					trait = lustful
+				}
+			}
+		}
+	}
+	
+	6 = { # military camp
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = {
+				AND = {
+					is_alive = yes
+					in_command = no
+					NOT = { has_job_title  = job_marshal }
+				}
+				AND = {
+					is_alive = no
+					NOT = { death_reason = death_battle }
+				}
+			}
+		}
+		modifier = {
+			factor = 0.02
+			has_job_title = job_marshal
+		}
+	}
+	
+	7 = { # Dolmen
+		factor = 5
+		modifier = {
+			factor = 0
+			NOT = { religion_group = pagan_group }
+		}
+		modifier = {
+			factor = 100
+			is_alive = no
+		}
+		modifier = {
+			factor = 2
+			is_priest = yes
+		}
+	}
+	
+	8 = { # Gallows
+		factor = 5
+		modifier = {
+			factor = 0
+			NOT = { trait = cruel }
+			NOT = { trait = impaler }
+			NOT = { death_execution_trigger = yes }
+		}
+		modifier = {
+			factor = 20
+			OR = {
+				trait = impaler
+				death_execution_trigger = yes
+			}
+		}
+	}
+	
+	9 = { # Church
+		factor = 0
+	}
+	
+	10 = { # Desert
+		factor = 5
+		modifier = {
+			factor = 0
+			NOR = {
+				culture = xianbei
+				culture = xiongnu
+				culture = yuezhi
+			}
+		}
+	}
+	
+	11 = { # Steppe
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { culture_group = mongol }
+		}
+		
+		modifier = {
+			factor = 10
+			culture_group = mongol
+		}
+		modifier = {
+			factor = 10
+			is_nomadic = yes
+		}
+	}
+	
+	12 = { # Ocean w ships
+		factor = 10
+		modifier = {
+			factor = 0
+			is_patrician = no
+		}
+	}
+	
+	13 = { # Muslim interior
+		factor = 2
+		modifier = {
+			factor = 0
+			NOT = { culture = yuezhi }
+		}
+	}
+	
+	14 = { # Harem
+		factor = 1
+		modifier = {
+			factor = 100
+			OR = {
+				trait = lustful
+				trait = hedonist
+			}
+		}
+	}
+	
+	15 = { # Muslim interior 2
+		factor = 5
+		modifier = {
+			factor = 0
+			NOT = { culture = yuezhi }
+		}
+	}
+
+	16 = { # Mongol camp 1
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { culture_group = mongol }
+		}
+	}
+
+	17 = { # Mongol camp 2
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { culture_group = mongol }
+		}
+	}
+
+	18 = { # Papal palace
+		factor = 0
+	}
+
+	19 = { # Muslim mosque
+		factor = 0
+	}
+
+	20 = { # Pagan human sacrifice
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { religion_group = pagan_group }
+			NOT = { death_sacrificed_trigger = yes }
+		}
+		modifier = {
+			factor = 1000
+			death_sacrificed_trigger = yes
+		}
+		modifier = {
+			factor = 10
+			is_priest = yes
+		}
+	}
+}
+
+# p1 hair  --- WARNING! Property 1 MUST be Hair, otherwise the hair hiding helmets wont work ---
+1 = {
+	0 = { # Completely bald
+		factor = 1
+		modifier = {
+			factor = 0.1
+			is_female = no
+			NOT = {
+				age = 50
+			}
+		}
+		modifier = {
+			factor = 0.1
+			is_female = yes
+		}
+		modifier = {
+			factor = 100
+			is_devout_chinese_buddhist_trigger = yes
+		}
+		modifier = {
+			factor = 0
+			follows_filial_piety_trigger = yes
+		}
+	}
+
+	1 = { # Black Adder
+		factor = 1
+		modifier = {
+			factor = 0
+			is_female = yes
+			graphical_culture = westafricangfx
+			OR = {
+				higher_tier_than = count
+				spouse = { higher_tier_than = count }
+				has_minor_title = title_prince
+			}
+		}
+	}
+	
+	2 = { # Page
+		factor = 1
+	}
+
+	3 = { # Synth
+		factor = 1
+	}
+
+	4 = { # Long Straight
+		factor = 1
+	}
+
+	5 = { # Long Curly
+		factor = 1
+		modifier = {
+			factor = 0
+			is_female = yes
+			graphical_culture = westafricangfx
+			OR = {
+				higher_tier_than = count
+				spouse = { higher_tier_than = count }
+				has_minor_title = title_prince
+			}
+		}
+	}
+
+	6 = {  # Tonsure
+		factor = 0
+	}
+	
+	7 = {  # Short
+		factor = 1
+		modifier = {
+			factor = 0
+			is_female = yes
+			graphical_culture = westafricangfx
+			OR = {
+				higher_tier_than = count
+				spouse = { higher_tier_than = count }
+				has_minor_title = title_prince
+			}
+		}
+	}
+	
+	8 = { # Short Curly
+		factor = 1
+	}
+	
+	9 = {  # Short Uncouth
+		factor = 1
+		modifier = {
+			factor = 5
+			religion_group = pagan_group
+		}
+		modifier = {
+			factor = 0
+			is_female = yes
+			follows_filial_piety_trigger = yes
+		}
+	}
+	
+	10 = {  # Long Uncouth
+		factor = 1
+		modifier = {
+			factor = 5
+			religion_group = pagan_group
+		}
+		modifier = {
+			factor = 0
+			follows_filial_piety_trigger = yes
+		}
+		modifier = {
+			factor = 0
+			is_female = yes
+			follows_filial_piety_trigger = yes
+		}
+	}
+	
+	11 = { # Balding
+		factor = 1
+		modifier = {
+			factor = 0.1
+			is_female = no
+			NOT = {
+				age = 50
+			}
+		}
+		modifier = {
+			factor = 0
+			is_female = yes
+			follows_filial_piety_trigger = yes
+		}
+	}
+	
+	12 = { # Marine
+		factor = 1
+		modifier = {
+			factor = 0
+			follows_filial_piety_trigger = yes
+		}
+		modifier = {
+			factor = 0
+			is_female = yes
+			follows_filial_piety_trigger = yes
+		}
+		modifier = {
+			factor = 2
+			filial_piety_maiden_trigger = yes
+		}
+	}
+	
+	13 = { # Mohawk
+		factor = 1
+		modifier = {
+			factor = 0
+			follows_filial_piety_trigger = yes
+		}
+		modifier = {
+			factor = 0
+			is_female = yes
+			follows_filial_piety_trigger = yes
+		}
+		modifier = {
+			factor = 2
+			filial_piety_maiden_trigger = yes
+		}
+	}
+	
+	14 = { # Mohawk
+		factor = 1
+		modifier = {
+			factor = 0
+			follows_filial_piety_trigger = yes
+		}
+		modifier = {
+			factor = 0
+			is_female = yes
+			follows_filial_piety_trigger = yes
+		}
+		modifier = {
+			factor = 2
+			filial_piety_maiden_trigger = yes
+		}
+	}
+	
+	15 = { # Mohawk
+		factor = 1
+	}
+}
+
+# p2 base
+2 = {
+}
+
+# p3 clothes
+3 = {
+	
+	0 = { # Royal clothes 1
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				trait = peasant_leader
+				trait = heresiarch
+			}
+		}
+		modifier = {
+			factor = 0
+			NOR = {
+				real_tier = king
+				real_tier = emperor
+				primary_title = { has_title_flag = noble_king }
+				spouse = { real_tier = king }
+				spouse = { real_tier = emperor }
+				spouse = { primary_title = { has_title_flag = noble_king } }
+				has_minor_title = title_prince
+			}
+		}
+	}
+	
+	1 = { # Royal clothes 2
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				trait = peasant_leader
+				trait = heresiarch
+			}
+		}
+		modifier = {
+			factor = 0
+			NOR = {
+				real_tier = king
+				real_tier = emperor
+				primary_title = { has_title_flag = noble_king }
+				spouse = { real_tier = king }
+				spouse = { real_tier = emperor }
+				spouse = { primary_title = { has_title_flag = noble_king } }
+				has_minor_title = title_prince
+			}
+		}
+	}
+	
+	2 = { # Royal clothes 3
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				trait = peasant_leader
+				trait = heresiarch
+			}
+		}
+		modifier = {
+			factor = 0
+			NOR = {
+				real_tier = king
+				real_tier = emperor
+				primary_title = { has_title_flag = noble_king }
+				spouse = { real_tier = king }
+				spouse = { real_tier = emperor }
+				spouse = { primary_title = { has_title_flag = noble_king } }
+				has_minor_title = title_prince
+			}
+		}
+	}
+	
+	3 = { # Noble clothes 1
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				trait = peasant_leader
+				trait = heresiarch
+			}
+		}
+		modifier = {
+			factor = 0
+			NOR = {
+				real_tier = duke
+				real_tier = count
+				real_tier = baron
+				primary_title = { has_title_flag = noble_duke }
+				primary_title = { has_title_flag = noble_mark }
+				spouse = { real_tier = duke }
+				spouse = { real_tier = count }
+				spouse = { real_tier = baron }
+				spouse = { primary_title = { has_title_flag = noble_duke } }
+				spouse = { primary_title = { has_title_flag = noble_mark } }
+				has_minor_title = title_prince
+			}
+		}
+	}
+	
+	4 = { # Noble clothes 2
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				trait = peasant_leader
+				trait = heresiarch
+			}
+		}
+		modifier = {
+			factor = 0
+			NOR = {
+				real_tier = duke
+				real_tier = count
+				real_tier = baron
+				primary_title = { has_title_flag = noble_duke }
+				primary_title = { has_title_flag = noble_mark }
+				spouse = { real_tier = duke }
+				spouse = { real_tier = count }
+				spouse = { real_tier = baron }
+				spouse = { primary_title = { has_title_flag = noble_duke } }
+				spouse = { primary_title = { has_title_flag = noble_mark } }
+				has_minor_title = title_prince
+			}
+		}
+	}
+	
+	5 = { # Noble clothes 3
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				trait = peasant_leader
+				trait = heresiarch
+			}
+		}
+		modifier = {
+			factor = 0
+			NOR = {
+				real_tier = duke
+				real_tier = count
+				real_tier = baron
+				primary_title = { has_title_flag = noble_duke }
+				primary_title = { has_title_flag = noble_mark }
+				spouse = { real_tier = duke }
+				spouse = { real_tier = count }
+				spouse = { real_tier = baron }
+				spouse = { primary_title = { has_title_flag = noble_duke } }
+				spouse = { primary_title = { has_title_flag = noble_mark } }
+				has_minor_title = title_prince
+			}
+		}
+	}
+	
+	6 = { # Modest clothes 1
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { trait = peasant_leader }
+			NOT = { trait = heresiarch }
+			OR = {
+				is_ruler = yes
+				has_minor_title = title_prince
+				spouse = { real_tier = emperor }
+				spouse = { real_tier = king }
+				spouse = { real_tier = duke }
+			}
+		}
+		modifier = {
+			factor = 10
+			is_ruler = yes
+			is_theocracy = yes
+			religion_group = pagan_group
+		}
+	}
+	7 = { # Modest clothes 2
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { trait = peasant_leader }
+			NOT = { trait = heresiarch }
+			OR = {
+				is_or_was_offmap_power_ruler = yes
+				is_ruler = yes
+				has_minor_title = title_prince
+				spouse = { real_tier = emperor }
+				spouse = { real_tier = king }
+				spouse = { real_tier = duke }
+			}
+		}
+	}
+	
+	8 = { # Modest clothes 3
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { trait = peasant_leader }
+			NOT = { trait = heresiarch }
+			OR = {
+				is_or_was_offmap_power_ruler = yes
+				is_ruler = yes
+				has_minor_title = title_prince
+				spouse = { real_tier = emperor }
+				spouse = { real_tier = king }
+				spouse = { real_tier = duke }
+			}
+		}
+	}
+	
+	9 = { # Shady clothes
+		factor = 3
+		modifier = {
+			factor = 0
+			OR = {
+				real_tier = king
+				real_tier = emperor
+				AND = {
+					real_tier = duke
+					any_demesne_title = {
+						real_tier = baron
+					}
+				}
+				spouse = { real_tier = king }
+				spouse = { real_tier = emperor }
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_job_title = job_spymaster }
+			OR = {
+				real_tier = duke
+				NOT = { intrigue = 15 }
+			}
+		}
+	}
+	
+	# Martial
+	10 = {
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = { trait = shieldmaiden }
+			NOT = { has_job_title  = job_marshal }
+			NOT = { martial = 18 }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				AND = {
+					is_female = yes
+					NOT = { trait = shieldmaiden }
+				}
+				real_tier = king
+				real_tier = emperor
+				AND = {
+					real_tier = duke
+					any_demesne_title = {
+						real_tier = baron
+					}
+				}
+				AND = {
+					religion_group = chinese_religion
+					OR = {
+						AND = {
+							is_ruler = yes
+							is_theocracy = yes
+						}
+						has_job_title = job_spiritual
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0.5
+			OR = {
+				chinese_martial_modifier_trigger = yes
+				chinese_generals_modifier_trigger = yes
+			}
+		}
+		modifier = {
+			factor = 100 # This ensures that the reverse order check stays matched
+			has_portrait_property = { layer = 5 index = 10 }
+		}
+	}
+	
+	# Ragged prison clothes
+	11 = {
+		factor = 100
+		modifier = {
+			factor = 0
+			prisoner = no
+		}
+	}
+	
+	# Chancellor Robes
+	12 = {
+		factor = 1
+		modifier = {
+			factor = 0
+			culture = han
+			is_female = no
+			NOR = {
+				real_tier = EMPEROR
+				primary_title = {
+					has_title_flag = premier_title
+				}
+			}
+		}
+		modifier = {
+			factor = 20000
+			culture = han
+			is_female = no
+			real_tier = EMPEROR
+			primary_title = {
+				has_title_flag = premier_title
+			}
+		}
+	}
+	
+	# Scholar Robes
+	13 = {
+		factor = 1
+		modifier = {
+			factor = 10
+			culture = han
+			is_priest = yes
+		}
+	}
+	
+	# Emperor Robes
+	14 = {
+		factor = 1
+		modifier = {
+			factor = 0 # This ensures that the reverse order check stays matched
+			NOT = { has_portrait_property = { layer = 5 index = 12 } }
+		}
+		modifier = {
+			factor = 0
+			culture = han
+			is_female = no
+			NOR = {
+				real_tier = EMPEROR
+				primary_title = {
+					OR = {
+						has_title_flag = warlord_flag
+						has_title_flag = premier_title
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 20000
+			culture = han
+			is_female = no
+			real_tier = EMPEROR
+			primary_title = {
+				NOR = {
+					has_title_flag = warlord_flag
+					has_title_flag = premier_title
+				}
+			}
+		}
+	}
+	
+	# Royal Robes
+	15 = {
+		factor = 1
+		modifier = {
+			factor = 0
+			culture = han
+			is_female = no
+			NOR = {
+				primary_title = {
+					OR = {
+						has_title_flag = warlord_flag
+						has_title_flag = premier_title
+					}
+				}
+				real_tier = king
+				real_tier = emperor
+				primary_title = { has_title_flag = noble_king }
+				spouse = { real_tier = king }
+				spouse = { real_tier = emperor }
+				spouse = { primary_title = { has_title_flag = noble_king } }
+				has_minor_title = title_prince
+			}
+		}
+	}
+	
+	# Scholar Robes
+	16 = {
+		factor = 1
+		modifier = {
+			factor = 10
+			culture = han
+			is_priest = yes
+		}
+	}
+	
+	# Scholar Robes
+	17 = {
+		factor = 1
+		modifier = {
+			factor = 10
+			culture = han
+			is_priest = yes
+		}
+	}
+	
+	18 = { # Modest clothes - Black
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { trait = peasant_leader }
+			NOT = { trait = heresiarch }
+			OR = {
+				is_or_was_offmap_power_ruler = yes
+				is_ruler = yes
+				has_minor_title = title_prince
+				spouse = { real_tier = emperor }
+				spouse = { real_tier = king }
+				spouse = { real_tier = duke }
+			}
+		}
+	}
+	
+	# Common Clothes - Yellow
+	19 = {
+		factor = 1
+		modifier = {
+			factor = 20000
+			has_landed_title = k_yellow
+		}
+		modifier = {
+			factor = 10
+			top_liege = {
+				OR = {
+					has_landed_title = k_yellow
+					has_landed_title = d_zhonghuang
+					has_landed_title = d_beihuang
+					has_landed_title = d_xihuang
+					has_landed_title = d_nanhuang
+					has_landed_title = d_donghuang
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			NOR = {
+				top_liege = {
+					OR = {
+						has_landed_title = k_yellow
+						has_landed_title = d_zhonghuang
+						has_landed_title = d_beihuang
+						has_landed_title = d_xihuang
+						has_landed_title = d_nanhuang
+						has_landed_title = d_donghuang
+					}
+				}
+				trait = peasant_leader
+				trait = heresiarch
+			}
+		}
+	}
+	
+	20 = { # Modest clothes - Blue 1
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { trait = peasant_leader }
+			NOT = { trait = heresiarch }
+			OR = {
+				is_or_was_offmap_power_ruler = yes
+				is_ruler = yes
+				has_minor_title = title_prince
+				spouse = { real_tier = emperor }
+				spouse = { real_tier = king }
+				spouse = { real_tier = duke }
+			}
+		}
+	}
+	
+	21 = { # Modest Clothes - Blue 2
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { trait = peasant_leader }
+			NOT = { trait = heresiarch }
+			OR = {
+				is_or_was_offmap_power_ruler = yes
+				is_ruler = yes
+				has_minor_title = title_prince
+				spouse = { real_tier = emperor }
+				spouse = { real_tier = king }
+				spouse = { real_tier = duke }
+			}
+		}
+	}
+	
+	# Chinese Martial Extension 1
+	22 = {
+		factor = 100
+		modifier = {
+			factor = 0
+			chinese_generals_modifier_trigger = no
+		}
+		modifier = {
+			factor = 100 # This ensures that the reverse order check stays matched
+			has_portrait_property = { layer = 5 index = 22 }
+		}
+		modifier = {
+			factor = 100
+			OR = {
+				AND = {
+					is_landed = yes
+					capital_holding = {
+						OR = {
+							region = world_china_ji
+							region = world_china_you
+							region = world_china_yi
+							region = world_korea
+							region = world_manchu
+						}
+					}
+				}
+				AND = {
+					is_landed = no
+					liege = {
+						capital_holding = {
+							OR = {
+								region = world_china_ji
+								region = world_china_you
+								region = world_china_yi
+								region = world_korea
+								region = world_manchu
+							}
+						}
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				AND = {
+					is_landed = yes
+					capital_holding = {
+						NOR = {
+							region = world_china_ji
+							region = world_china_you
+							region = world_china_yi
+							region = world_korea
+							region = world_manchu
+						}
+					}
+				}
+				AND = {
+					is_landed = no
+					liege = {
+						capital_holding = {
+							NOR = {
+								region = world_china_ji
+								region = world_china_you
+								region = world_china_yi
+								region = world_korea
+								region = world_manchu
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	# Chinese Martial Extension 1
+	23 = {
+		factor = 100
+		modifier = {
+			factor = 0
+			chinese_generals_modifier_trigger = no
+		}
+		modifier = {
+			factor = 100 # This ensures that the reverse order check stays matched
+			has_portrait_property = { layer = 5 index = 23 }
+		}
+		modifier = {
+			factor = 100
+			OR = {
+				AND = {
+					is_landed = yes
+					capital_holding = {
+						OR = {
+							region = world_central_asia
+							region = world_china_jiao
+							region = world_china_jing
+							region = world_china_yang
+						}
+					}
+				}
+				AND = {
+					is_landed = no
+					liege = {
+						capital_holding = {
+							OR = {
+								region = world_central_asia
+								region = world_china_jiao
+								region = world_china_jing
+								region = world_china_yang
+							}
+						}
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				AND = {
+					is_landed = yes
+					capital_holding = {
+						NOR = {
+							region = world_central_asia
+							region = world_china_jiao
+							region = world_china_jing
+							region = world_china_yang
+						}
+					}
+				}
+				AND = {
+					is_landed = no
+					liege = {
+						capital_holding = {
+							NOR = {
+								region = world_central_asia
+								region = world_china_jiao
+								region = world_china_jing
+								region = world_china_yang
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	# Chinese Martial Extension 2
+	24 = {
+		factor = 100
+		modifier = {
+			factor = 0
+			chinese_generals_modifier_trigger = no
+		}
+		modifier = {
+			factor = 100 # This ensures that the reverse order check stays matched
+			has_portrait_property = { layer = 5 index = 24 }
+		}
+		modifier = {
+			factor = 100
+			OR = {
+				AND = {
+					is_landed = yes
+					capital_holding = {
+						OR = {
+							region = world_china_bing
+							region = world_china_liang
+							region = world_mongol
+							region = world_tibet
+						}
+					}
+				}
+				AND = {
+					is_landed = no
+					liege = {
+						capital_holding = {
+							OR = {
+								region = world_china_bing
+								region = world_china_liang
+								region = world_mongol
+								region = world_tibet
+							}
+						}
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				AND = {
+					is_landed = yes
+					capital_holding = {
+						NOR = {
+							region = world_china_bing
+							region = world_china_liang
+							region = world_mongol
+							region = world_tibet
+						}
+					}
+				}
+				AND = {
+					is_landed = no
+					liege = {
+						capital_holding = {
+							NOR = {
+								region = world_china_bing
+								region = world_china_liang
+								region = world_mongol
+								region = world_tibet
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	# Chinese Martial Extension 3
+	25 = {
+		factor = 100
+		modifier = {
+			factor = 0
+			chinese_generals_modifier_trigger = no
+		}
+		modifier = {
+			factor = 100 # This ensures that the reverse order check stays matched
+			has_portrait_property = { layer = 5 index = 25 }
+		}
+		modifier = {
+			factor = 100
+			OR = {
+				AND = {
+					is_landed = yes
+					capital_holding = {
+						OR = {
+							region = world_china_sili
+							region = world_china_qing
+							region = world_china_yu
+							region = world_china_yan
+							region = world_china_xu
+						}
+					}
+				}
+				AND = {
+					is_landed = no
+					liege = {
+						capital_holding = {
+							OR = {
+								region = world_china_sili
+								region = world_china_qing
+								region = world_china_yu
+								region = world_china_yan
+								region = world_china_xu
+							}
+						}
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				AND = {
+					is_landed = yes
+					capital_holding = {
+						NOR = {
+							region = world_china_sili
+							region = world_china_qing
+							region = world_china_yu
+							region = world_china_yan
+							region = world_china_xu
+						}
+					}
+				}
+				AND = {
+					is_landed = no
+					liege = {
+						capital_holding = {
+							NOR = {
+								region = world_china_sili
+								region = world_china_qing
+								region = world_china_yu
+								region = world_china_yan
+								region = world_china_xu
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+# p4 beard
+4 = {
+	0 = {
+		factor = 1
+		modifier = {
+			factor = 100
+			is_devout_chinese_buddhist_trigger = yes
+		}
+	}
+	1 = {
+		factor = 1
+	}
+	2 = {
+		factor = 1
+	}
+	3 = {
+		factor = 1
+	}
+	4 = {
+		factor = 1
+	}
+	5 = {
+		factor = 1
+	}
+	6 = {
+		factor = 1
+	}
+	7 = {
+		factor = 1
+	}
+	8 = {
+		factor = 1
+	}
+	9 = {
+		factor = 1
+	}
+	10 = {
+		factor = 1
+	}
+}
+
+# p5 headgear
+5 = {
+	# Imperial crown/Caliph turban
+	0 = {
+		factor = 100
+		modifier = {
+			factor = 0
+			NOR = {
+				real_tier = emperor
+				spouse = { real_tier = emperor }
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = peasant_leader
+				trait = heresiarch
+			}
+		}
+		modifier = {
+			factor = 100
+			culture = han
+			is_female = no
+			real_tier = EMPEROR
+			primary_title = {
+				has_title_flag = premier_title
+			}
+		}
+		modifier = {
+			factor = 0
+			culture = han
+			is_female = no
+			NOR = {
+				real_tier = EMPEROR
+				primary_title = {
+					has_title_flag = premier_title
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			culture = han
+			is_female = no
+			has_landed_title = k_confucian
+		}
+	}
+	
+	# Royal crown/turban 1
+	1 = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOR = {
+				real_tier = king
+				spouse = { real_tier = king }
+			}
+		}
+		modifier = {
+			factor = 0
+			is_feudal = no
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = peasant_leader
+				trait = heresiarch
+			}
+		}
+		modifier = {
+			factor = 100
+			culture = han
+			real_tier = EMPEROR
+			primary_title = {
+				has_title_flag = warlord_flag
+			}
+		}
+	}
+
+	# Royal crown/turban 2
+	2 = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOR = {
+				real_tier = king
+				spouse = { real_tier = king }
+			}
+		}
+		modifier = {
+			factor = 0
+			is_feudal = no
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = peasant_leader
+				trait = heresiarch
+			}
+		}
+	}
+
+	# Royal crown/turban 3
+	3 = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOR = {
+				real_tier = king
+				spouse = { real_tier = king }
+			}
+		}
+		modifier = {
+			factor = 0
+			is_feudal = no
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = peasant_leader
+				trait = heresiarch
+			}
+		}
+	}
+
+	# Simple golden band/turban
+	4 = {
+		factor = 1
+		modifier = {
+			factor = 0
+			is_feudal = yes
+			NOR = {
+				real_tier = duke
+				spouse = { real_tier = duke }
+				has_minor_title = title_prince
+			}
+		}
+		modifier = {
+			factor = 0
+			is_republic = yes
+			NOR = {
+				real_tier = duke
+				real_tier = king
+				real_tier = emperor
+				has_minor_title = title_prince
+				spouse = { real_tier = emperor }
+				spouse = { real_tier = king }
+				spouse = { real_tier = duke }
+			}
+		}
+		modifier = {
+			factor = 0
+			is_feudal = yes
+			real_tier = king
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				trait = peasant_leader
+				trait = heresiarch
+			}
+		}
+	}
+
+	# Common headgear 1 - hood
+	5 = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { trait = peasant_leader }
+			NOT = { trait = heresiarch }
+			OR = {
+				is_or_was_offmap_power_ruler = yes
+				is_ruler = yes
+				has_minor_title = title_prince
+				spouse = { real_tier = emperor }
+				spouse = { real_tier = king }
+				spouse = { real_tier = duke }
+			}
+		}
+		modifier = {
+			factor = 10
+			is_ruler = yes
+			is_theocracy = yes
+			religion_group = pagan_group
+		}
+	}
+	
+	# Common headgear 2 - hood
+	6 = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { trait = peasant_leader }
+			NOT = { trait = heresiarch }
+			OR = {
+				is_or_was_offmap_power_ruler = yes
+				is_ruler = yes
+				has_minor_title = title_prince
+				spouse = { real_tier = emperor }
+				spouse = { real_tier = king }
+				spouse = { real_tier = duke }
+			}
+		}
+	}
+
+	# Common headgear 3 - Red hat
+	7 = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { trait = peasant_leader }
+			NOT = { trait = heresiarch }
+			OR = {
+				is_or_was_offmap_power_ruler = yes
+				is_ruler = yes
+				has_minor_title = title_prince
+				spouse = { real_tier = emperor }
+				spouse = { real_tier = king }
+				spouse = { real_tier = duke }
+			}
+		}
+	}
+	
+	# Common headgear 4 - hood
+	8 = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { trait = peasant_leader }
+			NOT = { trait = heresiarch }
+			OR = {
+				is_or_was_offmap_power_ruler = yes
+				is_ruler = yes
+				has_minor_title = title_prince
+				spouse = { real_tier = emperor }
+				spouse = { real_tier = king }
+				spouse = { real_tier = duke }
+			}
+		}
+	}
+
+	# Shady headgear
+	9 = {
+		factor = 3
+		modifier = {
+			factor = 0
+			OR = {
+				real_tier = king
+				real_tier = emperor
+				AND = {
+					real_tier = duke
+					any_demesne_title = {
+						real_tier = baron
+					}
+				}
+				spouse = { real_tier = king }
+				spouse = { real_tier = emperor }
+			}
+		}
+		modifier = {
+			factor = 0
+			NOT = { has_job_title = job_spymaster }
+			OR = {
+				real_tier = duke
+				NOT = { intrigue = 15 }
+			}
+		}
+	}
+
+	# Martial headgear
+	10 = {
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = { has_portrait_property = { layer = 3 index = 10 } }
+		}
+		modifier = {
+			factor = 0
+			culture = han
+			martial = 18
+		}
+	}
+
+	# Blank
+	11 = {
+		factor = 3
+		modifier = {
+			factor = 20000
+			trait = shieldmaiden
+			NOT = { has_minor_title = title_commander }
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				real_tier = emperor
+				real_tier = king
+				real_tier = duke
+				has_minor_title = title_prince
+				spouse = { real_tier = emperor }
+				spouse = { real_tier = king }
+				spouse = { real_tier = duke }
+			}
+		}
+	}
+	
+	# Emperor Hat
+	12 = {
+		factor = 1
+		modifier = {
+			factor = 0
+			culture = han
+			is_female = no
+			NOR = {
+				real_tier = EMPEROR
+				primary_title = {
+					OR = {
+						has_title_flag = warlord_flag
+						has_title_flag = premier_title
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 20000
+			culture = han
+			is_female = no
+			real_tier = EMPEROR
+			primary_title = {
+				NOR = {
+					has_title_flag = warlord_flag
+					has_title_flag = premier_title
+				}
+			}
+		}
+	}
+	
+	# Royal Hat
+	13 = {
+		factor = 1
+		modifier = {
+			factor = 0
+			culture = han
+			NOR = {
+				real_tier = king
+				spouse = { real_tier = king }
+			}
+		}
+		modifier = {
+			factor = 10
+			culture = han
+			is_priest = yes
+		}
+	}
+	
+	# Royal Hat
+	14 = {
+		factor = 1
+		modifier = {
+			factor = 0
+			culture = han
+			NOR = {
+				real_tier = king
+				spouse = { real_tier = king }
+			}
+		}
+		modifier = {
+			factor = 10
+			culture = han
+			is_priest = yes
+		}
+	}
+	
+	# Scholar Hat
+	15 = {
+		factor = 1
+		modifier = {
+			factor = 10
+			culture = han
+			is_priest = yes
+		}
+	}
+	
+	# Scholar Hat
+	16 = {
+		factor = 1
+		modifier = {
+			factor = 10
+			culture = han
+			is_priest = yes
+		}
+	}
+	
+	# Common headgear 6 - Black
+	17 = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { trait = peasant_leader }
+			NOT = { trait = heresiarch }
+			OR = {
+				is_or_was_offmap_power_ruler = yes
+				is_ruler = yes
+				has_minor_title = title_prince
+				spouse = { real_tier = emperor }
+				spouse = { real_tier = king }
+				spouse = { real_tier = duke }
+			}
+		}
+	}
+	
+	# Common headgear 7 - Yellow
+	18 = {
+		factor = 1
+		modifier = {
+			factor = 20000
+			top_liege = {
+				OR = {
+					has_landed_title = k_yellow
+					has_landed_title = d_zhonghuang
+					has_landed_title = d_beihuang
+					has_landed_title = d_xihuang
+					has_landed_title = d_nanhuang
+					has_landed_title = d_donghuang
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			NOR = {
+				top_liege = {
+					OR = {
+						has_landed_title = k_yellow
+						has_landed_title = d_zhonghuang
+						has_landed_title = d_beihuang
+						has_landed_title = d_xihuang
+						has_landed_title = d_nanhuang
+						has_landed_title = d_donghuang
+					}
+				}
+				trait = peasant_leader
+				trait = heresiarch
+			}
+		}
+	}
+	
+	# Common headgear 8 - Blue
+	19 = {
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { trait = peasant_leader }
+			NOT = { trait = heresiarch }
+			OR = {
+				is_or_was_offmap_power_ruler = yes
+				is_ruler = yes
+				has_minor_title = title_prince
+				spouse = { real_tier = emperor }
+				spouse = { real_tier = king }
+				spouse = { real_tier = duke }
+			}
+		}
+	}
+	
+	# Scholar Hat
+	20 = {
+		factor = 1
+		modifier = {
+			factor = 10
+			culture = han
+			is_priest = yes
+		}
+	}
+	
+	21 = {
+		factor = 1
+		modifier = {
+			factor = 5
+			chinese_martial_modifier_trigger = yes
+		}
+	}
+	
+	# Chinese Martial Extension 1
+	22 = {
+		factor = 100
+		modifier = {
+			factor = 0
+			chinese_generals_modifier_trigger = no
+		}
+		modifier = {
+			factor = 100 # This ensures that the reverse order check stays matched
+			has_portrait_property = { layer = 3 index = 22 }
+		}
+		modifier = {
+			factor = 100
+			OR = {
+				AND = {
+					is_landed = yes
+					capital_holding = {
+						OR = {
+							region = world_china_ji
+							region = world_china_you
+							region = world_china_yi
+							region = world_korea
+							region = world_manchu
+						}
+					}
+				}
+				AND = {
+					is_landed = no
+					liege = {
+						capital_holding = {
+							OR = {
+								region = world_china_ji
+								region = world_china_you
+								region = world_china_yi
+								region = world_korea
+								region = world_manchu
+							}
+						}
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				AND = {
+					is_landed = yes
+					capital_holding = {
+						NOR = {
+							region = world_china_ji
+							region = world_china_you
+							region = world_china_yi
+							region = world_korea
+							region = world_manchu
+						}
+					}
+				}
+				AND = {
+					is_landed = no
+					liege = {
+						capital_holding = {
+							NOR = {
+								region = world_china_ji
+								region = world_china_you
+								region = world_china_yi
+								region = world_korea
+								region = world_manchu
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	# Chinese Martial Extension 1
+	23 = {
+		factor = 100
+		modifier = {
+			factor = 0
+			chinese_generals_modifier_trigger = no
+		}
+		modifier = {
+			factor = 100 # This ensures that the reverse order check stays matched
+			has_portrait_property = { layer = 3 index = 23 }
+		}
+		modifier = {
+			factor = 100
+			OR = {
+				AND = {
+					is_landed = yes
+					capital_holding = {
+						OR = {
+							region = world_central_asia
+							region = world_china_jiao
+							region = world_china_jing
+							region = world_china_yang
+						}
+					}
+				}
+				AND = {
+					is_landed = no
+					liege = {
+						capital_holding = {
+							OR = {
+								region = world_central_asia
+								region = world_china_jiao
+								region = world_china_jing
+								region = world_china_yang
+							}
+						}
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				AND = {
+					is_landed = yes
+					capital_holding = {
+						NOR = {
+							region = world_central_asia
+							region = world_china_jiao
+							region = world_china_jing
+							region = world_china_yang
+						}
+					}
+				}
+				AND = {
+					is_landed = no
+					liege = {
+						capital_holding = {
+							NOR = {
+								region = world_central_asia
+								region = world_china_jiao
+								region = world_china_jing
+								region = world_china_yang
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	# Chinese Martial Extension 2
+	24 = {
+		factor = 100
+		modifier = {
+			factor = 0
+			chinese_generals_modifier_trigger = no
+		}
+		modifier = {
+			factor = 100 # This ensures that the reverse order check stays matched
+			has_portrait_property = { layer = 3 index = 24 }
+		}
+		modifier = {
+			factor = 100
+			OR = {
+				AND = {
+					is_landed = yes
+					capital_holding = {
+						OR = {
+							region = world_china_bing
+							region = world_china_liang
+							region = world_mongol
+							region = world_tibet
+						}
+					}
+				}
+				AND = {
+					is_landed = no
+					liege = {
+						capital_holding = {
+							OR = {
+								region = world_china_bing
+								region = world_china_liang
+								region = world_mongol
+								region = world_tibet
+							}
+						}
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				AND = {
+					is_landed = yes
+					capital_holding = {
+						NOR = {
+							region = world_china_bing
+							region = world_china_liang
+							region = world_mongol
+							region = world_tibet
+						}
+					}
+				}
+				AND = {
+					is_landed = no
+					liege = {
+						capital_holding = {
+							NOR = {
+								region = world_china_bing
+								region = world_china_liang
+								region = world_mongol
+								region = world_tibet
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	# Chinese Martial Extension 3
+	25 = {
+		factor = 100
+		modifier = {
+			factor = 0
+			chinese_generals_modifier_trigger = no
+		}
+		modifier = {
+			factor = 100 # This ensures that the reverse order check stays matched
+			has_portrait_property = { layer = 3 index = 25 }
+		}
+		modifier = {
+			factor = 100
+			OR = {
+				AND = {
+					is_landed = yes
+					capital_holding = {
+						OR = {
+							region = world_china_sili
+							region = world_china_qing
+							region = world_china_yu
+							region = world_china_yan
+							region = world_china_xu
+						}
+					}
+				}
+				AND = {
+					is_landed = no
+					liege = {
+						capital_holding = {
+							OR = {
+								region = world_china_sili
+								region = world_china_qing
+								region = world_china_yu
+								region = world_china_yan
+								region = world_china_xu
+							}
+						}
+					}
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			OR = {
+				AND = {
+					is_landed = yes
+					capital_holding = {
+						NOR = {
+							region = world_china_sili
+							region = world_china_qing
+							region = world_china_yu
+							region = world_china_yan
+							region = world_china_xu
+						}
+					}
+				}
+				AND = {
+					is_landed = no
+					liege = {
+						capital_holding = {
+							NOR = {
+								region = world_china_sili
+								region = world_china_qing
+								region = world_china_yu
+								region = world_china_yan
+								region = world_china_xu
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+# p6 imprisoned
+6 = {
+	0 = { # blank
+		factor = 100
+		modifier = {
+			factor = 0
+			prisoner = yes
+		}
+	}
+
+	1 = { # prisoner
+		factor = 100
+		modifier = {
+			factor = 0
+			prisoner = no
+		}
+	}
+}
+
+# p7 scars
+7 = {
+	0 = { # blank
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = {
+				trait = maimed
+				trait = wounded
+				trait = scarred
+				#trait = disfigured
+				#trait = one_eyed
+			}
+		}
+   	}
+
+	1 = { # scar 1
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { 
+				OR = {
+					trait = maimed
+					trait = wounded
+					trait = scarred
+					#trait = disfigured
+					#trait = one_eyed
+				}
+			}
+		}
+   	}
+
+	2 = { # scar 2
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { 
+				OR = {
+					trait = maimed
+					trait = wounded
+					trait = scarred
+					#trait = disfigured
+					#trait = one_eyed
+				}
+			}
+		}
+   	}
+
+	3 = { # scar 3
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { 
+				OR = {
+					trait = maimed
+					trait = wounded
+					trait = scarred
+					#trait = disfigured
+					#trait = one_eyed
+				}
+			}
+		}
+   	}
+
+	4 = { # scar 4
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { 
+				OR = {
+					trait = maimed
+					trait = wounded
+					trait = scarred
+					#trait = disfigured
+					#trait = one_eyed
+				}
+			}
+		}
+   	}
+}
+
+# p8 red dots
+8 = {
+	0 = { # blank
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = {
+				trait = has_measles
+				trait = has_small_pox
+			}
+		}
+ 	}
+
+	1 = { # red dots
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = {
+					trait = has_measles
+					trait = has_small_pox
+				}
+			}
+		}
+  	}
+}
+
+# p9 boils
+9 = {
+
+	0 = { # blank
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = {
+				trait = has_bubonic_plague
+			}
+		}
+ 	}
+
+	1 = { # boils
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = {
+					trait = has_bubonic_plague
+				}
+			}
+		}
+ 	}
+ 	
+}
+
+# p10 blinded
+10 = {
+	0 = {
+		factor = 100
+		modifier = {
+			factor = 0
+			trait = blinded
+		}
+	}
+	
+	1 =  {
+		factor = 100
+		modifier = {
+			factor = 0
+			NOT = {
+				trait = blinded
+			}
+		}
+	}
+}
+
+# p11 player
+11 = {
+	0 = { # blank
+		factor = 100
+		modifier = {
+			factor = 0
+			AND = {
+				ai = no
+				multiplayer = yes
+			}
+		}
+	}
+
+	1 = { # player
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = {
+				ai = yes
+				multiplayer = no
+			}
+		}
+	}
+}
+
+# p12 mask for the disfigured
+12 = {
+	0 = { # blank
+		factor = 100
+		modifier = {
+			factor = 0
+			OR = { 
+				trait = disfigured 
+				has_character_modifier = attending_masquerade
+				has_character_modifier = forced_mask
+			}
+		}
+	}
+
+	1 = { # mask 1 bone
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOR = { 
+					trait = disfigured 
+					has_character_modifier = attending_masquerade
+					has_character_modifier = forced_mask
+				}
+				AND = {
+					OR = { 
+						trait = disfigured 
+						has_character_modifier = attending_masquerade
+						has_character_modifier = forced_mask
+					}
+					NOR = {
+						is_tribal = yes
+						is_nomadic = yes
+						religion_group = pagan_group
+					}
+				}
+				has_character_modifier = golden_mask
+			}
+		}
+	}
+
+	2 = { # mask 2 silver
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOR = { 
+					trait = disfigured 
+					has_character_modifier = attending_masquerade
+					has_character_modifier = forced_mask
+				}
+				AND = {
+					is_landed = no
+					is_married = no
+				}
+				AND = {
+					is_landed = yes
+					NOT = { higher_tier_than = DUKE }
+				}
+				AND = {
+					is_landed = no
+					is_married = yes
+					spouse = { NOT = { higher_tier_than = DUKE } }
+				}
+				is_tribal = yes
+				is_nomadic = yes
+				religion_group = pagan_group
+				has_character_modifier = golden_mask
+			}
+		}
+	}
+
+	3 = { # mask 3 iron
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOR = { 
+					trait = disfigured 
+					has_character_modifier = attending_masquerade
+					has_character_modifier = forced_mask
+				}
+				AND = {
+					is_landed = yes
+					higher_tier_than = DUKE
+				}
+				AND = {
+					is_landed = no
+					is_married = yes
+					spouse = { higher_tier_than = DUKE }
+				}
+				is_tribal = yes
+				is_nomadic = yes
+				religion_group = pagan_group
+				has_character_modifier = golden_mask
+			}
+		}
+	}
+	
+	4 = { # mask 4 bone - blue stripes
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOR = { 
+					trait = disfigured 
+					has_character_modifier = attending_masquerade
+					has_character_modifier = forced_mask
+				}
+				AND = {
+					trait = disfigured
+					NOR = {
+						is_tribal = yes
+						is_nomadic = yes
+						religion_group = pagan_group
+					}
+				}
+				has_character_modifier = golden_mask
+			}
+		}
+	}
+	
+	5 = { # mask 5 bone - orange stripes
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOR = { 
+					trait = disfigured 
+					has_character_modifier = attending_masquerade
+					has_character_modifier = forced_mask
+				}
+				AND = {
+					trait = disfigured
+					NOR = {
+						is_tribal = yes
+						is_nomadic = yes
+						religion_group = pagan_group
+					}
+				}
+				has_character_modifier = golden_mask
+			}
+		}
+	}
+	
+	6 = { # mask 6 bone - red dots
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOR = { 
+					trait = disfigured 
+					has_character_modifier = attending_masquerade
+					has_character_modifier = forced_mask
+				}
+				AND = {
+					trait = disfigured
+					NOR = {
+						is_tribal = yes
+						is_nomadic = yes
+					}
+				}
+				has_character_modifier = golden_mask
+			}
+		}
+		modifier = {
+			factor = 0
+			NOR = {
+				is_tribal = yes
+				is_nomadic = yes
+			}
+		}
+	}
+	
+	7 = { # mask 7 bone - black stripes
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOR = { 
+					trait = disfigured 
+					has_character_modifier = attending_masquerade
+					has_character_modifier = forced_mask
+				}
+				AND = {
+					trait = disfigured
+					NOR = {
+						is_tribal = yes
+						is_nomadic = yes
+					}
+				}
+				has_character_modifier = golden_mask
+			}
+		}
+		modifier = {
+			factor = 0
+			NOR = {
+				is_tribal = yes
+				is_nomadic = yes
+			}
+		}
+	}
+	
+	8 = { # mask 8 bone - red stripes/eyes
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOR = { 
+					trait = disfigured 
+					has_character_modifier = attending_masquerade
+					has_character_modifier = forced_mask
+				}
+				AND = {
+					trait = disfigured
+					NOR = {
+						is_tribal = yes
+						is_nomadic = yes
+						religion_group = pagan_group
+					}
+				}
+				has_character_modifier = golden_mask
+			}
+		}
+	}
+	
+	9 = { # mask 9 bone - black eyes/lightning
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOR = { 
+					trait = disfigured 
+					has_character_modifier = attending_masquerade
+					has_character_modifier = forced_mask
+				}
+				AND = {
+					trait = disfigured
+					NOR = {
+						is_tribal = yes
+						is_nomadic = yes
+						religion_group = pagan_group
+					}
+				}
+				has_character_modifier = golden_mask
+			}
+		}
+	}
+	
+	10 = { # mask 10 - decorated silver
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOR = { 
+					trait = disfigured 
+					has_character_modifier = attending_masquerade
+					has_character_modifier = forced_mask
+				}
+				AND = {
+					is_landed = no
+					is_married = no
+				}
+				AND = {
+					is_landed = yes
+					NOT = { higher_tier_than = DUKE }
+				}
+				AND = {
+					is_landed = no
+					is_married = yes
+					spouse = { NOT = { higher_tier_than = DUKE } }
+				}
+				is_tribal = yes
+				is_nomadic = yes
+				religion_group = pagan_group
+				has_character_modifier = golden_mask
+			}
+		}
+	}
+	
+	11 = { # mask 11 - decorated gold
+		factor = 2
+		modifier = {
+			factor = 0
+			OR = {
+				NOR = { 
+					trait = disfigured 
+					has_character_modifier = attending_masquerade
+					has_character_modifier = forced_mask
+				}
+				AND = {
+					is_landed = no
+					is_married = no
+				}
+				AND = {
+					is_landed = yes
+					NOT = { higher_tier_than = DUKE }
+				}
+				AND = {
+					is_landed = no
+					is_married = yes
+					spouse = { NOT = { higher_tier_than = DUKE } }
+				}
+				is_tribal = yes
+				is_nomadic = yes
+				religion_group = pagan_group
+			}
+			NOT = { has_character_modifier = golden_mask }
+		}
+		modifier = {
+			factor = 0
+			NOR = {
+				trait = greedy
+				trait = proud
+				trait = ambitious
+				trait = envious
+			}
+			NOT = { has_character_modifier = golden_mask }
+		}
+		modifier = {
+			factor = 5
+			has_landed_title = k_confucian
+		}
+		modifier = {
+			factor = 1000
+			has_character_modifier = golden_mask
+		}
+	}
+	
+	12 = { # mask 12 - full mask 1 leather
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOR = { 
+					trait = disfigured 
+					has_character_modifier = attending_masquerade
+					has_character_modifier = forced_mask
+				}
+				AND = {
+					is_landed = no
+					is_married = no
+				}
+				AND = {
+					is_landed = yes
+					NOT = { higher_tier_than = DUKE }
+				}
+				AND = {
+					is_landed = no
+					is_married = yes
+					spouse = { NOT = { higher_tier_than = DUKE } }
+				}
+				religion_group = pagan_group
+				has_character_modifier = golden_mask
+			}
+		}
+	}
+	
+	13 = { # mask 13 - full mask 2 bone
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOR = { 
+					trait = disfigured 
+					has_character_modifier = attending_masquerade
+					has_character_modifier = forced_mask
+				}
+				AND = {
+					is_landed = no
+					is_married = no
+				}
+				AND = {
+					is_landed = yes
+					NOT = { higher_tier_than = DUKE }
+				}
+				AND = {
+					is_landed = no
+					is_married = yes
+					spouse = { NOT = { higher_tier_than = DUKE } }
+				}
+				religion_group = pagan_group
+				has_character_modifier = golden_mask
+			}
+		}
+	}
+}
+
+# p13 eyepatch for one_eyed
+13 = {
+	0 = { # blank
+		factor = 100
+		modifier = {
+			factor = 0
+			trait = one_eyed
+			NOT = { has_character_modifier = glass_eye }
+		}
+	}
+
+	1 = { # eyepatch 1
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { trait = one_eyed }
+				has_character_modifier = glass_eye
+			}
+		}
+	}
+	
+	2 = { # eyepatch 2 - red leather
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { trait = one_eyed }
+				has_character_modifier = glass_eye
+			}
+		}
+	}
+	
+	3 = { # eyepatch 3 - painted eye
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NAND = {
+					trait = one_eyed
+					OR = {
+						trait = paranoid
+						trait = possessed
+					}
+				}
+				has_character_modifier = glass_eye
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				trait = paranoid
+				trait = possessed
+			}
+		}
+	}
+	
+	4 = { # eyepatch 4 - red
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { trait = one_eyed }
+				has_character_modifier = glass_eye
+			}
+		}
+	}
+	
+	5 = { # eyepatch 5 - white rag
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { trait = one_eyed }
+				has_character_modifier = glass_eye
+			}
+		}
+	}
+	
+	6 = { # eyepatch 6 - blue rag
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { trait = one_eyed }
+				has_character_modifier = glass_eye
+			}
+		}
+		modifier = {
+			factor = 2
+			religion = tengri_pagan
+		}
+	}
+	
+	7 = { # eyepatch 7 - green rag
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { trait = one_eyed }
+				has_character_modifier = glass_eye
+			}
+		}
+	}
+	
+	8 = { # eyepatch 8 - red rag
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NOT = { trait = one_eyed }
+				has_character_modifier = glass_eye
+			}
+		}
+	}
+	
+	9 = { # eyepatch 9 - bloodied rag
+		factor = 1
+		modifier = {
+			factor = 0
+			OR = {
+				NAND = {
+					trait = one_eyed
+					OR = {
+						trait = wroth
+						trait = cruel
+						has_minor_title = title_commander
+					}
+				}
+				has_character_modifier = glass_eye
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				trait = wroth
+				trait = cruel
+				has_minor_title = title_commander
+			}
+		}
+		modifier = {
+			factor = 2
+			martial = 18
+		}
+	}
+	
+	10 = { # eyepatch 10 - tartan rag
+		factor = 3
+		modifier = {
+			factor = 0
+			OR = {
+				NAND = {
+					trait = one_eyed
+					culture_group = celtic
+				}
+				has_character_modifier = glass_eye
+			}
+		}
+	}
+	
+	11 = { # eyepatch 11 - scarred eye 1
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { trait = one_eyed }
+		}
+		modifier = {
+			factor = 0
+			trait = shy
+		}
+		modifier = {
+			factor = 4
+			OR = {
+				is_tribal = yes
+				is_nomadic = yes
+				trait = stubborn
+			}
+		}
+	}
+	
+	12 = { # eyepatch 12 - scarred eye 2
+		factor = 1
+		modifier = {
+			factor = 0
+			NOT = { trait = one_eyed }
+		}
+		modifier = {
+			factor = 0
+			trait = shy
+		}
+		modifier = {
+			factor = 4
+			OR = {
+				is_tribal = yes
+				is_nomadic = yes
+				trait = stubborn
+			}
+		}
+	}
+}
+
+# p14 chinese makeup
+14 = {
+	0 = { # blank
+		factor = 100
+		modifier = {
+			factor = 0
+			chinese_makeup_trigger = yes
+		}
+	}
+
+	1 = { # white powder
+		factor = 1
+	}
+	
+	2 = { # rouge a only
+		factor = 1
+	}
+	
+	3 = { # white powder and rouge a
+		factor = 1
+	}
+	
+	4 = { # rouge b only
+		factor = 1
+	}
+
+	5 = { # white powder and rouge b
+		factor = 1
+	}
+}
+
+# p15 chinese makeup 2
+15 = {
+	0 = { # blank
+		factor = 100
+		modifier = {
+			factor = 0
+			chinese_makeup_trigger = yes
+		}
+	}
+
+	1 = { # full lips
+		factor = 1
+	}
+	
+	2 = { # top lip
+		factor = 1
+	}
+	
+	3 = { # 'heart' lips
+		factor = 1
+	}
+}
+
+# p16 chinese empress jewelry
+16 = {
+	0 = { # blank
+		factor = 100
+		modifier = {
+			factor = 0
+			chinese_empress_jewelry_trigger = yes
+		}
+	}
+
+	1 = { # Full face pearls and earrings
+		factor = 1
+	}
+	
+	2 = { # pearl earrings only
+		factor = 1
+	}
+	
+	3 = { # full face pearls and earrings 2
+		factor = 1
+	}
+}
+
+# p17 immortality
+17 = {
+	0 = { # blank
+		factor = 100
+		modifier = {
+			factor = 0
+			immortal = yes
+		}
+	}
+	1 = {
+		factor = 100
+	}
+}

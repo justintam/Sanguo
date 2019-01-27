@@ -1,0 +1,19 @@
+name = "2nd Yuan Civil War"
+
+casus_belli={
+	actor=709
+	recipient=707
+	casus_belli=claim_all
+	date=203.6.1
+}
+
+203.6.1={
+	add_defender = 707 #Yuan Shang
+	add_attacker = 709 #Yuan Tan
+	add_attacker = 400 #Cao Cao
+}
+204.9.13={
+	rem_defender = 707 #Yuan Shang
+	rem_attacker = 709 #Yuan Tan
+	rem_attacker = 400 #Cao Cao
+}

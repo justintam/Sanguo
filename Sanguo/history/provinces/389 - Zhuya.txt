@@ -1,0 +1,18 @@
+# c_zhuya
+
+# County Title
+title = c_zhuya
+
+# Settlements
+max_settlements = 3
+
+b_sanya = tribal
+#b_wuzhishan = temple
+#b_dongfang = tribal
+
+# Misc
+culture = nanyue
+religion = animist
+terrain = plains
+
+#History

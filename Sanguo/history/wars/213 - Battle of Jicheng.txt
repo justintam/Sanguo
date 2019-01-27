@@ -1,0 +1,20 @@
+name = "Battle of Jicheng"
+
+casus_belli={
+	actor=815
+	recipient=400
+	casus_belli=invasion
+	landed_title=e_china
+	date=213.3.1
+}
+
+213.3.1 = {
+	add_defender = 400 #Cao Cao
+	add_attacker = 815 #Ma Chao
+	add_attacker = 1009 #Zhang Lu
+}
+213.9.1={
+	rem_defender = 400 #Cao Cao
+	rem_attacker = 815 #Ma Chao
+	rem_attacker = 1009 #Zhang Lu
+}

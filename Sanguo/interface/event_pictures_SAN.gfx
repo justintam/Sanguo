@@ -1,0 +1,127 @@
+#########################################################
+# "ROMANCE OF THE THREE KINGDOMS" EVENT PICTURES
+#########################################################
+
+spriteTypes = 
+{
+	spriteType = {
+		name = "GFX_evt_yellow_turban_rise"
+		texturefile = "gfx\\event_pictures\\yellow_turban_rise.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_yellow_turban_wave"
+		texturefile = "gfx\\event_pictures\\yellow_turban_wave.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_yellow_turban_end"
+		texturefile = "gfx\\event_pictures\\yellow_turban_end.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_ten_eunuchs_rise"
+		texturefile = "gfx\\event_pictures\\ten_eunuchs_rise.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_ten_eunuchs_chaos"
+		texturefile = "gfx\\event_pictures\\ten_eunuchs_chaos.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_dong_zhuo_rise"
+		texturefile = "gfx\\event_pictures\\dong_zhuo_rise.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_dong_zhuo_coalition"
+		texturefile = "gfx\\event_pictures\\dong_zhuo_coalition.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_dong_zhuo_end"
+		texturefile = "gfx\\event_pictures\\dong_zhuo_end.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_civil_war"
+		texturefile = "gfx\\event_pictures\\civil_war.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_imperial_decree"
+		texturefile = "gfx\\event_pictures\\imperial_decree.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_korean_rise"
+		texturefile = "gfx\\event_pictures\\korean_rise.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_mongols_rise"
+		texturefile = "gfx\\event_pictures\\mongols_rise.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_yue_rise"
+		texturefile = "gfx\\event_pictures\\yue_rise.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_mongols_end"
+		texturefile = "gfx\\event_pictures\\mongols_end.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_duel"
+		texturefile = "gfx\\event_pictures\\duel.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_palace"
+		texturefile = "gfx\\event_pictures\\palace.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_bodyguard"
+		texturefile = "gfx\\event_pictures\\bodyguard.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_weapon"
+		texturefile = "gfx\\event_pictures\\weapon.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_lubu_rise"
+		texturefile = "gfx\\event_pictures\\lubu_rise.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_lubu_end"
+		texturefile = "gfx\\event_pictures\\lubu_end.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_chinese_empress"
+		texturefile = "gfx\\event_pictures\\chinese_empress.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_fire_empress"
+		texturefile = "gfx\\event_pictures\\fire_empress.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_evt_wako_raid"
+		texturefile = "gfx\\event_pictures\\wako_raid.tga"
+		allwaystransparent = yes
+	}
+	spriteType = {
+		name = "GFX_old_squire"
+		texturefile = "gfx\\event_pictures\\old_squire.tga"
+		allwaystransparent = yes
+	}
+}

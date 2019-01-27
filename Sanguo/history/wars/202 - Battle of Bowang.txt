@@ -1,0 +1,20 @@
+name = "Battle of Bowang"
+
+casus_belli={
+	actor=400
+	recipient=48
+	casus_belli=invasion
+	landed_title=k_jing
+	date=202.3.1
+}
+
+202.3.1 = {
+	add_defender = 48 #Liu Biao
+	add_defender = 600 #Liu Bei
+	add_attacker = 400 #Cao Cao
+}
+202.7.1={
+	rem_defender = 48 #Liu Biao
+	rem_defender = 600 #Liu Bei
+	rem_attacker = 400 #Cao Cao
+}

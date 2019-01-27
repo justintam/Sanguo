@@ -1,0 +1,27 @@
+name = "Battle of Yijing"
+
+casus_belli={
+	actor=700
+	recipient=900
+	casus_belli=claim
+	landed_title=k_you
+	date=195.1.1
+}
+
+195.1.1={
+	add_defender = 900 #Gongsun Zan
+	add_attacker = 700 #Yuan Shao
+	add_attacker = 1400 #Budugen
+	add_attacker = 1505 #Huchuquan
+	add_attacker = 1604 #Tadun
+	add_attacker = 3443 #Xianyu Fu
+}
+
+199.3.1={
+	rem_defender = 900 #Gongsun Zan
+	rem_attacker = 700 #Yuan Shao
+	rem_attacker = 1400 #Budugen
+	rem_attacker = 1505 #Huchuquan
+	rem_attacker = 1604 #Tadun
+	rem_attacker = 3443 #Xianyu Fu
+}

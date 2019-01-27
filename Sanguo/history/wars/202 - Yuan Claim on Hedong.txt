@@ -1,0 +1,23 @@
+name = "Yuan Claim on Hedong"
+
+casus_belli={
+	actor=755
+	recipient=400
+	thirdparty=707
+	casus_belli=other_claim
+	landed_title=d_hedong
+	date=202.7.1
+}
+
+202.7.1={
+	add_defender = 400 #Cao Cao
+	add_attacker = 707 #Yuan Shang
+	add_attacker = 725 #Gao Gan
+	add_attacker = 1505 #Huchuquan
+}
+202.8.1={
+	rem_defender = 400 #Cao Cao
+	rem_attacker = 707 #Yuan Shang
+	rem_attacker = 725 #Gao Gan
+	rem_attacker = 1505 #Huchuquan
+}

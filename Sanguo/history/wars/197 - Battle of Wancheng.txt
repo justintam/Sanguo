@@ -1,0 +1,20 @@
+name = "Battle of Wancheng"
+
+casus_belli={
+	actor=400
+	recipient=325
+	casus_belli=dejure_county_claim
+	landed_title=d_nanyang
+	date=197.2.20
+}
+
+197.2.20 = {
+	add_defender = 325 #Zhang Xiu
+	add_defender = 48 #Liu Biao
+	add_attacker = 400 #Cao Cao
+}
+199.12.1={
+	rem_defender = 325 #Zhang Xiu
+	rem_defender = 48 #Liu Biao
+	rem_attacker = 400 #Cao Cao
+}

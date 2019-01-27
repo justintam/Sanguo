@@ -1,0 +1,18 @@
+name = "Battle of Jiangxia"
+
+casus_belli={
+	actor=509
+	recipient=48
+	casus_belli=invasion
+	landed_title=k_jing
+	date=208.3.1
+}
+
+208.3.1 = {
+	add_defender = 48 #Liu Biao
+	add_attacker = 509 #Sun Quan
+}
+208.5.1={
+	rem_defender = 48 #Liu Biao
+	rem_attacker = 509 #Sun Quan
+}

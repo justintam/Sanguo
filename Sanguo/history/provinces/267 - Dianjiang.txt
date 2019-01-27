@@ -1,0 +1,20 @@
+# c_dianjiang
+
+# County Title
+title = c_dianjiang
+
+# Settlements
+max_settlements = 5
+
+b_dianjiang = castle
+b_wuqi = city
+#b_dadukou = temple
+#b_yubei = castle
+#b_yinglong = city
+
+# Misc
+culture = bandunman
+religion = baihu
+terrain = mountain
+
+#History

@@ -1,0 +1,21 @@
+name = "Yuan Civil War"
+
+casus_belli={
+	actor=705
+	recipient=700
+	casus_belli=dejure_county_claim
+	landed_title=c_yangcheng
+	date=191.1.1
+}
+
+191.1.1 = {
+	add_defender = 700 #Yuan Shao
+	add_attacker = 705 #Yuan Shu
+	add_attacker = 900 #Gongsun Zan
+}
+
+191.6.1={
+	rem_defender = 700 #Yuan Shao
+	rem_attacker = 705 #Yuan Shu
+	rem_attacker = 900 #Gongsun Zan
+}

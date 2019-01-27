@@ -1,0 +1,22 @@
+# c_langzhong
+
+# County Title
+title = c_langzhong
+
+# Settlements
+max_settlements = 4
+
+b_bazhong = castle
+b_nanjiang = city
+#b_yuning = temple
+#b_haihai = castle
+
+# Misc
+culture = bandunman
+religion = baihu
+terrain = mountain
+
+#History
+190.1.1={
+	religion=tianshi
+}

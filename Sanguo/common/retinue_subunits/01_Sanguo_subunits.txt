@@ -1,0 +1,151 @@
+RETTYPE_CUL_ALTAIC = 
+{
+	first_type = 6
+	first_amount = 130
+	
+	second_type = 3
+	second_amount = 120
+
+	special_troops = horse_archers
+	
+	potential = {
+		is_nomadic = no
+		OR = {
+			culture_group = mongol
+			any_vassal = { culture_group = mongol }
+		}
+	}
+	
+	modifier = {
+		horse_archers_offensive = 0.2
+		horse_archers_morale = 0.12
+	}
+}
+
+RETTYPE_CUL_CHIN = 
+{
+	first_type = 1
+	first_amount = 200
+	
+	potential = {
+		culture = han
+		OR = {
+			religion_group = chinese_religion
+			any_vassal = { religion_group = chinese_religion }
+		}
+	}
+	
+	modifier = {
+		heavy_infantry_offensive = 0.4
+		heavy_infantry_morale = 0.2
+	}
+}
+
+RETTYPE_CUL_INDIAN = 
+{
+	first_type = 5
+	first_amount = 200
+	second_type = 6
+	second_amount = 20
+	
+	special_troops = war_elephants
+	
+	potential = {
+		OR = {
+			OR = {
+				culture = yuezhi
+				culture = nanyue
+				culture = nanman
+			}
+			any_vassal = { 
+				OR = {
+					culture = yuezhi
+					culture = nanyue
+					culture = nanman
+				}
+			}
+		}
+	}
+	
+	modifier = {
+		archers_offensive = 0.1
+		archers_defensive = 0.3
+	}
+}
+
+RETTYPE_CUL_KUSH = 
+{
+	first_type = 6
+	first_amount = 250
+	
+	special_troops = camel_cavalry
+	
+	potential = {
+		OR = {
+			culture_group = bactrian
+			any_vassal = { culture_group = bactrian }
+		}
+	}
+	
+	modifier = {
+		camel_cavalry_offensive = 0.2
+		camel_cavalry_defensive = 0.2
+		camel_cavalry_morale = 0.2
+	}
+}
+
+RETTYPE_CUL_MAN = 
+{
+	first_type = 0
+	first_amount = 400
+	
+	potential = {
+		OR = {
+			culture_group = man
+			any_vassal = { culture_group = man }
+		}
+	}
+	
+	modifier = {
+		light_infantry_offensive = 0.2
+		light_infantry_defensive = 0.6
+	}
+}
+
+RETTYPE_CUL_TAO = 
+{
+	first_type = 0
+	first_amount = 400
+	
+	potential = {
+		culture = han
+		OR = {
+			religion = taiping
+			any_vassal = { religion = taiping }
+		}
+	}
+	
+	modifier = {
+		light_infantry_offensive = 0.6
+		light_infantry_defensive = 0.1
+		light_infantry_morale = 0.1
+	}
+}
+
+RETTYPE_CUL_TIB = 
+{
+	first_type = 3
+	first_amount = 300
+	
+	potential = {
+		OR = {
+			culture_group = tibetan_group
+			any_vassal = { culture_group = tibetan_group }
+		}
+	}
+	
+	modifier = {
+		light_cavalry_defensive = 0.6
+		light_cavalry_morale = 0.2
+	}
+}

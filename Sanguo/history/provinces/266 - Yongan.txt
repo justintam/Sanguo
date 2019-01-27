@@ -1,0 +1,22 @@
+# c_yongan
+
+# County Title
+title = c_yongan
+
+# Settlements
+max_settlements = 4
+
+b_yongan = castle
+b_peiling = city
+b_kuiguan = castle
+#b_bandundi = castle
+
+# Misc
+culture = bandunman
+religion = baihu
+terrain = mountain
+
+#History
+190.1.1={
+	religion=tianshi
+}

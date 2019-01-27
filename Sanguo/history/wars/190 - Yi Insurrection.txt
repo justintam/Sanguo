@@ -1,0 +1,23 @@
+name = "Yizhou Insurrection"
+
+casus_belli={
+	actor=1018
+	recipient=50
+	casus_belli=bid_for_independence
+	landed_title=k_yi
+	date=190.1.1
+}
+
+190.1.1 = {
+	add_defender =  50 #Liu Yan
+	add_attacker = 1018 #Jia Long
+	add_attacker = 1015 #Ren Qi
+}
+
+191.6.1={
+	rem_defender =  50 #Liu Yan
+	rem_attacker = 1018 #Jia Long
+	rem_attacker = 1015 #Ren Qi
+}
+
+   

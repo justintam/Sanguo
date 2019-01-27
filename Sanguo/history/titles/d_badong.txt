@@ -1,0 +1,23 @@
+1.1.1={
+	active=no
+	law=agnatic_succession
+	law=succ_gavelkind
+}
+196.1.1={
+	active=yes
+	liege=k_yi
+	vice_royalty=yes
+	holder=160 #Zhao Wei
+}
+201.6.1={
+	holder=3609 #Gong Yang
+}
+204.1.1={
+	holder=164 #Dong He
+}
+214.1.1={
+	holder=662 #Xiang Lang
+}
+223.6.1={
+	holder=3608 #Fei Guan
+}

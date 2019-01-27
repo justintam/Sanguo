@@ -1,0 +1,22 @@
+name = "Battle of Qi Mountain"
+
+casus_belli={
+	actor=400
+	recipient=1009
+	casus_belli=invasion
+	landed_title=k_five
+	date=214.3.1
+}
+
+214.3.1 = {
+	add_defender = 1009 #Zhang Lu
+	add_defender = 808 #Han Sui
+	add_defender = 815 #Ma Chao
+	add_attacker = 400 #Cao Cao
+}
+214.9.1={
+	rem_defender = 1009 #Zhang Lu
+	rem_defender = 808 #Han Sui
+	rem_defender = 815 #Ma Chao
+	rem_attacker = 400 #Cao Cao
+}

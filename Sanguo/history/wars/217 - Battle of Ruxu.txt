@@ -1,0 +1,18 @@
+name = "2nd Battle of Ruxu"
+
+casus_belli={
+	actor=509
+	recipient=400
+	casus_belli=invasion
+	landed_title=e_china
+	date=217.1.1
+}
+
+217.1.1 = {
+	add_defender = 400 #Cao Cao
+	add_attacker = 509 #Sun Quan
+}
+217.11.1={
+	rem_defender = 400 #Cao Cao
+	rem_attacker = 509 #Sun Quan
+}

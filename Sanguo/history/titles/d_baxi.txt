@@ -1,0 +1,15 @@
+1.1.1={
+	active=no
+	law=agnatic_succession
+	law=succ_gavelkind
+}
+196.1.1={
+	active=yes
+	liege=k_yi
+	vice_royalty=yes
+	holder=161 #Pang Xi
+}
+214.1.1={
+	holder=602 #Zhang Fei
+}
+#Xi Zheng from 263 to 278

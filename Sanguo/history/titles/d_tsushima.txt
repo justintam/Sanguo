@@ -1,0 +1,20 @@
+# k_yamatai
+1.1.1={
+	law = true_cognatic_succession
+	law = succ_gavelkind
+}
+1.1.1={
+	liege=k_yamatai
+}
+131.1.1={
+	holder=3201 #Seimu
+}
+189.1.1={
+	holder=3200 #Himiko
+}
+248.1.1={
+	holder=3202 #Akira
+}
+253.1.1={
+	holder=3203 #Iyo
+}

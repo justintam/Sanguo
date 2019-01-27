@@ -1,0 +1,20 @@
+name = "Battle of Fan"
+
+casus_belli={
+	actor=601
+	recipient=400
+	casus_belli=invasion
+	landed_title=e_china
+	date=219.7.1
+}
+
+219.7.1 = {
+	add_defender = 400 #Cao Cao
+	add_attacker = 601 #Guan Yu
+	add_attacker = 509 #Sun Quan
+}
+219.9.1={
+	rem_defender = 400 #Cao Cao
+	rem_attacker = 601 #Guan Yu
+	rem_attacker = 509 #Sun Quan
+}

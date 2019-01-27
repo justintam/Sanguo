@@ -1,0 +1,408 @@
+###########################################
+#                                         #
+# Influence Events  	            	  #
+#                                         #
+# ID INF.1-INF.99	                      #
+# influence_emp_#                         #
+# influence_ems_#                         #
+# influence_eun_#                         #
+# 1 - low                                 #
+# 2 - med                                 #
+# 3 - high                                #
+###########################################
+
+namespace = INF
+
+# Influence Initialization
+character_event = {
+	id = INF.1
+	
+	hide_window = yes
+
+	is_triggered_only = yes
+	
+	ai = no
+	
+	trigger = {
+		NOT = {
+			has_global_flag = influence_start
+		}
+	}
+	
+	immediate = {
+		set_global_flag = influence_start
+		if = {
+			limit = {
+				year = 184
+				NOT = { year = 189 }
+			}
+			set_global_flag = influence_emp_2
+			set_global_flag = influence_ems_2
+			set_global_flag = influence_eun_3
+		}
+		if = {
+			limit = {
+				year = 189
+				NOT = { year = 194 }
+			}
+			set_global_flag = influence_emp_1
+			set_global_flag = influence_ems_1
+			set_global_flag = influence_eun_1
+		}
+		if = {
+			limit = {
+				year = 194
+				NOT = { year = 200 }
+			}
+			set_global_flag = influence_emp_1
+			set_global_flag = influence_ems_2
+			set_global_flag = influence_eun_1
+		}
+		if = {
+			limit = {
+				year = 200
+				NOR = {
+					AND = {
+						year = 220
+						month = 11
+					}
+					year = 221
+				}
+			}
+			set_global_flag = influence_emp_1
+			set_global_flag = influence_ems_1
+			set_global_flag = influence_eun_1
+		}
+		if = {
+			limit = {
+				OR = {
+					AND = {
+						year = 220
+						month = 11
+					}
+					year = 221
+				}
+				NOT = { year = 227 }
+			}
+			set_global_flag = influence_emp_3
+			set_global_flag = influence_ems_1
+			set_global_flag = influence_eun_1
+		}
+		if = {
+			limit = {
+				year = 227
+				NOT = { year = 300 }
+			}
+			set_global_flag = influence_emp_3
+			set_global_flag = influence_ems_2
+			set_global_flag = influence_eun_1
+		}
+		if = {
+			limit = {
+				year = 227
+				NOT = { year = 239 }
+			}
+			set_global_flag = influence_emp_3
+			set_global_flag = influence_ems_2
+			set_global_flag = influence_eun_1
+		}
+		if = {
+			limit = {
+				year = 239
+				NOT = { year = 265 }
+			}
+			set_global_flag = influence_emp_1
+			set_global_flag = influence_ems_2
+			set_global_flag = influence_eun_1
+		}
+		if = {
+			limit = {
+				year = 265
+				NOT = { year = 300 }
+			}
+			set_global_flag = influence_emp_3
+			set_global_flag = influence_ems_2
+			set_global_flag = influence_eun_1
+		}
+	}
+}
+
+# Check Influence
+character_event = {
+	id = INF.2
+	title = EVTTITLE_INF.2
+	picture = GFX_evt_chinese_bureaucrat
+	
+	desc = {
+		text = EVTDESC_INF.2A
+		trigger = {
+			has_global_flag = influence_emp_1
+			has_global_flag = influence_ems_1
+			has_global_flag = influence_eun_1
+		}
+	}
+	desc = {
+		text = EVTDESC_INF.2B
+		trigger = {
+			has_global_flag = influence_emp_1
+			has_global_flag = influence_ems_1
+			has_global_flag = influence_eun_2
+		}
+	}
+	desc = {
+		text = EVTDESC_INF.2C
+		trigger = {
+			has_global_flag = influence_emp_1
+			has_global_flag = influence_ems_1
+			has_global_flag = influence_eun_3
+		}
+	}
+	desc = {
+		text = EVTDESC_INF.2D
+		trigger = {
+			has_global_flag = influence_emp_1
+			has_global_flag = influence_ems_2
+			has_global_flag = influence_eun_1
+		}
+	}
+	desc = {
+		text = EVTDESC_INF.2E
+		trigger = {
+			has_global_flag = influence_emp_1
+			has_global_flag = influence_ems_2
+			has_global_flag = influence_eun_2
+		}
+	}
+	desc = {
+		text = EVTDESC_INF.2F
+		trigger = {
+			has_global_flag = influence_emp_1
+			has_global_flag = influence_ems_2
+			has_global_flag = influence_eun_3
+		}
+	}
+	desc = {
+		text = EVTDESC_INF.2G
+		trigger = {
+			has_global_flag = influence_emp_1
+			has_global_flag = influence_ems_3
+			has_global_flag = influence_eun_1
+		}
+	}
+	desc = {
+		text = EVTDESC_INF.2H
+		trigger = {
+			has_global_flag = influence_emp_1
+			has_global_flag = influence_ems_3
+			has_global_flag = influence_eun_2
+		}
+	}
+	desc = {
+		text = EVTDESC_INF.2I
+		trigger = {
+			has_global_flag = influence_emp_1
+			has_global_flag = influence_ems_3
+			has_global_flag = influence_eun_3
+		}
+	}
+	desc = {
+		text = EVTDESC_INF.2J
+		trigger = {
+			has_global_flag = influence_emp_2
+			has_global_flag = influence_ems_1
+			has_global_flag = influence_eun_1
+		}
+	}
+	desc = {
+		text = EVTDESC_INF.2K
+		trigger = {
+			has_global_flag = influence_emp_2
+			has_global_flag = influence_ems_1
+			has_global_flag = influence_eun_2
+		}
+	}
+	desc = {
+		text = EVTDESC_INF.2L
+		trigger = {
+			has_global_flag = influence_emp_2
+			has_global_flag = influence_ems_1
+			has_global_flag = influence_eun_3
+		}
+	}
+	desc = {
+		text = EVTDESC_INF.2M
+		trigger = {
+			has_global_flag = influence_emp_2
+			has_global_flag = influence_ems_2
+			has_global_flag = influence_eun_1
+		}
+	}
+	desc = {
+		text = EVTDESC_INF.2N
+		trigger = {
+			has_global_flag = influence_emp_2
+			has_global_flag = influence_ems_2
+			has_global_flag = influence_eun_2
+		}
+	}
+	desc = {
+		text = EVTDESC_INF.2O
+		trigger = {
+			has_global_flag = influence_emp_2
+			has_global_flag = influence_ems_2
+			has_global_flag = influence_eun_3
+		}
+	}
+	desc = {
+		text = EVTDESC_INF.2P
+		trigger = {
+			has_global_flag = influence_emp_2
+			has_global_flag = influence_ems_3
+			has_global_flag = influence_eun_1
+		}
+	}
+	desc = {
+		text = EVTDESC_INF.2Q
+		trigger = {
+			has_global_flag = influence_emp_2
+			has_global_flag = influence_ems_3
+			has_global_flag = influence_eun_2
+		}
+	}
+	desc = {
+		text = EVTDESC_INF.2R
+		trigger = {
+			has_global_flag = influence_emp_2
+			has_global_flag = influence_ems_3
+			has_global_flag = influence_eun_3
+		}
+	}
+	desc = {
+		text = EVTDESC_INF.2S
+		trigger = {
+			has_global_flag = influence_emp_3
+			has_global_flag = influence_ems_1
+			has_global_flag = influence_eun_1
+		}
+	}
+	desc = {
+		text = EVTDESC_INF.2T
+		trigger = {
+			has_global_flag = influence_emp_3
+			has_global_flag = influence_ems_1
+			has_global_flag = influence_eun_2
+		}
+	}
+	desc = {
+		text = EVTDESC_INF.2U
+		trigger = {
+			has_global_flag = influence_emp_3
+			has_global_flag = influence_ems_1
+			has_global_flag = influence_eun_3
+		}
+	}
+	desc = {
+		text = EVTDESC_INF.2V
+		trigger = {
+			has_global_flag = influence_emp_3
+			has_global_flag = influence_ems_2
+			has_global_flag = influence_eun_1
+		}
+	}
+	desc = {
+		text = EVTDESC_INF.2W
+		trigger = {
+			has_global_flag = influence_emp_3
+			has_global_flag = influence_ems_2
+			has_global_flag = influence_eun_2
+		}
+	}
+	desc = {
+		text = EVTDESC_INF.2X
+		trigger = {
+			has_global_flag = influence_emp_3
+			has_global_flag = influence_ems_2
+			has_global_flag = influence_eun_3
+		}
+	}
+	desc = {
+		text = EVTDESC_INF.2Y
+		trigger = {
+			has_global_flag = influence_emp_3
+			has_global_flag = influence_ems_3
+			has_global_flag = influence_eun_1
+		}
+	}
+	desc = {
+		text = EVTDESC_INF.2Z
+		trigger = {
+			has_global_flag = influence_emp_3
+			has_global_flag = influence_ems_3
+			has_global_flag = influence_eun_2
+		}
+	}
+	desc = {
+		text = EVTDESC_INF.2AA
+		trigger = {
+			has_global_flag = influence_emp_3
+			has_global_flag = influence_ems_3
+			has_global_flag = influence_eun_3
+		}
+	}
+	
+	is_triggered_only = yes
+	
+	ai = no
+	
+	option = {
+		name = OK
+	}
+}
+
+# Influence Success
+character_event = {
+	id = INF.3
+	desc = EVTDESC_INF.3
+	title = EVTTITLE_INF.3
+	picture = GFX_evt_china_diplomatic_success
+
+	is_triggered_only = yes
+	
+	ai = no
+	
+	option = {
+		name = OK
+	}
+}
+
+# Influence Failure
+character_event = {
+	id = INF.4
+	desc = EVTDESC_INF.4
+	title = EVTTITLE_INF.4
+	picture = GFX_evt_china_diplomatic_incident
+
+	is_triggered_only = yes
+	
+	ai = no
+	
+	option = {
+		name = OHNO
+	}
+}
+
+# Influence War
+character_event = {
+	id = INF.5
+	desc = EVTDESC_INF.5
+	title = EVTTITLE_INF.5
+	picture = GFX_evt_china_civil_war
+
+	is_triggered_only = yes
+	
+	ai = no
+	
+	option = {
+		name = DAMN
+	}
+}

@@ -1,0 +1,20 @@
+name = "Battle of Tong Pass"
+
+casus_belli={
+	actor=400
+	recipient=808
+	casus_belli=invasion
+	landed_title=k_xiliang
+	date=211.3.1
+}
+
+211.3.1 = {
+	add_defender = 808 #Han Sui
+	add_defender = 815 #Ma Chao
+	add_attacker = 400 #Cao Cao
+}
+211.9.1={
+	rem_defender = 808 #Han Sui
+	rem_defender = 815 #Ma Chao
+	rem_attacker = 400 #Cao Cao
+}
